@@ -19,14 +19,14 @@ require 'google/apis/core/json_representation'
 require 'hurley/test'
 require 'ostruct'
 
-RSpec.describe Google::Apis::Core::BaseService do
+RSpec.describe GoogleAPI::Apis::Core::BaseService do
   include TestHelpers
 
-  let(:service) { Google::Apis::Core::BaseService.new('https://www.googleapis.com/', '') }
+  let(:service) { GoogleAPI::Apis::Core::BaseService.new('https://www.googleapis.com/', '') }
 
   before do
-    Google::Apis::ClientOptions.default.application_name = 'test'
-    Google::Apis::ClientOptions.default.application_version = '1.0'
+    GoogleAPI::Apis::ClientOptions.default.application_name = 'test'
+    GoogleAPI::Apis::ClientOptions.default.application_version = '1.0'
   end
 
   it 'should inherit default options' do
@@ -39,12 +39,12 @@ RSpec.describe Google::Apis::Core::BaseService do
   end
 
   it 'should inherit authorization' do
-    Google::Apis::RequestOptions.default.authorization = 'a token'
+    GoogleAPI::Apis::RequestOptions.default.authorization = 'a token'
     expect(service.authorization).to eql 'a token'
   end
 
   it 'should allow overiding authorization' do
-    Google::Apis::RequestOptions.default.authorization = 'a token'
+    GoogleAPI::Apis::RequestOptions.default.authorization = 'a token'
     service.authorization = 'another token'
     expect(service.authorization).to eql 'another token'
   end
@@ -99,7 +99,7 @@ RSpec.describe Google::Apis::Core::BaseService do
     let(:command) { service.send(:make_simple_command, :get, 'zoo/animals', authorization: 'foo') }
 
     it 'should return the correct command type' do
-      expect(command).to be_an_instance_of(Google::Apis::Core::ApiCommand)
+      expect(command).to be_an_instance_of(GoogleAPI::Apis::Core::ApiCommand)
     end
 
     it 'should build a correct URL' do
@@ -114,7 +114,7 @@ RSpec.describe Google::Apis::Core::BaseService do
     let(:command) { service.send(:make_download_command, :get, 'zoo/animals', authorization: 'foo') }
 
     it 'should return the correct command type' do
-      expect(command).to be_an_instance_of(Google::Apis::Core::DownloadCommand)
+      expect(command).to be_an_instance_of(GoogleAPI::Apis::Core::DownloadCommand)
     end
 
     it 'should build a correct URL' do
@@ -133,7 +133,7 @@ RSpec.describe Google::Apis::Core::BaseService do
     let(:command) { service.send(:make_upload_command, :post, 'zoo/animals', authorization: 'foo') }
 
     it 'should return the correct command type' do
-      expect(command).to be_an_instance_of(Google::Apis::Core::ResumableUploadCommand)
+      expect(command).to be_an_instance_of(GoogleAPI::Apis::Core::ResumableUploadCommand)
     end
 
     it 'should build a correct URL' do
@@ -175,7 +175,7 @@ EOF
           command = service.send(:make_upload_command, :post, 'zoo/animals', {})
           service.send(:execute_or_queue_command, command, &b)
         end
-      end.to raise_error(Google::Apis::ClientError)
+      end.to raise_error(GoogleAPI::Apis::ClientError)
     end
 
     it 'should disallow downloads in batch' do
@@ -184,7 +184,7 @@ EOF
           command = service.send(:make_download_command, :get, 'zoo/animals', {})
           service.send(:execute_or_queue_command, command, &b)
         end
-      end.to raise_error(Google::Apis::ClientError)
+      end.to raise_error(GoogleAPI::Apis::ClientError)
     end
   end
 
@@ -221,7 +221,7 @@ EOF
           command = service.send(:make_upload_command, :post, 'zoo/animals', {})
           command.upload_source = StringIO.new('test')
           command.upload_content_type = 'text/plain'
-          expect(command).to be_an_instance_of(Google::Apis::Core::MultipartUploadCommand)
+          expect(command).to be_an_instance_of(GoogleAPI::Apis::Core::MultipartUploadCommand)
           service.send(:execute_or_queue_command, command, &b)
         end
       end.to yield_with_args('Hello', nil)
@@ -233,7 +233,7 @@ EOF
           command = service.send(:make_download_command, :get, 'zoo/animals', {})
           service.send(:execute_or_queue_command, command, &b)
         end
-      end.to raise_error(Google::Apis::ClientError)
+      end.to raise_error(GoogleAPI::Apis::ClientError)
     end
 
     it 'should disallow simple commands in batch' do
@@ -242,7 +242,7 @@ EOF
           command = service.send(:make_simple_command, :get, 'zoo/animals', {})
           service.send(:execute_or_queue_command, command, &b)
         end
-      end.to raise_error(Google::Apis::ClientError)
+      end.to raise_error(GoogleAPI::Apis::ClientError)
     end
 
     context 'with fetch_all' do

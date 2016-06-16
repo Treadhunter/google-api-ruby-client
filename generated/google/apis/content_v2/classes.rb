@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ContentV2
       
       # Account data.
       class Account
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Indicates whether the merchant sells adult content.
         # Corresponds to the JSON property `adultContent`
@@ -37,7 +37,7 @@ module Google
         # state pending until approved or rejected in the AdWords interface. To delete
         # an active link or to cancel a link request, remove it from the list.
         # Corresponds to the JSON property `adwordsLinks`
-        # @return [Array<Google::Apis::ContentV2::AccountAdwordsLink>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountAdwordsLink>]
         attr_accessor :adwords_links
       
         # Merchant Center account ID.
@@ -69,7 +69,7 @@ module Google
         # Users with access to the account. Every account (except for subaccounts) must
         # have at least one admin user.
         # Corresponds to the JSON property `users`
-        # @return [Array<Google::Apis::ContentV2::AccountUser>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountUser>]
         attr_accessor :users
       
         # The merchant's website.
@@ -97,7 +97,7 @@ module Google
       
       # 
       class AccountAdwordsLink
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Customer ID of the AdWords account.
         # Corresponds to the JSON property `adwordsId`
@@ -130,7 +130,7 @@ module Google
       
       # 
       class AccountIdentifier
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The aggregator ID, set for aggregators and subaccounts (in that case, it
         # represents the aggregator of the subaccount).
@@ -156,7 +156,7 @@ module Google
       
       # The shipping settings of a merchant account.
       class AccountShipping
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the account to which these account shipping settings belong.
         # Corresponds to the JSON property `accountId`
@@ -165,7 +165,7 @@ module Google
       
         # Carrier-based shipping calculations.
         # Corresponds to the JSON property `carrierRates`
-        # @return [Array<Google::Apis::ContentV2::AccountShippingCarrierRate>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountShippingCarrierRate>]
         attr_accessor :carrier_rates
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -176,17 +176,17 @@ module Google
       
         # Location groups for shipping.
         # Corresponds to the JSON property `locationGroups`
-        # @return [Array<Google::Apis::ContentV2::AccountShippingLocationGroup>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountShippingLocationGroup>]
         attr_accessor :location_groups
       
         # Rate tables definitions.
         # Corresponds to the JSON property `rateTables`
-        # @return [Array<Google::Apis::ContentV2::AccountShippingRateTable>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountShippingRateTable>]
         attr_accessor :rate_tables
       
         # Shipping services describing shipping fees calculation.
         # Corresponds to the JSON property `services`
-        # @return [Array<Google::Apis::ContentV2::AccountShippingShippingService>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountShippingShippingService>]
         attr_accessor :services
       
         def initialize(**args)
@@ -206,7 +206,7 @@ module Google
       
       # A carrier-calculated shipping rate.
       class AccountShippingCarrierRate
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The carrier that is responsible for the shipping, such as "UPS", "FedEx", or "
         # USPS".
@@ -221,7 +221,7 @@ module Google
       
         # Additive shipping rate modifier.
         # Corresponds to the JSON property `modifierFlatRate`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :modifier_flat_rate
       
         # Multiplicative shipping rate modifier in percent. Represented as a floating
@@ -264,7 +264,7 @@ module Google
       
       # 
       class AccountShippingCondition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Delivery location in terms of a location group name. A location group with
         # this name must be specified among location groups.
@@ -288,13 +288,13 @@ module Google
         # - A range of postal codes prefixes (e.g., start=1234* end=1235*). Prefixes
         # must be of the same length (e.g., start=12* end=2* is invalid).
         # Corresponds to the JSON property `deliveryPostalCodeRange`
-        # @return [Google::Apis::ContentV2::AccountShippingPostalCodeRange]
+        # @return [GoogleAPI::Apis::ContentV2::AccountShippingPostalCodeRange]
         attr_accessor :delivery_postal_code_range
       
         # Maximum shipping price. Forms an interval between the maximum of smaller
         # prices (exclusive) and this price (inclusive).
         # Corresponds to the JSON property `priceMax`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :price_max
       
         # Shipping label of the product. The products with the label are matched.
@@ -305,7 +305,7 @@ module Google
         # Maximum shipping weight. Forms an interval between the maximum of smaller
         # weight (exclusive) and this weight (inclusive).
         # Corresponds to the JSON property `weightMax`
-        # @return [Google::Apis::ContentV2::Weight]
+        # @return [GoogleAPI::Apis::ContentV2::Weight]
         attr_accessor :weight_max
       
         def initialize(**args)
@@ -327,7 +327,7 @@ module Google
       # A user-defined locations group in a given country. All the locations of the
       # group must be of the same type.
       class AccountShippingLocationGroup
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The CLDR territory code of the country in which this location group is.
         # Corresponds to the JSON property `country`
@@ -347,7 +347,7 @@ module Google
       
         # A postal code range representing a city or a set of cities.
         # Corresponds to the JSON property `postalCodeRanges`
-        # @return [Array<Google::Apis::ContentV2::AccountShippingPostalCodeRange>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountShippingPostalCodeRange>]
         attr_accessor :postal_code_ranges
       
         # A postal code representing a city or a set of cities.
@@ -376,7 +376,7 @@ module Google
       # - A range of postal codes prefixes (e.g., start=1234* end=1235*). Prefixes
       # must be of the same length (e.g., start=12* end=2* is invalid).
       class AccountShippingPostalCodeRange
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The last (inclusive) postal code or prefix of the range.
         # Corresponds to the JSON property `end`
@@ -403,14 +403,14 @@ module Google
       # in terms of consecutive price/weight ranges, delivery locations, or shipping
       # labels.
       class AccountShippingRateTable
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # One-dimensional table cells define one condition along the same dimension. Bi-
         # dimensional table cells use two dimensions with respectively M and N distinct
         # values and must contain exactly M * N cells with distinct conditions (for each
         # possible value pairs).
         # Corresponds to the JSON property `content`
-        # @return [Array<Google::Apis::ContentV2::AccountShippingRateTableCell>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountShippingRateTableCell>]
         attr_accessor :content
       
         # The name of the rate table.
@@ -438,7 +438,7 @@ module Google
       
       # 
       class AccountShippingRateTableCell
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Conditions for which the cell is valid. All cells in a table must use the same
         # dimension or pair of dimensions among price, weight, shipping label or
@@ -446,12 +446,12 @@ module Google
         # and matches all the elements that are not matched by other cells in this
         # dimension.
         # Corresponds to the JSON property `condition`
-        # @return [Google::Apis::ContentV2::AccountShippingCondition]
+        # @return [GoogleAPI::Apis::ContentV2::AccountShippingCondition]
         attr_accessor :condition
       
         # The rate applicable if the cell conditions are matched.
         # Corresponds to the JSON property `rate`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :rate
       
         def initialize(**args)
@@ -467,7 +467,7 @@ module Google
       
       # Shipping services provided in a country.
       class AccountShippingShippingService
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether the shipping service is available.
         # Corresponds to the JSON property `active`
@@ -477,7 +477,7 @@ module Google
       
         # Shipping cost calculation method. Exactly one of the field is set.
         # Corresponds to the JSON property `calculationMethod`
-        # @return [Google::Apis::ContentV2::AccountShippingShippingServiceCalculationMethod]
+        # @return [GoogleAPI::Apis::ContentV2::AccountShippingShippingServiceCalculationMethod]
         attr_accessor :calculation_method
       
         # Building block of the cost calculation decision tree.
@@ -490,7 +490,7 @@ module Google
         # - Children and calculation method are mutually exclusive, and exactly one of
         # them must be defined; the root must only have children.
         # Corresponds to the JSON property `costRuleTree`
-        # @return [Google::Apis::ContentV2::AccountShippingShippingServiceCostRule]
+        # @return [GoogleAPI::Apis::ContentV2::AccountShippingShippingServiceCostRule]
         attr_accessor :cost_rule_tree
       
         # The name of this shipping service.
@@ -519,7 +519,7 @@ module Google
       
       # Shipping cost calculation method. Exactly one of the field is set.
       class AccountShippingShippingServiceCalculationMethod
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Name of the carrier rate to use for the calculation.
         # Corresponds to the JSON property `carrierRate`
@@ -535,7 +535,7 @@ module Google
         # Fixed price shipping, represented as a floating point number associated with a
         # currency.
         # Corresponds to the JSON property `flatRate`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :flat_rate
       
         # Percentage of the price, represented as a floating point number without the
@@ -573,23 +573,23 @@ module Google
       # - Children and calculation method are mutually exclusive, and exactly one of
       # them must be defined; the root must only have children.
       class AccountShippingShippingServiceCostRule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Shipping cost calculation method. Exactly one of the field is set.
         # Corresponds to the JSON property `calculationMethod`
-        # @return [Google::Apis::ContentV2::AccountShippingShippingServiceCalculationMethod]
+        # @return [GoogleAPI::Apis::ContentV2::AccountShippingShippingServiceCalculationMethod]
         attr_accessor :calculation_method
       
         # Subsequent rules to be applied, only for inner nodes. The last child must not
         # specify a condition and acts as a catch-all.
         # Corresponds to the JSON property `children`
-        # @return [Array<Google::Apis::ContentV2::AccountShippingShippingServiceCostRule>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountShippingShippingServiceCostRule>]
         attr_accessor :children
       
         # Condition for this rule to be applicable. If no condition is specified, the
         # rule acts as a catch-all.
         # Corresponds to the JSON property `condition`
-        # @return [Google::Apis::ContentV2::AccountShippingCondition]
+        # @return [GoogleAPI::Apis::ContentV2::AccountShippingCondition]
         attr_accessor :condition
       
         def initialize(**args)
@@ -607,7 +607,7 @@ module Google
       # The status of an account, i.e., information about its products, which is
       # computed offline and not returned immediately at insertion time.
       class AccountStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the account for which the status is reported.
         # Corresponds to the JSON property `accountId`
@@ -616,7 +616,7 @@ module Google
       
         # A list of data quality issues.
         # Corresponds to the JSON property `dataQualityIssues`
-        # @return [Array<Google::Apis::ContentV2::AccountStatusDataQualityIssue>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountStatusDataQualityIssue>]
         attr_accessor :data_quality_issues
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -639,7 +639,7 @@ module Google
       
       # 
       class AccountStatusDataQualityIssue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Country for which this issue is reported.
         # Corresponds to the JSON property `country`
@@ -653,7 +653,7 @@ module Google
       
         # Example items featuring the issue.
         # Corresponds to the JSON property `exampleItems`
-        # @return [Array<Google::Apis::ContentV2::AccountStatusExampleItem>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountStatusExampleItem>]
         attr_accessor :example_items
       
         # Issue identifier.
@@ -701,7 +701,7 @@ module Google
       # An example of an item that has poor data quality. An item value on the landing
       # page differs from what is submitted, or conflicts with a policy.
       class AccountStatusExampleItem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Unique item ID as specified in the uploaded product data.
         # Corresponds to the JSON property `itemId`
@@ -744,7 +744,7 @@ module Google
       
       # The tax settings of a merchant account.
       class AccountTax
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the account to which these account tax settings belong.
         # Corresponds to the JSON property `accountId`
@@ -760,7 +760,7 @@ module Google
         # Tax rules. Updating the tax rules will enable US taxes (not reversible).
         # Defining no rules is equivalent to not charging tax at all.
         # Corresponds to the JSON property `rules`
-        # @return [Array<Google::Apis::ContentV2::AccountTaxTaxRule>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountTaxTaxRule>]
         attr_accessor :rules
       
         def initialize(**args)
@@ -777,7 +777,7 @@ module Google
       
       # Tax calculation rule to apply in a state or province (USA only).
       class AccountTaxTaxRule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Country code in which tax is applicable.
         # Corresponds to the JSON property `country`
@@ -824,7 +824,7 @@ module Google
       
       # 
       class AccountUser
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether user is an admin.
         # Corresponds to the JSON property `admin`
@@ -850,7 +850,7 @@ module Google
       
       # 
       class AccountsAuthInfoResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The account identifiers corresponding to the authenticated user.
         # - For an individual account: only the merchant ID is defined
@@ -858,7 +858,7 @@ module Google
         # - For a subaccount of an MCA: both the merchant ID and the aggregator ID are
         # defined.
         # Corresponds to the JSON property `accountIdentifiers`
-        # @return [Array<Google::Apis::ContentV2::AccountIdentifier>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountIdentifier>]
         attr_accessor :account_identifiers
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -880,11 +880,11 @@ module Google
       
       # 
       class BatchAccountsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The request entries to be processed in the batch.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::AccountsBatchRequestEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountsBatchRequestEntry>]
         attr_accessor :entries
       
         def initialize(**args)
@@ -899,11 +899,11 @@ module Google
       
       # A batch entry encoding a single non-batch accounts request.
       class AccountsBatchRequestEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account data.
         # Corresponds to the JSON property `account`
-        # @return [Google::Apis::ContentV2::Account]
+        # @return [GoogleAPI::Apis::ContentV2::Account]
         attr_accessor :account
       
         # The ID of the account to get or delete. Only defined if the method is get or
@@ -943,11 +943,11 @@ module Google
       
       # 
       class BatchAccountsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The result of the execution of the batch requests.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::AccountsBatchResponseEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountsBatchResponseEntry>]
         attr_accessor :entries
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -969,11 +969,11 @@ module Google
       
       # A batch entry encoding a single non-batch accounts response.
       class AccountsBatchResponseEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account data.
         # Corresponds to the JSON property `account`
-        # @return [Google::Apis::ContentV2::Account]
+        # @return [GoogleAPI::Apis::ContentV2::Account]
         attr_accessor :account
       
         # The ID of the request entry this entry responds to.
@@ -983,7 +983,7 @@ module Google
       
         # A list of errors returned by a failed batch entry.
         # Corresponds to the JSON property `errors`
-        # @return [Google::Apis::ContentV2::Errors]
+        # @return [GoogleAPI::Apis::ContentV2::Errors]
         attr_accessor :errors
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -1007,7 +1007,7 @@ module Google
       
       # 
       class ListAccountsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
         # accountsListResponse".
@@ -1022,7 +1022,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `resources`
-        # @return [Array<Google::Apis::ContentV2::Account>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::Account>]
         attr_accessor :resources
       
         def initialize(**args)
@@ -1039,11 +1039,11 @@ module Google
       
       # 
       class BatchAccountShippingRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The request entries to be processed in the batch.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::AccountShippingBatchRequestEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountShippingBatchRequestEntry>]
         attr_accessor :entries
       
         def initialize(**args)
@@ -1058,7 +1058,7 @@ module Google
       
       # A batch entry encoding a single non-batch accountshipping request.
       class AccountShippingBatchRequestEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the account for which to get/update account shipping settings.
         # Corresponds to the JSON property `accountId`
@@ -1067,7 +1067,7 @@ module Google
       
         # The shipping settings of a merchant account.
         # Corresponds to the JSON property `accountShipping`
-        # @return [Google::Apis::ContentV2::AccountShipping]
+        # @return [GoogleAPI::Apis::ContentV2::AccountShipping]
         attr_accessor :account_shipping
       
         # An entry ID, unique within the batch request.
@@ -1101,11 +1101,11 @@ module Google
       
       # 
       class BatchAccountShippingResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The result of the execution of the batch requests.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::AccountShippingBatchResponseEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountShippingBatchResponseEntry>]
         attr_accessor :entries
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -1127,11 +1127,11 @@ module Google
       
       # A batch entry encoding a single non-batch accountshipping response.
       class AccountShippingBatchResponseEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The shipping settings of a merchant account.
         # Corresponds to the JSON property `accountShipping`
-        # @return [Google::Apis::ContentV2::AccountShipping]
+        # @return [GoogleAPI::Apis::ContentV2::AccountShipping]
         attr_accessor :account_shipping
       
         # The ID of the request entry this entry responds to.
@@ -1141,7 +1141,7 @@ module Google
       
         # A list of errors returned by a failed batch entry.
         # Corresponds to the JSON property `errors`
-        # @return [Google::Apis::ContentV2::Errors]
+        # @return [GoogleAPI::Apis::ContentV2::Errors]
         attr_accessor :errors
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -1165,7 +1165,7 @@ module Google
       
       # 
       class ListAccountShippingResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
         # accountshippingListResponse".
@@ -1180,7 +1180,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `resources`
-        # @return [Array<Google::Apis::ContentV2::AccountShipping>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountShipping>]
         attr_accessor :resources
       
         def initialize(**args)
@@ -1197,11 +1197,11 @@ module Google
       
       # 
       class BatchAccountStatusesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The request entries to be processed in the batch.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::AccountStatusesBatchRequestEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountStatusesBatchRequestEntry>]
         attr_accessor :entries
       
         def initialize(**args)
@@ -1216,7 +1216,7 @@ module Google
       
       # A batch entry encoding a single non-batch accountstatuses request.
       class AccountStatusesBatchRequestEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the (sub-)account whose status to get.
         # Corresponds to the JSON property `accountId`
@@ -1253,11 +1253,11 @@ module Google
       
       # 
       class BatchAccountStatusesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The result of the execution of the batch requests.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::AccountStatusesBatchResponseEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountStatusesBatchResponseEntry>]
         attr_accessor :entries
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -1279,12 +1279,12 @@ module Google
       
       # A batch entry encoding a single non-batch accountstatuses response.
       class AccountStatusesBatchResponseEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The status of an account, i.e., information about its products, which is
         # computed offline and not returned immediately at insertion time.
         # Corresponds to the JSON property `accountStatus`
-        # @return [Google::Apis::ContentV2::AccountStatus]
+        # @return [GoogleAPI::Apis::ContentV2::AccountStatus]
         attr_accessor :account_status
       
         # The ID of the request entry this entry responds to.
@@ -1294,7 +1294,7 @@ module Google
       
         # A list of errors returned by a failed batch entry.
         # Corresponds to the JSON property `errors`
-        # @return [Google::Apis::ContentV2::Errors]
+        # @return [GoogleAPI::Apis::ContentV2::Errors]
         attr_accessor :errors
       
         def initialize(**args)
@@ -1311,7 +1311,7 @@ module Google
       
       # 
       class ListAccountStatusesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
         # accountstatusesListResponse".
@@ -1326,7 +1326,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `resources`
-        # @return [Array<Google::Apis::ContentV2::AccountStatus>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountStatus>]
         attr_accessor :resources
       
         def initialize(**args)
@@ -1343,11 +1343,11 @@ module Google
       
       # 
       class BatchAccountTaxRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The request entries to be processed in the batch.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::AccountTaxBatchRequestEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountTaxBatchRequestEntry>]
         attr_accessor :entries
       
         def initialize(**args)
@@ -1362,7 +1362,7 @@ module Google
       
       # A batch entry encoding a single non-batch accounttax request.
       class AccountTaxBatchRequestEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the account for which to get/update account tax settings.
         # Corresponds to the JSON property `accountId`
@@ -1371,7 +1371,7 @@ module Google
       
         # The tax settings of a merchant account.
         # Corresponds to the JSON property `accountTax`
-        # @return [Google::Apis::ContentV2::AccountTax]
+        # @return [GoogleAPI::Apis::ContentV2::AccountTax]
         attr_accessor :account_tax
       
         # An entry ID, unique within the batch request.
@@ -1405,11 +1405,11 @@ module Google
       
       # 
       class BatchAccountTaxResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The result of the execution of the batch requests.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::AccountTaxBatchResponseEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountTaxBatchResponseEntry>]
         attr_accessor :entries
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -1431,11 +1431,11 @@ module Google
       
       # A batch entry encoding a single non-batch accounttax response.
       class AccountTaxBatchResponseEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The tax settings of a merchant account.
         # Corresponds to the JSON property `accountTax`
-        # @return [Google::Apis::ContentV2::AccountTax]
+        # @return [GoogleAPI::Apis::ContentV2::AccountTax]
         attr_accessor :account_tax
       
         # The ID of the request entry this entry responds to.
@@ -1445,7 +1445,7 @@ module Google
       
         # A list of errors returned by a failed batch entry.
         # Corresponds to the JSON property `errors`
-        # @return [Google::Apis::ContentV2::Errors]
+        # @return [GoogleAPI::Apis::ContentV2::Errors]
         attr_accessor :errors
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -1469,7 +1469,7 @@ module Google
       
       # 
       class ListAccountTaxResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
         # accounttaxListResponse".
@@ -1484,7 +1484,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `resources`
-        # @return [Array<Google::Apis::ContentV2::AccountTax>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::AccountTax>]
         attr_accessor :resources
       
         def initialize(**args)
@@ -1501,7 +1501,7 @@ module Google
       
       # Datafeed data.
       class Datafeed
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The two-letter ISO 639-1 language in which the attributes are defined in the
         # data feed.
@@ -1525,7 +1525,7 @@ module Google
         # schedule, weekday and hour are required. For a daily fetch schedule, only hour
         # is required.
         # Corresponds to the JSON property `fetchSchedule`
-        # @return [Google::Apis::ContentV2::DatafeedFetchSchedule]
+        # @return [GoogleAPI::Apis::ContentV2::DatafeedFetchSchedule]
         attr_accessor :fetch_schedule
       
         # The filename of the feed. All feeds must have a unique file name.
@@ -1535,7 +1535,7 @@ module Google
       
         # Format of the feed file.
         # Corresponds to the JSON property `format`
-        # @return [Google::Apis::ContentV2::DatafeedFormat]
+        # @return [GoogleAPI::Apis::ContentV2::DatafeedFormat]
         attr_accessor :format
       
         # The ID of the data feed.
@@ -1591,7 +1591,7 @@ module Google
       # schedule, weekday and hour are required. For a daily fetch schedule, only hour
       # is required.
       class DatafeedFetchSchedule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The day of the month the feed file should be fetched (1-31).
         # Corresponds to the JSON property `dayOfMonth`
@@ -1655,7 +1655,7 @@ module Google
       
       # 
       class DatafeedFormat
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Delimiter for the separation of values in a delimiter-separated values feed.
         # If not specified, the delimiter will be auto-detected. Ignored for non-DSV
@@ -1691,7 +1691,7 @@ module Google
       # The status of a datafeed, i.e., the result of the last retrieval of the
       # datafeed computed asynchronously when the feed processing is finished.
       class DatafeedStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the feed for which the status is reported.
         # Corresponds to the JSON property `datafeedId`
@@ -1700,7 +1700,7 @@ module Google
       
         # The list of errors occurring in the feed.
         # Corresponds to the JSON property `errors`
-        # @return [Array<Google::Apis::ContentV2::DatafeedStatusError>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::DatafeedStatusError>]
         attr_accessor :errors
       
         # The number of items in the feed that were processed.
@@ -1731,7 +1731,7 @@ module Google
       
         # The list of errors occurring in the feed.
         # Corresponds to the JSON property `warnings`
-        # @return [Array<Google::Apis::ContentV2::DatafeedStatusError>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::DatafeedStatusError>]
         attr_accessor :warnings
       
         def initialize(**args)
@@ -1753,7 +1753,7 @@ module Google
       
       # An error occurring in the feed, like "invalid price".
       class DatafeedStatusError
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The code of the error, e.g., "validation/invalid_value".
         # Corresponds to the JSON property `code`
@@ -1767,7 +1767,7 @@ module Google
       
         # A list of example occurrences of the error, grouped by product.
         # Corresponds to the JSON property `examples`
-        # @return [Array<Google::Apis::ContentV2::DatafeedStatusExample>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::DatafeedStatusExample>]
         attr_accessor :examples
       
         # The error message, e.g., "Invalid price".
@@ -1790,7 +1790,7 @@ module Google
       
       # An example occurrence for a particular error.
       class DatafeedStatusExample
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the example item.
         # Corresponds to the JSON property `itemId`
@@ -1821,11 +1821,11 @@ module Google
       
       # 
       class BatchDatafeedsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The request entries to be processed in the batch.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::DatafeedsBatchRequestEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::DatafeedsBatchRequestEntry>]
         attr_accessor :entries
       
         def initialize(**args)
@@ -1840,7 +1840,7 @@ module Google
       
       # A batch entry encoding a single non-batch datafeeds request.
       class DatafeedsBatchRequestEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An entry ID, unique within the batch request.
         # Corresponds to the JSON property `batchId`
@@ -1849,7 +1849,7 @@ module Google
       
         # Datafeed data.
         # Corresponds to the JSON property `datafeed`
-        # @return [Google::Apis::ContentV2::Datafeed]
+        # @return [GoogleAPI::Apis::ContentV2::Datafeed]
         attr_accessor :datafeed
       
         # The ID of the data feed to get or delete.
@@ -1883,11 +1883,11 @@ module Google
       
       # 
       class BatchDatafeedsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The result of the execution of the batch requests.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::DatafeedsBatchResponseEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::DatafeedsBatchResponseEntry>]
         attr_accessor :entries
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -1909,7 +1909,7 @@ module Google
       
       # A batch entry encoding a single non-batch datafeeds response.
       class DatafeedsBatchResponseEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the request entry this entry responds to.
         # Corresponds to the JSON property `batchId`
@@ -1918,12 +1918,12 @@ module Google
       
         # Datafeed data.
         # Corresponds to the JSON property `datafeed`
-        # @return [Google::Apis::ContentV2::Datafeed]
+        # @return [GoogleAPI::Apis::ContentV2::Datafeed]
         attr_accessor :datafeed
       
         # A list of errors returned by a failed batch entry.
         # Corresponds to the JSON property `errors`
-        # @return [Google::Apis::ContentV2::Errors]
+        # @return [GoogleAPI::Apis::ContentV2::Errors]
         attr_accessor :errors
       
         def initialize(**args)
@@ -1940,7 +1940,7 @@ module Google
       
       # 
       class ListDatafeedsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
         # datafeedsListResponse".
@@ -1955,7 +1955,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `resources`
-        # @return [Array<Google::Apis::ContentV2::Datafeed>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::Datafeed>]
         attr_accessor :resources
       
         def initialize(**args)
@@ -1972,11 +1972,11 @@ module Google
       
       # 
       class BatchDatafeedStatusesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The request entries to be processed in the batch.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::DatafeedStatusesBatchRequestEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::DatafeedStatusesBatchRequestEntry>]
         attr_accessor :entries
       
         def initialize(**args)
@@ -1991,7 +1991,7 @@ module Google
       
       # A batch entry encoding a single non-batch datafeedstatuses request.
       class DatafeedStatusesBatchRequestEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An entry ID, unique within the batch request.
         # Corresponds to the JSON property `batchId`
@@ -2028,11 +2028,11 @@ module Google
       
       # 
       class BatchDatafeedStatusesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The result of the execution of the batch requests.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::DatafeedStatusesBatchResponseEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::DatafeedStatusesBatchResponseEntry>]
         attr_accessor :entries
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -2054,7 +2054,7 @@ module Google
       
       # A batch entry encoding a single non-batch datafeedstatuses response.
       class DatafeedStatusesBatchResponseEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the request entry this entry responds to.
         # Corresponds to the JSON property `batchId`
@@ -2064,12 +2064,12 @@ module Google
         # The status of a datafeed, i.e., the result of the last retrieval of the
         # datafeed computed asynchronously when the feed processing is finished.
         # Corresponds to the JSON property `datafeedStatus`
-        # @return [Google::Apis::ContentV2::DatafeedStatus]
+        # @return [GoogleAPI::Apis::ContentV2::DatafeedStatus]
         attr_accessor :datafeed_status
       
         # A list of errors returned by a failed batch entry.
         # Corresponds to the JSON property `errors`
-        # @return [Google::Apis::ContentV2::Errors]
+        # @return [GoogleAPI::Apis::ContentV2::Errors]
         attr_accessor :errors
       
         def initialize(**args)
@@ -2086,7 +2086,7 @@ module Google
       
       # 
       class ListDatafeedStatusesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
         # datafeedstatusesListResponse".
@@ -2101,7 +2101,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `resources`
-        # @return [Array<Google::Apis::ContentV2::DatafeedStatus>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::DatafeedStatus>]
         attr_accessor :resources
       
         def initialize(**args)
@@ -2118,7 +2118,7 @@ module Google
       
       # An error returned by the API.
       class Error
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The domain of the error.
         # Corresponds to the JSON property `domain`
@@ -2149,7 +2149,7 @@ module Google
       
       # A list of errors returned by a failed batch entry.
       class Errors
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The HTTP status of the first error in errors.
         # Corresponds to the JSON property `code`
@@ -2158,7 +2158,7 @@ module Google
       
         # A list of errors.
         # Corresponds to the JSON property `errors`
-        # @return [Array<Google::Apis::ContentV2::Error>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::Error>]
         attr_accessor :errors
       
         # The message of the first error in errors.
@@ -2180,11 +2180,11 @@ module Google
       
       # 
       class Installment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The amount the buyer has to pay per month.
         # Corresponds to the JSON property `amount`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :amount
       
         # The number of installments the buyer has to pay.
@@ -2205,7 +2205,7 @@ module Google
       
       # 
       class Inventory
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The availability of the product.
         # Corresponds to the JSON property `availability`
@@ -2214,7 +2214,7 @@ module Google
       
         # Number and amount of installments to pay for an item. Brazil only.
         # Corresponds to the JSON property `installment`
-        # @return [Google::Apis::ContentV2::Installment]
+        # @return [GoogleAPI::Apis::ContentV2::Installment]
         attr_accessor :installment
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -2225,12 +2225,12 @@ module Google
       
         # Loyalty points that users receive after purchasing the item. Japan only.
         # Corresponds to the JSON property `loyaltyPoints`
-        # @return [Google::Apis::ContentV2::LoyaltyPoints]
+        # @return [GoogleAPI::Apis::ContentV2::LoyaltyPoints]
         attr_accessor :loyalty_points
       
         # The price of the product.
         # Corresponds to the JSON property `price`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :price
       
         # The quantity of the product. Must be equal to or greater than zero. Supported
@@ -2242,7 +2242,7 @@ module Google
         # The sale price of the product. Mandatory if sale_price_effective_date is
         # defined.
         # Corresponds to the JSON property `salePrice`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :sale_price
       
         # A date range represented by a pair of ISO 8601 dates separated by a space,
@@ -2277,11 +2277,11 @@ module Google
       
       # 
       class BatchInventoryRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The request entries to be processed in the batch.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::InventoryBatchRequestEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::InventoryBatchRequestEntry>]
         attr_accessor :entries
       
         def initialize(**args)
@@ -2296,7 +2296,7 @@ module Google
       
       # A batch entry encoding a single non-batch inventory request.
       class InventoryBatchRequestEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An entry ID, unique within the batch request.
         # Corresponds to the JSON property `batchId`
@@ -2305,7 +2305,7 @@ module Google
       
         # Price and availability of the product.
         # Corresponds to the JSON property `inventory`
-        # @return [Google::Apis::ContentV2::Inventory]
+        # @return [GoogleAPI::Apis::ContentV2::Inventory]
         attr_accessor :inventory
       
         # The ID of the managing account.
@@ -2340,11 +2340,11 @@ module Google
       
       # 
       class BatchInventoryResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The result of the execution of the batch requests.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::InventoryBatchResponseEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::InventoryBatchResponseEntry>]
         attr_accessor :entries
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -2366,7 +2366,7 @@ module Google
       
       # A batch entry encoding a single non-batch inventory response.
       class InventoryBatchResponseEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the request entry this entry responds to.
         # Corresponds to the JSON property `batchId`
@@ -2375,7 +2375,7 @@ module Google
       
         # A list of errors returned by a failed batch entry.
         # Corresponds to the JSON property `errors`
-        # @return [Google::Apis::ContentV2::Errors]
+        # @return [GoogleAPI::Apis::ContentV2::Errors]
         attr_accessor :errors
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -2398,7 +2398,7 @@ module Google
       
       # 
       class SetInventoryRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The availability of the product.
         # Corresponds to the JSON property `availability`
@@ -2407,17 +2407,17 @@ module Google
       
         # Number and amount of installments to pay for an item. Brazil only.
         # Corresponds to the JSON property `installment`
-        # @return [Google::Apis::ContentV2::Installment]
+        # @return [GoogleAPI::Apis::ContentV2::Installment]
         attr_accessor :installment
       
         # Loyalty points that users receive after purchasing the item. Japan only.
         # Corresponds to the JSON property `loyaltyPoints`
-        # @return [Google::Apis::ContentV2::LoyaltyPoints]
+        # @return [GoogleAPI::Apis::ContentV2::LoyaltyPoints]
         attr_accessor :loyalty_points
       
         # The price of the product.
         # Corresponds to the JSON property `price`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :price
       
         # The quantity of the product. Must be equal to or greater than zero. Supported
@@ -2429,7 +2429,7 @@ module Google
         # The sale price of the product. Mandatory if sale_price_effective_date is
         # defined.
         # Corresponds to the JSON property `salePrice`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :sale_price
       
         # A date range represented by a pair of ISO 8601 dates separated by a space,
@@ -2463,7 +2463,7 @@ module Google
       
       # 
       class SetInventoryResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
         # inventorySetResponse".
@@ -2483,7 +2483,7 @@ module Google
       
       # 
       class LoyaltyPoints
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Name of loyalty points program. It is recommended to limit the name to 12 full-
         # width characters or 24 Roman characters.
@@ -2516,7 +2516,7 @@ module Google
       
       # 
       class Order
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether the order was acknowledged.
         # Corresponds to the JSON property `acknowledged`
@@ -2526,12 +2526,12 @@ module Google
       
         # The details of the customer who placed the order.
         # Corresponds to the JSON property `customer`
-        # @return [Google::Apis::ContentV2::OrderCustomer]
+        # @return [GoogleAPI::Apis::ContentV2::OrderCustomer]
         attr_accessor :customer
       
         # The details for the delivery.
         # Corresponds to the JSON property `deliveryDetails`
-        # @return [Google::Apis::ContentV2::OrderDeliveryDetails]
+        # @return [GoogleAPI::Apis::ContentV2::OrderDeliveryDetails]
         attr_accessor :delivery_details
       
         # The REST id of the order. Globally unique.
@@ -2547,7 +2547,7 @@ module Google
       
         # Line items that are ordered.
         # Corresponds to the JSON property `lineItems`
-        # @return [Array<Google::Apis::ContentV2::OrderLineItem>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::OrderLineItem>]
         attr_accessor :line_items
       
         # 
@@ -2564,12 +2564,12 @@ module Google
         # grand total of $100 and a refund was issued for $20, the net amount will be $
         # 80.
         # Corresponds to the JSON property `netAmount`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :net_amount
       
         # The details of the payment method.
         # Corresponds to the JSON property `paymentMethod`
-        # @return [Google::Apis::ContentV2::OrderPaymentMethod]
+        # @return [GoogleAPI::Apis::ContentV2::OrderPaymentMethod]
         attr_accessor :payment_method
       
         # The status of the payment.
@@ -2585,27 +2585,27 @@ module Google
         # The details of the merchant provided promotions applied to the order. More
         # details about the program are  here.
         # Corresponds to the JSON property `promotions`
-        # @return [Array<Google::Apis::ContentV2::OrderPromotion>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::OrderPromotion>]
         attr_accessor :promotions
       
         # Refunds for the order.
         # Corresponds to the JSON property `refunds`
-        # @return [Array<Google::Apis::ContentV2::OrderRefund>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::OrderRefund>]
         attr_accessor :refunds
       
         # Shipments of the order.
         # Corresponds to the JSON property `shipments`
-        # @return [Array<Google::Apis::ContentV2::OrderShipment>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::OrderShipment>]
         attr_accessor :shipments
       
         # The total cost of shipping for all items.
         # Corresponds to the JSON property `shippingCost`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :shipping_cost
       
         # The tax for the total shipping cost.
         # Corresponds to the JSON property `shippingCostTax`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :shipping_cost_tax
       
         # The requested shipping option.
@@ -2648,7 +2648,7 @@ module Google
       
       # 
       class OrderAddress
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # CLDR country code (e.g. "US").
         # Corresponds to the JSON property `country`
@@ -2716,7 +2716,7 @@ module Google
       
       # 
       class OrderCancellation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The actor that created the cancellation.
         # Corresponds to the JSON property `actor`
@@ -2761,7 +2761,7 @@ module Google
       
       # 
       class OrderCustomer
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Email address of the customer.
         # Corresponds to the JSON property `email`
@@ -2797,11 +2797,11 @@ module Google
       
       # 
       class OrderDeliveryDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The delivery address
         # Corresponds to the JSON property `address`
-        # @return [Google::Apis::ContentV2::OrderAddress]
+        # @return [GoogleAPI::Apis::ContentV2::OrderAddress]
         attr_accessor :address
       
         # The phone number of the person receiving the delivery.
@@ -2822,11 +2822,11 @@ module Google
       
       # 
       class OrderLineItem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Cancellations of the line item.
         # Corresponds to the JSON property `cancellations`
-        # @return [Array<Google::Apis::ContentV2::OrderCancellation>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::OrderCancellation>]
         attr_accessor :cancellations
       
         # The id of the line item.
@@ -2837,12 +2837,12 @@ module Google
         # Total price for the line item. For example, if two items for $10 are purchased,
         # the total price will be $20.
         # Corresponds to the JSON property `price`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :price
       
         # Product data from the time of the order placement.
         # Corresponds to the JSON property `product`
-        # @return [Google::Apis::ContentV2::OrderLineItemProduct]
+        # @return [GoogleAPI::Apis::ContentV2::OrderLineItemProduct]
         attr_accessor :product
       
         # Number of items canceled.
@@ -2877,23 +2877,23 @@ module Google
       
         # Details of the return policy for the line item.
         # Corresponds to the JSON property `returnInfo`
-        # @return [Google::Apis::ContentV2::OrderLineItemReturnInfo]
+        # @return [GoogleAPI::Apis::ContentV2::OrderLineItemReturnInfo]
         attr_accessor :return_info
       
         # Returns of the line item.
         # Corresponds to the JSON property `returns`
-        # @return [Array<Google::Apis::ContentV2::OrderReturn>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::OrderReturn>]
         attr_accessor :returns
       
         # Details of the requested shipping for the line item.
         # Corresponds to the JSON property `shippingDetails`
-        # @return [Google::Apis::ContentV2::OrderLineItemShippingDetails]
+        # @return [GoogleAPI::Apis::ContentV2::OrderLineItemShippingDetails]
         attr_accessor :shipping_details
       
         # Total tax amount for the line item. For example, if two items are purchased,
         # and each have a cost tax of $2, the total tax amount will be $4.
         # Corresponds to the JSON property `tax`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :tax
       
         def initialize(**args)
@@ -2921,7 +2921,7 @@ module Google
       
       # 
       class OrderLineItemProduct
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Brand of the item.
         # Corresponds to the JSON property `brand`
@@ -2975,7 +2975,7 @@ module Google
       
         # Price of the item.
         # Corresponds to the JSON property `price`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :price
       
         # URL to the cached image shown to the user when order was placed.
@@ -2997,7 +2997,7 @@ module Google
         # color, gender, material, pattern, and size. You can find a comprehensive list
         # of variant attributes here.
         # Corresponds to the JSON property `variantAttributes`
-        # @return [Array<Google::Apis::ContentV2::OrderLineItemProductVariantAttribute>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::OrderLineItemProductVariantAttribute>]
         attr_accessor :variant_attributes
       
         def initialize(**args)
@@ -3026,7 +3026,7 @@ module Google
       
       # 
       class OrderLineItemProductVariantAttribute
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The dimension of the variant.
         # Corresponds to the JSON property `dimension`
@@ -3051,7 +3051,7 @@ module Google
       
       # 
       class OrderLineItemReturnInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # How many days later the item can be returned.
         # Corresponds to the JSON property `daysToReturn`
@@ -3083,7 +3083,7 @@ module Google
       
       # 
       class OrderLineItemShippingDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The delivery by date, in ISO 8601 format.
         # Corresponds to the JSON property `deliverByDate`
@@ -3092,7 +3092,7 @@ module Google
       
         # Details of the shipping method.
         # Corresponds to the JSON property `method`
-        # @return [Google::Apis::ContentV2::OrderLineItemShippingDetailsMethod]
+        # @return [GoogleAPI::Apis::ContentV2::OrderLineItemShippingDetailsMethod]
         attr_accessor :method_prop
       
         # The ship by date, in ISO 8601 format.
@@ -3114,7 +3114,7 @@ module Google
       
       # 
       class OrderLineItemShippingDetailsMethod
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The carrier for the shipping. Optional.
         # Corresponds to the JSON property `carrier`
@@ -3151,11 +3151,11 @@ module Google
       
       # 
       class OrderPaymentMethod
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The billing address.
         # Corresponds to the JSON property `billingAddress`
-        # @return [Google::Apis::ContentV2::OrderAddress]
+        # @return [GoogleAPI::Apis::ContentV2::OrderAddress]
         attr_accessor :billing_address
       
         # The card expiration month (January = 1, February = 2 etc.).
@@ -3200,11 +3200,11 @@ module Google
       
       # 
       class OrderPromotion
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `benefits`
-        # @return [Array<Google::Apis::ContentV2::OrderPromotionBenefit>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::OrderPromotionBenefit>]
         attr_accessor :benefits
       
         # The date and time frame when the promotion is active and ready for validation
@@ -3262,11 +3262,11 @@ module Google
       
       # 
       class OrderPromotionBenefit
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The discount in the order price when the promotion is applied.
         # Corresponds to the JSON property `discount`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :discount
       
         # The OfferId(s) that were purchased in this order and map to this specific
@@ -3283,7 +3283,7 @@ module Google
       
         # The impact on tax when the promotion is applied.
         # Corresponds to the JSON property `taxImpact`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :tax_impact
       
         # Describes whether the promotion applies to products (e.g. 20% off) or to
@@ -3308,7 +3308,7 @@ module Google
       
       # 
       class OrderRefund
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The actor that created the refund.
         # Corresponds to the JSON property `actor`
@@ -3317,7 +3317,7 @@ module Google
       
         # The amount that is refunded.
         # Corresponds to the JSON property `amount`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :amount
       
         # Date on which the item has been created, in ISO 8601 format.
@@ -3351,7 +3351,7 @@ module Google
       
       # 
       class OrderReturn
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The actor that created the refund.
         # Corresponds to the JSON property `actor`
@@ -3394,7 +3394,7 @@ module Google
       
       # 
       class OrderShipment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The carrier handling the shipment.
         # Corresponds to the JSON property `carrier`
@@ -3419,7 +3419,7 @@ module Google
       
         # The line items that are shipped.
         # Corresponds to the JSON property `lineItems`
-        # @return [Array<Google::Apis::ContentV2::OrderShipmentLineItemShipment>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::OrderShipmentLineItemShipment>]
         attr_accessor :line_items
       
         # The status of the shipment.
@@ -3450,7 +3450,7 @@ module Google
       
       # 
       class OrderShipmentLineItemShipment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The id of the line item that is shipped.
         # Corresponds to the JSON property `lineItemId`
@@ -3475,7 +3475,7 @@ module Google
       
       # 
       class OrdersAcknowledgeRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the operation. Unique across all operations for a given order.
         # Corresponds to the JSON property `operationId`
@@ -3494,7 +3494,7 @@ module Google
       
       # 
       class OrdersAcknowledgeResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The status of the execution.
         # Corresponds to the JSON property `executionStatus`
@@ -3520,7 +3520,7 @@ module Google
       
       # 
       class OrdersAdvanceTestOrderResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
         # ordersAdvanceTestOrderResponse".
@@ -3540,13 +3540,13 @@ module Google
       
       # 
       class OrdersCancelLineItemRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Amount to refund for the cancelation. Optional. If not set, Google will
         # calculate the default based on the price and tax of the items involved. The
         # amount must not be larger than the net amount left on the order.
         # Corresponds to the JSON property `amount`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :amount
       
         # The ID of the line item to cancel.
@@ -3591,7 +3591,7 @@ module Google
       
       # 
       class OrdersCancelLineItemResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The status of the execution.
         # Corresponds to the JSON property `executionStatus`
@@ -3617,7 +3617,7 @@ module Google
       
       # 
       class OrdersCancelRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the operation. Unique across all operations for a given order.
         # Corresponds to the JSON property `operationId`
@@ -3648,7 +3648,7 @@ module Google
       
       # 
       class OrdersCancelResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The status of the execution.
         # Corresponds to the JSON property `executionStatus`
@@ -3674,7 +3674,7 @@ module Google
       
       # 
       class OrdersCreateTestOrderRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The test order template to use. Specify as an alternative to testOrder as a
         # shortcut for retrieving a template and then creating an order using that
@@ -3685,7 +3685,7 @@ module Google
       
         # The test order to create.
         # Corresponds to the JSON property `testOrder`
-        # @return [Google::Apis::ContentV2::TestOrder]
+        # @return [GoogleAPI::Apis::ContentV2::TestOrder]
         attr_accessor :test_order
       
         def initialize(**args)
@@ -3701,7 +3701,7 @@ module Google
       
       # 
       class OrdersCreateTestOrderResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
         # ordersCreateTestOrderResponse".
@@ -3727,11 +3727,11 @@ module Google
       
       # 
       class OrdersCustomBatchRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The request entries to be processed in the batch.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::OrdersCustomBatchRequestEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::OrdersCustomBatchRequestEntry>]
         attr_accessor :entries
       
         def initialize(**args)
@@ -3746,7 +3746,7 @@ module Google
       
       # 
       class OrdersCustomBatchRequestEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An entry ID, unique within the batch request.
         # Corresponds to the JSON property `batchId`
@@ -3755,12 +3755,12 @@ module Google
       
         # Required for cancel method.
         # Corresponds to the JSON property `cancel`
-        # @return [Google::Apis::ContentV2::OrdersCustomBatchRequestEntryCancel]
+        # @return [GoogleAPI::Apis::ContentV2::OrdersCustomBatchRequestEntryCancel]
         attr_accessor :cancel
       
         # Required for cancelLineItem method.
         # Corresponds to the JSON property `cancelLineItem`
-        # @return [Google::Apis::ContentV2::OrdersCustomBatchRequestEntryCancelLineItem]
+        # @return [GoogleAPI::Apis::ContentV2::OrdersCustomBatchRequestEntryCancelLineItem]
         attr_accessor :cancel_line_item
       
         # The ID of the managing account.
@@ -3792,22 +3792,22 @@ module Google
       
         # Required for refund method.
         # Corresponds to the JSON property `refund`
-        # @return [Google::Apis::ContentV2::OrdersCustomBatchRequestEntryRefund]
+        # @return [GoogleAPI::Apis::ContentV2::OrdersCustomBatchRequestEntryRefund]
         attr_accessor :refund
       
         # Required for returnLineItem method.
         # Corresponds to the JSON property `returnLineItem`
-        # @return [Google::Apis::ContentV2::OrdersCustomBatchRequestEntryReturnLineItem]
+        # @return [GoogleAPI::Apis::ContentV2::OrdersCustomBatchRequestEntryReturnLineItem]
         attr_accessor :return_line_item
       
         # Required for shipLineItems method.
         # Corresponds to the JSON property `shipLineItems`
-        # @return [Google::Apis::ContentV2::OrdersCustomBatchRequestEntryShipLineItems]
+        # @return [GoogleAPI::Apis::ContentV2::OrdersCustomBatchRequestEntryShipLineItems]
         attr_accessor :ship_line_items
       
         # Required for updateShipment method.
         # Corresponds to the JSON property `updateShipment`
-        # @return [Google::Apis::ContentV2::OrdersCustomBatchRequestEntryUpdateShipment]
+        # @return [GoogleAPI::Apis::ContentV2::OrdersCustomBatchRequestEntryUpdateShipment]
         attr_accessor :update_shipment
       
         def initialize(**args)
@@ -3833,7 +3833,7 @@ module Google
       
       # 
       class OrdersCustomBatchRequestEntryCancel
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The reason for the cancellation.
         # Corresponds to the JSON property `reason`
@@ -3858,13 +3858,13 @@ module Google
       
       # 
       class OrdersCustomBatchRequestEntryCancelLineItem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Amount to refund for the cancelation. Optional. If not set, Google will
         # calculate the default based on the price and tax of the items involved. The
         # amount must not be larger than the net amount left on the order.
         # Corresponds to the JSON property `amount`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :amount
       
         # The ID of the line item to cancel.
@@ -3903,11 +3903,11 @@ module Google
       
       # 
       class OrdersCustomBatchRequestEntryRefund
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The amount that is refunded.
         # Corresponds to the JSON property `amount`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :amount
       
         # The reason for the refund.
@@ -3934,7 +3934,7 @@ module Google
       
       # 
       class OrdersCustomBatchRequestEntryReturnLineItem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the line item to return.
         # Corresponds to the JSON property `lineItemId`
@@ -3971,7 +3971,7 @@ module Google
       
       # 
       class OrdersCustomBatchRequestEntryShipLineItems
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The carrier handling the shipment.
         # Corresponds to the JSON property `carrier`
@@ -3980,7 +3980,7 @@ module Google
       
         # Line items to ship.
         # Corresponds to the JSON property `lineItems`
-        # @return [Array<Google::Apis::ContentV2::OrderShipmentLineItemShipment>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::OrderShipmentLineItemShipment>]
         attr_accessor :line_items
       
         # The ID of the shipment.
@@ -4008,7 +4008,7 @@ module Google
       
       # 
       class OrdersCustomBatchRequestEntryUpdateShipment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The carrier handling the shipment. Not updated if missing.
         # Corresponds to the JSON property `carrier`
@@ -4045,11 +4045,11 @@ module Google
       
       # 
       class OrdersCustomBatchResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The result of the execution of the batch requests.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::OrdersCustomBatchResponseEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::OrdersCustomBatchResponseEntry>]
         attr_accessor :entries
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -4071,7 +4071,7 @@ module Google
       
       # 
       class OrdersCustomBatchResponseEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the request entry this entry responds to.
         # Corresponds to the JSON property `batchId`
@@ -4080,7 +4080,7 @@ module Google
       
         # A list of errors returned by a failed batch entry.
         # Corresponds to the JSON property `errors`
-        # @return [Google::Apis::ContentV2::Errors]
+        # @return [GoogleAPI::Apis::ContentV2::Errors]
         attr_accessor :errors
       
         # The status of the execution. Only defined if the method is not get or
@@ -4098,7 +4098,7 @@ module Google
         # The retrieved order. Only defined if the method is get and if the request was
         # successful.
         # Corresponds to the JSON property `order`
-        # @return [Google::Apis::ContentV2::Order]
+        # @return [GoogleAPI::Apis::ContentV2::Order]
         attr_accessor :order
       
         def initialize(**args)
@@ -4117,7 +4117,7 @@ module Google
       
       # 
       class OrdersGetByMerchantOrderIdResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
         # ordersGetByMerchantOrderIdResponse".
@@ -4127,7 +4127,7 @@ module Google
       
         # The requested order.
         # Corresponds to the JSON property `order`
-        # @return [Google::Apis::ContentV2::Order]
+        # @return [GoogleAPI::Apis::ContentV2::Order]
         attr_accessor :order
       
         def initialize(**args)
@@ -4143,7 +4143,7 @@ module Google
       
       # 
       class OrdersGetTestOrderTemplateResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
         # ordersGetTestOrderTemplateResponse".
@@ -4153,7 +4153,7 @@ module Google
       
         # The requested test order template.
         # Corresponds to the JSON property `template`
-        # @return [Google::Apis::ContentV2::TestOrder]
+        # @return [GoogleAPI::Apis::ContentV2::TestOrder]
         attr_accessor :template
       
         def initialize(**args)
@@ -4169,7 +4169,7 @@ module Google
       
       # 
       class OrdersListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
         # ordersListResponse".
@@ -4184,7 +4184,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `resources`
-        # @return [Array<Google::Apis::ContentV2::Order>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::Order>]
         attr_accessor :resources
       
         def initialize(**args)
@@ -4201,11 +4201,11 @@ module Google
       
       # 
       class OrdersRefundRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The amount that is refunded.
         # Corresponds to the JSON property `amount`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :amount
       
         # The ID of the operation. Unique across all operations for a given order.
@@ -4238,7 +4238,7 @@ module Google
       
       # 
       class OrdersRefundResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The status of the execution.
         # Corresponds to the JSON property `executionStatus`
@@ -4264,7 +4264,7 @@ module Google
       
       # 
       class OrdersReturnLineItemRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the line item to return.
         # Corresponds to the JSON property `lineItemId`
@@ -4307,7 +4307,7 @@ module Google
       
       # 
       class OrdersReturnLineItemResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The status of the execution.
         # Corresponds to the JSON property `executionStatus`
@@ -4333,7 +4333,7 @@ module Google
       
       # 
       class OrdersShipLineItemsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The carrier handling the shipment.
         # Corresponds to the JSON property `carrier`
@@ -4342,7 +4342,7 @@ module Google
       
         # Line items to ship.
         # Corresponds to the JSON property `lineItems`
-        # @return [Array<Google::Apis::ContentV2::OrderShipmentLineItemShipment>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::OrderShipmentLineItemShipment>]
         attr_accessor :line_items
       
         # The ID of the operation. Unique across all operations for a given order.
@@ -4376,7 +4376,7 @@ module Google
       
       # 
       class OrdersShipLineItemsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The status of the execution.
         # Corresponds to the JSON property `executionStatus`
@@ -4402,7 +4402,7 @@ module Google
       
       # 
       class OrdersUpdateMerchantOrderIdRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The merchant order id to be assigned to the order. Must be unique per merchant.
         # Corresponds to the JSON property `merchantOrderId`
@@ -4427,7 +4427,7 @@ module Google
       
       # 
       class OrdersUpdateMerchantOrderIdResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The status of the execution.
         # Corresponds to the JSON property `executionStatus`
@@ -4453,7 +4453,7 @@ module Google
       
       # 
       class OrdersUpdateShipmentRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The carrier handling the shipment. Not updated if missing.
         # Corresponds to the JSON property `carrier`
@@ -4496,7 +4496,7 @@ module Google
       
       # 
       class OrdersUpdateShipmentResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The status of the execution.
         # Corresponds to the JSON property `executionStatus`
@@ -4522,7 +4522,7 @@ module Google
       
       # 
       class Price
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The currency of the price.
         # Corresponds to the JSON property `currency`
@@ -4547,7 +4547,7 @@ module Google
       
       # Product data.
       class Product
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Additional URLs of images of the item.
         # Corresponds to the JSON property `additionalImageLinks`
@@ -4589,7 +4589,7 @@ module Google
       
         # Specifies the intended aspects for the product.
         # Corresponds to the JSON property `aspects`
-        # @return [Array<Google::Apis::ContentV2::ProductAspect>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::ProductAspect>]
         attr_accessor :aspects
       
         # Availability status of the item.
@@ -4633,12 +4633,12 @@ module Google
         # "name": "size type", "type": "text", "value": "regular" `). This is useful
         # for submitting attributes not explicitly exposed by the API.
         # Corresponds to the JSON property `customAttributes`
-        # @return [Array<Google::Apis::ContentV2::ProductCustomAttribute>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::ProductCustomAttribute>]
         attr_accessor :custom_attributes
       
         # A list of custom (merchant-provided) custom attribute groups.
         # Corresponds to the JSON property `customGroups`
-        # @return [Array<Google::Apis::ContentV2::ProductCustomGroup>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::ProductCustomGroup>]
         attr_accessor :custom_groups
       
         # Custom label 0 for custom grouping of items in a Shopping campaign.
@@ -4673,7 +4673,7 @@ module Google
       
         # Specifies the intended destinations for the product.
         # Corresponds to the JSON property `destinations`
-        # @return [Array<Google::Apis::ContentV2::ProductDestination>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::ProductDestination>]
         attr_accessor :destinations
       
         # An identifier for an item for dynamic remarketing campaigns.
@@ -4749,7 +4749,7 @@ module Google
       
         # Number and amount of installments to pay for an item. Brazil only.
         # Corresponds to the JSON property `installment`
-        # @return [Google::Apis::ContentV2::Installment]
+        # @return [GoogleAPI::Apis::ContentV2::Installment]
         attr_accessor :installment
       
         # Whether the item is a merchant-defined bundle. A bundle is a custom grouping
@@ -4777,7 +4777,7 @@ module Google
       
         # Loyalty points that users receive after purchasing the item. Japan only.
         # Corresponds to the JSON property `loyaltyPoints`
-        # @return [Google::Apis::ContentV2::LoyaltyPoints]
+        # @return [GoogleAPI::Apis::ContentV2::LoyaltyPoints]
         attr_accessor :loyalty_points
       
         # The material of which the item is made.
@@ -4821,7 +4821,7 @@ module Google
       
         # Price of the item.
         # Corresponds to the JSON property `price`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :price
       
         # Your category of the item (formatted as in products feed specification).
@@ -4836,7 +4836,7 @@ module Google
       
         # Advertised sale price of the item.
         # Corresponds to the JSON property `salePrice`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :sale_price
       
         # Date range during which the item is on sale (see products feed specification).
@@ -4851,12 +4851,12 @@ module Google
       
         # Shipping rules.
         # Corresponds to the JSON property `shipping`
-        # @return [Array<Google::Apis::ContentV2::ProductShipping>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::ProductShipping>]
         attr_accessor :shipping
       
         # Height of the item for shipping.
         # Corresponds to the JSON property `shippingHeight`
-        # @return [Google::Apis::ContentV2::ProductShippingDimension]
+        # @return [GoogleAPI::Apis::ContentV2::ProductShippingDimension]
         attr_accessor :shipping_height
       
         # The shipping label of the product, used to group product in account-level
@@ -4867,17 +4867,17 @@ module Google
       
         # Length of the item for shipping.
         # Corresponds to the JSON property `shippingLength`
-        # @return [Google::Apis::ContentV2::ProductShippingDimension]
+        # @return [GoogleAPI::Apis::ContentV2::ProductShippingDimension]
         attr_accessor :shipping_length
       
         # Weight of the item for shipping.
         # Corresponds to the JSON property `shippingWeight`
-        # @return [Google::Apis::ContentV2::ProductShippingWeight]
+        # @return [GoogleAPI::Apis::ContentV2::ProductShippingWeight]
         attr_accessor :shipping_weight
       
         # Width of the item for shipping.
         # Corresponds to the JSON property `shippingWidth`
-        # @return [Google::Apis::ContentV2::ProductShippingDimension]
+        # @return [GoogleAPI::Apis::ContentV2::ProductShippingDimension]
         attr_accessor :shipping_width
       
         # System in which the size is specified. Recommended for apparel items.
@@ -4902,7 +4902,7 @@ module Google
       
         # Tax information.
         # Corresponds to the JSON property `taxes`
-        # @return [Array<Google::Apis::ContentV2::ProductTax>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::ProductTax>]
         attr_accessor :taxes
       
         # Title of the item.
@@ -4912,12 +4912,12 @@ module Google
       
         # The preference of the denominator of the unit price.
         # Corresponds to the JSON property `unitPricingBaseMeasure`
-        # @return [Google::Apis::ContentV2::ProductUnitPricingBaseMeasure]
+        # @return [GoogleAPI::Apis::ContentV2::ProductUnitPricingBaseMeasure]
         attr_accessor :unit_pricing_base_measure
       
         # The measure and dimension of an item.
         # Corresponds to the JSON property `unitPricingMeasure`
-        # @return [Google::Apis::ContentV2::ProductUnitPricingMeasure]
+        # @return [GoogleAPI::Apis::ContentV2::ProductUnitPricingMeasure]
         attr_accessor :unit_pricing_measure
       
         # The read-only list of intended destinations which passed validation.
@@ -4927,7 +4927,7 @@ module Google
       
         # Read-only warnings.
         # Corresponds to the JSON property `warnings`
-        # @return [Array<Google::Apis::ContentV2::Error>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::Error>]
         attr_accessor :warnings
       
         def initialize(**args)
@@ -5013,7 +5013,7 @@ module Google
       
       # 
       class ProductAspect
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the aspect.
         # Corresponds to the JSON property `aspectName`
@@ -5044,7 +5044,7 @@ module Google
       
       # 
       class ProductCustomAttribute
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the attribute. Underscores will be replaced by spaces upon
         # insertion.
@@ -5083,11 +5083,11 @@ module Google
       
       # 
       class ProductCustomGroup
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The sub-attributes.
         # Corresponds to the JSON property `attributes`
-        # @return [Array<Google::Apis::ContentV2::ProductCustomAttribute>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::ProductCustomAttribute>]
         attr_accessor :attributes
       
         # The name of the group. Underscores will be replaced by spaces upon insertion.
@@ -5108,7 +5108,7 @@ module Google
       
       # 
       class ProductDestination
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the destination.
         # Corresponds to the JSON property `destinationName`
@@ -5133,7 +5133,7 @@ module Google
       
       # 
       class ProductShipping
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The CLDR territory code of the country to which an item will ship.
         # Corresponds to the JSON property `country`
@@ -5161,7 +5161,7 @@ module Google
       
         # Fixed shipping price, represented as a number.
         # Corresponds to the JSON property `price`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :price
       
         # The geographic region to which a shipping rate applies (e.g. zip code).
@@ -5192,7 +5192,7 @@ module Google
       
       # 
       class ProductShippingDimension
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The unit of value.
         # Acceptable values are:
@@ -5220,7 +5220,7 @@ module Google
       
       # 
       class ProductShippingWeight
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The unit of value.
         # Corresponds to the JSON property `unit`
@@ -5246,7 +5246,7 @@ module Google
       # The status of a product, i.e., information about a product computed
       # asynchronously by the data quality analysis.
       class ProductStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Date on which the item has been created, in ISO 8601 format.
         # Corresponds to the JSON property `creationDate`
@@ -5255,12 +5255,12 @@ module Google
       
         # A list of data quality issues associated with the product.
         # Corresponds to the JSON property `dataQualityIssues`
-        # @return [Array<Google::Apis::ContentV2::ProductStatusDataQualityIssue>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::ProductStatusDataQualityIssue>]
         attr_accessor :data_quality_issues
       
         # The intended destinations for the product.
         # Corresponds to the JSON property `destinationStatuses`
-        # @return [Array<Google::Apis::ContentV2::ProductStatusDestinationStatus>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::ProductStatusDestinationStatus>]
         attr_accessor :destination_statuses
       
         # Date on which the item expires in Google Shopping, in ISO 8601 format.
@@ -5314,7 +5314,7 @@ module Google
       
       # 
       class ProductStatusDataQualityIssue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A more detailed error string.
         # Corresponds to the JSON property `detail`
@@ -5375,7 +5375,7 @@ module Google
       
       # 
       class ProductStatusDestinationStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The destination's approval status.
         # Corresponds to the JSON property `approvalStatus`
@@ -5407,7 +5407,7 @@ module Google
       
       # 
       class ProductTax
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The country within which the item is taxed, specified as a CLDR territory code.
         # Corresponds to the JSON property `country`
@@ -5460,7 +5460,7 @@ module Google
       
       # 
       class ProductUnitPricingBaseMeasure
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The unit of the denominator.
         # Corresponds to the JSON property `unit`
@@ -5485,7 +5485,7 @@ module Google
       
       # 
       class ProductUnitPricingMeasure
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The unit of the measure.
         # Corresponds to the JSON property `unit`
@@ -5510,11 +5510,11 @@ module Google
       
       # 
       class BatchProductsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The request entries to be processed in the batch.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::ProductsBatchRequestEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::ProductsBatchRequestEntry>]
         attr_accessor :entries
       
         def initialize(**args)
@@ -5529,7 +5529,7 @@ module Google
       
       # A batch entry encoding a single non-batch products request.
       class ProductsBatchRequestEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An entry ID, unique within the batch request.
         # Corresponds to the JSON property `batchId`
@@ -5548,7 +5548,7 @@ module Google
       
         # Product data.
         # Corresponds to the JSON property `product`
-        # @return [Google::Apis::ContentV2::Product]
+        # @return [GoogleAPI::Apis::ContentV2::Product]
         attr_accessor :product
       
         # The ID of the product to get or delete. Only defined if the method is get or
@@ -5573,11 +5573,11 @@ module Google
       
       # 
       class BatchProductsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The result of the execution of the batch requests.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::ProductsBatchResponseEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::ProductsBatchResponseEntry>]
         attr_accessor :entries
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -5599,7 +5599,7 @@ module Google
       
       # A batch entry encoding a single non-batch products response.
       class ProductsBatchResponseEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the request entry this entry responds to.
         # Corresponds to the JSON property `batchId`
@@ -5608,7 +5608,7 @@ module Google
       
         # A list of errors returned by a failed batch entry.
         # Corresponds to the JSON property `errors`
-        # @return [Google::Apis::ContentV2::Errors]
+        # @return [GoogleAPI::Apis::ContentV2::Errors]
         attr_accessor :errors
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -5619,7 +5619,7 @@ module Google
       
         # Product data.
         # Corresponds to the JSON property `product`
-        # @return [Google::Apis::ContentV2::Product]
+        # @return [GoogleAPI::Apis::ContentV2::Product]
         attr_accessor :product
       
         def initialize(**args)
@@ -5637,7 +5637,7 @@ module Google
       
       # 
       class ListProductsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
         # productsListResponse".
@@ -5652,7 +5652,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `resources`
-        # @return [Array<Google::Apis::ContentV2::Product>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::Product>]
         attr_accessor :resources
       
         def initialize(**args)
@@ -5669,11 +5669,11 @@ module Google
       
       # 
       class BatchProductStatusesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The request entries to be processed in the batch.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::ProductStatusesBatchRequestEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::ProductStatusesBatchRequestEntry>]
         attr_accessor :entries
       
         def initialize(**args)
@@ -5688,7 +5688,7 @@ module Google
       
       # A batch entry encoding a single non-batch productstatuses request.
       class ProductStatusesBatchRequestEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An entry ID, unique within the batch request.
         # Corresponds to the JSON property `batchId`
@@ -5725,11 +5725,11 @@ module Google
       
       # 
       class BatchProductStatusesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The result of the execution of the batch requests.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::ContentV2::ProductStatusesBatchResponseEntry>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::ProductStatusesBatchResponseEntry>]
         attr_accessor :entries
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -5751,7 +5751,7 @@ module Google
       
       # A batch entry encoding a single non-batch productstatuses response.
       class ProductStatusesBatchResponseEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the request entry this entry responds to.
         # Corresponds to the JSON property `batchId`
@@ -5760,7 +5760,7 @@ module Google
       
         # A list of errors returned by a failed batch entry.
         # Corresponds to the JSON property `errors`
-        # @return [Google::Apis::ContentV2::Errors]
+        # @return [GoogleAPI::Apis::ContentV2::Errors]
         attr_accessor :errors
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -5772,7 +5772,7 @@ module Google
         # The status of a product, i.e., information about a product computed
         # asynchronously by the data quality analysis.
         # Corresponds to the JSON property `productStatus`
-        # @return [Google::Apis::ContentV2::ProductStatus]
+        # @return [GoogleAPI::Apis::ContentV2::ProductStatus]
         attr_accessor :product_status
       
         def initialize(**args)
@@ -5790,7 +5790,7 @@ module Google
       
       # 
       class ListProductStatusesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
         # productstatusesListResponse".
@@ -5805,7 +5805,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `resources`
-        # @return [Array<Google::Apis::ContentV2::ProductStatus>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::ProductStatus>]
         attr_accessor :resources
       
         def initialize(**args)
@@ -5822,11 +5822,11 @@ module Google
       
       # 
       class TestOrder
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The details of the customer who placed the order.
         # Corresponds to the JSON property `customer`
-        # @return [Google::Apis::ContentV2::TestOrderCustomer]
+        # @return [GoogleAPI::Apis::ContentV2::TestOrderCustomer]
         attr_accessor :customer
       
         # Identifies what kind of resource this is. Value: the fixed string "content#
@@ -5837,12 +5837,12 @@ module Google
       
         # Line items that are ordered. At least one line item must be provided.
         # Corresponds to the JSON property `lineItems`
-        # @return [Array<Google::Apis::ContentV2::TestOrderLineItem>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::TestOrderLineItem>]
         attr_accessor :line_items
       
         # The details of the payment method.
         # Corresponds to the JSON property `paymentMethod`
-        # @return [Google::Apis::ContentV2::TestOrderPaymentMethod]
+        # @return [GoogleAPI::Apis::ContentV2::TestOrderPaymentMethod]
         attr_accessor :payment_method
       
         # Identifier of one of the predefined delivery addresses for the delivery.
@@ -5853,17 +5853,17 @@ module Google
         # The details of the merchant provided promotions applied to the order. More
         # details about the program are  here.
         # Corresponds to the JSON property `promotions`
-        # @return [Array<Google::Apis::ContentV2::OrderPromotion>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::OrderPromotion>]
         attr_accessor :promotions
       
         # The total cost of shipping for all items.
         # Corresponds to the JSON property `shippingCost`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :shipping_cost
       
         # The tax for the total shipping cost.
         # Corresponds to the JSON property `shippingCostTax`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :shipping_cost_tax
       
         # The requested shipping option.
@@ -5891,7 +5891,7 @@ module Google
       
       # 
       class TestOrderCustomer
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Email address of the customer.
         # Corresponds to the JSON property `email`
@@ -5927,11 +5927,11 @@ module Google
       
       # 
       class TestOrderLineItem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Product data from the time of the order placement.
         # Corresponds to the JSON property `product`
-        # @return [Google::Apis::ContentV2::TestOrderLineItemProduct]
+        # @return [GoogleAPI::Apis::ContentV2::TestOrderLineItemProduct]
         attr_accessor :product
       
         # Number of items ordered.
@@ -5941,17 +5941,17 @@ module Google
       
         # Details of the return policy for the line item.
         # Corresponds to the JSON property `returnInfo`
-        # @return [Google::Apis::ContentV2::OrderLineItemReturnInfo]
+        # @return [GoogleAPI::Apis::ContentV2::OrderLineItemReturnInfo]
         attr_accessor :return_info
       
         # Details of the requested shipping for the line item.
         # Corresponds to the JSON property `shippingDetails`
-        # @return [Google::Apis::ContentV2::OrderLineItemShippingDetails]
+        # @return [GoogleAPI::Apis::ContentV2::OrderLineItemShippingDetails]
         attr_accessor :shipping_details
       
         # Unit tax for the line item.
         # Corresponds to the JSON property `unitTax`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :unit_tax
       
         def initialize(**args)
@@ -5970,7 +5970,7 @@ module Google
       
       # 
       class TestOrderLineItemProduct
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Brand of the item.
         # Corresponds to the JSON property `brand`
@@ -6019,7 +6019,7 @@ module Google
       
         # The price for the product.
         # Corresponds to the JSON property `price`
-        # @return [Google::Apis::ContentV2::Price]
+        # @return [GoogleAPI::Apis::ContentV2::Price]
         attr_accessor :price
       
         # The CLDR territory code of the target country of the product.
@@ -6034,7 +6034,7 @@ module Google
       
         # Variant attributes for the item. Optional.
         # Corresponds to the JSON property `variantAttributes`
-        # @return [Array<Google::Apis::ContentV2::OrderLineItemProductVariantAttribute>]
+        # @return [Array<GoogleAPI::Apis::ContentV2::OrderLineItemProductVariantAttribute>]
         attr_accessor :variant_attributes
       
         def initialize(**args)
@@ -6061,7 +6061,7 @@ module Google
       
       # 
       class TestOrderPaymentMethod
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The card expiration month (January = 1, February = 2 etc.).
         # Corresponds to the JSON property `expirationMonth`
@@ -6105,7 +6105,7 @@ module Google
       
       # 
       class Weight
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The weight unit.
         # Corresponds to the JSON property `unit`

@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module WebmastersV3
       
       # 
       class ApiDataRow
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `clicks`
@@ -67,7 +67,7 @@ module Google
       
       # 
       class ApiDimensionFilter
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `dimension`
@@ -98,11 +98,11 @@ module Google
       
       # 
       class ApiDimensionFilterGroup
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `filters`
-        # @return [Array<Google::Apis::WebmastersV3::ApiDimensionFilter>]
+        # @return [Array<GoogleAPI::Apis::WebmastersV3::ApiDimensionFilter>]
         attr_accessor :filters
       
         # 
@@ -123,7 +123,7 @@ module Google
       
       # 
       class SearchAnalyticsQueryRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Optional; Default is "auto"] How data is aggregated. If aggregated by
         # property, all data for the same property is aggregated; if aggregated by page,
@@ -145,7 +145,7 @@ module Google
         # contains the substring "buy" (not case-sensitive). You can filter by a
         # dimension without grouping by it.
         # Corresponds to the JSON property `dimensionFilterGroups`
-        # @return [Array<Google::Apis::WebmastersV3::ApiDimensionFilterGroup>]
+        # @return [Array<GoogleAPI::Apis::WebmastersV3::ApiDimensionFilterGroup>]
         attr_accessor :dimension_filter_groups
       
         # [Optional] Zero or more dimensions to group results by. Dimensions are the
@@ -208,7 +208,7 @@ module Google
       # aggregated for all data grouped by that key either by page or property, as
       # specified by the aggregation type parameter.
       class SearchAnalyticsQueryResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # How the results were aggregated.
         # Corresponds to the JSON property `responseAggregationType`
@@ -217,7 +217,7 @@ module Google
       
         # A list of rows grouped by the key values in the order given in the query.
         # Corresponds to the JSON property `rows`
-        # @return [Array<Google::Apis::WebmastersV3::ApiDataRow>]
+        # @return [Array<GoogleAPI::Apis::WebmastersV3::ApiDataRow>]
         attr_accessor :rows
       
         def initialize(**args)
@@ -233,11 +233,11 @@ module Google
       
       # List of sitemaps.
       class ListSitemapsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Contains detailed information about a specific URL submitted as a sitemap.
         # Corresponds to the JSON property `sitemap`
-        # @return [Array<Google::Apis::WebmastersV3::WmxSitemap>]
+        # @return [Array<GoogleAPI::Apis::WebmastersV3::WmxSitemap>]
         attr_accessor :sitemap
       
         def initialize(**args)
@@ -252,12 +252,12 @@ module Google
       
       # List of sites with access level information.
       class ListSitesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Contains permission level information about a Search Console site. For more
         # information, see Permissions in Search Console.
         # Corresponds to the JSON property `siteEntry`
-        # @return [Array<Google::Apis::WebmastersV3::WmxSite>]
+        # @return [Array<GoogleAPI::Apis::WebmastersV3::WmxSite>]
         attr_accessor :site_entry
       
         def initialize(**args)
@@ -272,7 +272,7 @@ module Google
       
       # An entry in a URL crawl errors time series.
       class UrlCrawlErrorCount
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The error count at the given timestamp.
         # Corresponds to the JSON property `count`
@@ -298,7 +298,7 @@ module Google
       # Number of errors per day for a specific error type (defined by platform and
       # category).
       class UrlCrawlErrorCountsPerType
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The crawl error type.
         # Corresponds to the JSON property `category`
@@ -307,7 +307,7 @@ module Google
       
         # The error count entries time series.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::WebmastersV3::UrlCrawlErrorCount>]
+        # @return [Array<GoogleAPI::Apis::WebmastersV3::UrlCrawlErrorCount>]
         attr_accessor :entries
       
         # The general type of Googlebot that made the request (see list of Googlebot
@@ -331,12 +331,12 @@ module Google
       # A time series of the number of URL crawl errors per error category and
       # platform.
       class QueryUrlCrawlErrorsCountsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The time series of the number of URL crawl errors per error category and
         # platform.
         # Corresponds to the JSON property `countPerTypes`
-        # @return [Array<Google::Apis::WebmastersV3::UrlCrawlErrorCountsPerType>]
+        # @return [Array<GoogleAPI::Apis::WebmastersV3::UrlCrawlErrorCountsPerType>]
         attr_accessor :count_per_types
       
         def initialize(**args)
@@ -351,7 +351,7 @@ module Google
       
       # Contains information about specific crawl errors.
       class UrlCrawlErrorsSample
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The time the error was first detected, in RFC 3339 format.
         # Corresponds to the JSON property `first_detected`
@@ -375,7 +375,7 @@ module Google
       
         # Additional details about the URL, set only when calling get().
         # Corresponds to the JSON property `urlDetails`
-        # @return [Google::Apis::WebmastersV3::UrlSampleDetails]
+        # @return [GoogleAPI::Apis::WebmastersV3::UrlSampleDetails]
         attr_accessor :url_details
       
         def initialize(**args)
@@ -394,11 +394,11 @@ module Google
       
       # List of crawl error samples.
       class ListUrlCrawlErrorsSamplesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Information about the sample URL and its crawl error.
         # Corresponds to the JSON property `urlCrawlErrorSample`
-        # @return [Array<Google::Apis::WebmastersV3::UrlCrawlErrorsSample>]
+        # @return [Array<GoogleAPI::Apis::WebmastersV3::UrlCrawlErrorsSample>]
         attr_accessor :url_crawl_error_sample
       
         def initialize(**args)
@@ -413,7 +413,7 @@ module Google
       
       # Additional details about the URL, set only when calling get().
       class UrlSampleDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of sitemaps pointing at this URL.
         # Corresponds to the JSON property `containingSitemaps`
@@ -439,7 +439,7 @@ module Google
       # Contains permission level information about a Search Console site. For more
       # information, see  Permissions in Search Console.
       class WmxSite
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The user's permission level for the site.
         # Corresponds to the JSON property `permissionLevel`
@@ -464,11 +464,11 @@ module Google
       
       # Contains detailed information about a specific URL submitted as a sitemap.
       class WmxSitemap
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The various content types in the sitemap.
         # Corresponds to the JSON property `contents`
-        # @return [Array<Google::Apis::WebmastersV3::WmxSitemapContent>]
+        # @return [Array<GoogleAPI::Apis::WebmastersV3::WmxSitemapContent>]
         attr_accessor :contents
       
         # Number of errors in the sitemap. These are issues with the sitemap itself that
@@ -537,7 +537,7 @@ module Google
       
       # Information about the various content types in the sitemap.
       class WmxSitemapContent
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of URLs from the sitemap that were indexed (of the content type).
         # Corresponds to the JSON property `indexed`

@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ComputeV1
       # Compute Engine API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/compute_v1'
       #
-      #    Compute = Google::Apis::ComputeV1 # Alias the module
+      #    Compute = GoogleAPI::Apis::ComputeV1 # Alias the module
       #    service = Compute::ComputeService.new
       #
       # @see https://developers.google.com/compute/docs/reference/latest/
-      class ComputeService < Google::Apis::Core::BaseService
+      class ComputeService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -95,22 +95,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::AddressAggregatedList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::AddressAggregatedList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::AddressAggregatedList]
+        # @return [GoogleAPI::Apis::ComputeV1::AddressAggregatedList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_aggregated_addresses(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/aggregated/addresses', options)
-          command.response_representation = Google::Apis::ComputeV1::AddressAggregatedList::Representation
-          command.response_class = Google::Apis::ComputeV1::AddressAggregatedList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::AddressAggregatedList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::AddressAggregatedList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -137,22 +137,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_address(project, region, address, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/regions/{region}/addresses/{address}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['address'] = address unless address.nil?
@@ -178,22 +178,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Address] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Address] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Address]
+        # @return [GoogleAPI::Apis::ComputeV1::Address]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_address(project, region, address, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions/{region}/addresses/{address}', options)
-          command.response_representation = Google::Apis::ComputeV1::Address::Representation
-          command.response_class = Google::Apis::ComputeV1::Address
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Address::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Address
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['address'] = address unless address.nil?
@@ -209,7 +209,7 @@ module Google
         #   Project ID for this request.
         # @param [String] region
         #   Name of the region for this request.
-        # @param [Google::Apis::ComputeV1::Address] address_object
+        # @param [GoogleAPI::Apis::ComputeV1::Address] address_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -219,24 +219,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_address(project, region, address_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/regions/{region}/addresses', options)
-          command.request_representation = Google::Apis::ComputeV1::Address::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Address::Representation
           command.request_object = address_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -290,22 +290,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::AddressList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::AddressList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::AddressList]
+        # @return [GoogleAPI::Apis::ComputeV1::AddressList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_addresses(project, region, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions/{region}/addresses', options)
-          command.response_representation = Google::Apis::ComputeV1::AddressList::Representation
-          command.response_class = Google::Apis::ComputeV1::AddressList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::AddressList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::AddressList
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -360,22 +360,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::AutoscalerAggregatedList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::AutoscalerAggregatedList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::AutoscalerAggregatedList]
+        # @return [GoogleAPI::Apis::ComputeV1::AutoscalerAggregatedList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_aggregated_autoscalers(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/aggregated/autoscalers', options)
-          command.response_representation = Google::Apis::ComputeV1::AutoscalerAggregatedList::Representation
-          command.response_class = Google::Apis::ComputeV1::AutoscalerAggregatedList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::AutoscalerAggregatedList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::AutoscalerAggregatedList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -402,22 +402,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_autoscaler(project, zone, autoscaler, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/zones/{zone}/autoscalers/{autoscaler}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['autoscaler'] = autoscaler unless autoscaler.nil?
@@ -444,22 +444,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Autoscaler] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Autoscaler] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Autoscaler]
+        # @return [GoogleAPI::Apis::ComputeV1::Autoscaler]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_autoscaler(project, zone, autoscaler, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/autoscalers/{autoscaler}', options)
-          command.response_representation = Google::Apis::ComputeV1::Autoscaler::Representation
-          command.response_class = Google::Apis::ComputeV1::Autoscaler
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Autoscaler::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Autoscaler
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['autoscaler'] = autoscaler unless autoscaler.nil?
@@ -475,7 +475,7 @@ module Google
         #   Project ID for this request.
         # @param [String] zone
         #   Name of the zone for this request.
-        # @param [Google::Apis::ComputeV1::Autoscaler] autoscaler_object
+        # @param [GoogleAPI::Apis::ComputeV1::Autoscaler] autoscaler_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -485,24 +485,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_autoscaler(project, zone, autoscaler_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/autoscalers', options)
-          command.request_representation = Google::Apis::ComputeV1::Autoscaler::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Autoscaler::Representation
           command.request_object = autoscaler_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -556,22 +556,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::AutoscalerList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::AutoscalerList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::AutoscalerList]
+        # @return [GoogleAPI::Apis::ComputeV1::AutoscalerList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_autoscalers(project, zone, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/autoscalers', options)
-          command.response_representation = Google::Apis::ComputeV1::AutoscalerList::Representation
-          command.response_class = Google::Apis::ComputeV1::AutoscalerList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::AutoscalerList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::AutoscalerList
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -591,7 +591,7 @@ module Google
         #   Name of the zone for this request.
         # @param [String] autoscaler
         #   Name of the autoscaler to update.
-        # @param [Google::Apis::ComputeV1::Autoscaler] autoscaler_object
+        # @param [GoogleAPI::Apis::ComputeV1::Autoscaler] autoscaler_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -601,24 +601,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_autoscaler(project, zone, autoscaler, autoscaler_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, '{project}/zones/{zone}/autoscalers', options)
-          command.request_representation = Google::Apis::ComputeV1::Autoscaler::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Autoscaler::Representation
           command.request_object = autoscaler_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['autoscaler'] = autoscaler unless autoscaler.nil?
@@ -634,7 +634,7 @@ module Google
         #   Project ID for this request.
         # @param [String] zone
         #   Name of the zone for this request.
-        # @param [Google::Apis::ComputeV1::Autoscaler] autoscaler_object
+        # @param [GoogleAPI::Apis::ComputeV1::Autoscaler] autoscaler_object
         # @param [String] autoscaler
         #   Name of the autoscaler to update.
         # @param [String] fields
@@ -646,24 +646,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_autoscaler(project, zone, autoscaler_object = nil, autoscaler: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, '{project}/zones/{zone}/autoscalers', options)
-          command.request_representation = Google::Apis::ComputeV1::Autoscaler::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Autoscaler::Representation
           command.request_object = autoscaler_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['autoscaler'] = autoscaler unless autoscaler.nil?
@@ -687,22 +687,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_backend_service(project, backend_service, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/global/backendServices/{backendService}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['backendService'] = backend_service unless backend_service.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -726,22 +726,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::BackendService] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::BackendService] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::BackendService]
+        # @return [GoogleAPI::Apis::ComputeV1::BackendService]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_backend_service(project, backend_service, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/backendServices/{backendService}', options)
-          command.response_representation = Google::Apis::ComputeV1::BackendService::Representation
-          command.response_class = Google::Apis::ComputeV1::BackendService
+          command.response_representation = GoogleAPI::Apis::ComputeV1::BackendService::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::BackendService
           command.params['project'] = project unless project.nil?
           command.params['backendService'] = backend_service unless backend_service.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -754,7 +754,7 @@ module Google
         # @param [String] project
         # @param [String] backend_service
         #   Name of the BackendService resource to which the queried instance belongs.
-        # @param [Google::Apis::ComputeV1::ResourceGroupReference] resource_group_reference_object
+        # @param [GoogleAPI::Apis::ComputeV1::ResourceGroupReference] resource_group_reference_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -764,24 +764,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::BackendServiceGroupHealth] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::BackendServiceGroupHealth] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::BackendServiceGroupHealth]
+        # @return [GoogleAPI::Apis::ComputeV1::BackendServiceGroupHealth]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_backend_service_health(project, backend_service, resource_group_reference_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/backendServices/{backendService}/getHealth', options)
-          command.request_representation = Google::Apis::ComputeV1::ResourceGroupReference::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::ResourceGroupReference::Representation
           command.request_object = resource_group_reference_object
-          command.response_representation = Google::Apis::ComputeV1::BackendServiceGroupHealth::Representation
-          command.response_class = Google::Apis::ComputeV1::BackendServiceGroupHealth
+          command.response_representation = GoogleAPI::Apis::ComputeV1::BackendServiceGroupHealth::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::BackendServiceGroupHealth
           command.params['project'] = project unless project.nil?
           command.params['backendService'] = backend_service unless backend_service.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -796,7 +796,7 @@ module Google
         # more information.
         # @param [String] project
         #   Project ID for this request.
-        # @param [Google::Apis::ComputeV1::BackendService] backend_service_object
+        # @param [GoogleAPI::Apis::ComputeV1::BackendService] backend_service_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -806,24 +806,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_backend_service(project, backend_service_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/backendServices', options)
-          command.request_representation = Google::Apis::ComputeV1::BackendService::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::BackendService::Representation
           command.request_object = backend_service_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -875,22 +875,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::BackendServiceList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::BackendServiceList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::BackendServiceList]
+        # @return [GoogleAPI::Apis::ComputeV1::BackendServiceList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_backend_services(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/backendServices', options)
-          command.response_representation = Google::Apis::ComputeV1::BackendServiceList::Representation
-          command.response_class = Google::Apis::ComputeV1::BackendServiceList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::BackendServiceList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::BackendServiceList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -909,7 +909,7 @@ module Google
         #   Project ID for this request.
         # @param [String] backend_service
         #   Name of the BackendService resource to update.
-        # @param [Google::Apis::ComputeV1::BackendService] backend_service_object
+        # @param [GoogleAPI::Apis::ComputeV1::BackendService] backend_service_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -919,24 +919,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_backend_service(project, backend_service, backend_service_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, '{project}/global/backendServices/{backendService}', options)
-          command.request_representation = Google::Apis::ComputeV1::BackendService::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::BackendService::Representation
           command.request_object = backend_service_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['backendService'] = backend_service unless backend_service.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -952,7 +952,7 @@ module Google
         #   Project ID for this request.
         # @param [String] backend_service
         #   Name of the BackendService resource to update.
-        # @param [Google::Apis::ComputeV1::BackendService] backend_service_object
+        # @param [GoogleAPI::Apis::ComputeV1::BackendService] backend_service_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -962,24 +962,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_backend_service(project, backend_service, backend_service_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, '{project}/global/backendServices/{backendService}', options)
-          command.request_representation = Google::Apis::ComputeV1::BackendService::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::BackendService::Representation
           command.request_object = backend_service_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['backendService'] = backend_service unless backend_service.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1031,22 +1031,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::DiskTypeAggregatedList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::DiskTypeAggregatedList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::DiskTypeAggregatedList]
+        # @return [GoogleAPI::Apis::ComputeV1::DiskTypeAggregatedList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_aggregated_disk_types(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/aggregated/diskTypes', options)
-          command.response_representation = Google::Apis::ComputeV1::DiskTypeAggregatedList::Representation
-          command.response_class = Google::Apis::ComputeV1::DiskTypeAggregatedList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::DiskTypeAggregatedList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::DiskTypeAggregatedList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -1074,22 +1074,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::DiskType] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::DiskType] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::DiskType]
+        # @return [GoogleAPI::Apis::ComputeV1::DiskType]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_disk_type(project, zone, disk_type, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/diskTypes/{diskType}', options)
-          command.response_representation = Google::Apis::ComputeV1::DiskType::Representation
-          command.response_class = Google::Apis::ComputeV1::DiskType
+          command.response_representation = GoogleAPI::Apis::ComputeV1::DiskType::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::DiskType
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['diskType'] = disk_type unless disk_type.nil?
@@ -1144,22 +1144,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::DiskTypeList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::DiskTypeList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::DiskTypeList]
+        # @return [GoogleAPI::Apis::ComputeV1::DiskTypeList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_disk_types(project, zone, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/diskTypes', options)
-          command.response_representation = Google::Apis::ComputeV1::DiskTypeList::Representation
-          command.response_class = Google::Apis::ComputeV1::DiskTypeList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::DiskTypeList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::DiskTypeList
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -1214,22 +1214,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::DiskAggregatedList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::DiskAggregatedList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::DiskAggregatedList]
+        # @return [GoogleAPI::Apis::ComputeV1::DiskAggregatedList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_aggregated_disk(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/aggregated/disks', options)
-          command.response_representation = Google::Apis::ComputeV1::DiskAggregatedList::Representation
-          command.response_class = Google::Apis::ComputeV1::DiskAggregatedList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::DiskAggregatedList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::DiskAggregatedList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -1247,7 +1247,7 @@ module Google
         #   The name of the zone for this request.
         # @param [String] disk
         #   Name of the persistent disk to snapshot.
-        # @param [Google::Apis::ComputeV1::Snapshot] snapshot_object
+        # @param [GoogleAPI::Apis::ComputeV1::Snapshot] snapshot_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1257,24 +1257,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_disk_snapshot(project, zone, disk, snapshot_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/disks/{disk}/createSnapshot', options)
-          command.request_representation = Google::Apis::ComputeV1::Snapshot::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Snapshot::Representation
           command.request_object = snapshot_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['disk'] = disk unless disk.nil?
@@ -1302,22 +1302,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_disk(project, zone, disk, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/zones/{zone}/disks/{disk}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['disk'] = disk unless disk.nil?
@@ -1344,22 +1344,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Disk] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Disk] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Disk]
+        # @return [GoogleAPI::Apis::ComputeV1::Disk]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_disk(project, zone, disk, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/disks/{disk}', options)
-          command.response_representation = Google::Apis::ComputeV1::Disk::Representation
-          command.response_class = Google::Apis::ComputeV1::Disk
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Disk::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Disk
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['disk'] = disk unless disk.nil?
@@ -1377,7 +1377,7 @@ module Google
         #   Project ID for this request.
         # @param [String] zone
         #   The name of the zone for this request.
-        # @param [Google::Apis::ComputeV1::Disk] disk_object
+        # @param [GoogleAPI::Apis::ComputeV1::Disk] disk_object
         # @param [String] source_image
         #   Optional. Source image to restore onto a disk.
         # @param [String] fields
@@ -1389,24 +1389,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_disk(project, zone, disk_object = nil, source_image: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/disks', options)
-          command.request_representation = Google::Apis::ComputeV1::Disk::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Disk::Representation
           command.request_object = disk_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['sourceImage'] = source_image unless source_image.nil?
@@ -1461,22 +1461,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::DiskList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::DiskList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::DiskList]
+        # @return [GoogleAPI::Apis::ComputeV1::DiskList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_disks(project, zone, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/disks', options)
-          command.response_representation = Google::Apis::ComputeV1::DiskList::Representation
-          command.response_class = Google::Apis::ComputeV1::DiskList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::DiskList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::DiskList
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -1495,7 +1495,7 @@ module Google
         #   The name of the zone for this request.
         # @param [String] disk
         #   The name of the persistent disk.
-        # @param [Google::Apis::ComputeV1::DisksResizeRequest] disks_resize_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::DisksResizeRequest] disks_resize_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1505,24 +1505,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def resize_disk(project, zone, disk, disks_resize_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/disks/{disk}/resize', options)
-          command.request_representation = Google::Apis::ComputeV1::DisksResizeRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::DisksResizeRequest::Representation
           command.request_object = disks_resize_request_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['disk'] = disk unless disk.nil?
@@ -1546,22 +1546,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_firewall(project, firewall, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/global/firewalls/{firewall}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['firewall'] = firewall unless firewall.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1584,22 +1584,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Firewall] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Firewall] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Firewall]
+        # @return [GoogleAPI::Apis::ComputeV1::Firewall]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_firewall(project, firewall, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/firewalls/{firewall}', options)
-          command.response_representation = Google::Apis::ComputeV1::Firewall::Representation
-          command.response_class = Google::Apis::ComputeV1::Firewall
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Firewall::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Firewall
           command.params['project'] = project unless project.nil?
           command.params['firewall'] = firewall unless firewall.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1612,7 +1612,7 @@ module Google
         # the request.
         # @param [String] project
         #   Project ID for this request.
-        # @param [Google::Apis::ComputeV1::Firewall] firewall_object
+        # @param [GoogleAPI::Apis::ComputeV1::Firewall] firewall_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1622,24 +1622,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_firewall(project, firewall_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/firewalls', options)
-          command.request_representation = Google::Apis::ComputeV1::Firewall::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Firewall::Representation
           command.request_object = firewall_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -1690,22 +1690,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::FirewallList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::FirewallList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::FirewallList]
+        # @return [GoogleAPI::Apis::ComputeV1::FirewallList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_firewalls(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/firewalls', options)
-          command.response_representation = Google::Apis::ComputeV1::FirewallList::Representation
-          command.response_class = Google::Apis::ComputeV1::FirewallList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::FirewallList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::FirewallList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -1722,7 +1722,7 @@ module Google
         #   Project ID for this request.
         # @param [String] firewall
         #   Name of the firewall rule to update.
-        # @param [Google::Apis::ComputeV1::Firewall] firewall_object
+        # @param [GoogleAPI::Apis::ComputeV1::Firewall] firewall_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1732,24 +1732,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_firewall(project, firewall, firewall_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, '{project}/global/firewalls/{firewall}', options)
-          command.request_representation = Google::Apis::ComputeV1::Firewall::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Firewall::Representation
           command.request_object = firewall_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['firewall'] = firewall unless firewall.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1763,7 +1763,7 @@ module Google
         #   Project ID for this request.
         # @param [String] firewall
         #   Name of the firewall rule to update.
-        # @param [Google::Apis::ComputeV1::Firewall] firewall_object
+        # @param [GoogleAPI::Apis::ComputeV1::Firewall] firewall_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1773,24 +1773,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_firewall(project, firewall, firewall_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, '{project}/global/firewalls/{firewall}', options)
-          command.request_representation = Google::Apis::ComputeV1::Firewall::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Firewall::Representation
           command.request_object = firewall_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['firewall'] = firewall unless firewall.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1842,22 +1842,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::ForwardingRuleAggregatedList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::ForwardingRuleAggregatedList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::ForwardingRuleAggregatedList]
+        # @return [GoogleAPI::Apis::ComputeV1::ForwardingRuleAggregatedList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_aggregated_forwarding_rules(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/aggregated/forwardingRules', options)
-          command.response_representation = Google::Apis::ComputeV1::ForwardingRuleAggregatedList::Representation
-          command.response_class = Google::Apis::ComputeV1::ForwardingRuleAggregatedList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::ForwardingRuleAggregatedList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::ForwardingRuleAggregatedList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -1884,22 +1884,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_forwarding_rule(project, region, forwarding_rule, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/regions/{region}/forwardingRules/{forwardingRule}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['forwardingRule'] = forwarding_rule unless forwarding_rule.nil?
@@ -1925,22 +1925,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::ForwardingRule] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::ForwardingRule] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::ForwardingRule]
+        # @return [GoogleAPI::Apis::ComputeV1::ForwardingRule]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_forwarding_rule(project, region, forwarding_rule, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions/{region}/forwardingRules/{forwardingRule}', options)
-          command.response_representation = Google::Apis::ComputeV1::ForwardingRule::Representation
-          command.response_class = Google::Apis::ComputeV1::ForwardingRule
+          command.response_representation = GoogleAPI::Apis::ComputeV1::ForwardingRule::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::ForwardingRule
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['forwardingRule'] = forwarding_rule unless forwarding_rule.nil?
@@ -1956,7 +1956,7 @@ module Google
         #   Project ID for this request.
         # @param [String] region
         #   Name of the region scoping this request.
-        # @param [Google::Apis::ComputeV1::ForwardingRule] forwarding_rule_object
+        # @param [GoogleAPI::Apis::ComputeV1::ForwardingRule] forwarding_rule_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1966,24 +1966,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_forwarding_rule(project, region, forwarding_rule_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/regions/{region}/forwardingRules', options)
-          command.request_representation = Google::Apis::ComputeV1::ForwardingRule::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::ForwardingRule::Representation
           command.request_object = forwarding_rule_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2038,22 +2038,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::ForwardingRuleList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::ForwardingRuleList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::ForwardingRuleList]
+        # @return [GoogleAPI::Apis::ComputeV1::ForwardingRuleList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_forwarding_rules(project, region, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions/{region}/forwardingRules', options)
-          command.response_representation = Google::Apis::ComputeV1::ForwardingRuleList::Representation
-          command.response_class = Google::Apis::ComputeV1::ForwardingRuleList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::ForwardingRuleList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::ForwardingRuleList
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -2073,7 +2073,7 @@ module Google
         #   Name of the region scoping this request.
         # @param [String] forwarding_rule
         #   Name of the ForwardingRule resource in which target is to be set.
-        # @param [Google::Apis::ComputeV1::TargetReference] target_reference_object
+        # @param [GoogleAPI::Apis::ComputeV1::TargetReference] target_reference_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2083,24 +2083,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_forwarding_rule_target(project, region, forwarding_rule, target_reference_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/regions/{region}/forwardingRules/{forwardingRule}/setTarget', options)
-          command.request_representation = Google::Apis::ComputeV1::TargetReference::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::TargetReference::Representation
           command.request_object = target_reference_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['forwardingRule'] = forwarding_rule unless forwarding_rule.nil?
@@ -2124,22 +2124,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_global_address(project, address, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/global/addresses/{address}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['address'] = address unless address.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2163,22 +2163,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Address] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Address] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Address]
+        # @return [GoogleAPI::Apis::ComputeV1::Address]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_global_address(project, address, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/addresses/{address}', options)
-          command.response_representation = Google::Apis::ComputeV1::Address::Representation
-          command.response_class = Google::Apis::ComputeV1::Address
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Address::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Address
           command.params['project'] = project unless project.nil?
           command.params['address'] = address unless address.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2191,7 +2191,7 @@ module Google
         # in the request.
         # @param [String] project
         #   Project ID for this request.
-        # @param [Google::Apis::ComputeV1::Address] address_object
+        # @param [GoogleAPI::Apis::ComputeV1::Address] address_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2201,24 +2201,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_global_address(project, address_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/addresses', options)
-          command.request_representation = Google::Apis::ComputeV1::Address::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Address::Representation
           command.request_object = address_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -2269,22 +2269,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::AddressList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::AddressList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::AddressList]
+        # @return [GoogleAPI::Apis::ComputeV1::AddressList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_global_addresses(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/addresses', options)
-          command.response_representation = Google::Apis::ComputeV1::AddressList::Representation
-          command.response_class = Google::Apis::ComputeV1::AddressList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::AddressList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::AddressList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -2309,22 +2309,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_global_forwarding_rule(project, forwarding_rule, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/global/forwardingRules/{forwardingRule}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['forwardingRule'] = forwarding_rule unless forwarding_rule.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2348,22 +2348,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::ForwardingRule] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::ForwardingRule] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::ForwardingRule]
+        # @return [GoogleAPI::Apis::ComputeV1::ForwardingRule]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_global_forwarding_rule(project, forwarding_rule, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/forwardingRules/{forwardingRule}', options)
-          command.response_representation = Google::Apis::ComputeV1::ForwardingRule::Representation
-          command.response_class = Google::Apis::ComputeV1::ForwardingRule
+          command.response_representation = GoogleAPI::Apis::ComputeV1::ForwardingRule::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::ForwardingRule
           command.params['project'] = project unless project.nil?
           command.params['forwardingRule'] = forwarding_rule unless forwarding_rule.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2376,7 +2376,7 @@ module Google
         # the data included in the request.
         # @param [String] project
         #   Project ID for this request.
-        # @param [Google::Apis::ComputeV1::ForwardingRule] forwarding_rule_object
+        # @param [GoogleAPI::Apis::ComputeV1::ForwardingRule] forwarding_rule_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2386,24 +2386,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_global_forwarding_rule(project, forwarding_rule_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/forwardingRules', options)
-          command.request_representation = Google::Apis::ComputeV1::ForwardingRule::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::ForwardingRule::Representation
           command.request_object = forwarding_rule_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -2455,22 +2455,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::ForwardingRuleList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::ForwardingRuleList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::ForwardingRuleList]
+        # @return [GoogleAPI::Apis::ComputeV1::ForwardingRuleList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_global_forwarding_rules(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/forwardingRules', options)
-          command.response_representation = Google::Apis::ComputeV1::ForwardingRuleList::Representation
-          command.response_class = Google::Apis::ComputeV1::ForwardingRuleList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::ForwardingRuleList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::ForwardingRuleList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -2487,7 +2487,7 @@ module Google
         #   Project ID for this request.
         # @param [String] forwarding_rule
         #   Name of the ForwardingRule resource in which target is to be set.
-        # @param [Google::Apis::ComputeV1::TargetReference] target_reference_object
+        # @param [GoogleAPI::Apis::ComputeV1::TargetReference] target_reference_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2497,24 +2497,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_global_forwarding_rule_target(project, forwarding_rule, target_reference_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/forwardingRules/{forwardingRule}/setTarget', options)
-          command.request_representation = Google::Apis::ComputeV1::TargetReference::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::TargetReference::Representation
           command.request_object = target_reference_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['forwardingRule'] = forwarding_rule unless forwarding_rule.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2566,22 +2566,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::OperationAggregatedList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::OperationAggregatedList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::OperationAggregatedList]
+        # @return [GoogleAPI::Apis::ComputeV1::OperationAggregatedList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_aggregated_global_operation(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/aggregated/operations', options)
-          command.response_representation = Google::Apis::ComputeV1::OperationAggregatedList::Representation
-          command.response_class = Google::Apis::ComputeV1::OperationAggregatedList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::OperationAggregatedList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::OperationAggregatedList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -2606,7 +2606,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -2615,9 +2615,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_global_operation(project, operation, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/global/operations/{operation}', options)
           command.params['project'] = project unless project.nil?
@@ -2643,22 +2643,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_global_operation(project, operation, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/operations/{operation}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['operation'] = operation unless operation.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2710,22 +2710,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::OperationList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::OperationList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::OperationList]
+        # @return [GoogleAPI::Apis::ComputeV1::OperationList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_global_operations(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/operations', options)
-          command.response_representation = Google::Apis::ComputeV1::OperationList::Representation
-          command.response_class = Google::Apis::ComputeV1::OperationList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::OperationList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::OperationList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -2750,22 +2750,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_http_health_check(project, http_health_check, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/global/httpHealthChecks/{httpHealthCheck}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['httpHealthCheck'] = http_health_check unless http_health_check.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2789,22 +2789,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::HttpHealthCheck] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::HttpHealthCheck] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::HttpHealthCheck]
+        # @return [GoogleAPI::Apis::ComputeV1::HttpHealthCheck]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_http_health_check(project, http_health_check, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/httpHealthChecks/{httpHealthCheck}', options)
-          command.response_representation = Google::Apis::ComputeV1::HttpHealthCheck::Representation
-          command.response_class = Google::Apis::ComputeV1::HttpHealthCheck
+          command.response_representation = GoogleAPI::Apis::ComputeV1::HttpHealthCheck::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::HttpHealthCheck
           command.params['project'] = project unless project.nil?
           command.params['httpHealthCheck'] = http_health_check unless http_health_check.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2817,7 +2817,7 @@ module Google
         # included in the request.
         # @param [String] project
         #   Project ID for this request.
-        # @param [Google::Apis::ComputeV1::HttpHealthCheck] http_health_check_object
+        # @param [GoogleAPI::Apis::ComputeV1::HttpHealthCheck] http_health_check_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2827,24 +2827,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_http_health_check(project, http_health_check_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/httpHealthChecks', options)
-          command.request_representation = Google::Apis::ComputeV1::HttpHealthCheck::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::HttpHealthCheck::Representation
           command.request_object = http_health_check_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -2896,22 +2896,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::HttpHealthCheckList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::HttpHealthCheckList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::HttpHealthCheckList]
+        # @return [GoogleAPI::Apis::ComputeV1::HttpHealthCheckList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_http_health_checks(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/httpHealthChecks', options)
-          command.response_representation = Google::Apis::ComputeV1::HttpHealthCheckList::Representation
-          command.response_class = Google::Apis::ComputeV1::HttpHealthCheckList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::HttpHealthCheckList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::HttpHealthCheckList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -2928,7 +2928,7 @@ module Google
         #   Project ID for this request.
         # @param [String] http_health_check
         #   Name of the HttpHealthCheck resource to update.
-        # @param [Google::Apis::ComputeV1::HttpHealthCheck] http_health_check_object
+        # @param [GoogleAPI::Apis::ComputeV1::HttpHealthCheck] http_health_check_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2938,24 +2938,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_http_health_check(project, http_health_check, http_health_check_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, '{project}/global/httpHealthChecks/{httpHealthCheck}', options)
-          command.request_representation = Google::Apis::ComputeV1::HttpHealthCheck::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::HttpHealthCheck::Representation
           command.request_object = http_health_check_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['httpHealthCheck'] = http_health_check unless http_health_check.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2970,7 +2970,7 @@ module Google
         #   Project ID for this request.
         # @param [String] http_health_check
         #   Name of the HttpHealthCheck resource to update.
-        # @param [Google::Apis::ComputeV1::HttpHealthCheck] http_health_check_object
+        # @param [GoogleAPI::Apis::ComputeV1::HttpHealthCheck] http_health_check_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2980,24 +2980,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_http_health_check(project, http_health_check, http_health_check_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, '{project}/global/httpHealthChecks/{httpHealthCheck}', options)
-          command.request_representation = Google::Apis::ComputeV1::HttpHealthCheck::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::HttpHealthCheck::Representation
           command.request_object = http_health_check_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['httpHealthCheck'] = http_health_check unless http_health_check.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -3020,22 +3020,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_https_health_check(project, https_health_check, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/global/httpsHealthChecks/{httpsHealthCheck}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['httpsHealthCheck'] = https_health_check unless https_health_check.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -3059,22 +3059,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::HttpsHealthCheck] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::HttpsHealthCheck] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::HttpsHealthCheck]
+        # @return [GoogleAPI::Apis::ComputeV1::HttpsHealthCheck]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_https_health_check(project, https_health_check, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/httpsHealthChecks/{httpsHealthCheck}', options)
-          command.response_representation = Google::Apis::ComputeV1::HttpsHealthCheck::Representation
-          command.response_class = Google::Apis::ComputeV1::HttpsHealthCheck
+          command.response_representation = GoogleAPI::Apis::ComputeV1::HttpsHealthCheck::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::HttpsHealthCheck
           command.params['project'] = project unless project.nil?
           command.params['httpsHealthCheck'] = https_health_check unless https_health_check.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -3087,7 +3087,7 @@ module Google
         # included in the request.
         # @param [String] project
         #   Project ID for this request.
-        # @param [Google::Apis::ComputeV1::HttpsHealthCheck] https_health_check_object
+        # @param [GoogleAPI::Apis::ComputeV1::HttpsHealthCheck] https_health_check_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -3097,24 +3097,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_https_health_check(project, https_health_check_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/httpsHealthChecks', options)
-          command.request_representation = Google::Apis::ComputeV1::HttpsHealthCheck::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::HttpsHealthCheck::Representation
           command.request_object = https_health_check_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -3166,22 +3166,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::HttpsHealthCheckList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::HttpsHealthCheckList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::HttpsHealthCheckList]
+        # @return [GoogleAPI::Apis::ComputeV1::HttpsHealthCheckList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_https_health_checks(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/httpsHealthChecks', options)
-          command.response_representation = Google::Apis::ComputeV1::HttpsHealthCheckList::Representation
-          command.response_class = Google::Apis::ComputeV1::HttpsHealthCheckList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::HttpsHealthCheckList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::HttpsHealthCheckList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -3198,7 +3198,7 @@ module Google
         #   Project ID for this request.
         # @param [String] https_health_check
         #   Name of the HttpsHealthCheck resource to update.
-        # @param [Google::Apis::ComputeV1::HttpsHealthCheck] https_health_check_object
+        # @param [GoogleAPI::Apis::ComputeV1::HttpsHealthCheck] https_health_check_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -3208,24 +3208,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_https_health_check(project, https_health_check, https_health_check_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, '{project}/global/httpsHealthChecks/{httpsHealthCheck}', options)
-          command.request_representation = Google::Apis::ComputeV1::HttpsHealthCheck::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::HttpsHealthCheck::Representation
           command.request_object = https_health_check_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['httpsHealthCheck'] = https_health_check unless https_health_check.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -3240,7 +3240,7 @@ module Google
         #   Project ID for this request.
         # @param [String] https_health_check
         #   Name of the HttpsHealthCheck resource to update.
-        # @param [Google::Apis::ComputeV1::HttpsHealthCheck] https_health_check_object
+        # @param [GoogleAPI::Apis::ComputeV1::HttpsHealthCheck] https_health_check_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -3250,24 +3250,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_https_health_check(project, https_health_check, https_health_check_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, '{project}/global/httpsHealthChecks/{httpsHealthCheck}', options)
-          command.request_representation = Google::Apis::ComputeV1::HttpsHealthCheck::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::HttpsHealthCheck::Representation
           command.request_object = https_health_check_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['httpsHealthCheck'] = https_health_check unless https_health_check.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -3290,22 +3290,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_image(project, image, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/global/images/{image}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['image'] = image unless image.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -3320,7 +3320,7 @@ module Google
         #   Project ID for this request.
         # @param [String] image
         #   Image name.
-        # @param [Google::Apis::ComputeV1::DeprecationStatus] deprecation_status_object
+        # @param [GoogleAPI::Apis::ComputeV1::DeprecationStatus] deprecation_status_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -3330,24 +3330,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def deprecate_image(project, image, deprecation_status_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/images/{image}/deprecate', options)
-          command.request_representation = Google::Apis::ComputeV1::DeprecationStatus::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::DeprecationStatus::Representation
           command.request_object = deprecation_status_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['image'] = image unless image.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -3371,22 +3371,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Image] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Image] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Image]
+        # @return [GoogleAPI::Apis::ComputeV1::Image]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_image(project, image, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/images/{image}', options)
-          command.response_representation = Google::Apis::ComputeV1::Image::Representation
-          command.response_class = Google::Apis::ComputeV1::Image
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Image::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Image
           command.params['project'] = project unless project.nil?
           command.params['image'] = image unless image.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -3409,22 +3409,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Image] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Image] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Image]
+        # @return [GoogleAPI::Apis::ComputeV1::Image]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_image_from_family(project, family, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/images/family/{family}', options)
-          command.response_representation = Google::Apis::ComputeV1::Image::Representation
-          command.response_class = Google::Apis::ComputeV1::Image
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Image::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Image
           command.params['project'] = project unless project.nil?
           command.params['family'] = family unless family.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -3437,7 +3437,7 @@ module Google
         # request.
         # @param [String] project
         #   Project ID for this request.
-        # @param [Google::Apis::ComputeV1::Image] image_object
+        # @param [GoogleAPI::Apis::ComputeV1::Image] image_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -3447,24 +3447,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_image(project, image_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/images', options)
-          command.request_representation = Google::Apis::ComputeV1::Image::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Image::Representation
           command.request_object = image_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -3520,22 +3520,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::ImageList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::ImageList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::ImageList]
+        # @return [GoogleAPI::Apis::ComputeV1::ImageList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_images(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/images', options)
-          command.response_representation = Google::Apis::ComputeV1::ImageList::Representation
-          command.response_class = Google::Apis::ComputeV1::ImageList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::ImageList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::ImageList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -3560,7 +3560,7 @@ module Google
         #   The name of the zone where the managed instance group is located.
         # @param [String] instance_group_manager
         #   The name of the managed instance group.
-        # @param [Google::Apis::ComputeV1::InstanceGroupManagersAbandonInstancesRequest] instance_group_managers_abandon_instances_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::InstanceGroupManagersAbandonInstancesRequest] instance_group_managers_abandon_instances_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -3570,24 +3570,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def abandon_instance_group_manager_instances(project, zone, instance_group_manager, instance_group_managers_abandon_instances_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/abandonInstances', options)
-          command.request_representation = Google::Apis::ComputeV1::InstanceGroupManagersAbandonInstancesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::InstanceGroupManagersAbandonInstancesRequest::Representation
           command.request_object = instance_group_managers_abandon_instances_request_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroupManager'] = instance_group_manager unless instance_group_manager.nil?
@@ -3640,22 +3640,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::InstanceGroupManagerAggregatedList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::InstanceGroupManagerAggregatedList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::InstanceGroupManagerAggregatedList]
+        # @return [GoogleAPI::Apis::ComputeV1::InstanceGroupManagerAggregatedList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_aggregated_instance_group_managers(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/aggregated/instanceGroupManagers', options)
-          command.response_representation = Google::Apis::ComputeV1::InstanceGroupManagerAggregatedList::Representation
-          command.response_class = Google::Apis::ComputeV1::InstanceGroupManagerAggregatedList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::InstanceGroupManagerAggregatedList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::InstanceGroupManagerAggregatedList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -3684,22 +3684,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_instance_group_manager(project, zone, instance_group_manager, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroupManager'] = instance_group_manager unless instance_group_manager.nil?
@@ -3722,7 +3722,7 @@ module Google
         #   The name of the zone where the managed instance group is located.
         # @param [String] instance_group_manager
         #   The name of the managed instance group.
-        # @param [Google::Apis::ComputeV1::InstanceGroupManagersDeleteInstancesRequest] instance_group_managers_delete_instances_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::InstanceGroupManagersDeleteInstancesRequest] instance_group_managers_delete_instances_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -3732,24 +3732,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_instance_group_manager_instances(project, zone, instance_group_manager, instance_group_managers_delete_instances_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/deleteInstances', options)
-          command.request_representation = Google::Apis::ComputeV1::InstanceGroupManagersDeleteInstancesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::InstanceGroupManagersDeleteInstancesRequest::Representation
           command.request_object = instance_group_managers_delete_instances_request_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroupManager'] = instance_group_manager unless instance_group_manager.nil?
@@ -3776,22 +3776,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::InstanceGroupManager] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::InstanceGroupManager] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::InstanceGroupManager]
+        # @return [GoogleAPI::Apis::ComputeV1::InstanceGroupManager]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_instance_group_manager(project, zone, instance_group_manager, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}', options)
-          command.response_representation = Google::Apis::ComputeV1::InstanceGroupManager::Representation
-          command.response_class = Google::Apis::ComputeV1::InstanceGroupManager
+          command.response_representation = GoogleAPI::Apis::ComputeV1::InstanceGroupManager::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::InstanceGroupManager
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroupManager'] = instance_group_manager unless instance_group_manager.nil?
@@ -3811,7 +3811,7 @@ module Google
         #   Project ID for this request.
         # @param [String] zone
         #   The name of the zone where you want to create the managed instance group.
-        # @param [Google::Apis::ComputeV1::InstanceGroupManager] instance_group_manager_object
+        # @param [GoogleAPI::Apis::ComputeV1::InstanceGroupManager] instance_group_manager_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -3821,24 +3821,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_instance_group_manager(project, zone, instance_group_manager_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroupManagers', options)
-          command.request_representation = Google::Apis::ComputeV1::InstanceGroupManager::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::InstanceGroupManager::Representation
           command.request_object = instance_group_manager_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -3893,22 +3893,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::InstanceGroupManagerList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::InstanceGroupManagerList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::InstanceGroupManagerList]
+        # @return [GoogleAPI::Apis::ComputeV1::InstanceGroupManagerList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_instance_group_managers(project, zone, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/instanceGroupManagers', options)
-          command.response_representation = Google::Apis::ComputeV1::InstanceGroupManagerList::Representation
-          command.response_class = Google::Apis::ComputeV1::InstanceGroupManagerList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::InstanceGroupManagerList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::InstanceGroupManagerList
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -3940,22 +3940,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::InstanceGroupManagersListManagedInstancesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::InstanceGroupManagersListManagedInstancesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::InstanceGroupManagersListManagedInstancesResponse]
+        # @return [GoogleAPI::Apis::ComputeV1::InstanceGroupManagersListManagedInstancesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_instance_group_manager_managed_instances(project, zone, instance_group_manager, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/listManagedInstances', options)
-          command.response_representation = Google::Apis::ComputeV1::InstanceGroupManagersListManagedInstancesResponse::Representation
-          command.response_class = Google::Apis::ComputeV1::InstanceGroupManagersListManagedInstancesResponse
+          command.response_representation = GoogleAPI::Apis::ComputeV1::InstanceGroupManagersListManagedInstancesResponse::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::InstanceGroupManagersListManagedInstancesResponse
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroupManager'] = instance_group_manager unless instance_group_manager.nil?
@@ -3977,7 +3977,7 @@ module Google
         #   The name of the zone where the managed instance group is located.
         # @param [String] instance_group_manager
         #   The name of the managed instance group.
-        # @param [Google::Apis::ComputeV1::InstanceGroupManagersRecreateInstancesRequest] instance_group_managers_recreate_instances_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::InstanceGroupManagersRecreateInstancesRequest] instance_group_managers_recreate_instances_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -3987,24 +3987,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def recreate_instance_group_manager_instances(project, zone, instance_group_manager, instance_group_managers_recreate_instances_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/recreateInstances', options)
-          command.request_representation = Google::Apis::ComputeV1::InstanceGroupManagersRecreateInstancesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::InstanceGroupManagersRecreateInstancesRequest::Representation
           command.request_object = instance_group_managers_recreate_instances_request_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroupManager'] = instance_group_manager unless instance_group_manager.nil?
@@ -4039,22 +4039,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def resize_instance_group_manager(project, zone, instance_group_manager, size, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resize', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroupManager'] = instance_group_manager unless instance_group_manager.nil?
@@ -4074,7 +4074,7 @@ module Google
         #   The name of the zone where the managed instance group is located.
         # @param [String] instance_group_manager
         #   The name of the managed instance group.
-        # @param [Google::Apis::ComputeV1::InstanceGroupManagersSetInstanceTemplateRequest] instance_group_managers_set_instance_template_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::InstanceGroupManagersSetInstanceTemplateRequest] instance_group_managers_set_instance_template_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -4084,24 +4084,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_instance_group_manager_instance_template(project, zone, instance_group_manager, instance_group_managers_set_instance_template_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/setInstanceTemplate', options)
-          command.request_representation = Google::Apis::ComputeV1::InstanceGroupManagersSetInstanceTemplateRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::InstanceGroupManagersSetInstanceTemplateRequest::Representation
           command.request_object = instance_group_managers_set_instance_template_request_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroupManager'] = instance_group_manager unless instance_group_manager.nil?
@@ -4123,7 +4123,7 @@ module Google
         #   The name of the zone where the managed instance group is located.
         # @param [String] instance_group_manager
         #   The name of the managed instance group.
-        # @param [Google::Apis::ComputeV1::InstanceGroupManagersSetTargetPoolsRequest] instance_group_managers_set_target_pools_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::InstanceGroupManagersSetTargetPoolsRequest] instance_group_managers_set_target_pools_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -4133,24 +4133,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_instance_group_manager_target_pools(project, zone, instance_group_manager, instance_group_managers_set_target_pools_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/setTargetPools', options)
-          command.request_representation = Google::Apis::ComputeV1::InstanceGroupManagersSetTargetPoolsRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::InstanceGroupManagersSetTargetPoolsRequest::Representation
           command.request_object = instance_group_managers_set_target_pools_request_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroupManager'] = instance_group_manager unless instance_group_manager.nil?
@@ -4169,7 +4169,7 @@ module Google
         #   The name of the zone where the instance group is located.
         # @param [String] instance_group
         #   The name of the instance group where you are adding instances.
-        # @param [Google::Apis::ComputeV1::InstanceGroupsAddInstancesRequest] instance_groups_add_instances_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::InstanceGroupsAddInstancesRequest] instance_groups_add_instances_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -4179,24 +4179,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def add_instance_group_instances(project, zone, instance_group, instance_groups_add_instances_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroups/{instanceGroup}/addInstances', options)
-          command.request_representation = Google::Apis::ComputeV1::InstanceGroupsAddInstancesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::InstanceGroupsAddInstancesRequest::Representation
           command.request_object = instance_groups_add_instances_request_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroup'] = instance_group unless instance_group.nil?
@@ -4249,22 +4249,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::InstanceGroupAggregatedList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::InstanceGroupAggregatedList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::InstanceGroupAggregatedList]
+        # @return [GoogleAPI::Apis::ComputeV1::InstanceGroupAggregatedList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_aggregated_instance_groups(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/aggregated/instanceGroups', options)
-          command.response_representation = Google::Apis::ComputeV1::InstanceGroupAggregatedList::Representation
-          command.response_class = Google::Apis::ComputeV1::InstanceGroupAggregatedList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::InstanceGroupAggregatedList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::InstanceGroupAggregatedList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -4293,22 +4293,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_instance_group(project, zone, instance_group, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/zones/{zone}/instanceGroups/{instanceGroup}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroup'] = instance_group unless instance_group.nil?
@@ -4335,22 +4335,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::InstanceGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::InstanceGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::InstanceGroup]
+        # @return [GoogleAPI::Apis::ComputeV1::InstanceGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_instance_group(project, zone, instance_group, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/instanceGroups/{instanceGroup}', options)
-          command.response_representation = Google::Apis::ComputeV1::InstanceGroup::Representation
-          command.response_class = Google::Apis::ComputeV1::InstanceGroup
+          command.response_representation = GoogleAPI::Apis::ComputeV1::InstanceGroup::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::InstanceGroup
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroup'] = instance_group unless instance_group.nil?
@@ -4366,7 +4366,7 @@ module Google
         #   Project ID for this request.
         # @param [String] zone
         #   The name of the zone where you want to create the instance group.
-        # @param [Google::Apis::ComputeV1::InstanceGroup] instance_group_object
+        # @param [GoogleAPI::Apis::ComputeV1::InstanceGroup] instance_group_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -4376,24 +4376,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_instance_group(project, zone, instance_group_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroups', options)
-          command.request_representation = Google::Apis::ComputeV1::InstanceGroup::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::InstanceGroup::Representation
           command.request_object = instance_group_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -4448,22 +4448,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::InstanceGroupList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::InstanceGroupList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::InstanceGroupList]
+        # @return [GoogleAPI::Apis::ComputeV1::InstanceGroupList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_instance_groups(project, zone, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/instanceGroups', options)
-          command.response_representation = Google::Apis::ComputeV1::InstanceGroupList::Representation
-          command.response_class = Google::Apis::ComputeV1::InstanceGroupList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::InstanceGroupList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::InstanceGroupList
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -4483,7 +4483,7 @@ module Google
         # @param [String] instance_group
         #   The name of the instance group from which you want to generate a list of
         #   included instances.
-        # @param [Google::Apis::ComputeV1::InstanceGroupsListInstancesRequest] instance_groups_list_instances_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::InstanceGroupsListInstancesRequest] instance_groups_list_instances_request_object
         # @param [String] filter
         #   Sets a filter expression for filtering listed resources, in the form filter=`
         #   expression`. Your `expression` must be in the format: field_name
@@ -4524,24 +4524,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::InstanceGroupsListInstances] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::InstanceGroupsListInstances] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::InstanceGroupsListInstances]
+        # @return [GoogleAPI::Apis::ComputeV1::InstanceGroupsListInstances]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_instance_group_instances(project, zone, instance_group, instance_groups_list_instances_request_object = nil, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroups/{instanceGroup}/listInstances', options)
-          command.request_representation = Google::Apis::ComputeV1::InstanceGroupsListInstancesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::InstanceGroupsListInstancesRequest::Representation
           command.request_object = instance_groups_list_instances_request_object
-          command.response_representation = Google::Apis::ComputeV1::InstanceGroupsListInstances::Representation
-          command.response_class = Google::Apis::ComputeV1::InstanceGroupsListInstances
+          command.response_representation = GoogleAPI::Apis::ComputeV1::InstanceGroupsListInstances::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::InstanceGroupsListInstances
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroup'] = instance_group unless instance_group.nil?
@@ -4562,7 +4562,7 @@ module Google
         #   The name of the zone where the instance group is located.
         # @param [String] instance_group
         #   The name of the instance group where the specified instances will be removed.
-        # @param [Google::Apis::ComputeV1::InstanceGroupsRemoveInstancesRequest] instance_groups_remove_instances_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::InstanceGroupsRemoveInstancesRequest] instance_groups_remove_instances_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -4572,24 +4572,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def remove_instance_group_instances(project, zone, instance_group, instance_groups_remove_instances_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroups/{instanceGroup}/removeInstances', options)
-          command.request_representation = Google::Apis::ComputeV1::InstanceGroupsRemoveInstancesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::InstanceGroupsRemoveInstancesRequest::Representation
           command.request_object = instance_groups_remove_instances_request_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroup'] = instance_group unless instance_group.nil?
@@ -4606,7 +4606,7 @@ module Google
         #   The name of the zone where the instance group is located.
         # @param [String] instance_group
         #   The name of the instance group where the named ports are updated.
-        # @param [Google::Apis::ComputeV1::InstanceGroupsSetNamedPortsRequest] instance_groups_set_named_ports_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::InstanceGroupsSetNamedPortsRequest] instance_groups_set_named_ports_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -4616,24 +4616,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_instance_group_named_ports(project, zone, instance_group, instance_groups_set_named_ports_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroups/{instanceGroup}/setNamedPorts', options)
-          command.request_representation = Google::Apis::ComputeV1::InstanceGroupsSetNamedPortsRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::InstanceGroupsSetNamedPortsRequest::Representation
           command.request_object = instance_groups_set_named_ports_request_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroup'] = instance_group unless instance_group.nil?
@@ -4660,22 +4660,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_instance_template(project, instance_template, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/global/instanceTemplates/{instanceTemplate}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['instanceTemplate'] = instance_template unless instance_template.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -4699,22 +4699,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::InstanceTemplate] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::InstanceTemplate] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::InstanceTemplate]
+        # @return [GoogleAPI::Apis::ComputeV1::InstanceTemplate]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_instance_template(project, instance_template, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/instanceTemplates/{instanceTemplate}', options)
-          command.response_representation = Google::Apis::ComputeV1::InstanceTemplate::Representation
-          command.response_class = Google::Apis::ComputeV1::InstanceTemplate
+          command.response_representation = GoogleAPI::Apis::ComputeV1::InstanceTemplate::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::InstanceTemplate
           command.params['project'] = project unless project.nil?
           command.params['instanceTemplate'] = instance_template unless instance_template.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -4729,7 +4729,7 @@ module Google
         # or, if applicable, the same subnetwork as the original template.
         # @param [String] project
         #   Project ID for this request.
-        # @param [Google::Apis::ComputeV1::InstanceTemplate] instance_template_object
+        # @param [GoogleAPI::Apis::ComputeV1::InstanceTemplate] instance_template_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -4739,24 +4739,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_instance_template(project, instance_template_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/instanceTemplates', options)
-          command.request_representation = Google::Apis::ComputeV1::InstanceTemplate::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::InstanceTemplate::Representation
           command.request_object = instance_template_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -4808,22 +4808,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::InstanceTemplateList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::InstanceTemplateList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::InstanceTemplateList]
+        # @return [GoogleAPI::Apis::ComputeV1::InstanceTemplateList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_instance_templates(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/instanceTemplates', options)
-          command.response_representation = Google::Apis::ComputeV1::InstanceTemplateList::Representation
-          command.response_class = Google::Apis::ComputeV1::InstanceTemplateList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::InstanceTemplateList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::InstanceTemplateList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -4843,7 +4843,7 @@ module Google
         #   The instance name for this request.
         # @param [String] network_interface
         #   The name of the network interface to add to this instance.
-        # @param [Google::Apis::ComputeV1::AccessConfig] access_config_object
+        # @param [GoogleAPI::Apis::ComputeV1::AccessConfig] access_config_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -4853,24 +4853,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def add_instance_access_config(project, zone, instance, network_interface, access_config_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instances/{instance}/addAccessConfig', options)
-          command.request_representation = Google::Apis::ComputeV1::AccessConfig::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::AccessConfig::Representation
           command.request_object = access_config_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instance'] = instance unless instance.nil?
@@ -4924,22 +4924,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::InstanceAggregatedList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::InstanceAggregatedList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::InstanceAggregatedList]
+        # @return [GoogleAPI::Apis::ComputeV1::InstanceAggregatedList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_aggregated_instances(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/aggregated/instances', options)
-          command.response_representation = Google::Apis::ComputeV1::InstanceAggregatedList::Representation
-          command.response_class = Google::Apis::ComputeV1::InstanceAggregatedList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::InstanceAggregatedList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::InstanceAggregatedList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -4957,7 +4957,7 @@ module Google
         #   The name of the zone for this request.
         # @param [String] instance
         #   The instance name for this request.
-        # @param [Google::Apis::ComputeV1::AttachedDisk] attached_disk_object
+        # @param [GoogleAPI::Apis::ComputeV1::AttachedDisk] attached_disk_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -4967,24 +4967,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def attach_disk(project, zone, instance, attached_disk_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instances/{instance}/attachDisk', options)
-          command.request_representation = Google::Apis::ComputeV1::AttachedDisk::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::AttachedDisk::Representation
           command.request_object = attached_disk_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instance'] = instance unless instance.nil?
@@ -5011,22 +5011,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_instance(project, zone, instance, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/zones/{zone}/instances/{instance}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instance'] = instance unless instance.nil?
@@ -5056,22 +5056,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_instance_access_config(project, zone, instance, access_config, network_interface, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instances/{instance}/deleteAccessConfig', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instance'] = instance unless instance.nil?
@@ -5101,22 +5101,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def detach_disk(project, zone, instance, device_name, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instances/{instance}/detachDisk', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instance'] = instance unless instance.nil?
@@ -5144,22 +5144,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Instance] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Instance] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Instance]
+        # @return [GoogleAPI::Apis::ComputeV1::Instance]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_instance(project, zone, instance, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/instances/{instance}', options)
-          command.response_representation = Google::Apis::ComputeV1::Instance::Representation
-          command.response_class = Google::Apis::ComputeV1::Instance
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Instance::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Instance
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instance'] = instance unless instance.nil?
@@ -5187,22 +5187,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::SerialPortOutput] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::SerialPortOutput] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::SerialPortOutput]
+        # @return [GoogleAPI::Apis::ComputeV1::SerialPortOutput]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_instance_serial_port_output(project, zone, instance, port: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/instances/{instance}/serialPort', options)
-          command.response_representation = Google::Apis::ComputeV1::SerialPortOutput::Representation
-          command.response_class = Google::Apis::ComputeV1::SerialPortOutput
+          command.response_representation = GoogleAPI::Apis::ComputeV1::SerialPortOutput::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::SerialPortOutput
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instance'] = instance unless instance.nil?
@@ -5219,7 +5219,7 @@ module Google
         #   Project ID for this request.
         # @param [String] zone
         #   The name of the zone for this request.
-        # @param [Google::Apis::ComputeV1::Instance] instance_object
+        # @param [GoogleAPI::Apis::ComputeV1::Instance] instance_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -5229,24 +5229,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_instance(project, zone, instance_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instances', options)
-          command.request_representation = Google::Apis::ComputeV1::Instance::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Instance::Representation
           command.request_object = instance_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -5300,22 +5300,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::InstanceList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::InstanceList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::InstanceList]
+        # @return [GoogleAPI::Apis::ComputeV1::InstanceList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_instances(project, zone, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/instances', options)
-          command.response_representation = Google::Apis::ComputeV1::InstanceList::Representation
-          command.response_class = Google::Apis::ComputeV1::InstanceList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::InstanceList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::InstanceList
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -5343,22 +5343,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def reset_instance(project, zone, instance, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instances/{instance}/reset', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instance'] = instance unless instance.nil?
@@ -5388,22 +5388,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_disk_auto_delete(project, zone, instance, auto_delete, device_name, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instances/{instance}/setDiskAutoDelete', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instance'] = instance unless instance.nil?
@@ -5423,7 +5423,7 @@ module Google
         #   The name of the zone for this request.
         # @param [String] instance
         #   Name of the instance scoping this request.
-        # @param [Google::Apis::ComputeV1::InstancesSetMachineTypeRequest] instances_set_machine_type_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::InstancesSetMachineTypeRequest] instances_set_machine_type_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -5433,24 +5433,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_instance_machine_type(project, zone, instance, instances_set_machine_type_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instances/{instance}/setMachineType', options)
-          command.request_representation = Google::Apis::ComputeV1::InstancesSetMachineTypeRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::InstancesSetMachineTypeRequest::Representation
           command.request_object = instances_set_machine_type_request_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instance'] = instance unless instance.nil?
@@ -5467,7 +5467,7 @@ module Google
         #   The name of the zone for this request.
         # @param [String] instance
         #   Name of the instance scoping this request.
-        # @param [Google::Apis::ComputeV1::Metadata] metadata_object
+        # @param [GoogleAPI::Apis::ComputeV1::Metadata] metadata_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -5477,24 +5477,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_instance_metadata(project, zone, instance, metadata_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instances/{instance}/setMetadata', options)
-          command.request_representation = Google::Apis::ComputeV1::Metadata::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Metadata::Representation
           command.request_object = metadata_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instance'] = instance unless instance.nil?
@@ -5511,7 +5511,7 @@ module Google
         #   The name of the zone for this request.
         # @param [String] instance
         #   Instance name.
-        # @param [Google::Apis::ComputeV1::Scheduling] scheduling_object
+        # @param [GoogleAPI::Apis::ComputeV1::Scheduling] scheduling_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -5521,24 +5521,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_instance_scheduling(project, zone, instance, scheduling_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instances/{instance}/setScheduling', options)
-          command.request_representation = Google::Apis::ComputeV1::Scheduling::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Scheduling::Representation
           command.request_object = scheduling_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instance'] = instance unless instance.nil?
@@ -5555,7 +5555,7 @@ module Google
         #   The name of the zone for this request.
         # @param [String] instance
         #   Name of the instance scoping this request.
-        # @param [Google::Apis::ComputeV1::Tags] tags_object
+        # @param [GoogleAPI::Apis::ComputeV1::Tags] tags_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -5565,24 +5565,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_instance_tags(project, zone, instance, tags_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instances/{instance}/setTags', options)
-          command.request_representation = Google::Apis::ComputeV1::Tags::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Tags::Representation
           command.request_object = tags_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instance'] = instance unless instance.nil?
@@ -5609,22 +5609,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def start_instance(project, zone, instance, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instances/{instance}/start', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instance'] = instance unless instance.nil?
@@ -5642,7 +5642,7 @@ module Google
         #   The name of the zone for this request.
         # @param [String] instance
         #   Name of the instance resource to start.
-        # @param [Google::Apis::ComputeV1::InstancesStartWithEncryptionKeyRequest] instances_start_with_encryption_key_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::InstancesStartWithEncryptionKeyRequest] instances_start_with_encryption_key_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -5652,24 +5652,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def start_instance_with_encryption_key(project, zone, instance, instances_start_with_encryption_key_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instances/{instance}/startWithEncryptionKey', options)
-          command.request_representation = Google::Apis::ComputeV1::InstancesStartWithEncryptionKeyRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::InstancesStartWithEncryptionKeyRequest::Representation
           command.request_object = instances_start_with_encryption_key_request_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instance'] = instance unless instance.nil?
@@ -5700,22 +5700,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def stop_instance(project, zone, instance, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instances/{instance}/stop', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instance'] = instance unless instance.nil?
@@ -5740,22 +5740,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::License] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::License] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::License]
+        # @return [GoogleAPI::Apis::ComputeV1::License]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_license(project, license, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/licenses/{license}', options)
-          command.response_representation = Google::Apis::ComputeV1::License::Representation
-          command.response_class = Google::Apis::ComputeV1::License
+          command.response_representation = GoogleAPI::Apis::ComputeV1::License::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::License
           command.params['project'] = project unless project.nil?
           command.params['license'] = license unless license.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -5807,22 +5807,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::MachineTypeAggregatedList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::MachineTypeAggregatedList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::MachineTypeAggregatedList]
+        # @return [GoogleAPI::Apis::ComputeV1::MachineTypeAggregatedList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_aggregated_machine_types(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/aggregated/machineTypes', options)
-          command.response_representation = Google::Apis::ComputeV1::MachineTypeAggregatedList::Representation
-          command.response_class = Google::Apis::ComputeV1::MachineTypeAggregatedList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::MachineTypeAggregatedList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::MachineTypeAggregatedList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -5850,22 +5850,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::MachineType] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::MachineType] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::MachineType]
+        # @return [GoogleAPI::Apis::ComputeV1::MachineType]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_machine_type(project, zone, machine_type, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/machineTypes/{machineType}', options)
-          command.response_representation = Google::Apis::ComputeV1::MachineType::Representation
-          command.response_class = Google::Apis::ComputeV1::MachineType
+          command.response_representation = GoogleAPI::Apis::ComputeV1::MachineType::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::MachineType
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['machineType'] = machine_type unless machine_type.nil?
@@ -5920,22 +5920,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::MachineTypeList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::MachineTypeList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::MachineTypeList]
+        # @return [GoogleAPI::Apis::ComputeV1::MachineTypeList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_machine_types(project, zone, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/machineTypes', options)
-          command.response_representation = Google::Apis::ComputeV1::MachineTypeList::Representation
-          command.response_class = Google::Apis::ComputeV1::MachineTypeList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::MachineTypeList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::MachineTypeList
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -5961,22 +5961,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_network(project, network, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/global/networks/{network}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['network'] = network unless network.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -6000,22 +6000,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Network] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Network] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Network]
+        # @return [GoogleAPI::Apis::ComputeV1::Network]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_network(project, network, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/networks/{network}', options)
-          command.response_representation = Google::Apis::ComputeV1::Network::Representation
-          command.response_class = Google::Apis::ComputeV1::Network
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Network::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Network
           command.params['project'] = project unless project.nil?
           command.params['network'] = network unless network.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -6028,7 +6028,7 @@ module Google
         # request.
         # @param [String] project
         #   Project ID for this request.
-        # @param [Google::Apis::ComputeV1::Network] network_object
+        # @param [GoogleAPI::Apis::ComputeV1::Network] network_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -6038,24 +6038,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_network(project, network_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/networks', options)
-          command.request_representation = Google::Apis::ComputeV1::Network::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Network::Representation
           command.request_object = network_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -6106,22 +6106,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::NetworkList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::NetworkList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::NetworkList]
+        # @return [GoogleAPI::Apis::ComputeV1::NetworkList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_networks(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/networks', options)
-          command.response_representation = Google::Apis::ComputeV1::NetworkList::Representation
-          command.response_class = Google::Apis::ComputeV1::NetworkList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::NetworkList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::NetworkList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -6144,22 +6144,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Project] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Project] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Project]
+        # @return [GoogleAPI::Apis::ComputeV1::Project]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_project(project, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}', options)
-          command.response_representation = Google::Apis::ComputeV1::Project::Representation
-          command.response_class = Google::Apis::ComputeV1::Project
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Project::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Project
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -6170,7 +6170,7 @@ module Google
         # Moves a persistent disk from one zone to another.
         # @param [String] project
         #   Project ID for this request.
-        # @param [Google::Apis::ComputeV1::MoveDiskRequest] move_disk_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::MoveDiskRequest] move_disk_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -6180,24 +6180,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def move_disk(project, move_disk_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/moveDisk', options)
-          command.request_representation = Google::Apis::ComputeV1::MoveDiskRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::MoveDiskRequest::Representation
           command.request_object = move_disk_request_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -6208,7 +6208,7 @@ module Google
         # Moves an instance and its attached persistent disks from one zone to another.
         # @param [String] project
         #   Project ID for this request.
-        # @param [Google::Apis::ComputeV1::MoveInstanceRequest] move_instance_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::MoveInstanceRequest] move_instance_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -6218,24 +6218,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def move_instance(project, move_instance_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/moveInstance', options)
-          command.request_representation = Google::Apis::ComputeV1::MoveInstanceRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::MoveInstanceRequest::Representation
           command.request_object = move_instance_request_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -6247,7 +6247,7 @@ module Google
         # data included in the request.
         # @param [String] project
         #   Project ID for this request.
-        # @param [Google::Apis::ComputeV1::Metadata] metadata_object
+        # @param [GoogleAPI::Apis::ComputeV1::Metadata] metadata_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -6257,24 +6257,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_common_instance_metadata(project, metadata_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/setCommonInstanceMetadata', options)
-          command.request_representation = Google::Apis::ComputeV1::Metadata::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Metadata::Representation
           command.request_object = metadata_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -6287,7 +6287,7 @@ module Google
         # the usage export feature will be disabled.
         # @param [String] project
         #   Project ID for this request.
-        # @param [Google::Apis::ComputeV1::UsageExportLocation] usage_export_location_object
+        # @param [GoogleAPI::Apis::ComputeV1::UsageExportLocation] usage_export_location_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -6297,24 +6297,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_usage_export_bucket(project, usage_export_location_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/setUsageExportBucket', options)
-          command.request_representation = Google::Apis::ComputeV1::UsageExportLocation::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::UsageExportLocation::Representation
           command.request_object = usage_export_location_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -6338,7 +6338,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -6347,9 +6347,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_region_operation(project, region, operation, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/regions/{region}/operations/{operation}', options)
           command.params['project'] = project unless project.nil?
@@ -6377,22 +6377,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_region_operation(project, region, operation, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions/{region}/operations/{operation}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['operation'] = operation unless operation.nil?
@@ -6447,22 +6447,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::OperationList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::OperationList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::OperationList]
+        # @return [GoogleAPI::Apis::ComputeV1::OperationList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_region_operations(project, region, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions/{region}/operations', options)
-          command.response_representation = Google::Apis::ComputeV1::OperationList::Representation
-          command.response_class = Google::Apis::ComputeV1::OperationList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::OperationList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::OperationList
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -6489,22 +6489,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Region] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Region] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Region]
+        # @return [GoogleAPI::Apis::ComputeV1::Region]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_region(project, region, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions/{region}', options)
-          command.response_representation = Google::Apis::ComputeV1::Region::Representation
-          command.response_class = Google::Apis::ComputeV1::Region
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Region::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Region
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -6556,22 +6556,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::RegionList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::RegionList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::RegionList]
+        # @return [GoogleAPI::Apis::ComputeV1::RegionList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_regions(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions', options)
-          command.response_representation = Google::Apis::ComputeV1::RegionList::Representation
-          command.response_class = Google::Apis::ComputeV1::RegionList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::RegionList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::RegionList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -6625,22 +6625,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::RouterAggregatedList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::RouterAggregatedList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::RouterAggregatedList]
+        # @return [GoogleAPI::Apis::ComputeV1::RouterAggregatedList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def aggregated_router_list(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/aggregated/routers', options)
-          command.response_representation = Google::Apis::ComputeV1::RouterAggregatedList::Representation
-          command.response_class = Google::Apis::ComputeV1::RouterAggregatedList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::RouterAggregatedList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::RouterAggregatedList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -6667,22 +6667,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_router(project, region, router, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/regions/{region}/routers/{router}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['router'] = router unless router.nil?
@@ -6709,22 +6709,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Router] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Router] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Router]
+        # @return [GoogleAPI::Apis::ComputeV1::Router]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_router(project, region, router, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions/{region}/routers/{router}', options)
-          command.response_representation = Google::Apis::ComputeV1::Router::Representation
-          command.response_class = Google::Apis::ComputeV1::Router
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Router::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Router
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['router'] = router unless router.nil?
@@ -6750,22 +6750,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::RouterStatusResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::RouterStatusResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::RouterStatusResponse]
+        # @return [GoogleAPI::Apis::ComputeV1::RouterStatusResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_router_router_status(project, region, router, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions/{region}/routers/{router}/getRouterStatus', options)
-          command.response_representation = Google::Apis::ComputeV1::RouterStatusResponse::Representation
-          command.response_class = Google::Apis::ComputeV1::RouterStatusResponse
+          command.response_representation = GoogleAPI::Apis::ComputeV1::RouterStatusResponse::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::RouterStatusResponse
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['router'] = router unless router.nil?
@@ -6781,7 +6781,7 @@ module Google
         #   Project ID for this request.
         # @param [String] region
         #   Name of the region for this request.
-        # @param [Google::Apis::ComputeV1::Router] router_object
+        # @param [GoogleAPI::Apis::ComputeV1::Router] router_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -6791,24 +6791,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_router(project, region, router_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/regions/{region}/routers', options)
-          command.request_representation = Google::Apis::ComputeV1::Router::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Router::Representation
           command.request_object = router_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -6862,22 +6862,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::RouterList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::RouterList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::RouterList]
+        # @return [GoogleAPI::Apis::ComputeV1::RouterList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_routers(project, region, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions/{region}/routers', options)
-          command.response_representation = Google::Apis::ComputeV1::RouterList::Representation
-          command.response_class = Google::Apis::ComputeV1::RouterList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::RouterList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::RouterList
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -6897,7 +6897,7 @@ module Google
         #   Name of the region for this request.
         # @param [String] router
         #   Name of the Router resource to update.
-        # @param [Google::Apis::ComputeV1::Router] router_object
+        # @param [GoogleAPI::Apis::ComputeV1::Router] router_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -6907,24 +6907,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_router(project, region, router, router_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, '{project}/regions/{region}/routers/{router}', options)
-          command.request_representation = Google::Apis::ComputeV1::Router::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Router::Representation
           command.request_object = router_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['router'] = router unless router.nil?
@@ -6941,7 +6941,7 @@ module Google
         #   Name of the region for this request.
         # @param [String] router
         #   Name of the Router resource to update.
-        # @param [Google::Apis::ComputeV1::Router] router_object
+        # @param [GoogleAPI::Apis::ComputeV1::Router] router_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -6951,24 +6951,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_router(project, region, router, router_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, '{project}/regions/{region}/routers/{router}', options)
-          command.request_representation = Google::Apis::ComputeV1::Router::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Router::Representation
           command.request_object = router_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['router'] = router unless router.nil?
@@ -6992,22 +6992,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_route(project, route, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/global/routes/{route}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['route'] = route unless route.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -7031,22 +7031,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Route] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Route] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Route]
+        # @return [GoogleAPI::Apis::ComputeV1::Route]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_route(project, route, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/routes/{route}', options)
-          command.response_representation = Google::Apis::ComputeV1::Route::Representation
-          command.response_class = Google::Apis::ComputeV1::Route
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Route::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Route
           command.params['project'] = project unless project.nil?
           command.params['route'] = route unless route.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -7059,7 +7059,7 @@ module Google
         # the request.
         # @param [String] project
         #   Project ID for this request.
-        # @param [Google::Apis::ComputeV1::Route] route_object
+        # @param [GoogleAPI::Apis::ComputeV1::Route] route_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -7069,24 +7069,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_route(project, route_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/routes', options)
-          command.request_representation = Google::Apis::ComputeV1::Route::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Route::Representation
           command.request_object = route_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -7137,22 +7137,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::RouteList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::RouteList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::RouteList]
+        # @return [GoogleAPI::Apis::ComputeV1::RouteList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_routes(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/routes', options)
-          command.response_representation = Google::Apis::ComputeV1::RouteList::Representation
-          command.response_class = Google::Apis::ComputeV1::RouteList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::RouteList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::RouteList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -7181,22 +7181,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_snapshot(project, snapshot, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/global/snapshots/{snapshot}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['snapshot'] = snapshot unless snapshot.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -7220,22 +7220,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Snapshot] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Snapshot] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Snapshot]
+        # @return [GoogleAPI::Apis::ComputeV1::Snapshot]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_snapshot(project, snapshot, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/snapshots/{snapshot}', options)
-          command.response_representation = Google::Apis::ComputeV1::Snapshot::Representation
-          command.response_class = Google::Apis::ComputeV1::Snapshot
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Snapshot::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Snapshot
           command.params['project'] = project unless project.nil?
           command.params['snapshot'] = snapshot unless snapshot.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -7288,22 +7288,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::SnapshotList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::SnapshotList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::SnapshotList]
+        # @return [GoogleAPI::Apis::ComputeV1::SnapshotList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_snapshots(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/snapshots', options)
-          command.response_representation = Google::Apis::ComputeV1::SnapshotList::Representation
-          command.response_class = Google::Apis::ComputeV1::SnapshotList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::SnapshotList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::SnapshotList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -7328,22 +7328,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_ssl_certificate(project, ssl_certificate, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/global/sslCertificates/{sslCertificate}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['sslCertificate'] = ssl_certificate unless ssl_certificate.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -7367,22 +7367,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::SslCertificate] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::SslCertificate] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::SslCertificate]
+        # @return [GoogleAPI::Apis::ComputeV1::SslCertificate]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_ssl_certificate(project, ssl_certificate, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/sslCertificates/{sslCertificate}', options)
-          command.response_representation = Google::Apis::ComputeV1::SslCertificate::Representation
-          command.response_class = Google::Apis::ComputeV1::SslCertificate
+          command.response_representation = GoogleAPI::Apis::ComputeV1::SslCertificate::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::SslCertificate
           command.params['project'] = project unless project.nil?
           command.params['sslCertificate'] = ssl_certificate unless ssl_certificate.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -7395,7 +7395,7 @@ module Google
         # included in the request.
         # @param [String] project
         #   Project ID for this request.
-        # @param [Google::Apis::ComputeV1::SslCertificate] ssl_certificate_object
+        # @param [GoogleAPI::Apis::ComputeV1::SslCertificate] ssl_certificate_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -7405,24 +7405,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_ssl_certificate(project, ssl_certificate_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/sslCertificates', options)
-          command.request_representation = Google::Apis::ComputeV1::SslCertificate::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::SslCertificate::Representation
           command.request_object = ssl_certificate_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -7474,22 +7474,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::SslCertificateList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::SslCertificateList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::SslCertificateList]
+        # @return [GoogleAPI::Apis::ComputeV1::SslCertificateList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_ssl_certificates(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/sslCertificates', options)
-          command.response_representation = Google::Apis::ComputeV1::SslCertificateList::Representation
-          command.response_class = Google::Apis::ComputeV1::SslCertificateList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::SslCertificateList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::SslCertificateList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -7543,22 +7543,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::SubnetworkAggregatedList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::SubnetworkAggregatedList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::SubnetworkAggregatedList]
+        # @return [GoogleAPI::Apis::ComputeV1::SubnetworkAggregatedList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def aggregated_subnetwork_list(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/aggregated/subnetworks', options)
-          command.response_representation = Google::Apis::ComputeV1::SubnetworkAggregatedList::Representation
-          command.response_class = Google::Apis::ComputeV1::SubnetworkAggregatedList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::SubnetworkAggregatedList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::SubnetworkAggregatedList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -7585,22 +7585,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_subnetwork(project, region, subnetwork, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/regions/{region}/subnetworks/{subnetwork}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['subnetwork'] = subnetwork unless subnetwork.nil?
@@ -7627,22 +7627,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Subnetwork] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Subnetwork] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Subnetwork]
+        # @return [GoogleAPI::Apis::ComputeV1::Subnetwork]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_subnetwork(project, region, subnetwork, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions/{region}/subnetworks/{subnetwork}', options)
-          command.response_representation = Google::Apis::ComputeV1::Subnetwork::Representation
-          command.response_class = Google::Apis::ComputeV1::Subnetwork
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Subnetwork::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Subnetwork
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['subnetwork'] = subnetwork unless subnetwork.nil?
@@ -7658,7 +7658,7 @@ module Google
         #   Project ID for this request.
         # @param [String] region
         #   Name of the region scoping this request.
-        # @param [Google::Apis::ComputeV1::Subnetwork] subnetwork_object
+        # @param [GoogleAPI::Apis::ComputeV1::Subnetwork] subnetwork_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -7668,24 +7668,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_subnetwork(project, region, subnetwork_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/regions/{region}/subnetworks', options)
-          command.request_representation = Google::Apis::ComputeV1::Subnetwork::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::Subnetwork::Representation
           command.request_object = subnetwork_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -7739,22 +7739,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::SubnetworkList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::SubnetworkList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::SubnetworkList]
+        # @return [GoogleAPI::Apis::ComputeV1::SubnetworkList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_subnetworks(project, region, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions/{region}/subnetworks', options)
-          command.response_representation = Google::Apis::ComputeV1::SubnetworkList::Representation
-          command.response_class = Google::Apis::ComputeV1::SubnetworkList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::SubnetworkList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::SubnetworkList
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -7780,22 +7780,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_target_http_proxy(project, target_http_proxy, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/global/targetHttpProxies/{targetHttpProxy}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['targetHttpProxy'] = target_http_proxy unless target_http_proxy.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -7819,22 +7819,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::TargetHttpProxy] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::TargetHttpProxy] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::TargetHttpProxy]
+        # @return [GoogleAPI::Apis::ComputeV1::TargetHttpProxy]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_target_http_proxy(project, target_http_proxy, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/targetHttpProxies/{targetHttpProxy}', options)
-          command.response_representation = Google::Apis::ComputeV1::TargetHttpProxy::Representation
-          command.response_class = Google::Apis::ComputeV1::TargetHttpProxy
+          command.response_representation = GoogleAPI::Apis::ComputeV1::TargetHttpProxy::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::TargetHttpProxy
           command.params['project'] = project unless project.nil?
           command.params['targetHttpProxy'] = target_http_proxy unless target_http_proxy.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -7847,7 +7847,7 @@ module Google
         # included in the request.
         # @param [String] project
         #   Project ID for this request.
-        # @param [Google::Apis::ComputeV1::TargetHttpProxy] target_http_proxy_object
+        # @param [GoogleAPI::Apis::ComputeV1::TargetHttpProxy] target_http_proxy_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -7857,24 +7857,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_target_http_proxy(project, target_http_proxy_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/targetHttpProxies', options)
-          command.request_representation = Google::Apis::ComputeV1::TargetHttpProxy::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::TargetHttpProxy::Representation
           command.request_object = target_http_proxy_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -7926,22 +7926,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::TargetHttpProxyList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::TargetHttpProxyList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::TargetHttpProxyList]
+        # @return [GoogleAPI::Apis::ComputeV1::TargetHttpProxyList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_target_http_proxies(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/targetHttpProxies', options)
-          command.response_representation = Google::Apis::ComputeV1::TargetHttpProxyList::Representation
-          command.response_class = Google::Apis::ComputeV1::TargetHttpProxyList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::TargetHttpProxyList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::TargetHttpProxyList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -7957,7 +7957,7 @@ module Google
         #   Project ID for this request.
         # @param [String] target_http_proxy
         #   Name of the TargetHttpProxy to set a URL map for.
-        # @param [Google::Apis::ComputeV1::UrlMapReference] url_map_reference_object
+        # @param [GoogleAPI::Apis::ComputeV1::UrlMapReference] url_map_reference_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -7967,24 +7967,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_target_http_proxy_url_map(project, target_http_proxy, url_map_reference_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/targetHttpProxies/{targetHttpProxy}/setUrlMap', options)
-          command.request_representation = Google::Apis::ComputeV1::UrlMapReference::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::UrlMapReference::Representation
           command.request_object = url_map_reference_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['targetHttpProxy'] = target_http_proxy unless target_http_proxy.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -8007,22 +8007,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_target_https_proxy(project, target_https_proxy, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/global/targetHttpsProxies/{targetHttpsProxy}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['targetHttpsProxy'] = target_https_proxy unless target_https_proxy.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -8046,22 +8046,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::TargetHttpsProxy] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::TargetHttpsProxy] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::TargetHttpsProxy]
+        # @return [GoogleAPI::Apis::ComputeV1::TargetHttpsProxy]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_target_https_proxy(project, target_https_proxy, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/targetHttpsProxies/{targetHttpsProxy}', options)
-          command.response_representation = Google::Apis::ComputeV1::TargetHttpsProxy::Representation
-          command.response_class = Google::Apis::ComputeV1::TargetHttpsProxy
+          command.response_representation = GoogleAPI::Apis::ComputeV1::TargetHttpsProxy::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::TargetHttpsProxy
           command.params['project'] = project unless project.nil?
           command.params['targetHttpsProxy'] = target_https_proxy unless target_https_proxy.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -8074,7 +8074,7 @@ module Google
         # included in the request.
         # @param [String] project
         #   Project ID for this request.
-        # @param [Google::Apis::ComputeV1::TargetHttpsProxy] target_https_proxy_object
+        # @param [GoogleAPI::Apis::ComputeV1::TargetHttpsProxy] target_https_proxy_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -8084,24 +8084,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_target_https_proxy(project, target_https_proxy_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/targetHttpsProxies', options)
-          command.request_representation = Google::Apis::ComputeV1::TargetHttpsProxy::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::TargetHttpsProxy::Representation
           command.request_object = target_https_proxy_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -8153,22 +8153,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::TargetHttpsProxyList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::TargetHttpsProxyList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::TargetHttpsProxyList]
+        # @return [GoogleAPI::Apis::ComputeV1::TargetHttpsProxyList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_target_https_proxies(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/targetHttpsProxies', options)
-          command.response_representation = Google::Apis::ComputeV1::TargetHttpsProxyList::Representation
-          command.response_class = Google::Apis::ComputeV1::TargetHttpsProxyList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::TargetHttpsProxyList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::TargetHttpsProxyList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -8184,7 +8184,7 @@ module Google
         #   Project ID for this request.
         # @param [String] target_https_proxy
         #   Name of the TargetHttpsProxy resource to set an SslCertificates resource for.
-        # @param [Google::Apis::ComputeV1::TargetHttpsProxiesSetSslCertificatesRequest] target_https_proxies_set_ssl_certificates_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::TargetHttpsProxiesSetSslCertificatesRequest] target_https_proxies_set_ssl_certificates_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -8194,24 +8194,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_target_https_proxy_ssl_certificates(project, target_https_proxy, target_https_proxies_set_ssl_certificates_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/targetHttpsProxies/{targetHttpsProxy}/setSslCertificates', options)
-          command.request_representation = Google::Apis::ComputeV1::TargetHttpsProxiesSetSslCertificatesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::TargetHttpsProxiesSetSslCertificatesRequest::Representation
           command.request_object = target_https_proxies_set_ssl_certificates_request_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['targetHttpsProxy'] = target_https_proxy unless target_https_proxy.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -8225,7 +8225,7 @@ module Google
         #   Project ID for this request.
         # @param [String] target_https_proxy
         #   Name of the TargetHttpsProxy resource whose URL map is to be set.
-        # @param [Google::Apis::ComputeV1::UrlMapReference] url_map_reference_object
+        # @param [GoogleAPI::Apis::ComputeV1::UrlMapReference] url_map_reference_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -8235,24 +8235,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_target_https_proxy_url_map(project, target_https_proxy, url_map_reference_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/targetHttpsProxies/{targetHttpsProxy}/setUrlMap', options)
-          command.request_representation = Google::Apis::ComputeV1::UrlMapReference::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::UrlMapReference::Representation
           command.request_object = url_map_reference_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['targetHttpsProxy'] = target_https_proxy unless target_https_proxy.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -8304,22 +8304,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::TargetInstanceAggregatedList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::TargetInstanceAggregatedList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::TargetInstanceAggregatedList]
+        # @return [GoogleAPI::Apis::ComputeV1::TargetInstanceAggregatedList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_aggregated_target_instance(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/aggregated/targetInstances', options)
-          command.response_representation = Google::Apis::ComputeV1::TargetInstanceAggregatedList::Representation
-          command.response_class = Google::Apis::ComputeV1::TargetInstanceAggregatedList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::TargetInstanceAggregatedList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::TargetInstanceAggregatedList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -8346,22 +8346,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_target_instance(project, zone, target_instance, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/zones/{zone}/targetInstances/{targetInstance}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['targetInstance'] = target_instance unless target_instance.nil?
@@ -8388,22 +8388,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::TargetInstance] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::TargetInstance] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::TargetInstance]
+        # @return [GoogleAPI::Apis::ComputeV1::TargetInstance]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_target_instance(project, zone, target_instance, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/targetInstances/{targetInstance}', options)
-          command.response_representation = Google::Apis::ComputeV1::TargetInstance::Representation
-          command.response_class = Google::Apis::ComputeV1::TargetInstance
+          command.response_representation = GoogleAPI::Apis::ComputeV1::TargetInstance::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::TargetInstance
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['targetInstance'] = target_instance unless target_instance.nil?
@@ -8419,7 +8419,7 @@ module Google
         #   Project ID for this request.
         # @param [String] zone
         #   Name of the zone scoping this request.
-        # @param [Google::Apis::ComputeV1::TargetInstance] target_instance_object
+        # @param [GoogleAPI::Apis::ComputeV1::TargetInstance] target_instance_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -8429,24 +8429,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_target_instance(project, zone, target_instance_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/targetInstances', options)
-          command.request_representation = Google::Apis::ComputeV1::TargetInstance::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::TargetInstance::Representation
           command.request_object = target_instance_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -8501,22 +8501,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::TargetInstanceList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::TargetInstanceList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::TargetInstanceList]
+        # @return [GoogleAPI::Apis::ComputeV1::TargetInstanceList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_target_instances(project, zone, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/targetInstances', options)
-          command.response_representation = Google::Apis::ComputeV1::TargetInstanceList::Representation
-          command.response_class = Google::Apis::ComputeV1::TargetInstanceList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::TargetInstanceList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::TargetInstanceList
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -8535,7 +8535,7 @@ module Google
         #   Name of the region scoping this request.
         # @param [String] target_pool
         #   Name of the target pool to add a health check to.
-        # @param [Google::Apis::ComputeV1::AddTargetPoolsHealthCheckRequest] add_target_pools_health_check_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::AddTargetPoolsHealthCheckRequest] add_target_pools_health_check_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -8545,24 +8545,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def add_target_pool_health_check(project, region, target_pool, add_target_pools_health_check_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/regions/{region}/targetPools/{targetPool}/addHealthCheck', options)
-          command.request_representation = Google::Apis::ComputeV1::AddTargetPoolsHealthCheckRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::AddTargetPoolsHealthCheckRequest::Representation
           command.request_object = add_target_pools_health_check_request_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['targetPool'] = target_pool unless target_pool.nil?
@@ -8579,7 +8579,7 @@ module Google
         #   Name of the region scoping this request.
         # @param [String] target_pool
         #   Name of the TargetPool resource to add instances to.
-        # @param [Google::Apis::ComputeV1::AddTargetPoolsInstanceRequest] add_target_pools_instance_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::AddTargetPoolsInstanceRequest] add_target_pools_instance_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -8589,24 +8589,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def add_target_pool_instance(project, region, target_pool, add_target_pools_instance_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/regions/{region}/targetPools/{targetPool}/addInstance', options)
-          command.request_representation = Google::Apis::ComputeV1::AddTargetPoolsInstanceRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::AddTargetPoolsInstanceRequest::Representation
           command.request_object = add_target_pools_instance_request_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['targetPool'] = target_pool unless target_pool.nil?
@@ -8659,22 +8659,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::TargetPoolAggregatedList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::TargetPoolAggregatedList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::TargetPoolAggregatedList]
+        # @return [GoogleAPI::Apis::ComputeV1::TargetPoolAggregatedList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_aggregated_target_pools(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/aggregated/targetPools', options)
-          command.response_representation = Google::Apis::ComputeV1::TargetPoolAggregatedList::Representation
-          command.response_class = Google::Apis::ComputeV1::TargetPoolAggregatedList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::TargetPoolAggregatedList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::TargetPoolAggregatedList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -8701,22 +8701,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_target_pool(project, region, target_pool, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/regions/{region}/targetPools/{targetPool}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['targetPool'] = target_pool unless target_pool.nil?
@@ -8743,22 +8743,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::TargetPool] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::TargetPool] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::TargetPool]
+        # @return [GoogleAPI::Apis::ComputeV1::TargetPool]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_target_pool(project, region, target_pool, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions/{region}/targetPools/{targetPool}', options)
-          command.response_representation = Google::Apis::ComputeV1::TargetPool::Representation
-          command.response_class = Google::Apis::ComputeV1::TargetPool
+          command.response_representation = GoogleAPI::Apis::ComputeV1::TargetPool::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::TargetPool
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['targetPool'] = target_pool unless target_pool.nil?
@@ -8776,7 +8776,7 @@ module Google
         #   Name of the region scoping this request.
         # @param [String] target_pool
         #   Name of the TargetPool resource to which the queried instance belongs.
-        # @param [Google::Apis::ComputeV1::InstanceReference] instance_reference_object
+        # @param [GoogleAPI::Apis::ComputeV1::InstanceReference] instance_reference_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -8786,24 +8786,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::TargetPoolInstanceHealth] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::TargetPoolInstanceHealth] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::TargetPoolInstanceHealth]
+        # @return [GoogleAPI::Apis::ComputeV1::TargetPoolInstanceHealth]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_target_pool_health(project, region, target_pool, instance_reference_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/regions/{region}/targetPools/{targetPool}/getHealth', options)
-          command.request_representation = Google::Apis::ComputeV1::InstanceReference::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::InstanceReference::Representation
           command.request_object = instance_reference_object
-          command.response_representation = Google::Apis::ComputeV1::TargetPoolInstanceHealth::Representation
-          command.response_class = Google::Apis::ComputeV1::TargetPoolInstanceHealth
+          command.response_representation = GoogleAPI::Apis::ComputeV1::TargetPoolInstanceHealth::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::TargetPoolInstanceHealth
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['targetPool'] = target_pool unless target_pool.nil?
@@ -8819,7 +8819,7 @@ module Google
         #   Project ID for this request.
         # @param [String] region
         #   Name of the region scoping this request.
-        # @param [Google::Apis::ComputeV1::TargetPool] target_pool_object
+        # @param [GoogleAPI::Apis::ComputeV1::TargetPool] target_pool_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -8829,24 +8829,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_target_pool(project, region, target_pool_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/regions/{region}/targetPools', options)
-          command.request_representation = Google::Apis::ComputeV1::TargetPool::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::TargetPool::Representation
           command.request_object = target_pool_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -8900,22 +8900,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::TargetPoolList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::TargetPoolList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::TargetPoolList]
+        # @return [GoogleAPI::Apis::ComputeV1::TargetPoolList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_target_pools(project, region, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions/{region}/targetPools', options)
-          command.response_representation = Google::Apis::ComputeV1::TargetPoolList::Representation
-          command.response_class = Google::Apis::ComputeV1::TargetPoolList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::TargetPoolList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::TargetPoolList
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -8934,7 +8934,7 @@ module Google
         #   Name of the region for this request.
         # @param [String] target_pool
         #   Name of the target pool to remove health checks from.
-        # @param [Google::Apis::ComputeV1::RemoveTargetPoolsHealthCheckRequest] remove_target_pools_health_check_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::RemoveTargetPoolsHealthCheckRequest] remove_target_pools_health_check_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -8944,24 +8944,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def remove_target_pool_health_check(project, region, target_pool, remove_target_pools_health_check_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/regions/{region}/targetPools/{targetPool}/removeHealthCheck', options)
-          command.request_representation = Google::Apis::ComputeV1::RemoveTargetPoolsHealthCheckRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::RemoveTargetPoolsHealthCheckRequest::Representation
           command.request_object = remove_target_pools_health_check_request_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['targetPool'] = target_pool unless target_pool.nil?
@@ -8978,7 +8978,7 @@ module Google
         #   Name of the region scoping this request.
         # @param [String] target_pool
         #   Name of the TargetPool resource to remove instances from.
-        # @param [Google::Apis::ComputeV1::RemoveTargetPoolsInstanceRequest] remove_target_pools_instance_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::RemoveTargetPoolsInstanceRequest] remove_target_pools_instance_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -8988,24 +8988,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def remove_target_pool_instance(project, region, target_pool, remove_target_pools_instance_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/regions/{region}/targetPools/{targetPool}/removeInstance', options)
-          command.request_representation = Google::Apis::ComputeV1::RemoveTargetPoolsInstanceRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::RemoveTargetPoolsInstanceRequest::Representation
           command.request_object = remove_target_pools_instance_request_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['targetPool'] = target_pool unless target_pool.nil?
@@ -9022,7 +9022,7 @@ module Google
         #   Name of the region scoping this request.
         # @param [String] target_pool
         #   Name of the TargetPool resource to set a backup pool for.
-        # @param [Google::Apis::ComputeV1::TargetReference] target_reference_object
+        # @param [GoogleAPI::Apis::ComputeV1::TargetReference] target_reference_object
         # @param [Float] failover_ratio
         #   New failoverRatio value for the target pool.
         # @param [String] fields
@@ -9034,24 +9034,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_target_pool_backup(project, region, target_pool, target_reference_object = nil, failover_ratio: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/regions/{region}/targetPools/{targetPool}/setBackup', options)
-          command.request_representation = Google::Apis::ComputeV1::TargetReference::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::TargetReference::Representation
           command.request_object = target_reference_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['targetPool'] = target_pool unless target_pool.nil?
@@ -9105,22 +9105,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::TargetVpnGatewayAggregatedList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::TargetVpnGatewayAggregatedList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::TargetVpnGatewayAggregatedList]
+        # @return [GoogleAPI::Apis::ComputeV1::TargetVpnGatewayAggregatedList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_aggregated_target_vpn_gateways(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/aggregated/targetVpnGateways', options)
-          command.response_representation = Google::Apis::ComputeV1::TargetVpnGatewayAggregatedList::Representation
-          command.response_class = Google::Apis::ComputeV1::TargetVpnGatewayAggregatedList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::TargetVpnGatewayAggregatedList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::TargetVpnGatewayAggregatedList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -9147,22 +9147,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_target_vpn_gateway(project, region, target_vpn_gateway, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/regions/{region}/targetVpnGateways/{targetVpnGateway}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['targetVpnGateway'] = target_vpn_gateway unless target_vpn_gateway.nil?
@@ -9189,22 +9189,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::TargetVpnGateway] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::TargetVpnGateway] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::TargetVpnGateway]
+        # @return [GoogleAPI::Apis::ComputeV1::TargetVpnGateway]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_target_vpn_gateway(project, region, target_vpn_gateway, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions/{region}/targetVpnGateways/{targetVpnGateway}', options)
-          command.response_representation = Google::Apis::ComputeV1::TargetVpnGateway::Representation
-          command.response_class = Google::Apis::ComputeV1::TargetVpnGateway
+          command.response_representation = GoogleAPI::Apis::ComputeV1::TargetVpnGateway::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::TargetVpnGateway
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['targetVpnGateway'] = target_vpn_gateway unless target_vpn_gateway.nil?
@@ -9220,7 +9220,7 @@ module Google
         #   Project ID for this request.
         # @param [String] region
         #   Name of the region for this request.
-        # @param [Google::Apis::ComputeV1::TargetVpnGateway] target_vpn_gateway_object
+        # @param [GoogleAPI::Apis::ComputeV1::TargetVpnGateway] target_vpn_gateway_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -9230,24 +9230,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_target_vpn_gateway(project, region, target_vpn_gateway_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/regions/{region}/targetVpnGateways', options)
-          command.request_representation = Google::Apis::ComputeV1::TargetVpnGateway::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::TargetVpnGateway::Representation
           command.request_object = target_vpn_gateway_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -9302,22 +9302,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::TargetVpnGatewayList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::TargetVpnGatewayList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::TargetVpnGatewayList]
+        # @return [GoogleAPI::Apis::ComputeV1::TargetVpnGatewayList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_target_vpn_gateways(project, region, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions/{region}/targetVpnGateways', options)
-          command.response_representation = Google::Apis::ComputeV1::TargetVpnGatewayList::Representation
-          command.response_class = Google::Apis::ComputeV1::TargetVpnGatewayList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::TargetVpnGatewayList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::TargetVpnGatewayList
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -9343,22 +9343,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_url_map(project, url_map, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/global/urlMaps/{urlMap}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['urlMap'] = url_map unless url_map.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -9382,22 +9382,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::UrlMap] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::UrlMap] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::UrlMap]
+        # @return [GoogleAPI::Apis::ComputeV1::UrlMap]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_url_map(project, url_map, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/urlMaps/{urlMap}', options)
-          command.response_representation = Google::Apis::ComputeV1::UrlMap::Representation
-          command.response_class = Google::Apis::ComputeV1::UrlMap
+          command.response_representation = GoogleAPI::Apis::ComputeV1::UrlMap::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::UrlMap
           command.params['project'] = project unless project.nil?
           command.params['urlMap'] = url_map unless url_map.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -9410,7 +9410,7 @@ module Google
         # the request.
         # @param [String] project
         #   Project ID for this request.
-        # @param [Google::Apis::ComputeV1::UrlMap] url_map_object
+        # @param [GoogleAPI::Apis::ComputeV1::UrlMap] url_map_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -9420,24 +9420,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_url_map(project, url_map_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/urlMaps', options)
-          command.request_representation = Google::Apis::ComputeV1::UrlMap::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::UrlMap::Representation
           command.request_object = url_map_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -9488,22 +9488,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::UrlMapList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::UrlMapList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::UrlMapList]
+        # @return [GoogleAPI::Apis::ComputeV1::UrlMapList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_url_maps(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/urlMaps', options)
-          command.response_representation = Google::Apis::ComputeV1::UrlMapList::Representation
-          command.response_class = Google::Apis::ComputeV1::UrlMapList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::UrlMapList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::UrlMapList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -9520,7 +9520,7 @@ module Google
         #   Project ID for this request.
         # @param [String] url_map
         #   Name of the UrlMap resource to update.
-        # @param [Google::Apis::ComputeV1::UrlMap] url_map_object
+        # @param [GoogleAPI::Apis::ComputeV1::UrlMap] url_map_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -9530,24 +9530,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_url_map(project, url_map, url_map_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, '{project}/global/urlMaps/{urlMap}', options)
-          command.request_representation = Google::Apis::ComputeV1::UrlMap::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::UrlMap::Representation
           command.request_object = url_map_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['urlMap'] = url_map unless url_map.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -9561,7 +9561,7 @@ module Google
         #   Project ID for this request.
         # @param [String] url_map
         #   Name of the UrlMap resource to update.
-        # @param [Google::Apis::ComputeV1::UrlMap] url_map_object
+        # @param [GoogleAPI::Apis::ComputeV1::UrlMap] url_map_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -9571,24 +9571,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_url_map(project, url_map, url_map_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, '{project}/global/urlMaps/{urlMap}', options)
-          command.request_representation = Google::Apis::ComputeV1::UrlMap::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::UrlMap::Representation
           command.request_object = url_map_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['urlMap'] = url_map unless url_map.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -9603,7 +9603,7 @@ module Google
         #   Project ID for this request.
         # @param [String] url_map
         #   Name of the UrlMap resource to be validated as.
-        # @param [Google::Apis::ComputeV1::ValidateUrlMapsRequest] validate_url_maps_request_object
+        # @param [GoogleAPI::Apis::ComputeV1::ValidateUrlMapsRequest] validate_url_maps_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -9613,24 +9613,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::ValidateUrlMapsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::ValidateUrlMapsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::ValidateUrlMapsResponse]
+        # @return [GoogleAPI::Apis::ComputeV1::ValidateUrlMapsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def validate_url_map(project, url_map, validate_url_maps_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/urlMaps/{urlMap}/validate', options)
-          command.request_representation = Google::Apis::ComputeV1::ValidateUrlMapsRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::ValidateUrlMapsRequest::Representation
           command.request_object = validate_url_maps_request_object
-          command.response_representation = Google::Apis::ComputeV1::ValidateUrlMapsResponse::Representation
-          command.response_class = Google::Apis::ComputeV1::ValidateUrlMapsResponse
+          command.response_representation = GoogleAPI::Apis::ComputeV1::ValidateUrlMapsResponse::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::ValidateUrlMapsResponse
           command.params['project'] = project unless project.nil?
           command.params['urlMap'] = url_map unless url_map.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -9682,22 +9682,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::VpnTunnelAggregatedList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::VpnTunnelAggregatedList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::VpnTunnelAggregatedList]
+        # @return [GoogleAPI::Apis::ComputeV1::VpnTunnelAggregatedList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_aggregated_vpn_tunnel(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/aggregated/vpnTunnels', options)
-          command.response_representation = Google::Apis::ComputeV1::VpnTunnelAggregatedList::Representation
-          command.response_class = Google::Apis::ComputeV1::VpnTunnelAggregatedList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::VpnTunnelAggregatedList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::VpnTunnelAggregatedList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -9724,22 +9724,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_vpn_tunnel(project, region, vpn_tunnel, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/regions/{region}/vpnTunnels/{vpnTunnel}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['vpnTunnel'] = vpn_tunnel unless vpn_tunnel.nil?
@@ -9766,22 +9766,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::VpnTunnel] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::VpnTunnel] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::VpnTunnel]
+        # @return [GoogleAPI::Apis::ComputeV1::VpnTunnel]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_vpn_tunnel(project, region, vpn_tunnel, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions/{region}/vpnTunnels/{vpnTunnel}', options)
-          command.response_representation = Google::Apis::ComputeV1::VpnTunnel::Representation
-          command.response_class = Google::Apis::ComputeV1::VpnTunnel
+          command.response_representation = GoogleAPI::Apis::ComputeV1::VpnTunnel::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::VpnTunnel
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.params['vpnTunnel'] = vpn_tunnel unless vpn_tunnel.nil?
@@ -9797,7 +9797,7 @@ module Google
         #   Project ID for this request.
         # @param [String] region
         #   Name of the region for this request.
-        # @param [Google::Apis::ComputeV1::VpnTunnel] vpn_tunnel_object
+        # @param [GoogleAPI::Apis::ComputeV1::VpnTunnel] vpn_tunnel_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -9807,24 +9807,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_vpn_tunnel(project, region, vpn_tunnel_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/regions/{region}/vpnTunnels', options)
-          command.request_representation = Google::Apis::ComputeV1::VpnTunnel::Representation
+          command.request_representation = GoogleAPI::Apis::ComputeV1::VpnTunnel::Representation
           command.request_object = vpn_tunnel_object
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -9879,22 +9879,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::VpnTunnelList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::VpnTunnelList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::VpnTunnelList]
+        # @return [GoogleAPI::Apis::ComputeV1::VpnTunnelList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_vpn_tunnels(project, region, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/regions/{region}/vpnTunnels', options)
-          command.response_representation = Google::Apis::ComputeV1::VpnTunnelList::Representation
-          command.response_class = Google::Apis::ComputeV1::VpnTunnelList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::VpnTunnelList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::VpnTunnelList
           command.params['project'] = project unless project.nil?
           command.params['region'] = region unless region.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -9922,7 +9922,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -9931,9 +9931,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_zone_operation(project, zone, operation, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/zones/{zone}/operations/{operation}', options)
           command.params['project'] = project unless project.nil?
@@ -9961,22 +9961,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Operation]
+        # @return [GoogleAPI::Apis::ComputeV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_zone_operation(project, zone, operation, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/operations/{operation}', options)
-          command.response_representation = Google::Apis::ComputeV1::Operation::Representation
-          command.response_class = Google::Apis::ComputeV1::Operation
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['operation'] = operation unless operation.nil?
@@ -10031,22 +10031,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::OperationList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::OperationList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::OperationList]
+        # @return [GoogleAPI::Apis::ComputeV1::OperationList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_zone_operations(project, zone, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/operations', options)
-          command.response_representation = Google::Apis::ComputeV1::OperationList::Representation
-          command.response_class = Google::Apis::ComputeV1::OperationList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::OperationList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::OperationList
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -10073,22 +10073,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::Zone] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::Zone] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::Zone]
+        # @return [GoogleAPI::Apis::ComputeV1::Zone]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_zone(project, zone, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}', options)
-          command.response_representation = Google::Apis::ComputeV1::Zone::Representation
-          command.response_class = Google::Apis::ComputeV1::Zone
+          command.response_representation = GoogleAPI::Apis::ComputeV1::Zone::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::Zone
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -10140,22 +10140,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ComputeV1::ZoneList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ComputeV1::ZoneList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ComputeV1::ZoneList]
+        # @return [GoogleAPI::Apis::ComputeV1::ZoneList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_zones(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones', options)
-          command.response_representation = Google::Apis::ComputeV1::ZoneList::Representation
-          command.response_class = Google::Apis::ComputeV1::ZoneList
+          command.response_representation = GoogleAPI::Apis::ComputeV1::ZoneList::Representation
+          command.response_class = GoogleAPI::Apis::ComputeV1::ZoneList
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?

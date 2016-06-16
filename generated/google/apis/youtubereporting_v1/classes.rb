@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module YoutubereportingV1
       
       # Media resource.
       class Media
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Name of the media resource.
         # Corresponds to the JSON property `resourceName`
@@ -43,11 +43,11 @@ module Google
       
       # Response message for ReportingService.ListReportTypes.
       class ListReportTypesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of report types.
         # Corresponds to the JSON property `reportTypes`
-        # @return [Array<Google::Apis::YoutubereportingV1::ReportType>]
+        # @return [Array<GoogleAPI::Apis::YoutubereportingV1::ReportType>]
         attr_accessor :report_types
       
         # A token to retrieve next page of results. Pass this value in the
@@ -70,7 +70,7 @@ module Google
       
       # A report type.
       class ReportType
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the report type (max. 100 characters).
         # Corresponds to the JSON property `id`
@@ -110,7 +110,7 @@ module Google
       
       # A job creating reports of a specific type.
       class Job
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The server-generated ID of the job (max. 40 characters).
         # Corresponds to the JSON property `id`
@@ -162,11 +162,11 @@ module Google
       
       # Response message for ReportingService.ListJobs.
       class ListJobsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of jobs.
         # Corresponds to the JSON property `jobs`
-        # @return [Array<Google::Apis::YoutubereportingV1::Job>]
+        # @return [Array<GoogleAPI::Apis::YoutubereportingV1::Job>]
         attr_accessor :jobs
       
         # A token to retrieve next page of results. Pass this value in the
@@ -193,7 +193,7 @@ module Google
       # protobuf.Empty) returns (google.protobuf.Empty); ` The JSON representation for
       # `Empty` is empty JSON object ````.
       class Empty
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -206,11 +206,11 @@ module Google
       
       # Response message for ReportingService.ListReports.
       class ListReportsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of report types.
         # Corresponds to the JSON property `reports`
-        # @return [Array<Google::Apis::YoutubereportingV1::Report>]
+        # @return [Array<GoogleAPI::Apis::YoutubereportingV1::Report>]
         attr_accessor :reports
       
         # A token to retrieve next page of results. Pass this value in the
@@ -234,7 +234,7 @@ module Google
       # A report's metadata including the URL from which the report itself can be
       # downloaded.
       class Report
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The server-generated ID of the report.
         # Corresponds to the JSON property `id`

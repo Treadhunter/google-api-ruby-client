@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-module Google
+module GoogleAPI
   module Apis
     # General options for API requests
     ClientOptions =  Struct.new(
@@ -38,7 +38,7 @@ module Google
       #   @return [String] URL of a proxy server
 
       # Get the default options
-      # @return [Google::Apis::ClientOptions]
+      # @return [GoogleAPI::Apis::ClientOptions]
       def self.default
         @options ||= ClientOptions.new
       end
@@ -58,7 +58,7 @@ module Google
       #   @return [Hash<String,String] Additional HTTP headers to include in requests
 
       # Get the default options
-      # @return [Google::Apis::RequestOptions]
+      # @return [GoogleAPI::Apis::RequestOptions]
       def self.default
         @options ||= RequestOptions.new
       end

@@ -2,14 +2,14 @@ require 'spec_helper'
 require 'google/apis/adsense_v1_4'
 require 'googleauth'
 
-Adsense = Google::Apis::AdsenseV1_4
+Adsense = GoogleAPI::Apis::AdsenseV1_4
 
-RSpec.describe Google::Apis::AdsenseV1_4, :if => run_integration_tests? do
+RSpec.describe GoogleAPI::Apis::AdsenseV1_4, :if => run_integration_tests? do
 
   before(:context) do
     #WebMock.allow_net_connect!
     @adsense = Adsense::AdSenseService.new
-    #@adsense.authorization = Google::Auth.get_application_default([Adsense::AUTH_ADSENSE])
+    #@adsense.authorization = GoogleAPI::Auth.get_application_default([Adsense::AUTH_ADSENSE])
     #@adsense.authorization.sub = 'cb@travelingnuker.com'
     #@adsense.authorization.fetch_access_token!
   end

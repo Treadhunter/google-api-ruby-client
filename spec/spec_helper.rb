@@ -56,7 +56,7 @@ RSpec.configure do |config|
   config.include WebMock::API
   config.capture_log_messages
 
-  Google::Apis.logger.level = Logger::DEBUG
+  GoogleAPI::Apis.logger.level = Logger::DEBUG
   WebMock::Config.instance.query_values_notation = :flat_array
 end
 
@@ -70,7 +70,7 @@ end
 
 RSpec.shared_context 'HTTP client' do
   let(:client) do
-    Google::Apis::Core::BaseService.new('', '').client
+    GoogleAPI::Apis::Core::BaseService.new('', '').client
   end
 end
 
@@ -80,10 +80,10 @@ module TestHelpers
 end
 
 # Enable retries for tests
-Google::Apis::RequestOptions.default.retries = 5
+GoogleAPI::Apis::RequestOptions.default.retries = 5
 
 # Allow testing different adapters
-Google::Apis::ClientOptions.default.use_net_http = true if ENV['USE_NET_HTTP']
+GoogleAPI::Apis::ClientOptions.default.use_net_http = true if ENV['USE_NET_HTTP']
 # Temporarily patch WebMock to allow chunked responses for Net::HTTP
 module Net
   module WebMockHTTPResponse

@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module <%= api.module_name  %>
       # <%= api.title %>
@@ -33,7 +33,7 @@ module Google
 <% if api.documentation_link -%>
       # @see <%= api.documentation_link %>
 <% end -%>
-      class <%= api.service_name %> < Google::Apis::Core::BaseService
+      class <%= api.service_name %> < GoogleAPI::Apis::Core::BaseService
 <% for param in api.parameters.values.reject {|p| p.name == 'fields'} -%>
         # @return [<%= param.generated_type %>]
         #  <%= block_comment(param.description, 8, 2) %>

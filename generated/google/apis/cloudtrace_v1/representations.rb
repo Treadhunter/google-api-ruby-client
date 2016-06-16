@@ -18,44 +18,44 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CloudtraceV1
       
       class ListTracesResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Trace
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TraceSpan
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Traces
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Empty
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListTracesResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :traces, as: 'traces', class: Google::Apis::CloudtraceV1::Trace, decorator: Google::Apis::CloudtraceV1::Trace::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :traces, as: 'traces', class: GoogleAPI::Apis::CloudtraceV1::Trace, decorator: GoogleAPI::Apis::CloudtraceV1::Trace::Representation
       
           property :next_page_token, as: 'nextPageToken'
         end
@@ -63,17 +63,17 @@ module Google
       
       class Trace
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :project_id, as: 'projectId'
           property :trace_id, as: 'traceId'
-          collection :spans, as: 'spans', class: Google::Apis::CloudtraceV1::TraceSpan, decorator: Google::Apis::CloudtraceV1::TraceSpan::Representation
+          collection :spans, as: 'spans', class: GoogleAPI::Apis::CloudtraceV1::TraceSpan, decorator: GoogleAPI::Apis::CloudtraceV1::TraceSpan::Representation
       
         end
       end
       
       class TraceSpan
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :span_id, as: 'spanId'
           property :kind, as: 'kind'
           property :name, as: 'name'
@@ -86,15 +86,15 @@ module Google
       
       class Traces
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :traces, as: 'traces', class: Google::Apis::CloudtraceV1::Trace, decorator: Google::Apis::CloudtraceV1::Trace::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :traces, as: 'traces', class: GoogleAPI::Apis::CloudtraceV1::Trace, decorator: GoogleAPI::Apis::CloudtraceV1::Trace::Representation
       
         end
       end
       
       class Empty
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
         end
       end
     end

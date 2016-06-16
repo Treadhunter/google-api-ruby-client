@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module TaskqueueV1beta2
       
       # 
       class Task
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Time (in seconds since the epoch) at which the task was enqueued.
         # Corresponds to the JSON property `enqueueTimestamp`
@@ -87,11 +87,11 @@ module Google
       
       # 
       class TaskQueue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ACLs that are applicable to this TaskQueue object.
         # Corresponds to the JSON property `acl`
-        # @return [Google::Apis::TaskqueueV1beta2::TaskQueue::Acl]
+        # @return [GoogleAPI::Apis::TaskqueueV1beta2::TaskQueue::Acl]
         attr_accessor :acl
       
         # Name of the taskqueue.
@@ -112,7 +112,7 @@ module Google
       
         # Statistics for the TaskQueue object in question.
         # Corresponds to the JSON property `stats`
-        # @return [Google::Apis::TaskqueueV1beta2::TaskQueue::Stats]
+        # @return [GoogleAPI::Apis::TaskqueueV1beta2::TaskQueue::Stats]
         attr_accessor :stats
       
         def initialize(**args)
@@ -130,7 +130,7 @@ module Google
         
         # ACLs that are applicable to this TaskQueue object.
         class Acl
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Email addresses of users who are "admins" of the TaskQueue. This means they
           # can control the queue, eg set ACLs for the queue.
@@ -164,7 +164,7 @@ module Google
         
         # Statistics for the TaskQueue object in question.
         class Stats
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Number of tasks leased in the last hour.
           # Corresponds to the JSON property `leasedLastHour`
@@ -202,11 +202,11 @@ module Google
       
       # 
       class Tasks
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The actual list of tasks returned as a result of the lease operation.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::TaskqueueV1beta2::Task>]
+        # @return [Array<GoogleAPI::Apis::TaskqueueV1beta2::Task>]
         attr_accessor :items
       
         # The kind of object returned, a list of tasks.
@@ -227,11 +227,11 @@ module Google
       
       # 
       class Tasks2
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The actual list of tasks currently active in the TaskQueue.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::TaskqueueV1beta2::Task>]
+        # @return [Array<GoogleAPI::Apis::TaskqueueV1beta2::Task>]
         attr_accessor :items
       
         # The kind of object returned, a list of tasks.

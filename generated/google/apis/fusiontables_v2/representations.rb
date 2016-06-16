@@ -18,157 +18,157 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module FusiontablesV2
       
       class Bucket
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Column
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class BaseColumn
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ColumnList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Geometry
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Import
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Line
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class LineStyle
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Point
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class PointStyle
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Polygon
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class PolygonStyle
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Sqlresponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class StyleFunction
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Gradient
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Color
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class StyleSetting
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class StyleSettingList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Table
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TableList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Task
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TaskList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Template
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TemplateList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Bucket
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :color, as: 'color'
           property :icon, as: 'icon'
           property :max, as: 'max'
@@ -180,8 +180,8 @@ module Google
       
       class Column
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :base_column, as: 'baseColumn', class: Google::Apis::FusiontablesV2::Column::BaseColumn, decorator: Google::Apis::FusiontablesV2::Column::BaseColumn::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :base_column, as: 'baseColumn', class: GoogleAPI::Apis::FusiontablesV2::Column::BaseColumn, decorator: GoogleAPI::Apis::FusiontablesV2::Column::BaseColumn::Representation
       
           property :column_id, as: 'columnId'
           property :column_json_schema, as: 'columnJsonSchema'
@@ -198,7 +198,7 @@ module Google
         
         class BaseColumn
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :column_id, as: 'columnId'
             property :table_index, as: 'tableIndex'
           end
@@ -207,8 +207,8 @@ module Google
       
       class ColumnList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :items, as: 'items', class: Google::Apis::FusiontablesV2::Column, decorator: Google::Apis::FusiontablesV2::Column::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :items, as: 'items', class: GoogleAPI::Apis::FusiontablesV2::Column, decorator: GoogleAPI::Apis::FusiontablesV2::Column::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -218,7 +218,7 @@ module Google
       
       class Geometry
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :geometries, as: 'geometries'
           property :geometry, as: 'geometry'
           property :type, as: 'type'
@@ -227,7 +227,7 @@ module Google
       
       class Import
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
           property :num_rows_received, as: 'numRowsReceived'
         end
@@ -235,7 +235,7 @@ module Google
       
       class Line
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :coordinates, as: 'coordinates', :class => Array do
         include Representable::JSON::Collection
         items
@@ -247,20 +247,20 @@ module Google
       
       class LineStyle
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :stroke_color, as: 'strokeColor'
-          property :stroke_color_styler, as: 'strokeColorStyler', class: Google::Apis::FusiontablesV2::StyleFunction, decorator: Google::Apis::FusiontablesV2::StyleFunction::Representation
+          property :stroke_color_styler, as: 'strokeColorStyler', class: GoogleAPI::Apis::FusiontablesV2::StyleFunction, decorator: GoogleAPI::Apis::FusiontablesV2::StyleFunction::Representation
       
           property :stroke_opacity, as: 'strokeOpacity'
           property :stroke_weight, as: 'strokeWeight'
-          property :stroke_weight_styler, as: 'strokeWeightStyler', class: Google::Apis::FusiontablesV2::StyleFunction, decorator: Google::Apis::FusiontablesV2::StyleFunction::Representation
+          property :stroke_weight_styler, as: 'strokeWeightStyler', class: GoogleAPI::Apis::FusiontablesV2::StyleFunction, decorator: GoogleAPI::Apis::FusiontablesV2::StyleFunction::Representation
       
         end
       end
       
       class Point
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :coordinates, as: 'coordinates'
           property :type, as: 'type'
         end
@@ -268,16 +268,16 @@ module Google
       
       class PointStyle
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :icon_name, as: 'iconName'
-          property :icon_styler, as: 'iconStyler', class: Google::Apis::FusiontablesV2::StyleFunction, decorator: Google::Apis::FusiontablesV2::StyleFunction::Representation
+          property :icon_styler, as: 'iconStyler', class: GoogleAPI::Apis::FusiontablesV2::StyleFunction, decorator: GoogleAPI::Apis::FusiontablesV2::StyleFunction::Representation
       
         end
       end
       
       class Polygon
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :coordinates, as: 'coordinates', :class => Array do
         include Representable::JSON::Collection
         items :class => Array do
@@ -293,24 +293,24 @@ module Google
       
       class PolygonStyle
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :fill_color, as: 'fillColor'
-          property :fill_color_styler, as: 'fillColorStyler', class: Google::Apis::FusiontablesV2::StyleFunction, decorator: Google::Apis::FusiontablesV2::StyleFunction::Representation
+          property :fill_color_styler, as: 'fillColorStyler', class: GoogleAPI::Apis::FusiontablesV2::StyleFunction, decorator: GoogleAPI::Apis::FusiontablesV2::StyleFunction::Representation
       
           property :fill_opacity, as: 'fillOpacity'
           property :stroke_color, as: 'strokeColor'
-          property :stroke_color_styler, as: 'strokeColorStyler', class: Google::Apis::FusiontablesV2::StyleFunction, decorator: Google::Apis::FusiontablesV2::StyleFunction::Representation
+          property :stroke_color_styler, as: 'strokeColorStyler', class: GoogleAPI::Apis::FusiontablesV2::StyleFunction, decorator: GoogleAPI::Apis::FusiontablesV2::StyleFunction::Representation
       
           property :stroke_opacity, as: 'strokeOpacity'
           property :stroke_weight, as: 'strokeWeight'
-          property :stroke_weight_styler, as: 'strokeWeightStyler', class: Google::Apis::FusiontablesV2::StyleFunction, decorator: Google::Apis::FusiontablesV2::StyleFunction::Representation
+          property :stroke_weight_styler, as: 'strokeWeightStyler', class: GoogleAPI::Apis::FusiontablesV2::StyleFunction, decorator: GoogleAPI::Apis::FusiontablesV2::StyleFunction::Representation
       
         end
       end
       
       class Sqlresponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :columns, as: 'columns'
           property :kind, as: 'kind'
           collection :rows, as: 'rows', :class => Array do
@@ -323,19 +323,19 @@ module Google
       
       class StyleFunction
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :buckets, as: 'buckets', class: Google::Apis::FusiontablesV2::Bucket, decorator: Google::Apis::FusiontablesV2::Bucket::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :buckets, as: 'buckets', class: GoogleAPI::Apis::FusiontablesV2::Bucket, decorator: GoogleAPI::Apis::FusiontablesV2::Bucket::Representation
       
           property :column_name, as: 'columnName'
-          property :gradient, as: 'gradient', class: Google::Apis::FusiontablesV2::StyleFunction::Gradient, decorator: Google::Apis::FusiontablesV2::StyleFunction::Gradient::Representation
+          property :gradient, as: 'gradient', class: GoogleAPI::Apis::FusiontablesV2::StyleFunction::Gradient, decorator: GoogleAPI::Apis::FusiontablesV2::StyleFunction::Gradient::Representation
       
           property :kind, as: 'kind'
         end
         
         class Gradient
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
-            collection :colors, as: 'colors', class: Google::Apis::FusiontablesV2::StyleFunction::Gradient::Color, decorator: Google::Apis::FusiontablesV2::StyleFunction::Gradient::Color::Representation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+            collection :colors, as: 'colors', class: GoogleAPI::Apis::FusiontablesV2::StyleFunction::Gradient::Color, decorator: GoogleAPI::Apis::FusiontablesV2::StyleFunction::Gradient::Color::Representation
         
             property :max, as: 'max'
             property :min, as: 'min'
@@ -343,7 +343,7 @@ module Google
           
           class Color
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :color, as: 'color'
               property :opacity, as: 'opacity'
             end
@@ -353,14 +353,14 @@ module Google
       
       class StyleSetting
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
-          property :marker_options, as: 'markerOptions', class: Google::Apis::FusiontablesV2::PointStyle, decorator: Google::Apis::FusiontablesV2::PointStyle::Representation
+          property :marker_options, as: 'markerOptions', class: GoogleAPI::Apis::FusiontablesV2::PointStyle, decorator: GoogleAPI::Apis::FusiontablesV2::PointStyle::Representation
       
           property :name, as: 'name'
-          property :polygon_options, as: 'polygonOptions', class: Google::Apis::FusiontablesV2::PolygonStyle, decorator: Google::Apis::FusiontablesV2::PolygonStyle::Representation
+          property :polygon_options, as: 'polygonOptions', class: GoogleAPI::Apis::FusiontablesV2::PolygonStyle, decorator: GoogleAPI::Apis::FusiontablesV2::PolygonStyle::Representation
       
-          property :polyline_options, as: 'polylineOptions', class: Google::Apis::FusiontablesV2::LineStyle, decorator: Google::Apis::FusiontablesV2::LineStyle::Representation
+          property :polyline_options, as: 'polylineOptions', class: GoogleAPI::Apis::FusiontablesV2::LineStyle, decorator: GoogleAPI::Apis::FusiontablesV2::LineStyle::Representation
       
           property :style_id, as: 'styleId'
           property :table_id, as: 'tableId'
@@ -369,8 +369,8 @@ module Google
       
       class StyleSettingList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :items, as: 'items', class: Google::Apis::FusiontablesV2::StyleSetting, decorator: Google::Apis::FusiontablesV2::StyleSetting::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :items, as: 'items', class: GoogleAPI::Apis::FusiontablesV2::StyleSetting, decorator: GoogleAPI::Apis::FusiontablesV2::StyleSetting::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -380,12 +380,12 @@ module Google
       
       class Table
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :attribution, as: 'attribution'
           property :attribution_link, as: 'attributionLink'
           collection :base_table_ids, as: 'baseTableIds'
           property :column_properties_json_schema, as: 'columnPropertiesJsonSchema'
-          collection :columns, as: 'columns', class: Google::Apis::FusiontablesV2::Column, decorator: Google::Apis::FusiontablesV2::Column::Representation
+          collection :columns, as: 'columns', class: GoogleAPI::Apis::FusiontablesV2::Column, decorator: GoogleAPI::Apis::FusiontablesV2::Column::Representation
       
           property :description, as: 'description'
           property :is_exportable, as: 'isExportable'
@@ -400,8 +400,8 @@ module Google
       
       class TableList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :items, as: 'items', class: Google::Apis::FusiontablesV2::Table, decorator: Google::Apis::FusiontablesV2::Table::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :items, as: 'items', class: GoogleAPI::Apis::FusiontablesV2::Table, decorator: GoogleAPI::Apis::FusiontablesV2::Table::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -410,7 +410,7 @@ module Google
       
       class Task
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
           property :progress, as: 'progress'
           property :started, as: 'started'
@@ -421,8 +421,8 @@ module Google
       
       class TaskList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :items, as: 'items', class: Google::Apis::FusiontablesV2::Task, decorator: Google::Apis::FusiontablesV2::Task::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :items, as: 'items', class: GoogleAPI::Apis::FusiontablesV2::Task, decorator: GoogleAPI::Apis::FusiontablesV2::Task::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -432,7 +432,7 @@ module Google
       
       class Template
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :automatic_column_names, as: 'automaticColumnNames'
           property :body, as: 'body'
           property :kind, as: 'kind'
@@ -444,8 +444,8 @@ module Google
       
       class TemplateList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :items, as: 'items', class: Google::Apis::FusiontablesV2::Template, decorator: Google::Apis::FusiontablesV2::Template::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :items, as: 'items', class: GoogleAPI::Apis::FusiontablesV2::Template, decorator: GoogleAPI::Apis::FusiontablesV2::Template::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'

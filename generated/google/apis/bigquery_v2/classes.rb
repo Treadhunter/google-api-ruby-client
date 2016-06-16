@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module BigqueryV2
       
       # 
       class BigtableColumn
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Optional] The encoding of the values when the type is not STRING. Acceptable
         # encoding values are: TEXT - indicates values are alphanumeric text strings.
@@ -94,14 +94,14 @@ module Google
       
       # 
       class BigtableColumnFamily
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Optional] Lists of columns that should be exposed as individual fields as
         # opposed to a list of (column name, value) pairs. All columns whose qualifier
         # matches a qualifier in this list can be accessed as .. Other columns can be
         # accessed as a list through .Column field.
         # Corresponds to the JSON property `columns`
-        # @return [Array<Google::Apis::BigqueryV2::BigtableColumn>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::BigtableColumn>]
         attr_accessor :columns
       
         # [Optional] The encoding of the values when the type is not STRING. Acceptable
@@ -153,7 +153,7 @@ module Google
       
       # 
       class BigtableOptions
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Optional] List of column families to expose in the table schema along with
         # their types. This list restricts the column families that can be referenced in
@@ -163,7 +163,7 @@ module Google
         # are read as BYTES. During a query only the column families referenced in that
         # query are read from Bigtable.
         # Corresponds to the JSON property `columnFamilies`
-        # @return [Array<Google::Apis::BigqueryV2::BigtableColumnFamily>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::BigtableColumnFamily>]
         attr_accessor :column_families
       
         # [Optional] If field is true, then the column families that are not specified
@@ -187,7 +187,7 @@ module Google
       
       # 
       class CsvOptions
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Optional] Indicates if BigQuery should accept rows that are missing trailing
         # optional columns. If true, BigQuery treats missing trailing columns as null
@@ -258,7 +258,7 @@ module Google
       
       # 
       class Dataset
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Optional] An array of objects that define dataset access for one or more
         # entities. You can set this property when inserting or updating a dataset in
@@ -269,7 +269,7 @@ module Google
         # access.role: OWNER; access.userByEmail: [dataset creator email]; access.role:
         # OWNER;
         # Corresponds to the JSON property `access`
-        # @return [Array<Google::Apis::BigqueryV2::Dataset::Access>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::Dataset::Access>]
         attr_accessor :access
       
         # [Output-only] The time when this dataset was created, in milliseconds since
@@ -280,7 +280,7 @@ module Google
       
         # [Required] A reference that identifies the dataset.
         # Corresponds to the JSON property `datasetReference`
-        # @return [Google::Apis::BigqueryV2::DatasetReference]
+        # @return [GoogleAPI::Apis::BigqueryV2::DatasetReference]
         attr_accessor :dataset_reference
       
         # [Optional] The default lifetime of all tables in the dataset, in milliseconds.
@@ -365,7 +365,7 @@ module Google
         
         # 
         class Access
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Pick one] A domain to grant access to. Any users signed in with the domain
           # specified will be granted the specified access. Example: "example.com".
@@ -405,7 +405,7 @@ module Google
           # by any user, access to the view needs to be granted again via an update
           # operation.
           # Corresponds to the JSON property `view`
-          # @return [Google::Apis::BigqueryV2::TableReference]
+          # @return [GoogleAPI::Apis::BigqueryV2::TableReference]
           attr_accessor :view
         
           def initialize(**args)
@@ -426,14 +426,14 @@ module Google
       
       # 
       class DatasetList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An array of the dataset resources in the project. Each resource contains basic
         # information. For full information about a particular dataset resource, use the
         # Datasets: get method. This property is omitted when there are no datasets in
         # the project.
         # Corresponds to the JSON property `datasets`
-        # @return [Array<Google::Apis::BigqueryV2::DatasetList::Dataset>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::DatasetList::Dataset>]
         attr_accessor :datasets
       
         # A hash value of the results page. You can use this property to determine if
@@ -467,12 +467,12 @@ module Google
         
         # 
         class Dataset
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The dataset reference. Use this property to access specific parts of the
           # dataset's ID, such as project ID or dataset ID.
           # Corresponds to the JSON property `datasetReference`
-          # @return [Google::Apis::BigqueryV2::DatasetReference]
+          # @return [GoogleAPI::Apis::BigqueryV2::DatasetReference]
           attr_accessor :dataset_reference
         
           # A descriptive name for the dataset, if one exists.
@@ -506,7 +506,7 @@ module Google
       
       # 
       class DatasetReference
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Required] A unique ID for this dataset, without the project name. The ID must
         # contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The
@@ -533,7 +533,7 @@ module Google
       
       # 
       class ErrorProto
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Debugging information. This property is internal to Google and should not be
         # used.
@@ -571,7 +571,7 @@ module Google
       
       # 
       class ExplainQueryStage
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Relative amount of time the average shard spent on CPU-bound tasks.
         # Corresponds to the JSON property `computeRatioAvg`
@@ -616,7 +616,7 @@ module Google
         # List of operations within the stage in dependency order (approximately
         # chronological).
         # Corresponds to the JSON property `steps`
-        # @return [Array<Google::Apis::BigqueryV2::ExplainQueryStep>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::ExplainQueryStep>]
         attr_accessor :steps
       
         # Relative amount of time the average shard spent waiting to be scheduled.
@@ -663,7 +663,7 @@ module Google
       
       # 
       class ExplainQueryStep
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Machine-readable operation type.
         # Corresponds to the JSON property `kind`
@@ -688,7 +688,7 @@ module Google
       
       # 
       class ExternalDataConfiguration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Experimental] Try to detect schema and format options automatically. Any
         # option specified explicitly will be honored.
@@ -699,7 +699,7 @@ module Google
       
         # [Optional] Additional options if sourceFormat is set to BIGTABLE.
         # Corresponds to the JSON property `bigtableOptions`
-        # @return [Google::Apis::BigqueryV2::BigtableOptions]
+        # @return [GoogleAPI::Apis::BigqueryV2::BigtableOptions]
         attr_accessor :bigtable_options
       
         # [Optional] The compression type of the data source. Possible values include
@@ -711,12 +711,12 @@ module Google
       
         # Additional properties to set if sourceFormat is set to CSV.
         # Corresponds to the JSON property `csvOptions`
-        # @return [Google::Apis::BigqueryV2::CsvOptions]
+        # @return [GoogleAPI::Apis::BigqueryV2::CsvOptions]
         attr_accessor :csv_options
       
         # [Optional] Additional options if sourceFormat is set to GOOGLE_SHEETS.
         # Corresponds to the JSON property `googleSheetsOptions`
-        # @return [Google::Apis::BigqueryV2::GoogleSheetsOptions]
+        # @return [GoogleAPI::Apis::BigqueryV2::GoogleSheetsOptions]
         attr_accessor :google_sheets_options
       
         # [Optional] Indicates if BigQuery should allow extra values that are not
@@ -746,7 +746,7 @@ module Google
         # formats. Schema is disallowed for Google Cloud Bigtable, Cloud Datastore
         # backups, and Avro formats.
         # Corresponds to the JSON property `schema`
-        # @return [Google::Apis::BigqueryV2::TableSchema]
+        # @return [GoogleAPI::Apis::BigqueryV2::TableSchema]
         attr_accessor :schema
       
         # [Required] The data format. For CSV files, specify "CSV". For Google sheets,
@@ -793,7 +793,7 @@ module Google
       
       # 
       class GetQueryResultsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether the query result was fetched from the query cache.
         # Corresponds to the JSON property `cacheHit`
@@ -805,7 +805,7 @@ module Google
         # job. Errors here do not necessarily mean that the job has completed or was
         # unsuccessful.
         # Corresponds to the JSON property `errors`
-        # @return [Array<Google::Apis::BigqueryV2::ErrorProto>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::ErrorProto>]
         attr_accessor :errors
       
         # A hash of this response.
@@ -826,7 +826,7 @@ module Google
         # Since this API only returns the first page of results, subsequent pages can be
         # fetched via the same mechanism (GetQueryResults).
         # Corresponds to the JSON property `jobReference`
-        # @return [Google::Apis::BigqueryV2::JobReference]
+        # @return [GoogleAPI::Apis::BigqueryV2::JobReference]
         attr_accessor :job_reference
       
         # The resource type of the response.
@@ -844,12 +844,12 @@ module Google
         # and specify the jobReference returned above. Present only when the query
         # completes successfully.
         # Corresponds to the JSON property `rows`
-        # @return [Array<Google::Apis::BigqueryV2::TableRow>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::TableRow>]
         attr_accessor :rows
       
         # The schema of the results. Present only when the query completes successfully.
         # Corresponds to the JSON property `schema`
-        # @return [Google::Apis::BigqueryV2::TableSchema]
+        # @return [GoogleAPI::Apis::BigqueryV2::TableSchema]
         attr_accessor :schema
       
         # The total number of bytes processed for this query.
@@ -886,7 +886,7 @@ module Google
       
       # 
       class GoogleSheetsOptions
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Optional] The number of rows at the top of a sheet that BigQuery will skip
         # when reading the data. The default value is 0. This property is useful if you
@@ -915,11 +915,11 @@ module Google
       
       # 
       class Job
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Required] Describes the job configuration.
         # Corresponds to the JSON property `configuration`
-        # @return [Google::Apis::BigqueryV2::JobConfiguration]
+        # @return [GoogleAPI::Apis::BigqueryV2::JobConfiguration]
         attr_accessor :configuration
       
         # [Output-only] A hash of this resource.
@@ -934,7 +934,7 @@ module Google
       
         # [Optional] Reference describing the unique-per-user name of the job.
         # Corresponds to the JSON property `jobReference`
-        # @return [Google::Apis::BigqueryV2::JobReference]
+        # @return [GoogleAPI::Apis::BigqueryV2::JobReference]
         attr_accessor :job_reference
       
         # [Output-only] The type of the resource.
@@ -950,13 +950,13 @@ module Google
         # [Output-only] Information about the job, including starting time and ending
         # time of the job.
         # Corresponds to the JSON property `statistics`
-        # @return [Google::Apis::BigqueryV2::JobStatistics]
+        # @return [GoogleAPI::Apis::BigqueryV2::JobStatistics]
         attr_accessor :statistics
       
         # [Output-only] The status of this job. Examine this value when polling an
         # asynchronous job to see if the job is complete.
         # Corresponds to the JSON property `status`
-        # @return [Google::Apis::BigqueryV2::JobStatus]
+        # @return [GoogleAPI::Apis::BigqueryV2::JobStatus]
         attr_accessor :status
       
         # [Output-only] Email address of the user who ran the job.
@@ -984,11 +984,11 @@ module Google
       
       # 
       class CancelJobResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The final state of the job.
         # Corresponds to the JSON property `job`
-        # @return [Google::Apis::BigqueryV2::Job]
+        # @return [GoogleAPI::Apis::BigqueryV2::Job]
         attr_accessor :job
       
         # The resource type of the response.
@@ -1009,11 +1009,11 @@ module Google
       
       # 
       class JobConfiguration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Pick one] Copies a table.
         # Corresponds to the JSON property `copy`
-        # @return [Google::Apis::BigqueryV2::JobConfigurationTableCopy]
+        # @return [GoogleAPI::Apis::BigqueryV2::JobConfigurationTableCopy]
         attr_accessor :copy
       
         # [Optional] If set, don't actually run this job. A valid query will return a
@@ -1027,17 +1027,17 @@ module Google
       
         # [Pick one] Configures an extract job.
         # Corresponds to the JSON property `extract`
-        # @return [Google::Apis::BigqueryV2::JobConfigurationExtract]
+        # @return [GoogleAPI::Apis::BigqueryV2::JobConfigurationExtract]
         attr_accessor :extract
       
         # [Pick one] Configures a load job.
         # Corresponds to the JSON property `load`
-        # @return [Google::Apis::BigqueryV2::JobConfigurationLoad]
+        # @return [GoogleAPI::Apis::BigqueryV2::JobConfigurationLoad]
         attr_accessor :load
       
         # [Pick one] Configures a query job.
         # Corresponds to the JSON property `query`
-        # @return [Google::Apis::BigqueryV2::JobConfigurationQuery]
+        # @return [GoogleAPI::Apis::BigqueryV2::JobConfigurationQuery]
         attr_accessor :query
       
         def initialize(**args)
@@ -1056,7 +1056,7 @@ module Google
       
       # 
       class JobConfigurationExtract
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Optional] The compression type to use for exported files. Possible values
         # include GZIP and NONE. The default value is NONE.
@@ -1097,7 +1097,7 @@ module Google
       
         # [Required] A reference to the table being exported.
         # Corresponds to the JSON property `sourceTable`
-        # @return [Google::Apis::BigqueryV2::TableReference]
+        # @return [GoogleAPI::Apis::BigqueryV2::TableReference]
         attr_accessor :source_table
       
         def initialize(**args)
@@ -1118,7 +1118,7 @@ module Google
       
       # 
       class JobConfigurationLoad
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Optional] Accept rows that are missing trailing optional columns. The missing
         # values are treated as nulls. If false, records with missing trailing columns
@@ -1156,7 +1156,7 @@ module Google
       
         # [Required] The destination table to load the data into.
         # Corresponds to the JSON property `destinationTable`
-        # @return [Google::Apis::BigqueryV2::TableReference]
+        # @return [GoogleAPI::Apis::BigqueryV2::TableReference]
         attr_accessor :destination_table
       
         # [Optional] The character encoding of the data. The supported values are UTF-8
@@ -1222,7 +1222,7 @@ module Google
         # the destination table already exists, or if you're loading data from Google
         # Cloud Datastore.
         # Corresponds to the JSON property `schema`
-        # @return [Google::Apis::BigqueryV2::TableSchema]
+        # @return [GoogleAPI::Apis::BigqueryV2::TableSchema]
         attr_accessor :schema
       
         # [Deprecated] The inline schema. For CSV schemas, specify as "Field1:Type1[,
@@ -1299,7 +1299,7 @@ module Google
       
       # 
       class JobConfigurationQuery
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If true, allows the query to produce arbitrarily large result tables at a
         # slight cost in performance. Requires destinationTable to be set.
@@ -1321,13 +1321,13 @@ module Google
         # [Optional] Specifies the default dataset to use for unqualified table names in
         # the query.
         # Corresponds to the JSON property `defaultDataset`
-        # @return [Google::Apis::BigqueryV2::DatasetReference]
+        # @return [GoogleAPI::Apis::BigqueryV2::DatasetReference]
         attr_accessor :default_dataset
       
         # [Optional] Describes the table where the query results should be stored. If
         # not present, a new table will be created to store the results.
         # Corresponds to the JSON property `destinationTable`
-        # @return [Google::Apis::BigqueryV2::TableReference]
+        # @return [GoogleAPI::Apis::BigqueryV2::TableReference]
         attr_accessor :destination_table
       
         # [Optional] Flattens all nested and repeated fields in the query results. The
@@ -1366,7 +1366,7 @@ module Google
         # these properties, the data source can then be queried as if it were a standard
         # BigQuery table.
         # Corresponds to the JSON property `tableDefinitions`
-        # @return [Hash<String,Google::Apis::BigqueryV2::ExternalDataConfiguration>]
+        # @return [Hash<String,GoogleAPI::Apis::BigqueryV2::ExternalDataConfiguration>]
         attr_accessor :table_definitions
       
         # [Experimental] Specifies whether to use BigQuery's legacy SQL dialect for this
@@ -1391,7 +1391,7 @@ module Google
       
         # [Experimental] Describes user-defined function resources used in the query.
         # Corresponds to the JSON property `userDefinedFunctionResources`
-        # @return [Array<Google::Apis::BigqueryV2::UserDefinedFunctionResource>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::UserDefinedFunctionResource>]
         attr_accessor :user_defined_function_resources
       
         # [Optional] Specifies the action that occurs if the destination table already
@@ -1431,7 +1431,7 @@ module Google
       
       # 
       class JobConfigurationTableCopy
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Optional] Specifies whether the job is allowed to create new tables. The
         # following values are supported: CREATE_IF_NEEDED: If the table does not exist,
@@ -1445,17 +1445,17 @@ module Google
       
         # [Required] The destination table
         # Corresponds to the JSON property `destinationTable`
-        # @return [Google::Apis::BigqueryV2::TableReference]
+        # @return [GoogleAPI::Apis::BigqueryV2::TableReference]
         attr_accessor :destination_table
       
         # [Pick one] Source table to copy.
         # Corresponds to the JSON property `sourceTable`
-        # @return [Google::Apis::BigqueryV2::TableReference]
+        # @return [GoogleAPI::Apis::BigqueryV2::TableReference]
         attr_accessor :source_table
       
         # [Pick one] Source tables to copy.
         # Corresponds to the JSON property `sourceTables`
-        # @return [Array<Google::Apis::BigqueryV2::TableReference>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::TableReference>]
         attr_accessor :source_tables
       
         # [Optional] Specifies the action that occurs if the destination table already
@@ -1486,7 +1486,7 @@ module Google
       
       # 
       class JobList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A hash of this page of results.
         # Corresponds to the JSON property `etag`
@@ -1495,7 +1495,7 @@ module Google
       
         # List of jobs that were requested.
         # Corresponds to the JSON property `jobs`
-        # @return [Array<Google::Apis::BigqueryV2::JobList::Job>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::JobList::Job>]
         attr_accessor :jobs
       
         # The resource type of the response.
@@ -1522,16 +1522,16 @@ module Google
         
         # 
         class Job
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Full-projection-only] Specifies the job configuration.
           # Corresponds to the JSON property `configuration`
-          # @return [Google::Apis::BigqueryV2::JobConfiguration]
+          # @return [GoogleAPI::Apis::BigqueryV2::JobConfiguration]
           attr_accessor :configuration
         
           # A result object that will be present only if the job has failed.
           # Corresponds to the JSON property `errorResult`
-          # @return [Google::Apis::BigqueryV2::ErrorProto]
+          # @return [GoogleAPI::Apis::BigqueryV2::ErrorProto]
           attr_accessor :error_result
         
           # Unique opaque ID of the job.
@@ -1541,7 +1541,7 @@ module Google
         
           # Job reference uniquely identifying the job.
           # Corresponds to the JSON property `jobReference`
-          # @return [Google::Apis::BigqueryV2::JobReference]
+          # @return [GoogleAPI::Apis::BigqueryV2::JobReference]
           attr_accessor :job_reference
         
           # The resource type.
@@ -1558,12 +1558,12 @@ module Google
           # [Output-only] Information about the job, including starting time and ending
           # time of the job.
           # Corresponds to the JSON property `statistics`
-          # @return [Google::Apis::BigqueryV2::JobStatistics]
+          # @return [GoogleAPI::Apis::BigqueryV2::JobStatistics]
           attr_accessor :statistics
         
           # [Full-projection-only] Describes the state of the job.
           # Corresponds to the JSON property `status`
-          # @return [Google::Apis::BigqueryV2::JobStatus]
+          # @return [GoogleAPI::Apis::BigqueryV2::JobStatus]
           attr_accessor :status
         
           # [Full-projection-only] Email address of the user who ran the job.
@@ -1592,7 +1592,7 @@ module Google
       
       # 
       class JobReference
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Required] The ID of the job. The ID must contain only letters (a-z, A-Z),
         # numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024
@@ -1619,7 +1619,7 @@ module Google
       
       # 
       class JobStatistics
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output-only] Creation time of this job, in milliseconds since the epoch. This
         # field will be present on all jobs.
@@ -1635,17 +1635,17 @@ module Google
       
         # [Output-only] Statistics for an extract job.
         # Corresponds to the JSON property `extract`
-        # @return [Google::Apis::BigqueryV2::JobStatistics4]
+        # @return [GoogleAPI::Apis::BigqueryV2::JobStatistics4]
         attr_accessor :extract
       
         # [Output-only] Statistics for a load job.
         # Corresponds to the JSON property `load`
-        # @return [Google::Apis::BigqueryV2::JobStatistics3]
+        # @return [GoogleAPI::Apis::BigqueryV2::JobStatistics3]
         attr_accessor :load
       
         # [Output-only] Statistics for a query job.
         # Corresponds to the JSON property `query`
-        # @return [Google::Apis::BigqueryV2::JobStatistics2]
+        # @return [GoogleAPI::Apis::BigqueryV2::JobStatistics2]
         attr_accessor :query
       
         # [Output-only] Start time of this job, in milliseconds since the epoch. This
@@ -1679,7 +1679,7 @@ module Google
       
       # 
       class JobStatistics2
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output-only] Billing tier for the job.
         # Corresponds to the JSON property `billingTier`
@@ -1695,19 +1695,19 @@ module Google
         # [Output-only, Experimental] Describes execution plan for the query as a list
         # of stages.
         # Corresponds to the JSON property `queryPlan`
-        # @return [Array<Google::Apis::BigqueryV2::ExplainQueryStage>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::ExplainQueryStage>]
         attr_accessor :query_plan
       
         # [Output-only, Experimental] Referenced tables for the job. Queries that
         # reference more than 50 tables will not have a complete list.
         # Corresponds to the JSON property `referencedTables`
-        # @return [Array<Google::Apis::BigqueryV2::TableReference>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::TableReference>]
         attr_accessor :referenced_tables
       
         # [Output-only, Experimental] The schema of the results. Present only for
         # successful dry run of non-legacy SQL queries.
         # Corresponds to the JSON property `schema`
-        # @return [Google::Apis::BigqueryV2::TableSchema]
+        # @return [GoogleAPI::Apis::BigqueryV2::TableSchema]
         attr_accessor :schema
       
         # [Output-only] Total bytes billed for the job.
@@ -1738,7 +1738,7 @@ module Google
       
       # 
       class JobStatistics3
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output-only] Number of bytes of source data in a load job.
         # Corresponds to the JSON property `inputFileBytes`
@@ -1777,7 +1777,7 @@ module Google
       
       # 
       class JobStatistics4
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output-only] Number of files per destination URI or URI pattern specified in
         # the extract configuration. These values will be in the same order as the URIs
@@ -1798,18 +1798,18 @@ module Google
       
       # 
       class JobStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output-only] Final error result of the job. If present, indicates that the
         # job has completed and was unsuccessful.
         # Corresponds to the JSON property `errorResult`
-        # @return [Google::Apis::BigqueryV2::ErrorProto]
+        # @return [GoogleAPI::Apis::BigqueryV2::ErrorProto]
         attr_accessor :error_result
       
         # [Output-only] All errors encountered during the running of the job. Errors
         # here do not necessarily mean that the job has completed or was unsuccessful.
         # Corresponds to the JSON property `errors`
-        # @return [Array<Google::Apis::BigqueryV2::ErrorProto>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::ErrorProto>]
         attr_accessor :errors
       
         # [Output-only] Running state of the job.
@@ -1831,7 +1831,7 @@ module Google
       
       # 
       class ProjectList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A hash of the page of results
         # Corresponds to the JSON property `etag`
@@ -1850,7 +1850,7 @@ module Google
       
         # Projects to which you have at least READ access.
         # Corresponds to the JSON property `projects`
-        # @return [Array<Google::Apis::BigqueryV2::ProjectList::Project>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::ProjectList::Project>]
         attr_accessor :projects
       
         # The total number of projects in the list.
@@ -1873,7 +1873,7 @@ module Google
         
         # 
         class Project
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # A descriptive name for this project.
           # Corresponds to the JSON property `friendlyName`
@@ -1897,7 +1897,7 @@ module Google
         
           # A unique reference to this project.
           # Corresponds to the JSON property `projectReference`
-          # @return [Google::Apis::BigqueryV2::ProjectReference]
+          # @return [GoogleAPI::Apis::BigqueryV2::ProjectReference]
           attr_accessor :project_reference
         
           def initialize(**args)
@@ -1917,7 +1917,7 @@ module Google
       
       # 
       class ProjectReference
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Required] ID of the project. Can be either the numeric ID or the assigned ID
         # of the project.
@@ -1937,13 +1937,13 @@ module Google
       
       # 
       class QueryRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Optional] Specifies the default datasetId and projectId to assume for any
         # unqualified table names in the query. If not set, all table names in the query
         # string must be qualified in the format 'datasetId.tableId'.
         # Corresponds to the JSON property `defaultDataset`
-        # @return [Google::Apis::BigqueryV2::DatasetReference]
+        # @return [GoogleAPI::Apis::BigqueryV2::DatasetReference]
         attr_accessor :default_dataset
       
         # [Optional] If set to true, BigQuery doesn't run the job. Instead, if the query
@@ -2031,7 +2031,7 @@ module Google
       
       # 
       class QueryResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether the query result was fetched from the query cache.
         # Corresponds to the JSON property `cacheHit`
@@ -2043,7 +2043,7 @@ module Google
         # job. Errors here do not necessarily mean that the job has completed or was
         # unsuccessful.
         # Corresponds to the JSON property `errors`
-        # @return [Array<Google::Apis::BigqueryV2::ErrorProto>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::ErrorProto>]
         attr_accessor :errors
       
         # Whether the query has completed or not. If rows or totalRows are present, this
@@ -2059,7 +2059,7 @@ module Google
         # only returns the first page of results, subsequent pages can be fetched via
         # the same mechanism (GetQueryResults).
         # Corresponds to the JSON property `jobReference`
-        # @return [Google::Apis::BigqueryV2::JobReference]
+        # @return [GoogleAPI::Apis::BigqueryV2::JobReference]
         attr_accessor :job_reference
       
         # The resource type.
@@ -2076,12 +2076,12 @@ module Google
         # permitted reply size. To get any additional rows, you can call GetQueryResults
         # and specify the jobReference returned above.
         # Corresponds to the JSON property `rows`
-        # @return [Array<Google::Apis::BigqueryV2::TableRow>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::TableRow>]
         attr_accessor :rows
       
         # The schema of the results. Present only when the query completes successfully.
         # Corresponds to the JSON property `schema`
-        # @return [Google::Apis::BigqueryV2::TableSchema]
+        # @return [GoogleAPI::Apis::BigqueryV2::TableSchema]
         attr_accessor :schema
       
         # The total number of bytes processed for this query. If this query was a dry
@@ -2117,7 +2117,7 @@ module Google
       
       # 
       class Streamingbuffer
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output-only] A lower-bound estimate of the number of bytes currently in the
         # streaming buffer.
@@ -2151,7 +2151,7 @@ module Google
       
       # 
       class Table
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output-only] The time when this table was created, in milliseconds since the
         # epoch.
@@ -2180,7 +2180,7 @@ module Google
         # table stored outside of BigQuery. By defining these properties, the data
         # source can then be queried as if it were a standard BigQuery table.
         # Corresponds to the JSON property `externalDataConfiguration`
-        # @return [Google::Apis::BigqueryV2::ExternalDataConfiguration]
+        # @return [GoogleAPI::Apis::BigqueryV2::ExternalDataConfiguration]
         attr_accessor :external_data_configuration
       
         # [Optional] A descriptive name for this table.
@@ -2230,7 +2230,7 @@ module Google
       
         # [Optional] Describes the schema of this table.
         # Corresponds to the JSON property `schema`
-        # @return [Google::Apis::BigqueryV2::TableSchema]
+        # @return [GoogleAPI::Apis::BigqueryV2::TableSchema]
         attr_accessor :schema
       
         # [Output-only] A URL that can be used to access this resource again.
@@ -2242,17 +2242,17 @@ module Google
         # one is present. This field will be absent if the table is not being streamed
         # to or if there is no data in the streaming buffer.
         # Corresponds to the JSON property `streamingBuffer`
-        # @return [Google::Apis::BigqueryV2::Streamingbuffer]
+        # @return [GoogleAPI::Apis::BigqueryV2::Streamingbuffer]
         attr_accessor :streaming_buffer
       
         # [Required] Reference describing the ID of this table.
         # Corresponds to the JSON property `tableReference`
-        # @return [Google::Apis::BigqueryV2::TableReference]
+        # @return [GoogleAPI::Apis::BigqueryV2::TableReference]
         attr_accessor :table_reference
       
         # [Experimental] If specified, configures time-based partitioning for this table.
         # Corresponds to the JSON property `timePartitioning`
-        # @return [Google::Apis::BigqueryV2::TimePartitioning]
+        # @return [GoogleAPI::Apis::BigqueryV2::TimePartitioning]
         attr_accessor :time_partitioning
       
         # [Output-only] Describes the table type. The following values are supported:
@@ -2265,7 +2265,7 @@ module Google
       
         # [Optional] The view definition.
         # Corresponds to the JSON property `view`
-        # @return [Google::Apis::BigqueryV2::ViewDefinition]
+        # @return [GoogleAPI::Apis::BigqueryV2::ViewDefinition]
         attr_accessor :view
       
         def initialize(**args)
@@ -2299,7 +2299,7 @@ module Google
       
       # 
       class TableCell
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `v`
@@ -2318,7 +2318,7 @@ module Google
       
       # 
       class InsertAllTableDataRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Optional] Accept rows that contain values that do not match the schema. The
         # unknown values are ignored. Default is false, which treats unknown values as
@@ -2335,7 +2335,7 @@ module Google
       
         # The rows to insert.
         # Corresponds to the JSON property `rows`
-        # @return [Array<Google::Apis::BigqueryV2::InsertAllTableDataRequest::Row>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::InsertAllTableDataRequest::Row>]
         attr_accessor :rows
       
         # [Optional] Insert all valid rows of a request, even if invalid rows exist. The
@@ -2371,7 +2371,7 @@ module Google
         
         # 
         class Row
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Optional] A unique ID for each row. BigQuery uses this property to detect
           # duplicate insertion requests on a best-effort basis.
@@ -2398,11 +2398,11 @@ module Google
       
       # 
       class InsertAllTableDataResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An array of errors for rows that were not inserted.
         # Corresponds to the JSON property `insertErrors`
-        # @return [Array<Google::Apis::BigqueryV2::InsertAllTableDataResponse::InsertError>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::InsertAllTableDataResponse::InsertError>]
         attr_accessor :insert_errors
       
         # The resource type of the response.
@@ -2422,11 +2422,11 @@ module Google
         
         # 
         class InsertError
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Error information for the row indicated by the index property.
           # Corresponds to the JSON property `errors`
-          # @return [Array<Google::Apis::BigqueryV2::ErrorProto>]
+          # @return [Array<GoogleAPI::Apis::BigqueryV2::ErrorProto>]
           attr_accessor :errors
         
           # The index of the row that error applies to.
@@ -2448,7 +2448,7 @@ module Google
       
       # 
       class TableDataList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A hash of this page of results.
         # Corresponds to the JSON property `etag`
@@ -2469,7 +2469,7 @@ module Google
       
         # Rows of results.
         # Corresponds to the JSON property `rows`
-        # @return [Array<Google::Apis::BigqueryV2::TableRow>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::TableRow>]
         attr_accessor :rows
       
         # The total number of rows in the complete table.
@@ -2493,7 +2493,7 @@ module Google
       
       # 
       class TableFieldSchema
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Optional] The field description. The maximum length is 16K characters.
         # Corresponds to the JSON property `description`
@@ -2503,7 +2503,7 @@ module Google
         # [Optional] Describes the nested schema fields if the type property is set to
         # RECORD.
         # Corresponds to the JSON property `fields`
-        # @return [Array<Google::Apis::BigqueryV2::TableFieldSchema>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::TableFieldSchema>]
         attr_accessor :fields
       
         # [Optional] The field mode. Possible values include NULLABLE, REQUIRED and
@@ -2542,7 +2542,7 @@ module Google
       
       # 
       class TableList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A hash of this page of results.
         # Corresponds to the JSON property `etag`
@@ -2561,7 +2561,7 @@ module Google
       
         # Tables in the requested dataset.
         # Corresponds to the JSON property `tables`
-        # @return [Array<Google::Apis::BigqueryV2::TableList::Table>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::TableList::Table>]
         attr_accessor :tables
       
         # The total number of tables in the dataset.
@@ -2584,7 +2584,7 @@ module Google
         
         # 
         class Table
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The user-friendly name for this table.
           # Corresponds to the JSON property `friendlyName`
@@ -2603,7 +2603,7 @@ module Google
         
           # A reference uniquely identifying the table.
           # Corresponds to the JSON property `tableReference`
-          # @return [Google::Apis::BigqueryV2::TableReference]
+          # @return [GoogleAPI::Apis::BigqueryV2::TableReference]
           attr_accessor :table_reference
         
           # The type of table. Possible values are: TABLE, VIEW.
@@ -2628,7 +2628,7 @@ module Google
       
       # 
       class TableReference
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Required] The ID of the dataset containing this table.
         # Corresponds to the JSON property `datasetId`
@@ -2660,11 +2660,11 @@ module Google
       
       # 
       class TableRow
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Represents a single row in the result set, consisting of one or more fields.
         # Corresponds to the JSON property `f`
-        # @return [Array<Google::Apis::BigqueryV2::TableCell>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::TableCell>]
         attr_accessor :f
       
         def initialize(**args)
@@ -2679,11 +2679,11 @@ module Google
       
       # 
       class TableSchema
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Describes the fields in a table.
         # Corresponds to the JSON property `fields`
-        # @return [Array<Google::Apis::BigqueryV2::TableFieldSchema>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::TableFieldSchema>]
         attr_accessor :fields
       
         def initialize(**args)
@@ -2698,7 +2698,7 @@ module Google
       
       # 
       class TimePartitioning
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Optional] Number of milliseconds for which to keep the storage for a
         # partition.
@@ -2725,7 +2725,7 @@ module Google
       
       # 
       class UserDefinedFunctionResource
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Pick one] An inline resource that contains code for a user-defined function (
         # UDF). Providing a inline code resource is equivalent to providing a URI for a
@@ -2753,7 +2753,7 @@ module Google
       
       # 
       class ViewDefinition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Required] A query that BigQuery executes when the view is referenced.
         # Corresponds to the JSON property `query`
@@ -2771,7 +2771,7 @@ module Google
       
         # [Experimental] Describes user-defined function resources used in the query.
         # Corresponds to the JSON property `userDefinedFunctionResources`
-        # @return [Array<Google::Apis::BigqueryV2::UserDefinedFunctionResource>]
+        # @return [Array<GoogleAPI::Apis::BigqueryV2::UserDefinedFunctionResource>]
         attr_accessor :user_defined_function_resources
       
         def initialize(**args)

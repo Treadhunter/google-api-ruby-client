@@ -18,18 +18,18 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module DatastoreV1beta2
       
       # 
       class AllocateIdsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of keys with incomplete key paths to allocate IDs for. No key may be
         # reserved/read-only.
         # Corresponds to the JSON property `keys`
-        # @return [Array<Google::Apis::DatastoreV1beta2::Key>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::Key>]
         attr_accessor :keys
       
         def initialize(**args)
@@ -44,17 +44,17 @@ module Google
       
       # 
       class AllocateIdsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `header`
-        # @return [Google::Apis::DatastoreV1beta2::ResponseHeader]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::ResponseHeader]
         attr_accessor :header
       
         # The keys specified in the request (in the same order), each with its key path
         # completed with a newly allocated ID.
         # Corresponds to the JSON property `keys`
-        # @return [Array<Google::Apis::DatastoreV1beta2::Key>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::Key>]
         attr_accessor :keys
       
         def initialize(**args)
@@ -70,7 +70,7 @@ module Google
       
       # 
       class BeginTransactionRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The transaction isolation level. Either snapshot or serializable. The default
         # isolation level is snapshot isolation, which means that another transaction
@@ -94,11 +94,11 @@ module Google
       
       # 
       class BeginTransactionResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `header`
-        # @return [Google::Apis::DatastoreV1beta2::ResponseHeader]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::ResponseHeader]
         attr_accessor :header
       
         # The transaction identifier (always present).
@@ -119,7 +119,7 @@ module Google
       
       # 
       class CommitRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `ignoreReadOnly`
@@ -134,7 +134,7 @@ module Google
       
         # A set of changes to apply.
         # Corresponds to the JSON property `mutation`
-        # @return [Google::Apis::DatastoreV1beta2::Mutation]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::Mutation]
         attr_accessor :mutation
       
         # The transaction identifier, returned by a call to beginTransaction. Must be
@@ -158,16 +158,16 @@ module Google
       
       # 
       class CommitResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `header`
-        # @return [Google::Apis::DatastoreV1beta2::ResponseHeader]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::ResponseHeader]
         attr_accessor :header
       
         # The result of performing the mutation (if any).
         # Corresponds to the JSON property `mutationResult`
-        # @return [Google::Apis::DatastoreV1beta2::MutationResult]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::MutationResult]
         attr_accessor :mutation_result
       
         def initialize(**args)
@@ -183,11 +183,11 @@ module Google
       
       # A filter that merges the multiple other filters using the given operation.
       class CompositeFilter
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of filters to combine. Must contain at least one filter.
         # Corresponds to the JSON property `filters`
-        # @return [Array<Google::Apis::DatastoreV1beta2::Filter>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::Filter>]
         attr_accessor :filters
       
         # The operator for combining multiple filters. Only "and" is currently supported.
@@ -208,16 +208,16 @@ module Google
       
       # An entity.
       class Entity
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A unique identifier for an entity.
         # Corresponds to the JSON property `key`
-        # @return [Google::Apis::DatastoreV1beta2::Key]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::Key]
         attr_accessor :key
       
         # The entity's properties.
         # Corresponds to the JSON property `properties`
-        # @return [Hash<String,Google::Apis::DatastoreV1beta2::Property>]
+        # @return [Hash<String,GoogleAPI::Apis::DatastoreV1beta2::Property>]
         attr_accessor :properties
       
         def initialize(**args)
@@ -233,11 +233,11 @@ module Google
       
       # The result of fetching an entity from the datastore.
       class EntityResult
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An entity.
         # Corresponds to the JSON property `entity`
-        # @return [Google::Apis::DatastoreV1beta2::Entity]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::Entity]
         attr_accessor :entity
       
         def initialize(**args)
@@ -252,16 +252,16 @@ module Google
       
       # A holder for any type of filter. Exactly one field should be specified.
       class Filter
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A filter that merges the multiple other filters using the given operation.
         # Corresponds to the JSON property `compositeFilter`
-        # @return [Google::Apis::DatastoreV1beta2::CompositeFilter]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::CompositeFilter]
         attr_accessor :composite_filter
       
         # A filter on a specific property.
         # Corresponds to the JSON property `propertyFilter`
-        # @return [Google::Apis::DatastoreV1beta2::PropertyFilter]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::PropertyFilter]
         attr_accessor :property_filter
       
         def initialize(**args)
@@ -277,7 +277,7 @@ module Google
       
       # A GQL query.
       class GqlQuery
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # When false, the query string must not contain a literal.
         # Corresponds to the JSON property `allowLiteral`
@@ -290,7 +290,7 @@ module Google
         # string, there must be a named argument with that name, but not necessarily the
         # inverse.
         # Corresponds to the JSON property `nameArgs`
-        # @return [Array<Google::Apis::DatastoreV1beta2::GqlQueryArg>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::GqlQueryArg>]
         attr_accessor :name_args
       
         # Numbered binding site @1 references the first numbered argument, effectively
@@ -298,7 +298,7 @@ module Google
         # set field GqlQueryArg.name. For each binding site numbered i in query_string,
         # there must be an ith numbered argument. The inverse must also be true.
         # Corresponds to the JSON property `numberArgs`
-        # @return [Array<Google::Apis::DatastoreV1beta2::GqlQueryArg>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::GqlQueryArg>]
         attr_accessor :number_args
       
         # The query string.
@@ -321,7 +321,7 @@ module Google
       
       # A binding argument for a GQL query.
       class GqlQueryArg
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `cursor`
@@ -337,7 +337,7 @@ module Google
         # A message that can hold any of the supported value types and associated
         # metadata.
         # Corresponds to the JSON property `value`
-        # @return [Google::Apis::DatastoreV1beta2::Value]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::Value]
         attr_accessor :value
       
         def initialize(**args)
@@ -354,13 +354,13 @@ module Google
       
       # A unique identifier for an entity.
       class Key
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An identifier for a particular subset of entities.
         # Entities are partitioned into various subsets, each used by different datasets
         # and different namespaces within a dataset and so forth.
         # Corresponds to the JSON property `partitionId`
-        # @return [Google::Apis::DatastoreV1beta2::PartitionId]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::PartitionId]
         attr_accessor :partition_id
       
         # The entity path. An entity path consists of one or more elements composed of a
@@ -374,7 +374,7 @@ module Google
         # the last path element (for the entity) itself may be omitted. A path can never
         # be empty. The path can have at most 100 elements.
         # Corresponds to the JSON property `path`
-        # @return [Array<Google::Apis::DatastoreV1beta2::KeyPathElement>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::KeyPathElement>]
         attr_accessor :path
       
         def initialize(**args)
@@ -392,7 +392,7 @@ module Google
       # At most one of name or ID may be set. If either is set, the element is
       # complete. If neither is set, the element is incomplete.
       class KeyPathElement
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the entity. Never equal to zero. Values less than zero are
         # discouraged and will not be supported in the future.
@@ -426,7 +426,7 @@ module Google
       
       # A representation of a kind.
       class KindExpression
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the kind.
         # Corresponds to the JSON property `name`
@@ -445,16 +445,16 @@ module Google
       
       # 
       class LookupRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Keys of entities to look up from the datastore.
         # Corresponds to the JSON property `keys`
-        # @return [Array<Google::Apis::DatastoreV1beta2::Key>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::Key>]
         attr_accessor :keys
       
         # Options for this lookup request. Optional.
         # Corresponds to the JSON property `readOptions`
-        # @return [Google::Apis::DatastoreV1beta2::ReadOptions]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::ReadOptions]
         attr_accessor :read_options
       
         def initialize(**args)
@@ -470,26 +470,26 @@ module Google
       
       # 
       class LookupResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of keys that were not looked up due to resource constraints.
         # Corresponds to the JSON property `deferred`
-        # @return [Array<Google::Apis::DatastoreV1beta2::Key>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::Key>]
         attr_accessor :deferred
       
         # Entities found.
         # Corresponds to the JSON property `found`
-        # @return [Array<Google::Apis::DatastoreV1beta2::EntityResult>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::EntityResult>]
         attr_accessor :found
       
         # 
         # Corresponds to the JSON property `header`
-        # @return [Google::Apis::DatastoreV1beta2::ResponseHeader]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::ResponseHeader]
         attr_accessor :header
       
         # Entities not found, with only the key populated.
         # Corresponds to the JSON property `missing`
-        # @return [Array<Google::Apis::DatastoreV1beta2::EntityResult>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::EntityResult>]
         attr_accessor :missing
       
         def initialize(**args)
@@ -507,12 +507,12 @@ module Google
       
       # A set of changes to apply.
       class Mutation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Keys of entities to delete. Each key must have a complete key path and must
         # not be reserved/read-only.
         # Corresponds to the JSON property `delete`
-        # @return [Array<Google::Apis::DatastoreV1beta2::Key>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::Key>]
         attr_accessor :delete
       
         # Ignore a user specified read-only period. Optional.
@@ -524,25 +524,25 @@ module Google
         # Entities to insert. Each inserted entity's key must have a complete path and
         # must not be reserved/read-only.
         # Corresponds to the JSON property `insert`
-        # @return [Array<Google::Apis::DatastoreV1beta2::Entity>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::Entity>]
         attr_accessor :insert
       
         # Insert entities with a newly allocated ID. Each inserted entity's key must
         # omit the final identifier in its path and must not be reserved/read-only.
         # Corresponds to the JSON property `insertAutoId`
-        # @return [Array<Google::Apis::DatastoreV1beta2::Entity>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::Entity>]
         attr_accessor :insert_auto_id
       
         # Entities to update. Each updated entity's key must have a complete path and
         # must not be reserved/read-only.
         # Corresponds to the JSON property `update`
-        # @return [Array<Google::Apis::DatastoreV1beta2::Entity>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::Entity>]
         attr_accessor :update
       
         # Entities to upsert. Each upserted entity's key must have a complete path and
         # must not be reserved/read-only.
         # Corresponds to the JSON property `upsert`
-        # @return [Array<Google::Apis::DatastoreV1beta2::Entity>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::Entity>]
         attr_accessor :upsert
       
         def initialize(**args)
@@ -562,7 +562,7 @@ module Google
       
       # 
       class MutationResult
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Number of index writes.
         # Corresponds to the JSON property `indexUpdates`
@@ -572,7 +572,7 @@ module Google
         # Keys for insertAutoId entities. One per entity from the request, in the same
         # order.
         # Corresponds to the JSON property `insertAutoIdKeys`
-        # @return [Array<Google::Apis::DatastoreV1beta2::Key>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::Key>]
         attr_accessor :insert_auto_id_keys
       
         def initialize(**args)
@@ -590,7 +590,7 @@ module Google
       # Entities are partitioned into various subsets, each used by different datasets
       # and different namespaces within a dataset and so forth.
       class PartitionId
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The dataset ID.
         # Corresponds to the JSON property `datasetId`
@@ -615,7 +615,7 @@ module Google
       
       # An entity property.
       class Property
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A blob key value.
         # Corresponds to the JSON property `blobKeyValue`
@@ -646,7 +646,7 @@ module Google
       
         # An entity.
         # Corresponds to the JSON property `entityValue`
-        # @return [Google::Apis::DatastoreV1beta2::Entity]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::Entity]
         attr_accessor :entity_value
       
         # If the value should be indexed.
@@ -668,13 +668,13 @@ module Google
       
         # A unique identifier for an entity.
         # Corresponds to the JSON property `keyValue`
-        # @return [Google::Apis::DatastoreV1beta2::Key]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::Key]
         attr_accessor :key_value
       
         # A list value. Cannot contain another list value. A Value instance that sets
         # field list_value must not set field meaning or field indexed.
         # Corresponds to the JSON property `listValue`
-        # @return [Array<Google::Apis::DatastoreV1beta2::Value>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::Value>]
         attr_accessor :list_value
       
         # The meaning field is reserved and should not be used.
@@ -711,7 +711,7 @@ module Google
       
       # A representation of a property in a projection.
       class PropertyExpression
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The aggregation function to apply to the property. Optional. Can only be used
         # when grouping by at least one property. Must then be set on all properties in
@@ -723,7 +723,7 @@ module Google
       
         # A reference to a property relative to the kind expressions.
         # Corresponds to the JSON property `property`
-        # @return [Google::Apis::DatastoreV1beta2::PropertyReference]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::PropertyReference]
         attr_accessor :property
       
         def initialize(**args)
@@ -739,7 +739,7 @@ module Google
       
       # A filter on a specific property.
       class PropertyFilter
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The operator to filter by. One of lessThan, lessThanOrEqual, greaterThan,
         # greaterThanOrEqual, equal, or hasAncestor.
@@ -749,13 +749,13 @@ module Google
       
         # A reference to a property relative to the kind expressions.
         # Corresponds to the JSON property `property`
-        # @return [Google::Apis::DatastoreV1beta2::PropertyReference]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::PropertyReference]
         attr_accessor :property
       
         # A message that can hold any of the supported value types and associated
         # metadata.
         # Corresponds to the JSON property `value`
-        # @return [Google::Apis::DatastoreV1beta2::Value]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::Value]
         attr_accessor :value
       
         def initialize(**args)
@@ -772,7 +772,7 @@ module Google
       
       # The desired order for a specific property.
       class PropertyOrder
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The direction to order by. One of ascending or descending. Optional, defaults
         # to ascending.
@@ -782,7 +782,7 @@ module Google
       
         # A reference to a property relative to the kind expressions.
         # Corresponds to the JSON property `property`
-        # @return [Google::Apis::DatastoreV1beta2::PropertyReference]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::PropertyReference]
         attr_accessor :property
       
         def initialize(**args)
@@ -798,7 +798,7 @@ module Google
       
       # A reference to a property relative to the kind expressions.
       class PropertyReference
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the property.
         # Corresponds to the JSON property `name`
@@ -817,7 +817,7 @@ module Google
       
       # A query.
       class Query
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An ending point for the query results. Optional. Query cursors are returned in
         # query result batches.
@@ -827,18 +827,18 @@ module Google
       
         # A holder for any type of filter. Exactly one field should be specified.
         # Corresponds to the JSON property `filter`
-        # @return [Google::Apis::DatastoreV1beta2::Filter]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::Filter]
         attr_accessor :filter
       
         # The properties to group by (if empty, no grouping is applied to the result set)
         # .
         # Corresponds to the JSON property `groupBy`
-        # @return [Array<Google::Apis::DatastoreV1beta2::PropertyReference>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::PropertyReference>]
         attr_accessor :group_by
       
         # The kinds to query (if empty, returns entities from all kinds).
         # Corresponds to the JSON property `kinds`
-        # @return [Array<Google::Apis::DatastoreV1beta2::KindExpression>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::KindExpression>]
         attr_accessor :kinds
       
         # The maximum number of results to return. Applies after all other constraints.
@@ -855,12 +855,12 @@ module Google
       
         # The order to apply to the query results (if empty, order is unspecified).
         # Corresponds to the JSON property `order`
-        # @return [Array<Google::Apis::DatastoreV1beta2::PropertyOrder>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::PropertyOrder>]
         attr_accessor :order
       
         # The projection to return. If not set the entire entity is returned.
         # Corresponds to the JSON property `projection`
-        # @return [Array<Google::Apis::DatastoreV1beta2::PropertyExpression>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::PropertyExpression>]
         attr_accessor :projection
       
         # A starting point for the query results. Optional. Query cursors are returned
@@ -889,7 +889,7 @@ module Google
       
       # A batch of results produced by a query.
       class QueryResultBatch
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A cursor that points to the position after the last result in the batch. May
         # be absent. TODO(arfuller): Once all plans produce cursors update documentation
@@ -907,7 +907,7 @@ module Google
       
         # The results for this batch.
         # Corresponds to the JSON property `entityResults`
-        # @return [Array<Google::Apis::DatastoreV1beta2::EntityResult>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::EntityResult>]
         attr_accessor :entity_results
       
         # The state of the query after the current batch. One of notFinished,
@@ -937,7 +937,7 @@ module Google
       
       # 
       class ReadOptions
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The read consistency to use. One of default, strong, or eventual. Cannot be
         # set when transaction is set. Lookup and ancestor queries default to strong,
@@ -965,7 +965,7 @@ module Google
       
       # 
       class ResponseHeader
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "datastore#
         # responseHeader".
@@ -985,7 +985,7 @@ module Google
       
       # 
       class RollbackRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The transaction identifier, returned by a call to beginTransaction.
         # Corresponds to the JSON property `transaction`
@@ -1004,11 +1004,11 @@ module Google
       
       # 
       class RollbackResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `header`
-        # @return [Google::Apis::DatastoreV1beta2::ResponseHeader]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::ResponseHeader]
         attr_accessor :header
       
         def initialize(**args)
@@ -1023,28 +1023,28 @@ module Google
       
       # 
       class RunQueryRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A GQL query.
         # Corresponds to the JSON property `gqlQuery`
-        # @return [Google::Apis::DatastoreV1beta2::GqlQuery]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::GqlQuery]
         attr_accessor :gql_query
       
         # An identifier for a particular subset of entities.
         # Entities are partitioned into various subsets, each used by different datasets
         # and different namespaces within a dataset and so forth.
         # Corresponds to the JSON property `partitionId`
-        # @return [Google::Apis::DatastoreV1beta2::PartitionId]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::PartitionId]
         attr_accessor :partition_id
       
         # A query.
         # Corresponds to the JSON property `query`
-        # @return [Google::Apis::DatastoreV1beta2::Query]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::Query]
         attr_accessor :query
       
         # The options for this query.
         # Corresponds to the JSON property `readOptions`
-        # @return [Google::Apis::DatastoreV1beta2::ReadOptions]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::ReadOptions]
         attr_accessor :read_options
       
         def initialize(**args)
@@ -1062,16 +1062,16 @@ module Google
       
       # 
       class RunQueryResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A batch of results produced by a query.
         # Corresponds to the JSON property `batch`
-        # @return [Google::Apis::DatastoreV1beta2::QueryResultBatch]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::QueryResultBatch]
         attr_accessor :batch
       
         # 
         # Corresponds to the JSON property `header`
-        # @return [Google::Apis::DatastoreV1beta2::ResponseHeader]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::ResponseHeader]
         attr_accessor :header
       
         def initialize(**args)
@@ -1088,7 +1088,7 @@ module Google
       # A message that can hold any of the supported value types and associated
       # metadata.
       class Value
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A blob key value.
         # Corresponds to the JSON property `blobKeyValue`
@@ -1119,7 +1119,7 @@ module Google
       
         # An entity.
         # Corresponds to the JSON property `entityValue`
-        # @return [Google::Apis::DatastoreV1beta2::Entity]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::Entity]
         attr_accessor :entity_value
       
         # If the value should be indexed.
@@ -1141,13 +1141,13 @@ module Google
       
         # A unique identifier for an entity.
         # Corresponds to the JSON property `keyValue`
-        # @return [Google::Apis::DatastoreV1beta2::Key]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::Key]
         attr_accessor :key_value
       
         # A list value. Cannot contain another list value. A Value instance that sets
         # field list_value must not set field meaning or field indexed.
         # Corresponds to the JSON property `listValue`
-        # @return [Array<Google::Apis::DatastoreV1beta2::Value>]
+        # @return [Array<GoogleAPI::Apis::DatastoreV1beta2::Value>]
         attr_accessor :list_value
       
         # The meaning field is reserved and should not be used.

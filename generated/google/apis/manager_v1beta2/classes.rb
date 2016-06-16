@@ -18,14 +18,14 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ManagerV1beta2
       
       # A Compute Engine network accessConfig. Identical to the accessConfig on
       # corresponding Compute Engine resource.
       class AccessConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Name of this access configuration.
         # Corresponds to the JSON property `name`
@@ -58,7 +58,7 @@ module Google
       # An Action encapsulates a set of commands as a single runnable module with
       # additional information needed during run-time.
       class Action
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of commands to run sequentially for this action.
         # Corresponds to the JSON property `commands`
@@ -83,7 +83,7 @@ module Google
       
       # An allowed port resource.
       class AllowedRule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ?tcp?, ?udp? or ?icmp?
         # Corresponds to the JSON property `IPProtocol`
@@ -109,7 +109,7 @@ module Google
       
       # 
       class AutoscalingModule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `coolDownPeriodSec`
@@ -164,7 +164,7 @@ module Google
       
       # 
       class AutoscalingModuleStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The URL of the corresponding Autoscaling configuration.
         # Corresponds to the JSON property `autoscalingConfigUrl`
@@ -183,7 +183,7 @@ module Google
       
       # [Output Only] The current state of a replica or module.
       class DeployState
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Human readable details about the current state.
         # Corresponds to the JSON property `details`
@@ -215,7 +215,7 @@ module Google
       
       # A deployment represents a physical instantiation of a Template.
       class Deployment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The time when this deployment was created.
         # Corresponds to the JSON property `creationDate`
@@ -229,7 +229,7 @@ module Google
       
         # [Output Only] List of status for the modules in this deployment.
         # Corresponds to the JSON property `modules`
-        # @return [Hash<String,Google::Apis::ManagerV1beta2::ModuleStatus>]
+        # @return [Hash<String,GoogleAPI::Apis::ManagerV1beta2::ModuleStatus>]
         attr_accessor :modules
       
         # Name of this deployment. The name must conform to the following regular
@@ -241,12 +241,12 @@ module Google
         # The set of parameter overrides to apply to the corresponding Template before
         # deploying.
         # Corresponds to the JSON property `overrides`
-        # @return [Array<Google::Apis::ManagerV1beta2::ParamOverride>]
+        # @return [Array<GoogleAPI::Apis::ManagerV1beta2::ParamOverride>]
         attr_accessor :overrides
       
         # [Output Only] The current state of a replica or module.
         # Corresponds to the JSON property `state`
-        # @return [Google::Apis::ManagerV1beta2::DeployState]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::DeployState]
         attr_accessor :state
       
         # The name of the Template on which this deployment is based.
@@ -272,7 +272,7 @@ module Google
       
       # 
       class ListDeploymentsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `nextPageToken`
@@ -281,7 +281,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `resources`
-        # @return [Array<Google::Apis::ManagerV1beta2::Deployment>]
+        # @return [Array<GoogleAPI::Apis::ManagerV1beta2::Deployment>]
         attr_accessor :resources
       
         def initialize(**args)
@@ -297,7 +297,7 @@ module Google
       
       # How to attach a disk to a Replica.
       class DiskAttachment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The device name of this disk.
         # Corresponds to the JSON property `deviceName`
@@ -323,7 +323,7 @@ module Google
       
       # An environment variable.
       class EnvVariable
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether this variable is hidden or visible.
         # Corresponds to the JSON property `hidden`
@@ -350,11 +350,11 @@ module Google
       # A pre-existing persistent disk that will be attached to every Replica in the
       # Pool.
       class ExistingDisk
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # How to attach a disk to a Replica.
         # Corresponds to the JSON property `attachment`
-        # @return [Google::Apis::ManagerV1beta2::DiskAttachment]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::DiskAttachment]
         attr_accessor :attachment
       
         # The fully-qualified URL of the Persistent Disk resource. It must be in the
@@ -376,11 +376,11 @@ module Google
       
       # A Firewall resource
       class FirewallModule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The allowed ports or port ranges.
         # Corresponds to the JSON property `allowed`
-        # @return [Array<Google::Apis::ManagerV1beta2::AllowedRule>]
+        # @return [Array<GoogleAPI::Apis::ManagerV1beta2::AllowedRule>]
         attr_accessor :allowed
       
         # The description of the firewall (optional)
@@ -427,7 +427,7 @@ module Google
       
       # 
       class FirewallModuleStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The URL of the corresponding Firewall resource.
         # Corresponds to the JSON property `firewallUrl`
@@ -446,7 +446,7 @@ module Google
       
       # 
       class HealthCheckModule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `checkIntervalSec`
@@ -507,7 +507,7 @@ module Google
       
       # 
       class HealthCheckModuleStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The HealthCheck URL.
         # Corresponds to the JSON property `healthCheckUrl`
@@ -526,7 +526,7 @@ module Google
       
       # 
       class LbModule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `description`
@@ -581,7 +581,7 @@ module Google
       
       # 
       class LbModuleStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The URL of the corresponding ForwardingRule in GCE.
         # Corresponds to the JSON property `forwardingRuleUrl`
@@ -607,7 +607,7 @@ module Google
       # A Compute Engine metadata entry. Identical to the metadata on the
       # corresponding Compute Engine resource.
       class Metadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The fingerprint of the metadata.
         # Corresponds to the JSON property `fingerPrint`
@@ -616,7 +616,7 @@ module Google
       
         # A list of metadata items.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ManagerV1beta2::MetadataItem>]
+        # @return [Array<GoogleAPI::Apis::ManagerV1beta2::MetadataItem>]
         attr_accessor :items
       
         def initialize(**args)
@@ -633,7 +633,7 @@ module Google
       # A Compute Engine metadata item, defined as a key:value pair. Identical to the
       # metadata on the corresponding Compute Engine resource.
       class MetadataItem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A metadata key.
         # Corresponds to the JSON property `key`
@@ -659,36 +659,36 @@ module Google
       # A module in a configuration. A module represents a single homogeneous,
       # possibly replicated task.
       class Module
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `autoscalingModule`
-        # @return [Google::Apis::ManagerV1beta2::AutoscalingModule]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::AutoscalingModule]
         attr_accessor :autoscaling_module
       
         # A Firewall resource
         # Corresponds to the JSON property `firewallModule`
-        # @return [Google::Apis::ManagerV1beta2::FirewallModule]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::FirewallModule]
         attr_accessor :firewall_module
       
         # 
         # Corresponds to the JSON property `healthCheckModule`
-        # @return [Google::Apis::ManagerV1beta2::HealthCheckModule]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::HealthCheckModule]
         attr_accessor :health_check_module
       
         # 
         # Corresponds to the JSON property `lbModule`
-        # @return [Google::Apis::ManagerV1beta2::LbModule]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::LbModule]
         attr_accessor :lb_module
       
         # 
         # Corresponds to the JSON property `networkModule`
-        # @return [Google::Apis::ManagerV1beta2::NetworkModule]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::NetworkModule]
         attr_accessor :network_module
       
         # 
         # Corresponds to the JSON property `replicaPoolModule`
-        # @return [Google::Apis::ManagerV1beta2::ReplicaPoolModule]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::ReplicaPoolModule]
         attr_accessor :replica_pool_module
       
         # The type of this module. Valid values ("AUTOSCALING", "FIREWALL", "
@@ -715,41 +715,41 @@ module Google
       
       # [Output Only] Aggregate status for a module.
       class ModuleStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The status of the AutoscalingModule, set for type AUTOSCALING.
         # Corresponds to the JSON property `autoscalingModuleStatus`
-        # @return [Google::Apis::ManagerV1beta2::AutoscalingModuleStatus]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::AutoscalingModuleStatus]
         attr_accessor :autoscaling_module_status
       
         # [Output Only] The status of the FirewallModule, set for type FIREWALL.
         # Corresponds to the JSON property `firewallModuleStatus`
-        # @return [Google::Apis::ManagerV1beta2::FirewallModuleStatus]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::FirewallModuleStatus]
         attr_accessor :firewall_module_status
       
         # [Output Only] The status of the HealthCheckModule, set for type HEALTH_CHECK.
         # Corresponds to the JSON property `healthCheckModuleStatus`
-        # @return [Google::Apis::ManagerV1beta2::HealthCheckModuleStatus]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::HealthCheckModuleStatus]
         attr_accessor :health_check_module_status
       
         # [Output Only] The status of the LbModule, set for type LOAD_BALANCING.
         # Corresponds to the JSON property `lbModuleStatus`
-        # @return [Google::Apis::ManagerV1beta2::LbModuleStatus]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::LbModuleStatus]
         attr_accessor :lb_module_status
       
         # [Output Only] The status of the NetworkModule, set for type NETWORK.
         # Corresponds to the JSON property `networkModuleStatus`
-        # @return [Google::Apis::ManagerV1beta2::NetworkModuleStatus]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::NetworkModuleStatus]
         attr_accessor :network_module_status
       
         # [Output Only] The status of the ReplicaPoolModule, set for type VM.
         # Corresponds to the JSON property `replicaPoolModuleStatus`
-        # @return [Google::Apis::ManagerV1beta2::ReplicaPoolModuleStatus]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::ReplicaPoolModuleStatus]
         attr_accessor :replica_pool_module_status
       
         # [Output Only] The current state of a replica or module.
         # Corresponds to the JSON property `state`
-        # @return [Google::Apis::ManagerV1beta2::DeployState]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::DeployState]
         attr_accessor :state
       
         # [Output Only] The type of the module.
@@ -777,12 +777,12 @@ module Google
       # A Compute Engine NetworkInterface resource. Identical to the NetworkInterface
       # on the corresponding Compute Engine resource.
       class NetworkInterface
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An array of configurations for this interface. This specifies how this
         # interface is configured to interact with other network services
         # Corresponds to the JSON property `accessConfigs`
-        # @return [Array<Google::Apis::ManagerV1beta2::AccessConfig>]
+        # @return [Array<GoogleAPI::Apis::ManagerV1beta2::AccessConfig>]
         attr_accessor :access_configs
       
         # Name of the interface.
@@ -817,7 +817,7 @@ module Google
       
       # 
       class NetworkModule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Required; The range of internal addresses that are legal on this network. This
         # range is a CIDR specification, for example: 192.168.0.0/16.
@@ -852,7 +852,7 @@ module Google
       
       # 
       class NetworkModuleStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The URL of the corresponding Network resource.
         # Corresponds to the JSON property `networkUrl`
@@ -873,11 +873,11 @@ module Google
       # in the Pool. Each Replica will have a unique persistent disk that is created
       # and attached to that Replica.
       class NewDisk
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # How to attach a disk to a Replica.
         # Corresponds to the JSON property `attachment`
-        # @return [Google::Apis::ManagerV1beta2::DiskAttachment]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::DiskAttachment]
         attr_accessor :attachment
       
         # If true, then this disk will be deleted when the instance is deleted.
@@ -894,7 +894,7 @@ module Google
       
         # Initialization parameters for creating a new disk.
         # Corresponds to the JSON property `initializeParams`
-        # @return [Google::Apis::ManagerV1beta2::NewDiskInitializeParams]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::NewDiskInitializeParams]
         attr_accessor :initialize_params
       
         def initialize(**args)
@@ -912,7 +912,7 @@ module Google
       
       # Initialization parameters for creating a new disk.
       class NewDiskInitializeParams
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The size of the created disk in gigabytes.
         # Corresponds to the JSON property `diskSizeGb`
@@ -945,7 +945,7 @@ module Google
       # A specification for overriding parameters in a Template that corresponds to
       # the Deployment.
       class ParamOverride
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A JSON Path expression that specifies which parameter should be overridden.
         # Corresponds to the JSON property `path`
@@ -970,11 +970,11 @@ module Google
       
       # 
       class ReplicaPoolModule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of environment variables.
         # Corresponds to the JSON property `envVariables`
-        # @return [Hash<String,Google::Apis::ManagerV1beta2::EnvVariable>]
+        # @return [Hash<String,GoogleAPI::Apis::ManagerV1beta2::EnvVariable>]
         attr_accessor :env_variables
       
         # The Health Checks to configure for the ReplicaPoolModule
@@ -991,7 +991,7 @@ module Google
         # within will determine the ReplicaPools API version used for a
         # ReplicaPoolModule. Only one may be specified.
         # Corresponds to the JSON property `replicaPoolParams`
-        # @return [Google::Apis::ManagerV1beta2::ReplicaPoolParams]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::ReplicaPoolParams]
         attr_accessor :replica_pool_params
       
         # [Output Only] The name of the Resource View associated with a
@@ -1016,7 +1016,7 @@ module Google
       
       # 
       class ReplicaPoolModuleStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The URL of the associated ReplicaPool resource.
         # Corresponds to the JSON property `replicaPoolUrl`
@@ -1043,12 +1043,12 @@ module Google
       # within will determine the ReplicaPools API version used for a
       # ReplicaPoolModule. Only one may be specified.
       class ReplicaPoolParams
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Configuration information for a ReplicaPools v1beta1 API resource. Directly
         # maps to ReplicaPool InitTemplate.
         # Corresponds to the JSON property `v1beta1`
-        # @return [Google::Apis::ManagerV1beta2::ReplicaPoolParamsV1Beta1]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::ReplicaPoolParamsV1Beta1]
         attr_accessor :v1beta1
       
         def initialize(**args)
@@ -1064,7 +1064,7 @@ module Google
       # Configuration information for a ReplicaPools v1beta1 API resource. Directly
       # maps to ReplicaPool InitTemplate.
       class ReplicaPoolParamsV1Beta1
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether these replicas should be restarted if they experience a failure. The
         # default value is true.
@@ -1092,14 +1092,14 @@ module Google
         # A list of existing Persistent Disk resources to attach to each replica in the
         # pool. Each disk will be attached in read-only mode to every replica.
         # Corresponds to the JSON property `disksToAttach`
-        # @return [Array<Google::Apis::ManagerV1beta2::ExistingDisk>]
+        # @return [Array<GoogleAPI::Apis::ManagerV1beta2::ExistingDisk>]
         attr_accessor :disks_to_attach
       
         # A list of Disk resources to create and attach to each Replica in the Pool.
         # Currently, you can only define one disk and it must be a root persistent disk.
         # Note that Replica Pool will create a root persistent disk for each replica.
         # Corresponds to the JSON property `disksToCreate`
-        # @return [Array<Google::Apis::ManagerV1beta2::NewDisk>]
+        # @return [Array<GoogleAPI::Apis::ManagerV1beta2::NewDisk>]
         attr_accessor :disks_to_create
       
         # Name of the Action to be run during initialization of a ReplicaPoolModule.
@@ -1116,13 +1116,13 @@ module Google
         # A Compute Engine metadata entry. Identical to the metadata on the
         # corresponding Compute Engine resource.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::ManagerV1beta2::Metadata]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::Metadata]
         attr_accessor :metadata
       
         # A list of network interfaces for the instance. Currently only one interface is
         # supported by Google Compute Engine.
         # Corresponds to the JSON property `networkInterfaces`
-        # @return [Array<Google::Apis::ManagerV1beta2::NetworkInterface>]
+        # @return [Array<GoogleAPI::Apis::ManagerV1beta2::NetworkInterface>]
         attr_accessor :network_interfaces
       
         # 
@@ -1132,13 +1132,13 @@ module Google
       
         # A list of Service Accounts to enable for this instance.
         # Corresponds to the JSON property `serviceAccounts`
-        # @return [Array<Google::Apis::ManagerV1beta2::ServiceAccount>]
+        # @return [Array<GoogleAPI::Apis::ManagerV1beta2::ServiceAccount>]
         attr_accessor :service_accounts
       
         # A Compute Engine Instance tag, identical to the tags on the corresponding
         # Compute Engine Instance resource.
         # Corresponds to the JSON property `tags`
-        # @return [Google::Apis::ManagerV1beta2::Tag]
+        # @return [GoogleAPI::Apis::ManagerV1beta2::Tag]
         attr_accessor :tags
       
         # The zone for this ReplicaPool.
@@ -1171,7 +1171,7 @@ module Google
       
       # A Compute Engine service account, identical to the Compute Engine resource.
       class ServiceAccount
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Service account email address.
         # Corresponds to the JSON property `email`
@@ -1197,7 +1197,7 @@ module Google
       # A Compute Engine Instance tag, identical to the tags on the corresponding
       # Compute Engine Instance resource.
       class Tag
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The fingerprint of the tag.
         # Corresponds to the JSON property `fingerPrint`
@@ -1222,11 +1222,11 @@ module Google
       
       # A Template represents a complete configuration for a Deployment.
       class Template
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Action definitions for use in Module intents in this Template.
         # Corresponds to the JSON property `actions`
-        # @return [Hash<String,Google::Apis::ManagerV1beta2::Action>]
+        # @return [Hash<String,GoogleAPI::Apis::ManagerV1beta2::Action>]
         attr_accessor :actions
       
         # A user-supplied description of this Template.
@@ -1236,7 +1236,7 @@ module Google
       
         # A list of modules for this Template.
         # Corresponds to the JSON property `modules`
-        # @return [Hash<String,Google::Apis::ManagerV1beta2::Module>]
+        # @return [Hash<String,GoogleAPI::Apis::ManagerV1beta2::Module>]
         attr_accessor :modules
       
         # Name of this Template. The name must conform to the expression: [a-zA-Z0-9-_]`
@@ -1260,7 +1260,7 @@ module Google
       
       # 
       class ListTemplatesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `nextPageToken`
@@ -1269,7 +1269,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `resources`
-        # @return [Array<Google::Apis::ManagerV1beta2::Template>]
+        # @return [Array<GoogleAPI::Apis::ManagerV1beta2::Template>]
         attr_accessor :resources
       
         def initialize(**args)

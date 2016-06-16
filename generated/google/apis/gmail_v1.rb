@@ -16,7 +16,7 @@ require 'google/apis/gmail_v1/service.rb'
 require 'google/apis/gmail_v1/classes.rb'
 require 'google/apis/gmail_v1/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Gmail API
     #

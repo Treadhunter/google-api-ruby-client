@@ -25,7 +25,7 @@ require 'googleauth'
 require 'hurley'
 require 'hurley/addressable'
 
-module Google
+module GoogleAPI
   module Apis
     module Core
       # Helper class for enumerating over a result set requiring multiple fetches
@@ -99,11 +99,11 @@ module Google
         attr_accessor :client
 
         # General settings
-        # @return [Google::Apis::ClientOptions]
+        # @return [GoogleAPI::Apis::ClientOptions]
         attr_accessor :client_options
 
         # Default options for all requests
-        # @return [Google::Apis::RequestOptions]
+        # @return [GoogleAPI::Apis::RequestOptions]
         attr_accessor :request_options
 
         # @param [String,Addressable::URI] root_url
@@ -116,8 +116,8 @@ module Google
           self.base_path = base_path
           self.upload_path = "upload/#{base_path}"
           self.batch_path = 'batch'
-          self.client_options = Google::Apis::ClientOptions.default.dup
-          self.request_options = Google::Apis::RequestOptions.default.dup
+          self.client_options = GoogleAPI::Apis::ClientOptions.default.dup
+          self.request_options = GoogleAPI::Apis::RequestOptions.default.dup
         end
 
         # @!attribute [rw] authorization
@@ -147,7 +147,7 @@ module Google
         #     end
         #   end
         #
-        # @param [Hash, Google::Apis::RequestOptions] options
+        # @param [Hash, GoogleAPI::Apis::RequestOptions] options
         #  Request-specific options
         # @yield [self]
         # @return [void]
@@ -179,7 +179,7 @@ module Google
         #     end
         #   end
         #
-        # @param [Hash, Google::Apis::RequestOptions] options
+        # @param [Hash, GoogleAPI::Apis::RequestOptions] options
         #  Request-specific options
         # @yield [self]
         # @return [void]
@@ -218,7 +218,7 @@ module Google
         #   Optional body for POST/PUT
         # @param [IO, String] download_dest
         #   IO stream or filename to receive content download
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -277,9 +277,9 @@ module Google
         #   HTTP method for uploading (typically :put or :post)
         # @param [String] path
         #  Additional path to upload endpoint, appended to API base path
-        # @param [Hash, Google::Apis::RequestOptions] options
+        # @param [Hash, GoogleAPI::Apis::RequestOptions] options
         #  Request-specific options
-        # @return [Google::Apis::Core::UploadCommand]
+        # @return [GoogleAPI::Apis::Core::UploadCommand]
         def make_upload_command(method, path, options)
           template = Addressable::Template.new(root_url + upload_path + path)
           if batch?
@@ -298,9 +298,9 @@ module Google
         #   HTTP method for uploading (typically :get)
         # @param [String] path
         #  Additional path to download endpoint, appended to API base path
-        # @param [Hash, Google::Apis::RequestOptions] options
+        # @param [Hash, GoogleAPI::Apis::RequestOptions] options
         #  Request-specific options
-        # @return [Google::Apis::Core::DownloadCommand]
+        # @return [GoogleAPI::Apis::Core::DownloadCommand]
         def make_download_command(method, path, options)
           template = Addressable::Template.new(root_url + base_path + path)
           command = DownloadCommand.new(method, template)
@@ -316,9 +316,9 @@ module Google
         #   HTTP method (:get, :post, :delete, etc...)
         # @param [String] path
         #  Additional path, appended to API base path
-        # @param [Hash, Google::Apis::RequestOptions] options
+        # @param [Hash, GoogleAPI::Apis::RequestOptions] options
         #  Request-specific options
-        # @return [Google::Apis::Core::DownloadCommand]
+        # @return [GoogleAPI::Apis::Core::DownloadCommand]
         def make_simple_command(method, path, options)
           template = Addressable::Template.new(root_url + base_path + path)
           command = ApiCommand.new(method, template)
@@ -329,13 +329,13 @@ module Google
 
         # Execute the request. If a batch is in progress, the request is added to the batch instead.
         #
-        # @param [Google::Apis::Core::HttpCommand] command
+        # @param [GoogleAPI::Apis::Core::HttpCommand] command
         #   Command to execute
         # @return [Object] response object if command executed and no callback supplied
         # @yield [result, err] Result & error if block supplied
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def execute_or_queue_command(command, &callback)
           batch_command = current_batch
           if batch_command
@@ -347,7 +347,7 @@ module Google
         end
 
         # Update commands with service-specific options. To be implemented by subclasses
-        # @param [Google::Apis::Core::HttpCommand] _command
+        # @param [GoogleAPI::Apis::Core::HttpCommand] _command
         def apply_command_defaults(_command)
         end
 
@@ -370,12 +370,12 @@ module Google
         # @return [Hurley::Client]
         def new_client
           client = Hurley::Client.new
-          client.connection = Google::Apis::Core::HttpClientAdapter.new unless client_options.use_net_http
+          client.connection = GoogleAPI::Apis::Core::HttpClientAdapter.new unless client_options.use_net_http
           client.request_options.timeout = request_options.timeout_sec
           client.request_options.open_timeout = request_options.open_timeout_sec
           client.request_options.proxy = client_options.proxy_url
           client.request_options.query_class = Hurley::Query::Flat
-          client.ssl_options.ca_file = File.join(Google::Apis::ROOT, 'lib', 'cacerts.pem')
+          client.ssl_options.ca_file = File.join(GoogleAPI::Apis::ROOT, 'lib', 'cacerts.pem')
           client.header[:user_agent] = user_agent
           client
         end
@@ -386,8 +386,8 @@ module Google
           sprintf('%s/%s google-api-ruby-client/%s %s (gzip)',
                   client_options.application_name,
                   client_options.application_version,
-                  Google::Apis::VERSION,
-                  Google::Apis::OS_VERSION)
+                  GoogleAPI::Apis::VERSION,
+                  GoogleAPI::Apis::OS_VERSION)
         end
       end
     end

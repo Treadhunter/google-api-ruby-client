@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module DoubleclickbidmanagerV1
       
       # Request to fetch stored line items.
       class DownloadLineItemsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # File specification (column names, types, order) in which the line items will
         # be returned. Default to EWF.
@@ -63,7 +63,7 @@ module Google
       
       # Download line items response.
       class DownloadLineItemsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Retrieved line items in CSV format. Refer to  Entity Write File Format or
         # Structured Data File Format for more information on file formats.
@@ -83,7 +83,7 @@ module Google
       
       # Filter used to match traffic data in your report.
       class FilterPair
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Filter type.
         # Corresponds to the JSON property `type`
@@ -108,7 +108,7 @@ module Google
       
       # List queries response.
       class ListQueriesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # doubleclickbidmanager#listQueriesResponse".
@@ -118,7 +118,7 @@ module Google
       
         # Retrieved queries.
         # Corresponds to the JSON property `queries`
-        # @return [Array<Google::Apis::DoubleclickbidmanagerV1::Query>]
+        # @return [Array<GoogleAPI::Apis::DoubleclickbidmanagerV1::Query>]
         attr_accessor :queries
       
         def initialize(**args)
@@ -134,7 +134,7 @@ module Google
       
       # List reports response.
       class ListReportsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # doubleclickbidmanager#listReportsResponse".
@@ -144,7 +144,7 @@ module Google
       
         # Retrieved reports.
         # Corresponds to the JSON property `reports`
-        # @return [Array<Google::Apis::DoubleclickbidmanagerV1::Report>]
+        # @return [Array<GoogleAPI::Apis::DoubleclickbidmanagerV1::Report>]
         attr_accessor :reports
       
         def initialize(**args)
@@ -160,7 +160,7 @@ module Google
       
       # Publisher comment from Rubicon.
       class Note
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Note id.
         # Corresponds to the JSON property `id`
@@ -203,7 +203,7 @@ module Google
       
       # NotifyProposalChange request.
       class NotifyProposalChangeRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Action taken by publisher. One of: Accept, Decline, Append
         # Corresponds to the JSON property `action`
@@ -222,7 +222,7 @@ module Google
       
         # Notes from publisher
         # Corresponds to the JSON property `notes`
-        # @return [Array<Google::Apis::DoubleclickbidmanagerV1::Note>]
+        # @return [Array<GoogleAPI::Apis::DoubleclickbidmanagerV1::Note>]
         attr_accessor :notes
       
         # Deal token, available when proposal is accepted by publisher.
@@ -246,11 +246,11 @@ module Google
       
       # Parameters of a query or report.
       class Parameters
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Filters used to match traffic data in your report.
         # Corresponds to the JSON property `filters`
-        # @return [Array<Google::Apis::DoubleclickbidmanagerV1::FilterPair>]
+        # @return [Array<GoogleAPI::Apis::DoubleclickbidmanagerV1::FilterPair>]
         attr_accessor :filters
       
         # Data is grouped by the filters listed in this field.
@@ -290,7 +290,7 @@ module Google
       
       # Represents a query.
       class Query
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # doubleclickbidmanager#query".
@@ -300,12 +300,12 @@ module Google
       
         # Query metadata.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::DoubleclickbidmanagerV1::QueryMetadata]
+        # @return [GoogleAPI::Apis::DoubleclickbidmanagerV1::QueryMetadata]
         attr_accessor :metadata
       
         # Parameters of a query or report.
         # Corresponds to the JSON property `params`
-        # @return [Google::Apis::DoubleclickbidmanagerV1::Parameters]
+        # @return [GoogleAPI::Apis::DoubleclickbidmanagerV1::Parameters]
         attr_accessor :params
       
         # Query ID.
@@ -329,7 +329,7 @@ module Google
       
         # Information on how frequently and when to run a query.
         # Corresponds to the JSON property `schedule`
-        # @return [Google::Apis::DoubleclickbidmanagerV1::QuerySchedule]
+        # @return [GoogleAPI::Apis::DoubleclickbidmanagerV1::QuerySchedule]
         attr_accessor :schedule
       
         # Canonical timezone code for report data time. Defaults to America/New_York.
@@ -356,7 +356,7 @@ module Google
       
       # Query metadata.
       class QueryMetadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Range of report data.
         # Corresponds to the JSON property `dataRange`
@@ -443,7 +443,7 @@ module Google
       
       # Information on how frequently and when to run a query.
       class QuerySchedule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Datetime to periodically run the query until.
         # Corresponds to the JSON property `endTimeMs`
@@ -482,21 +482,21 @@ module Google
       
       # Represents a report.
       class Report
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Key used to identify a report.
         # Corresponds to the JSON property `key`
-        # @return [Google::Apis::DoubleclickbidmanagerV1::ReportKey]
+        # @return [GoogleAPI::Apis::DoubleclickbidmanagerV1::ReportKey]
         attr_accessor :key
       
         # Report metadata.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::DoubleclickbidmanagerV1::ReportMetadata]
+        # @return [GoogleAPI::Apis::DoubleclickbidmanagerV1::ReportMetadata]
         attr_accessor :metadata
       
         # Parameters of a query or report.
         # Corresponds to the JSON property `params`
-        # @return [Google::Apis::DoubleclickbidmanagerV1::Parameters]
+        # @return [GoogleAPI::Apis::DoubleclickbidmanagerV1::Parameters]
         attr_accessor :params
       
         def initialize(**args)
@@ -513,7 +513,7 @@ module Google
       
       # An explanation of a report failure.
       class ReportFailure
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Error code that shows why the report was not created.
         # Corresponds to the JSON property `errorCode`
@@ -532,7 +532,7 @@ module Google
       
       # Key used to identify a report.
       class ReportKey
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Query ID.
         # Corresponds to the JSON property `queryId`
@@ -557,7 +557,7 @@ module Google
       
       # Report metadata.
       class ReportMetadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The path to the location in Google Cloud Storage where the report is stored.
         # Corresponds to the JSON property `googleCloudStoragePath`
@@ -576,7 +576,7 @@ module Google
       
         # Report status.
         # Corresponds to the JSON property `status`
-        # @return [Google::Apis::DoubleclickbidmanagerV1::ReportStatus]
+        # @return [GoogleAPI::Apis::DoubleclickbidmanagerV1::ReportStatus]
         attr_accessor :status
       
         def initialize(**args)
@@ -594,11 +594,11 @@ module Google
       
       # Report status.
       class ReportStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An explanation of a report failure.
         # Corresponds to the JSON property `failure`
-        # @return [Google::Apis::DoubleclickbidmanagerV1::ReportFailure]
+        # @return [GoogleAPI::Apis::DoubleclickbidmanagerV1::ReportFailure]
         attr_accessor :failure
       
         # The time when this report either completed successfully or failed.
@@ -631,7 +631,7 @@ module Google
       
       # Represents the upload status of a row in the request.
       class RowStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether the stored entity is changed as a result of upload.
         # Corresponds to the JSON property `changed`
@@ -682,7 +682,7 @@ module Google
       
       # Request to run a stored query to generate a report.
       class RunQueryRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Report data range used to generate the report.
         # Corresponds to the JSON property `dataRange`
@@ -723,7 +723,7 @@ module Google
       
       # Request to upload line items.
       class UploadLineItemsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Set to true to get upload status without actually persisting the line items.
         # Corresponds to the JSON property `dryRun`
@@ -756,11 +756,11 @@ module Google
       
       # Upload line items response.
       class UploadLineItemsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Represents the status of upload.
         # Corresponds to the JSON property `uploadStatus`
-        # @return [Google::Apis::DoubleclickbidmanagerV1::UploadStatus]
+        # @return [GoogleAPI::Apis::DoubleclickbidmanagerV1::UploadStatus]
         attr_accessor :upload_status
       
         def initialize(**args)
@@ -775,7 +775,7 @@ module Google
       
       # Represents the status of upload.
       class UploadStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Reasons why upload can't be completed.
         # Corresponds to the JSON property `errors`
@@ -784,7 +784,7 @@ module Google
       
         # Per-row upload status.
         # Corresponds to the JSON property `rowStatus`
-        # @return [Array<Google::Apis::DoubleclickbidmanagerV1::RowStatus>]
+        # @return [Array<GoogleAPI::Apis::DoubleclickbidmanagerV1::RowStatus>]
         attr_accessor :row_status
       
         def initialize(**args)

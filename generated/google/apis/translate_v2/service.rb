@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module TranslateV2
       # Translate API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/translate_v2'
       #
-      #    Translate = Google::Apis::TranslateV2 # Alias the module
+      #    Translate = GoogleAPI::Apis::TranslateV2 # Alias the module
       #    service = Translate::TranslateService.new
       #
       # @see https://developers.google.com/translate/v2/using_rest
-      class TranslateService < Google::Apis::Core::BaseService
+      class TranslateService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -64,22 +64,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TranslateV2::ListDetectionsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TranslateV2::ListDetectionsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TranslateV2::ListDetectionsResponse]
+        # @return [GoogleAPI::Apis::TranslateV2::ListDetectionsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_detections(q, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v2/detect', options)
-          command.response_representation = Google::Apis::TranslateV2::ListDetectionsResponse::Representation
-          command.response_class = Google::Apis::TranslateV2::ListDetectionsResponse
+          command.response_representation = GoogleAPI::Apis::TranslateV2::ListDetectionsResponse::Representation
+          command.response_class = GoogleAPI::Apis::TranslateV2::ListDetectionsResponse
           command.query['q'] = q unless q.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -99,22 +99,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TranslateV2::ListLanguagesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TranslateV2::ListLanguagesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TranslateV2::ListLanguagesResponse]
+        # @return [GoogleAPI::Apis::TranslateV2::ListLanguagesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_languages(target: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v2/languages', options)
-          command.response_representation = Google::Apis::TranslateV2::ListLanguagesResponse::Representation
-          command.response_class = Google::Apis::TranslateV2::ListLanguagesResponse
+          command.response_representation = GoogleAPI::Apis::TranslateV2::ListLanguagesResponse::Representation
+          command.response_class = GoogleAPI::Apis::TranslateV2::ListLanguagesResponse
           command.query['target'] = target unless target.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -142,22 +142,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TranslateV2::ListTranslationsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TranslateV2::ListTranslationsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TranslateV2::ListTranslationsResponse]
+        # @return [GoogleAPI::Apis::TranslateV2::ListTranslationsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_translations(q, target, cid: nil, format: nil, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v2', options)
-          command.response_representation = Google::Apis::TranslateV2::ListTranslationsResponse::Representation
-          command.response_class = Google::Apis::TranslateV2::ListTranslationsResponse
+          command.response_representation = GoogleAPI::Apis::TranslateV2::ListTranslationsResponse::Representation
+          command.response_class = GoogleAPI::Apis::TranslateV2::ListTranslationsResponse
           command.query['cid'] = cid unless cid.nil?
           command.query['format'] = format unless format.nil?
           command.query['q'] = q unless q.nil?

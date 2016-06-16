@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AdminDatatransferV1
       
       # The JSON template for an Application resource.
       class Application
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of the resource.
         # Corresponds to the JSON property `etag`
@@ -50,7 +50,7 @@ module Google
         # parameters can be used to select the data of the user in this application to
         # be transfered.
         # Corresponds to the JSON property `transferParams`
-        # @return [Array<Google::Apis::AdminDatatransferV1::ApplicationTransferParam>]
+        # @return [Array<GoogleAPI::Apis::AdminDatatransferV1::ApplicationTransferParam>]
         attr_accessor :transfer_params
       
         def initialize(**args)
@@ -69,7 +69,7 @@ module Google
       
       # Template to map fields of ApplicationDataTransfer resource.
       class ApplicationDataTransfer
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The application's ID.
         # Corresponds to the JSON property `applicationId`
@@ -79,7 +79,7 @@ module Google
         # The transfer parameters for the application. These parameters are used to
         # select the data which will get transfered in context of this application.
         # Corresponds to the JSON property `applicationTransferParams`
-        # @return [Array<Google::Apis::AdminDatatransferV1::ApplicationTransferParam>]
+        # @return [Array<GoogleAPI::Apis::AdminDatatransferV1::ApplicationTransferParam>]
         attr_accessor :application_transfer_params
       
         # Current status of transfer for this application. (Read-only)
@@ -101,7 +101,7 @@ module Google
       
       # Template for application transfer parameters.
       class ApplicationTransferParam
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of the transfer parameter. eg: 'PRIVACY_LEVEL'
         # Corresponds to the JSON property `key`
@@ -126,12 +126,12 @@ module Google
       
       # Template for a collection of Applications.
       class ApplicationsListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of applications that support data transfer and are also installed for the
         # customer.
         # Corresponds to the JSON property `applications`
-        # @return [Array<Google::Apis::AdminDatatransferV1::Application>]
+        # @return [Array<GoogleAPI::Apis::AdminDatatransferV1::Application>]
         attr_accessor :applications
       
         # ETag of the resource.
@@ -164,14 +164,14 @@ module Google
       
       # The JSON template for a DataTransfer resource.
       class DataTransfer
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of per application data transfer resources. It contains data transfer
         # details of the applications associated with this transfer resource. Note that
         # this list is also used to specify the applications for which data transfer has
         # to be done at the time of the transfer resource creation.
         # Corresponds to the JSON property `applicationDataTransfers`
-        # @return [Array<Google::Apis::AdminDatatransferV1::ApplicationDataTransfer>]
+        # @return [Array<GoogleAPI::Apis::AdminDatatransferV1::ApplicationDataTransfer>]
         attr_accessor :application_data_transfers
       
         # ETag of the resource.
@@ -228,11 +228,11 @@ module Google
       
       # Template for a collection of DataTransfer resources.
       class DataTransfersListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of data transfer requests.
         # Corresponds to the JSON property `dataTransfers`
-        # @return [Array<Google::Apis::AdminDatatransferV1::DataTransfer>]
+        # @return [Array<GoogleAPI::Apis::AdminDatatransferV1::DataTransfer>]
         attr_accessor :data_transfers
       
         # ETag of the resource.

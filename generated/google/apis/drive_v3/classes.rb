@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module DriveV3
       
       # Information about the user, the user's Drive, and system capabilities.
       class About
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether the user has installed the requesting app.
         # Corresponds to the JSON property `appInstalled`
@@ -64,12 +64,12 @@ module Google
       
         # The user's storage quota limits and usage. All fields are measured in bytes.
         # Corresponds to the JSON property `storageQuota`
-        # @return [Google::Apis::DriveV3::About::StorageQuota]
+        # @return [GoogleAPI::Apis::DriveV3::About::StorageQuota]
         attr_accessor :storage_quota
       
         # Information about a Drive user.
         # Corresponds to the JSON property `user`
-        # @return [Google::Apis::DriveV3::User]
+        # @return [GoogleAPI::Apis::DriveV3::User]
         attr_accessor :user
       
         def initialize(**args)
@@ -91,7 +91,7 @@ module Google
         
         # The user's storage quota limits and usage. All fields are measured in bytes.
         class StorageQuota
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The usage limit, if applicable. This will not be present if the user has
           # unlimited storage.
@@ -130,11 +130,11 @@ module Google
       
       # A change to a file.
       class Change
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The metadata for a file.
         # Corresponds to the JSON property `file`
-        # @return [Google::Apis::DriveV3::File]
+        # @return [GoogleAPI::Apis::DriveV3::File]
         attr_accessor :file
       
         # The ID of the file which has changed.
@@ -175,11 +175,11 @@ module Google
       
       # A list of changes for a user.
       class ChangeList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The page of changes.
         # Corresponds to the JSON property `changes`
-        # @return [Array<Google::Apis::DriveV3::Change>]
+        # @return [Array<GoogleAPI::Apis::DriveV3::Change>]
         attr_accessor :changes
       
         # This is always drive#changeList.
@@ -214,7 +214,7 @@ module Google
       
       # An notification channel used to watch for resource changes.
       class Channel
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The address where notifications are delivered for this channel.
         # Corresponds to the JSON property `address`
@@ -292,7 +292,7 @@ module Google
       
       # A comment on a file.
       class Comment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A region of the document represented as a JSON string. See anchor
         # documentation for details on how to define and interpret anchor properties.
@@ -302,7 +302,7 @@ module Google
       
         # Information about a Drive user.
         # Corresponds to the JSON property `author`
-        # @return [Google::Apis::DriveV3::User]
+        # @return [GoogleAPI::Apis::DriveV3::User]
         attr_accessor :author
       
         # The plain text content of the comment. This field is used for setting the
@@ -347,12 +347,12 @@ module Google
         # region. For a text file, for example, this would be the text at the location
         # of the comment.
         # Corresponds to the JSON property `quotedFileContent`
-        # @return [Google::Apis::DriveV3::Comment::QuotedFileContent]
+        # @return [GoogleAPI::Apis::DriveV3::Comment::QuotedFileContent]
         attr_accessor :quoted_file_content
       
         # The full list of replies to the comment in chronological order.
         # Corresponds to the JSON property `replies`
-        # @return [Array<Google::Apis::DriveV3::Reply>]
+        # @return [Array<GoogleAPI::Apis::DriveV3::Reply>]
         attr_accessor :replies
       
         # Whether the comment has been resolved by one of its replies.
@@ -385,7 +385,7 @@ module Google
         # region. For a text file, for example, this would be the text at the location
         # of the comment.
         class QuotedFileContent
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The MIME type of the quoted content.
           # Corresponds to the JSON property `mimeType`
@@ -412,11 +412,11 @@ module Google
       
       # A list of comments on a file.
       class CommentList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The page of comments.
         # Corresponds to the JSON property `comments`
-        # @return [Array<Google::Apis::DriveV3::Comment>]
+        # @return [Array<GoogleAPI::Apis::DriveV3::Comment>]
         attr_accessor :comments
       
         # This is always drive#commentList.
@@ -444,7 +444,7 @@ module Google
       
       # The metadata for a file.
       class File
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A collection of arbitrary key-value pairs which are private to the requesting
         # app.
@@ -455,13 +455,13 @@ module Google
       
         # Capabilities the current user has on the file.
         # Corresponds to the JSON property `capabilities`
-        # @return [Google::Apis::DriveV3::File::Capabilities]
+        # @return [GoogleAPI::Apis::DriveV3::File::Capabilities]
         attr_accessor :capabilities
       
         # Additional information about the content of the file. These fields are never
         # populated in responses.
         # Corresponds to the JSON property `contentHints`
-        # @return [Google::Apis::DriveV3::File::ContentHints]
+        # @return [GoogleAPI::Apis::DriveV3::File::ContentHints]
         attr_accessor :content_hints
       
         # The time at which the file was created (RFC 3339 date-time).
@@ -522,7 +522,7 @@ module Google
       
         # Additional metadata about image media, if available.
         # Corresponds to the JSON property `imageMediaMetadata`
-        # @return [Google::Apis::DriveV3::File::ImageMediaMetadata]
+        # @return [GoogleAPI::Apis::DriveV3::File::ImageMediaMetadata]
         attr_accessor :image_media_metadata
       
         # Whether the file was created or opened by the requesting app.
@@ -538,7 +538,7 @@ module Google
       
         # Information about a Drive user.
         # Corresponds to the JSON property `lastModifyingUser`
-        # @return [Google::Apis::DriveV3::User]
+        # @return [GoogleAPI::Apis::DriveV3::User]
         attr_accessor :last_modifying_user
       
         # The MD5 checksum for the content of the file. This is only applicable to files
@@ -590,7 +590,7 @@ module Google
         # The owners of the file. Currently, only certain legacy files may have more
         # than one owner.
         # Corresponds to the JSON property `owners`
-        # @return [Array<Google::Apis::DriveV3::User>]
+        # @return [Array<GoogleAPI::Apis::DriveV3::User>]
         attr_accessor :owners
       
         # The IDs of the parent folders which contain the file.
@@ -604,7 +604,7 @@ module Google
         # The full list of permissions for the file. This is only available if the
         # requesting user can share the file.
         # Corresponds to the JSON property `permissions`
-        # @return [Array<Google::Apis::DriveV3::Permission>]
+        # @return [Array<GoogleAPI::Apis::DriveV3::Permission>]
         attr_accessor :permissions
       
         # A collection of arbitrary key-value pairs which are visible to all apps.
@@ -633,7 +633,7 @@ module Google
       
         # Information about a Drive user.
         # Corresponds to the JSON property `sharingUser`
-        # @return [Google::Apis::DriveV3::User]
+        # @return [GoogleAPI::Apis::DriveV3::User]
         attr_accessor :sharing_user
       
         # The size of the file's content in bytes. This is only applicable to files with
@@ -677,7 +677,7 @@ module Google
         # Additional metadata about video media. This may not be available immediately
         # upon upload.
         # Corresponds to the JSON property `videoMediaMetadata`
-        # @return [Google::Apis::DriveV3::File::VideoMediaMetadata]
+        # @return [GoogleAPI::Apis::DriveV3::File::VideoMediaMetadata]
         attr_accessor :video_media_metadata
       
         # Whether the file has been viewed by this user.
@@ -769,7 +769,7 @@ module Google
         
         # Capabilities the current user has on the file.
         class Capabilities
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Whether the user can comment on the file.
           # Corresponds to the JSON property `canComment`
@@ -818,7 +818,7 @@ module Google
         # Additional information about the content of the file. These fields are never
         # populated in responses.
         class ContentHints
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Text to be indexed for the file to improve fullText queries. This is limited
           # to 128KB in length and may contain HTML elements.
@@ -829,7 +829,7 @@ module Google
           # A thumbnail for the file. This will only be used if Drive cannot generate a
           # standard thumbnail.
           # Corresponds to the JSON property `thumbnail`
-          # @return [Google::Apis::DriveV3::File::ContentHints::Thumbnail]
+          # @return [GoogleAPI::Apis::DriveV3::File::ContentHints::Thumbnail]
           attr_accessor :thumbnail
         
           def initialize(**args)
@@ -845,7 +845,7 @@ module Google
           # A thumbnail for the file. This will only be used if Drive cannot generate a
           # standard thumbnail.
           class Thumbnail
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The thumbnail data encoded with URL-safe Base64 (RFC 4648 section 5).
             # Corresponds to the JSON property `image`
@@ -871,7 +871,7 @@ module Google
         
         # Additional metadata about image media, if available.
         class ImageMediaMetadata
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The aperture used to create the photo (f-number).
           # Corresponds to the JSON property `aperture`
@@ -936,7 +936,7 @@ module Google
         
           # Geographic location information stored in the image.
           # Corresponds to the JSON property `location`
-          # @return [Google::Apis::DriveV3::File::ImageMediaMetadata::Location]
+          # @return [GoogleAPI::Apis::DriveV3::File::ImageMediaMetadata::Location]
           attr_accessor :location
         
           # The smallest f-number of the lens at the focal length used to create the photo
@@ -1011,7 +1011,7 @@ module Google
           
           # Geographic location information stored in the image.
           class Location
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The altitude stored in the image.
             # Corresponds to the JSON property `altitude`
@@ -1044,7 +1044,7 @@ module Google
         # Additional metadata about video media. This may not be available immediately
         # upon upload.
         class VideoMediaMetadata
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The duration of the video in milliseconds.
           # Corresponds to the JSON property `durationMillis`
@@ -1076,11 +1076,11 @@ module Google
       
       # A list of files.
       class FileList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The page of files.
         # Corresponds to the JSON property `files`
-        # @return [Array<Google::Apis::DriveV3::File>]
+        # @return [Array<GoogleAPI::Apis::DriveV3::File>]
         attr_accessor :files
       
         # This is always drive#fileList.
@@ -1108,7 +1108,7 @@ module Google
       
       # A list of generated file IDs which can be provided in create requests.
       class GeneratedIds
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The IDs generated for the requesting user in the specified space.
         # Corresponds to the JSON property `ids`
@@ -1140,7 +1140,7 @@ module Google
       # A permission for a file. A permission grants a user, group, domain or the
       # world access to a file or a folder hierarchy.
       class Permission
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether the permission allows the file to be discovered through search. This
         # is only applicable for permissions of type domain or anyone.
@@ -1224,7 +1224,7 @@ module Google
       
       # A list of permissions for a file.
       class PermissionList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This is always drive#permissionList.
         # Corresponds to the JSON property `kind`
@@ -1233,7 +1233,7 @@ module Google
       
         # The full list of permissions.
         # Corresponds to the JSON property `permissions`
-        # @return [Array<Google::Apis::DriveV3::Permission>]
+        # @return [Array<GoogleAPI::Apis::DriveV3::Permission>]
         attr_accessor :permissions
       
         def initialize(**args)
@@ -1249,7 +1249,7 @@ module Google
       
       # A reply to a comment on a file.
       class Reply
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The action the reply performed to the parent comment. Valid values are:
         # - resolve
@@ -1260,7 +1260,7 @@ module Google
       
         # Information about a Drive user.
         # Corresponds to the JSON property `author`
-        # @return [Google::Apis::DriveV3::User]
+        # @return [GoogleAPI::Apis::DriveV3::User]
         attr_accessor :author
       
         # The plain text content of the reply. This field is used for setting the
@@ -1321,7 +1321,7 @@ module Google
       
       # A list of replies to a comment on a file.
       class ReplyList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This is always drive#replyList.
         # Corresponds to the JSON property `kind`
@@ -1336,7 +1336,7 @@ module Google
       
         # The page of replies.
         # Corresponds to the JSON property `replies`
-        # @return [Array<Google::Apis::DriveV3::Reply>]
+        # @return [Array<GoogleAPI::Apis::DriveV3::Reply>]
         attr_accessor :replies
       
         def initialize(**args)
@@ -1353,7 +1353,7 @@ module Google
       
       # The metadata for a revision to a file.
       class Revision
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the revision.
         # Corresponds to the JSON property `id`
@@ -1377,7 +1377,7 @@ module Google
       
         # Information about a Drive user.
         # Corresponds to the JSON property `lastModifyingUser`
-        # @return [Google::Apis::DriveV3::User]
+        # @return [GoogleAPI::Apis::DriveV3::User]
         attr_accessor :last_modifying_user
       
         # The MD5 checksum of the revision's content. This is only applicable to files
@@ -1451,7 +1451,7 @@ module Google
       
       # A list of revisions of a file.
       class RevisionList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This is always drive#revisionList.
         # Corresponds to the JSON property `kind`
@@ -1460,7 +1460,7 @@ module Google
       
         # The full list of revisions.
         # Corresponds to the JSON property `revisions`
-        # @return [Array<Google::Apis::DriveV3::Revision>]
+        # @return [Array<GoogleAPI::Apis::DriveV3::Revision>]
         attr_accessor :revisions
       
         def initialize(**args)
@@ -1476,7 +1476,7 @@ module Google
       
       # 
       class StartPageToken
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This is always drive#startPageToken.
         # Corresponds to the JSON property `kind`
@@ -1501,7 +1501,7 @@ module Google
       
       # Information about a Drive user.
       class User
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A plain text displayable name for this user.
         # Corresponds to the JSON property `displayName`

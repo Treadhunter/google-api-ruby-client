@@ -18,14 +18,14 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CloudresourcemanagerV1beta1
       
       # A Project is a high-level Google Cloud Platform entity. It is a container for
       # ACLs, APIs, AppEngine Apps, VMs, and other Google Cloud Platform resources.
       class Project
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number uniquely identifying the project. Example: 415104041262 Read-only.
         # Corresponds to the JSON property `projectNumber`
@@ -73,7 +73,7 @@ module Google
         # interact with through one of our API's. Some examples are an AppEngine app, a
         # Compute Engine instance, a Cloud SQL database, and so on.
         # Corresponds to the JSON property `parent`
-        # @return [Google::Apis::CloudresourcemanagerV1beta1::ResourceId]
+        # @return [GoogleAPI::Apis::CloudresourcemanagerV1beta1::ResourceId]
         attr_accessor :parent
       
         def initialize(**args)
@@ -97,7 +97,7 @@ module Google
       # interact with through one of our API's. Some examples are an AppEngine app, a
       # Compute Engine instance, a Cloud SQL database, and so on.
       class ResourceId
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Required field representing the resource type this id is for. At present, the
         # only valid type is "organization".
@@ -126,11 +126,11 @@ module Google
       # response where more pages are available has `next_page_token` set. This token
       # can be used in a subsequent request to retrieve the next request page.
       class ListProjectsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of Projects that matched the list filter. This list can be paginated.
         # Corresponds to the JSON property `projects`
-        # @return [Array<Google::Apis::CloudresourcemanagerV1beta1::Project>]
+        # @return [Array<GoogleAPI::Apis::CloudresourcemanagerV1beta1::Project>]
         attr_accessor :projects
       
         # Pagination token. If the result set is too large to fit in a single response,
@@ -160,7 +160,7 @@ module Google
       # protobuf.Empty) returns (google.protobuf.Empty); ` The JSON representation for
       # `Empty` is empty JSON object ````.
       class Empty
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -173,7 +173,7 @@ module Google
       
       # The request sent to the UndeleteProject method.
       class UndeleteProjectRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -186,7 +186,7 @@ module Google
       
       # The request sent to the GetAncestry method.
       class GetAncestryRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -199,12 +199,12 @@ module Google
       
       # Response from the GetAncestry method.
       class GetAncestryResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Ancestors are ordered from bottom to top of the resource hierarchy. The first
         # ancestor is the project itself, followed by the project's parent, etc.
         # Corresponds to the JSON property `ancestor`
-        # @return [Array<Google::Apis::CloudresourcemanagerV1beta1::Ancestor>]
+        # @return [Array<GoogleAPI::Apis::CloudresourcemanagerV1beta1::Ancestor>]
         attr_accessor :ancestor
       
         def initialize(**args)
@@ -219,14 +219,14 @@ module Google
       
       # Identifying information for a single ancestor of a project.
       class Ancestor
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A container to reference an id for any resource type. A `resource` in Google
         # Cloud Platform is a generic term for something you (a developer) may want to
         # interact with through one of our API's. Some examples are an AppEngine app, a
         # Compute Engine instance, a Cloud SQL database, and so on.
         # Corresponds to the JSON property `resourceId`
-        # @return [Google::Apis::CloudresourcemanagerV1beta1::ResourceId]
+        # @return [GoogleAPI::Apis::CloudresourcemanagerV1beta1::ResourceId]
         attr_accessor :resource_id
       
         def initialize(**args)
@@ -241,7 +241,7 @@ module Google
       
       # Request message for `GetIamPolicy` method.
       class GetIamPolicyRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -263,7 +263,7 @@ module Google
       # sean@example.com"] ` ] ` For a description of IAM and its features, see the [
       # IAM developer's guide](https://cloud.google.com/iam).
       class Policy
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Version of the `Policy`. The default version is 0.
         # Corresponds to the JSON property `version`
@@ -274,7 +274,7 @@ module Google
         # specified for the same `role`. `bindings` with no members will result in an
         # error.
         # Corresponds to the JSON property `bindings`
-        # @return [Array<Google::Apis::CloudresourcemanagerV1beta1::Binding>]
+        # @return [Array<GoogleAPI::Apis::CloudresourcemanagerV1beta1::Binding>]
         attr_accessor :bindings
       
         # `etag` is used for optimistic concurrency control as a way to help prevent
@@ -303,7 +303,7 @@ module Google
       
       # Associates `members` with a `role`.
       class Binding
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`
         # , or `roles/owner`. Required
@@ -340,7 +340,7 @@ module Google
       
       # Request message for `SetIamPolicy` method.
       class SetIamPolicyRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Defines an Identity and Access Management (IAM) policy. It is used to specify
         # access control policies for Cloud Platform resources. A `Policy` consists of a
@@ -353,7 +353,7 @@ module Google
         # sean@example.com"] ` ] ` For a description of IAM and its features, see the [
         # IAM developer's guide](https://cloud.google.com/iam).
         # Corresponds to the JSON property `policy`
-        # @return [Google::Apis::CloudresourcemanagerV1beta1::Policy]
+        # @return [GoogleAPI::Apis::CloudresourcemanagerV1beta1::Policy]
         attr_accessor :policy
       
         def initialize(**args)
@@ -368,7 +368,7 @@ module Google
       
       # Request message for `TestIamPermissions` method.
       class TestIamPermissionsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The set of permissions to check for the `resource`. Permissions with wildcards
         # (such as '*' or 'storage.*') are not allowed. For more information see IAM
@@ -389,7 +389,7 @@ module Google
       
       # Response message for `TestIamPermissions` method.
       class TestIamPermissionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A subset of `TestPermissionsRequest.permissions` that the caller is allowed.
         # Corresponds to the JSON property `permissions`
@@ -408,11 +408,11 @@ module Google
       
       # The response returned from the `ListOrganizations` method.
       class ListOrganizationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of Organizations that matched the list query, possibly paginated.
         # Corresponds to the JSON property `organizations`
-        # @return [Array<Google::Apis::CloudresourcemanagerV1beta1::Organization>]
+        # @return [Array<GoogleAPI::Apis::CloudresourcemanagerV1beta1::Organization>]
         attr_accessor :organizations
       
         # A pagination token to be used to retrieve the next page of results. If the
@@ -438,7 +438,7 @@ module Google
       # The root node in the resource hierarchy to which a particular entity's (e.g.,
       # company) resources belong.
       class Organization
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An immutable id for the Organization that is assigned on creation. This should
         # be omitted when creating a new Organization. This field is read-only.
@@ -457,7 +457,7 @@ module Google
         # OrganizationOwner` is deleted, the Organization and all its descendants will
         # be deleted.
         # Corresponds to the JSON property `owner`
-        # @return [Google::Apis::CloudresourcemanagerV1beta1::OrganizationOwner]
+        # @return [GoogleAPI::Apis::CloudresourcemanagerV1beta1::OrganizationOwner]
         attr_accessor :owner
       
         # Timestamp when the Organization was created. Assigned by the server. @
@@ -484,7 +484,7 @@ module Google
       # OrganizationOwner` is deleted, the Organization and all its descendants will
       # be deleted.
       class OrganizationOwner
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The Google for Work customer id used in the Directory API.
         # Corresponds to the JSON property `directoryCustomerId`

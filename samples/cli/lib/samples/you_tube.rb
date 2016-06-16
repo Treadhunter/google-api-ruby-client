@@ -24,7 +24,7 @@ module Samples
   #     $ ./google-api-samples youtube upload ~/myvideo.mov --title="So funny!"
   #
   class YouTube < BaseCli
-    YT = Google::Apis::YoutubeV3
+    YT = GoogleAPI::Apis::YoutubeV3
 
     desc 'upload FILE', 'Upload a video to YouTube'
     method_option :title, type: :string

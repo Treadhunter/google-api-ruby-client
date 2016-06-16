@@ -2,7 +2,7 @@ require 'spec_helper'
 
 require 'google/api_client/auth/storages/file_store'
 
-describe Google::APIClient::FileStore do
+describe GoogleAPI::APIClient::FileStore do
   let(:root_path) { File.expand_path(File.join(__FILE__, '..','..','..', '..','..')) }
   let(:json_file) { File.expand_path(File.join(root_path, 'fixtures', 'files', 'auth_stored_credentials.json')) }
 
@@ -17,7 +17,7 @@ describe Google::APIClient::FileStore do
       "issued_at"=>1384440275
   }}
 
-  subject{Google::APIClient::FileStore.new('a file path')}
+  subject{GoogleAPI::APIClient::FileStore.new('a file path')}
 
   it 'should have a path' do
     expect(subject.path).to be == 'a file path'

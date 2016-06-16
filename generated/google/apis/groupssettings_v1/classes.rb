@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module GroupssettingsV1
       
       # JSON template for Group resource
       class Groups
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Are external members allowed to join the group.
         # Corresponds to the JSON property `allowExternalMembers`

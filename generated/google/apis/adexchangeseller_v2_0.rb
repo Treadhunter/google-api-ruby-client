@@ -16,7 +16,7 @@ require 'google/apis/adexchangeseller_v2_0/service.rb'
 require 'google/apis/adexchangeseller_v2_0/classes.rb'
 require 'google/apis/adexchangeseller_v2_0/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Ad Exchange Seller API
     #

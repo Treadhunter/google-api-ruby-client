@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module PlusV1
       
       # 
       class Acl
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Description of the access granted, suitable for display.
         # Corresponds to the JSON property `description`
@@ -33,7 +33,7 @@ module Google
       
         # The list of access entries.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::PlusV1::PlusAclentryResource>]
+        # @return [Array<GoogleAPI::Apis::PlusV1::PlusAclentryResource>]
         attr_accessor :items
       
         # Identifies this resource as a collection of access controls. Value: "plus#acl".
@@ -55,16 +55,16 @@ module Google
       
       # 
       class Activity
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies who has access to see this activity.
         # Corresponds to the JSON property `access`
-        # @return [Google::Apis::PlusV1::Acl]
+        # @return [GoogleAPI::Apis::PlusV1::Acl]
         attr_accessor :access
       
         # The person who performed this activity.
         # Corresponds to the JSON property `actor`
-        # @return [Google::Apis::PlusV1::Activity::Actor]
+        # @return [GoogleAPI::Apis::PlusV1::Activity::Actor]
         attr_accessor :actor
       
         # Street address where this activity occurred.
@@ -107,12 +107,12 @@ module Google
       
         # The location where this activity occurred.
         # Corresponds to the JSON property `location`
-        # @return [Google::Apis::PlusV1::Place]
+        # @return [GoogleAPI::Apis::PlusV1::Place]
         attr_accessor :location
       
         # The object of this activity.
         # Corresponds to the JSON property `object`
-        # @return [Google::Apis::PlusV1::Activity::Object]
+        # @return [GoogleAPI::Apis::PlusV1::Activity::Object]
         attr_accessor :object
       
         # ID of the place where this activity occurred.
@@ -127,7 +127,7 @@ module Google
       
         # The service provider that initially published this activity.
         # Corresponds to the JSON property `provider`
-        # @return [Google::Apis::PlusV1::Activity::Provider]
+        # @return [GoogleAPI::Apis::PlusV1::Activity::Provider]
         attr_accessor :provider
       
         # The time at which this activity was initially published. Formatted as an RFC
@@ -196,11 +196,11 @@ module Google
         
         # The person who performed this activity.
         class Actor
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Actor info specific to particular clients.
           # Corresponds to the JSON property `clientSpecificActorInfo`
-          # @return [Google::Apis::PlusV1::Activity::Actor::ClientSpecificActorInfo]
+          # @return [GoogleAPI::Apis::PlusV1::Activity::Actor::ClientSpecificActorInfo]
           attr_accessor :client_specific_actor_info
         
           # The name of the actor, suitable for display.
@@ -215,12 +215,12 @@ module Google
         
           # The image representation of the actor.
           # Corresponds to the JSON property `image`
-          # @return [Google::Apis::PlusV1::Activity::Actor::Image]
+          # @return [GoogleAPI::Apis::PlusV1::Activity::Actor::Image]
           attr_accessor :image
         
           # An object representation of the individual components of name.
           # Corresponds to the JSON property `name`
-          # @return [Google::Apis::PlusV1::Activity::Actor::Name]
+          # @return [GoogleAPI::Apis::PlusV1::Activity::Actor::Name]
           attr_accessor :name
         
           # The link to the actor's Google profile.
@@ -230,7 +230,7 @@ module Google
         
           # Verification status of actor.
           # Corresponds to the JSON property `verification`
-          # @return [Google::Apis::PlusV1::Activity::Actor::Verification]
+          # @return [GoogleAPI::Apis::PlusV1::Activity::Actor::Verification]
           attr_accessor :verification
         
           def initialize(**args)
@@ -250,11 +250,11 @@ module Google
           
           # Actor info specific to particular clients.
           class ClientSpecificActorInfo
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Actor info specific to YouTube clients.
             # Corresponds to the JSON property `youtubeActorInfo`
-            # @return [Google::Apis::PlusV1::Activity::Actor::ClientSpecificActorInfo::YoutubeActorInfo]
+            # @return [GoogleAPI::Apis::PlusV1::Activity::Actor::ClientSpecificActorInfo::YoutubeActorInfo]
             attr_accessor :youtube_actor_info
           
             def initialize(**args)
@@ -268,7 +268,7 @@ module Google
             
             # Actor info specific to YouTube clients.
             class YoutubeActorInfo
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # ID of the YouTube channel owned by the Actor.
               # Corresponds to the JSON property `channelId`
@@ -288,7 +288,7 @@ module Google
           
           # The image representation of the actor.
           class Image
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The URL of the actor's profile photo. To resize the image and crop it to a
             # square, append the query string ?sz=x, where x is the dimension in pixels of
@@ -309,7 +309,7 @@ module Google
           
           # An object representation of the individual components of name.
           class Name
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The family name ("last name") of the actor.
             # Corresponds to the JSON property `familyName`
@@ -334,7 +334,7 @@ module Google
           
           # Verification status of actor.
           class Verification
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Verification for one-time or manual processes.
             # Corresponds to the JSON property `adHocVerified`
@@ -354,17 +354,17 @@ module Google
         
         # The object of this activity.
         class Object
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # If this activity's object is itself another activity, such as when a person
           # reshares an activity, this property specifies the original activity's actor.
           # Corresponds to the JSON property `actor`
-          # @return [Google::Apis::PlusV1::Activity::Object::Actor]
+          # @return [GoogleAPI::Apis::PlusV1::Activity::Object::Actor]
           attr_accessor :actor
         
           # The media objects attached to this activity.
           # Corresponds to the JSON property `attachments`
-          # @return [Array<Google::Apis::PlusV1::Activity::Object::Attachment>]
+          # @return [Array<GoogleAPI::Apis::PlusV1::Activity::Object::Attachment>]
           attr_accessor :attachments
         
           # The HTML-formatted content, which is suitable for display.
@@ -395,17 +395,17 @@ module Google
         
           # People who +1'd this activity.
           # Corresponds to the JSON property `plusoners`
-          # @return [Google::Apis::PlusV1::Activity::Object::Plusoners]
+          # @return [GoogleAPI::Apis::PlusV1::Activity::Object::Plusoners]
           attr_accessor :plusoners
         
           # Comments in reply to this activity.
           # Corresponds to the JSON property `replies`
-          # @return [Google::Apis::PlusV1::Activity::Object::Replies]
+          # @return [GoogleAPI::Apis::PlusV1::Activity::Object::Replies]
           attr_accessor :replies
         
           # People who reshared this activity.
           # Corresponds to the JSON property `resharers`
-          # @return [Google::Apis::PlusV1::Activity::Object::Resharers]
+          # @return [GoogleAPI::Apis::PlusV1::Activity::Object::Resharers]
           attr_accessor :resharers
         
           # The URL that points to the linked resource.
@@ -434,11 +434,11 @@ module Google
           # If this activity's object is itself another activity, such as when a person
           # reshares an activity, this property specifies the original activity's actor.
           class Actor
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Actor info specific to particular clients.
             # Corresponds to the JSON property `clientSpecificActorInfo`
-            # @return [Google::Apis::PlusV1::Activity::Object::Actor::ClientSpecificActorInfo]
+            # @return [GoogleAPI::Apis::PlusV1::Activity::Object::Actor::ClientSpecificActorInfo]
             attr_accessor :client_specific_actor_info
           
             # The original actor's name, which is suitable for display.
@@ -453,7 +453,7 @@ module Google
           
             # The image representation of the original actor.
             # Corresponds to the JSON property `image`
-            # @return [Google::Apis::PlusV1::Activity::Object::Actor::Image]
+            # @return [GoogleAPI::Apis::PlusV1::Activity::Object::Actor::Image]
             attr_accessor :image
           
             # A link to the original actor's Google profile.
@@ -463,7 +463,7 @@ module Google
           
             # Verification status of actor.
             # Corresponds to the JSON property `verification`
-            # @return [Google::Apis::PlusV1::Activity::Object::Actor::Verification]
+            # @return [GoogleAPI::Apis::PlusV1::Activity::Object::Actor::Verification]
             attr_accessor :verification
           
             def initialize(**args)
@@ -482,11 +482,11 @@ module Google
             
             # Actor info specific to particular clients.
             class ClientSpecificActorInfo
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # Actor info specific to YouTube clients.
               # Corresponds to the JSON property `youtubeActorInfo`
-              # @return [Google::Apis::PlusV1::Activity::Object::Actor::ClientSpecificActorInfo::YoutubeActorInfo]
+              # @return [GoogleAPI::Apis::PlusV1::Activity::Object::Actor::ClientSpecificActorInfo::YoutubeActorInfo]
               attr_accessor :youtube_actor_info
             
               def initialize(**args)
@@ -500,7 +500,7 @@ module Google
               
               # Actor info specific to YouTube clients.
               class YoutubeActorInfo
-                include Google::Apis::Core::Hashable
+                include GoogleAPI::Apis::Core::Hashable
               
                 # ID of the YouTube channel owned by the Actor.
                 # Corresponds to the JSON property `channelId`
@@ -520,7 +520,7 @@ module Google
             
             # The image representation of the original actor.
             class Image
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # A URL that points to a thumbnail photo of the original actor.
               # Corresponds to the JSON property `url`
@@ -539,7 +539,7 @@ module Google
             
             # Verification status of actor.
             class Verification
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # Verification for one-time or manual processes.
               # Corresponds to the JSON property `adHocVerified`
@@ -559,7 +559,7 @@ module Google
           
           # 
           class Attachment
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # If the attachment is an article, this property contains a snippet of text from
             # the article. It can also include descriptions for other types.
@@ -574,12 +574,12 @@ module Google
           
             # If the attachment is a video, the embeddable link.
             # Corresponds to the JSON property `embed`
-            # @return [Google::Apis::PlusV1::Activity::Object::Attachment::Embed]
+            # @return [GoogleAPI::Apis::PlusV1::Activity::Object::Attachment::Embed]
             attr_accessor :embed
           
             # The full image URL for photo attachments.
             # Corresponds to the JSON property `fullImage`
-            # @return [Google::Apis::PlusV1::Activity::Object::Attachment::FullImage]
+            # @return [GoogleAPI::Apis::PlusV1::Activity::Object::Attachment::FullImage]
             attr_accessor :full_image
           
             # The ID of the attachment.
@@ -589,7 +589,7 @@ module Google
           
             # The preview image for photos or videos.
             # Corresponds to the JSON property `image`
-            # @return [Google::Apis::PlusV1::Activity::Object::Attachment::Image]
+            # @return [GoogleAPI::Apis::PlusV1::Activity::Object::Attachment::Image]
             attr_accessor :image
           
             # The type of media object. Possible values include, but are not limited to, the
@@ -605,7 +605,7 @@ module Google
             # If the attachment is an album, this property is a list of potential additional
             # thumbnails from the album.
             # Corresponds to the JSON property `thumbnails`
-            # @return [Array<Google::Apis::PlusV1::Activity::Object::Attachment::Thumbnail>]
+            # @return [Array<GoogleAPI::Apis::PlusV1::Activity::Object::Attachment::Thumbnail>]
             attr_accessor :thumbnails
           
             # The link to the attachment, which should be of type text/html.
@@ -632,7 +632,7 @@ module Google
             
             # If the attachment is a video, the embeddable link.
             class Embed
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # Media type of the link.
               # Corresponds to the JSON property `type`
@@ -657,7 +657,7 @@ module Google
             
             # The full image URL for photo attachments.
             class FullImage
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # The height, in pixels, of the linked resource.
               # Corresponds to the JSON property `height`
@@ -694,7 +694,7 @@ module Google
             
             # The preview image for photos or videos.
             class Image
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # The height, in pixels, of the linked resource.
               # Corresponds to the JSON property `height`
@@ -731,7 +731,7 @@ module Google
             
             # 
             class Thumbnail
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # Potential name of the thumbnail.
               # Corresponds to the JSON property `description`
@@ -740,7 +740,7 @@ module Google
             
               # Image resource.
               # Corresponds to the JSON property `image`
-              # @return [Google::Apis::PlusV1::Activity::Object::Attachment::Thumbnail::Image]
+              # @return [GoogleAPI::Apis::PlusV1::Activity::Object::Attachment::Thumbnail::Image]
               attr_accessor :image
             
               # URL of the webpage containing the image.
@@ -761,7 +761,7 @@ module Google
               
               # Image resource.
               class Image
-                include Google::Apis::Core::Hashable
+                include GoogleAPI::Apis::Core::Hashable
               
                 # The height, in pixels, of the linked resource.
                 # Corresponds to the JSON property `height`
@@ -800,7 +800,7 @@ module Google
           
           # People who +1'd this activity.
           class Plusoners
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The URL for the collection of people who +1'd this activity.
             # Corresponds to the JSON property `selfLink`
@@ -825,7 +825,7 @@ module Google
           
           # Comments in reply to this activity.
           class Replies
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The URL for the collection of comments in reply to this activity.
             # Corresponds to the JSON property `selfLink`
@@ -850,7 +850,7 @@ module Google
           
           # People who reshared this activity.
           class Resharers
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The URL for the collection of resharers.
             # Corresponds to the JSON property `selfLink`
@@ -876,7 +876,7 @@ module Google
         
         # The service provider that initially published this activity.
         class Provider
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Name of the service provider.
           # Corresponds to the JSON property `title`
@@ -896,7 +896,7 @@ module Google
       
       # 
       class ActivityFeed
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of this response for caching purposes.
         # Corresponds to the JSON property `etag`
@@ -910,7 +910,7 @@ module Google
       
         # The activities in this page of results.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::PlusV1::Activity>]
+        # @return [Array<GoogleAPI::Apis::PlusV1::Activity>]
         attr_accessor :items
       
         # Identifies this resource as a collection of activities. Value: "plus#
@@ -967,11 +967,11 @@ module Google
       
       # 
       class Comment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The person who posted this comment.
         # Corresponds to the JSON property `actor`
-        # @return [Google::Apis::PlusV1::Comment::Actor]
+        # @return [GoogleAPI::Apis::PlusV1::Comment::Actor]
         attr_accessor :actor
       
         # ETag of this response for caching purposes.
@@ -986,7 +986,7 @@ module Google
       
         # The activity this comment replied to.
         # Corresponds to the JSON property `inReplyTo`
-        # @return [Array<Google::Apis::PlusV1::Comment::InReplyTo>]
+        # @return [Array<GoogleAPI::Apis::PlusV1::Comment::InReplyTo>]
         attr_accessor :in_reply_to
       
         # Identifies this resource as a comment. Value: "plus#comment".
@@ -996,12 +996,12 @@ module Google
       
         # The object of this comment.
         # Corresponds to the JSON property `object`
-        # @return [Google::Apis::PlusV1::Comment::Object]
+        # @return [GoogleAPI::Apis::PlusV1::Comment::Object]
         attr_accessor :object
       
         # People who +1'd this comment.
         # Corresponds to the JSON property `plusoners`
-        # @return [Google::Apis::PlusV1::Comment::Plusoners]
+        # @return [GoogleAPI::Apis::PlusV1::Comment::Plusoners]
         attr_accessor :plusoners
       
         # The time at which this comment was initially published. Formatted as an RFC
@@ -1049,11 +1049,11 @@ module Google
         
         # The person who posted this comment.
         class Actor
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Actor info specific to particular clients.
           # Corresponds to the JSON property `clientSpecificActorInfo`
-          # @return [Google::Apis::PlusV1::Comment::Actor::ClientSpecificActorInfo]
+          # @return [GoogleAPI::Apis::PlusV1::Comment::Actor::ClientSpecificActorInfo]
           attr_accessor :client_specific_actor_info
         
           # The name of this actor, suitable for display.
@@ -1068,7 +1068,7 @@ module Google
         
           # The image representation of this actor.
           # Corresponds to the JSON property `image`
-          # @return [Google::Apis::PlusV1::Comment::Actor::Image]
+          # @return [GoogleAPI::Apis::PlusV1::Comment::Actor::Image]
           attr_accessor :image
         
           # A link to the Person resource for this actor.
@@ -1078,7 +1078,7 @@ module Google
         
           # Verification status of actor.
           # Corresponds to the JSON property `verification`
-          # @return [Google::Apis::PlusV1::Comment::Actor::Verification]
+          # @return [GoogleAPI::Apis::PlusV1::Comment::Actor::Verification]
           attr_accessor :verification
         
           def initialize(**args)
@@ -1097,11 +1097,11 @@ module Google
           
           # Actor info specific to particular clients.
           class ClientSpecificActorInfo
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Actor info specific to YouTube clients.
             # Corresponds to the JSON property `youtubeActorInfo`
-            # @return [Google::Apis::PlusV1::Comment::Actor::ClientSpecificActorInfo::YoutubeActorInfo]
+            # @return [GoogleAPI::Apis::PlusV1::Comment::Actor::ClientSpecificActorInfo::YoutubeActorInfo]
             attr_accessor :youtube_actor_info
           
             def initialize(**args)
@@ -1115,7 +1115,7 @@ module Google
             
             # Actor info specific to YouTube clients.
             class YoutubeActorInfo
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # ID of the YouTube channel owned by the Actor.
               # Corresponds to the JSON property `channelId`
@@ -1135,7 +1135,7 @@ module Google
           
           # The image representation of this actor.
           class Image
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The URL of the actor's profile photo. To resize the image and crop it to a
             # square, append the query string ?sz=x, where x is the dimension in pixels of
@@ -1156,7 +1156,7 @@ module Google
           
           # Verification status of actor.
           class Verification
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Verification for one-time or manual processes.
             # Corresponds to the JSON property `adHocVerified`
@@ -1176,7 +1176,7 @@ module Google
         
         # 
         class InReplyTo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The ID of the activity.
           # Corresponds to the JSON property `id`
@@ -1201,7 +1201,7 @@ module Google
         
         # The object of this comment.
         class Object
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The HTML-formatted content, suitable for display.
           # Corresponds to the JSON property `content`
@@ -1235,7 +1235,7 @@ module Google
         
         # People who +1'd this comment.
         class Plusoners
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Total number of people who +1'd this comment.
           # Corresponds to the JSON property `totalItems`
@@ -1255,7 +1255,7 @@ module Google
       
       # 
       class CommentFeed
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of this response for caching purposes.
         # Corresponds to the JSON property `etag`
@@ -1269,7 +1269,7 @@ module Google
       
         # The comments in this page of results.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::PlusV1::Comment>]
+        # @return [Array<GoogleAPI::Apis::PlusV1::Comment>]
         attr_accessor :items
       
         # Identifies this resource as a collection of comments. Value: "plus#commentFeed"
@@ -1319,7 +1319,7 @@ module Google
       
       # 
       class PeopleFeed
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of this response for caching purposes.
         # Corresponds to the JSON property `etag`
@@ -1330,7 +1330,7 @@ module Google
         # image, and url for the person. To retrieve additional profile data, see the
         # people.get method.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::PlusV1::Person>]
+        # @return [Array<GoogleAPI::Apis::PlusV1::Person>]
         attr_accessor :items
       
         # Identifies this resource as a collection of people. Value: "plus#peopleFeed".
@@ -1379,7 +1379,7 @@ module Google
       
       # 
       class Person
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A short biography for this person.
         # Corresponds to the JSON property `aboutMe`
@@ -1390,7 +1390,7 @@ module Google
         # or older. Age is determined from the user's birthday using Western age
         # reckoning.
         # Corresponds to the JSON property `ageRange`
-        # @return [Google::Apis::PlusV1::Person::AgeRange]
+        # @return [GoogleAPI::Apis::PlusV1::Person::AgeRange]
         attr_accessor :age_range
       
         # The person's date of birth, represented as YYYY-MM-DD.
@@ -1411,7 +1411,7 @@ module Google
       
         # The cover photo content.
         # Corresponds to the JSON property `cover`
-        # @return [Google::Apis::PlusV1::Person::Cover]
+        # @return [GoogleAPI::Apis::PlusV1::Person::Cover]
         attr_accessor :cover
       
         # (this field is not currently used)
@@ -1437,7 +1437,7 @@ module Google
         # addresses, or the email scope can be used to retrieve just the Google account
         # email address.
         # Corresponds to the JSON property `emails`
-        # @return [Array<Google::Apis::PlusV1::Person::Email>]
+        # @return [Array<GoogleAPI::Apis::PlusV1::Person::Email>]
         attr_accessor :emails
       
         # ETag of this response for caching purposes.
@@ -1461,7 +1461,7 @@ module Google
       
         # The representation of the person's profile photo.
         # Corresponds to the JSON property `image`
-        # @return [Google::Apis::PlusV1::Person::Image]
+        # @return [GoogleAPI::Apis::PlusV1::Person::Image]
         attr_accessor :image
       
         # Whether this user has signed up for Google+.
@@ -1482,7 +1482,7 @@ module Google
       
         # An object representation of the individual components of a person's name.
         # Corresponds to the JSON property `name`
-        # @return [Google::Apis::PlusV1::Person::Name]
+        # @return [GoogleAPI::Apis::PlusV1::Person::Name]
         attr_accessor :name
       
         # The nickname of this person.
@@ -1505,12 +1505,12 @@ module Google
       
         # A list of current or past organizations with which this person is associated.
         # Corresponds to the JSON property `organizations`
-        # @return [Array<Google::Apis::PlusV1::Person::Organization>]
+        # @return [Array<GoogleAPI::Apis::PlusV1::Person::Organization>]
         attr_accessor :organizations
       
         # A list of places where this person has lived.
         # Corresponds to the JSON property `placesLived`
-        # @return [Array<Google::Apis::PlusV1::Person::PlacesLived>]
+        # @return [Array<GoogleAPI::Apis::PlusV1::Person::PlacesLived>]
         attr_accessor :places_lived
       
         # If a Google+ Page, the number of people who have +1'd this page.
@@ -1550,7 +1550,7 @@ module Google
       
         # A list of URLs for this person.
         # Corresponds to the JSON property `urls`
-        # @return [Array<Google::Apis::PlusV1::Person::Url>]
+        # @return [Array<GoogleAPI::Apis::PlusV1::Person::Url>]
         attr_accessor :urls
       
         # Whether the person or Google+ Page has been verified.
@@ -1601,7 +1601,7 @@ module Google
         # or older. Age is determined from the user's birthday using Western age
         # reckoning.
         class AgeRange
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The age range's upper bound, if any. Possible values include, but are not
           # limited to, the following:
@@ -1632,16 +1632,16 @@ module Google
         
         # The cover photo content.
         class Cover
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Extra information about the cover photo.
           # Corresponds to the JSON property `coverInfo`
-          # @return [Google::Apis::PlusV1::Person::Cover::CoverInfo]
+          # @return [GoogleAPI::Apis::PlusV1::Person::Cover::CoverInfo]
           attr_accessor :cover_info
         
           # The person's primary cover image.
           # Corresponds to the JSON property `coverPhoto`
-          # @return [Google::Apis::PlusV1::Person::Cover::CoverPhoto]
+          # @return [GoogleAPI::Apis::PlusV1::Person::Cover::CoverPhoto]
           attr_accessor :cover_photo
         
           # The layout of the cover art. Possible values include, but are not limited to,
@@ -1664,7 +1664,7 @@ module Google
           
           # Extra information about the cover photo.
           class CoverInfo
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The difference between the left position of the cover image and the actual
             # displayed cover image. Only valid for banner layout.
@@ -1691,7 +1691,7 @@ module Google
           
           # The person's primary cover image.
           class CoverPhoto
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The height of the image.
             # Corresponds to the JSON property `height`
@@ -1723,7 +1723,7 @@ module Google
         
         # 
         class Email
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The type of address. Possible values include, but are not limited to, the
           # following values:
@@ -1753,7 +1753,7 @@ module Google
         
         # The representation of the person's profile photo.
         class Image
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Whether the person's profile photo is the default one
           # Corresponds to the JSON property `isDefault`
@@ -1781,7 +1781,7 @@ module Google
         
         # An object representation of the individual components of a person's name.
         class Name
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The family name (last name) of this person.
           # Corresponds to the JSON property `familyName`
@@ -1830,7 +1830,7 @@ module Google
         
         # 
         class Organization
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The department within the organization. Deprecated.
           # Corresponds to the JSON property `department`
@@ -1902,7 +1902,7 @@ module Google
         
         # 
         class PlacesLived
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # If "true", this place of residence is this person's primary residence.
           # Corresponds to the JSON property `primary`
@@ -1929,7 +1929,7 @@ module Google
         
         # 
         class Url
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The label of the URL.
           # Corresponds to the JSON property `label`
@@ -1966,11 +1966,11 @@ module Google
       
       # 
       class Place
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The physical address of the place.
         # Corresponds to the JSON property `address`
-        # @return [Google::Apis::PlusV1::Place::Address]
+        # @return [GoogleAPI::Apis::PlusV1::Place::Address]
         attr_accessor :address
       
         # The display name of the place.
@@ -1990,7 +1990,7 @@ module Google
       
         # The position of the place.
         # Corresponds to the JSON property `position`
-        # @return [Google::Apis::PlusV1::Place::Position]
+        # @return [GoogleAPI::Apis::PlusV1::Place::Position]
         attr_accessor :position
       
         def initialize(**args)
@@ -2008,7 +2008,7 @@ module Google
         
         # The physical address of the place.
         class Address
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The formatted address for display.
           # Corresponds to the JSON property `formatted`
@@ -2027,7 +2027,7 @@ module Google
         
         # The position of the place.
         class Position
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The latitude of this position.
           # Corresponds to the JSON property `latitude`
@@ -2053,7 +2053,7 @@ module Google
       
       # 
       class PlusAclentryResource
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A descriptive name for this entry. Suitable for display.
         # Corresponds to the JSON property `displayName`

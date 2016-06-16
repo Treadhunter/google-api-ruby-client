@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module PagespeedonlineV2
       # PageSpeed Insights API
@@ -28,11 +28,11 @@ module Google
       # @example
       #    require 'google/apis/pagespeedonline_v2'
       #
-      #    Pagespeedonline = Google::Apis::PagespeedonlineV2 # Alias the module
+      #    Pagespeedonline = GoogleAPI::Apis::PagespeedonlineV2 # Alias the module
       #    service = Pagespeedonline::PagespeedonlineService.new
       #
       # @see https://developers.google.com/speed/docs/insights/v2/getting-started
-      class PagespeedonlineService < Google::Apis::Core::BaseService
+      class PagespeedonlineService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -78,22 +78,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PagespeedonlineV2::Result] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PagespeedonlineV2::Result] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PagespeedonlineV2::Result]
+        # @return [GoogleAPI::Apis::PagespeedonlineV2::Result]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def run_pagespeed(url, filter_third_party_resources: nil, locale: nil, rule: nil, screenshot: nil, strategy: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'runPagespeed', options)
-          command.response_representation = Google::Apis::PagespeedonlineV2::Result::Representation
-          command.response_class = Google::Apis::PagespeedonlineV2::Result
+          command.response_representation = GoogleAPI::Apis::PagespeedonlineV2::Result::Representation
+          command.response_class = GoogleAPI::Apis::PagespeedonlineV2::Result
           command.query['filter_third_party_resources'] = filter_third_party_resources unless filter_third_party_resources.nil?
           command.query['locale'] = locale unless locale.nil?
           command.query['rule'] = rule unless rule.nil?

@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AdsensehostV4_1
       # AdSense Host API
@@ -28,11 +28,11 @@ module Google
       # @example
       #    require 'google/apis/adsensehost_v4_1'
       #
-      #    Adsensehost = Google::Apis::AdsensehostV4_1 # Alias the module
+      #    Adsensehost = GoogleAPI::Apis::AdsensehostV4_1 # Alias the module
       #    service = Adsensehost::AdSenseHostService.new
       #
       # @see https://developers.google.com/adsense/host/
-      class AdSenseHostService < Google::Apis::Core::BaseService
+      class AdSenseHostService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -65,22 +65,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::Account] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::Account] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::Account]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::Account]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_account(account_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::Account::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::Account
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::Account::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::Account
           command.params['accountId'] = account_id unless account_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -100,22 +100,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::Accounts] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::Accounts] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::Accounts]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::Accounts]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_accounts(filter_ad_client_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::Accounts::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::Accounts
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::Accounts::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::Accounts
           command.query['filterAdClientId'] = filter_ad_client_id unless filter_ad_client_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -138,22 +138,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::AdClient] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::AdClient] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::AdClient]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::AdClient]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_account_ad_client(account_id, ad_client_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/adclients/{adClientId}', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::AdClient::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::AdClient
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::AdClient::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::AdClient
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -180,22 +180,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::AdClients] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::AdClients] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::AdClients]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::AdClients]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_account_ad_clients(account_id, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/adclients', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::AdClients::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::AdClients
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::AdClients::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::AdClients
           command.params['accountId'] = account_id unless account_id.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -221,22 +221,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::AdUnit] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::AdUnit] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::AdUnit]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::AdUnit]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_account_ad_unit(account_id, ad_client_id, ad_unit_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::AdUnit::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::AdUnit
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::AdUnit::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::AdUnit
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.params['adUnitId'] = ad_unit_id unless ad_unit_id.nil?
@@ -262,22 +262,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::AdUnit] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::AdUnit] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::AdUnit]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::AdUnit]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_account_ad_unit(account_id, ad_client_id, ad_unit_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::AdUnit::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::AdUnit
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::AdUnit::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::AdUnit
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.params['adUnitId'] = ad_unit_id unless ad_unit_id.nil?
@@ -306,22 +306,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::AdCode] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::AdCode] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::AdCode]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::AdCode]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_account_ad_unit_ad_code(account_id, ad_client_id, ad_unit_id, host_custom_channel_id: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}/adcode', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::AdCode::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::AdCode
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::AdCode::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::AdCode
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.params['adUnitId'] = ad_unit_id unless ad_unit_id.nil?
@@ -337,7 +337,7 @@ module Google
         #   Account which will contain the ad unit.
         # @param [String] ad_client_id
         #   Ad client into which to insert the ad unit.
-        # @param [Google::Apis::AdsensehostV4_1::AdUnit] ad_unit_object
+        # @param [GoogleAPI::Apis::AdsensehostV4_1::AdUnit] ad_unit_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -347,24 +347,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::AdUnit] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::AdUnit] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::AdUnit]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::AdUnit]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_account_ad_unit(account_id, ad_client_id, ad_unit_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'accounts/{accountId}/adclients/{adClientId}/adunits', options)
-          command.request_representation = Google::Apis::AdsensehostV4_1::AdUnit::Representation
+          command.request_representation = GoogleAPI::Apis::AdsensehostV4_1::AdUnit::Representation
           command.request_object = ad_unit_object
-          command.response_representation = Google::Apis::AdsensehostV4_1::AdUnit::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::AdUnit
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::AdUnit::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::AdUnit
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -394,22 +394,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::AdUnits] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::AdUnits] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::AdUnits]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::AdUnits]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_account_ad_units(account_id, ad_client_id, include_inactive: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/adclients/{adClientId}/adunits', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::AdUnits::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::AdUnits
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::AdUnits::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::AdUnits
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.query['includeInactive'] = include_inactive unless include_inactive.nil?
@@ -429,7 +429,7 @@ module Google
         #   Ad client which contains the ad unit.
         # @param [String] ad_unit_id
         #   Ad unit to get.
-        # @param [Google::Apis::AdsensehostV4_1::AdUnit] ad_unit_object
+        # @param [GoogleAPI::Apis::AdsensehostV4_1::AdUnit] ad_unit_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -439,24 +439,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::AdUnit] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::AdUnit] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::AdUnit]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::AdUnit]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_account_ad_unit(account_id, ad_client_id, ad_unit_id, ad_unit_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'accounts/{accountId}/adclients/{adClientId}/adunits', options)
-          command.request_representation = Google::Apis::AdsensehostV4_1::AdUnit::Representation
+          command.request_representation = GoogleAPI::Apis::AdsensehostV4_1::AdUnit::Representation
           command.request_object = ad_unit_object
-          command.response_representation = Google::Apis::AdsensehostV4_1::AdUnit::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::AdUnit
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::AdUnit::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::AdUnit
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.query['adUnitId'] = ad_unit_id unless ad_unit_id.nil?
@@ -471,7 +471,7 @@ module Google
         #   Account which contains the ad client.
         # @param [String] ad_client_id
         #   Ad client which contains the ad unit.
-        # @param [Google::Apis::AdsensehostV4_1::AdUnit] ad_unit_object
+        # @param [GoogleAPI::Apis::AdsensehostV4_1::AdUnit] ad_unit_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -481,24 +481,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::AdUnit] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::AdUnit] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::AdUnit]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::AdUnit]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_account_ad_unit(account_id, ad_client_id, ad_unit_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'accounts/{accountId}/adclients/{adClientId}/adunits', options)
-          command.request_representation = Google::Apis::AdsensehostV4_1::AdUnit::Representation
+          command.request_representation = GoogleAPI::Apis::AdsensehostV4_1::AdUnit::Representation
           command.request_object = ad_unit_object
-          command.response_representation = Google::Apis::AdsensehostV4_1::AdUnit::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::AdUnit
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::AdUnit::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::AdUnit
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -542,22 +542,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::Report] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::Report] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::Report]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::Report]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def generate_account_report(account_id, start_date, end_date, dimension: nil, filter: nil, locale: nil, max_results: nil, metric: nil, sort: nil, start_index: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/reports', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::Report::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::Report
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::Report::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::Report
           command.params['accountId'] = account_id unless account_id.nil?
           command.query['dimension'] = dimension unless dimension.nil?
           command.query['endDate'] = end_date unless end_date.nil?
@@ -586,22 +586,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::AdClient] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::AdClient] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::AdClient]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::AdClient]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_ad_client(ad_client_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'adclients/{adClientId}', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::AdClient::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::AdClient
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::AdClient::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::AdClient
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -625,22 +625,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::AdClients] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::AdClients] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::AdClients]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::AdClients]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_ad_clients(max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'adclients', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::AdClients::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::AdClients
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::AdClients::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::AdClients
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -668,22 +668,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::AssociationSession] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::AssociationSession] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::AssociationSession]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::AssociationSession]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def start_association_session(product_code, website_url, user_locale: nil, website_locale: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'associationsessions/start', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::AssociationSession::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::AssociationSession
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::AssociationSession::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::AssociationSession
           command.query['productCode'] = product_code unless product_code.nil?
           command.query['userLocale'] = user_locale unless user_locale.nil?
           command.query['websiteLocale'] = website_locale unless website_locale.nil?
@@ -707,22 +707,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::AssociationSession] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::AssociationSession] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::AssociationSession]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::AssociationSession]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def verify_association_session(token, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'associationsessions/verify', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::AssociationSession::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::AssociationSession
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::AssociationSession::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::AssociationSession
           command.query['token'] = token unless token.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -744,22 +744,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::CustomChannel] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::CustomChannel] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::CustomChannel]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::CustomChannel]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_custom_channel(ad_client_id, custom_channel_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'adclients/{adClientId}/customchannels/{customChannelId}', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::CustomChannel::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::CustomChannel
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::CustomChannel::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::CustomChannel
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.params['customChannelId'] = custom_channel_id unless custom_channel_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -782,22 +782,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::CustomChannel] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::CustomChannel] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::CustomChannel]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::CustomChannel]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_custom_channel(ad_client_id, custom_channel_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'adclients/{adClientId}/customchannels/{customChannelId}', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::CustomChannel::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::CustomChannel
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::CustomChannel::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::CustomChannel
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.params['customChannelId'] = custom_channel_id unless custom_channel_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -809,7 +809,7 @@ module Google
         # Add a new custom channel to the host AdSense account.
         # @param [String] ad_client_id
         #   Ad client to which the new custom channel will be added.
-        # @param [Google::Apis::AdsensehostV4_1::CustomChannel] custom_channel_object
+        # @param [GoogleAPI::Apis::AdsensehostV4_1::CustomChannel] custom_channel_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -819,24 +819,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::CustomChannel] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::CustomChannel] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::CustomChannel]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::CustomChannel]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_custom_channel(ad_client_id, custom_channel_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'adclients/{adClientId}/customchannels', options)
-          command.request_representation = Google::Apis::AdsensehostV4_1::CustomChannel::Representation
+          command.request_representation = GoogleAPI::Apis::AdsensehostV4_1::CustomChannel::Representation
           command.request_object = custom_channel_object
-          command.response_representation = Google::Apis::AdsensehostV4_1::CustomChannel::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::CustomChannel
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::CustomChannel::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::CustomChannel
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -863,22 +863,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::CustomChannels] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::CustomChannels] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::CustomChannels]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::CustomChannels]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_custom_channels(ad_client_id, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'adclients/{adClientId}/customchannels', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::CustomChannels::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::CustomChannels
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::CustomChannels::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::CustomChannels
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -894,7 +894,7 @@ module Google
         #   Ad client in which the custom channel will be updated.
         # @param [String] custom_channel_id
         #   Custom channel to get.
-        # @param [Google::Apis::AdsensehostV4_1::CustomChannel] custom_channel_object
+        # @param [GoogleAPI::Apis::AdsensehostV4_1::CustomChannel] custom_channel_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -904,24 +904,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::CustomChannel] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::CustomChannel] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::CustomChannel]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::CustomChannel]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_custom_channel(ad_client_id, custom_channel_id, custom_channel_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'adclients/{adClientId}/customchannels', options)
-          command.request_representation = Google::Apis::AdsensehostV4_1::CustomChannel::Representation
+          command.request_representation = GoogleAPI::Apis::AdsensehostV4_1::CustomChannel::Representation
           command.request_object = custom_channel_object
-          command.response_representation = Google::Apis::AdsensehostV4_1::CustomChannel::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::CustomChannel
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::CustomChannel::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::CustomChannel
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.query['customChannelId'] = custom_channel_id unless custom_channel_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -933,7 +933,7 @@ module Google
         # Update a custom channel in the host AdSense account.
         # @param [String] ad_client_id
         #   Ad client in which the custom channel will be updated.
-        # @param [Google::Apis::AdsensehostV4_1::CustomChannel] custom_channel_object
+        # @param [GoogleAPI::Apis::AdsensehostV4_1::CustomChannel] custom_channel_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -943,24 +943,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::CustomChannel] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::CustomChannel] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::CustomChannel]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::CustomChannel]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_custom_channel(ad_client_id, custom_channel_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'adclients/{adClientId}/customchannels', options)
-          command.request_representation = Google::Apis::AdsensehostV4_1::CustomChannel::Representation
+          command.request_representation = GoogleAPI::Apis::AdsensehostV4_1::CustomChannel::Representation
           command.request_object = custom_channel_object
-          command.response_representation = Google::Apis::AdsensehostV4_1::CustomChannel::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::CustomChannel
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::CustomChannel::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::CustomChannel
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -1001,22 +1001,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::Report] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::Report] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::Report]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::Report]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def generate_report(start_date, end_date, dimension: nil, filter: nil, locale: nil, max_results: nil, metric: nil, sort: nil, start_index: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'reports', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::Report::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::Report
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::Report::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::Report
           command.query['dimension'] = dimension unless dimension.nil?
           command.query['endDate'] = end_date unless end_date.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -1046,22 +1046,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::UrlChannel] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::UrlChannel] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::UrlChannel]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::UrlChannel]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_url_channel(ad_client_id, url_channel_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'adclients/{adClientId}/urlchannels/{urlChannelId}', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::UrlChannel::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::UrlChannel
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::UrlChannel::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::UrlChannel
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.params['urlChannelId'] = url_channel_id unless url_channel_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1073,7 +1073,7 @@ module Google
         # Add a new URL channel to the host AdSense account.
         # @param [String] ad_client_id
         #   Ad client to which the new URL channel will be added.
-        # @param [Google::Apis::AdsensehostV4_1::UrlChannel] url_channel_object
+        # @param [GoogleAPI::Apis::AdsensehostV4_1::UrlChannel] url_channel_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1083,24 +1083,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::UrlChannel] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::UrlChannel] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::UrlChannel]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::UrlChannel]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_url_channel(ad_client_id, url_channel_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'adclients/{adClientId}/urlchannels', options)
-          command.request_representation = Google::Apis::AdsensehostV4_1::UrlChannel::Representation
+          command.request_representation = GoogleAPI::Apis::AdsensehostV4_1::UrlChannel::Representation
           command.request_object = url_channel_object
-          command.response_representation = Google::Apis::AdsensehostV4_1::UrlChannel::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::UrlChannel
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::UrlChannel::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::UrlChannel
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -1126,22 +1126,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdsensehostV4_1::UrlChannels] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdsensehostV4_1::UrlChannels] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdsensehostV4_1::UrlChannels]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::UrlChannels]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_url_channels(ad_client_id, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'adclients/{adClientId}/urlchannels', options)
-          command.response_representation = Google::Apis::AdsensehostV4_1::UrlChannels::Representation
-          command.response_class = Google::Apis::AdsensehostV4_1::UrlChannels
+          command.response_representation = GoogleAPI::Apis::AdsensehostV4_1::UrlChannels::Representation
+          command.response_class = GoogleAPI::Apis::AdsensehostV4_1::UrlChannels
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['pageToken'] = page_token unless page_token.nil?

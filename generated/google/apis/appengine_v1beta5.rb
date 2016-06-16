@@ -16,7 +16,7 @@ require 'google/apis/appengine_v1beta5/service.rb'
 require 'google/apis/appengine_v1beta5/classes.rb'
 require 'google/apis/appengine_v1beta5/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Google App Engine Admin API
     #

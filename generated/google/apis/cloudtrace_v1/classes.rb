@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CloudtraceV1
       
       # The response message for the `ListTraces` method.
       class ListTracesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of trace records returned.
         # Corresponds to the JSON property `traces`
-        # @return [Array<Google::Apis::CloudtraceV1::Trace>]
+        # @return [Array<GoogleAPI::Apis::CloudtraceV1::Trace>]
         attr_accessor :traces
       
         # If defined, indicates that there are more traces that match the request and
@@ -53,7 +53,7 @@ module Google
       # It consists of a set of spans, each of which represent a single timed event
       # within the operation.
       class Trace
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Project ID of the Cloud project where the trace data is stored.
         # Corresponds to the JSON property `projectId`
@@ -68,7 +68,7 @@ module Google
       
         # Collection of spans in the trace.
         # Corresponds to the JSON property `spans`
-        # @return [Array<Google::Apis::CloudtraceV1::TraceSpan>]
+        # @return [Array<GoogleAPI::Apis::CloudtraceV1::TraceSpan>]
         attr_accessor :spans
       
         def initialize(**args)
@@ -89,7 +89,7 @@ module Google
       # suboperations. Spans do not need to be contiguous. There may be gaps between
       # spans in a trace.
       class TraceSpan
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifier for the span. This identifier must be unique within a trace.
         # Corresponds to the JSON property `spanId`
@@ -150,11 +150,11 @@ module Google
       
       # List of new or updated traces.
       class Traces
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of traces.
         # Corresponds to the JSON property `traces`
-        # @return [Array<Google::Apis::CloudtraceV1::Trace>]
+        # @return [Array<GoogleAPI::Apis::CloudtraceV1::Trace>]
         attr_accessor :traces
       
         def initialize(**args)
@@ -173,7 +173,7 @@ module Google
       # protobuf.Empty) returns (google.protobuf.Empty); ` The JSON representation for
       # `Empty` is empty JSON object ````.
       class Empty
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)

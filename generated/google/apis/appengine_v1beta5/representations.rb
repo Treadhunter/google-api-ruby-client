@@ -18,227 +18,227 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AppengineV1beta5
       
       class Operation
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Status
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListOperationsResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Application
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UrlDispatchRule
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Version
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AutomaticScaling
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class CpuUtilization
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class RequestUtilization
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DiskUtilization
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class NetworkUtilization
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class BasicScaling
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ManualScaling
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Network
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Resources
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UrlMap
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class StaticFilesHandler
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ScriptHandler
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ApiEndpointHandler
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ErrorHandler
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Library
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ApiConfigHandler
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class HealthCheck
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Deployment
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class FileInfo
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ContainerInfo
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SourceReference
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListVersionsResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Service
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TrafficSplit
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListServicesResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListInstancesResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Instance
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class OperationMetadata
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class OperationMetadataV1Beta5
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Operation
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :name, as: 'name'
           hash :metadata, as: 'metadata'
           property :done, as: 'done'
-          property :error, as: 'error', class: Google::Apis::AppengineV1beta5::Status, decorator: Google::Apis::AppengineV1beta5::Status::Representation
+          property :error, as: 'error', class: GoogleAPI::Apis::AppengineV1beta5::Status, decorator: GoogleAPI::Apis::AppengineV1beta5::Status::Representation
       
           hash :response, as: 'response'
         end
@@ -246,7 +246,7 @@ module Google
       
       class Status
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :code, as: 'code'
           property :message, as: 'message'
           collection :details, as: 'details'
@@ -255,8 +255,8 @@ module Google
       
       class ListOperationsResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :operations, as: 'operations', class: Google::Apis::AppengineV1beta5::Operation, decorator: Google::Apis::AppengineV1beta5::Operation::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :operations, as: 'operations', class: GoogleAPI::Apis::AppengineV1beta5::Operation, decorator: GoogleAPI::Apis::AppengineV1beta5::Operation::Representation
       
           property :next_page_token, as: 'nextPageToken'
         end
@@ -264,10 +264,10 @@ module Google
       
       class Application
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :name, as: 'name'
           property :id, as: 'id'
-          collection :dispatch_rules, as: 'dispatchRules', class: Google::Apis::AppengineV1beta5::UrlDispatchRule, decorator: Google::Apis::AppengineV1beta5::UrlDispatchRule::Representation
+          collection :dispatch_rules, as: 'dispatchRules', class: GoogleAPI::Apis::AppengineV1beta5::UrlDispatchRule, decorator: GoogleAPI::Apis::AppengineV1beta5::UrlDispatchRule::Representation
       
           property :auth_domain, as: 'authDomain'
           property :location, as: 'location'
@@ -280,7 +280,7 @@ module Google
       
       class UrlDispatchRule
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :domain, as: 'domain'
           property :path, as: 'path'
           property :service, as: 'service'
@@ -289,20 +289,20 @@ module Google
       
       class Version
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :name, as: 'name'
           property :id, as: 'id'
-          property :automatic_scaling, as: 'automaticScaling', class: Google::Apis::AppengineV1beta5::AutomaticScaling, decorator: Google::Apis::AppengineV1beta5::AutomaticScaling::Representation
+          property :automatic_scaling, as: 'automaticScaling', class: GoogleAPI::Apis::AppengineV1beta5::AutomaticScaling, decorator: GoogleAPI::Apis::AppengineV1beta5::AutomaticScaling::Representation
       
-          property :basic_scaling, as: 'basicScaling', class: Google::Apis::AppengineV1beta5::BasicScaling, decorator: Google::Apis::AppengineV1beta5::BasicScaling::Representation
+          property :basic_scaling, as: 'basicScaling', class: GoogleAPI::Apis::AppengineV1beta5::BasicScaling, decorator: GoogleAPI::Apis::AppengineV1beta5::BasicScaling::Representation
       
-          property :manual_scaling, as: 'manualScaling', class: Google::Apis::AppengineV1beta5::ManualScaling, decorator: Google::Apis::AppengineV1beta5::ManualScaling::Representation
+          property :manual_scaling, as: 'manualScaling', class: GoogleAPI::Apis::AppengineV1beta5::ManualScaling, decorator: GoogleAPI::Apis::AppengineV1beta5::ManualScaling::Representation
       
           collection :inbound_services, as: 'inboundServices'
           property :instance_class, as: 'instanceClass'
-          property :network, as: 'network', class: Google::Apis::AppengineV1beta5::Network, decorator: Google::Apis::AppengineV1beta5::Network::Representation
+          property :network, as: 'network', class: GoogleAPI::Apis::AppengineV1beta5::Network, decorator: GoogleAPI::Apis::AppengineV1beta5::Network::Representation
       
-          property :resources, as: 'resources', class: Google::Apis::AppengineV1beta5::Resources, decorator: Google::Apis::AppengineV1beta5::Resources::Representation
+          property :resources, as: 'resources', class: GoogleAPI::Apis::AppengineV1beta5::Resources, decorator: GoogleAPI::Apis::AppengineV1beta5::Resources::Representation
       
           property :runtime, as: 'runtime'
           property :threadsafe, as: 'threadsafe'
@@ -313,29 +313,29 @@ module Google
           property :deployer, as: 'deployer'
           property :creation_time, as: 'creationTime'
           property :disk_usage_bytes, as: 'diskUsageBytes'
-          collection :handlers, as: 'handlers', class: Google::Apis::AppengineV1beta5::UrlMap, decorator: Google::Apis::AppengineV1beta5::UrlMap::Representation
+          collection :handlers, as: 'handlers', class: GoogleAPI::Apis::AppengineV1beta5::UrlMap, decorator: GoogleAPI::Apis::AppengineV1beta5::UrlMap::Representation
       
-          collection :error_handlers, as: 'errorHandlers', class: Google::Apis::AppengineV1beta5::ErrorHandler, decorator: Google::Apis::AppengineV1beta5::ErrorHandler::Representation
+          collection :error_handlers, as: 'errorHandlers', class: GoogleAPI::Apis::AppengineV1beta5::ErrorHandler, decorator: GoogleAPI::Apis::AppengineV1beta5::ErrorHandler::Representation
       
-          collection :libraries, as: 'libraries', class: Google::Apis::AppengineV1beta5::Library, decorator: Google::Apis::AppengineV1beta5::Library::Representation
+          collection :libraries, as: 'libraries', class: GoogleAPI::Apis::AppengineV1beta5::Library, decorator: GoogleAPI::Apis::AppengineV1beta5::Library::Representation
       
-          property :api_config, as: 'apiConfig', class: Google::Apis::AppengineV1beta5::ApiConfigHandler, decorator: Google::Apis::AppengineV1beta5::ApiConfigHandler::Representation
+          property :api_config, as: 'apiConfig', class: GoogleAPI::Apis::AppengineV1beta5::ApiConfigHandler, decorator: GoogleAPI::Apis::AppengineV1beta5::ApiConfigHandler::Representation
       
           hash :env_variables, as: 'envVariables'
           property :default_expiration, as: 'defaultExpiration'
-          property :health_check, as: 'healthCheck', class: Google::Apis::AppengineV1beta5::HealthCheck, decorator: Google::Apis::AppengineV1beta5::HealthCheck::Representation
+          property :health_check, as: 'healthCheck', class: GoogleAPI::Apis::AppengineV1beta5::HealthCheck, decorator: GoogleAPI::Apis::AppengineV1beta5::HealthCheck::Representation
       
           property :nobuild_files_regex, as: 'nobuildFilesRegex'
-          property :deployment, as: 'deployment', class: Google::Apis::AppengineV1beta5::Deployment, decorator: Google::Apis::AppengineV1beta5::Deployment::Representation
+          property :deployment, as: 'deployment', class: GoogleAPI::Apis::AppengineV1beta5::Deployment, decorator: GoogleAPI::Apis::AppengineV1beta5::Deployment::Representation
       
         end
       end
       
       class AutomaticScaling
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :cool_down_period, as: 'coolDownPeriod'
-          property :cpu_utilization, as: 'cpuUtilization', class: Google::Apis::AppengineV1beta5::CpuUtilization, decorator: Google::Apis::AppengineV1beta5::CpuUtilization::Representation
+          property :cpu_utilization, as: 'cpuUtilization', class: GoogleAPI::Apis::AppengineV1beta5::CpuUtilization, decorator: GoogleAPI::Apis::AppengineV1beta5::CpuUtilization::Representation
       
           property :max_concurrent_requests, as: 'maxConcurrentRequests'
           property :max_idle_instances, as: 'maxIdleInstances'
@@ -344,18 +344,18 @@ module Google
           property :min_idle_instances, as: 'minIdleInstances'
           property :min_total_instances, as: 'minTotalInstances'
           property :min_pending_latency, as: 'minPendingLatency'
-          property :request_utilization, as: 'requestUtilization', class: Google::Apis::AppengineV1beta5::RequestUtilization, decorator: Google::Apis::AppengineV1beta5::RequestUtilization::Representation
+          property :request_utilization, as: 'requestUtilization', class: GoogleAPI::Apis::AppengineV1beta5::RequestUtilization, decorator: GoogleAPI::Apis::AppengineV1beta5::RequestUtilization::Representation
       
-          property :disk_utilization, as: 'diskUtilization', class: Google::Apis::AppengineV1beta5::DiskUtilization, decorator: Google::Apis::AppengineV1beta5::DiskUtilization::Representation
+          property :disk_utilization, as: 'diskUtilization', class: GoogleAPI::Apis::AppengineV1beta5::DiskUtilization, decorator: GoogleAPI::Apis::AppengineV1beta5::DiskUtilization::Representation
       
-          property :network_utilization, as: 'networkUtilization', class: Google::Apis::AppengineV1beta5::NetworkUtilization, decorator: Google::Apis::AppengineV1beta5::NetworkUtilization::Representation
+          property :network_utilization, as: 'networkUtilization', class: GoogleAPI::Apis::AppengineV1beta5::NetworkUtilization, decorator: GoogleAPI::Apis::AppengineV1beta5::NetworkUtilization::Representation
       
         end
       end
       
       class CpuUtilization
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :aggregation_window_length, as: 'aggregationWindowLength'
           property :target_utilization, as: 'targetUtilization'
         end
@@ -363,7 +363,7 @@ module Google
       
       class RequestUtilization
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :target_request_count_per_sec, as: 'targetRequestCountPerSec'
           property :target_concurrent_requests, as: 'targetConcurrentRequests'
         end
@@ -371,7 +371,7 @@ module Google
       
       class DiskUtilization
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :target_write_bytes_per_sec, as: 'targetWriteBytesPerSec'
           property :target_write_ops_per_sec, as: 'targetWriteOpsPerSec'
           property :target_read_bytes_per_sec, as: 'targetReadBytesPerSec'
@@ -381,7 +381,7 @@ module Google
       
       class NetworkUtilization
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :target_sent_bytes_per_sec, as: 'targetSentBytesPerSec'
           property :target_sent_packets_per_sec, as: 'targetSentPacketsPerSec'
           property :target_received_bytes_per_sec, as: 'targetReceivedBytesPerSec'
@@ -391,7 +391,7 @@ module Google
       
       class BasicScaling
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :idle_timeout, as: 'idleTimeout'
           property :max_instances, as: 'maxInstances'
         end
@@ -399,14 +399,14 @@ module Google
       
       class ManualScaling
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :instances, as: 'instances'
         end
       end
       
       class Network
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :forwarded_ports, as: 'forwardedPorts'
           property :instance_tag, as: 'instanceTag'
           property :name, as: 'name'
@@ -415,7 +415,7 @@ module Google
       
       class Resources
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :cpu, as: 'cpu'
           property :disk_gb, as: 'diskGb'
           property :memory_gb, as: 'memoryGb'
@@ -424,13 +424,13 @@ module Google
       
       class UrlMap
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :url_regex, as: 'urlRegex'
-          property :static_files, as: 'staticFiles', class: Google::Apis::AppengineV1beta5::StaticFilesHandler, decorator: Google::Apis::AppengineV1beta5::StaticFilesHandler::Representation
+          property :static_files, as: 'staticFiles', class: GoogleAPI::Apis::AppengineV1beta5::StaticFilesHandler, decorator: GoogleAPI::Apis::AppengineV1beta5::StaticFilesHandler::Representation
       
-          property :script, as: 'script', class: Google::Apis::AppengineV1beta5::ScriptHandler, decorator: Google::Apis::AppengineV1beta5::ScriptHandler::Representation
+          property :script, as: 'script', class: GoogleAPI::Apis::AppengineV1beta5::ScriptHandler, decorator: GoogleAPI::Apis::AppengineV1beta5::ScriptHandler::Representation
       
-          property :api_endpoint, as: 'apiEndpoint', class: Google::Apis::AppengineV1beta5::ApiEndpointHandler, decorator: Google::Apis::AppengineV1beta5::ApiEndpointHandler::Representation
+          property :api_endpoint, as: 'apiEndpoint', class: GoogleAPI::Apis::AppengineV1beta5::ApiEndpointHandler, decorator: GoogleAPI::Apis::AppengineV1beta5::ApiEndpointHandler::Representation
       
           property :security_level, as: 'securityLevel'
           property :login, as: 'login'
@@ -441,7 +441,7 @@ module Google
       
       class StaticFilesHandler
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :path, as: 'path'
           property :upload_path_regex, as: 'uploadPathRegex'
           hash :http_headers, as: 'httpHeaders'
@@ -454,21 +454,21 @@ module Google
       
       class ScriptHandler
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :script_path, as: 'scriptPath'
         end
       end
       
       class ApiEndpointHandler
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :script_path, as: 'scriptPath'
         end
       end
       
       class ErrorHandler
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :error_code, as: 'errorCode'
           property :static_file, as: 'staticFile'
           property :mime_type, as: 'mimeType'
@@ -477,7 +477,7 @@ module Google
       
       class Library
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :name, as: 'name'
           property :version, as: 'version'
         end
@@ -485,7 +485,7 @@ module Google
       
       class ApiConfigHandler
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :auth_fail_action, as: 'authFailAction'
           property :login, as: 'login'
           property :script, as: 'script'
@@ -496,7 +496,7 @@ module Google
       
       class HealthCheck
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :disable_health_check, as: 'disableHealthCheck'
           property :host, as: 'host'
           property :healthy_threshold, as: 'healthyThreshold'
@@ -509,19 +509,19 @@ module Google
       
       class Deployment
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          hash :files, as: 'files', class: Google::Apis::AppengineV1beta5::FileInfo, decorator: Google::Apis::AppengineV1beta5::FileInfo::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          hash :files, as: 'files', class: GoogleAPI::Apis::AppengineV1beta5::FileInfo, decorator: GoogleAPI::Apis::AppengineV1beta5::FileInfo::Representation
       
-          property :container, as: 'container', class: Google::Apis::AppengineV1beta5::ContainerInfo, decorator: Google::Apis::AppengineV1beta5::ContainerInfo::Representation
+          property :container, as: 'container', class: GoogleAPI::Apis::AppengineV1beta5::ContainerInfo, decorator: GoogleAPI::Apis::AppengineV1beta5::ContainerInfo::Representation
       
-          collection :source_references, as: 'sourceReferences', class: Google::Apis::AppengineV1beta5::SourceReference, decorator: Google::Apis::AppengineV1beta5::SourceReference::Representation
+          collection :source_references, as: 'sourceReferences', class: GoogleAPI::Apis::AppengineV1beta5::SourceReference, decorator: GoogleAPI::Apis::AppengineV1beta5::SourceReference::Representation
       
         end
       end
       
       class FileInfo
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :source_url, as: 'sourceUrl'
           property :sha1_sum, as: 'sha1Sum'
           property :mime_type, as: 'mimeType'
@@ -530,14 +530,14 @@ module Google
       
       class ContainerInfo
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :image, as: 'image'
         end
       end
       
       class SourceReference
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :repository, as: 'repository'
           property :revision_id, as: 'revisionId'
         end
@@ -545,8 +545,8 @@ module Google
       
       class ListVersionsResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :versions, as: 'versions', class: Google::Apis::AppengineV1beta5::Version, decorator: Google::Apis::AppengineV1beta5::Version::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :versions, as: 'versions', class: GoogleAPI::Apis::AppengineV1beta5::Version, decorator: GoogleAPI::Apis::AppengineV1beta5::Version::Representation
       
           property :next_page_token, as: 'nextPageToken'
         end
@@ -554,17 +554,17 @@ module Google
       
       class Service
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :name, as: 'name'
           property :id, as: 'id'
-          property :split, as: 'split', class: Google::Apis::AppengineV1beta5::TrafficSplit, decorator: Google::Apis::AppengineV1beta5::TrafficSplit::Representation
+          property :split, as: 'split', class: GoogleAPI::Apis::AppengineV1beta5::TrafficSplit, decorator: GoogleAPI::Apis::AppengineV1beta5::TrafficSplit::Representation
       
         end
       end
       
       class TrafficSplit
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :shard_by, as: 'shardBy'
           hash :allocations, as: 'allocations'
         end
@@ -572,8 +572,8 @@ module Google
       
       class ListServicesResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :services, as: 'services', class: Google::Apis::AppengineV1beta5::Service, decorator: Google::Apis::AppengineV1beta5::Service::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :services, as: 'services', class: GoogleAPI::Apis::AppengineV1beta5::Service, decorator: GoogleAPI::Apis::AppengineV1beta5::Service::Representation
       
           property :next_page_token, as: 'nextPageToken'
         end
@@ -581,8 +581,8 @@ module Google
       
       class ListInstancesResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :instances, as: 'instances', class: Google::Apis::AppengineV1beta5::Instance, decorator: Google::Apis::AppengineV1beta5::Instance::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :instances, as: 'instances', class: GoogleAPI::Apis::AppengineV1beta5::Instance, decorator: GoogleAPI::Apis::AppengineV1beta5::Instance::Representation
       
           property :next_page_token, as: 'nextPageToken'
         end
@@ -590,7 +590,7 @@ module Google
       
       class Instance
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :name, as: 'name'
           property :id, as: 'id'
           property :app_engine_release, as: 'appEngineRelease'
@@ -611,7 +611,7 @@ module Google
       
       class OperationMetadata
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :operation_type, as: 'operationType'
           property :insert_time, as: 'insertTime'
           property :end_time, as: 'endTime'
@@ -623,7 +623,7 @@ module Google
       
       class OperationMetadataV1Beta5
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :method_prop, as: 'method'
           property :insert_time, as: 'insertTime'
           property :end_time, as: 'endTime'

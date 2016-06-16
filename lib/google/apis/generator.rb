@@ -19,16 +19,16 @@ require 'google/apis/generator/template'
 require 'active_support/inflector'
 require 'yaml'
 
-module Google
+module GoogleAPI
   module Apis
     # Generates ruby classes for APIs from discovery documents
     # @private
     class Generator
-      Discovery = Google::Apis::DiscoveryV1
+      Discovery = GoogleAPI::Apis::DiscoveryV1
 
       # Load templates
       def initialize(api_names: nil)
-        @names = Google::Apis::Generator::Names.new(api_names || File.join(Google::Apis::ROOT, 'api_names.yaml'))
+        @names = GoogleAPI::Apis::Generator::Names.new(api_names || File.join(GoogleAPI::Apis::ROOT, 'api_names.yaml'))
         @module_template = Template.load('module.rb')
         @service_template = Template.load('service.rb')
         @classes_template = Template.load('classes.rb')

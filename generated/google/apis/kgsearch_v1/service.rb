@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module KgsearchV1
       # Knowledge Graph Search API
@@ -28,11 +28,11 @@ module Google
       # @example
       #    require 'google/apis/kgsearch_v1'
       #
-      #    Kgsearch = Google::Apis::KgsearchV1 # Alias the module
+      #    Kgsearch = GoogleAPI::Apis::KgsearchV1 # Alias the module
       #    service = Kgsearch::KgsearchService.new
       #
       # @see https://developers.google.com/knowledge-graph/
-      class KgsearchService < Google::Apis::Core::BaseService
+      class KgsearchService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -71,22 +71,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::KgsearchV1::SearchResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::KgsearchV1::SearchResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::KgsearchV1::SearchResponse]
+        # @return [GoogleAPI::Apis::KgsearchV1::SearchResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def search_entities(query: nil, ids: nil, languages: nil, types: nil, indent: nil, prefix: nil, limit: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/entities:search', options)
-          command.response_representation = Google::Apis::KgsearchV1::SearchResponse::Representation
-          command.response_class = Google::Apis::KgsearchV1::SearchResponse
+          command.response_representation = GoogleAPI::Apis::KgsearchV1::SearchResponse::Representation
+          command.response_class = GoogleAPI::Apis::KgsearchV1::SearchResponse
           command.query['query'] = query unless query.nil?
           command.query['ids'] = ids unless ids.nil?
           command.query['languages'] = languages unless languages.nil?

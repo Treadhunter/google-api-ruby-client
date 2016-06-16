@@ -18,18 +18,18 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ReplicapoolV1beta2
       
       # An Instance Group Manager resource.
       class InstanceGroupManager
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The autohealing policy for this managed instance group. You can specify only
         # one value.
         # Corresponds to the JSON property `autoHealingPolicies`
-        # @return [Array<Google::Apis::ReplicapoolV1beta2::ReplicaPoolAutoHealingPolicy>]
+        # @return [Array<GoogleAPI::Apis::ReplicapoolV1beta2::ReplicaPoolAutoHealingPolicy>]
         attr_accessor :auto_healing_policies
       
         # The base instance name to use for instances in this group. The value must be a
@@ -138,7 +138,7 @@ module Google
       
       # 
       class InstanceGroupManagerList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Unique identifier for the resource; defined by the server (output only).
         # Corresponds to the JSON property `id`
@@ -147,7 +147,7 @@ module Google
       
         # A list of instance resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ReplicapoolV1beta2::InstanceGroupManager>]
+        # @return [Array<GoogleAPI::Apis::ReplicapoolV1beta2::InstanceGroupManager>]
         attr_accessor :items
       
         # Type of resource.
@@ -181,7 +181,7 @@ module Google
       
       # 
       class AbandonInstancesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The names of one or more instances to abandon. For example:
         # ` 'instances': [ 'instance-c3po', 'instance-r2d2' ] `
@@ -201,7 +201,7 @@ module Google
       
       # 
       class DeleteInstancesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Names of instances to delete.
         # Example: 'instance-foo', 'instance-bar'
@@ -221,7 +221,7 @@ module Google
       
       # 
       class RecreateInstancesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The names of one or more instances to recreate. For example:
         # ` 'instances': [ 'instance-c3po', 'instance-r2d2' ] `
@@ -241,7 +241,7 @@ module Google
       
       # 
       class SetInstanceTemplateRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The full URL to an Instance Template from which all new instances will be
         # created.
@@ -261,7 +261,7 @@ module Google
       
       # 
       class SetTargetPoolsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The current fingerprint of the Instance Group Manager resource. If this does
         # not match the server-side fingerprint of the resource, then the request will
@@ -290,7 +290,7 @@ module Google
       
       # An operation resource, used to manage asynchronous API requests.
       class Operation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output only] An optional identifier specified by the client when the mutation
         # was initiated. Must be unique for all operation resources in the project.
@@ -313,7 +313,7 @@ module Google
         # [Output Only] If errors occurred during processing of this operation, this
         # field will be populated.
         # Corresponds to the JSON property `error`
-        # @return [Google::Apis::ReplicapoolV1beta2::Operation::Error]
+        # @return [GoogleAPI::Apis::ReplicapoolV1beta2::Operation::Error]
         attr_accessor :error
       
         # [Output only] If operation fails, the HTTP error message returned.
@@ -407,7 +407,7 @@ module Google
       
         # [Output Only] If there are issues with this operation, a warning is returned.
         # Corresponds to the JSON property `warnings`
-        # @return [Array<Google::Apis::ReplicapoolV1beta2::Operation::Warning>]
+        # @return [Array<GoogleAPI::Apis::ReplicapoolV1beta2::Operation::Warning>]
         attr_accessor :warnings
       
         # [Output Only] URL of the zone where the operation resides. Only available when
@@ -449,11 +449,11 @@ module Google
         # [Output Only] If errors occurred during processing of this operation, this
         # field will be populated.
         class Error
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] The array of errors encountered while processing this operation.
           # Corresponds to the JSON property `errors`
-          # @return [Array<Google::Apis::ReplicapoolV1beta2::Operation::Error::Error>]
+          # @return [Array<GoogleAPI::Apis::ReplicapoolV1beta2::Operation::Error::Error>]
           attr_accessor :errors
         
           def initialize(**args)
@@ -467,7 +467,7 @@ module Google
           
           # 
           class Error
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] The error type identifier for this error.
             # Corresponds to the JSON property `code`
@@ -500,7 +500,7 @@ module Google
         
         # 
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output only] The warning type identifier for this warning.
           # Corresponds to the JSON property `code`
@@ -509,7 +509,7 @@ module Google
         
           # [Output only] Metadata for this warning in key:value format.
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ReplicapoolV1beta2::Operation::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ReplicapoolV1beta2::Operation::Warning::Datum>]
           attr_accessor :data
         
           # [Output only] Optional human-readable details for this warning.
@@ -530,7 +530,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] Metadata key for this warning.
             # Corresponds to the JSON property `key`
@@ -557,7 +557,7 @@ module Google
       
       # 
       class OperationList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Unique identifier for the resource; defined by the server (output only).
         # Corresponds to the JSON property `id`
@@ -566,7 +566,7 @@ module Google
       
         # The operation resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ReplicapoolV1beta2::Operation>]
+        # @return [Array<GoogleAPI::Apis::ReplicapoolV1beta2::Operation>]
         attr_accessor :items
       
         # Type of resource.
@@ -600,7 +600,7 @@ module Google
       
       # 
       class ReplicaPoolAutoHealingPolicy
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The action to perform when an instance becomes unhealthy. Possible values are
         # RECREATE or REBOOT. RECREATE replaces an unhealthy instance with a new

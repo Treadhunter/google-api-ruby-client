@@ -16,7 +16,7 @@ require 'google/apis/replicapool_v1beta2/service.rb'
 require 'google/apis/replicapool_v1beta2/classes.rb'
 require 'google/apis/replicapool_v1beta2/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Google Compute Engine Instance Group Manager API
     #

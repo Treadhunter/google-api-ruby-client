@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AdsensehostV4_1
       
       # 
       class Account
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Unique identifier of this account.
         # Corresponds to the JSON property `id`
@@ -61,7 +61,7 @@ module Google
       
       # 
       class Accounts
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of this response for caching purposes.
         # Corresponds to the JSON property `etag`
@@ -70,7 +70,7 @@ module Google
       
         # The accounts returned in this list response.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdsensehostV4_1::Account>]
+        # @return [Array<GoogleAPI::Apis::AdsensehostV4_1::Account>]
         attr_accessor :items
       
         # Kind of list this is, in this case adsensehost#accounts.
@@ -92,7 +92,7 @@ module Google
       
       # 
       class AdClient
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether this ad client is opted in to ARC.
         # Corresponds to the JSON property `arcOptIn`
@@ -138,7 +138,7 @@ module Google
       
       # 
       class AdClients
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of this response for caching purposes.
         # Corresponds to the JSON property `etag`
@@ -147,7 +147,7 @@ module Google
       
         # The ad clients returned in this list response.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdsensehostV4_1::AdClient>]
+        # @return [Array<GoogleAPI::Apis::AdsensehostV4_1::AdClient>]
         attr_accessor :items
       
         # Kind of list this is, in this case adsensehost#adClients.
@@ -176,7 +176,7 @@ module Google
       
       # 
       class AdCode
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ad code snippet.
         # Corresponds to the JSON property `adCode`
@@ -201,12 +201,12 @@ module Google
       
       # 
       class AdStyle
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The colors included in the style. These are represented as six hexadecimal
         # characters, similar to HTML color codes, but without the leading hash.
         # Corresponds to the JSON property `colors`
-        # @return [Google::Apis::AdsensehostV4_1::AdStyle::Colors]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::AdStyle::Colors]
         attr_accessor :colors
       
         # The style of the corners in the ad. Possible values are SQUARE,
@@ -217,7 +217,7 @@ module Google
       
         # The font which is included in the style.
         # Corresponds to the JSON property `font`
-        # @return [Google::Apis::AdsensehostV4_1::AdStyle::Font]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::AdStyle::Font]
         attr_accessor :font
       
         # Kind this is, in this case adsensehost#adStyle.
@@ -240,7 +240,7 @@ module Google
         # The colors included in the style. These are represented as six hexadecimal
         # characters, similar to HTML color codes, but without the leading hash.
         class Colors
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The color of the ad background.
           # Corresponds to the JSON property `background`
@@ -283,7 +283,7 @@ module Google
         
         # The font which is included in the style.
         class Font
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The family of the font. Possible values are: ACCOUNT_DEFAULT_FAMILY,
           # ADSENSE_DEFAULT_FAMILY, ARIAL, TIMES and VERDANA.
@@ -311,7 +311,7 @@ module Google
       
       # 
       class AdUnit
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identity code of this ad unit, not necessarily unique across ad clients.
         # Corresponds to the JSON property `code`
@@ -321,12 +321,12 @@ module Google
         # Settings specific to content ads (AFC) and highend mobile content ads (AFMC -
         # deprecated).
         # Corresponds to the JSON property `contentAdsSettings`
-        # @return [Google::Apis::AdsensehostV4_1::AdUnit::ContentAdsSettings]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::AdUnit::ContentAdsSettings]
         attr_accessor :content_ads_settings
       
         # Custom style information specific to this ad unit.
         # Corresponds to the JSON property `customStyle`
-        # @return [Google::Apis::AdsensehostV4_1::AdStyle]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::AdStyle]
         attr_accessor :custom_style
       
         # Unique identifier of this ad unit. This should be considered an opaque
@@ -342,7 +342,7 @@ module Google
       
         # Settings specific to WAP mobile content ads (AFMC - deprecated).
         # Corresponds to the JSON property `mobileContentAdsSettings`
-        # @return [Google::Apis::AdsensehostV4_1::AdUnit::MobileContentAdsSettings]
+        # @return [GoogleAPI::Apis::AdsensehostV4_1::AdUnit::MobileContentAdsSettings]
         attr_accessor :mobile_content_ads_settings
       
         # Name of this ad unit.
@@ -380,11 +380,11 @@ module Google
         # Settings specific to content ads (AFC) and highend mobile content ads (AFMC -
         # deprecated).
         class ContentAdsSettings
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The backup option to be used in instances where no ad is available.
           # Corresponds to the JSON property `backupOption`
-          # @return [Google::Apis::AdsensehostV4_1::AdUnit::ContentAdsSettings::BackupOption]
+          # @return [GoogleAPI::Apis::AdsensehostV4_1::AdUnit::ContentAdsSettings::BackupOption]
           attr_accessor :backup_option
         
           # Size of this ad unit. Size values are in the form SIZE_`width`_`height`.
@@ -410,7 +410,7 @@ module Google
           
           # The backup option to be used in instances where no ad is available.
           class BackupOption
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Color to use when type is set to COLOR. These are represented as six
             # hexadecimal characters, similar to HTML color codes, but without the leading
@@ -444,7 +444,7 @@ module Google
         
         # Settings specific to WAP mobile content ads (AFMC - deprecated).
         class MobileContentAdsSettings
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The markup language to use for this ad unit.
           # Corresponds to the JSON property `markupLanguage`
@@ -482,7 +482,7 @@ module Google
       
       # 
       class AdUnits
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of this response for caching purposes.
         # Corresponds to the JSON property `etag`
@@ -491,7 +491,7 @@ module Google
       
         # The ad units returned in this list response.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdsensehostV4_1::AdUnit>]
+        # @return [Array<GoogleAPI::Apis::AdsensehostV4_1::AdUnit>]
         attr_accessor :items
       
         # Kind of list this is, in this case adsensehost#adUnits.
@@ -520,7 +520,7 @@ module Google
       
       # 
       class AssociationSession
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Hosted account id of the associated publisher after association. Present if
         # status is ACCEPTED.
@@ -592,7 +592,7 @@ module Google
       
       # 
       class CustomChannel
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Code of this custom channel, not necessarily unique across ad clients.
         # Corresponds to the JSON property `code`
@@ -630,7 +630,7 @@ module Google
       
       # 
       class CustomChannels
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of this response for caching purposes.
         # Corresponds to the JSON property `etag`
@@ -639,7 +639,7 @@ module Google
       
         # The custom channels returned in this list response.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdsensehostV4_1::CustomChannel>]
+        # @return [Array<GoogleAPI::Apis::AdsensehostV4_1::CustomChannel>]
         attr_accessor :items
       
         # Kind of list this is, in this case adsensehost#customChannels.
@@ -668,7 +668,7 @@ module Google
       
       # 
       class Report
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The averages of the report. This is the same length as any other row in the
         # report; cells corresponding to dimension columns are empty.
@@ -680,7 +680,7 @@ module Google
         # of headers; one for each dimension in the request, followed by one for each
         # metric in the request.
         # Corresponds to the JSON property `headers`
-        # @return [Array<Google::Apis::AdsensehostV4_1::Report::Header>]
+        # @return [Array<GoogleAPI::Apis::AdsensehostV4_1::Report::Header>]
         attr_accessor :headers
       
         # Kind this is, in this case adsensehost#report.
@@ -730,7 +730,7 @@ module Google
         
         # 
         class Header
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The currency of this column. Only present if the header type is
           # METRIC_CURRENCY.
@@ -764,7 +764,7 @@ module Google
       
       # 
       class UrlChannel
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Unique identifier of this URL channel. This should be considered an opaque
         # identifier; it is not safe to rely on it being in any particular format.
@@ -797,7 +797,7 @@ module Google
       
       # 
       class UrlChannels
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of this response for caching purposes.
         # Corresponds to the JSON property `etag`
@@ -806,7 +806,7 @@ module Google
       
         # The URL channels returned in this list response.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdsensehostV4_1::UrlChannel>]
+        # @return [Array<GoogleAPI::Apis::AdsensehostV4_1::UrlChannel>]
         attr_accessor :items
       
         # Kind of list this is, in this case adsensehost#urlChannels.

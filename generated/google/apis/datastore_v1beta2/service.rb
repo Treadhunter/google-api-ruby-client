@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module DatastoreV1beta2
       # Google Cloud Datastore API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/datastore_v1beta2'
       #
-      #    Datastore = Google::Apis::DatastoreV1beta2 # Alias the module
+      #    Datastore = GoogleAPI::Apis::DatastoreV1beta2 # Alias the module
       #    service = Datastore::DatastoreService.new
       #
       # @see https://developers.google.com/datastore/
-      class DatastoreService < Google::Apis::Core::BaseService
+      class DatastoreService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -56,7 +56,7 @@ module Google
         # is inserted).
         # @param [String] dataset_id
         #   Identifies the dataset.
-        # @param [Google::Apis::DatastoreV1beta2::AllocateIdsRequest] allocate_ids_request_object
+        # @param [GoogleAPI::Apis::DatastoreV1beta2::AllocateIdsRequest] allocate_ids_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -66,24 +66,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DatastoreV1beta2::AllocateIdsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DatastoreV1beta2::AllocateIdsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DatastoreV1beta2::AllocateIdsResponse]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::AllocateIdsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def allocate_dataset_ids(dataset_id, allocate_ids_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{datasetId}/allocateIds', options)
-          command.request_representation = Google::Apis::DatastoreV1beta2::AllocateIdsRequest::Representation
+          command.request_representation = GoogleAPI::Apis::DatastoreV1beta2::AllocateIdsRequest::Representation
           command.request_object = allocate_ids_request_object
-          command.response_representation = Google::Apis::DatastoreV1beta2::AllocateIdsResponse::Representation
-          command.response_class = Google::Apis::DatastoreV1beta2::AllocateIdsResponse
+          command.response_representation = GoogleAPI::Apis::DatastoreV1beta2::AllocateIdsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DatastoreV1beta2::AllocateIdsResponse
           command.params['datasetId'] = dataset_id unless dataset_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -94,7 +94,7 @@ module Google
         # Begin a new transaction.
         # @param [String] dataset_id
         #   Identifies the dataset.
-        # @param [Google::Apis::DatastoreV1beta2::BeginTransactionRequest] begin_transaction_request_object
+        # @param [GoogleAPI::Apis::DatastoreV1beta2::BeginTransactionRequest] begin_transaction_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -104,24 +104,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DatastoreV1beta2::BeginTransactionResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DatastoreV1beta2::BeginTransactionResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DatastoreV1beta2::BeginTransactionResponse]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::BeginTransactionResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def begin_dataset_transaction(dataset_id, begin_transaction_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{datasetId}/beginTransaction', options)
-          command.request_representation = Google::Apis::DatastoreV1beta2::BeginTransactionRequest::Representation
+          command.request_representation = GoogleAPI::Apis::DatastoreV1beta2::BeginTransactionRequest::Representation
           command.request_object = begin_transaction_request_object
-          command.response_representation = Google::Apis::DatastoreV1beta2::BeginTransactionResponse::Representation
-          command.response_class = Google::Apis::DatastoreV1beta2::BeginTransactionResponse
+          command.response_representation = GoogleAPI::Apis::DatastoreV1beta2::BeginTransactionResponse::Representation
+          command.response_class = GoogleAPI::Apis::DatastoreV1beta2::BeginTransactionResponse
           command.params['datasetId'] = dataset_id unless dataset_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -132,7 +132,7 @@ module Google
         # Commit a transaction, optionally creating, deleting or modifying some entities.
         # @param [String] dataset_id
         #   Identifies the dataset.
-        # @param [Google::Apis::DatastoreV1beta2::CommitRequest] commit_request_object
+        # @param [GoogleAPI::Apis::DatastoreV1beta2::CommitRequest] commit_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -142,24 +142,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DatastoreV1beta2::CommitResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DatastoreV1beta2::CommitResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DatastoreV1beta2::CommitResponse]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::CommitResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def commit_dataset(dataset_id, commit_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{datasetId}/commit', options)
-          command.request_representation = Google::Apis::DatastoreV1beta2::CommitRequest::Representation
+          command.request_representation = GoogleAPI::Apis::DatastoreV1beta2::CommitRequest::Representation
           command.request_object = commit_request_object
-          command.response_representation = Google::Apis::DatastoreV1beta2::CommitResponse::Representation
-          command.response_class = Google::Apis::DatastoreV1beta2::CommitResponse
+          command.response_representation = GoogleAPI::Apis::DatastoreV1beta2::CommitResponse::Representation
+          command.response_class = GoogleAPI::Apis::DatastoreV1beta2::CommitResponse
           command.params['datasetId'] = dataset_id unless dataset_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -170,7 +170,7 @@ module Google
         # Look up some entities by key.
         # @param [String] dataset_id
         #   Identifies the dataset.
-        # @param [Google::Apis::DatastoreV1beta2::LookupRequest] lookup_request_object
+        # @param [GoogleAPI::Apis::DatastoreV1beta2::LookupRequest] lookup_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -180,24 +180,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DatastoreV1beta2::LookupResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DatastoreV1beta2::LookupResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DatastoreV1beta2::LookupResponse]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::LookupResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def lookup_dataset(dataset_id, lookup_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{datasetId}/lookup', options)
-          command.request_representation = Google::Apis::DatastoreV1beta2::LookupRequest::Representation
+          command.request_representation = GoogleAPI::Apis::DatastoreV1beta2::LookupRequest::Representation
           command.request_object = lookup_request_object
-          command.response_representation = Google::Apis::DatastoreV1beta2::LookupResponse::Representation
-          command.response_class = Google::Apis::DatastoreV1beta2::LookupResponse
+          command.response_representation = GoogleAPI::Apis::DatastoreV1beta2::LookupResponse::Representation
+          command.response_class = GoogleAPI::Apis::DatastoreV1beta2::LookupResponse
           command.params['datasetId'] = dataset_id unless dataset_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -208,7 +208,7 @@ module Google
         # Roll back a transaction.
         # @param [String] dataset_id
         #   Identifies the dataset.
-        # @param [Google::Apis::DatastoreV1beta2::RollbackRequest] rollback_request_object
+        # @param [GoogleAPI::Apis::DatastoreV1beta2::RollbackRequest] rollback_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -218,24 +218,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DatastoreV1beta2::RollbackResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DatastoreV1beta2::RollbackResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DatastoreV1beta2::RollbackResponse]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::RollbackResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def rollback_dataset(dataset_id, rollback_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{datasetId}/rollback', options)
-          command.request_representation = Google::Apis::DatastoreV1beta2::RollbackRequest::Representation
+          command.request_representation = GoogleAPI::Apis::DatastoreV1beta2::RollbackRequest::Representation
           command.request_object = rollback_request_object
-          command.response_representation = Google::Apis::DatastoreV1beta2::RollbackResponse::Representation
-          command.response_class = Google::Apis::DatastoreV1beta2::RollbackResponse
+          command.response_representation = GoogleAPI::Apis::DatastoreV1beta2::RollbackResponse::Representation
+          command.response_class = GoogleAPI::Apis::DatastoreV1beta2::RollbackResponse
           command.params['datasetId'] = dataset_id unless dataset_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -246,7 +246,7 @@ module Google
         # Query for entities.
         # @param [String] dataset_id
         #   Identifies the dataset.
-        # @param [Google::Apis::DatastoreV1beta2::RunQueryRequest] run_query_request_object
+        # @param [GoogleAPI::Apis::DatastoreV1beta2::RunQueryRequest] run_query_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -256,24 +256,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DatastoreV1beta2::RunQueryResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DatastoreV1beta2::RunQueryResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DatastoreV1beta2::RunQueryResponse]
+        # @return [GoogleAPI::Apis::DatastoreV1beta2::RunQueryResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def run_dataset_query(dataset_id, run_query_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{datasetId}/runQuery', options)
-          command.request_representation = Google::Apis::DatastoreV1beta2::RunQueryRequest::Representation
+          command.request_representation = GoogleAPI::Apis::DatastoreV1beta2::RunQueryRequest::Representation
           command.request_object = run_query_request_object
-          command.response_representation = Google::Apis::DatastoreV1beta2::RunQueryResponse::Representation
-          command.response_class = Google::Apis::DatastoreV1beta2::RunQueryResponse
+          command.response_representation = GoogleAPI::Apis::DatastoreV1beta2::RunQueryResponse::Representation
+          command.response_class = GoogleAPI::Apis::DatastoreV1beta2::RunQueryResponse
           command.params['datasetId'] = dataset_id unless dataset_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?

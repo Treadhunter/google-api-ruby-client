@@ -17,7 +17,7 @@ require 'google/apis/core/api_command'
 require 'google/apis/core/json_representation'
 require 'hurley/test'
 
-RSpec.describe Google::Apis::Core::HttpCommand do
+RSpec.describe GoogleAPI::Apis::Core::HttpCommand do
   include TestHelpers
   include_context 'HTTP client'
 
@@ -28,7 +28,7 @@ RSpec.describe Google::Apis::Core::HttpCommand do
   end
 
   let(:representer_class) do
-    Class.new(Google::Apis::Core::JsonRepresentation) do
+    Class.new(GoogleAPI::Apis::Core::JsonRepresentation) do
       property :value
     end
   end
@@ -37,7 +37,7 @@ RSpec.describe Google::Apis::Core::HttpCommand do
     let(:command) do
       request = model_class.new
       request.value = 'hello'
-      command = Google::Apis::Core::ApiCommand.new(:post, 'https://www.googleapis.com/zoo/animals')
+      command = GoogleAPI::Apis::Core::ApiCommand.new(:post, 'https://www.googleapis.com/zoo/animals')
       command.request_representation = representer_class
       command.request_object = request
       command
@@ -58,7 +58,7 @@ RSpec.describe Google::Apis::Core::HttpCommand do
 
   context('with a JSON response') do
     let(:command) do
-      command = Google::Apis::Core::ApiCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+      command = GoogleAPI::Apis::Core::ApiCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
       command.response_representation = representer_class
       command.response_class = model_class
       command
@@ -82,7 +82,7 @@ RSpec.describe Google::Apis::Core::HttpCommand do
 
   context('with an invalid content-type response') do
     let(:command) do
-      command = Google::Apis::Core::ApiCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+      command = GoogleAPI::Apis::Core::ApiCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
       command.response_representation = representer_class
       command.response_class = model_class
       command
@@ -102,7 +102,7 @@ RSpec.describe Google::Apis::Core::HttpCommand do
 
   context('with a field parameter') do
     let(:command) do
-      command = Google::Apis::Core::ApiCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+      command = GoogleAPI::Apis::Core::ApiCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
       command.query['fields'] = ':items(:id, :long_name, :a_really_long_name), shouldBeLeftAlone '
       command
     end
@@ -121,7 +121,7 @@ RSpec.describe Google::Apis::Core::HttpCommand do
 
   context('with a rate limit response') do
     let(:command) do
-      Google::Apis::Core::ApiCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+      GoogleAPI::Apis::Core::ApiCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
     end
 
     before(:example) do
@@ -153,7 +153,7 @@ EOF
 
   context('with a client error response') do
     let(:command) do
-      Google::Apis::Core::ApiCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+      GoogleAPI::Apis::Core::ApiCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
     end
 
     before(:example) do
@@ -177,7 +177,7 @@ EOF
     end
 
     it 'should raise client error' do
-      expect { command.execute(client) }.to raise_error(Google::Apis::ClientError)
+      expect { command.execute(client) }.to raise_error(GoogleAPI::Apis::ClientError)
     end
 
     it 'should raise an error with the reason and message' do
@@ -188,7 +188,7 @@ EOF
 
   context('with an empty error body') do
     let(:command) do
-      Google::Apis::Core::ApiCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+      GoogleAPI::Apis::Core::ApiCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
     end
 
     before(:example) do
@@ -199,7 +199,7 @@ EOF
     end
 
     it 'should raise client error' do
-      expect { command.execute(client) }.to raise_error(Google::Apis::ClientError)
+      expect { command.execute(client) }.to raise_error(GoogleAPI::Apis::ClientError)
     end
 
     it 'should use the default error message' do

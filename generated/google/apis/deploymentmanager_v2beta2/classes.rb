@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module DeploymentmanagerV2beta2
       
       # 
       class Deployment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An optional user-provided description of the deployment.
         # Corresponds to the JSON property `description`
@@ -98,12 +98,12 @@ module Google
       
         # 
         # Corresponds to the JSON property `target`
-        # @return [Google::Apis::DeploymentmanagerV2beta2::TargetConfiguration]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2beta2::TargetConfiguration]
         attr_accessor :target
       
         # 
         # Corresponds to the JSON property `update`
-        # @return [Google::Apis::DeploymentmanagerV2beta2::DeploymentUpdate]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2beta2::DeploymentUpdate]
         attr_accessor :update
       
         # [Output Only] Timestamp when the deployment was updated, in RFC3339 text
@@ -134,7 +134,7 @@ module Google
       
       # 
       class DeploymentUpdate
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] List of all errors encountered while trying to enact the update.
         # Corresponds to the JSON property `errors`
@@ -161,11 +161,11 @@ module Google
       # A response containing a partial list of deployments and a page token used to
       # build the next request if the request has been truncated.
       class ListDeploymentsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The deployments contained in this response.
         # Corresponds to the JSON property `deployments`
-        # @return [Array<Google::Apis::DeploymentmanagerV2beta2::Deployment>]
+        # @return [Array<GoogleAPI::Apis::DeploymentmanagerV2beta2::Deployment>]
         attr_accessor :deployments
       
         # [Output Only] A token used to continue a truncated list request.
@@ -186,7 +186,7 @@ module Google
       
       # 
       class ImportFile
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The contents of the file.
         # Corresponds to the JSON property `content`
@@ -211,7 +211,7 @@ module Google
       
       # 
       class Manifest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The YAML configuration for this manifest.
         # Corresponds to the JSON property `config`
@@ -231,7 +231,7 @@ module Google
       
         # [Output Only] The imported files for this manifest.
         # Corresponds to the JSON property `imports`
-        # @return [Array<Google::Apis::DeploymentmanagerV2beta2::ImportFile>]
+        # @return [Array<GoogleAPI::Apis::DeploymentmanagerV2beta2::ImportFile>]
         attr_accessor :imports
       
         # [Output Only] Timestamp when the manifest was created, in RFC3339 text format.
@@ -274,11 +274,11 @@ module Google
       # A response containing a partial list of manifests and a page token used to
       # build the next request if the request has been truncated.
       class ListManifestsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Manifests contained in this list response.
         # Corresponds to the JSON property `manifests`
-        # @return [Array<Google::Apis::DeploymentmanagerV2beta2::Manifest>]
+        # @return [Array<GoogleAPI::Apis::DeploymentmanagerV2beta2::Manifest>]
         attr_accessor :manifests
       
         # [Output Only] A token used to continue a truncated list request.
@@ -299,7 +299,7 @@ module Google
       
       # An Operation resource, used to manage asynchronous API requests.
       class Operation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] An optional identifier specified by the client when the mutation
         # was initiated. Must be unique for all Operation resources in the project.
@@ -321,7 +321,7 @@ module Google
         # [Output Only] If errors are generated during processing of the operation, this
         # field will be populated.
         # Corresponds to the JSON property `error`
-        # @return [Google::Apis::DeploymentmanagerV2beta2::Operation::Error]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2beta2::Operation::Error]
         attr_accessor :error
       
         # [Output Only] If the operation fails, this field contains the HTTP error
@@ -420,7 +420,7 @@ module Google
         # [Output Only] If warning messages are generated during processing of the
         # operation, this field will be populated.
         # Corresponds to the JSON property `warnings`
-        # @return [Array<Google::Apis::DeploymentmanagerV2beta2::Operation::Warning>]
+        # @return [Array<GoogleAPI::Apis::DeploymentmanagerV2beta2::Operation::Warning>]
         attr_accessor :warnings
       
         # [Output Only] URL of the zone where the operation resides.
@@ -461,11 +461,11 @@ module Google
         # [Output Only] If errors are generated during processing of the operation, this
         # field will be populated.
         class Error
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] The array of errors encountered while processing this operation.
           # Corresponds to the JSON property `errors`
-          # @return [Array<Google::Apis::DeploymentmanagerV2beta2::Operation::Error::Error>]
+          # @return [Array<GoogleAPI::Apis::DeploymentmanagerV2beta2::Operation::Error::Error>]
           attr_accessor :errors
         
           def initialize(**args)
@@ -479,7 +479,7 @@ module Google
           
           # 
           class Error
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] The error type identifier for this error.
             # Corresponds to the JSON property `code`
@@ -512,7 +512,7 @@ module Google
         
         # 
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] The warning type identifier for this warning.
           # Corresponds to the JSON property `code`
@@ -521,7 +521,7 @@ module Google
         
           # [Output Only] Metadata for this warning in key: value format.
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::DeploymentmanagerV2beta2::Operation::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::DeploymentmanagerV2beta2::Operation::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] Optional human-readable details for this warning.
@@ -542,7 +542,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key for the warning data.
             # Corresponds to the JSON property `key`
@@ -570,7 +570,7 @@ module Google
       # A response containing a partial list of operations and a page token used to
       # build the next request if the request has been truncated.
       class ListOperationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] A token used to continue a truncated list request.
         # Corresponds to the JSON property `nextPageToken`
@@ -579,7 +579,7 @@ module Google
       
         # [Output Only] Operations contained in this list response.
         # Corresponds to the JSON property `operations`
-        # @return [Array<Google::Apis::DeploymentmanagerV2beta2::Operation>]
+        # @return [Array<GoogleAPI::Apis::DeploymentmanagerV2beta2::Operation>]
         attr_accessor :operations
       
         def initialize(**args)
@@ -595,7 +595,7 @@ module Google
       
       # 
       class Resource
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The evaluated properties of the resource with references
         # expanded. Returned as serialized YAML.
@@ -639,7 +639,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `update`
-        # @return [Google::Apis::DeploymentmanagerV2beta2::ResourceUpdate]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2beta2::ResourceUpdate]
         attr_accessor :update
       
         # [Output Only] Timestamp when the resource was updated, in RFC3339 text format .
@@ -673,7 +673,7 @@ module Google
       
       # 
       class ResourceUpdate
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] List of all errors encountered while trying to enact update.
         # intent.
@@ -727,7 +727,7 @@ module Google
       # A response containing a partial list of resources and a page token used to
       # build the next request if the request has been truncated.
       class ListResourcesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A token used to continue a truncated list request.
         # Corresponds to the JSON property `nextPageToken`
@@ -736,7 +736,7 @@ module Google
       
         # Resources contained in this list response.
         # Corresponds to the JSON property `resources`
-        # @return [Array<Google::Apis::DeploymentmanagerV2beta2::Resource>]
+        # @return [Array<GoogleAPI::Apis::DeploymentmanagerV2beta2::Resource>]
         attr_accessor :resources
       
         def initialize(**args)
@@ -752,7 +752,7 @@ module Google
       
       # 
       class TargetConfiguration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The configuration to use for this deployment.
         # Corresponds to the JSON property `config`
@@ -763,7 +763,7 @@ module Google
         # import templates or other files. For example, you might import a text file in
         # order to use the file in a template.
         # Corresponds to the JSON property `imports`
-        # @return [Array<Google::Apis::DeploymentmanagerV2beta2::ImportFile>]
+        # @return [Array<GoogleAPI::Apis::DeploymentmanagerV2beta2::ImportFile>]
         attr_accessor :imports
       
         def initialize(**args)
@@ -779,7 +779,7 @@ module Google
       
       # A resource type supported by Deployment Manager.
       class Type
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Unique identifier for the resource; defined by the server.
         # Corresponds to the JSON property `id`
@@ -816,7 +816,7 @@ module Google
       
       # A response that returns all Types supported by Deployment Manager
       class ListTypesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A token used to continue a truncated list request.
         # Corresponds to the JSON property `nextPageToken`
@@ -825,7 +825,7 @@ module Google
       
         # [Output Only] A list of resource types supported by Deployment Manager.
         # Corresponds to the JSON property `types`
-        # @return [Array<Google::Apis::DeploymentmanagerV2beta2::Type>]
+        # @return [Array<GoogleAPI::Apis::DeploymentmanagerV2beta2::Type>]
         attr_accessor :types
       
         def initialize(**args)

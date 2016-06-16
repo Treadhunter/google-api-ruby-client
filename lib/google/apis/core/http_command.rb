@@ -23,17 +23,17 @@ require 'hurley_patches'
 require 'google/apis/core/logging'
 require 'pp'
 
-module Google
+module GoogleAPI
   module Apis
     module Core
       # Command for HTTP request/response.
       class HttpCommand
         include Logging
 
-        RETRIABLE_ERRORS = [Google::Apis::ServerError, Google::Apis::RateLimitError, Google::Apis::TransmissionError]
+        RETRIABLE_ERRORS = [GoogleAPI::Apis::ServerError, GoogleAPI::Apis::RateLimitError, GoogleAPI::Apis::TransmissionError]
 
         # Request options
-        # @return [Google::Apis::RequestOptions]
+        # @return [GoogleAPI::Apis::RequestOptions]
         attr_accessor :options
 
         # HTTP request URL
@@ -71,7 +71,7 @@ module Google
         # @param [String, #read] body
         #   Request body
         def initialize(method, url, body: nil)
-          self.options = Google::Apis::RequestOptions.default.dup
+          self.options = GoogleAPI::Apis::RequestOptions.default.dup
           self.url = url
           self.url = Addressable::Template.new(url) if url.is_a?(String)
           self.method = method
@@ -87,9 +87,9 @@ module Google
         #   HTTP client
         # @yield [result, err] Result or error if block supplied
         # @return [Object]
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def execute(client)
           prepare!
           begin
@@ -102,7 +102,7 @@ module Google
               # NotFound, etc
               auth_tries = (try == 1 && authorization_refreshable? ? 2 : 1)
               Retriable.retriable tries: auth_tries,
-                                  on: [Google::Apis::AuthorizationError],
+                                  on: [GoogleAPI::Apis::AuthorizationError],
                                   on_retry: proc { |*| refresh_authorization } do
                 execute_once(client).tap do |result|
                   if block_given?
@@ -172,9 +172,9 @@ module Google
         #  Response body
         # @return [Object]
         #   Response object
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def process_response(status, header, body)
           check_status(status, header, body)
           decode_response_body(header[:content_type], body)
@@ -192,9 +192,9 @@ module Google
         # @param [String] message
         #   Error message text
         # @return [void]
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def check_status(status, header = nil, body = nil, message = nil)
           # TODO: 304 Not Modified depends on context...
           case status
@@ -202,20 +202,20 @@ module Google
             nil
           when 301, 302, 303, 307
             message ||= sprintf('Redirect to %s', header[:location])
-            raise Google::Apis::RedirectError.new(message, status_code: status, header: header, body: body)
+            raise GoogleAPI::Apis::RedirectError.new(message, status_code: status, header: header, body: body)
           when 401
             message ||= 'Unauthorized'
-            raise Google::Apis::AuthorizationError.new(message, status_code: status, header: header, body: body)
+            raise GoogleAPI::Apis::AuthorizationError.new(message, status_code: status, header: header, body: body)
           when 304, 400, 402...500
             message ||= 'Invalid request'
-            raise Google::Apis::ClientError.new(message, status_code: status, header: header, body: body)
+            raise GoogleAPI::Apis::ClientError.new(message, status_code: status, header: header, body: body)
           when 500...600
             message ||= 'Server error'
-            raise Google::Apis::ServerError.new(message, status_code: status, header: header, body: body)
+            raise GoogleAPI::Apis::ServerError.new(message, status_code: status, header: header, body: body)
           else
             logger.warn(sprintf('Encountered unexpected status code %s', status))
             message ||= 'Unknown error'
-            raise Google::Apis::TransmissionError.new(message, status_code: status, header: header, body: body)
+            raise GoogleAPI::Apis::TransmissionError.new(message, status_code: status, header: header, body: body)
           end
         end
 
@@ -251,7 +251,7 @@ module Google
         # @raise [StandardError] if no block
         def error(err, rethrow: false, &block)
           logger.debug { sprintf('Error - %s', PP.pp(err, '')) }
-          err = Google::Apis::TransmissionError.new(err) if err.is_a?(Hurley::ClientError) || err.is_a?(SocketError)
+          err = GoogleAPI::Apis::TransmissionError.new(err) if err.is_a?(Hurley::ClientError) || err.is_a?(SocketError)
           block.call(nil, err) if block_given?
           fail err if rethrow || block.nil?
         end
@@ -262,9 +262,9 @@ module Google
         # @param [Hurley::Client] client
         #   HTTP client
         # @return [Object]
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def execute_once(client)
           body.rewind if body.respond_to?(:rewind)
           begin

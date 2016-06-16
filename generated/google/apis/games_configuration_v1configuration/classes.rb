@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module GamesConfigurationV1configuration
       
       # This is a JSON template for an achievement configuration resource.
       class AchievementConfiguration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of the achievement.
         # Possible values are:
@@ -36,7 +36,7 @@ module Google
       
         # This is a JSON template for an achievement configuration detail.
         # Corresponds to the JSON property `draft`
-        # @return [Google::Apis::GamesConfigurationV1configuration::AchievementConfigurationDetail]
+        # @return [GoogleAPI::Apis::GamesConfigurationV1configuration::AchievementConfigurationDetail]
         attr_accessor :draft
       
         # The ID of the achievement.
@@ -61,7 +61,7 @@ module Google
       
         # This is a JSON template for an achievement configuration detail.
         # Corresponds to the JSON property `published`
-        # @return [Google::Apis::GamesConfigurationV1configuration::AchievementConfigurationDetail]
+        # @return [GoogleAPI::Apis::GamesConfigurationV1configuration::AchievementConfigurationDetail]
         attr_accessor :published
       
         # Steps to unlock. Only applicable to incremental achievements.
@@ -93,11 +93,11 @@ module Google
       
       # This is a JSON template for an achievement configuration detail.
       class AchievementConfigurationDetail
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This is a JSON template for a localized string bundle resource.
         # Corresponds to the JSON property `description`
-        # @return [Google::Apis::GamesConfigurationV1configuration::LocalizedStringBundle]
+        # @return [GoogleAPI::Apis::GamesConfigurationV1configuration::LocalizedStringBundle]
         attr_accessor :description
       
         # The icon url of this achievement. Writes to this field are ignored.
@@ -113,7 +113,7 @@ module Google
       
         # This is a JSON template for a localized string bundle resource.
         # Corresponds to the JSON property `name`
-        # @return [Google::Apis::GamesConfigurationV1configuration::LocalizedStringBundle]
+        # @return [GoogleAPI::Apis::GamesConfigurationV1configuration::LocalizedStringBundle]
         attr_accessor :name
       
         # Point value for the achievement.
@@ -143,11 +143,11 @@ module Google
       
       # This is a JSON template for a ListConfigurations response.
       class ListAchievementConfigurationResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The achievement configurations.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GamesConfigurationV1configuration::AchievementConfiguration>]
+        # @return [Array<GoogleAPI::Apis::GamesConfigurationV1configuration::AchievementConfiguration>]
         attr_accessor :items
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -175,36 +175,36 @@ module Google
       
       # This is a JSON template for a number affix resource.
       class GamesNumberAffixConfiguration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This is a JSON template for a localized string bundle resource.
         # Corresponds to the JSON property `few`
-        # @return [Google::Apis::GamesConfigurationV1configuration::LocalizedStringBundle]
+        # @return [GoogleAPI::Apis::GamesConfigurationV1configuration::LocalizedStringBundle]
         attr_accessor :few
       
         # This is a JSON template for a localized string bundle resource.
         # Corresponds to the JSON property `many`
-        # @return [Google::Apis::GamesConfigurationV1configuration::LocalizedStringBundle]
+        # @return [GoogleAPI::Apis::GamesConfigurationV1configuration::LocalizedStringBundle]
         attr_accessor :many
       
         # This is a JSON template for a localized string bundle resource.
         # Corresponds to the JSON property `one`
-        # @return [Google::Apis::GamesConfigurationV1configuration::LocalizedStringBundle]
+        # @return [GoogleAPI::Apis::GamesConfigurationV1configuration::LocalizedStringBundle]
         attr_accessor :one
       
         # This is a JSON template for a localized string bundle resource.
         # Corresponds to the JSON property `other`
-        # @return [Google::Apis::GamesConfigurationV1configuration::LocalizedStringBundle]
+        # @return [GoogleAPI::Apis::GamesConfigurationV1configuration::LocalizedStringBundle]
         attr_accessor :other
       
         # This is a JSON template for a localized string bundle resource.
         # Corresponds to the JSON property `two`
-        # @return [Google::Apis::GamesConfigurationV1configuration::LocalizedStringBundle]
+        # @return [GoogleAPI::Apis::GamesConfigurationV1configuration::LocalizedStringBundle]
         attr_accessor :two
       
         # This is a JSON template for a localized string bundle resource.
         # Corresponds to the JSON property `zero`
-        # @return [Google::Apis::GamesConfigurationV1configuration::LocalizedStringBundle]
+        # @return [GoogleAPI::Apis::GamesConfigurationV1configuration::LocalizedStringBundle]
         attr_accessor :zero
       
         def initialize(**args)
@@ -224,7 +224,7 @@ module Google
       
       # This is a JSON template for a number format resource.
       class GamesNumberFormatConfiguration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The curreny code string. Only used for CURRENCY format type.
         # Corresponds to the JSON property `currencyCode`
@@ -249,7 +249,7 @@ module Google
       
         # This is a JSON template for a number affix resource.
         # Corresponds to the JSON property `suffix`
-        # @return [Google::Apis::GamesConfigurationV1configuration::GamesNumberAffixConfiguration]
+        # @return [GoogleAPI::Apis::GamesConfigurationV1configuration::GamesNumberAffixConfiguration]
         attr_accessor :suffix
       
         def initialize(**args)
@@ -267,7 +267,7 @@ module Google
       
       # This is a JSON template for an image configuration resource.
       class ImageConfiguration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The image type for the image.
         # Corresponds to the JSON property `imageType`
@@ -305,11 +305,11 @@ module Google
       
       # This is a JSON template for an leaderboard configuration resource.
       class LeaderboardConfiguration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This is a JSON template for a leaderboard configuration detail.
         # Corresponds to the JSON property `draft`
-        # @return [Google::Apis::GamesConfigurationV1configuration::LeaderboardConfigurationDetail]
+        # @return [GoogleAPI::Apis::GamesConfigurationV1configuration::LeaderboardConfigurationDetail]
         attr_accessor :draft
       
         # The ID of the leaderboard.
@@ -325,7 +325,7 @@ module Google
       
         # This is a JSON template for a leaderboard configuration detail.
         # Corresponds to the JSON property `published`
-        # @return [Google::Apis::GamesConfigurationV1configuration::LeaderboardConfigurationDetail]
+        # @return [GoogleAPI::Apis::GamesConfigurationV1configuration::LeaderboardConfigurationDetail]
         attr_accessor :published
       
         # Maximum score that can be posted to this leaderboard.
@@ -370,7 +370,7 @@ module Google
       
       # This is a JSON template for a leaderboard configuration detail.
       class LeaderboardConfigurationDetail
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The icon url of this leaderboard. Writes to this field are ignored.
         # Corresponds to the JSON property `iconUrl`
@@ -385,12 +385,12 @@ module Google
       
         # This is a JSON template for a localized string bundle resource.
         # Corresponds to the JSON property `name`
-        # @return [Google::Apis::GamesConfigurationV1configuration::LocalizedStringBundle]
+        # @return [GoogleAPI::Apis::GamesConfigurationV1configuration::LocalizedStringBundle]
         attr_accessor :name
       
         # This is a JSON template for a number format resource.
         # Corresponds to the JSON property `scoreFormat`
-        # @return [Google::Apis::GamesConfigurationV1configuration::GamesNumberFormatConfiguration]
+        # @return [GoogleAPI::Apis::GamesConfigurationV1configuration::GamesNumberFormatConfiguration]
         attr_accessor :score_format
       
         # The sort rank of this leaderboard. Writes to this field are ignored.
@@ -414,11 +414,11 @@ module Google
       
       # This is a JSON template for a ListConfigurations response.
       class ListLeaderboardConfigurationResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The leaderboard configurations.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GamesConfigurationV1configuration::LeaderboardConfiguration>]
+        # @return [Array<GoogleAPI::Apis::GamesConfigurationV1configuration::LeaderboardConfiguration>]
         attr_accessor :items
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -446,7 +446,7 @@ module Google
       
       # This is a JSON template for a localized string resource.
       class LocalizedString
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string gamesConfiguration#localizedString.
@@ -478,7 +478,7 @@ module Google
       
       # This is a JSON template for a localized string bundle resource.
       class LocalizedStringBundle
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string gamesConfiguration#localizedStringBundle.
@@ -488,7 +488,7 @@ module Google
       
         # The locale strings.
         # Corresponds to the JSON property `translations`
-        # @return [Array<Google::Apis::GamesConfigurationV1configuration::LocalizedString>]
+        # @return [Array<GoogleAPI::Apis::GamesConfigurationV1configuration::LocalizedString>]
         attr_accessor :translations
       
         def initialize(**args)

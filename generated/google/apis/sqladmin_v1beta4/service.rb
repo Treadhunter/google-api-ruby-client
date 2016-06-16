@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module SqladminV1beta4
       # Cloud SQL Administration API
@@ -28,11 +28,11 @@ module Google
       # @example
       #    require 'google/apis/sqladmin_v1beta4'
       #
-      #    Sqladmin = Google::Apis::SqladminV1beta4 # Alias the module
+      #    Sqladmin = GoogleAPI::Apis::SqladminV1beta4 # Alias the module
       #    service = Sqladmin::SQLAdminService.new
       #
       # @see https://cloud.google.com/sql/docs/reference/latest
-      class SQLAdminService < Google::Apis::Core::BaseService
+      class SQLAdminService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -70,22 +70,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_backup_run(project, instance, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'projects/{project}/instances/{instance}/backupRuns/{id}', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.params['id'] = id unless id.nil?
@@ -111,22 +111,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::BackupRun] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::BackupRun] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::BackupRun]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::BackupRun]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_backup_run(project, instance, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'projects/{project}/instances/{instance}/backupRuns/{id}', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::BackupRun::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::BackupRun
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::BackupRun::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::BackupRun
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.params['id'] = id unless id.nil?
@@ -156,22 +156,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::ListBackupRunsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::ListBackupRunsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::ListBackupRunsResponse]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::ListBackupRunsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_backup_runs(project, instance, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'projects/{project}/instances/{instance}/backupRuns', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::ListBackupRunsResponse::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::ListBackupRunsResponse
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::ListBackupRunsResponse::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::ListBackupRunsResponse
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -198,22 +198,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_database(project, instance, database, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'projects/{project}/instances/{instance}/databases/{database}', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.params['database'] = database unless database.nil?
@@ -240,22 +240,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Database] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Database] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Database]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Database]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_database(project, instance, database, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'projects/{project}/instances/{instance}/databases/{database}', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::Database::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Database
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Database::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Database
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.params['database'] = database unless database.nil?
@@ -271,7 +271,7 @@ module Google
         #   Project ID of the project that contains the instance.
         # @param [String] instance
         #   Database instance ID. This does not include the project ID.
-        # @param [Google::Apis::SqladminV1beta4::Database] database_object
+        # @param [GoogleAPI::Apis::SqladminV1beta4::Database] database_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -281,24 +281,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_database(project, instance, database_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'projects/{project}/instances/{instance}/databases', options)
-          command.request_representation = Google::Apis::SqladminV1beta4::Database::Representation
+          command.request_representation = GoogleAPI::Apis::SqladminV1beta4::Database::Representation
           command.request_object = database_object
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -321,22 +321,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::ListDatabasesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::ListDatabasesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::ListDatabasesResponse]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::ListDatabasesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_databases(project, instance, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'projects/{project}/instances/{instance}/databases', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::ListDatabasesResponse::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::ListDatabasesResponse
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::ListDatabasesResponse::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::ListDatabasesResponse
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -353,7 +353,7 @@ module Google
         #   Database instance ID. This does not include the project ID.
         # @param [String] database
         #   Name of the database to be updated in the instance.
-        # @param [Google::Apis::SqladminV1beta4::Database] database_object
+        # @param [GoogleAPI::Apis::SqladminV1beta4::Database] database_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -363,24 +363,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_database(project, instance, database, database_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'projects/{project}/instances/{instance}/databases/{database}', options)
-          command.request_representation = Google::Apis::SqladminV1beta4::Database::Representation
+          command.request_representation = GoogleAPI::Apis::SqladminV1beta4::Database::Representation
           command.request_object = database_object
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.params['database'] = database unless database.nil?
@@ -398,7 +398,7 @@ module Google
         #   Database instance ID. This does not include the project ID.
         # @param [String] database
         #   Name of the database to be updated in the instance.
-        # @param [Google::Apis::SqladminV1beta4::Database] database_object
+        # @param [GoogleAPI::Apis::SqladminV1beta4::Database] database_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -408,24 +408,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_database(project, instance, database, database_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'projects/{project}/instances/{instance}/databases/{database}', options)
-          command.request_representation = Google::Apis::SqladminV1beta4::Database::Representation
+          command.request_representation = GoogleAPI::Apis::SqladminV1beta4::Database::Representation
           command.request_object = database_object
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.params['database'] = database unless database.nil?
@@ -445,22 +445,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::ListFlagsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::ListFlagsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::ListFlagsResponse]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::ListFlagsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_flags(fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'flags', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::ListFlagsResponse::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::ListFlagsResponse
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::ListFlagsResponse::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::ListFlagsResponse
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['userIp'] = user_ip unless user_ip.nil?
@@ -474,7 +474,7 @@ module Google
         # @param [String] instance
         #   The ID of the Cloud SQL instance to be cloned (source). This does not include
         #   the project ID.
-        # @param [Google::Apis::SqladminV1beta4::CloneInstancesRequest] clone_instances_request_object
+        # @param [GoogleAPI::Apis::SqladminV1beta4::CloneInstancesRequest] clone_instances_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -484,24 +484,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def clone_instance(project, instance, clone_instances_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'projects/{project}/instances/{instance}/clone', options)
-          command.request_representation = Google::Apis::SqladminV1beta4::CloneInstancesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::SqladminV1beta4::CloneInstancesRequest::Representation
           command.request_object = clone_instances_request_object
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -524,22 +524,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_instance(project, instance, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'projects/{project}/instances/{instance}', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -554,7 +554,7 @@ module Google
         #   Project ID of the project that contains the instance to be exported.
         # @param [String] instance
         #   Cloud SQL instance ID. This does not include the project ID.
-        # @param [Google::Apis::SqladminV1beta4::ExportInstancesRequest] export_instances_request_object
+        # @param [GoogleAPI::Apis::SqladminV1beta4::ExportInstancesRequest] export_instances_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -564,24 +564,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def export_instance(project, instance, export_instances_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'projects/{project}/instances/{instance}/export', options)
-          command.request_representation = Google::Apis::SqladminV1beta4::ExportInstancesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::SqladminV1beta4::ExportInstancesRequest::Representation
           command.request_object = export_instances_request_object
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -595,7 +595,7 @@ module Google
         #   ID of the project that contains the read replica.
         # @param [String] instance
         #   Cloud SQL instance ID. This does not include the project ID.
-        # @param [Google::Apis::SqladminV1beta4::InstancesFailoverRequest] instances_failover_request_object
+        # @param [GoogleAPI::Apis::SqladminV1beta4::InstancesFailoverRequest] instances_failover_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -605,24 +605,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def failover_instance(project, instance, instances_failover_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'projects/{project}/instances/{instance}/failover', options)
-          command.request_representation = Google::Apis::SqladminV1beta4::InstancesFailoverRequest::Representation
+          command.request_representation = GoogleAPI::Apis::SqladminV1beta4::InstancesFailoverRequest::Representation
           command.request_object = instances_failover_request_object
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -645,22 +645,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::DatabaseInstance] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::DatabaseInstance] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::DatabaseInstance]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::DatabaseInstance]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_instance(project, instance, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'projects/{project}/instances/{instance}', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::DatabaseInstance::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::DatabaseInstance
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::DatabaseInstance::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::DatabaseInstance
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -675,7 +675,7 @@ module Google
         #   Project ID of the project that contains the instance.
         # @param [String] instance
         #   Cloud SQL instance ID. This does not include the project ID.
-        # @param [Google::Apis::SqladminV1beta4::ImportInstancesRequest] import_instances_request_object
+        # @param [GoogleAPI::Apis::SqladminV1beta4::ImportInstancesRequest] import_instances_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -685,24 +685,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def import_instance(project, instance, import_instances_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'projects/{project}/instances/{instance}/import', options)
-          command.request_representation = Google::Apis::SqladminV1beta4::ImportInstancesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::SqladminV1beta4::ImportInstancesRequest::Representation
           command.request_object = import_instances_request_object
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -715,7 +715,7 @@ module Google
         # @param [String] project
         #   Project ID of the project to which the newly created Cloud SQL instances
         #   should belong.
-        # @param [Google::Apis::SqladminV1beta4::DatabaseInstance] database_instance_object
+        # @param [GoogleAPI::Apis::SqladminV1beta4::DatabaseInstance] database_instance_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -725,24 +725,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_instance(project, database_instance_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'projects/{project}/instances', options)
-          command.request_representation = Google::Apis::SqladminV1beta4::DatabaseInstance::Representation
+          command.request_representation = GoogleAPI::Apis::SqladminV1beta4::DatabaseInstance::Representation
           command.request_object = database_instance_object
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -768,22 +768,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::ListInstancesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::ListInstancesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::ListInstancesResponse]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::ListInstancesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_instances(project, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'projects/{project}/instances', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::ListInstancesResponse::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::ListInstancesResponse
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::ListInstancesResponse::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::ListInstancesResponse
           command.params['project'] = project unless project.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -800,7 +800,7 @@ module Google
         #   Project ID of the project that contains the instance.
         # @param [String] instance
         #   Cloud SQL instance ID. This does not include the project ID.
-        # @param [Google::Apis::SqladminV1beta4::DatabaseInstance] database_instance_object
+        # @param [GoogleAPI::Apis::SqladminV1beta4::DatabaseInstance] database_instance_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -810,24 +810,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_instance(project, instance, database_instance_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'projects/{project}/instances/{instance}', options)
-          command.request_representation = Google::Apis::SqladminV1beta4::DatabaseInstance::Representation
+          command.request_representation = GoogleAPI::Apis::SqladminV1beta4::DatabaseInstance::Representation
           command.request_object = database_instance_object
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -850,22 +850,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def promote_instance_replica(project, instance, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'projects/{project}/instances/{instance}/promoteReplica', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -891,22 +891,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def reset_instance_ssl_config(project, instance, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'projects/{project}/instances/{instance}/resetSslConfig', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -929,22 +929,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def restart_instance(project, instance, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'projects/{project}/instances/{instance}/restart', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -958,7 +958,7 @@ module Google
         #   Project ID of the project that contains the instance.
         # @param [String] instance
         #   Cloud SQL instance ID. This does not include the project ID.
-        # @param [Google::Apis::SqladminV1beta4::RestoreInstancesBackupRequest] restore_instances_backup_request_object
+        # @param [GoogleAPI::Apis::SqladminV1beta4::RestoreInstancesBackupRequest] restore_instances_backup_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -968,24 +968,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def restore_instance_backup(project, instance, restore_instances_backup_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'projects/{project}/instances/{instance}/restoreBackup', options)
-          command.request_representation = Google::Apis::SqladminV1beta4::RestoreInstancesBackupRequest::Representation
+          command.request_representation = GoogleAPI::Apis::SqladminV1beta4::RestoreInstancesBackupRequest::Representation
           command.request_object = restore_instances_backup_request_object
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1008,22 +1008,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def start_instance_replica(project, instance, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'projects/{project}/instances/{instance}/startReplica', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1046,22 +1046,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def stop_instance_replica(project, instance, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'projects/{project}/instances/{instance}/stopReplica', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1077,7 +1077,7 @@ module Google
         #   Project ID of the project that contains the instance.
         # @param [String] instance
         #   Cloud SQL instance ID. This does not include the project ID.
-        # @param [Google::Apis::SqladminV1beta4::DatabaseInstance] database_instance_object
+        # @param [GoogleAPI::Apis::SqladminV1beta4::DatabaseInstance] database_instance_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1087,24 +1087,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_instance(project, instance, database_instance_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'projects/{project}/instances/{instance}', options)
-          command.request_representation = Google::Apis::SqladminV1beta4::DatabaseInstance::Representation
+          command.request_representation = GoogleAPI::Apis::SqladminV1beta4::DatabaseInstance::Representation
           command.request_object = database_instance_object
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1127,22 +1127,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_operation(project, operation, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'projects/{project}/operations/{operation}', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['operation'] = operation unless operation.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1171,22 +1171,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::ListOperationsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::ListOperationsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::ListOperationsResponse]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::ListOperationsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_operations(project, instance, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'projects/{project}/operations', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::ListOperationsResponse::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::ListOperationsResponse
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::ListOperationsResponse::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::ListOperationsResponse
           command.params['project'] = project unless project.nil?
           command.query['instance'] = instance unless instance.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -1204,7 +1204,7 @@ module Google
         #   Project ID of the Cloud SQL project.
         # @param [String] instance
         #   Cloud SQL instance ID. This does not include the project ID.
-        # @param [Google::Apis::SqladminV1beta4::SslCertsCreateEphemeralRequest] ssl_certs_create_ephemeral_request_object
+        # @param [GoogleAPI::Apis::SqladminV1beta4::SslCertsCreateEphemeralRequest] ssl_certs_create_ephemeral_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1214,24 +1214,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::SslCert] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::SslCert] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::SslCert]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::SslCert]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_ssl_cert_ephemeral(project, instance, ssl_certs_create_ephemeral_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'projects/{project}/instances/{instance}/createEphemeral', options)
-          command.request_representation = Google::Apis::SqladminV1beta4::SslCertsCreateEphemeralRequest::Representation
+          command.request_representation = GoogleAPI::Apis::SqladminV1beta4::SslCertsCreateEphemeralRequest::Representation
           command.request_object = ssl_certs_create_ephemeral_request_object
-          command.response_representation = Google::Apis::SqladminV1beta4::SslCert::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::SslCert
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::SslCert::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::SslCert
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1257,22 +1257,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_ssl_cert(project, instance, sha1_fingerprint, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'projects/{project}/instances/{instance}/sslCerts/{sha1Fingerprint}', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.params['sha1Fingerprint'] = sha1_fingerprint unless sha1_fingerprint.nil?
@@ -1300,22 +1300,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::SslCert] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::SslCert] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::SslCert]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::SslCert]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_ssl_cert(project, instance, sha1_fingerprint, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'projects/{project}/instances/{instance}/sslCerts/{sha1Fingerprint}', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::SslCert::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::SslCert
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::SslCert::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::SslCert
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.params['sha1Fingerprint'] = sha1_fingerprint unless sha1_fingerprint.nil?
@@ -1333,7 +1333,7 @@ module Google
         #   should belong.
         # @param [String] instance
         #   Cloud SQL instance ID. This does not include the project ID.
-        # @param [Google::Apis::SqladminV1beta4::InsertSslCertsRequest] insert_ssl_certs_request_object
+        # @param [GoogleAPI::Apis::SqladminV1beta4::InsertSslCertsRequest] insert_ssl_certs_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1343,24 +1343,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::InsertSslCertsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::InsertSslCertsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::InsertSslCertsResponse]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::InsertSslCertsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_ssl_cert(project, instance, insert_ssl_certs_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'projects/{project}/instances/{instance}/sslCerts', options)
-          command.request_representation = Google::Apis::SqladminV1beta4::InsertSslCertsRequest::Representation
+          command.request_representation = GoogleAPI::Apis::SqladminV1beta4::InsertSslCertsRequest::Representation
           command.request_object = insert_ssl_certs_request_object
-          command.response_representation = Google::Apis::SqladminV1beta4::InsertSslCertsResponse::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::InsertSslCertsResponse
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::InsertSslCertsResponse::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::InsertSslCertsResponse
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1383,22 +1383,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::ListSslCertsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::ListSslCertsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::ListSslCertsResponse]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::ListSslCertsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_ssl_certs(project, instance, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'projects/{project}/instances/{instance}/sslCerts', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::ListSslCertsResponse::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::ListSslCertsResponse
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::ListSslCertsResponse::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::ListSslCertsResponse
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1420,22 +1420,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::ListTiersResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::ListTiersResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::ListTiersResponse]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::ListTiersResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_tiers(project, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'projects/{project}/tiers', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::ListTiersResponse::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::ListTiersResponse
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::ListTiersResponse::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::ListTiersResponse
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -1461,22 +1461,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_user(project, instance, host, name, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'projects/{project}/instances/{instance}/users', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['host'] = host unless host.nil?
@@ -1492,7 +1492,7 @@ module Google
         #   Project ID of the project that contains the instance.
         # @param [String] instance
         #   Database instance ID. This does not include the project ID.
-        # @param [Google::Apis::SqladminV1beta4::User] user_object
+        # @param [GoogleAPI::Apis::SqladminV1beta4::User] user_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1502,24 +1502,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_user(project, instance, user_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'projects/{project}/instances/{instance}/users', options)
-          command.request_representation = Google::Apis::SqladminV1beta4::User::Representation
+          command.request_representation = GoogleAPI::Apis::SqladminV1beta4::User::Representation
           command.request_object = user_object
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1542,22 +1542,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::ListUsersResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::ListUsersResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::ListUsersResponse]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::ListUsersResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_users(project, instance, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'projects/{project}/instances/{instance}/users', options)
-          command.response_representation = Google::Apis::SqladminV1beta4::ListUsersResponse::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::ListUsersResponse
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::ListUsersResponse::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::ListUsersResponse
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1575,7 +1575,7 @@ module Google
         #   Host of the user in the instance.
         # @param [String] name
         #   Name of the user in the instance.
-        # @param [Google::Apis::SqladminV1beta4::User] user_object
+        # @param [GoogleAPI::Apis::SqladminV1beta4::User] user_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1585,24 +1585,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SqladminV1beta4::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SqladminV1beta4::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_user(project, instance, host, name, user_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'projects/{project}/instances/{instance}/users', options)
-          command.request_representation = Google::Apis::SqladminV1beta4::User::Representation
+          command.request_representation = GoogleAPI::Apis::SqladminV1beta4::User::Representation
           command.request_object = user_object
-          command.response_representation = Google::Apis::SqladminV1beta4::Operation::Representation
-          command.response_class = Google::Apis::SqladminV1beta4::Operation
+          command.response_representation = GoogleAPI::Apis::SqladminV1beta4::Operation::Representation
+          command.response_class = GoogleAPI::Apis::SqladminV1beta4::Operation
           command.params['project'] = project unless project.nil?
           command.params['instance'] = instance unless instance.nil?
           command.query['host'] = host unless host.nil?

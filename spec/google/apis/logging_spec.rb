@@ -17,15 +17,15 @@ require 'google/apis'
 require 'google/apis/core/logging'
 
 
-RSpec.describe Google::Apis do
+RSpec.describe GoogleAPI::Apis do
   it 'should have a default logger' do
-    expect(Google::Apis.logger).to be_an_instance_of(Logger)
+    expect(GoogleAPI::Apis.logger).to be_an_instance_of(Logger)
   end
 
   context 'with service' do
     let(:service) do
       Class.new do
-        include Google::Apis::Core::Logging
+        include GoogleAPI::Apis::Core::Logging
       end.new
     end
 
@@ -34,19 +34,19 @@ RSpec.describe Google::Apis do
     end
 
     it 'should use the default logger' do
-      expect(service.logger).to be Google::Apis.logger
+      expect(service.logger).to be GoogleAPI::Apis.logger
     end
 
     it 'should allow custom loggers' do
-      Google::Apis.logger = Logger.new(STDERR)
-      expect(service.logger).to be Google::Apis.logger
+      GoogleAPI::Apis.logger = Logger.new(STDERR)
+      expect(service.logger).to be GoogleAPI::Apis.logger
     end
   end
 
   context 'with Rails' do
 
     before(:example) do
-      Google::Apis.logger = nil
+      GoogleAPI::Apis.logger = nil
       Kernel.const_set('Rails', Module.new) unless defined?(::Rails)
     end
 
@@ -54,7 +54,7 @@ RSpec.describe Google::Apis do
 
     let(:service) do
       Class.new do
-        include Google::Apis::Core::Logging
+        include GoogleAPI::Apis::Core::Logging
       end.new
     end
 

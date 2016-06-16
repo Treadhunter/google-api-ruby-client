@@ -18,14 +18,14 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module DataprocV1
       
       # Describes the identifying information, config, and status of a cluster of
       # Google Compute Engine instances.
       class Cluster
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Required] The Google Cloud Platform project ID that the cluster belongs to.
         # Corresponds to the JSON property `projectId`
@@ -40,17 +40,17 @@ module Google
       
         # The cluster config.
         # Corresponds to the JSON property `config`
-        # @return [Google::Apis::DataprocV1::ClusterConfig]
+        # @return [GoogleAPI::Apis::DataprocV1::ClusterConfig]
         attr_accessor :config
       
         # The status of a cluster and its instances.
         # Corresponds to the JSON property `status`
-        # @return [Google::Apis::DataprocV1::ClusterStatus]
+        # @return [GoogleAPI::Apis::DataprocV1::ClusterStatus]
         attr_accessor :status
       
         # [Output-only] The previous cluster status.
         # Corresponds to the JSON property `statusHistory`
-        # @return [Array<Google::Apis::DataprocV1::ClusterStatus>]
+        # @return [Array<GoogleAPI::Apis::DataprocV1::ClusterStatus>]
         attr_accessor :status_history
       
         # [Output-only] A cluster UUID (Unique Universal Identifier). Cloud Dataproc
@@ -76,7 +76,7 @@ module Google
       
       # The cluster config.
       class ClusterConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Optional] A Google Cloud Storage staging bucket used for sharing generated
         # SSH keys and config. If you do not specify a staging bucket, Cloud Dataproc
@@ -91,30 +91,30 @@ module Google
         # Common config settings for resources of Google Compute Engine cluster
         # instances, applicable to all instances in the cluster.
         # Corresponds to the JSON property `gceClusterConfig`
-        # @return [Google::Apis::DataprocV1::GceClusterConfig]
+        # @return [GoogleAPI::Apis::DataprocV1::GceClusterConfig]
         attr_accessor :gce_cluster_config
       
         # The config settings for Google Compute Engine resources in an instance group,
         # such as a master or worker group.
         # Corresponds to the JSON property `masterConfig`
-        # @return [Google::Apis::DataprocV1::InstanceGroupConfig]
+        # @return [GoogleAPI::Apis::DataprocV1::InstanceGroupConfig]
         attr_accessor :master_config
       
         # The config settings for Google Compute Engine resources in an instance group,
         # such as a master or worker group.
         # Corresponds to the JSON property `workerConfig`
-        # @return [Google::Apis::DataprocV1::InstanceGroupConfig]
+        # @return [GoogleAPI::Apis::DataprocV1::InstanceGroupConfig]
         attr_accessor :worker_config
       
         # The config settings for Google Compute Engine resources in an instance group,
         # such as a master or worker group.
         # Corresponds to the JSON property `secondaryWorkerConfig`
-        # @return [Google::Apis::DataprocV1::InstanceGroupConfig]
+        # @return [GoogleAPI::Apis::DataprocV1::InstanceGroupConfig]
         attr_accessor :secondary_worker_config
       
         # Specifies the selection and config of software inside the cluster.
         # Corresponds to the JSON property `softwareConfig`
-        # @return [Google::Apis::DataprocV1::SoftwareConfig]
+        # @return [GoogleAPI::Apis::DataprocV1::SoftwareConfig]
         attr_accessor :software_config
       
         # [Optional] Commands to execute on each node after config is completed. By
@@ -124,7 +124,7 @@ module Google
         # ROLE`" == 'Master' ]]; then ... master specific actions ... else ... worker
         # specific actions ... fi
         # Corresponds to the JSON property `initializationActions`
-        # @return [Array<Google::Apis::DataprocV1::NodeInitializationAction>]
+        # @return [Array<GoogleAPI::Apis::DataprocV1::NodeInitializationAction>]
         attr_accessor :initialization_actions
       
         def initialize(**args)
@@ -146,7 +146,7 @@ module Google
       # Common config settings for resources of Google Compute Engine cluster
       # instances, applicable to all instances in the cluster.
       class GceClusterConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Required] The zone where the Google Compute Engine cluster will be located.
         # Example: `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[
@@ -212,7 +212,7 @@ module Google
       # The config settings for Google Compute Engine resources in an instance group,
       # such as a master or worker group.
       class InstanceGroupConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of VM instances in the instance group. For master instance groups,
         # must be set to 1.
@@ -242,7 +242,7 @@ module Google
       
         # Specifies the config of disk options for a group of VM instances.
         # Corresponds to the JSON property `diskConfig`
-        # @return [Google::Apis::DataprocV1::DiskConfig]
+        # @return [GoogleAPI::Apis::DataprocV1::DiskConfig]
         attr_accessor :disk_config
       
         # Specifies that this instance group contains Preemptible Instances.
@@ -253,7 +253,7 @@ module Google
       
         # Specifies the resources used to actively manage an instance group.
         # Corresponds to the JSON property `managedGroupConfig`
-        # @return [Google::Apis::DataprocV1::ManagedGroupConfig]
+        # @return [GoogleAPI::Apis::DataprocV1::ManagedGroupConfig]
         attr_accessor :managed_group_config
       
         def initialize(**args)
@@ -274,7 +274,7 @@ module Google
       
       # Specifies the config of disk options for a group of VM instances.
       class DiskConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Optional] Size in GB of the boot disk (default is 500GB).
         # Corresponds to the JSON property `bootDiskSizeGb`
@@ -302,7 +302,7 @@ module Google
       
       # Specifies the resources used to actively manage an instance group.
       class ManagedGroupConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output-only] The name of the Instance Template used for the Managed Instance
         # Group.
@@ -328,7 +328,7 @@ module Google
       
       # Specifies the selection and config of software inside the cluster.
       class SoftwareConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Optional] The version of software inside the cluster. It must match the
         # regular expression `[0-9]+\.[0-9]+`. If unspecified, it defaults to the latest
@@ -360,7 +360,7 @@ module Google
       # Specifies an executable to run on a fully configured node and a timeout period
       # for executable completion.
       class NodeInitializationAction
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Required] Google Cloud Storage URI of executable file.
         # Corresponds to the JSON property `executableFile`
@@ -388,7 +388,7 @@ module Google
       
       # The status of a cluster and its instances.
       class ClusterStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The cluster's state.
         # Corresponds to the JSON property `state`
@@ -420,7 +420,7 @@ module Google
       # This resource represents a long-running operation that is the result of a
       # network API call.
       class Operation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The server-assigned name, which is only unique within the same service that
         # originally returns it. If you use the default HTTP mapping, the `name` should
@@ -477,7 +477,7 @@ module Google
         # the message `Status` could be used directly after any stripping needed for
         # security/privacy reasons.
         # Corresponds to the JSON property `error`
-        # @return [Google::Apis::DataprocV1::Status]
+        # @return [GoogleAPI::Apis::DataprocV1::Status]
         attr_accessor :error
       
         # The normal response of the operation in case of success. If the original
@@ -538,7 +538,7 @@ module Google
       # the message `Status` could be used directly after any stripping needed for
       # security/privacy reasons.
       class Status
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The status code, which should be an enum value of google.rpc.Code.
         # Corresponds to the JSON property `code`
@@ -572,11 +572,11 @@ module Google
       
       # The list of all clusters in a project.
       class ListClustersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output-only] The clusters in the project.
         # Corresponds to the JSON property `clusters`
-        # @return [Array<Google::Apis::DataprocV1::Cluster>]
+        # @return [Array<GoogleAPI::Apis::DataprocV1::Cluster>]
         attr_accessor :clusters
       
         # [Optional] This token is included in the response if there are more results to
@@ -599,7 +599,7 @@ module Google
       
       # A request to collect cluster diagnostic information.
       class DiagnoseClusterRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -612,11 +612,11 @@ module Google
       
       # A request to submit a job.
       class SubmitJobRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A Cloud Dataproc job resource.
         # Corresponds to the JSON property `job`
-        # @return [Google::Apis::DataprocV1::Job]
+        # @return [GoogleAPI::Apis::DataprocV1::Job]
         attr_accessor :job
       
         def initialize(**args)
@@ -631,56 +631,56 @@ module Google
       
       # A Cloud Dataproc job resource.
       class Job
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Encapsulates the full scoping used to reference a job.
         # Corresponds to the JSON property `reference`
-        # @return [Google::Apis::DataprocV1::JobReference]
+        # @return [GoogleAPI::Apis::DataprocV1::JobReference]
         attr_accessor :reference
       
         # Cloud Dataproc job config.
         # Corresponds to the JSON property `placement`
-        # @return [Google::Apis::DataprocV1::JobPlacement]
+        # @return [GoogleAPI::Apis::DataprocV1::JobPlacement]
         attr_accessor :placement
       
         # A Cloud Dataproc job for running Hadoop MapReduce jobs on YARN.
         # Corresponds to the JSON property `hadoopJob`
-        # @return [Google::Apis::DataprocV1::HadoopJob]
+        # @return [GoogleAPI::Apis::DataprocV1::HadoopJob]
         attr_accessor :hadoop_job
       
         # A Cloud Dataproc job for running Spark applications on YARN.
         # Corresponds to the JSON property `sparkJob`
-        # @return [Google::Apis::DataprocV1::SparkJob]
+        # @return [GoogleAPI::Apis::DataprocV1::SparkJob]
         attr_accessor :spark_job
       
         # A Cloud Dataproc job for running PySpark applications on YARN.
         # Corresponds to the JSON property `pysparkJob`
-        # @return [Google::Apis::DataprocV1::PySparkJob]
+        # @return [GoogleAPI::Apis::DataprocV1::PySparkJob]
         attr_accessor :pyspark_job
       
         # A Cloud Dataproc job for running Hive queries on YARN.
         # Corresponds to the JSON property `hiveJob`
-        # @return [Google::Apis::DataprocV1::HiveJob]
+        # @return [GoogleAPI::Apis::DataprocV1::HiveJob]
         attr_accessor :hive_job
       
         # A Cloud Dataproc job for running Pig queries on YARN.
         # Corresponds to the JSON property `pigJob`
-        # @return [Google::Apis::DataprocV1::PigJob]
+        # @return [GoogleAPI::Apis::DataprocV1::PigJob]
         attr_accessor :pig_job
       
         # A Cloud Dataproc job for running Spark SQL queries.
         # Corresponds to the JSON property `sparkSqlJob`
-        # @return [Google::Apis::DataprocV1::SparkSqlJob]
+        # @return [GoogleAPI::Apis::DataprocV1::SparkSqlJob]
         attr_accessor :spark_sql_job
       
         # Cloud Dataproc job status.
         # Corresponds to the JSON property `status`
-        # @return [Google::Apis::DataprocV1::JobStatus]
+        # @return [GoogleAPI::Apis::DataprocV1::JobStatus]
         attr_accessor :status
       
         # [Output-only] The previous job status.
         # Corresponds to the JSON property `statusHistory`
-        # @return [Array<Google::Apis::DataprocV1::JobStatus>]
+        # @return [Array<GoogleAPI::Apis::DataprocV1::JobStatus>]
         attr_accessor :status_history
       
         # [Output-only] A URI pointing to the location of the stdout of the job's driver
@@ -719,7 +719,7 @@ module Google
       
       # Encapsulates the full scoping used to reference a job.
       class JobReference
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Required] The ID of the Google Cloud Platform project that the job belongs to.
         # Corresponds to the JSON property `projectId`
@@ -748,7 +748,7 @@ module Google
       
       # Cloud Dataproc job config.
       class JobPlacement
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Required] The name of the cluster where the job will be submitted.
         # Corresponds to the JSON property `clusterName`
@@ -774,7 +774,7 @@ module Google
       
       # A Cloud Dataproc job for running Hadoop MapReduce jobs on YARN.
       class HadoopJob
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-
         # bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-
@@ -827,7 +827,7 @@ module Google
       
         # The runtime logging config of the job.
         # Corresponds to the JSON property `loggingConfig`
-        # @return [Google::Apis::DataprocV1::LoggingConfig]
+        # @return [GoogleAPI::Apis::DataprocV1::LoggingConfig]
         attr_accessor :logging_config
       
         def initialize(**args)
@@ -849,7 +849,7 @@ module Google
       
       # The runtime logging config of the job.
       class LoggingConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The per-package log levels for the driver. This may include "root" package
         # name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', '
@@ -870,7 +870,7 @@ module Google
       
       # A Cloud Dataproc job for running Spark applications on YARN.
       class SparkJob
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The HCFS URI of the jar file that contains the main class.
         # Corresponds to the JSON property `mainJarFileUri`
@@ -919,7 +919,7 @@ module Google
       
         # The runtime logging config of the job.
         # Corresponds to the JSON property `loggingConfig`
-        # @return [Google::Apis::DataprocV1::LoggingConfig]
+        # @return [GoogleAPI::Apis::DataprocV1::LoggingConfig]
         attr_accessor :logging_config
       
         def initialize(**args)
@@ -941,7 +941,7 @@ module Google
       
       # A Cloud Dataproc job for running PySpark applications on YARN.
       class PySparkJob
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Required] The HCFS URI of the main Python file to use as the driver. Must be
         # a .py file.
@@ -990,7 +990,7 @@ module Google
       
         # The runtime logging config of the job.
         # Corresponds to the JSON property `loggingConfig`
-        # @return [Google::Apis::DataprocV1::LoggingConfig]
+        # @return [GoogleAPI::Apis::DataprocV1::LoggingConfig]
         attr_accessor :logging_config
       
         def initialize(**args)
@@ -1012,7 +1012,7 @@ module Google
       
       # A Cloud Dataproc job for running Hive queries on YARN.
       class HiveJob
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The HCFS URI of the script that contains Hive queries.
         # Corresponds to the JSON property `queryFileUri`
@@ -1021,7 +1021,7 @@ module Google
       
         # A list of queries to run on a cluster.
         # Corresponds to the JSON property `queryList`
-        # @return [Google::Apis::DataprocV1::QueryList]
+        # @return [GoogleAPI::Apis::DataprocV1::QueryList]
         attr_accessor :query_list
       
         # [Optional] Whether to continue executing queries if a query fails. The default
@@ -1069,7 +1069,7 @@ module Google
       
       # A list of queries to run on a cluster.
       class QueryList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Required] The queries to execute. You do not need to terminate a query with a
         # semicolon. Multiple queries can be specified in one string by separating each
@@ -1092,7 +1092,7 @@ module Google
       
       # A Cloud Dataproc job for running Pig queries on YARN.
       class PigJob
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The HCFS URI of the script that contains the Pig queries.
         # Corresponds to the JSON property `queryFileUri`
@@ -1101,7 +1101,7 @@ module Google
       
         # A list of queries to run on a cluster.
         # Corresponds to the JSON property `queryList`
-        # @return [Google::Apis::DataprocV1::QueryList]
+        # @return [GoogleAPI::Apis::DataprocV1::QueryList]
         attr_accessor :query_list
       
         # [Optional] Whether to continue executing queries if a query fails. The default
@@ -1134,7 +1134,7 @@ module Google
       
         # The runtime logging config of the job.
         # Corresponds to the JSON property `loggingConfig`
-        # @return [Google::Apis::DataprocV1::LoggingConfig]
+        # @return [GoogleAPI::Apis::DataprocV1::LoggingConfig]
         attr_accessor :logging_config
       
         def initialize(**args)
@@ -1155,7 +1155,7 @@ module Google
       
       # A Cloud Dataproc job for running Spark SQL queries.
       class SparkSqlJob
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The HCFS URI of the script that contains SQL queries.
         # Corresponds to the JSON property `queryFileUri`
@@ -1164,7 +1164,7 @@ module Google
       
         # A list of queries to run on a cluster.
         # Corresponds to the JSON property `queryList`
-        # @return [Google::Apis::DataprocV1::QueryList]
+        # @return [GoogleAPI::Apis::DataprocV1::QueryList]
         attr_accessor :query_list
       
         # [Optional] Mapping of query variable names to values (equivalent to the Spark
@@ -1187,7 +1187,7 @@ module Google
       
         # The runtime logging config of the job.
         # Corresponds to the JSON property `loggingConfig`
-        # @return [Google::Apis::DataprocV1::LoggingConfig]
+        # @return [GoogleAPI::Apis::DataprocV1::LoggingConfig]
         attr_accessor :logging_config
       
         def initialize(**args)
@@ -1207,7 +1207,7 @@ module Google
       
       # Cloud Dataproc job status.
       class JobStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Required] A state message specifying the overall job state.
         # Corresponds to the JSON property `state`
@@ -1239,11 +1239,11 @@ module Google
       
       # A list of jobs in a project.
       class ListJobsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output-only] Jobs list.
         # Corresponds to the JSON property `jobs`
-        # @return [Array<Google::Apis::DataprocV1::Job>]
+        # @return [Array<GoogleAPI::Apis::DataprocV1::Job>]
         attr_accessor :jobs
       
         # [Optional] This token is included in the response if there are more results to
@@ -1266,7 +1266,7 @@ module Google
       
       # A request to cancel a job.
       class CancelJobRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -1283,7 +1283,7 @@ module Google
       # protobuf.Empty) returns (google.protobuf.Empty); ` The JSON representation for
       # `Empty` is empty JSON object ````.
       class Empty
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -1296,11 +1296,11 @@ module Google
       
       # The response message for Operations.ListOperations.
       class ListOperationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of operations that matches the specified filter in the request.
         # Corresponds to the JSON property `operations`
-        # @return [Array<Google::Apis::DataprocV1::Operation>]
+        # @return [Array<GoogleAPI::Apis::DataprocV1::Operation>]
         attr_accessor :operations
       
         # The standard List next-page token.
@@ -1321,7 +1321,7 @@ module Google
       
       # The location of diagnostic output.
       class DiagnoseClusterResults
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output-only] The Google Cloud Storage URI of the diagnostic output. This is a
         # plain text file with a summary of collected diagnostics.
@@ -1341,7 +1341,7 @@ module Google
       
       # Metadata describing the operation.
       class ClusterOperationMetadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Name of the cluster for the operation.
         # Corresponds to the JSON property `clusterName`
@@ -1355,12 +1355,12 @@ module Google
       
         # The status of the operation.
         # Corresponds to the JSON property `status`
-        # @return [Google::Apis::DataprocV1::ClusterOperationStatus]
+        # @return [GoogleAPI::Apis::DataprocV1::ClusterOperationStatus]
         attr_accessor :status
       
         # [Output-only] The previous operation status.
         # Corresponds to the JSON property `statusHistory`
-        # @return [Array<Google::Apis::DataprocV1::ClusterOperationStatus>]
+        # @return [Array<GoogleAPI::Apis::DataprocV1::ClusterOperationStatus>]
         attr_accessor :status_history
       
         # [Output-only] The operation type.
@@ -1390,7 +1390,7 @@ module Google
       
       # The status of the operation.
       class ClusterOperationStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A message containing the operation state.
         # Corresponds to the JSON property `state`
@@ -1427,7 +1427,7 @@ module Google
       
       # The location where output from diagnostic command can be found.
       class DiagnoseClusterOutputLocation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output-only] The Google Cloud Storage URI of the diagnostic output. This will
         # be a plain text file with summary of collected diagnostics.
@@ -1447,7 +1447,7 @@ module Google
       
       # Metadata describing the operation.
       class OperationMetadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A message containing the operation state.
         # Corresponds to the JSON property `state`
@@ -1491,12 +1491,12 @@ module Google
       
         # The status of the operation.
         # Corresponds to the JSON property `status`
-        # @return [Google::Apis::DataprocV1::OperationStatus]
+        # @return [GoogleAPI::Apis::DataprocV1::OperationStatus]
         attr_accessor :status
       
         # [Output-only] Previous operation status.
         # Corresponds to the JSON property `statusHistory`
-        # @return [Array<Google::Apis::DataprocV1::OperationStatus>]
+        # @return [Array<GoogleAPI::Apis::DataprocV1::OperationStatus>]
         attr_accessor :status_history
       
         # [Output-only] The operation type.
@@ -1532,7 +1532,7 @@ module Google
       
       # The status of the operation.
       class OperationStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A message containing the operation state.
         # Corresponds to the JSON property `state`

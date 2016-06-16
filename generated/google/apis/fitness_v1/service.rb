@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module FitnessV1
       # Fitness
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/fitness_v1'
       #
-      #    Fitness = Google::Apis::FitnessV1 # Alias the module
+      #    Fitness = GoogleAPI::Apis::FitnessV1 # Alias the module
       #    service = Fitness::FitnessService.new
       #
       # @see https://developers.google.com/fit/rest/
-      class FitnessService < Google::Apis::Core::BaseService
+      class FitnessService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -63,7 +63,7 @@ module Google
         # @param [String] user_id
         #   Create the data source for the person identified. Use me to indicate the
         #   authenticated user. Only me is supported at this time.
-        # @param [Google::Apis::FitnessV1::DataSource] data_source_object
+        # @param [GoogleAPI::Apis::FitnessV1::DataSource] data_source_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -73,24 +73,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::FitnessV1::DataSource] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::FitnessV1::DataSource] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::FitnessV1::DataSource]
+        # @return [GoogleAPI::Apis::FitnessV1::DataSource]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_user_data_source(user_id, data_source_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{userId}/dataSources', options)
-          command.request_representation = Google::Apis::FitnessV1::DataSource::Representation
+          command.request_representation = GoogleAPI::Apis::FitnessV1::DataSource::Representation
           command.request_object = data_source_object
-          command.response_representation = Google::Apis::FitnessV1::DataSource::Representation
-          command.response_class = Google::Apis::FitnessV1::DataSource
+          command.response_representation = GoogleAPI::Apis::FitnessV1::DataSource::Representation
+          command.response_class = GoogleAPI::Apis::FitnessV1::DataSource
           command.params['userId'] = user_id unless user_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -113,22 +113,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::FitnessV1::DataSource] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::FitnessV1::DataSource] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::FitnessV1::DataSource]
+        # @return [GoogleAPI::Apis::FitnessV1::DataSource]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_user_data_source(user_id, data_source_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{userId}/dataSources/{dataSourceId}', options)
-          command.response_representation = Google::Apis::FitnessV1::DataSource::Representation
-          command.response_class = Google::Apis::FitnessV1::DataSource
+          command.response_representation = GoogleAPI::Apis::FitnessV1::DataSource::Representation
+          command.response_class = GoogleAPI::Apis::FitnessV1::DataSource
           command.params['userId'] = user_id unless user_id.nil?
           command.params['dataSourceId'] = data_source_id unless data_source_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -152,22 +152,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::FitnessV1::DataSource] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::FitnessV1::DataSource] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::FitnessV1::DataSource]
+        # @return [GoogleAPI::Apis::FitnessV1::DataSource]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_user_data_source(user_id, data_source_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{userId}/dataSources/{dataSourceId}', options)
-          command.response_representation = Google::Apis::FitnessV1::DataSource::Representation
-          command.response_class = Google::Apis::FitnessV1::DataSource
+          command.response_representation = GoogleAPI::Apis::FitnessV1::DataSource::Representation
+          command.response_class = GoogleAPI::Apis::FitnessV1::DataSource
           command.params['userId'] = user_id unless user_id.nil?
           command.params['dataSourceId'] = data_source_id unless data_source_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -194,22 +194,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::FitnessV1::ListDataSourcesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::FitnessV1::ListDataSourcesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::FitnessV1::ListDataSourcesResponse]
+        # @return [GoogleAPI::Apis::FitnessV1::ListDataSourcesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_user_data_sources(user_id, data_type_name: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{userId}/dataSources', options)
-          command.response_representation = Google::Apis::FitnessV1::ListDataSourcesResponse::Representation
-          command.response_class = Google::Apis::FitnessV1::ListDataSourcesResponse
+          command.response_representation = GoogleAPI::Apis::FitnessV1::ListDataSourcesResponse::Representation
+          command.response_class = GoogleAPI::Apis::FitnessV1::ListDataSourcesResponse
           command.params['userId'] = user_id unless user_id.nil?
           command.query['dataTypeName'] = data_type_name unless data_type_name.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -229,7 +229,7 @@ module Google
         #   authenticated user. Only me is supported at this time.
         # @param [String] data_source_id
         #   The data stream ID of the data source to update.
-        # @param [Google::Apis::FitnessV1::DataSource] data_source_object
+        # @param [GoogleAPI::Apis::FitnessV1::DataSource] data_source_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -239,24 +239,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::FitnessV1::DataSource] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::FitnessV1::DataSource] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::FitnessV1::DataSource]
+        # @return [GoogleAPI::Apis::FitnessV1::DataSource]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_user_data_source(user_id, data_source_id, data_source_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, '{userId}/dataSources/{dataSourceId}', options)
-          command.request_representation = Google::Apis::FitnessV1::DataSource::Representation
+          command.request_representation = GoogleAPI::Apis::FitnessV1::DataSource::Representation
           command.request_object = data_source_object
-          command.response_representation = Google::Apis::FitnessV1::DataSource::Representation
-          command.response_class = Google::Apis::FitnessV1::DataSource
+          command.response_representation = GoogleAPI::Apis::FitnessV1::DataSource::Representation
+          command.response_class = GoogleAPI::Apis::FitnessV1::DataSource
           command.params['userId'] = user_id unless user_id.nil?
           command.params['dataSourceId'] = data_source_id unless data_source_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -275,7 +275,7 @@ module Google
         #   authenticated user. Only me is supported at this time.
         # @param [String] data_source_id
         #   The data stream ID of the data source to update.
-        # @param [Google::Apis::FitnessV1::DataSource] data_source_object
+        # @param [GoogleAPI::Apis::FitnessV1::DataSource] data_source_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -285,24 +285,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::FitnessV1::DataSource] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::FitnessV1::DataSource] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::FitnessV1::DataSource]
+        # @return [GoogleAPI::Apis::FitnessV1::DataSource]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_user_data_source(user_id, data_source_id, data_source_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, '{userId}/dataSources/{dataSourceId}', options)
-          command.request_representation = Google::Apis::FitnessV1::DataSource::Representation
+          command.request_representation = GoogleAPI::Apis::FitnessV1::DataSource::Representation
           command.request_object = data_source_object
-          command.response_representation = Google::Apis::FitnessV1::DataSource::Representation
-          command.response_class = Google::Apis::FitnessV1::DataSource
+          command.response_representation = GoogleAPI::Apis::FitnessV1::DataSource::Representation
+          command.response_class = GoogleAPI::Apis::FitnessV1::DataSource
           command.params['userId'] = user_id unless user_id.nil?
           command.params['dataSourceId'] = data_source_id unless data_source_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -340,7 +340,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -349,9 +349,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_user_data_source_dataset(user_id, data_source_id, dataset_id, current_time_millis: nil, modified_time_millis: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{userId}/dataSources/{dataSourceId}/datasets/{datasetId}', options)
           command.params['userId'] = user_id unless user_id.nil?
@@ -399,22 +399,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::FitnessV1::Dataset] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::FitnessV1::Dataset] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::FitnessV1::Dataset]
+        # @return [GoogleAPI::Apis::FitnessV1::Dataset]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_user_data_source_dataset(user_id, data_source_id, dataset_id, limit: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{userId}/dataSources/{dataSourceId}/datasets/{datasetId}', options)
-          command.response_representation = Google::Apis::FitnessV1::Dataset::Representation
-          command.response_class = Google::Apis::FitnessV1::Dataset
+          command.response_representation = GoogleAPI::Apis::FitnessV1::Dataset::Representation
+          command.response_class = GoogleAPI::Apis::FitnessV1::Dataset
           command.params['userId'] = user_id unless user_id.nil?
           command.params['dataSourceId'] = data_source_id unless data_source_id.nil?
           command.params['datasetId'] = dataset_id unless dataset_id.nil?
@@ -440,7 +440,7 @@ module Google
         #   and maximum data point end time represented as nanoseconds from the epoch. The
         #   ID is formatted like: "startTime-endTime" where startTime and endTime are 64
         #   bit integers.
-        # @param [Google::Apis::FitnessV1::Dataset] dataset_object
+        # @param [GoogleAPI::Apis::FitnessV1::Dataset] dataset_object
         # @param [String] current_time_millis
         #   The client's current time in milliseconds since epoch. Note that the
         #   minStartTimeNs and maxEndTimeNs properties in the request body are in
@@ -454,24 +454,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::FitnessV1::Dataset] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::FitnessV1::Dataset] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::FitnessV1::Dataset]
+        # @return [GoogleAPI::Apis::FitnessV1::Dataset]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_user_data_source_dataset(user_id, data_source_id, dataset_id, dataset_object = nil, current_time_millis: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, '{userId}/dataSources/{dataSourceId}/datasets/{datasetId}', options)
-          command.request_representation = Google::Apis::FitnessV1::Dataset::Representation
+          command.request_representation = GoogleAPI::Apis::FitnessV1::Dataset::Representation
           command.request_object = dataset_object
-          command.response_representation = Google::Apis::FitnessV1::Dataset::Representation
-          command.response_class = Google::Apis::FitnessV1::Dataset
+          command.response_representation = GoogleAPI::Apis::FitnessV1::Dataset::Representation
+          command.response_class = GoogleAPI::Apis::FitnessV1::Dataset
           command.params['userId'] = user_id unless user_id.nil?
           command.params['dataSourceId'] = data_source_id unless data_source_id.nil?
           command.params['datasetId'] = dataset_id unless dataset_id.nil?
@@ -488,7 +488,7 @@ module Google
         # @param [String] user_id
         #   Aggregate data for the person identified. Use me to indicate the authenticated
         #   user. Only me is supported at this time.
-        # @param [Google::Apis::FitnessV1::AggregateRequest] aggregate_request_object
+        # @param [GoogleAPI::Apis::FitnessV1::AggregateRequest] aggregate_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -498,24 +498,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::FitnessV1::AggregateResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::FitnessV1::AggregateResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::FitnessV1::AggregateResponse]
+        # @return [GoogleAPI::Apis::FitnessV1::AggregateResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def aggregate_dataset(user_id, aggregate_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{userId}/dataset:aggregate', options)
-          command.request_representation = Google::Apis::FitnessV1::AggregateRequest::Representation
+          command.request_representation = GoogleAPI::Apis::FitnessV1::AggregateRequest::Representation
           command.request_object = aggregate_request_object
-          command.response_representation = Google::Apis::FitnessV1::AggregateResponse::Representation
-          command.response_class = Google::Apis::FitnessV1::AggregateResponse
+          command.response_representation = GoogleAPI::Apis::FitnessV1::AggregateResponse::Representation
+          command.response_class = GoogleAPI::Apis::FitnessV1::AggregateResponse
           command.params['userId'] = user_id unless user_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -540,7 +540,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -549,9 +549,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_user_session(user_id, session_id, current_time_millis: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{userId}/sessions/{sessionId}', options)
           command.params['userId'] = user_id unless user_id.nil?
@@ -590,22 +590,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::FitnessV1::ListSessionsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::FitnessV1::ListSessionsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::FitnessV1::ListSessionsResponse]
+        # @return [GoogleAPI::Apis::FitnessV1::ListSessionsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_user_sessions(user_id, end_time: nil, include_deleted: nil, page_token: nil, start_time: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{userId}/sessions', options)
-          command.response_representation = Google::Apis::FitnessV1::ListSessionsResponse::Representation
-          command.response_class = Google::Apis::FitnessV1::ListSessionsResponse
+          command.response_representation = GoogleAPI::Apis::FitnessV1::ListSessionsResponse::Representation
+          command.response_class = GoogleAPI::Apis::FitnessV1::ListSessionsResponse
           command.params['userId'] = user_id unless user_id.nil?
           command.query['endTime'] = end_time unless end_time.nil?
           command.query['includeDeleted'] = include_deleted unless include_deleted.nil?
@@ -623,7 +623,7 @@ module Google
         #   authenticated user. Only me is supported at this time.
         # @param [String] session_id
         #   The ID of the session to be created.
-        # @param [Google::Apis::FitnessV1::Session] session_object
+        # @param [GoogleAPI::Apis::FitnessV1::Session] session_object
         # @param [String] current_time_millis
         #   The client's current time in milliseconds since epoch.
         # @param [String] fields
@@ -635,24 +635,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::FitnessV1::Session] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::FitnessV1::Session] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::FitnessV1::Session]
+        # @return [GoogleAPI::Apis::FitnessV1::Session]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_user_session(user_id, session_id, session_object = nil, current_time_millis: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, '{userId}/sessions/{sessionId}', options)
-          command.request_representation = Google::Apis::FitnessV1::Session::Representation
+          command.request_representation = GoogleAPI::Apis::FitnessV1::Session::Representation
           command.request_object = session_object
-          command.response_representation = Google::Apis::FitnessV1::Session::Representation
-          command.response_class = Google::Apis::FitnessV1::Session
+          command.response_representation = GoogleAPI::Apis::FitnessV1::Session::Representation
+          command.response_class = GoogleAPI::Apis::FitnessV1::Session
           command.params['userId'] = user_id unless user_id.nil?
           command.params['sessionId'] = session_id unless session_id.nil?
           command.query['currentTimeMillis'] = current_time_millis unless current_time_millis.nil?

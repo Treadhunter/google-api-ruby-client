@@ -16,7 +16,7 @@ require 'google/apis/analyticsreporting_v4/service.rb'
 require 'google/apis/analyticsreporting_v4/classes.rb'
 require 'google/apis/analyticsreporting_v4/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Google Analytics Reporting API
     #

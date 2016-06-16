@@ -16,7 +16,7 @@ require 'google/apis/cloudresourcemanager_v1/service.rb'
 require 'google/apis/cloudresourcemanager_v1/classes.rb'
 require 'google/apis/cloudresourcemanager_v1/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Google Cloud Resource Manager API
     #

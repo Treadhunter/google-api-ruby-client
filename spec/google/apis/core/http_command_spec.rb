@@ -16,13 +16,13 @@ require 'spec_helper'
 require 'google/apis/core/http_command'
 require 'hurley/test'
 
-RSpec.describe Google::Apis::Core::HttpCommand do
+RSpec.describe GoogleAPI::Apis::Core::HttpCommand do
   include TestHelpers
   include_context 'HTTP client'
 
   context('with credentials') do
     let(:command) do
-      command = Google::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+      command = GoogleAPI::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
       command.options.authorization = authorization
       command
     end
@@ -79,14 +79,14 @@ RSpec.describe Google::Apis::Core::HttpCommand do
 
       it 'should send not refresh' do
         stub_request(:get, 'https://www.googleapis.com/zoo/animals').to_return(status: [401, 'Unauthorized'])
-        expect { command.execute(client) }.to raise_error(Google::Apis::AuthorizationError)
+        expect { command.execute(client) }.to raise_error(GoogleAPI::Apis::AuthorizationError)
       end
     end
   end
 
   context('with a successful response') do
     let(:command) do
-      Google::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+      GoogleAPI::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
     end
 
     before(:example) do
@@ -105,7 +105,7 @@ RSpec.describe Google::Apis::Core::HttpCommand do
 
   context('with server errors') do
     let(:command) do
-      Google::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+      GoogleAPI::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
     end
 
     before(:example) do
@@ -121,7 +121,7 @@ RSpec.describe Google::Apis::Core::HttpCommand do
 
     it 'should raise error if retries exceeded' do
       command.options.retries = 1
-      expect { command.execute(client) }.to raise_error(Google::Apis::ServerError)
+      expect { command.execute(client) }.to raise_error(GoogleAPI::Apis::ServerError)
     end
 
 
@@ -133,7 +133,7 @@ RSpec.describe Google::Apis::Core::HttpCommand do
       let(:err) do
         begin
           command.execute(client)
-        rescue Google::Apis::Error => e
+        rescue GoogleAPI::Apis::Error => e
           e
         end
       end
@@ -153,7 +153,7 @@ RSpec.describe Google::Apis::Core::HttpCommand do
 
   context('with options') do
     let(:command) do
-      command = Google::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+      command = GoogleAPI::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
       command.options.header = { 'X-Foo' => 'bar' }
       command
     end
@@ -173,7 +173,7 @@ RSpec.describe Google::Apis::Core::HttpCommand do
 
   context('with redirects') do
     let(:command) do
-      Google::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+      GoogleAPI::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
     end
 
     before(:example) do
@@ -191,7 +191,7 @@ RSpec.describe Google::Apis::Core::HttpCommand do
 
   context('with too many redirects') do
     let(:command) do
-      Google::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+      GoogleAPI::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
     end
 
     before(:example) do
@@ -200,13 +200,13 @@ RSpec.describe Google::Apis::Core::HttpCommand do
     end
 
     it 'should raise error if retries exceeded' do
-      expect { command.execute(client) }.to raise_error(Google::Apis::RedirectError)
+      expect { command.execute(client) }.to raise_error(GoogleAPI::Apis::RedirectError)
     end
   end
 
   context('with no server response') do
     let(:command) do
-      Google::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+      GoogleAPI::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
     end
 
     before(:example) do
@@ -214,13 +214,13 @@ RSpec.describe Google::Apis::Core::HttpCommand do
     end
 
     it 'should raise transmission error' do
-      expect { command.execute(client) }.to raise_error(Google::Apis::TransmissionError)
+      expect { command.execute(client) }.to raise_error(GoogleAPI::Apis::TransmissionError)
     end
   end
 
   context('with invalid status code') do
     let(:command) do
-      Google::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+      GoogleAPI::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
     end
 
     before(:example) do
@@ -229,13 +229,13 @@ RSpec.describe Google::Apis::Core::HttpCommand do
     end
 
     it 'should raise transmission error' do
-      expect { command.execute(client) }.to raise_error(Google::Apis::TransmissionError)
+      expect { command.execute(client) }.to raise_error(GoogleAPI::Apis::TransmissionError)
     end
   end
 
   context('with client errors') do
     let(:command) do
-      Google::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+      GoogleAPI::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
     end
 
     before(:example) do
@@ -245,11 +245,11 @@ RSpec.describe Google::Apis::Core::HttpCommand do
 
     it 'should raise error without retry' do
       command.options.retries = 1
-      expect { command.execute(client) }.to raise_error(Google::Apis::ClientError)
+      expect { command.execute(client) }.to raise_error(GoogleAPI::Apis::ClientError)
     end
 
     it 'should call block if present' do
-      expect { |b| command.execute(client, &b) }.to yield_with_args(nil, an_instance_of(Google::Apis::ClientError))
+      expect { |b| command.execute(client, &b) }.to yield_with_args(nil, an_instance_of(GoogleAPI::Apis::ClientError))
     end
 
     it 'should not swallow errors raised in block' do
@@ -260,7 +260,7 @@ RSpec.describe Google::Apis::Core::HttpCommand do
   it 'should send repeated query parameters' do
     stub_request(:get, 'https://www.googleapis.com/zoo/animals?a=1&a=2&a=3')
       .to_return(status: [200, ''])
-    command = Google::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+    command = GoogleAPI::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
     command.query['a'] = [1,2,3]
     command.execute(client)
   end
@@ -268,7 +268,7 @@ RSpec.describe Google::Apis::Core::HttpCommand do
   it 'should not remove initial query parameters' do
     stub_request(:get, 'https://www.googleapis.com/zoo/animals?a=1&a=2&a=3&foo=bar')
       .to_return(status: [200, ''])
-    command = Google::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals?foo=bar')
+    command = GoogleAPI::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals?foo=bar')
     command.query['a'] = [1,2,3]
     command.execute(client)
   end
@@ -276,7 +276,7 @@ RSpec.describe Google::Apis::Core::HttpCommand do
   it 'should send falsey query parameters' do
     stub_request(:get, 'https://www.googleapis.com/zoo/animals?a=0&b=false')
       .to_return(status: [200, ''])
-    command = Google::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+    command = GoogleAPI::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
     command.query['a'] = 0
     command.query['b'] = false
     command.execute(client)
@@ -286,7 +286,7 @@ RSpec.describe Google::Apis::Core::HttpCommand do
     stub_request(:post, 'https://www.googleapis.com/zoo/animals')
         .with(body: 'a=1&a=2&a=3&b=hello&c=&d=0')
         .to_return(status: [200, ''])
-    command = Google::Apis::Core::HttpCommand.new(:post, 'https://www.googleapis.com/zoo/animals')
+    command = GoogleAPI::Apis::Core::HttpCommand.new(:post, 'https://www.googleapis.com/zoo/animals')
     command.query['a'] = [1,2,3]
     command.query['b'] = 'hello'
     command.query['c'] = nil
@@ -296,8 +296,8 @@ RSpec.describe Google::Apis::Core::HttpCommand do
 
   it 'should raise transmission error instead of socket error' do
     stub_request(:get, 'https://www.googleapis.com/zoo/animals').to_raise(SocketError)
-    command = Google::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+    command = GoogleAPI::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
     command.options.retries = 0
-    expect { command.execute(client) }.to raise_error(Google::Apis::TransmissionError)
+    expect { command.execute(client) }.to raise_error(GoogleAPI::Apis::TransmissionError)
   end
 end

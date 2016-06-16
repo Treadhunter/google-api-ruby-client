@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AdexchangebuyerV1_3
       
       # Configuration data for an Ad Exchange buyer account.
       class Account
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Your bidder locations that have distinct URLs.
         # Corresponds to the JSON property `bidderLocation`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_3::Account::BidderLocation>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_3::Account::BidderLocation>]
         attr_accessor :bidder_location
       
         # The nid parameter value used in cookie match requests. Please contact your
@@ -89,7 +89,7 @@ module Google
         
         # 
         class BidderLocation
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The maximum queries per second the Ad Exchange will send.
           # Corresponds to the JSON property `maximumQps`
@@ -128,11 +128,11 @@ module Google
       # An account feed lists Ad Exchange buyer accounts that the user has access to.
       # Each entry in the feed corresponds to a single buyer account.
       class AccountsList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of accounts.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_3::Account>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_3::Account>]
         attr_accessor :items
       
         # Resource type.
@@ -153,7 +153,7 @@ module Google
       
       # The configuration data for an Ad Exchange billing info.
       class BillingInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account id.
         # Corresponds to the JSON property `accountId`
@@ -193,11 +193,11 @@ module Google
       # A billing info feed lists Billing Info the Ad Exchange buyer account has
       # access to. Each entry in the feed corresponds to a single billing info.
       class BillingInfoList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of billing info relevant for your account.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_3::BillingInfo>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_3::BillingInfo>]
         attr_accessor :items
       
         # Resource type.
@@ -218,7 +218,7 @@ module Google
       
       # The configuration data for Ad Exchange RTB - Budget API.
       class Budget
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The id of the account. This is required for get and update requests.
         # Corresponds to the JSON property `accountId`
@@ -269,7 +269,7 @@ module Google
       
       # A creative and its classification data.
       class Creative
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The HTML snippet that displays the ad when inserted in the web page. If set,
         # videoURL should not be set.
@@ -323,7 +323,7 @@ module Google
         # Shows any corrections that were applied to this creative. Read-only. This
         # field should not be set in requests.
         # Corresponds to the JSON property `corrections`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_3::Creative::Correction>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_3::Creative::Correction>]
         attr_accessor :corrections
       
         # The reasons for disapproval, if any. Note that not all disapproval reasons may
@@ -332,13 +332,13 @@ module Google
         # reach out to your TAM to help debug the issue. Read-only. This field should
         # not be set in requests.
         # Corresponds to the JSON property `disapprovalReasons`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_3::Creative::DisapprovalReason>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_3::Creative::DisapprovalReason>]
         attr_accessor :disapproval_reasons
       
         # The filtering reasons for the creative. Read-only. This field should not be
         # set in requests.
         # Corresponds to the JSON property `filteringReasons`
-        # @return [Google::Apis::AdexchangebuyerV1_3::Creative::FilteringReasons]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_3::Creative::FilteringReasons]
         attr_accessor :filtering_reasons
       
         # Ad height.
@@ -358,7 +358,7 @@ module Google
       
         # If nativeAd is set, HTMLSnippet and videoURL should not be set.
         # Corresponds to the JSON property `nativeAd`
-        # @return [Google::Apis::AdexchangebuyerV1_3::Creative::NativeAd]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_3::Creative::NativeAd]
         attr_accessor :native_ad
       
         # Detected product categories, if any. Read-only. This field should not be set
@@ -438,7 +438,7 @@ module Google
         
         # 
         class Correction
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Additional details about the correction.
           # Corresponds to the JSON property `details`
@@ -463,7 +463,7 @@ module Google
         
         # 
         class DisapprovalReason
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Additional details about the reason for disapproval.
           # Corresponds to the JSON property `details`
@@ -489,7 +489,7 @@ module Google
         # The filtering reasons for the creative. Read-only. This field should not be
         # set in requests.
         class FilteringReasons
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The date in ISO 8601 format for the data. The data is collected from 00:00:00
           # to 23:59:59 in PST.
@@ -499,7 +499,7 @@ module Google
         
           # The filtering reasons.
           # Corresponds to the JSON property `reasons`
-          # @return [Array<Google::Apis::AdexchangebuyerV1_3::Creative::FilteringReasons::Reason>]
+          # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_3::Creative::FilteringReasons::Reason>]
           attr_accessor :reasons
         
           def initialize(**args)
@@ -514,7 +514,7 @@ module Google
           
           # 
           class Reason
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The number of times the creative was filtered for the status. The count is
             # aggregated across all publishers on the exchange.
@@ -542,7 +542,7 @@ module Google
         
         # If nativeAd is set, HTMLSnippet and videoURL should not be set.
         class NativeAd
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `advertiser`
@@ -551,7 +551,7 @@ module Google
         
           # The app icon, for app download ads.
           # Corresponds to the JSON property `appIcon`
-          # @return [Google::Apis::AdexchangebuyerV1_3::Creative::NativeAd::AppIcon]
+          # @return [GoogleAPI::Apis::AdexchangebuyerV1_3::Creative::NativeAd::AppIcon]
           attr_accessor :app_icon
         
           # A long description of the ad.
@@ -576,7 +576,7 @@ module Google
         
           # A large image.
           # Corresponds to the JSON property `image`
-          # @return [Google::Apis::AdexchangebuyerV1_3::Creative::NativeAd::Image]
+          # @return [GoogleAPI::Apis::AdexchangebuyerV1_3::Creative::NativeAd::Image]
           attr_accessor :image
         
           # The URLs are called when the impression is rendered.
@@ -586,7 +586,7 @@ module Google
         
           # A smaller image, for the advertiser logo.
           # Corresponds to the JSON property `logo`
-          # @return [Google::Apis::AdexchangebuyerV1_3::Creative::NativeAd::Logo]
+          # @return [GoogleAPI::Apis::AdexchangebuyerV1_3::Creative::NativeAd::Logo]
           attr_accessor :logo
         
           # The price of the promoted app including the currency info.
@@ -626,7 +626,7 @@ module Google
           
           # The app icon, for app download ads.
           class AppIcon
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `height`
@@ -657,7 +657,7 @@ module Google
           
           # A large image.
           class Image
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `height`
@@ -688,7 +688,7 @@ module Google
           
           # A smaller image, for the advertiser logo.
           class Logo
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `height`
@@ -723,11 +723,11 @@ module Google
       # accounts that the user has access to. Each entry in the feed corresponds to a
       # single creative.
       class CreativesList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of creatives.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_3::Creative>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_3::Creative>]
         attr_accessor :items
       
         # Resource type.
@@ -755,7 +755,7 @@ module Google
       
       # The configuration data for an Ad Exchange direct deal.
       class DirectDeal
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The account id of the buyer this deal is for.
         # Corresponds to the JSON property `accountId`
@@ -857,11 +857,11 @@ module Google
       # access to. This includes direct deals set up for the buyer account as well as
       # its merged stream seats.
       class DirectDealsList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of direct deals relevant for your account.
         # Corresponds to the JSON property `directDeals`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_3::DirectDeal>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_3::DirectDeal>]
         attr_accessor :direct_deals
       
         # Resource type.
@@ -882,7 +882,7 @@ module Google
       
       # The configuration data for an Ad Exchange performance report list.
       class PerformanceReport
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of bid responses with an ad.
         # Corresponds to the JSON property `bidRate`
@@ -1038,7 +1038,7 @@ module Google
       # rtb-api-release https://cs.corp.google.com/#piper///depot/google3/contentads/
       # adx/tools/rtb_api/adxrtb.py
       class PerformanceReportList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Resource type.
         # Corresponds to the JSON property `kind`
@@ -1047,7 +1047,7 @@ module Google
       
         # A list of performance reports relevant for the account.
         # Corresponds to the JSON property `performanceReport`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_3::PerformanceReport>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_3::PerformanceReport>]
         attr_accessor :performance_report
       
         def initialize(**args)
@@ -1063,7 +1063,7 @@ module Google
       
       # 
       class PretargetingConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The id for billing purposes, provided for reference. Leave this field blank
         # for insert requests; the id will be generated automatically.
@@ -1091,7 +1091,7 @@ module Google
         # Requests which allow one of these (width, height) pairs will match. All pairs
         # must be supported ad dimensions.
         # Corresponds to the JSON property `dimensions`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_3::PretargetingConfig::Dimension>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_3::PretargetingConfig::Dimension>]
         attr_accessor :dimensions
       
         # Requests with any of these content labels will not match. Values are from
@@ -1107,7 +1107,7 @@ module Google
       
         # Requests containing any of these placements will not match.
         # Corresponds to the JSON property `excludedPlacements`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_3::PretargetingConfig::ExcludedPlacement>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_3::PretargetingConfig::ExcludedPlacement>]
         attr_accessor :excluded_placements
       
         # Requests containing any of these users list ids will not match.
@@ -1162,7 +1162,7 @@ module Google
       
         # Requests containing any of these placements will match.
         # Corresponds to the JSON property `placements`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_3::PretargetingConfig::Placement>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_3::PretargetingConfig::Placement>]
         attr_accessor :placements
       
         # Requests matching any of these platforms will match. Possible values are
@@ -1228,7 +1228,7 @@ module Google
         
         # 
         class Dimension
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Height in pixels.
           # Corresponds to the JSON property `height`
@@ -1253,7 +1253,7 @@ module Google
         
         # 
         class ExcludedPlacement
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The value of the placement. Interpretation depends on the placement type, e.g.
           # URL for a site placement, channel name for a channel placement, app id for a
@@ -1280,7 +1280,7 @@ module Google
         
         # 
         class Placement
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The value of the placement. Interpretation depends on the placement type, e.g.
           # URL for a site placement, channel name for a channel placement, app id for a
@@ -1308,11 +1308,11 @@ module Google
       
       # 
       class PretargetingConfigList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of pretargeting configs
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_3::PretargetingConfig>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_3::PretargetingConfig>]
         attr_accessor :items
       
         # Resource type.

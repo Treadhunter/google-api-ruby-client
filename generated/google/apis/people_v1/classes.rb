@@ -18,7 +18,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module PeopleV1
       
@@ -28,7 +28,7 @@ module Google
       # items. The items in a field have no guaranteed order, but each non-empty field
       # is guaranteed to have exactly one field with `metadata.primary` set to true.
       class Person
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The resource name for the person, assigned by the server. An ASCII string with
         # a max length of 27 characters. Always starts with `people/`.
@@ -44,37 +44,37 @@ module Google
       
         # Metadata about a person.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::PersonMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::PersonMetadata]
         attr_accessor :metadata
       
         # The person's locale preferences.
         # Corresponds to the JSON property `locales`
-        # @return [Array<Google::Apis::PeopleV1::Locale>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Locale>]
         attr_accessor :locales
       
         # The person's names.
         # Corresponds to the JSON property `names`
-        # @return [Array<Google::Apis::PeopleV1::Name>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Name>]
         attr_accessor :names
       
         # The person's nicknames.
         # Corresponds to the JSON property `nicknames`
-        # @return [Array<Google::Apis::PeopleV1::Nickname>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Nickname>]
         attr_accessor :nicknames
       
         # The person's cover photos.
         # Corresponds to the JSON property `coverPhotos`
-        # @return [Array<Google::Apis::PeopleV1::CoverPhoto>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::CoverPhoto>]
         attr_accessor :cover_photos
       
         # The person's photos.
         # Corresponds to the JSON property `photos`
-        # @return [Array<Google::Apis::PeopleV1::Photo>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Photo>]
         attr_accessor :photos
       
         # The person's genders.
         # Corresponds to the JSON property `genders`
-        # @return [Array<Google::Apis::PeopleV1::Gender>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Gender>]
         attr_accessor :genders
       
         # The person's age range.
@@ -84,97 +84,97 @@ module Google
       
         # The person's birthdays.
         # Corresponds to the JSON property `birthdays`
-        # @return [Array<Google::Apis::PeopleV1::Birthday>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Birthday>]
         attr_accessor :birthdays
       
         # The person's events.
         # Corresponds to the JSON property `events`
-        # @return [Array<Google::Apis::PeopleV1::Event>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Event>]
         attr_accessor :events
       
         # The person's street addresses.
         # Corresponds to the JSON property `addresses`
-        # @return [Array<Google::Apis::PeopleV1::Address>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Address>]
         attr_accessor :addresses
       
         # The person's residences.
         # Corresponds to the JSON property `residences`
-        # @return [Array<Google::Apis::PeopleV1::Residence>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Residence>]
         attr_accessor :residences
       
         # The person's email addresses.
         # Corresponds to the JSON property `emailAddresses`
-        # @return [Array<Google::Apis::PeopleV1::EmailAddress>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::EmailAddress>]
         attr_accessor :email_addresses
       
         # The person's phone numbers.
         # Corresponds to the JSON property `phoneNumbers`
-        # @return [Array<Google::Apis::PeopleV1::PhoneNumber>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::PhoneNumber>]
         attr_accessor :phone_numbers
       
         # The person's instant messaging clients.
         # Corresponds to the JSON property `imClients`
-        # @return [Array<Google::Apis::PeopleV1::ImClient>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::ImClient>]
         attr_accessor :im_clients
       
         # The person's taglines.
         # Corresponds to the JSON property `taglines`
-        # @return [Array<Google::Apis::PeopleV1::Tagline>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Tagline>]
         attr_accessor :taglines
       
         # The person's biographies.
         # Corresponds to the JSON property `biographies`
-        # @return [Array<Google::Apis::PeopleV1::Biography>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Biography>]
         attr_accessor :biographies
       
         # The person's associated URLs.
         # Corresponds to the JSON property `urls`
-        # @return [Array<Google::Apis::PeopleV1::Url>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Url>]
         attr_accessor :urls
       
         # The person's past or current organizations.
         # Corresponds to the JSON property `organizations`
-        # @return [Array<Google::Apis::PeopleV1::Organization>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Organization>]
         attr_accessor :organizations
       
         # The person's occupations.
         # Corresponds to the JSON property `occupations`
-        # @return [Array<Google::Apis::PeopleV1::Occupation>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Occupation>]
         attr_accessor :occupations
       
         # The person's interests.
         # Corresponds to the JSON property `interests`
-        # @return [Array<Google::Apis::PeopleV1::Interest>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Interest>]
         attr_accessor :interests
       
         # The person's skills.
         # Corresponds to the JSON property `skills`
-        # @return [Array<Google::Apis::PeopleV1::Skill>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Skill>]
         attr_accessor :skills
       
         # The person's bragging rights.
         # Corresponds to the JSON property `braggingRights`
-        # @return [Array<Google::Apis::PeopleV1::BraggingRights>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::BraggingRights>]
         attr_accessor :bragging_rights
       
         # The person's relations.
         # Corresponds to the JSON property `relations`
-        # @return [Array<Google::Apis::PeopleV1::Relation>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Relation>]
         attr_accessor :relations
       
         # The kind of relationship the person is looking for.
         # Corresponds to the JSON property `relationshipInterests`
-        # @return [Array<Google::Apis::PeopleV1::RelationshipInterest>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::RelationshipInterest>]
         attr_accessor :relationship_interests
       
         # The person's relationship statuses.
         # Corresponds to the JSON property `relationshipStatuses`
-        # @return [Array<Google::Apis::PeopleV1::RelationshipStatus>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::RelationshipStatus>]
         attr_accessor :relationship_statuses
       
         # The person's group memberships.
         # Corresponds to the JSON property `memberships`
-        # @return [Array<Google::Apis::PeopleV1::Membership>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Membership>]
         attr_accessor :memberships
       
         def initialize(**args)
@@ -217,11 +217,11 @@ module Google
       
       # Metadata about a person.
       class PersonMetadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The sources of data for the person.
         # Corresponds to the JSON property `sources`
-        # @return [Array<Google::Apis::PeopleV1::Source>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Source>]
         attr_accessor :sources
       
         # Any former resource names this person has had. Populated only for [`
@@ -261,7 +261,7 @@ module Google
       
       # The source of a field.
       class Source
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The source type.
         # Corresponds to the JSON property `type`
@@ -286,11 +286,11 @@ module Google
       
       # A person's locale preference.
       class Locale
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The well-formed [IETF BCP 47](https://tools.ietf.org/html/bcp47) language tag
@@ -312,7 +312,7 @@ module Google
       
       # Metadata about a field.
       class FieldMetadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # True if the field is the primary field; false if the field is a secondary
         # field.
@@ -331,7 +331,7 @@ module Google
       
         # The source of a field.
         # Corresponds to the JSON property `source`
-        # @return [Google::Apis::PeopleV1::Source]
+        # @return [GoogleAPI::Apis::PeopleV1::Source]
         attr_accessor :source
       
         def initialize(**args)
@@ -348,11 +348,11 @@ module Google
       
       # A person's name. If the name is a mononym, the family name is empty.
       class Name
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The display name formatted according to the locale specified by the viewer's
@@ -434,11 +434,11 @@ module Google
       
       # A person's nickname.
       class Nickname
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The nickname.
@@ -466,11 +466,11 @@ module Google
       # A person's cover photo. A large image shown on the person's profile page that
       # represents who they are or what they care about.
       class CoverPhoto
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The URL of the cover photo.
@@ -500,11 +500,11 @@ module Google
       # A person's photo. A picture shown next to the person's name to help others
       # recognize the person.
       class Photo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The URL of the photo.
@@ -525,11 +525,11 @@ module Google
       
       # A person's gender.
       class Gender
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The gender for the person. The gender can be custom or predefined. Possible
@@ -561,11 +561,11 @@ module Google
       # specified. The `date` and `text` fields typically represent the same date, but
       # are not guaranteed to.
       class Birthday
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # Represents a whole calendar date, for example a date of birth. The time of day
@@ -575,7 +575,7 @@ module Google
         # month where the day is not significant. The year may be 0 to represent a month
         # and day independent of year; for example, anniversary date.
         # Corresponds to the JSON property `date`
-        # @return [Google::Apis::PeopleV1::Date]
+        # @return [GoogleAPI::Apis::PeopleV1::Date]
         attr_accessor :date
       
         # A free-form string representing the user's birthday.
@@ -602,7 +602,7 @@ module Google
       # month where the day is not significant. The year may be 0 to represent a month
       # and day independent of year; for example, anniversary date.
       class Date
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
         # Corresponds to the JSON property `year`
@@ -634,11 +634,11 @@ module Google
       
       # An event related to the person.
       class Event
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # Represents a whole calendar date, for example a date of birth. The time of day
@@ -648,7 +648,7 @@ module Google
         # month where the day is not significant. The year may be 0 to represent a month
         # and day independent of year; for example, anniversary date.
         # Corresponds to the JSON property `date`
-        # @return [Google::Apis::PeopleV1::Date]
+        # @return [GoogleAPI::Apis::PeopleV1::Date]
         attr_accessor :date
       
         # The type of the event. The type can be custom or predefined. Possible values
@@ -679,11 +679,11 @@ module Google
       # A person's physical address. May be a P.O. box or street address. All fields
       # are optional.
       class Address
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The read-only value of the address formatted in the viewer's account locale or
@@ -768,11 +768,11 @@ module Google
       
       # A person's past or current residence.
       class Residence
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The address of the residence.
@@ -801,11 +801,11 @@ module Google
       
       # A person's email address.
       class EmailAddress
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The email address.
@@ -841,11 +841,11 @@ module Google
       
       # A person's phone number.
       class PhoneNumber
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The phone number.
@@ -889,11 +889,11 @@ module Google
       
       # A person's instant messaging client.
       class ImClient
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The user name used in the IM client.
@@ -944,11 +944,11 @@ module Google
       
       # A brief one-line description of the person.
       class Tagline
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The tagline.
@@ -969,11 +969,11 @@ module Google
       
       # A person's short biography.
       class Biography
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The short biography.
@@ -994,11 +994,11 @@ module Google
       
       # A person's associated URLs.
       class Url
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The URL.
@@ -1035,11 +1035,11 @@ module Google
       
       # A person's past or current organization. Overlapping date ranges are permitted.
       class Organization
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The type of the organization. The type can be custom or predefined. Possible
@@ -1061,7 +1061,7 @@ module Google
         # month where the day is not significant. The year may be 0 to represent a month
         # and day independent of year; for example, anniversary date.
         # Corresponds to the JSON property `startDate`
-        # @return [Google::Apis::PeopleV1::Date]
+        # @return [GoogleAPI::Apis::PeopleV1::Date]
         attr_accessor :start_date
       
         # Represents a whole calendar date, for example a date of birth. The time of day
@@ -1071,7 +1071,7 @@ module Google
         # month where the day is not significant. The year may be 0 to represent a month
         # and day independent of year; for example, anniversary date.
         # Corresponds to the JSON property `endDate`
-        # @return [Google::Apis::PeopleV1::Date]
+        # @return [GoogleAPI::Apis::PeopleV1::Date]
         attr_accessor :end_date
       
         # True if the organization is the person's current organization; false if the
@@ -1147,11 +1147,11 @@ module Google
       
       # A person's occupation.
       class Occupation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The occupation; for example, `carpenter`.
@@ -1172,11 +1172,11 @@ module Google
       
       # One of the person's interests.
       class Interest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The interest; for example, `stargazing`.
@@ -1197,11 +1197,11 @@ module Google
       
       # A skill that the person has.
       class Skill
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The skill; for example, `underwater basket weaving`.
@@ -1222,11 +1222,11 @@ module Google
       
       # A person's bragging rights.
       class BraggingRights
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The bragging rights; for example, `climbed mount everest`.
@@ -1247,11 +1247,11 @@ module Google
       
       # A person's relation to another person.
       class Relation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The name of the other person this relation refers to.
@@ -1289,11 +1289,11 @@ module Google
       
       # The kind of relationship the person is looking for.
       class RelationshipInterest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The kind of relationship the person is looking for. The value can be custom or
@@ -1323,11 +1323,11 @@ module Google
       
       # A person's relationship status.
       class RelationshipStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # The relationship status. The value can be custom or predefined. Possible
@@ -1358,21 +1358,21 @@ module Google
       
       # A person's membership in a group.
       class Membership
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about a field.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::PeopleV1::FieldMetadata]
+        # @return [GoogleAPI::Apis::PeopleV1::FieldMetadata]
         attr_accessor :metadata
       
         # A Google contact group membership.
         # Corresponds to the JSON property `contactGroupMembership`
-        # @return [Google::Apis::PeopleV1::ContactGroupMembership]
+        # @return [GoogleAPI::Apis::PeopleV1::ContactGroupMembership]
         attr_accessor :contact_group_membership
       
         # A Google Apps Domain membership.
         # Corresponds to the JSON property `domainMembership`
-        # @return [Google::Apis::PeopleV1::DomainMembership]
+        # @return [GoogleAPI::Apis::PeopleV1::DomainMembership]
         attr_accessor :domain_membership
       
         def initialize(**args)
@@ -1389,7 +1389,7 @@ module Google
       
       # A Google contact group membership.
       class ContactGroupMembership
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The contact group ID for the contact group membership. The contact group ID
         # can be custom or predefined. Possible values include, but are not limited to,
@@ -1411,7 +1411,7 @@ module Google
       
       # A Google Apps Domain membership.
       class DomainMembership
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # True if the person is in the viewer's Google Apps domain.
         # Corresponds to the JSON property `inViewerDomain`
@@ -1431,11 +1431,11 @@ module Google
       
       # 
       class GetPeopleResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The response for each requested resource name.
         # Corresponds to the JSON property `responses`
-        # @return [Array<Google::Apis::PeopleV1::PersonResponse>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::PersonResponse>]
         attr_accessor :responses
       
         def initialize(**args)
@@ -1450,7 +1450,7 @@ module Google
       
       # The response for a single person
       class PersonResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [HTTP 1.1 status code](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
         # Corresponds to the JSON property `httpStatusCode`
@@ -1463,7 +1463,7 @@ module Google
         # items. The items in a field have no guaranteed order, but each non-empty field
         # is guaranteed to have exactly one field with `metadata.primary` set to true.
         # Corresponds to the JSON property `person`
-        # @return [Google::Apis::PeopleV1::Person]
+        # @return [GoogleAPI::Apis::PeopleV1::Person]
         attr_accessor :person
       
         # The original requested resource name. May be different than the resource name
@@ -1488,11 +1488,11 @@ module Google
       
       # 
       class ListConnectionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of people that the requestor is connected to.
         # Corresponds to the JSON property `connections`
-        # @return [Array<Google::Apis::PeopleV1::Person>]
+        # @return [Array<GoogleAPI::Apis::PeopleV1::Person>]
         attr_accessor :connections
       
         # The token that can be used to retrieve the next page of results.

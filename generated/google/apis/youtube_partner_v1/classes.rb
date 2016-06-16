@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module YoutubePartnerV1
       
       # 
       class AdBreak
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The time of the ad break specified as the number of seconds after the start of
         # the video when the break occurs.
@@ -40,7 +40,7 @@ module Google
         # A list of ad slots that occur in an ad break. Ad slots let you specify the
         # number of ads that should run in each break.
         # Corresponds to the JSON property `slot`
-        # @return [Array<Google::Apis::YoutubePartnerV1::AdSlot>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::AdSlot>]
         attr_accessor :slot
       
         def initialize(**args)
@@ -57,7 +57,7 @@ module Google
       
       # 
       class AdSlot
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A value that identifies the ad slot to the ad server.
         # Corresponds to the JSON property `id`
@@ -83,7 +83,7 @@ module Google
       
       # 
       class AllowedAdvertisingOptions
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This setting indicates whether the partner can display ads when videos run in
         # an embedded player.
@@ -125,7 +125,7 @@ module Google
       
       # 
       class Asset
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of asset IDs that can be used to refer to the asset. The list contains
         # values if the asset represents multiple constituent assets that have been
@@ -154,57 +154,57 @@ module Google
         # The matchPolicy object contains information about the asset's match policy,
         # which YouTube applies to user-uploaded videos that match the asset.
         # Corresponds to the JSON property `matchPolicy`
-        # @return [Google::Apis::YoutubePartnerV1::AssetMatchPolicy]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::AssetMatchPolicy]
         attr_accessor :match_policy
       
         # 
         # Corresponds to the JSON property `matchPolicyEffective`
-        # @return [Google::Apis::YoutubePartnerV1::AssetMatchPolicy]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::AssetMatchPolicy]
         attr_accessor :match_policy_effective
       
         # 
         # Corresponds to the JSON property `matchPolicyMine`
-        # @return [Google::Apis::YoutubePartnerV1::AssetMatchPolicy]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::AssetMatchPolicy]
         attr_accessor :match_policy_mine
       
         # The metadata object contains information that identifies and describes the
         # asset. This information could be used to search for the asset or to eliminate
         # duplication within YouTube's database.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::YoutubePartnerV1::Metadata]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Metadata]
         attr_accessor :metadata
       
         # 
         # Corresponds to the JSON property `metadataEffective`
-        # @return [Google::Apis::YoutubePartnerV1::Metadata]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Metadata]
         attr_accessor :metadata_effective
       
         # 
         # Corresponds to the JSON property `metadataMine`
-        # @return [Google::Apis::YoutubePartnerV1::Metadata]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Metadata]
         attr_accessor :metadata_mine
       
         # The ownership object identifies an asset's owners and provides additional
         # details about their ownership, such as the territories where they own the
         # asset.
         # Corresponds to the JSON property `ownership`
-        # @return [Google::Apis::YoutubePartnerV1::RightsOwnership]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::RightsOwnership]
         attr_accessor :ownership
       
         # The ownershipConflicts object contains information about the asset's ownership
         # conflicts.
         # Corresponds to the JSON property `ownershipConflicts`
-        # @return [Google::Apis::YoutubePartnerV1::OwnershipConflicts]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::OwnershipConflicts]
         attr_accessor :ownership_conflicts
       
         # 
         # Corresponds to the JSON property `ownershipEffective`
-        # @return [Google::Apis::YoutubePartnerV1::RightsOwnership]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::RightsOwnership]
         attr_accessor :ownership_effective
       
         # 
         # Corresponds to the JSON property `ownershipMine`
-        # @return [Google::Apis::YoutubePartnerV1::RightsOwnership]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::RightsOwnership]
         attr_accessor :ownership_mine
       
         # The asset's status.
@@ -254,7 +254,7 @@ module Google
       
       # 
       class AssetLabel
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of the API resource. For assetLabel resources, this value is
         # youtubePartner#assetLabel.
@@ -280,11 +280,11 @@ module Google
       
       # 
       class AssetLabelListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of assetLabel resources that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubePartnerV1::AssetLabel>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::AssetLabel>]
         attr_accessor :items
       
         # The type of the API response. For this operation, the value is youtubePartner#
@@ -306,11 +306,11 @@ module Google
       
       # 
       class AssetListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of asset resources that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubePartnerV1::Asset>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::Asset>]
         attr_accessor :items
       
         # The type of the API response. For this operation, the value is youtubePartner#
@@ -332,7 +332,7 @@ module Google
       
       # 
       class AssetMatchPolicy
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of the API resource. Value: youtubePartner#assetMatchPolicy.
         # Corresponds to the JSON property `kind`
@@ -350,7 +350,7 @@ module Google
         # specifies the action that YouTube should take and may optionally specify the
         # conditions under which that action is enforced.
         # Corresponds to the JSON property `rules`
-        # @return [Array<Google::Apis::YoutubePartnerV1::PolicyRule>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::PolicyRule>]
         attr_accessor :rules
       
         def initialize(**args)
@@ -367,7 +367,7 @@ module Google
       
       # 
       class AssetRelationship
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the child (contained) asset.
         # Corresponds to the JSON property `childAssetId`
@@ -406,11 +406,11 @@ module Google
       
       # 
       class AssetRelationshipListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of assetRelationship resources that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubePartnerV1::AssetRelationship>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::AssetRelationship>]
         attr_accessor :items
       
         # The type of the API response. For this operation, the value is youtubePartner#
@@ -427,7 +427,7 @@ module Google
       
         # The pageInfo object encapsulates paging information for the result set.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubePartnerV1::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::PageInfo]
         attr_accessor :page_info
       
         def initialize(**args)
@@ -445,11 +445,11 @@ module Google
       
       # 
       class AssetSearchResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of asset resources that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubePartnerV1::AssetSnippet>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::AssetSnippet>]
         attr_accessor :items
       
         # The type of the API response. For this operation, the value is youtubePartner#
@@ -466,7 +466,7 @@ module Google
       
         # The pageInfo object encapsulates paging information for the result set.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubePartnerV1::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::PageInfo]
         attr_accessor :page_info
       
         def initialize(**args)
@@ -484,7 +484,7 @@ module Google
       
       # 
       class AssetSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Custom ID assigned by the content owner to this asset.
         # Corresponds to the JSON property `customId`
@@ -548,12 +548,12 @@ module Google
       
       # 
       class Campaign
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The campaignData object contains details like the campaign's start and end
         # dates, target and source.
         # Corresponds to the JSON property `campaignData`
-        # @return [Google::Apis::YoutubePartnerV1::CampaignData]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::CampaignData]
         attr_accessor :campaign_data
       
         # The unique ID that YouTube uses to identify the campaign.
@@ -599,12 +599,12 @@ module Google
       
       # 
       class CampaignData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The campaignSource object contains information about the assets for which the
         # campaign will generate links.
         # Corresponds to the JSON property `campaignSource`
-        # @return [Google::Apis::YoutubePartnerV1::CampaignSource]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::CampaignSource]
         attr_accessor :campaign_source
       
         # The time at which the campaign should expire. Do not specify a value if the
@@ -621,7 +621,7 @@ module Google
         # A list of videos or channels that will be linked to from claimed videos that
         # are included in the campaign.
         # Corresponds to the JSON property `promotedContent`
-        # @return [Array<Google::Apis::YoutubePartnerV1::PromotedContent>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::PromotedContent>]
         attr_accessor :promoted_content
       
         # The time at which the campaign should start. Do not specify a value if the
@@ -646,11 +646,11 @@ module Google
       
       # 
       class CampaignList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of campaigns.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubePartnerV1::Campaign>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::Campaign>]
         attr_accessor :items
       
         # The type of the API response. For this operation, the value is youtubePartner#
@@ -672,7 +672,7 @@ module Google
       
       # 
       class CampaignSource
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of the campaign source.
         # Corresponds to the JSON property `sourceType`
@@ -697,7 +697,7 @@ module Google
       
       # 
       class CampaignTargetLink
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The channel ID or video ID of the link target.
         # Corresponds to the JSON property `targetId`
@@ -722,13 +722,13 @@ module Google
       
       # 
       class Claim
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The applied policy for the viewing owner on the claim. This might not be the
         # same as the final claim policy on the video as it does not consider other
         # partners' policy of the same claim.
         # Corresponds to the JSON property `appliedPolicy`
-        # @return [Google::Apis::YoutubePartnerV1::Policy]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Policy]
         attr_accessor :applied_policy
       
         # The unique YouTube asset ID that identifies the asset associated with the
@@ -770,17 +770,17 @@ module Google
         # If this claim was auto-generated based on a provided reference, this section
         # will provide details of the match that generated the claim.
         # Corresponds to the JSON property `matchInfo`
-        # @return [Google::Apis::YoutubePartnerV1::Claim::MatchInfo]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Claim::MatchInfo]
         attr_accessor :match_info
       
         # 
         # Corresponds to the JSON property `origin`
-        # @return [Google::Apis::YoutubePartnerV1::Claim::Origin]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Claim::Origin]
         attr_accessor :origin
       
         # The policy provided by the viewing owner on the claim.
         # Corresponds to the JSON property `policy`
-        # @return [Google::Apis::YoutubePartnerV1::Policy]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Policy]
         attr_accessor :policy
       
         # The claim's status. When updating a claim, you can update its status from
@@ -825,11 +825,11 @@ module Google
         # If this claim was auto-generated based on a provided reference, this section
         # will provide details of the match that generated the claim.
         class MatchInfo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Details of the longest match between the reference and the user video.
           # Corresponds to the JSON property `longestMatch`
-          # @return [Google::Apis::YoutubePartnerV1::Claim::MatchInfo::LongestMatch]
+          # @return [GoogleAPI::Apis::YoutubePartnerV1::Claim::MatchInfo::LongestMatch]
           attr_accessor :longest_match
         
           # Details about each match segment. Each item in the list contains information
@@ -839,7 +839,7 @@ module Google
           # segments. One segment would describe the audio match and the other would
           # describe the video match.
           # Corresponds to the JSON property `matchSegments`
-          # @return [Array<Google::Apis::YoutubePartnerV1::MatchSegment>]
+          # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::MatchSegment>]
           attr_accessor :match_segments
         
           # The reference ID that generated this match.
@@ -851,7 +851,7 @@ module Google
           # each other. Note these two values may differ if either the reference or the
           # user video contains a loop.
           # Corresponds to the JSON property `totalMatch`
-          # @return [Google::Apis::YoutubePartnerV1::Claim::MatchInfo::TotalMatch]
+          # @return [GoogleAPI::Apis::YoutubePartnerV1::Claim::MatchInfo::TotalMatch]
           attr_accessor :total_match
         
           def initialize(**args)
@@ -868,7 +868,7 @@ module Google
           
           # Details of the longest match between the reference and the user video.
           class LongestMatch
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The duration of the longest match between the reference and the user video.
             # Corresponds to the JSON property `durationSecs`
@@ -901,7 +901,7 @@ module Google
           # each other. Note these two values may differ if either the reference or the
           # user video contains a loop.
           class TotalMatch
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The total amount of content in the reference which matched the user video in
             # seconds.
@@ -929,7 +929,7 @@ module Google
         
         # 
         class Origin
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `source`
@@ -949,7 +949,7 @@ module Google
       
       # 
       class ClaimEvent
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of the API resource. For claimEvent resources, this value is
         # youtubePartner#claimEvent.
@@ -964,7 +964,7 @@ module Google
       
         # Data related to source of the event.
         # Corresponds to the JSON property `source`
-        # @return [Google::Apis::YoutubePartnerV1::ClaimEvent::Source]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::ClaimEvent::Source]
         attr_accessor :source
       
         # The time when the event occurred.
@@ -979,7 +979,7 @@ module Google
       
         # Details of event's type.
         # Corresponds to the JSON property `typeDetails`
-        # @return [Google::Apis::YoutubePartnerV1::ClaimEvent::TypeDetails]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::ClaimEvent::TypeDetails]
         attr_accessor :type_details
       
         def initialize(**args)
@@ -998,7 +998,7 @@ module Google
         
         # Data related to source of the event.
         class Source
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Id of content owner that initiated the event.
           # Corresponds to the JSON property `contentOwnerId`
@@ -1029,7 +1029,7 @@ module Google
         
         # Details of event's type.
         class TypeDetails
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Appeal explanations for dispute_appeal event.
           # Corresponds to the JSON property `appealExplanation`
@@ -1067,11 +1067,11 @@ module Google
       
       # 
       class ClaimHistory
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of claim history events.
         # Corresponds to the JSON property `event`
-        # @return [Array<Google::Apis::YoutubePartnerV1::ClaimEvent>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::ClaimEvent>]
         attr_accessor :event
       
         # The ID that YouTube assigns and uses to uniquely identify the claim.
@@ -1105,11 +1105,11 @@ module Google
       
       # 
       class ClaimListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of claims that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubePartnerV1::Claim>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::Claim>]
         attr_accessor :items
       
         # The type of the API response. For this operation, the value is youtubePartner#
@@ -1126,7 +1126,7 @@ module Google
       
         # The pageInfo object encapsulates paging information for the result set.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubePartnerV1::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::PageInfo]
         attr_accessor :page_info
       
         # The token that can be used as the value of the pageToken parameter to retrieve
@@ -1151,11 +1151,11 @@ module Google
       
       # 
       class ClaimSearchResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of claims that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubePartnerV1::ClaimSnippet>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::ClaimSnippet>]
         attr_accessor :items
       
         # The type of the API response. For this operation, the value is youtubePartner#
@@ -1172,7 +1172,7 @@ module Google
       
         # The pageInfo object encapsulates paging information for the result set.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubePartnerV1::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::PageInfo]
         attr_accessor :page_info
       
         # The token that can be used as the value of the pageToken parameter to retrieve
@@ -1197,7 +1197,7 @@ module Google
       
       # 
       class ClaimSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The unique YouTube asset ID that identifies the asset associated with the
         # claim.
@@ -1230,7 +1230,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `origin`
-        # @return [Google::Apis::YoutubePartnerV1::ClaimSnippet::Origin]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::ClaimSnippet::Origin]
         attr_accessor :origin
       
         # The claim's status.
@@ -1287,7 +1287,7 @@ module Google
         
         # 
         class Origin
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `source`
@@ -1307,7 +1307,7 @@ module Google
       
       # 
       class ClaimedVideoDefaults
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Set this property to true to enable automatically generated breaks for a newly
         # claimed video longer than 10 minutes. The first partner that claims the video
@@ -1353,7 +1353,7 @@ module Google
       
       # 
       class Conditions
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This match condition specifies whether the user- or partner-uploaded content
         # needs to match the audio, video or audiovisual content of a reference file for
@@ -1365,32 +1365,32 @@ module Google
         # This match condition specifies an amount of time that the user- or partner-
         # uploaded content needs to match a reference file for the rule to apply.
         # Corresponds to the JSON property `matchDuration`
-        # @return [Array<Google::Apis::YoutubePartnerV1::IntervalCondition>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::IntervalCondition>]
         attr_accessor :match_duration
       
         # This match condition specifies a percentage of the user- or partner-uploaded
         # content that needs to match a reference file for the rule to apply.
         # Corresponds to the JSON property `matchPercent`
-        # @return [Array<Google::Apis::YoutubePartnerV1::IntervalCondition>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::IntervalCondition>]
         attr_accessor :match_percent
       
         # This match condition indicates that the reference must be a certain duration
         # for the rule to apply.
         # Corresponds to the JSON property `referenceDuration`
-        # @return [Array<Google::Apis::YoutubePartnerV1::IntervalCondition>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::IntervalCondition>]
         attr_accessor :reference_duration
       
         # This match condition indicates that the specified percentage of a reference
         # file must match the user- or partner-uploaded content for the rule to apply.
         # Corresponds to the JSON property `referencePercent`
-        # @return [Array<Google::Apis::YoutubePartnerV1::IntervalCondition>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::IntervalCondition>]
         attr_accessor :reference_percent
       
         # This watch condition specifies where users are (or or not) allowed to watch (
         # or listen to) an asset. YouTube determines whether the condition is satisfied
         # based on the user's location.
         # Corresponds to the JSON property `requiredTerritories`
-        # @return [Google::Apis::YoutubePartnerV1::TerritoryCondition]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::TerritoryCondition]
         attr_accessor :required_territories
       
         def initialize(**args)
@@ -1410,7 +1410,7 @@ module Google
       
       # 
       class ConflictingOwnership
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the conflicting asset's owner.
         # Corresponds to the JSON property `owner`
@@ -1435,7 +1435,7 @@ module Google
       
       # 
       class ContentOwner
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The email address visible to other partners for use in managing asset
         # ownership conflicts.
@@ -1494,17 +1494,17 @@ module Google
       
       # 
       class ContentOwnerAdvertisingOption
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This object identifies the ad formats that the content owner is allowed to use.
         # Corresponds to the JSON property `allowedOptions`
-        # @return [Google::Apis::YoutubePartnerV1::AllowedAdvertisingOptions]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::AllowedAdvertisingOptions]
         attr_accessor :allowed_options
       
         # This object identifies the advertising options used by default for the content
         # owner's newly claimed videos.
         # Corresponds to the JSON property `claimedVideoOptions`
-        # @return [Google::Apis::YoutubePartnerV1::ClaimedVideoDefaults]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::ClaimedVideoDefaults]
         attr_accessor :claimed_video_options
       
         # The value that YouTube uses to uniquely identify the content owner.
@@ -1533,11 +1533,11 @@ module Google
       
       # 
       class ContentOwnerListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of content owners that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubePartnerV1::ContentOwner>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::ContentOwner>]
         attr_accessor :items
       
         # The type of the API response. For this operation, the value is youtubePartner#
@@ -1559,7 +1559,7 @@ module Google
       
       # 
       class CountriesRestriction
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of ad formats that can be used in the specified countries.
         # Corresponds to the JSON property `adFormats`
@@ -1585,7 +1585,7 @@ module Google
       
       # 
       class CuepointSettings
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The cuepoint's type. See the Getting started guide for an explanation of the
         # different types of cuepoints. Also see the Life of a broadcast document for
@@ -1638,7 +1638,7 @@ module Google
       
       # 
       class Date
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The date's day. The value should be an integer between 1 and 31. Note that
         # some day-month combinations are not valid.
@@ -1670,12 +1670,12 @@ module Google
       
       # 
       class DateRange
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The end date (inclusive) for the date range. This value is required for video-
         # on-demand (VOD) orders and optional for electronic sell-through (EST) orders.
         # Corresponds to the JSON property `end`
-        # @return [Google::Apis::YoutubePartnerV1::Date]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Date]
         attr_accessor :end
       
         # Identifies this resource as order date range. Value: "youtubePartner#dateRange"
@@ -1686,7 +1686,7 @@ module Google
       
         # The start date for the date range. This value is required for all date ranges.
         # Corresponds to the JSON property `start`
-        # @return [Google::Apis::YoutubePartnerV1::Date]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Date]
         attr_accessor :start
       
         def initialize(**args)
@@ -1703,7 +1703,7 @@ module Google
       
       # 
       class ExcludedInterval
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The end (inclusive) time in seconds of the time window. The value can be any
         # value greater than low. If high is greater than the length of the reference,
@@ -1745,7 +1745,7 @@ module Google
       
       # 
       class IntervalCondition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The maximum (inclusive) allowed value for the condition to be satisfied. The
         # default value is ∞.
@@ -1772,7 +1772,7 @@ module Google
       
       # 
       class LiveCuepoint
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID that YouTube assigns to uniquely identify the broadcast into which the
         # cuepoint is being inserted.
@@ -1793,7 +1793,7 @@ module Google
       
         # The settings object defines the cuepoint's settings.
         # Corresponds to the JSON property `settings`
-        # @return [Google::Apis::YoutubePartnerV1::CuepointSettings]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::CuepointSettings]
         attr_accessor :settings
       
         def initialize(**args)
@@ -1811,7 +1811,7 @@ module Google
       
       # 
       class MatchSegment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies the manner in which the claimed video matches the reference video.
         # Corresponds to the JSON property `channel`
@@ -1821,13 +1821,13 @@ module Google
         # The reference_segment object contains information about the matched portion of
         # the reference content.
         # Corresponds to the JSON property `reference_segment`
-        # @return [Google::Apis::YoutubePartnerV1::Segment]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Segment]
         attr_accessor :reference_segment
       
         # The video_segment object contains information about the matched portion of the
         # claimed video.
         # Corresponds to the JSON property `video_segment`
-        # @return [Google::Apis::YoutubePartnerV1::Segment]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Segment]
         attr_accessor :video_segment
       
         def initialize(**args)
@@ -1844,7 +1844,7 @@ module Google
       
       # 
       class Metadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list that identifies actors associated with the asset. You can specify up to
         # 50 actors for an asset.
@@ -1890,7 +1890,7 @@ module Google
       
         # The date copyright for this asset was established. *
         # Corresponds to the JSON property `copyrightDate`
-        # @return [Google::Apis::YoutubePartnerV1::Date]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Date]
         attr_accessor :copyright_date
       
         # A unique value that you, the metadata provider, use to identify an asset. The
@@ -2040,7 +2040,7 @@ module Google
         # A list of ratings that an asset received. The rating must be valid under the
         # specified rating system.
         # Corresponds to the JSON property `ratings`
-        # @return [Array<Google::Apis::YoutubePartnerV1::Rating>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::Rating>]
         attr_accessor :ratings
       
         # The date that an asset was publicly released. For season assets, this value
@@ -2051,7 +2051,7 @@ module Google
         # - Episode assets that are linked to a show
         # - Movie assets that appear in YouTube's Movies category
         # Corresponds to the JSON property `releaseDate`
-        # @return [Google::Apis::YoutubePartnerV1::Date]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Date]
         attr_accessor :release_date
       
         # The season number that identifies a season asset, or the season number that is
@@ -2182,7 +2182,7 @@ module Google
       
       # 
       class MetadataHistory
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of the API resource. For metadata history resources, the value is
         # youtubePartner#metadataHistory.
@@ -2193,12 +2193,12 @@ module Google
         # The metadata object contains the metadata provided by the specified source (
         # origination) at the specified time (timeProvided).
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::YoutubePartnerV1::Metadata]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Metadata]
         attr_accessor :metadata
       
         # The origination object contains information that describes the metadata source.
         # Corresponds to the JSON property `origination`
-        # @return [Google::Apis::YoutubePartnerV1::Origination]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Origination]
         attr_accessor :origination
       
         # The time the metadata was provided.
@@ -2221,12 +2221,12 @@ module Google
       
       # 
       class MetadataHistoryListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of metadata history (youtubePartner#metadataHistory) resources that
         # match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubePartnerV1::MetadataHistory>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::MetadataHistory>]
         attr_accessor :items
       
         # The type of the API response. For this operation, the value is youtubePartner#
@@ -2248,7 +2248,7 @@ module Google
       
       # 
       class Order
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Links an order to the avails associated with it.
         # Corresponds to the JSON property `availGroupId`
@@ -2281,17 +2281,17 @@ module Google
       
         # Date when this content was first made available on DVD
         # Corresponds to the JSON property `dvdReleaseDate`
-        # @return [Google::Apis::YoutubePartnerV1::Date]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Date]
         attr_accessor :dvd_release_date
       
         # Range of time content is to be available for rental.
         # Corresponds to the JSON property `estDates`
-        # @return [Google::Apis::YoutubePartnerV1::DateRange]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::DateRange]
         attr_accessor :est_dates
       
         # History log of events for this order
         # Corresponds to the JSON property `events`
-        # @return [Array<Google::Apis::YoutubePartnerV1::StateCompleted>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::StateCompleted>]
         attr_accessor :events
       
         # Order Id unique identifier for an order.
@@ -2311,7 +2311,7 @@ module Google
       
         # Date when this content was first made available to the public
         # Corresponds to the JSON property `originalReleaseDate`
-        # @return [Google::Apis::YoutubePartnerV1::Date]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Date]
         attr_accessor :original_release_date
       
         # The priority for the order in the QC review queue once the content is ready
@@ -2333,12 +2333,12 @@ module Google
         # Minumim set of requirements for this order to be complete such as is a trailer
         # required.
         # Corresponds to the JSON property `requirements`
-        # @return [Google::Apis::YoutubePartnerV1::Requirements]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Requirements]
         attr_accessor :requirements
       
         # Details of a show, show name, season number, episode etc.
         # Corresponds to the JSON property `show`
-        # @return [Google::Apis::YoutubePartnerV1::ShowDetails]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::ShowDetails]
         attr_accessor :show
       
         # The order's status.
@@ -2353,7 +2353,7 @@ module Google
       
         # Range of time content is to be available for purchase.
         # Corresponds to the JSON property `vodDates`
-        # @return [Google::Apis::YoutubePartnerV1::DateRange]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::DateRange]
         attr_accessor :vod_dates
       
         def initialize(**args)
@@ -2387,11 +2387,11 @@ module Google
       
       # 
       class OrderListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of orders that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubePartnerV1::Order>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::Order>]
         attr_accessor :items
       
         # The type of the API response. For this operation, the value is youtubePartner#
@@ -2408,7 +2408,7 @@ module Google
       
         # The pageInfo object encapsulates paging information for the result set.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubePartnerV1::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::PageInfo]
         attr_accessor :page_info
       
         # The token that can be used as the value of the pageToken parameter to retrieve
@@ -2433,7 +2433,7 @@ module Google
       
       # 
       class Origination
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The content owner who provided the metadata or ownership information.
         # Corresponds to the JSON property `owner`
@@ -2459,12 +2459,12 @@ module Google
       
       # 
       class OwnershipConflicts
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list that identifies ownership conflicts of an asset and the territories
         # where conflicting ownership is inserted.
         # Corresponds to the JSON property `general`
-        # @return [Array<Google::Apis::YoutubePartnerV1::TerritoryConflicts>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::TerritoryConflicts>]
         attr_accessor :general
       
         # The type of the API resource. For ownershipConflicts resources, the value is
@@ -2476,19 +2476,19 @@ module Google
         # A list that identifies ownership conflicts of the mechanical rights for a
         # composition asset and the territories where conflicting ownership is inserted.
         # Corresponds to the JSON property `mechanical`
-        # @return [Array<Google::Apis::YoutubePartnerV1::TerritoryConflicts>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::TerritoryConflicts>]
         attr_accessor :mechanical
       
         # A list that identifies ownership conflicts of the performance rights for a
         # composition asset and the territories where conflicting ownership is inserted.
         # Corresponds to the JSON property `performance`
-        # @return [Array<Google::Apis::YoutubePartnerV1::TerritoryConflicts>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::TerritoryConflicts>]
         attr_accessor :performance
       
         # A list that identifies ownership conflicts of the synchronization rights for a
         # composition asset and the territories where conflicting ownership is inserted.
         # Corresponds to the JSON property `synchronization`
-        # @return [Array<Google::Apis::YoutubePartnerV1::TerritoryConflicts>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::TerritoryConflicts>]
         attr_accessor :synchronization
       
         def initialize(**args)
@@ -2507,12 +2507,12 @@ module Google
       
       # 
       class OwnershipHistoryListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of ownership history (youtubePartner#ownershipHistory) resources that
         # match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubePartnerV1::RightsOwnershipHistory>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::RightsOwnershipHistory>]
         attr_accessor :items
       
         # The type of the API response. For this operation, the value is youtubePartner#
@@ -2534,7 +2534,7 @@ module Google
       
       # 
       class PageInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of results included in the API response.
         # Corresponds to the JSON property `resultsPerPage`
@@ -2565,7 +2565,7 @@ module Google
       
       # 
       class Policy
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The policy's description.
         # Corresponds to the JSON property `description`
@@ -2590,7 +2590,7 @@ module Google
         # A list of rules that specify the action that YouTube should take and may
         # optionally specify the conditions under which that action is enforced.
         # Corresponds to the JSON property `rules`
-        # @return [Array<Google::Apis::YoutubePartnerV1::PolicyRule>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::PolicyRule>]
         attr_accessor :rules
       
         # The time the policy was updated.
@@ -2615,11 +2615,11 @@ module Google
       
       # 
       class PolicyList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of saved policies.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubePartnerV1::Policy>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::Policy>]
         attr_accessor :items
       
         # The type of the API response. For this operation, the value is youtubePartner#
@@ -2641,7 +2641,7 @@ module Google
       
       # 
       class PolicyRule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The policy that YouTube should enforce if the rule's conditions are all valid
         # for an asset or for an attempt to view that asset on YouTube.
@@ -2652,7 +2652,7 @@ module Google
         # A set of conditions that must be met for the rule's action (and subactions) to
         # be enforced. For a rule to be valid, all of its conditions must be met.
         # Corresponds to the JSON property `conditions`
-        # @return [Google::Apis::YoutubePartnerV1::Conditions]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Conditions]
         attr_accessor :conditions
       
         # A list of additional actions that YouTube should take if the conditions in the
@@ -2675,14 +2675,14 @@ module Google
       
       # 
       class PromotedContent
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of link targets that will be used to generate the annotation link that
         # appears on videos included in the  campaign. If more than one link is
         # specified, the link that is displayed to viewers will be randomly selected
         # from the list.
         # Corresponds to the JSON property `link`
-        # @return [Array<Google::Apis::YoutubePartnerV1::CampaignTargetLink>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::CampaignTargetLink>]
         attr_accessor :link
       
         def initialize(**args)
@@ -2697,7 +2697,7 @@ module Google
       
       # 
       class Publisher
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The publisher's unique CAE (Compositeur, Auteur and Editeur) number.
         # Corresponds to the JSON property `caeNumber`
@@ -2741,11 +2741,11 @@ module Google
       
       # 
       class PublisherList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of publishers that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubePartnerV1::Publisher>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::Publisher>]
         attr_accessor :items
       
         # The type of the API response. For this operation, the value is youtubePartner#
@@ -2762,7 +2762,7 @@ module Google
       
         # The pageInfo object encapsulates paging information for the result set.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubePartnerV1::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::PageInfo]
         attr_accessor :page_info
       
         def initialize(**args)
@@ -2780,7 +2780,7 @@ module Google
       
       # 
       class Rating
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The rating that the asset received.
         # Corresponds to the JSON property `rating`
@@ -2805,7 +2805,7 @@ module Google
       
       # 
       class Reference
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID that uniquely identifies the asset that the reference is associated
         # with.
@@ -2842,7 +2842,7 @@ module Google
         # The list of time intervals from this reference that will be ignored during the
         # match process.
         # Corresponds to the JSON property `excludedIntervals`
-        # @return [Array<Google::Apis::YoutubePartnerV1::ExcludedInterval>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::ExcludedInterval>]
         attr_accessor :excluded_intervals
       
         # When uploading a reference, set this value to true to indicate that the
@@ -2883,7 +2883,7 @@ module Google
         # The origination object contains information that describes the reference
         # source.
         # Corresponds to the JSON property `origination`
-        # @return [Google::Apis::YoutubePartnerV1::Origination]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Origination]
         attr_accessor :origination
       
         # The reference's status.
@@ -2946,7 +2946,7 @@ module Google
       
       # 
       class ReferenceConflict
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An id of a conflicting reference.
         # Corresponds to the JSON property `conflictingReferenceId`
@@ -2973,7 +2973,7 @@ module Google
         # The list of matches between conflicting and original references at the time of
         # conflict creation.
         # Corresponds to the JSON property `matches`
-        # @return [Array<Google::Apis::YoutubePartnerV1::ReferenceConflictMatch>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::ReferenceConflictMatch>]
         attr_accessor :matches
       
         # An id of an original reference.
@@ -3004,11 +3004,11 @@ module Google
       
       # 
       class ReferenceConflictListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of reference conflicts that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubePartnerV1::ReferenceConflict>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::ReferenceConflict>]
         attr_accessor :items
       
         # The type of the API response. For this operation, the value is youtubePartner#
@@ -3025,7 +3025,7 @@ module Google
       
         # The pageInfo object encapsulates paging information for the result set.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubePartnerV1::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::PageInfo]
         attr_accessor :page_info
       
         def initialize(**args)
@@ -3043,7 +3043,7 @@ module Google
       
       # 
       class ReferenceConflictMatch
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Conflicting reference offset in milliseconds.
         # Corresponds to the JSON property `conflicting_reference_offset_ms`
@@ -3080,11 +3080,11 @@ module Google
       
       # 
       class ReferenceListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of references that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubePartnerV1::Reference>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::Reference>]
         attr_accessor :items
       
         # The type of the API response. For this operation, the value is youtubePartner#
@@ -3101,7 +3101,7 @@ module Google
       
         # The pageInfo object encapsulates paging information for the result set.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubePartnerV1::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::PageInfo]
         attr_accessor :page_info
       
         def initialize(**args)
@@ -3119,7 +3119,7 @@ module Google
       
       # 
       class Requirements
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This value indicates whether the order requires closed captions.
         # Corresponds to the JSON property `caption`
@@ -3175,7 +3175,7 @@ module Google
       
       # 
       class RightsOwnership
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list that identifies the owners of an asset and the territories where each
         # owner has ownership. General asset ownership is used for all types of assets
@@ -3184,7 +3184,7 @@ module Google
         # Note: You cannot specify general ownership rights and also specify either
         # mechanical, performance, or synchronization rights.
         # Corresponds to the JSON property `general`
-        # @return [Array<Google::Apis::YoutubePartnerV1::TerritoryOwners>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::TerritoryOwners>]
         attr_accessor :general
       
         # The type of the API resource. For rightsOwnership resources, the value is
@@ -3195,19 +3195,19 @@ module Google
       
         # A list that identifies owners of the mechanical rights for a composition asset.
         # Corresponds to the JSON property `mechanical`
-        # @return [Array<Google::Apis::YoutubePartnerV1::TerritoryOwners>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::TerritoryOwners>]
         attr_accessor :mechanical
       
         # A list that identifies owners of the performance rights for a composition
         # asset.
         # Corresponds to the JSON property `performance`
-        # @return [Array<Google::Apis::YoutubePartnerV1::TerritoryOwners>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::TerritoryOwners>]
         attr_accessor :performance
       
         # A list that identifies owners of the synchronization rights for a composition
         # asset.
         # Corresponds to the JSON property `synchronization`
-        # @return [Array<Google::Apis::YoutubePartnerV1::TerritoryOwners>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::TerritoryOwners>]
         attr_accessor :synchronization
       
         def initialize(**args)
@@ -3226,7 +3226,7 @@ module Google
       
       # 
       class RightsOwnershipHistory
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of the API resource. For ownership history resources, the value is
         # youtubePartner#rightsOwnershipHistory.
@@ -3236,13 +3236,13 @@ module Google
       
         # The origination object contains information that describes the metadata source.
         # Corresponds to the JSON property `origination`
-        # @return [Google::Apis::YoutubePartnerV1::Origination]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::Origination]
         attr_accessor :origination
       
         # The ownership object contains the ownership data provided by the specified
         # source (origination) at the specified time (timeProvided).
         # Corresponds to the JSON property `ownership`
-        # @return [Google::Apis::YoutubePartnerV1::RightsOwnership]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::RightsOwnership]
         attr_accessor :ownership
       
         # The time that the ownership data was provided.
@@ -3265,7 +3265,7 @@ module Google
       
       # 
       class Segment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The duration of the segment in milliseconds.
         # Corresponds to the JSON property `duration`
@@ -3297,7 +3297,7 @@ module Google
       
       # 
       class ShowDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The episode number associated with the episode.
         # Corresponds to the JSON property `episodeNumber`
@@ -3334,7 +3334,7 @@ module Google
       
       # 
       class StateCompleted
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The state that the order entered.
         # Corresponds to the JSON property `state`
@@ -3359,7 +3359,7 @@ module Google
       
       # 
       class TerritoryCondition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of territories. Each territory is an ISO 3166 two-letter country code..
         # Corresponds to the JSON property `territories`
@@ -3385,11 +3385,11 @@ module Google
       
       # 
       class TerritoryConflicts
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of conflicting ownerships.
         # Corresponds to the JSON property `conflictingOwnership`
-        # @return [Array<Google::Apis::YoutubePartnerV1::ConflictingOwnership>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::ConflictingOwnership>]
         attr_accessor :conflicting_ownership
       
         # A territories where the ownership conflict is present. Territory is an ISO
@@ -3411,7 +3411,7 @@ module Google
       
       # 
       class TerritoryOwners
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the asset's owner or rights administrator.
         # Corresponds to the JSON property `owner`
@@ -3463,7 +3463,7 @@ module Google
       
       # 
       class ValidateError
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The column name where the error occurred.
         # Corresponds to the JSON property `columnName`
@@ -3512,7 +3512,7 @@ module Google
       
       # 
       class ValidateRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The metadata file contents.
         # Corresponds to the JSON property `content`
@@ -3552,11 +3552,11 @@ module Google
       
       # 
       class ValidateResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of errors and/or warnings.
         # Corresponds to the JSON property `errors`
-        # @return [Array<Google::Apis::YoutubePartnerV1::ValidateError>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::ValidateError>]
         attr_accessor :errors
       
         # The type of the API resource. For this operation, the value is youtubePartner#
@@ -3584,12 +3584,12 @@ module Google
       
       # 
       class VideoAdvertisingOption
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of times when YouTube can show an in-stream advertisement during
         # playback of the video.
         # Corresponds to the JSON property `adBreaks`
-        # @return [Array<Google::Apis::YoutubePartnerV1::AdBreak>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::AdBreak>]
         attr_accessor :ad_breaks
       
         # A list of ad formats that the video is allowed to show.
@@ -3657,11 +3657,11 @@ module Google
       
       # 
       class VideoAdvertisingOptionGetEnabledAdsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of ad breaks that occur in a claimed YouTube video.
         # Corresponds to the JSON property `adBreaks`
-        # @return [Array<Google::Apis::YoutubePartnerV1::AdBreak>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::AdBreak>]
         attr_accessor :ad_breaks
       
         # This field indicates whether YouTube can show ads when the video is played in
@@ -3674,7 +3674,7 @@ module Google
         # A list that identifies the countries where ads can run and the types of ads
         # allowed in those countries.
         # Corresponds to the JSON property `countriesRestriction`
-        # @return [Array<Google::Apis::YoutubePartnerV1::CountriesRestriction>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::CountriesRestriction>]
         attr_accessor :countries_restriction
       
         # The ID that YouTube uses to uniquely identify the claimed video.
@@ -3704,7 +3704,7 @@ module Google
       
       # 
       class Whitelist
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The YouTube channel ID that uniquely identifies the whitelisted channel.
         # Corresponds to the JSON property `id`
@@ -3736,11 +3736,11 @@ module Google
       
       # 
       class WhitelistListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of whitelist resources that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubePartnerV1::Whitelist>]
+        # @return [Array<GoogleAPI::Apis::YoutubePartnerV1::Whitelist>]
         attr_accessor :items
       
         # The type of the API response. For this operation, the value is youtubePartner#
@@ -3757,7 +3757,7 @@ module Google
       
         # The pageInfo object encapsulates paging information for the result set.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubePartnerV1::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubePartnerV1::PageInfo]
         attr_accessor :page_info
       
         def initialize(**args)

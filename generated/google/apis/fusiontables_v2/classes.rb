@@ -18,14 +18,14 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module FusiontablesV2
       
       # Specifies the minimum and maximum values, the color, opacity, icon and weight
       # of a bucket within a StyleSetting.
       class Bucket
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Color of line or the interior of a polygon in #RRGGBB format.
         # Corresponds to the JSON property `color`
@@ -76,12 +76,12 @@ module Google
       
       # Specifies the details of a column in a table.
       class Column
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifier of the base column. If present, this column is derived from the
         # specified base column.
         # Corresponds to the JSON property `baseColumn`
-        # @return [Google::Apis::FusiontablesV2::Column::BaseColumn]
+        # @return [GoogleAPI::Apis::FusiontablesV2::Column::BaseColumn]
         attr_accessor :base_column
       
         # Identifier for the column.
@@ -189,7 +189,7 @@ module Google
         # Identifier of the base column. If present, this column is derived from the
         # specified base column.
         class BaseColumn
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The id of the column in the base table from which this column is derived.
           # Corresponds to the JSON property `columnId`
@@ -215,11 +215,11 @@ module Google
       
       # Represents a list of columns in a table.
       class ColumnList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of all requested columns.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::FusiontablesV2::Column>]
+        # @return [Array<GoogleAPI::Apis::FusiontablesV2::Column>]
         attr_accessor :items
       
         # The kind of item this is. For a column list, this is always fusiontables#
@@ -254,7 +254,7 @@ module Google
       
       # Represents a Geometry object.
       class Geometry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of geometries in this geometry collection.
         # Corresponds to the JSON property `geometries`
@@ -285,7 +285,7 @@ module Google
       
       # Represents an import request.
       class Import
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The kind of item this is. For an import, this is always fusiontables#import.
         # Corresponds to the JSON property `kind`
@@ -310,7 +310,7 @@ module Google
       
       # Represents a line geometry.
       class Line
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The coordinates that define the line.
         # Corresponds to the JSON property `coordinates`
@@ -335,7 +335,7 @@ module Google
       
       # Represents a LineStyle within a StyleSetting
       class LineStyle
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Color of the line in #RRGGBB format.
         # Corresponds to the JSON property `strokeColor`
@@ -344,7 +344,7 @@ module Google
       
         # Represents a StyleFunction within a StyleSetting
         # Corresponds to the JSON property `strokeColorStyler`
-        # @return [Google::Apis::FusiontablesV2::StyleFunction]
+        # @return [GoogleAPI::Apis::FusiontablesV2::StyleFunction]
         attr_accessor :stroke_color_styler
       
         # Opacity of the line : 0.0 (transparent) to 1.0 (opaque).
@@ -359,7 +359,7 @@ module Google
       
         # Represents a StyleFunction within a StyleSetting
         # Corresponds to the JSON property `strokeWeightStyler`
-        # @return [Google::Apis::FusiontablesV2::StyleFunction]
+        # @return [GoogleAPI::Apis::FusiontablesV2::StyleFunction]
         attr_accessor :stroke_weight_styler
       
         def initialize(**args)
@@ -378,7 +378,7 @@ module Google
       
       # Represents a point object.
       class Point
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The coordinates that define the point.
         # Corresponds to the JSON property `coordinates`
@@ -403,7 +403,7 @@ module Google
       
       # Represents a PointStyle within a StyleSetting
       class PointStyle
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Name of the icon. Use values defined in http://www.google.com/fusiontables/
         # DataSource?dsrcid=308519
@@ -413,7 +413,7 @@ module Google
       
         # Represents a StyleFunction within a StyleSetting
         # Corresponds to the JSON property `iconStyler`
-        # @return [Google::Apis::FusiontablesV2::StyleFunction]
+        # @return [GoogleAPI::Apis::FusiontablesV2::StyleFunction]
         attr_accessor :icon_styler
       
         def initialize(**args)
@@ -429,7 +429,7 @@ module Google
       
       # Represents a polygon object.
       class Polygon
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The coordinates that define the polygon.
         # Corresponds to the JSON property `coordinates`
@@ -454,7 +454,7 @@ module Google
       
       # Represents a PolygonStyle within a StyleSetting
       class PolygonStyle
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Color of the interior of the polygon in #RRGGBB format.
         # Corresponds to the JSON property `fillColor`
@@ -463,7 +463,7 @@ module Google
       
         # Represents a StyleFunction within a StyleSetting
         # Corresponds to the JSON property `fillColorStyler`
-        # @return [Google::Apis::FusiontablesV2::StyleFunction]
+        # @return [GoogleAPI::Apis::FusiontablesV2::StyleFunction]
         attr_accessor :fill_color_styler
       
         # Opacity of the interior of the polygon: 0.0 (transparent) to 1.0 (opaque).
@@ -478,7 +478,7 @@ module Google
       
         # Represents a StyleFunction within a StyleSetting
         # Corresponds to the JSON property `strokeColorStyler`
-        # @return [Google::Apis::FusiontablesV2::StyleFunction]
+        # @return [GoogleAPI::Apis::FusiontablesV2::StyleFunction]
         attr_accessor :stroke_color_styler
       
         # Opacity of the polygon border: 0.0 (transparent) to 1.0 (opaque).
@@ -493,7 +493,7 @@ module Google
       
         # Represents a StyleFunction within a StyleSetting
         # Corresponds to the JSON property `strokeWeightStyler`
-        # @return [Google::Apis::FusiontablesV2::StyleFunction]
+        # @return [GoogleAPI::Apis::FusiontablesV2::StyleFunction]
         attr_accessor :stroke_weight_styler
       
         def initialize(**args)
@@ -515,7 +515,7 @@ module Google
       
       # Represents a response to a SQL statement.
       class Sqlresponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Columns in the table.
         # Corresponds to the JSON property `columns`
@@ -549,12 +549,12 @@ module Google
       
       # Represents a StyleFunction within a StyleSetting
       class StyleFunction
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Bucket function that assigns a style based on the range a column value falls
         # into.
         # Corresponds to the JSON property `buckets`
-        # @return [Array<Google::Apis::FusiontablesV2::Bucket>]
+        # @return [Array<GoogleAPI::Apis::FusiontablesV2::Bucket>]
         attr_accessor :buckets
       
         # Name of the column whose value is used in the style.
@@ -564,7 +564,7 @@ module Google
       
         # Gradient function that interpolates a range of colors based on column value.
         # Corresponds to the JSON property `gradient`
-        # @return [Google::Apis::FusiontablesV2::StyleFunction::Gradient]
+        # @return [GoogleAPI::Apis::FusiontablesV2::StyleFunction::Gradient]
         attr_accessor :gradient
       
         # Stylers can be one of three kinds: "fusiontables#fromColumn if the column
@@ -591,11 +591,11 @@ module Google
         
         # Gradient function that interpolates a range of colors based on column value.
         class Gradient
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Array with two or more colors.
           # Corresponds to the JSON property `colors`
-          # @return [Array<Google::Apis::FusiontablesV2::StyleFunction::Gradient::Color>]
+          # @return [Array<GoogleAPI::Apis::FusiontablesV2::StyleFunction::Gradient::Color>]
           attr_accessor :colors
         
           # Higher-end of the interpolation range: rows with this value will be assigned
@@ -623,7 +623,7 @@ module Google
           
           # 
           class Color
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Color in #RRGGBB format.
             # Corresponds to the JSON property `color`
@@ -651,7 +651,7 @@ module Google
       # Represents a complete StyleSettings object. The primary key is a combination
       # of the tableId and a styleId.
       class StyleSetting
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The kind of item this is. A StyleSetting contains the style definitions for
         # points, lines, and polygons in a table. Since a table can have any one or all
@@ -662,7 +662,7 @@ module Google
       
         # Represents a PointStyle within a StyleSetting
         # Corresponds to the JSON property `markerOptions`
-        # @return [Google::Apis::FusiontablesV2::PointStyle]
+        # @return [GoogleAPI::Apis::FusiontablesV2::PointStyle]
         attr_accessor :marker_options
       
         # Optional name for the style setting.
@@ -672,12 +672,12 @@ module Google
       
         # Represents a PolygonStyle within a StyleSetting
         # Corresponds to the JSON property `polygonOptions`
-        # @return [Google::Apis::FusiontablesV2::PolygonStyle]
+        # @return [GoogleAPI::Apis::FusiontablesV2::PolygonStyle]
         attr_accessor :polygon_options
       
         # Represents a LineStyle within a StyleSetting
         # Corresponds to the JSON property `polylineOptions`
-        # @return [Google::Apis::FusiontablesV2::LineStyle]
+        # @return [GoogleAPI::Apis::FusiontablesV2::LineStyle]
         attr_accessor :polyline_options
       
         # Identifier for the style setting (unique only within tables).
@@ -708,11 +708,11 @@ module Google
       
       # Represents a list of styles for a given table.
       class StyleSettingList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # All requested style settings.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::FusiontablesV2::StyleSetting>]
+        # @return [Array<GoogleAPI::Apis::FusiontablesV2::StyleSetting>]
         attr_accessor :items
       
         # The kind of item this is. For a style list, this is always fusiontables#
@@ -747,7 +747,7 @@ module Google
       
       # Represents a table.
       class Table
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Attribution assigned to the table.
         # Corresponds to the JSON property `attribution`
@@ -771,7 +771,7 @@ module Google
       
         # Columns in the table.
         # Corresponds to the JSON property `columns`
-        # @return [Array<Google::Apis::FusiontablesV2::Column>]
+        # @return [Array<GoogleAPI::Apis::FusiontablesV2::Column>]
         attr_accessor :columns
       
         # Description assigned to the table.
@@ -839,11 +839,11 @@ module Google
       
       # Represents a list of tables.
       class TableList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of all requested tables.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::FusiontablesV2::Table>]
+        # @return [Array<GoogleAPI::Apis::FusiontablesV2::Table>]
         attr_accessor :items
       
         # The kind of item this is. For table list, this is always fusiontables#
@@ -873,7 +873,7 @@ module Google
       # A background task on a table, initiated for time- or resource-consuming
       # operations such as changing column types or deleting all rows.
       class Task
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Type of the resource. This is always "fusiontables#task".
         # Corresponds to the JSON property `kind`
@@ -918,11 +918,11 @@ module Google
       
       # Represents a list of tasks for a table.
       class TaskList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of all requested tasks.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::FusiontablesV2::Task>]
+        # @return [Array<GoogleAPI::Apis::FusiontablesV2::Task>]
         attr_accessor :items
       
         # Type of the resource. This is always "fusiontables#taskList".
@@ -956,7 +956,7 @@ module Google
       
       # Represents the contents of InfoWindow templates.
       class Template
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of columns from which the template is to be automatically constructed.
         # Only one of body or automaticColumns can be specified.
@@ -1008,11 +1008,11 @@ module Google
       
       # Represents a list of templates for a given table.
       class TemplateList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of all requested templates.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::FusiontablesV2::Template>]
+        # @return [Array<GoogleAPI::Apis::FusiontablesV2::Template>]
         attr_accessor :items
       
         # The kind of item this is. For a template list, this is always fusiontables#

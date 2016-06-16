@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module FitnessV1
       
       # 
       class AggregateBucket
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Available for Bucket.Type.ACTIVITY_TYPE, Bucket.Type.ACTIVITY_SEGMENT
         # Corresponds to the JSON property `activity`
@@ -33,7 +33,7 @@ module Google
       
         # There will be one dataset per AggregateBy in the request.
         # Corresponds to the JSON property `dataset`
-        # @return [Array<Google::Apis::FitnessV1::Dataset>]
+        # @return [Array<GoogleAPI::Apis::FitnessV1::Dataset>]
         attr_accessor :dataset
       
         # The end time for the aggregated data, in milliseconds since epoch, inclusive.
@@ -44,7 +44,7 @@ module Google
         # Sessions contain metadata, such as a user-friendly name and time interval
         # information.
         # Corresponds to the JSON property `session`
-        # @return [Google::Apis::FitnessV1::Session]
+        # @return [GoogleAPI::Apis::FitnessV1::Session]
         attr_accessor :session
       
         # The start time for the aggregated data, in milliseconds since epoch, inclusive.
@@ -75,7 +75,7 @@ module Google
       
       # The specification of which data to aggregate.
       class AggregateBy
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A data source ID to aggregate. Mutually exclusive of dataTypeName. Only data
         # from the specified data source ID will be included in the aggregation. The
@@ -105,14 +105,14 @@ module Google
       
       # 
       class AggregateRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The specification of data to be aggregated. At least one aggregateBy spec must
         # be provided. All data that is specified will be aggregated using the same
         # bucketing criteria. There will be one dataset in the response for every
         # aggregateBy spec.
         # Corresponds to the JSON property `aggregateBy`
-        # @return [Array<Google::Apis::FitnessV1::AggregateBy>]
+        # @return [Array<GoogleAPI::Apis::FitnessV1::AggregateBy>]
         attr_accessor :aggregate_by
       
         # Specifies that data be aggregated each activity segment recored for a user.
@@ -120,7 +120,7 @@ module Google
         # segment rather than all segments of the same type. Mutually exclusive of other
         # bucketing specifications.
         # Corresponds to the JSON property `bucketByActivitySegment`
-        # @return [Google::Apis::FitnessV1::BucketByActivity]
+        # @return [GoogleAPI::Apis::FitnessV1::BucketByActivity]
         attr_accessor :bucket_by_activity_segment
       
         # Specifies that data be aggregated by the type of activity being performed when
@@ -129,20 +129,20 @@ module Google
         # that was recorded while the user was not active will not be included in the
         # response. Mutually exclusive of other bucketing specifications.
         # Corresponds to the JSON property `bucketByActivityType`
-        # @return [Google::Apis::FitnessV1::BucketByActivity]
+        # @return [GoogleAPI::Apis::FitnessV1::BucketByActivity]
         attr_accessor :bucket_by_activity_type
       
         # Specifies that data be aggregated by user sessions. Data that does not fall
         # within the time range of a session will not be included in the response.
         # Mutually exclusive of other bucketing specifications.
         # Corresponds to the JSON property `bucketBySession`
-        # @return [Google::Apis::FitnessV1::BucketBySession]
+        # @return [GoogleAPI::Apis::FitnessV1::BucketBySession]
         attr_accessor :bucket_by_session
       
         # Specifies that data be aggregated by a single time interval. Mutually
         # exclusive of other bucketing specifications.
         # Corresponds to the JSON property `bucketByTime`
-        # @return [Google::Apis::FitnessV1::BucketByTime]
+        # @return [GoogleAPI::Apis::FitnessV1::BucketByTime]
         attr_accessor :bucket_by_time
       
         # The end of a window of time. Data that intersects with this time window will
@@ -175,11 +175,11 @@ module Google
       
       # 
       class AggregateResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of buckets containing the aggregated data.
         # Corresponds to the JSON property `bucket`
-        # @return [Array<Google::Apis::FitnessV1::AggregateBucket>]
+        # @return [Array<GoogleAPI::Apis::FitnessV1::AggregateBucket>]
         attr_accessor :bucket
       
         def initialize(**args)
@@ -194,7 +194,7 @@ module Google
       
       # See: google3/java/com/google/android/apps/heart/platform/api/Application.java
       class Application
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An optional URI that can be used to link back to the application.
         # Corresponds to the JSON property `detailsUrl`
@@ -238,7 +238,7 @@ module Google
       
       # 
       class BucketByActivity
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The default activity stream will be used if a specific activityDataSourceId is
         # not specified.
@@ -265,7 +265,7 @@ module Google
       
       # 
       class BucketBySession
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Specifies that only sessions of duration longer than minDurationMillis are
         # considered and used as a container for aggregated data.
@@ -285,7 +285,7 @@ module Google
       
       # 
       class BucketByTime
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Specifies that result buckets aggregate data by exactly durationMillis time
         # frames. Time frames that contain no data will be included in the response with
@@ -314,7 +314,7 @@ module Google
       # type.
       # Data points always contain one value for each field of the data type.
       class DataPoint
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Used for version checking during transformation; that is, a datapoint can only
         # replace another datapoint that has an older computation time stamp.
@@ -364,7 +364,7 @@ module Google
         # Only one of integer and floating point fields will be populated, depending on
         # the format enum value within data source's type field.
         # Corresponds to the JSON property `value`
-        # @return [Array<Google::Apis::FitnessV1::Value>]
+        # @return [Array<GoogleAPI::Apis::FitnessV1::Value>]
         attr_accessor :value
       
         def initialize(**args)
@@ -398,11 +398,11 @@ module Google
       # collected by updated versions of the same application/device can still be
       # considered to belong to the same data stream.
       class DataSource
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # See: google3/java/com/google/android/apps/heart/platform/api/Application.java
         # Corresponds to the JSON property `application`
-        # @return [Google::Apis::FitnessV1::Application]
+        # @return [GoogleAPI::Apis::FitnessV1::Application]
         attr_accessor :application
       
         # A unique identifier for the data stream produced by this data source. The
@@ -445,7 +445,7 @@ module Google
       
         # See: google3/java/com/google/android/apps/heart/platform/api/DataType.java
         # Corresponds to the JSON property `dataType`
-        # @return [Google::Apis::FitnessV1::DataType]
+        # @return [GoogleAPI::Apis::FitnessV1::DataType]
         attr_accessor :data_type
       
         # Representation of an integrated device (such as a phone or a wearable) that
@@ -460,7 +460,7 @@ module Google
         # may give different patterns than those on a phone)
         # - Build different analysis models for each device/version.
         # Corresponds to the JSON property `device`
-        # @return [Google::Apis::FitnessV1::Device]
+        # @return [GoogleAPI::Apis::FitnessV1::Device]
         attr_accessor :device
       
         # An end-user visible name for this data source.
@@ -492,11 +492,11 @@ module Google
       
       # See: google3/java/com/google/android/apps/heart/platform/api/DataType.java
       class DataType
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A field represents one dimension of a data type.
         # Corresponds to the JSON property `field`
-        # @return [Array<Google::Apis::FitnessV1::DataTypeField>]
+        # @return [Array<GoogleAPI::Apis::FitnessV1::DataTypeField>]
         attr_accessor :field
       
         # Each data type has a unique, namespaced, name. All data types in the com.
@@ -523,7 +523,7 @@ module Google
       # This message is only instantiated in code and not used for wire comms or
       # stored in any way.
       class DataTypeField
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The different supported formats for each field in a data type.
         # Corresponds to the JSON property `format`
@@ -558,7 +558,7 @@ module Google
       # any info of their own. Datasets represent a set of data points from a
       # particular data source. A data point can be found in more than one dataset.
       class Dataset
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The data stream ID of the data source that created the points in this dataset.
         # Corresponds to the JSON property `dataSourceId`
@@ -592,7 +592,7 @@ module Google
         # dataset and partial when patching a dataset or retrieving a dataset that is
         # too large to include in a single response.
         # Corresponds to the JSON property `point`
-        # @return [Array<Google::Apis::FitnessV1::DataPoint>]
+        # @return [Array<GoogleAPI::Apis::FitnessV1::DataPoint>]
         attr_accessor :point
       
         def initialize(**args)
@@ -621,7 +621,7 @@ module Google
       # may give different patterns than those on a phone)
       # - Build different analysis models for each device/version.
       class Device
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Manufacturer of the product/hardware.
         # Corresponds to the JSON property `manufacturer`
@@ -667,11 +667,11 @@ module Google
       
       # 
       class ListDataSourcesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A previously created data source.
         # Corresponds to the JSON property `dataSource`
-        # @return [Array<Google::Apis::FitnessV1::DataSource>]
+        # @return [Array<GoogleAPI::Apis::FitnessV1::DataSource>]
         attr_accessor :data_source
       
         def initialize(**args)
@@ -686,13 +686,13 @@ module Google
       
       # 
       class ListSessionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If includeDeleted is set to true in the request, this list will contain
         # sessions deleted with original end times that are within the startTime and
         # endTime frame.
         # Corresponds to the JSON property `deletedSession`
-        # @return [Array<Google::Apis::FitnessV1::Session>]
+        # @return [Array<GoogleAPI::Apis::FitnessV1::Session>]
         attr_accessor :deleted_session
       
         # The continuation token, which is used to page through large result sets.
@@ -703,7 +703,7 @@ module Google
       
         # Sessions with an end time that is between startTime and endTime of the request.
         # Corresponds to the JSON property `session`
-        # @return [Array<Google::Apis::FitnessV1::Session>]
+        # @return [Array<GoogleAPI::Apis::FitnessV1::Session>]
         attr_accessor :session
       
         def initialize(**args)
@@ -721,7 +721,7 @@ module Google
       # Holder object for the value of an entry in a map field of a data point.
       # A map value supports a subset of the formats that the regular Value supports.
       class MapValue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Floating point value.
         # Corresponds to the JSON property `fpVal`
@@ -741,7 +741,7 @@ module Google
       # Sessions contain metadata, such as a user-friendly name and time interval
       # information.
       class Session
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Session active time. While start_time_millis and end_time_millis define the
         # full session time, the active time can be shorter and specified by
@@ -759,7 +759,7 @@ module Google
       
         # See: google3/java/com/google/android/apps/heart/platform/api/Application.java
         # Corresponds to the JSON property `application`
-        # @return [Google::Apis::FitnessV1::Application]
+        # @return [GoogleAPI::Apis::FitnessV1::Application]
         attr_accessor :application
       
         # A description for this session.
@@ -815,7 +815,7 @@ module Google
       # A field value has a particular format and is only ever set to one of an
       # integer or a floating point value.
       class Value
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Floating point value. When this is set, other values must not be set.
         # Corresponds to the JSON property `fpVal`
@@ -832,7 +832,7 @@ module Google
         # kept small whenever possible. Data streams with large keys and high data
         # frequency may be down sampled.
         # Corresponds to the JSON property `mapVal`
-        # @return [Array<Google::Apis::FitnessV1::ValueMapValEntry>]
+        # @return [Array<GoogleAPI::Apis::FitnessV1::ValueMapValEntry>]
         attr_accessor :map_val
       
         # String value. When this is set, other values must not be set. Strings should
@@ -857,7 +857,7 @@ module Google
       
       # 
       class ValueMapValEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `key`
@@ -867,7 +867,7 @@ module Google
         # Holder object for the value of an entry in a map field of a data point.
         # A map value supports a subset of the formats that the regular Value supports.
         # Corresponds to the JSON property `value`
-        # @return [Google::Apis::FitnessV1::MapValue]
+        # @return [GoogleAPI::Apis::FitnessV1::MapValue]
         attr_accessor :value
       
         def initialize(**args)

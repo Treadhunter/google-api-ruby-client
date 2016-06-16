@@ -19,7 +19,7 @@ require 'google/apis/errors'
 require 'json'
 require 'retriable'
 
-module Google
+module GoogleAPI
   module Apis
     module Core
       # Command for executing most basic API request with JSON requests/responses
@@ -29,7 +29,7 @@ module Google
         RATE_LIMIT_ERRORS = %w(rateLimitExceeded userRateLimitExceeded)
 
         # JSON serializer for request objects
-        # @return [Google::Apis::Core::JsonRepresentation]
+        # @return [GoogleAPI::Apis::Core::JsonRepresentation]
         attr_accessor :request_representation
 
         # Request body to serialize
@@ -37,7 +37,7 @@ module Google
         attr_accessor :request_object
 
         # JSON serializer for response objects
-        # @return [Google::Apis::Core::JsonRepresentation]
+        # @return [GoogleAPI::Apis::Core::JsonRepresentation]
         attr_accessor :response_representation
 
         # Class to instantiate when de-serializing responses
@@ -85,16 +85,16 @@ module Google
         # @param [String] message
         #   Error message text
         # @return [void]
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def check_status(status, header = nil, body = nil, message = nil)
           case status
           when 400, 402...500
             error = parse_error(body)
             if error
               message = sprintf('%s: %s', error['reason'], error['message'])
-              raise Google::Apis::RateLimitError.new(message,
+              raise GoogleAPI::Apis::RateLimitError.new(message,
                                                      status_code: status,
                                                      header: header,
                                                      body: body) if RATE_LIMIT_ERRORS.include?(error['reason'])

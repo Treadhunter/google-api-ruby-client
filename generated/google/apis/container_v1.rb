@@ -16,7 +16,7 @@ require 'google/apis/container_v1/service.rb'
 require 'google/apis/container_v1/classes.rb'
 require 'google/apis/container_v1/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Google Container Engine API
     #

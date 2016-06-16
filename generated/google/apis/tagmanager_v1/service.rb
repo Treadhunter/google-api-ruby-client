@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module TagmanagerV1
       # Tag Manager API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/tagmanager_v1'
       #
-      #    Tagmanager = Google::Apis::TagmanagerV1 # Alias the module
+      #    Tagmanager = GoogleAPI::Apis::TagmanagerV1 # Alias the module
       #    service = Tagmanager::TagManagerService.new
       #
       # @see https://developers.google.com/tag-manager/api/v1/
-      class TagManagerService < Google::Apis::Core::BaseService
+      class TagManagerService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -64,22 +64,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Account] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Account] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Account]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Account]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_account(account_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}', options)
-          command.response_representation = Google::Apis::TagmanagerV1::Account::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Account
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Account::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Account
           command.params['accountId'] = account_id unless account_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -97,22 +97,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::ListAccountsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::ListAccountsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::ListAccountsResponse]
+        # @return [GoogleAPI::Apis::TagmanagerV1::ListAccountsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_accounts(fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts', options)
-          command.response_representation = Google::Apis::TagmanagerV1::ListAccountsResponse::Representation
-          command.response_class = Google::Apis::TagmanagerV1::ListAccountsResponse
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::ListAccountsResponse::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::ListAccountsResponse
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['userIp'] = user_ip unless user_ip.nil?
@@ -122,7 +122,7 @@ module Google
         # Updates a GTM Account.
         # @param [String] account_id
         #   The GTM Account ID.
-        # @param [Google::Apis::TagmanagerV1::Account] account_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::Account] account_object
         # @param [String] fingerprint
         #   When provided, this fingerprint must match the fingerprint of the account in
         #   storage.
@@ -135,24 +135,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Account] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Account] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Account]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Account]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_account(account_id, account_object = nil, fingerprint: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'accounts/{accountId}', options)
-          command.request_representation = Google::Apis::TagmanagerV1::Account::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::Account::Representation
           command.request_object = account_object
-          command.response_representation = Google::Apis::TagmanagerV1::Account::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Account
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Account::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Account
           command.params['accountId'] = account_id unless account_id.nil?
           command.query['fingerprint'] = fingerprint unless fingerprint.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -164,7 +164,7 @@ module Google
         # Creates a Container.
         # @param [String] account_id
         #   The GTM Account ID.
-        # @param [Google::Apis::TagmanagerV1::Container] container_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::Container] container_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -174,24 +174,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Container] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Container] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Container]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Container]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_container(account_id, container_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'accounts/{accountId}/containers', options)
-          command.request_representation = Google::Apis::TagmanagerV1::Container::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::Container::Representation
           command.request_object = container_object
-          command.response_representation = Google::Apis::TagmanagerV1::Container::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Container
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Container::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Container
           command.params['accountId'] = account_id unless account_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -213,7 +213,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -222,9 +222,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_container(account_id, container_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'accounts/{accountId}/containers/{containerId}', options)
           command.params['accountId'] = account_id unless account_id.nil?
@@ -249,22 +249,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Container] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Container] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Container]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Container]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_container(account_id, container_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/containers/{containerId}', options)
-          command.response_representation = Google::Apis::TagmanagerV1::Container::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Container
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Container::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Container
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -285,22 +285,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::ListContainersResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::ListContainersResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::ListContainersResponse]
+        # @return [GoogleAPI::Apis::TagmanagerV1::ListContainersResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_containers(account_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/containers', options)
-          command.response_representation = Google::Apis::TagmanagerV1::ListContainersResponse::Representation
-          command.response_class = Google::Apis::TagmanagerV1::ListContainersResponse
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::ListContainersResponse::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::ListContainersResponse
           command.params['accountId'] = account_id unless account_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -313,7 +313,7 @@ module Google
         #   The GTM Account ID.
         # @param [String] container_id
         #   The GTM Container ID.
-        # @param [Google::Apis::TagmanagerV1::Container] container_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::Container] container_object
         # @param [String] fingerprint
         #   When provided, this fingerprint must match the fingerprint of the container in
         #   storage.
@@ -326,24 +326,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Container] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Container] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Container]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Container]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_container(account_id, container_id, container_object = nil, fingerprint: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'accounts/{accountId}/containers/{containerId}', options)
-          command.request_representation = Google::Apis::TagmanagerV1::Container::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::Container::Representation
           command.request_object = container_object
-          command.response_representation = Google::Apis::TagmanagerV1::Container::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Container
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Container::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Container
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.query['fingerprint'] = fingerprint unless fingerprint.nil?
@@ -358,7 +358,7 @@ module Google
         #   The GTM Account ID.
         # @param [String] container_id
         #   The GTM Container ID.
-        # @param [Google::Apis::TagmanagerV1::Environment] environment_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::Environment] environment_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -368,24 +368,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Environment] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Environment] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Environment]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Environment]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_account_container_environment(account_id, container_id, environment_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'accounts/{accountId}/containers/{containerId}/environments', options)
-          command.request_representation = Google::Apis::TagmanagerV1::Environment::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::Environment::Representation
           command.request_object = environment_object
-          command.response_representation = Google::Apis::TagmanagerV1::Environment::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Environment
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Environment::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Environment
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -410,7 +410,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -419,9 +419,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_account_container_environment(account_id, container_id, environment_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'accounts/{accountId}/containers/{containerId}/environments/{environmentId}', options)
           command.params['accountId'] = account_id unless account_id.nil?
@@ -449,22 +449,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Environment] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Environment] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Environment]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Environment]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_account_container_environment(account_id, container_id, environment_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/containers/{containerId}/environments/{environmentId}', options)
-          command.response_representation = Google::Apis::TagmanagerV1::Environment::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Environment
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Environment::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Environment
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.params['environmentId'] = environment_id unless environment_id.nil?
@@ -488,22 +488,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::ListEnvironmentsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::ListEnvironmentsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::ListEnvironmentsResponse]
+        # @return [GoogleAPI::Apis::TagmanagerV1::ListEnvironmentsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_account_container_environments(account_id, container_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/containers/{containerId}/environments', options)
-          command.response_representation = Google::Apis::TagmanagerV1::ListEnvironmentsResponse::Representation
-          command.response_class = Google::Apis::TagmanagerV1::ListEnvironmentsResponse
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::ListEnvironmentsResponse::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::ListEnvironmentsResponse
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -519,7 +519,7 @@ module Google
         #   The GTM Container ID.
         # @param [String] environment_id
         #   The GTM Environment ID.
-        # @param [Google::Apis::TagmanagerV1::Environment] environment_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::Environment] environment_object
         # @param [String] fingerprint
         #   When provided, this fingerprint must match the fingerprint of the environment
         #   in storage.
@@ -532,24 +532,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Environment] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Environment] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Environment]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Environment]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_account_container_environment(account_id, container_id, environment_id, environment_object = nil, fingerprint: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'accounts/{accountId}/containers/{containerId}/environments/{environmentId}', options)
-          command.request_representation = Google::Apis::TagmanagerV1::Environment::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::Environment::Representation
           command.request_object = environment_object
-          command.response_representation = Google::Apis::TagmanagerV1::Environment::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Environment
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Environment::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Environment
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.params['environmentId'] = environment_id unless environment_id.nil?
@@ -567,7 +567,7 @@ module Google
         #   The GTM Container ID.
         # @param [String] environment_id
         #   The GTM Environment ID.
-        # @param [Google::Apis::TagmanagerV1::Environment] environment_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::Environment] environment_object
         # @param [String] fingerprint
         #   When provided, this fingerprint must match the fingerprint of the environment
         #   in storage.
@@ -580,24 +580,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Environment] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Environment] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Environment]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Environment]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_account_container_environment(account_id, container_id, environment_id, environment_object = nil, fingerprint: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'accounts/{accountId}/containers/{containerId}/environments/{environmentId}', options)
-          command.request_representation = Google::Apis::TagmanagerV1::Environment::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::Environment::Representation
           command.request_object = environment_object
-          command.response_representation = Google::Apis::TagmanagerV1::Environment::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Environment
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Environment::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Environment
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.params['environmentId'] = environment_id unless environment_id.nil?
@@ -613,7 +613,7 @@ module Google
         #   The GTM Account ID.
         # @param [String] container_id
         #   The GTM Container ID.
-        # @param [Google::Apis::TagmanagerV1::Folder] folder_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::Folder] folder_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -623,24 +623,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Folder] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Folder] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Folder]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Folder]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_account_container_folder(account_id, container_id, folder_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'accounts/{accountId}/containers/{containerId}/folders', options)
-          command.request_representation = Google::Apis::TagmanagerV1::Folder::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::Folder::Representation
           command.request_object = folder_object
-          command.response_representation = Google::Apis::TagmanagerV1::Folder::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Folder
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Folder::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Folder
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -665,7 +665,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -674,9 +674,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_account_container_folder(account_id, container_id, folder_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'accounts/{accountId}/containers/{containerId}/folders/{folderId}', options)
           command.params['accountId'] = account_id unless account_id.nil?
@@ -704,22 +704,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Folder] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Folder] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Folder]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Folder]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_account_container_folder(account_id, container_id, folder_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/containers/{containerId}/folders/{folderId}', options)
-          command.response_representation = Google::Apis::TagmanagerV1::Folder::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Folder
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Folder::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Folder
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.params['folderId'] = folder_id unless folder_id.nil?
@@ -743,22 +743,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::ListFoldersResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::ListFoldersResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::ListFoldersResponse]
+        # @return [GoogleAPI::Apis::TagmanagerV1::ListFoldersResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_account_container_folders(account_id, container_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/containers/{containerId}/folders', options)
-          command.response_representation = Google::Apis::TagmanagerV1::ListFoldersResponse::Representation
-          command.response_class = Google::Apis::TagmanagerV1::ListFoldersResponse
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::ListFoldersResponse::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::ListFoldersResponse
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -774,7 +774,7 @@ module Google
         #   The GTM Container ID.
         # @param [String] folder_id
         #   The GTM Folder ID.
-        # @param [Google::Apis::TagmanagerV1::Folder] folder_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::Folder] folder_object
         # @param [String] fingerprint
         #   When provided, this fingerprint must match the fingerprint of the folder in
         #   storage.
@@ -787,24 +787,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Folder] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Folder] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Folder]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Folder]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_account_container_folder(account_id, container_id, folder_id, folder_object = nil, fingerprint: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'accounts/{accountId}/containers/{containerId}/folders/{folderId}', options)
-          command.request_representation = Google::Apis::TagmanagerV1::Folder::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::Folder::Representation
           command.request_object = folder_object
-          command.response_representation = Google::Apis::TagmanagerV1::Folder::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Folder
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Folder::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Folder
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.params['folderId'] = folder_id unless folder_id.nil?
@@ -831,22 +831,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::FolderEntities] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::FolderEntities] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::FolderEntities]
+        # @return [GoogleAPI::Apis::TagmanagerV1::FolderEntities]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_account_container_folder_entities(account_id, container_id, folder_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/containers/{containerId}/folders/{folderId}/entities', options)
-          command.response_representation = Google::Apis::TagmanagerV1::FolderEntities::Representation
-          command.response_class = Google::Apis::TagmanagerV1::FolderEntities
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::FolderEntities::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::FolderEntities
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.params['folderId'] = folder_id unless folder_id.nil?
@@ -863,7 +863,7 @@ module Google
         #   The GTM Container ID.
         # @param [String] folder_id
         #   The GTM Folder ID.
-        # @param [Google::Apis::TagmanagerV1::Folder] folder_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::Folder] folder_object
         # @param [Array<String>, String] tag_id
         #   The tags to be moved to the folder.
         # @param [Array<String>, String] trigger_id
@@ -879,7 +879,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -888,12 +888,12 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_account_container_move_folder(account_id, container_id, folder_id, folder_object = nil, tag_id: nil, trigger_id: nil, variable_id: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'accounts/{accountId}/containers/{containerId}/move_folders/{folderId}', options)
-          command.request_representation = Google::Apis::TagmanagerV1::Folder::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::Folder::Representation
           command.request_object = folder_object
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
@@ -914,7 +914,7 @@ module Google
         #   The GTM Container ID.
         # @param [String] environment_id
         #   The GTM Environment ID.
-        # @param [Google::Apis::TagmanagerV1::Environment] environment_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::Environment] environment_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -924,24 +924,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Environment] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Environment] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Environment]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Environment]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_account_container_reauthorize_environment(account_id, container_id, environment_id, environment_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'accounts/{accountId}/containers/{containerId}/reauthorize_environments/{environmentId}', options)
-          command.request_representation = Google::Apis::TagmanagerV1::Environment::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::Environment::Representation
           command.request_object = environment_object
-          command.response_representation = Google::Apis::TagmanagerV1::Environment::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Environment
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Environment::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Environment
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.params['environmentId'] = environment_id unless environment_id.nil?
@@ -956,7 +956,7 @@ module Google
         #   The GTM Account ID.
         # @param [String] container_id
         #   The GTM Container ID.
-        # @param [Google::Apis::TagmanagerV1::Tag] tag_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::Tag] tag_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -966,24 +966,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Tag] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Tag] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Tag]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Tag]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_tag(account_id, container_id, tag_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'accounts/{accountId}/containers/{containerId}/tags', options)
-          command.request_representation = Google::Apis::TagmanagerV1::Tag::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::Tag::Representation
           command.request_object = tag_object
-          command.response_representation = Google::Apis::TagmanagerV1::Tag::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Tag
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Tag::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Tag
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1008,7 +1008,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -1017,9 +1017,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_tag(account_id, container_id, tag_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'accounts/{accountId}/containers/{containerId}/tags/{tagId}', options)
           command.params['accountId'] = account_id unless account_id.nil?
@@ -1047,22 +1047,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Tag] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Tag] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Tag]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Tag]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_tag(account_id, container_id, tag_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/containers/{containerId}/tags/{tagId}', options)
-          command.response_representation = Google::Apis::TagmanagerV1::Tag::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Tag
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Tag::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Tag
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.params['tagId'] = tag_id unless tag_id.nil?
@@ -1086,22 +1086,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::ListTagsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::ListTagsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::ListTagsResponse]
+        # @return [GoogleAPI::Apis::TagmanagerV1::ListTagsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_tags(account_id, container_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/containers/{containerId}/tags', options)
-          command.response_representation = Google::Apis::TagmanagerV1::ListTagsResponse::Representation
-          command.response_class = Google::Apis::TagmanagerV1::ListTagsResponse
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::ListTagsResponse::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::ListTagsResponse
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1117,7 +1117,7 @@ module Google
         #   The GTM Container ID.
         # @param [String] tag_id
         #   The GTM Tag ID.
-        # @param [Google::Apis::TagmanagerV1::Tag] tag_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::Tag] tag_object
         # @param [String] fingerprint
         #   When provided, this fingerprint must match the fingerprint of the tag in
         #   storage.
@@ -1130,24 +1130,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Tag] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Tag] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Tag]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Tag]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_tag(account_id, container_id, tag_id, tag_object = nil, fingerprint: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'accounts/{accountId}/containers/{containerId}/tags/{tagId}', options)
-          command.request_representation = Google::Apis::TagmanagerV1::Tag::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::Tag::Representation
           command.request_object = tag_object
-          command.response_representation = Google::Apis::TagmanagerV1::Tag::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Tag
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Tag::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Tag
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.params['tagId'] = tag_id unless tag_id.nil?
@@ -1163,7 +1163,7 @@ module Google
         #   The GTM Account ID.
         # @param [String] container_id
         #   The GTM Container ID.
-        # @param [Google::Apis::TagmanagerV1::Trigger] trigger_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::Trigger] trigger_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1173,24 +1173,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Trigger] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Trigger] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Trigger]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Trigger]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_trigger(account_id, container_id, trigger_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'accounts/{accountId}/containers/{containerId}/triggers', options)
-          command.request_representation = Google::Apis::TagmanagerV1::Trigger::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::Trigger::Representation
           command.request_object = trigger_object
-          command.response_representation = Google::Apis::TagmanagerV1::Trigger::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Trigger
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Trigger::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Trigger
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1215,7 +1215,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -1224,9 +1224,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_trigger(account_id, container_id, trigger_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'accounts/{accountId}/containers/{containerId}/triggers/{triggerId}', options)
           command.params['accountId'] = account_id unless account_id.nil?
@@ -1254,22 +1254,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Trigger] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Trigger] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Trigger]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Trigger]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_trigger(account_id, container_id, trigger_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/containers/{containerId}/triggers/{triggerId}', options)
-          command.response_representation = Google::Apis::TagmanagerV1::Trigger::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Trigger
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Trigger::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Trigger
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.params['triggerId'] = trigger_id unless trigger_id.nil?
@@ -1293,22 +1293,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::ListTriggersResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::ListTriggersResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::ListTriggersResponse]
+        # @return [GoogleAPI::Apis::TagmanagerV1::ListTriggersResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_triggers(account_id, container_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/containers/{containerId}/triggers', options)
-          command.response_representation = Google::Apis::TagmanagerV1::ListTriggersResponse::Representation
-          command.response_class = Google::Apis::TagmanagerV1::ListTriggersResponse
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::ListTriggersResponse::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::ListTriggersResponse
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1324,7 +1324,7 @@ module Google
         #   The GTM Container ID.
         # @param [String] trigger_id
         #   The GTM Trigger ID.
-        # @param [Google::Apis::TagmanagerV1::Trigger] trigger_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::Trigger] trigger_object
         # @param [String] fingerprint
         #   When provided, this fingerprint must match the fingerprint of the trigger in
         #   storage.
@@ -1337,24 +1337,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Trigger] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Trigger] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Trigger]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Trigger]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_trigger(account_id, container_id, trigger_id, trigger_object = nil, fingerprint: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'accounts/{accountId}/containers/{containerId}/triggers/{triggerId}', options)
-          command.request_representation = Google::Apis::TagmanagerV1::Trigger::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::Trigger::Representation
           command.request_object = trigger_object
-          command.response_representation = Google::Apis::TagmanagerV1::Trigger::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Trigger
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Trigger::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Trigger
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.params['triggerId'] = trigger_id unless trigger_id.nil?
@@ -1370,7 +1370,7 @@ module Google
         #   The GTM Account ID.
         # @param [String] container_id
         #   The GTM Container ID.
-        # @param [Google::Apis::TagmanagerV1::Variable] variable_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::Variable] variable_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1380,24 +1380,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Variable] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Variable] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Variable]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Variable]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_variable(account_id, container_id, variable_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'accounts/{accountId}/containers/{containerId}/variables', options)
-          command.request_representation = Google::Apis::TagmanagerV1::Variable::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::Variable::Representation
           command.request_object = variable_object
-          command.response_representation = Google::Apis::TagmanagerV1::Variable::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Variable
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Variable::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Variable
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1422,7 +1422,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -1431,9 +1431,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_variable(account_id, container_id, variable_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'accounts/{accountId}/containers/{containerId}/variables/{variableId}', options)
           command.params['accountId'] = account_id unless account_id.nil?
@@ -1461,22 +1461,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Variable] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Variable] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Variable]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Variable]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_variable(account_id, container_id, variable_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/containers/{containerId}/variables/{variableId}', options)
-          command.response_representation = Google::Apis::TagmanagerV1::Variable::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Variable
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Variable::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Variable
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.params['variableId'] = variable_id unless variable_id.nil?
@@ -1500,22 +1500,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::ListVariablesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::ListVariablesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::ListVariablesResponse]
+        # @return [GoogleAPI::Apis::TagmanagerV1::ListVariablesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_variables(account_id, container_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/containers/{containerId}/variables', options)
-          command.response_representation = Google::Apis::TagmanagerV1::ListVariablesResponse::Representation
-          command.response_class = Google::Apis::TagmanagerV1::ListVariablesResponse
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::ListVariablesResponse::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::ListVariablesResponse
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1531,7 +1531,7 @@ module Google
         #   The GTM Container ID.
         # @param [String] variable_id
         #   The GTM Variable ID.
-        # @param [Google::Apis::TagmanagerV1::Variable] variable_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::Variable] variable_object
         # @param [String] fingerprint
         #   When provided, this fingerprint must match the fingerprint of the variable in
         #   storage.
@@ -1544,24 +1544,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::Variable] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::Variable] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::Variable]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Variable]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_variable(account_id, container_id, variable_id, variable_object = nil, fingerprint: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'accounts/{accountId}/containers/{containerId}/variables/{variableId}', options)
-          command.request_representation = Google::Apis::TagmanagerV1::Variable::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::Variable::Representation
           command.request_object = variable_object
-          command.response_representation = Google::Apis::TagmanagerV1::Variable::Representation
-          command.response_class = Google::Apis::TagmanagerV1::Variable
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::Variable::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::Variable
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.params['variableId'] = variable_id unless variable_id.nil?
@@ -1577,7 +1577,7 @@ module Google
         #   The GTM Account ID.
         # @param [String] container_id
         #   The GTM Container ID.
-        # @param [Google::Apis::TagmanagerV1::CreateContainerVersionRequestVersionOptions] create_container_version_request_version_options_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::CreateContainerVersionRequestVersionOptions] create_container_version_request_version_options_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1587,24 +1587,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::CreateContainerVersionResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::CreateContainerVersionResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::CreateContainerVersionResponse]
+        # @return [GoogleAPI::Apis::TagmanagerV1::CreateContainerVersionResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_version(account_id, container_id, create_container_version_request_version_options_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'accounts/{accountId}/containers/{containerId}/versions', options)
-          command.request_representation = Google::Apis::TagmanagerV1::CreateContainerVersionRequestVersionOptions::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::CreateContainerVersionRequestVersionOptions::Representation
           command.request_object = create_container_version_request_version_options_object
-          command.response_representation = Google::Apis::TagmanagerV1::CreateContainerVersionResponse::Representation
-          command.response_class = Google::Apis::TagmanagerV1::CreateContainerVersionResponse
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::CreateContainerVersionResponse::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::CreateContainerVersionResponse
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1629,7 +1629,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -1638,9 +1638,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_version(account_id, container_id, container_version_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}', options)
           command.params['accountId'] = account_id unless account_id.nil?
@@ -1669,22 +1669,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::ContainerVersion] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::ContainerVersion] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::ContainerVersion]
+        # @return [GoogleAPI::Apis::TagmanagerV1::ContainerVersion]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_version(account_id, container_id, container_version_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}', options)
-          command.response_representation = Google::Apis::TagmanagerV1::ContainerVersion::Representation
-          command.response_class = Google::Apis::TagmanagerV1::ContainerVersion
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::ContainerVersion::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::ContainerVersion
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.params['containerVersionId'] = container_version_id unless container_version_id.nil?
@@ -1712,22 +1712,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::ListContainerVersionsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::ListContainerVersionsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::ListContainerVersionsResponse]
+        # @return [GoogleAPI::Apis::TagmanagerV1::ListContainerVersionsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_versions(account_id, container_id, headers: nil, include_deleted: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/containers/{containerId}/versions', options)
-          command.response_representation = Google::Apis::TagmanagerV1::ListContainerVersionsResponse::Representation
-          command.response_class = Google::Apis::TagmanagerV1::ListContainerVersionsResponse
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::ListContainerVersionsResponse::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::ListContainerVersionsResponse
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.query['headers'] = headers unless headers.nil?
@@ -1757,22 +1757,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::PublishContainerVersionResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::PublishContainerVersionResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::PublishContainerVersionResponse]
+        # @return [GoogleAPI::Apis::TagmanagerV1::PublishContainerVersionResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def publish_version(account_id, container_id, container_version_id, fingerprint: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/publish', options)
-          command.response_representation = Google::Apis::TagmanagerV1::PublishContainerVersionResponse::Representation
-          command.response_class = Google::Apis::TagmanagerV1::PublishContainerVersionResponse
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::PublishContainerVersionResponse::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::PublishContainerVersionResponse
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.params['containerVersionId'] = container_version_id unless container_version_id.nil?
@@ -1802,22 +1802,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::ContainerVersion] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::ContainerVersion] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::ContainerVersion]
+        # @return [GoogleAPI::Apis::TagmanagerV1::ContainerVersion]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def restore_version(account_id, container_id, container_version_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/restore', options)
-          command.response_representation = Google::Apis::TagmanagerV1::ContainerVersion::Representation
-          command.response_class = Google::Apis::TagmanagerV1::ContainerVersion
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::ContainerVersion::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::ContainerVersion
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.params['containerVersionId'] = container_version_id unless container_version_id.nil?
@@ -1843,22 +1843,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::ContainerVersion] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::ContainerVersion] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::ContainerVersion]
+        # @return [GoogleAPI::Apis::TagmanagerV1::ContainerVersion]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def undelete_version(account_id, container_id, container_version_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/undelete', options)
-          command.response_representation = Google::Apis::TagmanagerV1::ContainerVersion::Representation
-          command.response_class = Google::Apis::TagmanagerV1::ContainerVersion
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::ContainerVersion::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::ContainerVersion
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.params['containerVersionId'] = container_version_id unless container_version_id.nil?
@@ -1875,7 +1875,7 @@ module Google
         #   The GTM Container ID.
         # @param [String] container_version_id
         #   The GTM Container Version ID.
-        # @param [Google::Apis::TagmanagerV1::ContainerVersion] container_version_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::ContainerVersion] container_version_object
         # @param [String] fingerprint
         #   When provided, this fingerprint must match the fingerprint of the container
         #   version in storage.
@@ -1888,24 +1888,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::ContainerVersion] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::ContainerVersion] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::ContainerVersion]
+        # @return [GoogleAPI::Apis::TagmanagerV1::ContainerVersion]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_version(account_id, container_id, container_version_id, container_version_object = nil, fingerprint: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}', options)
-          command.request_representation = Google::Apis::TagmanagerV1::ContainerVersion::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::ContainerVersion::Representation
           command.request_object = container_version_object
-          command.response_representation = Google::Apis::TagmanagerV1::ContainerVersion::Representation
-          command.response_class = Google::Apis::TagmanagerV1::ContainerVersion
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::ContainerVersion::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::ContainerVersion
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['containerId'] = container_id unless container_id.nil?
           command.params['containerVersionId'] = container_version_id unless container_version_id.nil?
@@ -1919,7 +1919,7 @@ module Google
         # Creates a user's Account & Container Permissions.
         # @param [String] account_id
         #   The GTM Account ID.
-        # @param [Google::Apis::TagmanagerV1::UserAccess] user_access_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::UserAccess] user_access_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1929,24 +1929,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::UserAccess] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::UserAccess] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::UserAccess]
+        # @return [GoogleAPI::Apis::TagmanagerV1::UserAccess]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_permission(account_id, user_access_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'accounts/{accountId}/permissions', options)
-          command.request_representation = Google::Apis::TagmanagerV1::UserAccess::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::UserAccess::Representation
           command.request_object = user_access_object
-          command.response_representation = Google::Apis::TagmanagerV1::UserAccess::Representation
-          command.response_class = Google::Apis::TagmanagerV1::UserAccess
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::UserAccess::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::UserAccess
           command.params['accountId'] = account_id unless account_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -1969,7 +1969,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -1978,9 +1978,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_permission(account_id, permission_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'accounts/{accountId}/permissions/{permissionId}', options)
           command.params['accountId'] = account_id unless account_id.nil?
@@ -2005,22 +2005,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::UserAccess] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::UserAccess] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::UserAccess]
+        # @return [GoogleAPI::Apis::TagmanagerV1::UserAccess]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_permission(account_id, permission_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/permissions/{permissionId}', options)
-          command.response_representation = Google::Apis::TagmanagerV1::UserAccess::Representation
-          command.response_class = Google::Apis::TagmanagerV1::UserAccess
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::UserAccess::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::UserAccess
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['permissionId'] = permission_id unless permission_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2042,22 +2042,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::ListAccountUsersResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::ListAccountUsersResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::ListAccountUsersResponse]
+        # @return [GoogleAPI::Apis::TagmanagerV1::ListAccountUsersResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_permissions(account_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/permissions', options)
-          command.response_representation = Google::Apis::TagmanagerV1::ListAccountUsersResponse::Representation
-          command.response_class = Google::Apis::TagmanagerV1::ListAccountUsersResponse
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::ListAccountUsersResponse::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::ListAccountUsersResponse
           command.params['accountId'] = account_id unless account_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -2070,7 +2070,7 @@ module Google
         #   The GTM Account ID.
         # @param [String] permission_id
         #   The GTM User ID.
-        # @param [Google::Apis::TagmanagerV1::UserAccess] user_access_object
+        # @param [GoogleAPI::Apis::TagmanagerV1::UserAccess] user_access_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2080,24 +2080,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TagmanagerV1::UserAccess] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TagmanagerV1::UserAccess] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TagmanagerV1::UserAccess]
+        # @return [GoogleAPI::Apis::TagmanagerV1::UserAccess]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_permission(account_id, permission_id, user_access_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'accounts/{accountId}/permissions/{permissionId}', options)
-          command.request_representation = Google::Apis::TagmanagerV1::UserAccess::Representation
+          command.request_representation = GoogleAPI::Apis::TagmanagerV1::UserAccess::Representation
           command.request_object = user_access_object
-          command.response_representation = Google::Apis::TagmanagerV1::UserAccess::Representation
-          command.response_class = Google::Apis::TagmanagerV1::UserAccess
+          command.response_representation = GoogleAPI::Apis::TagmanagerV1::UserAccess::Representation
+          command.response_class = GoogleAPI::Apis::TagmanagerV1::UserAccess
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['permissionId'] = permission_id unless permission_id.nil?
           command.query['fields'] = fields unless fields.nil?

@@ -16,7 +16,7 @@ require 'google/apis/books_v1/service.rb'
 require 'google/apis/books_v1/classes.rb'
 require 'google/apis/books_v1/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Books API
     #

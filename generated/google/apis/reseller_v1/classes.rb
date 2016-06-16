@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ResellerV1
       
       # JSON template for address of a customer.
       class Address
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Address line 1 of the address.
         # Corresponds to the JSON property `addressLine1`
@@ -100,7 +100,7 @@ module Google
       
       # JSON template for the ChangePlan rpc request.
       class ChangePlanRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # External name of the deal code applicable for the subscription. This field is
         # optional. If missing, the deal price plan won't be used.
@@ -125,7 +125,7 @@ module Google
       
         # JSON template for subscription seats.
         # Corresponds to the JSON property `seats`
-        # @return [Google::Apis::ResellerV1::Seats]
+        # @return [GoogleAPI::Apis::ResellerV1::Seats]
         attr_accessor :seats
       
         def initialize(**args)
@@ -144,7 +144,7 @@ module Google
       
       # JSON template for a customer.
       class Customer
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The alternate email of the customer.
         # Corresponds to the JSON property `alternateEmail`
@@ -179,7 +179,7 @@ module Google
       
         # JSON template for address of a customer.
         # Corresponds to the JSON property `postalAddress`
-        # @return [Google::Apis::ResellerV1::Address]
+        # @return [GoogleAPI::Apis::ResellerV1::Address]
         attr_accessor :postal_address
       
         # Ui url for customer resource.
@@ -206,7 +206,7 @@ module Google
       
       # JSON template for a subscription renewal settings.
       class RenewalSettings
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies the resource as a subscription renewal setting.
         # Corresponds to the JSON property `kind`
@@ -231,7 +231,7 @@ module Google
       
       # JSON template for subscription seats.
       class Seats
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies the resource as a subscription change plan request.
         # Corresponds to the JSON property `kind`
@@ -271,7 +271,7 @@ module Google
       
       # JSON template for a subscription.
       class Subscription
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Billing method of this subscription.
         # Corresponds to the JSON property `billingMethod`
@@ -306,7 +306,7 @@ module Google
       
         # Plan details of the subscription
         # Corresponds to the JSON property `plan`
-        # @return [Google::Apis::ResellerV1::Subscription::Plan]
+        # @return [GoogleAPI::Apis::ResellerV1::Subscription::Plan]
         attr_accessor :plan
       
         # Purchase order id for your order tracking purposes.
@@ -316,7 +316,7 @@ module Google
       
         # JSON template for a subscription renewal settings.
         # Corresponds to the JSON property `renewalSettings`
-        # @return [Google::Apis::ResellerV1::RenewalSettings]
+        # @return [GoogleAPI::Apis::ResellerV1::RenewalSettings]
         attr_accessor :renewal_settings
       
         # Ui url for subscription resource.
@@ -326,7 +326,7 @@ module Google
       
         # JSON template for subscription seats.
         # Corresponds to the JSON property `seats`
-        # @return [Google::Apis::ResellerV1::Seats]
+        # @return [GoogleAPI::Apis::ResellerV1::Seats]
         attr_accessor :seats
       
         # Name of the sku for which this subscription is purchased.
@@ -362,12 +362,12 @@ module Google
       
         # Transfer related information for the subscription.
         # Corresponds to the JSON property `transferInfo`
-        # @return [Google::Apis::ResellerV1::Subscription::TransferInfo]
+        # @return [GoogleAPI::Apis::ResellerV1::Subscription::TransferInfo]
         attr_accessor :transfer_info
       
         # Trial Settings of the subscription.
         # Corresponds to the JSON property `trialSettings`
-        # @return [Google::Apis::ResellerV1::Subscription::TrialSettings]
+        # @return [GoogleAPI::Apis::ResellerV1::Subscription::TrialSettings]
         attr_accessor :trial_settings
       
         def initialize(**args)
@@ -397,11 +397,11 @@ module Google
         
         # Plan details of the subscription
         class Plan
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Interval of the commitment if it is a commitment plan.
           # Corresponds to the JSON property `commitmentInterval`
-          # @return [Google::Apis::ResellerV1::Subscription::Plan::CommitmentInterval]
+          # @return [GoogleAPI::Apis::ResellerV1::Subscription::Plan::CommitmentInterval]
           attr_accessor :commitment_interval
         
           # Whether the plan is a commitment plan or not.
@@ -428,7 +428,7 @@ module Google
           
           # Interval of the commitment if it is a commitment plan.
           class CommitmentInterval
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # End time of the commitment interval in milliseconds since Unix epoch.
             # Corresponds to the JSON property `endTime`
@@ -454,7 +454,7 @@ module Google
         
         # Transfer related information for the subscription.
         class TransferInfo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `minimumTransferableSeats`
@@ -479,7 +479,7 @@ module Google
         
         # Trial Settings of the subscription.
         class TrialSettings
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Whether the subscription is in trial.
           # Corresponds to the JSON property `isInTrial`
@@ -506,7 +506,7 @@ module Google
       
       # JSON template for a subscription list.
       class Subscriptions
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies the resource as a collection of subscriptions.
         # Corresponds to the JSON property `kind`
@@ -521,7 +521,7 @@ module Google
       
         # The subscriptions in this page of results.
         # Corresponds to the JSON property `subscriptions`
-        # @return [Array<Google::Apis::ResellerV1::Subscription>]
+        # @return [Array<GoogleAPI::Apis::ResellerV1::Subscription>]
         attr_accessor :subscriptions
       
         def initialize(**args)

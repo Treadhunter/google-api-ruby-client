@@ -18,57 +18,57 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module SiteVerificationV1
       
       class GetWebResourceTokenRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Site
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class GetWebResourceTokenResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListWebResourceResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SiteVerificationWebResourceResource
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Site
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class GetWebResourceTokenRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :site, as: 'site', class: Google::Apis::SiteVerificationV1::GetWebResourceTokenRequest::Site, decorator: Google::Apis::SiteVerificationV1::GetWebResourceTokenRequest::Site::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :site, as: 'site', class: GoogleAPI::Apis::SiteVerificationV1::GetWebResourceTokenRequest::Site, decorator: GoogleAPI::Apis::SiteVerificationV1::GetWebResourceTokenRequest::Site::Representation
       
           property :verification_method, as: 'verificationMethod'
         end
         
         class Site
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :identifier, as: 'identifier'
             property :type, as: 'type'
           end
@@ -77,7 +77,7 @@ module Google
       
       class GetWebResourceTokenResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :verification_method, as: 'method'
           property :token, as: 'token'
         end
@@ -85,24 +85,24 @@ module Google
       
       class ListWebResourceResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :items, as: 'items', class: Google::Apis::SiteVerificationV1::SiteVerificationWebResourceResource, decorator: Google::Apis::SiteVerificationV1::SiteVerificationWebResourceResource::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :items, as: 'items', class: GoogleAPI::Apis::SiteVerificationV1::SiteVerificationWebResourceResource, decorator: GoogleAPI::Apis::SiteVerificationV1::SiteVerificationWebResourceResource::Representation
       
         end
       end
       
       class SiteVerificationWebResourceResource
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
           collection :owners, as: 'owners'
-          property :site, as: 'site', class: Google::Apis::SiteVerificationV1::SiteVerificationWebResourceResource::Site, decorator: Google::Apis::SiteVerificationV1::SiteVerificationWebResourceResource::Site::Representation
+          property :site, as: 'site', class: GoogleAPI::Apis::SiteVerificationV1::SiteVerificationWebResourceResource::Site, decorator: GoogleAPI::Apis::SiteVerificationV1::SiteVerificationWebResourceResource::Site::Representation
       
         end
         
         class Site
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :identifier, as: 'identifier'
             property :type, as: 'type'
           end

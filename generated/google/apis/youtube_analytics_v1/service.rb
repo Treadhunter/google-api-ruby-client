@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module YoutubeAnalyticsV1
       # YouTube Analytics API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/youtube_analytics_v1'
       #
-      #    YoutubeAnalytics = Google::Apis::YoutubeAnalyticsV1 # Alias the module
+      #    YoutubeAnalytics = GoogleAPI::Apis::YoutubeAnalyticsV1 # Alias the module
       #    service = YoutubeAnalytics::YouTubeAnalyticsService.new
       #
       # @see http://developers.google.com/youtube/analytics/
-      class YouTubeAnalyticsService < Google::Apis::Core::BaseService
+      class YouTubeAnalyticsService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -65,22 +65,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::YoutubeAnalyticsV1::BatchReportDefinitionList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::YoutubeAnalyticsV1::BatchReportDefinitionList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::YoutubeAnalyticsV1::BatchReportDefinitionList]
+        # @return [GoogleAPI::Apis::YoutubeAnalyticsV1::BatchReportDefinitionList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_batch_report_definitions(on_behalf_of_content_owner, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'batchReportDefinitions', options)
-          command.response_representation = Google::Apis::YoutubeAnalyticsV1::BatchReportDefinitionList::Representation
-          command.response_class = Google::Apis::YoutubeAnalyticsV1::BatchReportDefinitionList
+          command.response_representation = GoogleAPI::Apis::YoutubeAnalyticsV1::BatchReportDefinitionList::Representation
+          command.response_class = GoogleAPI::Apis::YoutubeAnalyticsV1::BatchReportDefinitionList
           command.query['onBehalfOfContentOwner'] = on_behalf_of_content_owner unless on_behalf_of_content_owner.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -104,22 +104,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::YoutubeAnalyticsV1::BatchReportList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::YoutubeAnalyticsV1::BatchReportList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::YoutubeAnalyticsV1::BatchReportList]
+        # @return [GoogleAPI::Apis::YoutubeAnalyticsV1::BatchReportList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_batch_reports(batch_report_definition_id, on_behalf_of_content_owner, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'batchReports', options)
-          command.response_representation = Google::Apis::YoutubeAnalyticsV1::BatchReportList::Representation
-          command.response_class = Google::Apis::YoutubeAnalyticsV1::BatchReportList
+          command.response_representation = GoogleAPI::Apis::YoutubeAnalyticsV1::BatchReportList::Representation
+          command.response_class = GoogleAPI::Apis::YoutubeAnalyticsV1::BatchReportList
           command.query['batchReportDefinitionId'] = batch_report_definition_id unless batch_report_definition_id.nil?
           command.query['onBehalfOfContentOwner'] = on_behalf_of_content_owner unless on_behalf_of_content_owner.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -151,7 +151,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -160,9 +160,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_group_item(id, on_behalf_of_content_owner: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'groupItems', options)
           command.query['id'] = id unless id.nil?
@@ -174,7 +174,7 @@ module Google
         end
         
         # Creates a group item.
-        # @param [Google::Apis::YoutubeAnalyticsV1::GroupItem] group_item_object
+        # @param [GoogleAPI::Apis::YoutubeAnalyticsV1::GroupItem] group_item_object
         # @param [String] on_behalf_of_content_owner
         #   Note: This parameter is intended exclusively for YouTube content partners.
         #   The onBehalfOfContentOwner parameter indicates that the request's
@@ -194,24 +194,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::YoutubeAnalyticsV1::GroupItem] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::YoutubeAnalyticsV1::GroupItem] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::YoutubeAnalyticsV1::GroupItem]
+        # @return [GoogleAPI::Apis::YoutubeAnalyticsV1::GroupItem]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_group_item(group_item_object = nil, on_behalf_of_content_owner: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'groupItems', options)
-          command.request_representation = Google::Apis::YoutubeAnalyticsV1::GroupItem::Representation
+          command.request_representation = GoogleAPI::Apis::YoutubeAnalyticsV1::GroupItem::Representation
           command.request_object = group_item_object
-          command.response_representation = Google::Apis::YoutubeAnalyticsV1::GroupItem::Representation
-          command.response_class = Google::Apis::YoutubeAnalyticsV1::GroupItem
+          command.response_representation = GoogleAPI::Apis::YoutubeAnalyticsV1::GroupItem::Representation
+          command.response_class = GoogleAPI::Apis::YoutubeAnalyticsV1::GroupItem
           command.query['onBehalfOfContentOwner'] = on_behalf_of_content_owner unless on_behalf_of_content_owner.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -242,22 +242,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::YoutubeAnalyticsV1::ListGroupItemResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::YoutubeAnalyticsV1::ListGroupItemResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::YoutubeAnalyticsV1::ListGroupItemResponse]
+        # @return [GoogleAPI::Apis::YoutubeAnalyticsV1::ListGroupItemResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_group_items(group_id, on_behalf_of_content_owner: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'groupItems', options)
-          command.response_representation = Google::Apis::YoutubeAnalyticsV1::ListGroupItemResponse::Representation
-          command.response_class = Google::Apis::YoutubeAnalyticsV1::ListGroupItemResponse
+          command.response_representation = GoogleAPI::Apis::YoutubeAnalyticsV1::ListGroupItemResponse::Representation
+          command.response_class = GoogleAPI::Apis::YoutubeAnalyticsV1::ListGroupItemResponse
           command.query['groupId'] = group_id unless group_id.nil?
           command.query['onBehalfOfContentOwner'] = on_behalf_of_content_owner unless on_behalf_of_content_owner.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -289,7 +289,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -298,9 +298,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_group(id, on_behalf_of_content_owner: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'groups', options)
           command.query['id'] = id unless id.nil?
@@ -312,7 +312,7 @@ module Google
         end
         
         # Creates a group.
-        # @param [Google::Apis::YoutubeAnalyticsV1::Group] group_object
+        # @param [GoogleAPI::Apis::YoutubeAnalyticsV1::Group] group_object
         # @param [String] on_behalf_of_content_owner
         #   Note: This parameter is intended exclusively for YouTube content partners.
         #   The onBehalfOfContentOwner parameter indicates that the request's
@@ -332,24 +332,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::YoutubeAnalyticsV1::Group] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::YoutubeAnalyticsV1::Group] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::YoutubeAnalyticsV1::Group]
+        # @return [GoogleAPI::Apis::YoutubeAnalyticsV1::Group]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_group(group_object = nil, on_behalf_of_content_owner: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'groups', options)
-          command.request_representation = Google::Apis::YoutubeAnalyticsV1::Group::Representation
+          command.request_representation = GoogleAPI::Apis::YoutubeAnalyticsV1::Group::Representation
           command.request_object = group_object
-          command.response_representation = Google::Apis::YoutubeAnalyticsV1::Group::Representation
-          command.response_class = Google::Apis::YoutubeAnalyticsV1::Group
+          command.response_representation = GoogleAPI::Apis::YoutubeAnalyticsV1::Group::Representation
+          command.response_class = GoogleAPI::Apis::YoutubeAnalyticsV1::Group
           command.query['onBehalfOfContentOwner'] = on_behalf_of_content_owner unless on_behalf_of_content_owner.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -390,22 +390,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::YoutubeAnalyticsV1::ListGroupsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::YoutubeAnalyticsV1::ListGroupsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::YoutubeAnalyticsV1::ListGroupsResponse]
+        # @return [GoogleAPI::Apis::YoutubeAnalyticsV1::ListGroupsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_groups(id: nil, mine: nil, on_behalf_of_content_owner: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'groups', options)
-          command.response_representation = Google::Apis::YoutubeAnalyticsV1::ListGroupsResponse::Representation
-          command.response_class = Google::Apis::YoutubeAnalyticsV1::ListGroupsResponse
+          command.response_representation = GoogleAPI::Apis::YoutubeAnalyticsV1::ListGroupsResponse::Representation
+          command.response_class = GoogleAPI::Apis::YoutubeAnalyticsV1::ListGroupsResponse
           command.query['id'] = id unless id.nil?
           command.query['mine'] = mine unless mine.nil?
           command.query['onBehalfOfContentOwner'] = on_behalf_of_content_owner unless on_behalf_of_content_owner.nil?
@@ -417,7 +417,7 @@ module Google
         end
         
         # Modifies a group. For example, you could change a group's title.
-        # @param [Google::Apis::YoutubeAnalyticsV1::Group] group_object
+        # @param [GoogleAPI::Apis::YoutubeAnalyticsV1::Group] group_object
         # @param [String] on_behalf_of_content_owner
         #   Note: This parameter is intended exclusively for YouTube content partners.
         #   The onBehalfOfContentOwner parameter indicates that the request's
@@ -437,24 +437,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::YoutubeAnalyticsV1::Group] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::YoutubeAnalyticsV1::Group] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::YoutubeAnalyticsV1::Group]
+        # @return [GoogleAPI::Apis::YoutubeAnalyticsV1::Group]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_group(group_object = nil, on_behalf_of_content_owner: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'groups', options)
-          command.request_representation = Google::Apis::YoutubeAnalyticsV1::Group::Representation
+          command.request_representation = GoogleAPI::Apis::YoutubeAnalyticsV1::Group::Representation
           command.request_object = group_object
-          command.response_representation = Google::Apis::YoutubeAnalyticsV1::Group::Representation
-          command.response_class = Google::Apis::YoutubeAnalyticsV1::Group
+          command.response_representation = GoogleAPI::Apis::YoutubeAnalyticsV1::Group::Representation
+          command.response_class = GoogleAPI::Apis::YoutubeAnalyticsV1::Group
           command.query['onBehalfOfContentOwner'] = on_behalf_of_content_owner unless on_behalf_of_content_owner.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -517,22 +517,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::YoutubeAnalyticsV1::ResultTable] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::YoutubeAnalyticsV1::ResultTable] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::YoutubeAnalyticsV1::ResultTable]
+        # @return [GoogleAPI::Apis::YoutubeAnalyticsV1::ResultTable]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def query_report(ids, start_date, end_date, metrics, currency: nil, dimensions: nil, filters: nil, max_results: nil, sort: nil, start_index: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'reports', options)
-          command.response_representation = Google::Apis::YoutubeAnalyticsV1::ResultTable::Representation
-          command.response_class = Google::Apis::YoutubeAnalyticsV1::ResultTable
+          command.response_representation = GoogleAPI::Apis::YoutubeAnalyticsV1::ResultTable::Representation
+          command.response_class = GoogleAPI::Apis::YoutubeAnalyticsV1::ResultTable
           command.query['currency'] = currency unless currency.nil?
           command.query['dimensions'] = dimensions unless dimensions.nil?
           command.query['end-date'] = end_date unless end_date.nil?

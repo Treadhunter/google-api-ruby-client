@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AdminDirectoryV1
       
       # JSON template for Alias object in Directory API.
       class Alias
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A alias email
         # Corresponds to the JSON property `alias`
@@ -67,7 +67,7 @@ module Google
       
       # JSON response template to list aliases in Directory API.
       class Aliases
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of alias objects.
         # Corresponds to the JSON property `aliases`
@@ -98,7 +98,7 @@ module Google
       
       # The template that returns individual ASP (Access Code) data.
       class Asp
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The unique ID of the ASP.
         # Corresponds to the JSON property `codeId`
@@ -154,7 +154,7 @@ module Google
       
       # 
       class Asps
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -163,7 +163,7 @@ module Google
       
         # A list of ASP resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdminDirectoryV1::Asp>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::Asp>]
         attr_accessor :items
       
         # The type of the API resource. This is always admin#directory#aspList.
@@ -185,7 +185,7 @@ module Google
       
       # JSON template for Calendar Resource object in Directory API.
       class CalendarResource
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etags`
@@ -243,7 +243,7 @@ module Google
       
       # JSON template for Calendar Resource List Response object in Directory API.
       class CalendarResources
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -252,7 +252,7 @@ module Google
       
         # The CalendarResources in this page of results.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdminDirectoryV1::CalendarResource>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::CalendarResource>]
         attr_accessor :items
       
         # Identifies this as a collection of CalendarResources. This is always admin#
@@ -282,7 +282,7 @@ module Google
       
       # An notification channel used to watch for resource changes.
       class Channel
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The address where notifications are delivered for this channel.
         # Corresponds to the JSON property `address`
@@ -360,11 +360,11 @@ module Google
       
       # JSON template for Chrome Os Device resource in Directory API.
       class ChromeOsDevice
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of active time ranges (Read-only)
         # Corresponds to the JSON property `activeTimeRanges`
-        # @return [Array<Google::Apis::AdminDirectoryV1::ChromeOsDevice::ActiveTimeRange>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::ChromeOsDevice::ActiveTimeRange>]
         attr_accessor :active_time_ranges
       
         # AssetId specified during enrollment or through later annotation
@@ -466,7 +466,7 @@ module Google
       
         # List of recent device users, in descending order by last login time (Read-only)
         # Corresponds to the JSON property `recentUsers`
-        # @return [Array<Google::Apis::AdminDirectoryV1::ChromeOsDevice::RecentUser>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::ChromeOsDevice::RecentUser>]
         attr_accessor :recent_users
       
         # Chromebook serial number (Read-only)
@@ -525,7 +525,7 @@ module Google
         
         # 
         class ActiveTimeRange
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Duration in milliseconds
           # Corresponds to the JSON property `activeTime`
@@ -550,7 +550,7 @@ module Google
         
         # 
         class RecentUser
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Email address of the user. Present only if the user type is managed
           # Corresponds to the JSON property `email`
@@ -576,11 +576,11 @@ module Google
       
       # JSON response template for List Chrome OS Devices operation in Directory API.
       class ChromeOsDevices
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of Chrome OS Device objects.
         # Corresponds to the JSON property `chromeosdevices`
-        # @return [Array<Google::Apis::AdminDirectoryV1::ChromeOsDevice>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::ChromeOsDevice>]
         attr_accessor :chromeosdevices
       
         # ETag of the resource.
@@ -613,7 +613,7 @@ module Google
       
       # JSON template for Customer Resource object in Directory API.
       class Customer
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The customer's secondary contact email address. This email address cannot be
         # on the same domain as the customerDomain
@@ -659,7 +659,7 @@ module Google
       
         # JSON template for postal address of a customer.
         # Corresponds to the JSON property `postalAddress`
-        # @return [Google::Apis::AdminDirectoryV1::CustomerPostalAddress]
+        # @return [GoogleAPI::Apis::AdminDirectoryV1::CustomerPostalAddress]
         attr_accessor :postal_address
       
         def initialize(**args)
@@ -682,7 +682,7 @@ module Google
       
       # JSON template for postal address of a customer.
       class CustomerPostalAddress
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A customer's physical address. The address can be composed of one to three
         # lines.
@@ -755,7 +755,7 @@ module Google
       
       # JSON template for Domain Alias object in Directory API.
       class DomainAlias
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The creation time of the domain alias. (Read-only).
         # Corresponds to the JSON property `creationTime`
@@ -806,11 +806,11 @@ module Google
       
       # JSON response template to list domain aliases in Directory API.
       class DomainAliases
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of domain alias objects.
         # Corresponds to the JSON property `domainAliases`
-        # @return [Array<Google::Apis::AdminDirectoryV1::DomainAlias>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::DomainAlias>]
         attr_accessor :domain_aliases
       
         # ETag of the resource.
@@ -837,7 +837,7 @@ module Google
       
       # JSON template for Domain object in Directory API.
       class Domains
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Creation time of the domain. (Read-only).
         # Corresponds to the JSON property `creationTime`
@@ -846,7 +846,7 @@ module Google
       
         # List of domain alias objects. (Read-only)
         # Corresponds to the JSON property `domainAliases`
-        # @return [Array<Google::Apis::AdminDirectoryV1::DomainAlias>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::DomainAlias>]
         attr_accessor :domain_aliases
       
         # The domain name of the customer.
@@ -894,11 +894,11 @@ module Google
       
       # JSON response template to list Domains in Directory API.
       class Domains2
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of domain objects.
         # Corresponds to the JSON property `domains`
-        # @return [Array<Google::Apis::AdminDirectoryV1::Domains>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::Domains>]
         attr_accessor :domains
       
         # ETag of the resource.
@@ -925,7 +925,7 @@ module Google
       
       # JSON template for Group resource in Directory API.
       class Group
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Is the group created by admin (Read-only) *
         # Corresponds to the JSON property `adminCreated`
@@ -999,7 +999,7 @@ module Google
       
       # JSON response template for List Groups operation in Directory API.
       class Groups
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -1008,7 +1008,7 @@ module Google
       
         # List of group objects.
         # Corresponds to the JSON property `groups`
-        # @return [Array<Google::Apis::AdminDirectoryV1::Group>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::Group>]
         attr_accessor :groups
       
         # Kind of resource this is.
@@ -1036,7 +1036,7 @@ module Google
       
       # JSON template for Member resource in Directory API.
       class Member
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Email of member (Read-only)
         # Corresponds to the JSON property `email`
@@ -1086,7 +1086,7 @@ module Google
       
       # JSON response template for List Members operation in Directory API.
       class Members
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -1100,7 +1100,7 @@ module Google
       
         # List of member objects.
         # Corresponds to the JSON property `members`
-        # @return [Array<Google::Apis::AdminDirectoryV1::Member>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::Member>]
         attr_accessor :members
       
         # Token used to access next page of this result.
@@ -1123,7 +1123,7 @@ module Google
       
       # JSON template for Mobile Device resource in Directory API.
       class MobileDevice
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Adb (USB debugging) enabled or disabled on device (Read-only)
         # Corresponds to the JSON property `adbStatus`
@@ -1133,7 +1133,7 @@ module Google
       
         # List of applications installed on Mobile Device
         # Corresponds to the JSON property `applications`
-        # @return [Array<Google::Apis::AdminDirectoryV1::MobileDevice::Application>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::MobileDevice::Application>]
         attr_accessor :applications
       
         # Mobile Device Baseband version (Read-only)
@@ -1329,7 +1329,7 @@ module Google
         
         # 
         class Application
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Display name of application
           # Corresponds to the JSON property `displayName`
@@ -1374,7 +1374,7 @@ module Google
       # JSON request template for firing commands on Mobile Device in Directory
       # Devices API.
       class MobileDeviceAction
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Action to be taken on the Mobile Device
         # Corresponds to the JSON property `action`
@@ -1393,7 +1393,7 @@ module Google
       
       # JSON response template for List Mobile Devices operation in Directory API.
       class MobileDevices
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -1407,7 +1407,7 @@ module Google
       
         # List of Mobile Device objects.
         # Corresponds to the JSON property `mobiledevices`
-        # @return [Array<Google::Apis::AdminDirectoryV1::MobileDevice>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::MobileDevice>]
         attr_accessor :mobiledevices
       
         # Token used to access next page of this result.
@@ -1430,7 +1430,7 @@ module Google
       
       # Template for a notification resource.
       class Notification
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Body of the notification (Read-only)
         # Corresponds to the JSON property `body`
@@ -1492,7 +1492,7 @@ module Google
       
       # Template for notifications list response.
       class Notifications
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -1501,7 +1501,7 @@ module Google
       
         # List of notifications in this page.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdminDirectoryV1::Notification>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::Notification>]
         attr_accessor :items
       
         # The type of the resource.
@@ -1535,7 +1535,7 @@ module Google
       
       # JSON template for Org Unit resource in Directory API.
       class OrgUnit
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Should block inheritance
         # Corresponds to the JSON property `blockInheritance`
@@ -1603,7 +1603,7 @@ module Google
       
       # JSON response template for List Organization Units operation in Directory API.
       class OrgUnits
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -1617,7 +1617,7 @@ module Google
       
         # List of user objects.
         # Corresponds to the JSON property `organizationUnits`
-        # @return [Array<Google::Apis::AdminDirectoryV1::OrgUnit>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::OrgUnit>]
         attr_accessor :organization_units
       
         def initialize(**args)
@@ -1634,13 +1634,13 @@ module Google
       
       # JSON template for privilege resource in Directory API.
       class Privilege
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of child privileges. Privileges for a service form a tree. Each
         # privilege can have a list of child privileges; this list is empty for a leaf
         # privilege.
         # Corresponds to the JSON property `childPrivileges`
-        # @return [Array<Google::Apis::AdminDirectoryV1::Privilege>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::Privilege>]
         attr_accessor :child_privileges
       
         # ETag of the resource.
@@ -1692,7 +1692,7 @@ module Google
       
       # JSON response template for List privileges operation in Directory API.
       class Privileges
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -1701,7 +1701,7 @@ module Google
       
         # A list of Privilege resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdminDirectoryV1::Privilege>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::Privilege>]
         attr_accessor :items
       
         # The type of the API resource. This is always admin#directory#privileges.
@@ -1723,7 +1723,7 @@ module Google
       
       # JSON template for role resource in Directory API.
       class Role
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -1764,7 +1764,7 @@ module Google
       
         # The set of privileges that are granted to this role.
         # Corresponds to the JSON property `rolePrivileges`
-        # @return [Array<Google::Apis::AdminDirectoryV1::Role::RolePrivilege>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::Role::RolePrivilege>]
         attr_accessor :role_privileges
       
         def initialize(**args)
@@ -1785,7 +1785,7 @@ module Google
         
         # 
         class RolePrivilege
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The name of the privilege.
           # Corresponds to the JSON property `privilegeName`
@@ -1811,7 +1811,7 @@ module Google
       
       # JSON template for roleAssignment resource in Directory API.
       class RoleAssignment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The unique ID of the user this role is assigned to.
         # Corresponds to the JSON property `assignedTo`
@@ -1869,7 +1869,7 @@ module Google
       
       # JSON response template for List roleAssignments operation in Directory API.
       class RoleAssignments
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -1878,7 +1878,7 @@ module Google
       
         # A list of RoleAssignment resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdminDirectoryV1::RoleAssignment>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::RoleAssignment>]
         attr_accessor :items
       
         # The type of the API resource. This is always admin#directory#roleAssignments.
@@ -1906,7 +1906,7 @@ module Google
       
       # JSON response template for List roles operation in Directory API.
       class Roles
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -1915,7 +1915,7 @@ module Google
       
         # A list of Role resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdminDirectoryV1::Role>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::Role>]
         attr_accessor :items
       
         # The type of the API resource. This is always admin#directory#roles.
@@ -1943,7 +1943,7 @@ module Google
       
       # JSON template for Schema resource in Directory API.
       class Schema
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -1952,7 +1952,7 @@ module Google
       
         # Fields of Schema
         # Corresponds to the JSON property `fields`
-        # @return [Array<Google::Apis::AdminDirectoryV1::SchemaFieldSpec>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::SchemaFieldSpec>]
         attr_accessor :fields
       
         # Kind of resource this is.
@@ -1986,7 +1986,7 @@ module Google
       
       # JSON template for FieldSpec resource for Schemas in Directory API.
       class SchemaFieldSpec
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -2029,7 +2029,7 @@ module Google
         # be supported for numeric fields. Setting the numericIndexingSpec allows range
         # queries to be supported.
         # Corresponds to the JSON property `numericIndexingSpec`
-        # @return [Google::Apis::AdminDirectoryV1::SchemaFieldSpec::NumericIndexingSpec]
+        # @return [GoogleAPI::Apis::AdminDirectoryV1::SchemaFieldSpec::NumericIndexingSpec]
         attr_accessor :numeric_indexing_spec
       
         # Read ACLs on the field specifying who can view values of this field. Valid
@@ -2059,7 +2059,7 @@ module Google
         # be supported for numeric fields. Setting the numericIndexingSpec allows range
         # queries to be supported.
         class NumericIndexingSpec
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Maximum value of this field. This is meant to be indicative rather than
           # enforced. Values outside this range will still be indexed, but search may not
@@ -2089,7 +2089,7 @@ module Google
       
       # JSON response template for List Schema operation in Directory API.
       class Schemas
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -2103,7 +2103,7 @@ module Google
       
         # List of UserSchema objects.
         # Corresponds to the JSON property `schemas`
-        # @return [Array<Google::Apis::AdminDirectoryV1::Schema>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::Schema>]
         attr_accessor :schemas
       
         def initialize(**args)
@@ -2120,7 +2120,7 @@ module Google
       
       # JSON template for token resource in Directory API.
       class Token
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether the application is registered with Google. The value is true if the
         # application has an anonymous Client ID.
@@ -2185,7 +2185,7 @@ module Google
       
       # JSON response template for List tokens operation in Directory API.
       class Tokens
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -2194,7 +2194,7 @@ module Google
       
         # A list of Token resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdminDirectoryV1::Token>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::Token>]
         attr_accessor :items
       
         # The type of the API resource. This is always admin#directory#tokenList.
@@ -2216,7 +2216,7 @@ module Google
       
       # JSON template for User object in Directory API.
       class User
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `addresses`
@@ -2332,7 +2332,7 @@ module Google
       
         # JSON template for name of a user in Directory API.
         # Corresponds to the JSON property `name`
-        # @return [Google::Apis::AdminDirectoryV1::UserName]
+        # @return [GoogleAPI::Apis::AdminDirectoryV1::UserName]
         attr_accessor :name
       
         # List of non editable aliases (Read-only)
@@ -2447,7 +2447,7 @@ module Google
       
       # JSON template for About (notes) of a user in Directory API.
       class UserAbout
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # About entry can have a type which indicates the content type. It can either be
         # plain or html. By default, notes contents are assumed to contain plain text.
@@ -2473,7 +2473,7 @@ module Google
       
       # JSON template for address.
       class UserAddress
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Country.
         # Corresponds to the JSON property `country`
@@ -2571,7 +2571,7 @@ module Google
       
       # JSON template for an email.
       class UserEmail
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Email id of the user.
         # Corresponds to the JSON property `address`
@@ -2612,7 +2612,7 @@ module Google
       
       # JSON template for an externalId entry.
       class UserExternalId
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Custom type.
         # Corresponds to the JSON property `customType`
@@ -2643,7 +2643,7 @@ module Google
       
       # JSON template for instant messenger of an user.
       class UserIm
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Custom protocol.
         # Corresponds to the JSON property `customProtocol`
@@ -2699,7 +2699,7 @@ module Google
       # JSON request template for setting/revoking admin status of a user in Directory
       # API.
       class UserMakeAdmin
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Boolean indicating new admin status of the user
         # Corresponds to the JSON property `status`
@@ -2719,7 +2719,7 @@ module Google
       
       # JSON template for name of a user in Directory API.
       class UserName
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Last Name
         # Corresponds to the JSON property `familyName`
@@ -2750,7 +2750,7 @@ module Google
       
       # JSON template for an organization entry.
       class UserOrganization
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The cost center of the users department.
         # Corresponds to the JSON property `costCenter`
@@ -2833,7 +2833,7 @@ module Google
       
       # JSON template for a phone entry.
       class UserPhone
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Custom Type.
         # Corresponds to the JSON property `customType`
@@ -2874,7 +2874,7 @@ module Google
       
       # JSON template for Photo object in Directory API.
       class UserPhoto
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -2935,7 +2935,7 @@ module Google
       
       # JSON template for a relation entry.
       class UserRelation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Custom Type.
         # Corresponds to the JSON property `customType`
@@ -2967,7 +2967,7 @@ module Google
       
       # JSON request template to undelete a user in Directory API.
       class UserUndelete
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # OrgUnit of User
         # Corresponds to the JSON property `orgUnitPath`
@@ -2986,7 +2986,7 @@ module Google
       
       # JSON template for a website entry.
       class UserWebsite
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Custom Type.
         # Corresponds to the JSON property `customType`
@@ -3027,7 +3027,7 @@ module Google
       
       # JSON response template for List Users operation in Apps Directory API.
       class Users
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -3051,7 +3051,7 @@ module Google
       
         # List of user objects.
         # Corresponds to the JSON property `users`
-        # @return [Array<Google::Apis::AdminDirectoryV1::User>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::User>]
         attr_accessor :users
       
         def initialize(**args)
@@ -3070,7 +3070,7 @@ module Google
       
       # JSON template for verification codes in Directory API.
       class VerificationCode
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -3108,7 +3108,7 @@ module Google
       
       # JSON response template for List verification codes operation in Directory API.
       class VerificationCodes
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -3117,7 +3117,7 @@ module Google
       
         # A list of verification code resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdminDirectoryV1::VerificationCode>]
+        # @return [Array<GoogleAPI::Apis::AdminDirectoryV1::VerificationCode>]
         attr_accessor :items
       
         # The type of the resource. This is always admin#directory#verificationCodesList.

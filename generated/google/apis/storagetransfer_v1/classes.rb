@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module StoragetransferV1
       
       # Google service account
       class GoogleServiceAccount
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Required.
         # Corresponds to the JSON property `accountEmail`
@@ -44,7 +44,7 @@ module Google
       # This resource represents the configuration of a transfer job that runs
       # periodically.
       class TransferJob
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A globally unique name assigned by Storage Transfer Service when the job is
         # created. This field should be left empty in requests to create a new transfer
@@ -66,12 +66,12 @@ module Google
       
         # Configuration for running a transfer.
         # Corresponds to the JSON property `transferSpec`
-        # @return [Google::Apis::StoragetransferV1::TransferSpec]
+        # @return [GoogleAPI::Apis::StoragetransferV1::TransferSpec]
         attr_accessor :transfer_spec
       
         # Transfers can be scheduled to recur or to run just once.
         # Corresponds to the JSON property `schedule`
-        # @return [Google::Apis::StoragetransferV1::Schedule]
+        # @return [GoogleAPI::Apis::StoragetransferV1::Schedule]
         attr_accessor :schedule
       
         # Status of the job. This value MUST be specified for `CreateTransferJobRequests`
@@ -118,19 +118,19 @@ module Google
       
       # Configuration for running a transfer.
       class TransferSpec
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # In a GcsData, an object's name is the Google Cloud Storage object's name and
         # its `lastModificationTime` refers to the object's updated time, which changes
         # when the content or the metadata of the object is updated.
         # Corresponds to the JSON property `gcsDataSource`
-        # @return [Google::Apis::StoragetransferV1::GcsData]
+        # @return [GoogleAPI::Apis::StoragetransferV1::GcsData]
         attr_accessor :gcs_data_source
       
         # An AwsS3Data can be a data source, but not a data sink. In an AwsS3Data, an
         # object's name is the S3 object's key name.
         # Corresponds to the JSON property `awsS3DataSource`
-        # @return [Google::Apis::StoragetransferV1::AwsS3Data]
+        # @return [GoogleAPI::Apis::StoragetransferV1::AwsS3Data]
         attr_accessor :aws_s3_data_source
       
         # An HttpData specifies a list of objects on the web to be transferred over HTTP.
@@ -152,25 +152,25 @@ module Google
         # to support Range requests and to return a Content-Length header in each
         # response.
         # Corresponds to the JSON property `httpDataSource`
-        # @return [Google::Apis::StoragetransferV1::HttpData]
+        # @return [GoogleAPI::Apis::StoragetransferV1::HttpData]
         attr_accessor :http_data_source
       
         # In a GcsData, an object's name is the Google Cloud Storage object's name and
         # its `lastModificationTime` refers to the object's updated time, which changes
         # when the content or the metadata of the object is updated.
         # Corresponds to the JSON property `gcsDataSink`
-        # @return [Google::Apis::StoragetransferV1::GcsData]
+        # @return [GoogleAPI::Apis::StoragetransferV1::GcsData]
         attr_accessor :gcs_data_sink
       
         # Conditions that determine which objects will be transferred.
         # Corresponds to the JSON property `objectConditions`
-        # @return [Google::Apis::StoragetransferV1::ObjectConditions]
+        # @return [GoogleAPI::Apis::StoragetransferV1::ObjectConditions]
         attr_accessor :object_conditions
       
         # TransferOptions uses three boolean parameters to define the actions to be
         # performed on objects in a transfer.
         # Corresponds to the JSON property `transferOptions`
-        # @return [Google::Apis::StoragetransferV1::TransferOptions]
+        # @return [GoogleAPI::Apis::StoragetransferV1::TransferOptions]
         attr_accessor :transfer_options
       
         def initialize(**args)
@@ -192,7 +192,7 @@ module Google
       # its `lastModificationTime` refers to the object's updated time, which changes
       # when the content or the metadata of the object is updated.
       class GcsData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Google Cloud Storage bucket name (see [Bucket Name Requirements](https://cloud.
         # google.com/storage/docs/bucket-naming#requirements)). Required.
@@ -213,7 +213,7 @@ module Google
       # An AwsS3Data can be a data source, but not a data sink. In an AwsS3Data, an
       # object's name is the S3 object's key name.
       class AwsS3Data
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # S3 Bucket name (see [Creating a bucket](http://docs.aws.amazon.com/AmazonS3/
         # latest/dev/create-bucket-get-location-example.html)). Required.
@@ -224,7 +224,7 @@ module Google
         # AWS access key (see [AWS Security Credentials](http://docs.aws.amazon.com/
         # general/latest/gr/aws-security-credentials.html)).
         # Corresponds to the JSON property `awsAccessKey`
-        # @return [Google::Apis::StoragetransferV1::AwsAccessKey]
+        # @return [GoogleAPI::Apis::StoragetransferV1::AwsAccessKey]
         attr_accessor :aws_access_key
       
         def initialize(**args)
@@ -241,7 +241,7 @@ module Google
       # AWS access key (see [AWS Security Credentials](http://docs.aws.amazon.com/
       # general/latest/gr/aws-security-credentials.html)).
       class AwsAccessKey
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # AWS access key ID. Required.
         # Corresponds to the JSON property `accessKeyId`
@@ -283,7 +283,7 @@ module Google
       # to support Range requests and to return a Content-Length header in each
       # response.
       class HttpData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The URL that points to the file that stores the object list entries. This file
         # must allow public access. Currently, only URLs with HTTP and HTTPS schemes are
@@ -304,7 +304,7 @@ module Google
       
       # Conditions that determine which objects will be transferred.
       class ObjectConditions
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If unspecified, `minTimeElapsedSinceLastModification` takes a zero value and `
         # maxTimeElapsedSinceLastModification` takes the maximum possible value of
@@ -364,7 +364,7 @@ module Google
       # TransferOptions uses three boolean parameters to define the actions to be
       # performed on objects in a transfer.
       class TransferOptions
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether overwriting objects that already exist in the sink is allowed.
         # Corresponds to the JSON property `overwriteObjectsAlreadyExistingInSink`
@@ -399,7 +399,7 @@ module Google
       
       # Transfers can be scheduled to recur or to run just once.
       class Schedule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Represents a whole calendar date, e.g. date of birth. The time of day and time
         # zone are either specified elsewhere or are not significant. The date is
@@ -409,7 +409,7 @@ module Google
         # anniversary date. Related types are [google.type.TimeOfDay][google.type.
         # TimeOfDay] and `google.protobuf.Timestamp`.
         # Corresponds to the JSON property `scheduleStartDate`
-        # @return [Google::Apis::StoragetransferV1::Date]
+        # @return [GoogleAPI::Apis::StoragetransferV1::Date]
         attr_accessor :schedule_start_date
       
         # Represents a whole calendar date, e.g. date of birth. The time of day and time
@@ -420,14 +420,14 @@ module Google
         # anniversary date. Related types are [google.type.TimeOfDay][google.type.
         # TimeOfDay] and `google.protobuf.Timestamp`.
         # Corresponds to the JSON property `scheduleEndDate`
-        # @return [Google::Apis::StoragetransferV1::Date]
+        # @return [GoogleAPI::Apis::StoragetransferV1::Date]
         attr_accessor :schedule_end_date
       
         # Represents a time of day. The date and time zone are either not significant or
         # are specified elsewhere. An API may chose to allow leap seconds. Related types
         # are [google.type.Date][google.type.Date] and `google.protobuf.Timestamp`.
         # Corresponds to the JSON property `startTimeOfDay`
-        # @return [Google::Apis::StoragetransferV1::TimeOfDay]
+        # @return [GoogleAPI::Apis::StoragetransferV1::TimeOfDay]
         attr_accessor :start_time_of_day
       
         def initialize(**args)
@@ -450,7 +450,7 @@ module Google
       # anniversary date. Related types are [google.type.TimeOfDay][google.type.
       # TimeOfDay] and `google.protobuf.Timestamp`.
       class Date
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Year of date. Must be from 1 to 9,999, or 0 if specifying a date without a
         # year.
@@ -485,7 +485,7 @@ module Google
       # are specified elsewhere. An API may chose to allow leap seconds. Related types
       # are [google.type.Date][google.type.Date] and `google.protobuf.Timestamp`.
       class TimeOfDay
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to
         # allow the value "24:00:00" for scenarios like business closing time.
@@ -524,7 +524,7 @@ module Google
       
       # Request passed to UpdateTransferJob.
       class UpdateTransferJobRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the Google Developers Console project that owns the job. Required.
         # Corresponds to the JSON property `projectId`
@@ -534,7 +534,7 @@ module Google
         # This resource represents the configuration of a transfer job that runs
         # periodically.
         # Corresponds to the JSON property `transferJob`
-        # @return [Google::Apis::StoragetransferV1::TransferJob]
+        # @return [GoogleAPI::Apis::StoragetransferV1::TransferJob]
         attr_accessor :transfer_job
       
         # The field mask of the fields in `transferJob` that are to be updated in this
@@ -561,11 +561,11 @@ module Google
       
       # Response from ListTransferJobs.
       class ListTransferJobsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of transfer jobs.
         # Corresponds to the JSON property `transferJobs`
-        # @return [Array<Google::Apis::StoragetransferV1::TransferJob>]
+        # @return [Array<GoogleAPI::Apis::StoragetransferV1::TransferJob>]
         attr_accessor :transfer_jobs
       
         # The list next page token.
@@ -586,7 +586,7 @@ module Google
       
       # Request passed to PauseTransferOperation.
       class PauseTransferOperationRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -603,7 +603,7 @@ module Google
       # protobuf.Empty) returns (google.protobuf.Empty); ` The JSON representation for
       # `Empty` is empty JSON object ````.
       class Empty
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -616,7 +616,7 @@ module Google
       
       # Request passed to ResumeTransferOperation.
       class ResumeTransferOperationRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -630,7 +630,7 @@ module Google
       # This resource represents a long-running operation that is the result of a
       # network API call.
       class Operation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The server-assigned name, which is only unique within the same service that
         # originally returns it. If you use the default HTTP mapping above, the `name`
@@ -684,7 +684,7 @@ module Google
         # are stored in logs, the message `Status` could be used directly after any
         # stripping needed for security/privacy reasons.
         # Corresponds to the JSON property `error`
-        # @return [Google::Apis::StoragetransferV1::Status]
+        # @return [GoogleAPI::Apis::StoragetransferV1::Status]
         attr_accessor :error
       
         # The normal response of the operation in case of success. If the original
@@ -745,7 +745,7 @@ module Google
       # are stored in logs, the message `Status` could be used directly after any
       # stripping needed for security/privacy reasons.
       class Status
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The status code, which should be an enum value of [google.rpc.Code][google.rpc.
         # Code].
@@ -781,11 +781,11 @@ module Google
       # The response message for [Operations.ListOperations][google.longrunning.
       # Operations.ListOperations].
       class ListOperationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of operations that matches the specified filter in the request.
         # Corresponds to the JSON property `operations`
-        # @return [Array<Google::Apis::StoragetransferV1::Operation>]
+        # @return [Array<GoogleAPI::Apis::StoragetransferV1::Operation>]
         attr_accessor :operations
       
         # The standard List next-page token.
@@ -806,7 +806,7 @@ module Google
       
       # A description of the execution of a transfer.
       class TransferOperation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A globally unique ID assigned by the system.
         # Corresponds to the JSON property `name`
@@ -821,7 +821,7 @@ module Google
       
         # Configuration for running a transfer.
         # Corresponds to the JSON property `transferSpec`
-        # @return [Google::Apis::StoragetransferV1::TransferSpec]
+        # @return [GoogleAPI::Apis::StoragetransferV1::TransferSpec]
         attr_accessor :transfer_spec
       
         # Start time of this transfer execution.
@@ -841,12 +841,12 @@ module Google
       
         # A collection of counters that report the progress of a transfer operation.
         # Corresponds to the JSON property `counters`
-        # @return [Google::Apis::StoragetransferV1::TransferCounters]
+        # @return [GoogleAPI::Apis::StoragetransferV1::TransferCounters]
         attr_accessor :counters
       
         # Summarizes errors encountered with sample error log entries.
         # Corresponds to the JSON property `errorBreakdowns`
-        # @return [Array<Google::Apis::StoragetransferV1::ErrorSummary>]
+        # @return [Array<GoogleAPI::Apis::StoragetransferV1::ErrorSummary>]
         attr_accessor :error_breakdowns
       
         # The name of the transfer job that triggers this transfer operation.
@@ -874,7 +874,7 @@ module Google
       
       # A collection of counters that report the progress of a transfer operation.
       class TransferCounters
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Objects found in the data source that are scheduled to be transferred, which
         # will be copied, excluded based on conditions, or skipped due to failures.
@@ -987,7 +987,7 @@ module Google
       
       # A summary of errors by error code, plus a count and sample error log entries.
       class ErrorSummary
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Required.
         # Corresponds to the JSON property `errorCode`
@@ -1001,7 +1001,7 @@ module Google
       
         # Error samples.
         # Corresponds to the JSON property `errorLogEntries`
-        # @return [Array<Google::Apis::StoragetransferV1::ErrorLogEntry>]
+        # @return [Array<GoogleAPI::Apis::StoragetransferV1::ErrorLogEntry>]
         attr_accessor :error_log_entries
       
         def initialize(**args)
@@ -1018,7 +1018,7 @@ module Google
       
       # An entry describing an error that has occurred.
       class ErrorLogEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A URL that refers to the target (a data source, a data sink, or an object)
         # with which the error is associated. Required.

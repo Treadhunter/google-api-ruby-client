@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AdexchangebuyerV1_4
       
       # Configuration data for an Ad Exchange buyer account.
       class Account
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Your bidder locations that have distinct URLs.
         # Corresponds to the JSON property `bidderLocation`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::Account::BidderLocation>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::Account::BidderLocation>]
         attr_accessor :bidder_location
       
         # The nid parameter value used in cookie match requests. Please contact your
@@ -89,7 +89,7 @@ module Google
         
         # 
         class BidderLocation
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The protocol that the bidder endpoint is using. By default, OpenRTB protocols
           # use JSON, except PROTOCOL_OPENRTB_PROTOBUF. PROTOCOL_OPENRTB_PROTOBUF uses
@@ -141,11 +141,11 @@ module Google
       # An account feed lists Ad Exchange buyer accounts that the user has access to.
       # Each entry in the feed corresponds to a single buyer account.
       class AccountsList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of accounts.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::Account>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::Account>]
         attr_accessor :items
       
         # Resource type.
@@ -166,11 +166,11 @@ module Google
       
       # 
       class AddOrderDealsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of deals to add
         # Corresponds to the JSON property `deals`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::MarketplaceDeal>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::MarketplaceDeal>]
         attr_accessor :deals
       
         # The last known proposal revision number.
@@ -197,11 +197,11 @@ module Google
       
       # 
       class AddOrderDealsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of deals added (in the same proposal as passed in the request)
         # Corresponds to the JSON property `deals`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::MarketplaceDeal>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::MarketplaceDeal>]
         attr_accessor :deals
       
         # The updated revision number for the proposal.
@@ -222,11 +222,11 @@ module Google
       
       # 
       class AddOrderNotesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of notes to add.
         # Corresponds to the JSON property `notes`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::MarketplaceNote>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::MarketplaceNote>]
         attr_accessor :notes
       
         def initialize(**args)
@@ -241,11 +241,11 @@ module Google
       
       # 
       class AddOrderNotesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `notes`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::MarketplaceNote>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::MarketplaceNote>]
         attr_accessor :notes
       
         def initialize(**args)
@@ -260,7 +260,7 @@ module Google
       
       # The configuration data for an Ad Exchange billing info.
       class BillingInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account id.
         # Corresponds to the JSON property `accountId`
@@ -300,11 +300,11 @@ module Google
       # A billing info feed lists Billing Info the Ad Exchange buyer account has
       # access to. Each entry in the feed corresponds to a single billing info.
       class BillingInfoList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of billing info relevant for your account.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::BillingInfo>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::BillingInfo>]
         attr_accessor :items
       
         # Resource type.
@@ -325,7 +325,7 @@ module Google
       
       # The configuration data for Ad Exchange RTB - Budget API.
       class Budget
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The id of the account. This is required for get and update requests.
         # Corresponds to the JSON property `accountId`
@@ -376,7 +376,7 @@ module Google
       
       # 
       class Buyer
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Adx account id of the buyer.
         # Corresponds to the JSON property `accountId`
@@ -395,7 +395,7 @@ module Google
       
       # 
       class ContactInformation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Email address of the contact.
         # Corresponds to the JSON property `email`
@@ -420,11 +420,11 @@ module Google
       
       # 
       class CreateOrdersRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of proposals to create.
         # Corresponds to the JSON property `proposals`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::Proposal>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::Proposal>]
         attr_accessor :proposals
       
         # Web property id of the seller creating these orders
@@ -445,11 +445,11 @@ module Google
       
       # 
       class CreateOrdersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of proposals successfully created.
         # Corresponds to the JSON property `proposals`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::Proposal>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::Proposal>]
         attr_accessor :proposals
       
         def initialize(**args)
@@ -464,7 +464,7 @@ module Google
       
       # A creative and its classification data.
       class Creative
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The HTML snippet that displays the ad when inserted in the web page. If set,
         # videoURL should not be set.
@@ -523,7 +523,7 @@ module Google
         # Shows any corrections that were applied to this creative. Read-only. This
         # field should not be set in requests.
         # Corresponds to the JSON property `corrections`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::Creative::Correction>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::Creative::Correction>]
         attr_accessor :corrections
       
         # Top-level deals status. Read-only. This field should not be set in requests.
@@ -538,7 +538,7 @@ module Google
         # The filtering reasons for the creative. Read-only. This field should not be
         # set in requests.
         # Corresponds to the JSON property `filteringReasons`
-        # @return [Google::Apis::AdexchangebuyerV1_4::Creative::FilteringReasons]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::Creative::FilteringReasons]
         attr_accessor :filtering_reasons
       
         # Ad height.
@@ -564,7 +564,7 @@ module Google
       
         # If nativeAd is set, HTMLSnippet and videoURL should not be set.
         # Corresponds to the JSON property `nativeAd`
-        # @return [Google::Apis::AdexchangebuyerV1_4::Creative::NativeAd]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::Creative::NativeAd]
         attr_accessor :native_ad
       
         # Top-level open auction status. Read-only. This field should not be set in
@@ -598,7 +598,7 @@ module Google
         # platform, an HTTPS vs HTTP request, or the type of auction). Read-only. This
         # field should not be set in requests.
         # Corresponds to the JSON property `servingRestrictions`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::Creative::ServingRestriction>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::Creative::ServingRestriction>]
         attr_accessor :serving_restrictions
       
         # All vendor types for the ads that may be shown from this snippet.
@@ -659,11 +659,11 @@ module Google
         
         # 
         class Correction
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # All known serving contexts containing serving status information.
           # Corresponds to the JSON property `contexts`
-          # @return [Array<Google::Apis::AdexchangebuyerV1_4::Creative::Correction::Context>]
+          # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::Creative::Correction::Context>]
           attr_accessor :contexts
         
           # Additional details about the correction.
@@ -689,7 +689,7 @@ module Google
           
           # 
           class Context
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Only set when contextType=AUCTION_TYPE. Represents the auction types this
             # correction applies to.
@@ -731,7 +731,7 @@ module Google
         # The filtering reasons for the creative. Read-only. This field should not be
         # set in requests.
         class FilteringReasons
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The date in ISO 8601 format for the data. The data is collected from 00:00:00
           # to 23:59:59 in PST.
@@ -741,7 +741,7 @@ module Google
         
           # The filtering reasons.
           # Corresponds to the JSON property `reasons`
-          # @return [Array<Google::Apis::AdexchangebuyerV1_4::Creative::FilteringReasons::Reason>]
+          # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::Creative::FilteringReasons::Reason>]
           attr_accessor :reasons
         
           def initialize(**args)
@@ -756,7 +756,7 @@ module Google
           
           # 
           class Reason
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The number of times the creative was filtered for the status. The count is
             # aggregated across all publishers on the exchange.
@@ -784,7 +784,7 @@ module Google
         
         # If nativeAd is set, HTMLSnippet and videoURL should not be set.
         class NativeAd
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `advertiser`
@@ -793,7 +793,7 @@ module Google
         
           # The app icon, for app download ads.
           # Corresponds to the JSON property `appIcon`
-          # @return [Google::Apis::AdexchangebuyerV1_4::Creative::NativeAd::AppIcon]
+          # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::Creative::NativeAd::AppIcon]
           attr_accessor :app_icon
         
           # A long description of the ad.
@@ -818,7 +818,7 @@ module Google
         
           # A large image.
           # Corresponds to the JSON property `image`
-          # @return [Google::Apis::AdexchangebuyerV1_4::Creative::NativeAd::Image]
+          # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::Creative::NativeAd::Image]
           attr_accessor :image
         
           # The URLs are called when the impression is rendered.
@@ -828,7 +828,7 @@ module Google
         
           # A smaller image, for the advertiser logo.
           # Corresponds to the JSON property `logo`
-          # @return [Google::Apis::AdexchangebuyerV1_4::Creative::NativeAd::Logo]
+          # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::Creative::NativeAd::Logo]
           attr_accessor :logo
         
           # The price of the promoted app including the currency info.
@@ -868,7 +868,7 @@ module Google
           
           # The app icon, for app download ads.
           class AppIcon
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `height`
@@ -899,7 +899,7 @@ module Google
           
           # A large image.
           class Image
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `height`
@@ -930,7 +930,7 @@ module Google
           
           # A smaller image, for the advertiser logo.
           class Logo
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `height`
@@ -962,11 +962,11 @@ module Google
         
         # 
         class ServingRestriction
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # All known contexts/restrictions.
           # Corresponds to the JSON property `contexts`
-          # @return [Array<Google::Apis::AdexchangebuyerV1_4::Creative::ServingRestriction::Context>]
+          # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::Creative::ServingRestriction::Context>]
           attr_accessor :contexts
         
           # The reasons for disapproval within this restriction, if any. Note that not all
@@ -975,7 +975,7 @@ module Google
           # disapproval_reasons. In this case, please reach out to your TAM to help debug
           # the issue.
           # Corresponds to the JSON property `disapprovalReasons`
-          # @return [Array<Google::Apis::AdexchangebuyerV1_4::Creative::ServingRestriction::DisapprovalReason>]
+          # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::Creative::ServingRestriction::DisapprovalReason>]
           attr_accessor :disapproval_reasons
         
           # Why the creative is ineligible to serve in this context (e.g., it has been
@@ -997,7 +997,7 @@ module Google
           
           # 
           class Context
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Only set when contextType=AUCTION_TYPE. Represents the auction types this
             # restriction applies to.
@@ -1037,7 +1037,7 @@ module Google
           
           # 
           class DisapprovalReason
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Additional details about the reason for disapproval.
             # Corresponds to the JSON property `details`
@@ -1066,11 +1066,11 @@ module Google
       # accounts that the user has access to. Each entry in the feed corresponds to a
       # single creative.
       class CreativesList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of creatives.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::Creative>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::Creative>]
         attr_accessor :items
       
         # Resource type.
@@ -1098,13 +1098,13 @@ module Google
       
       # 
       class DealServingMetadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Tracks which parties (if any) have paused a deal. The deal is considered
         # paused if has_buyer_paused || has_seller_paused. Each of the has_buyer_paused
         # or the has_seller_paused bits can be set independently.
         # Corresponds to the JSON property `dealPauseStatus`
-        # @return [Google::Apis::AdexchangebuyerV1_4::DealServingMetadataDealPauseStatus]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::DealServingMetadataDealPauseStatus]
         attr_accessor :deal_pause_status
       
         def initialize(**args)
@@ -1121,7 +1121,7 @@ module Google
       # paused if has_buyer_paused || has_seller_paused. Each of the has_buyer_paused
       # or the has_seller_paused bits can be set independently.
       class DealServingMetadataDealPauseStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If the deal is paused, records which party paused the deal first.
         # Corresponds to the JSON property `firstPausedBy`
@@ -1154,7 +1154,7 @@ module Google
       
       # 
       class DealTerms
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Visibilty of the URL in bid requests.
         # Corresponds to the JSON property `brandingType`
@@ -1169,7 +1169,7 @@ module Google
         # Non-binding estimate of the estimated gross spend for this deal Can be set by
         # buyer or seller.
         # Corresponds to the JSON property `estimatedGrossSpend`
-        # @return [Google::Apis::AdexchangebuyerV1_4::Price]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::Price]
         attr_accessor :estimated_gross_spend
       
         # Non-binding estimate of the impressions served per day Can be set by buyer or
@@ -1180,17 +1180,17 @@ module Google
       
         # The terms for guaranteed fixed price deals.
         # Corresponds to the JSON property `guaranteedFixedPriceTerms`
-        # @return [Google::Apis::AdexchangebuyerV1_4::DealTermsGuaranteedFixedPriceTerms]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::DealTermsGuaranteedFixedPriceTerms]
         attr_accessor :guaranteed_fixed_price_terms
       
         # The terms for non-guaranteed auction deals.
         # Corresponds to the JSON property `nonGuaranteedAuctionTerms`
-        # @return [Google::Apis::AdexchangebuyerV1_4::DealTermsNonGuaranteedAuctionTerms]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::DealTermsNonGuaranteedAuctionTerms]
         attr_accessor :non_guaranteed_auction_terms
       
         # The terms for non-guaranteed fixed price deals.
         # Corresponds to the JSON property `nonGuaranteedFixedPriceTerms`
-        # @return [Google::Apis::AdexchangebuyerV1_4::DealTermsNonGuaranteedFixedPriceTerms]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::DealTermsNonGuaranteedFixedPriceTerms]
         attr_accessor :non_guaranteed_fixed_price_terms
       
         # For deals with Cost Per Day billing, defines the timezone used to mark the
@@ -1218,17 +1218,17 @@ module Google
       
       # 
       class DealTermsGuaranteedFixedPriceTerms
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # External billing info for this Deal. This field is relevant when external
         # billing info such as price has a different currency code than DFP/AdX.
         # Corresponds to the JSON property `billingInfo`
-        # @return [Google::Apis::AdexchangebuyerV1_4::DealTermsGuaranteedFixedPriceTermsBillingInfo]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::DealTermsGuaranteedFixedPriceTermsBillingInfo]
         attr_accessor :billing_info
       
         # Fixed price for the specified buyer.
         # Corresponds to the JSON property `fixedPrices`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::PricePerBuyer>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::PricePerBuyer>]
         attr_accessor :fixed_prices
       
         # Guaranteed impressions as a percentage. This is the percentage of guaranteed
@@ -1257,7 +1257,7 @@ module Google
       
       # 
       class DealTermsGuaranteedFixedPriceTermsBillingInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The timestamp (in ms since epoch) when the original reservation price for the
         # deal was first converted to DFP currency. This is used to convert the
@@ -1282,7 +1282,7 @@ module Google
         # The original reservation price for the deal, if the currency code is different
         # from the one used in negotiation.
         # Corresponds to the JSON property `price`
-        # @return [Google::Apis::AdexchangebuyerV1_4::Price]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::Price]
         attr_accessor :price
       
         def initialize(**args)
@@ -1300,7 +1300,7 @@ module Google
       
       # 
       class DealTermsNonGuaranteedAuctionTerms
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # True if open auction buyers are allowed to compete with invited buyers in this
         # private auction (buyer-readonly).
@@ -1311,7 +1311,7 @@ module Google
       
         # Reserve price for the specified buyer.
         # Corresponds to the JSON property `reservePricePerBuyers`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::PricePerBuyer>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::PricePerBuyer>]
         attr_accessor :reserve_price_per_buyers
       
         def initialize(**args)
@@ -1327,11 +1327,11 @@ module Google
       
       # 
       class DealTermsNonGuaranteedFixedPriceTerms
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Fixed price for the specified buyer.
         # Corresponds to the JSON property `fixedPrices`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::PricePerBuyer>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::PricePerBuyer>]
         attr_accessor :fixed_prices
       
         def initialize(**args)
@@ -1346,7 +1346,7 @@ module Google
       
       # 
       class DeleteOrderDealsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of deals to delete for a given proposal
         # Corresponds to the JSON property `dealIds`
@@ -1377,11 +1377,11 @@ module Google
       
       # 
       class DeleteOrderDealsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of deals deleted (in the same proposal as passed in the request)
         # Corresponds to the JSON property `deals`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::MarketplaceDeal>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::MarketplaceDeal>]
         attr_accessor :deals
       
         # The updated revision number for the proposal.
@@ -1402,7 +1402,7 @@ module Google
       
       # 
       class DeliveryControl
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `creativeBlockingLevel`
@@ -1416,7 +1416,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `frequencyCaps`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::DeliveryControlFrequencyCap>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::DeliveryControlFrequencyCap>]
         attr_accessor :frequency_caps
       
         def initialize(**args)
@@ -1433,7 +1433,7 @@ module Google
       
       # 
       class DeliveryControlFrequencyCap
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `maxImpressions`
@@ -1466,7 +1466,7 @@ module Google
       # COUNTRY', [`dimension_value: `id: 1, name: 'US'``, `dimension_value: `id: 2,
       # name: 'UK'``]`
       class Dimension
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `dimensionType`
@@ -1475,7 +1475,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `dimensionValues`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::DimensionDimensionValue>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::DimensionDimensionValue>]
         attr_accessor :dimension_values
       
         def initialize(**args)
@@ -1491,7 +1491,7 @@ module Google
       
       # Value of the dimension.
       class DimensionDimensionValue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Id of the dimension.
         # Corresponds to the JSON property `id`
@@ -1525,7 +1525,7 @@ module Google
       
       # 
       class EditAllOrderDealsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of deals to edit. Service may perform 3 different operations based on
         # comparison of deals in this list vs deals already persisted in database: 1.
@@ -1539,7 +1539,7 @@ module Google
         # will delete that deal from the proposal. Validation will follow
         # DeleteOrderDealsRequest.
         # Corresponds to the JSON property `deals`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::MarketplaceDeal>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::MarketplaceDeal>]
         attr_accessor :deals
       
         # Represents a proposal in the marketplace. A proposal is the unit of
@@ -1550,7 +1550,7 @@ module Google
         # field. (updatable) - The field is updatable at all times by either buyer or
         # the seller.
         # Corresponds to the JSON property `proposal`
-        # @return [Google::Apis::AdexchangebuyerV1_4::Proposal]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::Proposal]
         attr_accessor :proposal
       
         # The last known revision number for the proposal.
@@ -1578,11 +1578,11 @@ module Google
       
       # 
       class EditAllOrderDealsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of all deals in the proposal after edit.
         # Corresponds to the JSON property `deals`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::MarketplaceDeal>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::MarketplaceDeal>]
         attr_accessor :deals
       
         # The latest revision number after the update has been applied.
@@ -1603,11 +1603,11 @@ module Google
       
       # 
       class GetOffersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The returned list of products.
         # Corresponds to the JSON property `products`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::Product>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::Product>]
         attr_accessor :products
       
         def initialize(**args)
@@ -1622,11 +1622,11 @@ module Google
       
       # 
       class GetOrderDealsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of deals for the proposal
         # Corresponds to the JSON property `deals`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::MarketplaceDeal>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::MarketplaceDeal>]
         attr_accessor :deals
       
         def initialize(**args)
@@ -1641,11 +1641,11 @@ module Google
       
       # 
       class GetOrderNotesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of matching notes.
         # Corresponds to the JSON property `notes`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::MarketplaceNote>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::MarketplaceNote>]
         attr_accessor :notes
       
         def initialize(**args)
@@ -1660,11 +1660,11 @@ module Google
       
       # 
       class GetOrdersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of matching proposals.
         # Corresponds to the JSON property `proposals`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::Proposal>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::Proposal>]
         attr_accessor :proposals
       
         def initialize(**args)
@@ -1679,11 +1679,11 @@ module Google
       
       # 
       class GetPublisherProfilesByAccountIdResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Profiles for the requested publisher
         # Corresponds to the JSON property `profiles`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::PublisherProfileApiProto>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::PublisherProfileApiProto>]
         attr_accessor :profiles
       
         def initialize(**args)
@@ -1699,11 +1699,11 @@ module Google
       # A proposal can contain multiple deals. A deal contains the terms and targeting
       # information that is used for serving.
       class MarketplaceDeal
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Buyer private data (hidden from seller).
         # Corresponds to the JSON property `buyerPrivateData`
-        # @return [Google::Apis::AdexchangebuyerV1_4::PrivateData]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::PrivateData]
         attr_accessor :buyer_private_data
       
         # The time (ms since epoch) of the deal creation. (readonly)
@@ -1729,7 +1729,7 @@ module Google
         # Metadata about the serving status of this deal (readonly, writes via custom
         # actions)
         # Corresponds to the JSON property `dealServingMetadata`
-        # @return [Google::Apis::AdexchangebuyerV1_4::DealServingMetadata]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::DealServingMetadata]
         attr_accessor :deal_serving_metadata
       
         # The set of fields around delivery control that are interesting for a buyer to
@@ -1737,7 +1737,7 @@ module Google
         # assigned an id of 100 since some day we would want to model this as a protobuf
         # extension.
         # Corresponds to the JSON property `deliveryControl`
-        # @return [Google::Apis::AdexchangebuyerV1_4::DeliveryControl]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::DeliveryControl]
         attr_accessor :delivery_control
       
         # The external deal id assigned to this deal once the deal is finalized. This is
@@ -1804,13 +1804,13 @@ module Google
       
         # Optional Seller contact information for the deal (buyer-readonly)
         # Corresponds to the JSON property `sellerContacts`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::ContactInformation>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::ContactInformation>]
         attr_accessor :seller_contacts
       
         # The shared targeting visible to buyers and sellers. Each shared targeting
         # entity is AND'd together. (updatable)
         # Corresponds to the JSON property `sharedTargetings`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::SharedTargeting>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::SharedTargeting>]
         attr_accessor :shared_targetings
       
         # The syndication product associated with the deal. (readonly, except on create)
@@ -1820,7 +1820,7 @@ module Google
       
         # The negotiable terms of the deal. (updatable)
         # Corresponds to the JSON property `terms`
-        # @return [Google::Apis::AdexchangebuyerV1_4::DealTerms]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::DealTerms]
         attr_accessor :terms
       
         # 
@@ -1862,18 +1862,18 @@ module Google
       
       # 
       class MarketplaceDealParty
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The buyer/seller associated with the deal. One of buyer/seller is specified
         # for a deal-party.
         # Corresponds to the JSON property `buyer`
-        # @return [Google::Apis::AdexchangebuyerV1_4::Buyer]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::Buyer]
         attr_accessor :buyer
       
         # The buyer/seller associated with the deal. One of buyer/seller is specified
         # for a deal party.
         # Corresponds to the JSON property `seller`
-        # @return [Google::Apis::AdexchangebuyerV1_4::Seller]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::Seller]
         attr_accessor :seller
       
         def initialize(**args)
@@ -1889,7 +1889,7 @@ module Google
       
       # 
       class MarketplaceLabel
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The accountId of the party that created the label.
         # Corresponds to the JSON property `accountId`
@@ -1903,7 +1903,7 @@ module Google
       
         # Information about the party that created the label.
         # Corresponds to the JSON property `deprecatedMarketplaceDealParty`
-        # @return [Google::Apis::AdexchangebuyerV1_4::MarketplaceDealParty]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::MarketplaceDealParty]
         attr_accessor :deprecated_marketplace_deal_party
       
         # The label to use.
@@ -1927,7 +1927,7 @@ module Google
       # A proposal is associated with a bunch of notes which may optionally be
       # associated with a deal and/or revision number.
       class MarketplaceNote
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The role of the person (buyer/seller) creating the note. (readonly)
         # Corresponds to the JSON property `creatorRole`
@@ -1990,7 +1990,7 @@ module Google
       
       # The configuration data for an Ad Exchange performance report list.
       class PerformanceReport
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of bid responses with an ad.
         # Corresponds to the JSON property `bidRate`
@@ -2143,7 +2143,7 @@ module Google
       
       # The configuration data for an Ad Exchange performance report list.
       class PerformanceReportList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Resource type.
         # Corresponds to the JSON property `kind`
@@ -2152,7 +2152,7 @@ module Google
       
         # A list of performance reports relevant for the account.
         # Corresponds to the JSON property `performanceReport`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::PerformanceReport>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::PerformanceReport>]
         attr_accessor :performance_report
       
         def initialize(**args)
@@ -2168,7 +2168,7 @@ module Google
       
       # 
       class PretargetingConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The id for billing purposes, provided for reference. Leave this field blank
         # for insert requests; the id will be generated automatically.
@@ -2196,7 +2196,7 @@ module Google
         # Requests which allow one of these (width, height) pairs will match. All pairs
         # must be supported ad dimensions.
         # Corresponds to the JSON property `dimensions`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::PretargetingConfig::Dimension>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::PretargetingConfig::Dimension>]
         attr_accessor :dimensions
       
         # Requests with any of these content labels will not match. Values are from
@@ -2212,7 +2212,7 @@ module Google
       
         # Requests containing any of these placements will not match.
         # Corresponds to the JSON property `excludedPlacements`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::PretargetingConfig::ExcludedPlacement>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::PretargetingConfig::ExcludedPlacement>]
         attr_accessor :excluded_placements
       
         # Requests containing any of these users list ids will not match.
@@ -2267,7 +2267,7 @@ module Google
       
         # Requests containing any of these placements will match.
         # Corresponds to the JSON property `placements`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::PretargetingConfig::Placement>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::PretargetingConfig::Placement>]
         attr_accessor :placements
       
         # Requests matching any of these platforms will match. Possible values are
@@ -2302,7 +2302,7 @@ module Google
       
         # Video requests satisfying any of these player size constraints will match.
         # Corresponds to the JSON property `videoPlayerSizes`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::PretargetingConfig::VideoPlayerSize>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::PretargetingConfig::VideoPlayerSize>]
         attr_accessor :video_player_sizes
       
         def initialize(**args)
@@ -2339,7 +2339,7 @@ module Google
         
         # 
         class Dimension
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Height in pixels.
           # Corresponds to the JSON property `height`
@@ -2364,7 +2364,7 @@ module Google
         
         # 
         class ExcludedPlacement
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The value of the placement. Interpretation depends on the placement type, e.g.
           # URL for a site placement, channel name for a channel placement, app id for a
@@ -2391,7 +2391,7 @@ module Google
         
         # 
         class Placement
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The value of the placement. Interpretation depends on the placement type, e.g.
           # URL for a site placement, channel name for a channel placement, app id for a
@@ -2418,7 +2418,7 @@ module Google
         
         # 
         class VideoPlayerSize
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The type of aspect ratio. Leave this field blank to match all aspect ratios.
           # Corresponds to the JSON property `aspectRatio`
@@ -2452,11 +2452,11 @@ module Google
       
       # 
       class PretargetingConfigList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of pretargeting configs
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::PretargetingConfig>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::PretargetingConfig>]
         attr_accessor :items
       
         # Resource type.
@@ -2477,7 +2477,7 @@ module Google
       
       # 
       class Price
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The price value in micros.
         # Corresponds to the JSON property `amountMicros`
@@ -2513,7 +2513,7 @@ module Google
       # next a rule with the buyer but an empty advertiser list, and otherwise look
       # for a matching rule where no buyer is set.
       class PricePerBuyer
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Optional access type for this buyer.
         # Corresponds to the JSON property `auctionTier`
@@ -2523,12 +2523,12 @@ module Google
         # The buyer who will pay this price. If unset, all buyers can pay this price (if
         # the advertisers match, and there's no more specific rule matching the buyer).
         # Corresponds to the JSON property `buyer`
-        # @return [Google::Apis::AdexchangebuyerV1_4::Buyer]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::Buyer]
         attr_accessor :buyer
       
         # The specified price
         # Corresponds to the JSON property `price`
-        # @return [Google::Apis::AdexchangebuyerV1_4::Price]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::Price]
         attr_accessor :price
       
         def initialize(**args)
@@ -2545,7 +2545,7 @@ module Google
       
       # 
       class PrivateData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `referenceId`
@@ -2577,7 +2577,7 @@ module Google
       # field. (updatable) - The field is updatable at all times by either buyer or
       # the seller.
       class Product
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Creation time in ms. since epoch (readonly)
         # Corresponds to the JSON property `creationTimeMs`
@@ -2586,7 +2586,7 @@ module Google
       
         # Optional contact information for the creator of this product. (buyer-readonly)
         # Corresponds to the JSON property `creatorContacts`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::ContactInformation>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::ContactInformation>]
         attr_accessor :creator_contacts
       
         # The set of fields around delivery control that are interesting for a buyer to
@@ -2594,7 +2594,7 @@ module Google
         # assigned an id of 100 since some day we would want to model this as a protobuf
         # extension.
         # Corresponds to the JSON property `deliveryControl`
-        # @return [Google::Apis::AdexchangebuyerV1_4::DeliveryControl]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::DeliveryControl]
         attr_accessor :delivery_control
       
         # The proposed end time for the deal (ms since epoch) (buyer-readonly)
@@ -2630,7 +2630,7 @@ module Google
       
         # Optional List of labels for the product (optional, buyer-readonly).
         # Corresponds to the JSON property `labels`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::MarketplaceLabel>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::MarketplaceLabel>]
         attr_accessor :labels
       
         # Time of last update in ms. since epoch (readonly)
@@ -2668,7 +2668,7 @@ module Google
       
         # This message carries publisher provided forecasting information.
         # Corresponds to the JSON property `publisherProvidedForecast`
-        # @return [Google::Apis::AdexchangebuyerV1_4::PublisherProvidedForecast]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::PublisherProvidedForecast]
         attr_accessor :publisher_provided_forecast
       
         # The revision number of the product. (readonly)
@@ -2679,14 +2679,14 @@ module Google
         # Information about the seller that created this product (readonly, except on
         # create)
         # Corresponds to the JSON property `seller`
-        # @return [Google::Apis::AdexchangebuyerV1_4::Seller]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::Seller]
         attr_accessor :seller
       
         # Targeting that is shared between the buyer and the seller. Each targeting
         # criteria has a specified key and for each key there is a list of inclusion
         # value or exclusion values. (buyer-readonly)
         # Corresponds to the JSON property `sharedTargetings`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::SharedTargeting>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::SharedTargeting>]
         attr_accessor :shared_targetings
       
         # The state of the product. (buyer-readonly)
@@ -2701,7 +2701,7 @@ module Google
       
         # The negotiable terms of the deal (buyer-readonly)
         # Corresponds to the JSON property `terms`
-        # @return [Google::Apis::AdexchangebuyerV1_4::DealTerms]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::DealTerms]
         attr_accessor :terms
       
         # The web property code for the seller. This field is meant to be copied over as
@@ -2750,26 +2750,26 @@ module Google
       # field. (updatable) - The field is updatable at all times by either buyer or
       # the seller.
       class Proposal
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Reference to the buyer that will get billed for this proposal. (readonly)
         # Corresponds to the JSON property `billedBuyer`
-        # @return [Google::Apis::AdexchangebuyerV1_4::Buyer]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::Buyer]
         attr_accessor :billed_buyer
       
         # Reference to the buyer on the proposal. (readonly, except on create)
         # Corresponds to the JSON property `buyer`
-        # @return [Google::Apis::AdexchangebuyerV1_4::Buyer]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::Buyer]
         attr_accessor :buyer
       
         # Optional contact information fort the buyer. (seller-readonly)
         # Corresponds to the JSON property `buyerContacts`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::ContactInformation>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::ContactInformation>]
         attr_accessor :buyer_contacts
       
         # Private data for buyer. (hidden from seller).
         # Corresponds to the JSON property `buyerPrivateData`
-        # @return [Google::Apis::AdexchangebuyerV1_4::PrivateData]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::PrivateData]
         attr_accessor :buyer_private_data
       
         # When an proposal is in an accepted state, indicates whether the buyer has
@@ -2814,7 +2814,7 @@ module Google
       
         # List of labels associated with the proposal. (readonly)
         # Corresponds to the JSON property `labels`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::MarketplaceLabel>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::MarketplaceLabel>]
         attr_accessor :labels
       
         # The role of the last user that either updated the proposal or left a comment. (
@@ -2865,12 +2865,12 @@ module Google
       
         # Reference to the seller on the proposal. (readonly, except on create)
         # Corresponds to the JSON property `seller`
-        # @return [Google::Apis::AdexchangebuyerV1_4::Seller]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::Seller]
         attr_accessor :seller
       
         # Optional contact information for the seller (buyer-readonly).
         # Corresponds to the JSON property `sellerContacts`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::ContactInformation>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::ContactInformation>]
         attr_accessor :seller_contacts
       
         def initialize(**args)
@@ -2906,7 +2906,7 @@ module Google
       
       # 
       class PublisherProfileApiProto
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The account id of the seller.
         # Corresponds to the JSON property `accountId`
@@ -3001,7 +3001,7 @@ module Google
       
         # This message carries publisher provided forecasting information.
         # Corresponds to the JSON property `publisherProvidedForecast`
-        # @return [Google::Apis::AdexchangebuyerV1_4::PublisherProvidedForecast]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::PublisherProvidedForecast]
         attr_accessor :publisher_provided_forecast
       
         # Link to publisher rate card
@@ -3016,7 +3016,7 @@ module Google
       
         # Seller of the publisher profile.
         # Corresponds to the JSON property `seller`
-        # @return [Google::Apis::AdexchangebuyerV1_4::Seller]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::Seller]
         attr_accessor :seller
       
         # State of the publisher profile.
@@ -3063,11 +3063,11 @@ module Google
       
       # This message carries publisher provided forecasting information.
       class PublisherProvidedForecast
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Publisher provided dimensions. E.g. geo, sizes etc...
         # Corresponds to the JSON property `dimensions`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::Dimension>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::Dimension>]
         attr_accessor :dimensions
       
         # Publisher provided weekly impressions.
@@ -3094,7 +3094,7 @@ module Google
       
       # 
       class Seller
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The unique id for the seller. The seller fills in this field. The seller
         # account id is then available to buyer in the product.
@@ -3120,17 +3120,17 @@ module Google
       
       # 
       class SharedTargeting
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of values to exclude from targeting. Each value is AND'd together.
         # Corresponds to the JSON property `exclusions`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::TargetingValue>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::TargetingValue>]
         attr_accessor :exclusions
       
         # The list of value to include as part of the targeting. Each value is OR'd
         # together.
         # Corresponds to the JSON property `inclusions`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::TargetingValue>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::TargetingValue>]
         attr_accessor :inclusions
       
         # The key representing the shared targeting criterion.
@@ -3152,17 +3152,17 @@ module Google
       
       # 
       class TargetingValue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The creative size value to exclude/include.
         # Corresponds to the JSON property `creativeSizeValue`
-        # @return [Google::Apis::AdexchangebuyerV1_4::TargetingValueCreativeSize]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::TargetingValueCreativeSize]
         attr_accessor :creative_size_value
       
         # The daypart targeting to include / exclude. Filled in when the key is
         # GOOG_DAYPART_TARGETING.
         # Corresponds to the JSON property `dayPartTargetingValue`
-        # @return [Google::Apis::AdexchangebuyerV1_4::TargetingValueDayPartTargeting]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::TargetingValueDayPartTargeting]
         attr_accessor :day_part_targeting_value
       
         # The long value to exclude/include.
@@ -3190,11 +3190,11 @@ module Google
       
       # 
       class TargetingValueCreativeSize
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # For video size type, the list of companion sizes.
         # Corresponds to the JSON property `companionSizes`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::TargetingValueSize>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::TargetingValueSize>]
         attr_accessor :companion_sizes
       
         # The Creative size type.
@@ -3204,7 +3204,7 @@ module Google
       
         # For regular or video creative size type, specifies the size of the creative.
         # Corresponds to the JSON property `size`
-        # @return [Google::Apis::AdexchangebuyerV1_4::TargetingValueSize]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::TargetingValueSize]
         attr_accessor :size
       
         # The skippable ad type for video size.
@@ -3227,11 +3227,11 @@ module Google
       
       # 
       class TargetingValueDayPartTargeting
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `dayParts`
-        # @return [Array<Google::Apis::AdexchangebuyerV1_4::TargetingValueDayPartTargetingDayPart>]
+        # @return [Array<GoogleAPI::Apis::AdexchangebuyerV1_4::TargetingValueDayPartTargetingDayPart>]
         attr_accessor :day_parts
       
         # 
@@ -3252,7 +3252,7 @@ module Google
       
       # 
       class TargetingValueDayPartTargetingDayPart
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `dayOfWeek`
@@ -3295,7 +3295,7 @@ module Google
       
       # 
       class TargetingValueSize
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The height of the creative.
         # Corresponds to the JSON property `height`
@@ -3320,7 +3320,7 @@ module Google
       
       # 
       class UpdatePrivateAuctionProposalRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The externalDealId of the deal to be updated.
         # Corresponds to the JSON property `externalDealId`
@@ -3330,7 +3330,7 @@ module Google
         # A proposal is associated with a bunch of notes which may optionally be
         # associated with a deal and/or revision number.
         # Corresponds to the JSON property `note`
-        # @return [Google::Apis::AdexchangebuyerV1_4::MarketplaceNote]
+        # @return [GoogleAPI::Apis::AdexchangebuyerV1_4::MarketplaceNote]
         attr_accessor :note
       
         # The current revision number of the proposal to be updated.

@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AdminReportsV1
       
       # JSON template for a collection of activites.
       class Activities
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -33,7 +33,7 @@ module Google
       
         # Each record in read response.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdminReportsV1::Activity>]
+        # @return [Array<GoogleAPI::Apis::AdminReportsV1::Activity>]
         attr_accessor :items
       
         # Kind of list response this is.
@@ -61,11 +61,11 @@ module Google
       
       # JSON template for the activity resource.
       class Activity
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # User doing the action.
         # Corresponds to the JSON property `actor`
-        # @return [Google::Apis::AdminReportsV1::Activity::Actor]
+        # @return [GoogleAPI::Apis::AdminReportsV1::Activity::Actor]
         attr_accessor :actor
       
         # ETag of the entry.
@@ -75,12 +75,12 @@ module Google
       
         # Activity events.
         # Corresponds to the JSON property `events`
-        # @return [Array<Google::Apis::AdminReportsV1::Activity::Event>]
+        # @return [Array<GoogleAPI::Apis::AdminReportsV1::Activity::Event>]
         attr_accessor :events
       
         # Unique identifier for each activity record.
         # Corresponds to the JSON property `id`
-        # @return [Google::Apis::AdminReportsV1::Activity::Id]
+        # @return [GoogleAPI::Apis::AdminReportsV1::Activity::Id]
         attr_accessor :id
       
         # IP Address of the user doing the action.
@@ -115,7 +115,7 @@ module Google
         
         # User doing the action.
         class Actor
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # User or OAuth 2LO request.
           # Corresponds to the JSON property `callerType`
@@ -152,7 +152,7 @@ module Google
         
         # 
         class Event
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Name of event.
           # Corresponds to the JSON property `name`
@@ -161,7 +161,7 @@ module Google
         
           # Parameter value pairs for various applications.
           # Corresponds to the JSON property `parameters`
-          # @return [Array<Google::Apis::AdminReportsV1::Activity::Event::Parameter>]
+          # @return [Array<GoogleAPI::Apis::AdminReportsV1::Activity::Event::Parameter>]
           attr_accessor :parameters
         
           # Type of event.
@@ -182,7 +182,7 @@ module Google
           
           # 
           class Parameter
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Boolean value of the parameter.
             # Corresponds to the JSON property `boolValue`
@@ -233,7 +233,7 @@ module Google
         
         # Unique identifier for each activity record.
         class Id
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Application name to which the event belongs.
           # Corresponds to the JSON property `applicationName`
@@ -271,7 +271,7 @@ module Google
       
       # An notification channel used to watch for resource changes.
       class Channel
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The address where notifications are delivered for this channel.
         # Corresponds to the JSON property `address`
@@ -349,7 +349,7 @@ module Google
       
       # JSON template for a usage report.
       class UsageReport
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The date to which the record belongs.
         # Corresponds to the JSON property `date`
@@ -358,7 +358,7 @@ module Google
       
         # Information about the type of the item.
         # Corresponds to the JSON property `entity`
-        # @return [Google::Apis::AdminReportsV1::UsageReport::Entity]
+        # @return [GoogleAPI::Apis::AdminReportsV1::UsageReport::Entity]
         attr_accessor :entity
       
         # ETag of the resource.
@@ -373,7 +373,7 @@ module Google
       
         # Parameter value pairs for various applications.
         # Corresponds to the JSON property `parameters`
-        # @return [Array<Google::Apis::AdminReportsV1::UsageReport::Parameter>]
+        # @return [Array<GoogleAPI::Apis::AdminReportsV1::UsageReport::Parameter>]
         attr_accessor :parameters
       
         def initialize(**args)
@@ -391,7 +391,7 @@ module Google
         
         # Information about the type of the item.
         class Entity
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Obfuscated customer id for the record.
           # Corresponds to the JSON property `customerId`
@@ -428,7 +428,7 @@ module Google
         
         # 
         class Parameter
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Boolean value of the parameter.
           # Corresponds to the JSON property `boolValue`
@@ -479,7 +479,7 @@ module Google
       
       # JSON template for a collection of usage reports.
       class UsageReports
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -498,12 +498,12 @@ module Google
       
         # Various application parameter records.
         # Corresponds to the JSON property `usageReports`
-        # @return [Array<Google::Apis::AdminReportsV1::UsageReport>]
+        # @return [Array<GoogleAPI::Apis::AdminReportsV1::UsageReport>]
         attr_accessor :usage_reports
       
         # Warnings if any.
         # Corresponds to the JSON property `warnings`
-        # @return [Array<Google::Apis::AdminReportsV1::UsageReports::Warning>]
+        # @return [Array<GoogleAPI::Apis::AdminReportsV1::UsageReports::Warning>]
         attr_accessor :warnings
       
         def initialize(**args)
@@ -521,7 +521,7 @@ module Google
         
         # 
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Machine readable code / warning type.
           # Corresponds to the JSON property `code`
@@ -530,7 +530,7 @@ module Google
         
           # Key-Value pairs to give detailed information on the warning.
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::AdminReportsV1::UsageReports::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::AdminReportsV1::UsageReports::Warning::Datum>]
           attr_accessor :data
         
           # Human readable message for the warning.
@@ -551,7 +551,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Key associated with a key-value pair to give detailed information on the
             # warning.

@@ -18,70 +18,70 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CloudlatencytestV2
       
       class AggregatedStats
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AggregatedStatsReply
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DoubleValue
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class IntValue
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Stats
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class StatsReply
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class StringValue
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AggregatedStats
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :stats, as: 'stats', class: Google::Apis::CloudlatencytestV2::Stats, decorator: Google::Apis::CloudlatencytestV2::Stats::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :stats, as: 'stats', class: GoogleAPI::Apis::CloudlatencytestV2::Stats, decorator: GoogleAPI::Apis::CloudlatencytestV2::Stats::Representation
       
         end
       end
       
       class AggregatedStatsReply
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :test_value, as: 'testValue'
         end
       end
       
       class DoubleValue
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :label, as: 'label'
           property :value, as: 'value'
         end
@@ -89,7 +89,7 @@ module Google
       
       class IntValue
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :label, as: 'label'
           property :value, as: 'value'
         end
@@ -97,12 +97,12 @@ module Google
       
       class Stats
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :double_values, as: 'doubleValues', class: Google::Apis::CloudlatencytestV2::DoubleValue, decorator: Google::Apis::CloudlatencytestV2::DoubleValue::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :double_values, as: 'doubleValues', class: GoogleAPI::Apis::CloudlatencytestV2::DoubleValue, decorator: GoogleAPI::Apis::CloudlatencytestV2::DoubleValue::Representation
       
-          collection :int_values, as: 'intValues', class: Google::Apis::CloudlatencytestV2::IntValue, decorator: Google::Apis::CloudlatencytestV2::IntValue::Representation
+          collection :int_values, as: 'intValues', class: GoogleAPI::Apis::CloudlatencytestV2::IntValue, decorator: GoogleAPI::Apis::CloudlatencytestV2::IntValue::Representation
       
-          collection :string_values, as: 'stringValues', class: Google::Apis::CloudlatencytestV2::StringValue, decorator: Google::Apis::CloudlatencytestV2::StringValue::Representation
+          collection :string_values, as: 'stringValues', class: GoogleAPI::Apis::CloudlatencytestV2::StringValue, decorator: GoogleAPI::Apis::CloudlatencytestV2::StringValue::Representation
       
           property :time, as: 'time'
         end
@@ -110,14 +110,14 @@ module Google
       
       class StatsReply
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :test_value, as: 'testValue'
         end
       end
       
       class StringValue
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :label, as: 'label'
           property :value, as: 'value'
         end

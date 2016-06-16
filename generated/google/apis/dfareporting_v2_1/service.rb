@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module DfareportingV2_1
       # DCM/DFA Reporting And Trafficking API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/dfareporting_v2_1'
       #
-      #    Dfareporting = Google::Apis::DfareportingV2_1 # Alias the module
+      #    Dfareporting = GoogleAPI::Apis::DfareportingV2_1 # Alias the module
       #    service = Dfareporting::DfareportingService.new
       #
       # @see https://developers.google.com/doubleclick-advertisers/reporting/
-      class DfareportingService < Google::Apis::Core::BaseService
+      class DfareportingService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -66,22 +66,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::AccountActiveAdSummary] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::AccountActiveAdSummary] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::AccountActiveAdSummary]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::AccountActiveAdSummary]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_account_active_ad_summary(profile_id, summary_account_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/accountActiveAdSummaries/{summaryAccountId}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::AccountActiveAdSummary::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::AccountActiveAdSummary
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::AccountActiveAdSummary::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::AccountActiveAdSummary
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['summaryAccountId'] = summary_account_id unless summary_account_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -104,22 +104,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::AccountPermissionGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::AccountPermissionGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::AccountPermissionGroup]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::AccountPermissionGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_account_permission_group(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/accountPermissionGroups/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::AccountPermissionGroup::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::AccountPermissionGroup
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::AccountPermissionGroup::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::AccountPermissionGroup
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -140,22 +140,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListAccountPermissionGroupsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListAccountPermissionGroupsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListAccountPermissionGroupsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListAccountPermissionGroupsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_account_permission_groups(profile_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/accountPermissionGroups', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListAccountPermissionGroupsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListAccountPermissionGroupsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListAccountPermissionGroupsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListAccountPermissionGroupsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -177,22 +177,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::AccountPermission] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::AccountPermission] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::AccountPermission]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::AccountPermission]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_account_permission(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/accountPermissions/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::AccountPermission::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::AccountPermission
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::AccountPermission::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::AccountPermission
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -213,22 +213,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListAccountPermissionsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListAccountPermissionsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListAccountPermissionsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListAccountPermissionsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_account_permissions(profile_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/accountPermissions', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListAccountPermissionsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListAccountPermissionsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListAccountPermissionsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListAccountPermissionsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -250,22 +250,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::AccountUserProfile] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::AccountUserProfile]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_account_user_profile(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/accountUserProfiles/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::AccountUserProfile::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::AccountUserProfile
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -277,7 +277,7 @@ module Google
         # Inserts a new account user profile.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::AccountUserProfile] account_user_profile_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile] account_user_profile_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -287,24 +287,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::AccountUserProfile] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::AccountUserProfile]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_account_user_profile(profile_id, account_user_profile_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/accountUserProfiles', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::AccountUserProfile::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile::Representation
           command.request_object = account_user_profile_object
-          command.response_representation = Google::Apis::DfareportingV2_1::AccountUserProfile::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::AccountUserProfile
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -348,22 +348,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListAccountUserProfilesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListAccountUserProfilesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListAccountUserProfilesResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListAccountUserProfilesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_account_user_profiles(profile_id, active: nil, ids: nil, max_results: nil, page_token: nil, search_string: nil, sort_field: nil, sort_order: nil, subaccount_id: nil, user_role_id: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/accountUserProfiles', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListAccountUserProfilesResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListAccountUserProfilesResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListAccountUserProfilesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListAccountUserProfilesResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['active'] = active unless active.nil?
           command.query['ids'] = ids unless ids.nil?
@@ -385,7 +385,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   User profile ID.
-        # @param [Google::Apis::DfareportingV2_1::AccountUserProfile] account_user_profile_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile] account_user_profile_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -395,24 +395,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::AccountUserProfile] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::AccountUserProfile]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_account_user_profile(profile_id, id, account_user_profile_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/accountUserProfiles', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::AccountUserProfile::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile::Representation
           command.request_object = account_user_profile_object
-          command.response_representation = Google::Apis::DfareportingV2_1::AccountUserProfile::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::AccountUserProfile
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -424,7 +424,7 @@ module Google
         # Updates an existing account user profile.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::AccountUserProfile] account_user_profile_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile] account_user_profile_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -434,24 +434,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::AccountUserProfile] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::AccountUserProfile]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_account_user_profile(profile_id, account_user_profile_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/accountUserProfiles', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::AccountUserProfile::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile::Representation
           command.request_object = account_user_profile_object
-          command.response_representation = Google::Apis::DfareportingV2_1::AccountUserProfile::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::AccountUserProfile
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::AccountUserProfile
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -473,22 +473,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Account] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Account] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Account]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Account]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_account(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/accounts/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::Account::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Account
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Account::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Account
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -529,22 +529,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListAccountsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListAccountsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListAccountsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListAccountsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_accounts(profile_id, active: nil, ids: nil, max_results: nil, page_token: nil, search_string: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/accounts', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListAccountsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListAccountsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListAccountsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListAccountsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['active'] = active unless active.nil?
           command.query['ids'] = ids unless ids.nil?
@@ -564,7 +564,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Account ID.
-        # @param [Google::Apis::DfareportingV2_1::Account] account_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Account] account_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -574,24 +574,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Account] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Account] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Account]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Account]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_account(profile_id, id, account_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/accounts', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Account::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Account::Representation
           command.request_object = account_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Account::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Account
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Account::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Account
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -603,7 +603,7 @@ module Google
         # Updates an existing account.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::Account] account_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Account] account_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -613,24 +613,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Account] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Account] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Account]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Account]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_account(profile_id, account_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/accounts', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Account::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Account::Representation
           command.request_object = account_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Account::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Account
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Account::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Account
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -652,22 +652,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Ad] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Ad] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Ad]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Ad]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_ad(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/ads/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::Ad::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Ad
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Ad::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Ad
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -679,7 +679,7 @@ module Google
         # Inserts a new ad.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::Ad] ad_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Ad] ad_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -689,24 +689,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Ad] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Ad] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Ad]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Ad]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_ad(profile_id, ad_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/ads', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Ad::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Ad::Representation
           command.request_object = ad_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Ad::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Ad
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Ad::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Ad
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -785,22 +785,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListAdsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListAdsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListAdsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListAdsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_ads(profile_id, active: nil, advertiser_id: nil, archived: nil, audience_segment_ids: nil, campaign_ids: nil, compatibility: nil, creative_ids: nil, creative_optimization_configuration_ids: nil, creative_type: nil, dynamic_click_tracker: nil, ids: nil, landing_page_ids: nil, max_results: nil, overridden_event_tag_id: nil, page_token: nil, placement_ids: nil, remarketing_list_ids: nil, search_string: nil, size_ids: nil, sort_field: nil, sort_order: nil, ssl_compliant: nil, ssl_required: nil, type: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/ads', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListAdsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListAdsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListAdsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListAdsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['active'] = active unless active.nil?
           command.query['advertiserId'] = advertiser_id unless advertiser_id.nil?
@@ -837,7 +837,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Ad ID.
-        # @param [Google::Apis::DfareportingV2_1::Ad] ad_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Ad] ad_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -847,24 +847,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Ad] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Ad] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Ad]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Ad]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_ad(profile_id, id, ad_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/ads', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Ad::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Ad::Representation
           command.request_object = ad_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Ad::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Ad
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Ad::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Ad
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -876,7 +876,7 @@ module Google
         # Updates an existing ad.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::Ad] ad_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Ad] ad_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -886,24 +886,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Ad] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Ad] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Ad]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Ad]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_ad(profile_id, ad_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/ads', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Ad::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Ad::Representation
           command.request_object = ad_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Ad::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Ad
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Ad::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Ad
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -925,7 +925,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -934,9 +934,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_advertiser_group(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'userprofiles/{profileId}/advertiserGroups/{id}', options)
           command.params['profileId'] = profile_id unless profile_id.nil?
@@ -961,22 +961,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::AdvertiserGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::AdvertiserGroup]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_advertiser_group(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/advertiserGroups/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::AdvertiserGroup::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::AdvertiserGroup
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -988,7 +988,7 @@ module Google
         # Inserts a new advertiser group.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::AdvertiserGroup] advertiser_group_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup] advertiser_group_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -998,24 +998,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::AdvertiserGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::AdvertiserGroup]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_advertiser_group(profile_id, advertiser_group_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/advertiserGroups', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::AdvertiserGroup::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup::Representation
           command.request_object = advertiser_group_object
-          command.response_representation = Google::Apis::DfareportingV2_1::AdvertiserGroup::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::AdvertiserGroup
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -1053,22 +1053,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListAdvertiserGroupsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListAdvertiserGroupsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListAdvertiserGroupsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListAdvertiserGroupsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_advertiser_groups(profile_id, ids: nil, max_results: nil, page_token: nil, search_string: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/advertiserGroups', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListAdvertiserGroupsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListAdvertiserGroupsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListAdvertiserGroupsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListAdvertiserGroupsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['ids'] = ids unless ids.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -1087,7 +1087,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Advertiser group ID.
-        # @param [Google::Apis::DfareportingV2_1::AdvertiserGroup] advertiser_group_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup] advertiser_group_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1097,24 +1097,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::AdvertiserGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::AdvertiserGroup]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_advertiser_group(profile_id, id, advertiser_group_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/advertiserGroups', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::AdvertiserGroup::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup::Representation
           command.request_object = advertiser_group_object
-          command.response_representation = Google::Apis::DfareportingV2_1::AdvertiserGroup::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::AdvertiserGroup
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1126,7 +1126,7 @@ module Google
         # Updates an existing advertiser group.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::AdvertiserGroup] advertiser_group_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup] advertiser_group_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1136,24 +1136,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::AdvertiserGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::AdvertiserGroup]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_advertiser_group(profile_id, advertiser_group_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/advertiserGroups', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::AdvertiserGroup::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup::Representation
           command.request_object = advertiser_group_object
-          command.response_representation = Google::Apis::DfareportingV2_1::AdvertiserGroup::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::AdvertiserGroup
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::AdvertiserGroup
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -1175,22 +1175,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Advertiser] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Advertiser] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Advertiser]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Advertiser]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_advertiser(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/advertisers/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::Advertiser::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Advertiser
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Advertiser::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Advertiser
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1202,7 +1202,7 @@ module Google
         # Inserts a new advertiser.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::Advertiser] advertiser_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Advertiser] advertiser_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1212,24 +1212,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Advertiser] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Advertiser] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Advertiser]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Advertiser]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_advertiser(profile_id, advertiser_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/advertisers', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Advertiser::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Advertiser::Representation
           command.request_object = advertiser_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Advertiser::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Advertiser
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Advertiser::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Advertiser
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -1279,22 +1279,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListAdvertisersResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListAdvertisersResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListAdvertisersResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListAdvertisersResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_advertisers(profile_id, advertiser_group_ids: nil, floodlight_configuration_ids: nil, ids: nil, include_advertisers_without_groups_only: nil, max_results: nil, only_parent: nil, page_token: nil, search_string: nil, sort_field: nil, sort_order: nil, status: nil, subaccount_id: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/advertisers', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListAdvertisersResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListAdvertisersResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListAdvertisersResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListAdvertisersResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['advertiserGroupIds'] = advertiser_group_ids unless advertiser_group_ids.nil?
           command.query['floodlightConfigurationIds'] = floodlight_configuration_ids unless floodlight_configuration_ids.nil?
@@ -1319,7 +1319,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Advertiser ID.
-        # @param [Google::Apis::DfareportingV2_1::Advertiser] advertiser_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Advertiser] advertiser_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1329,24 +1329,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Advertiser] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Advertiser] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Advertiser]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Advertiser]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_advertiser(profile_id, id, advertiser_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/advertisers', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Advertiser::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Advertiser::Representation
           command.request_object = advertiser_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Advertiser::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Advertiser
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Advertiser::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Advertiser
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1358,7 +1358,7 @@ module Google
         # Updates an existing advertiser.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::Advertiser] advertiser_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Advertiser] advertiser_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1368,24 +1368,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Advertiser] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Advertiser] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Advertiser]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Advertiser]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_advertiser(profile_id, advertiser_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/advertisers', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Advertiser::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Advertiser::Representation
           command.request_object = advertiser_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Advertiser::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Advertiser
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Advertiser::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Advertiser
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -1405,22 +1405,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListBrowsersResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListBrowsersResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListBrowsersResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListBrowsersResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_browsers(profile_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/browsers', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListBrowsersResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListBrowsersResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListBrowsersResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListBrowsersResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -1435,7 +1435,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] campaign_id
         #   Campaign ID in this association.
-        # @param [Google::Apis::DfareportingV2_1::CampaignCreativeAssociation] campaign_creative_association_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::CampaignCreativeAssociation] campaign_creative_association_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1445,24 +1445,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::CampaignCreativeAssociation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::CampaignCreativeAssociation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::CampaignCreativeAssociation]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::CampaignCreativeAssociation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_campaign_creative_association(profile_id, campaign_id, campaign_creative_association_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::CampaignCreativeAssociation::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::CampaignCreativeAssociation::Representation
           command.request_object = campaign_creative_association_object
-          command.response_representation = Google::Apis::DfareportingV2_1::CampaignCreativeAssociation::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::CampaignCreativeAssociation
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::CampaignCreativeAssociation::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::CampaignCreativeAssociation
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['campaignId'] = campaign_id unless campaign_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1491,22 +1491,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListCampaignCreativeAssociationsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListCampaignCreativeAssociationsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListCampaignCreativeAssociationsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListCampaignCreativeAssociationsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_campaign_creative_associations(profile_id, campaign_id, max_results: nil, page_token: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListCampaignCreativeAssociationsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListCampaignCreativeAssociationsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListCampaignCreativeAssociationsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListCampaignCreativeAssociationsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['campaignId'] = campaign_id unless campaign_id.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -1532,22 +1532,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Campaign] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Campaign] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Campaign]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Campaign]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_campaign(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/campaigns/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::Campaign::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Campaign
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Campaign::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Campaign
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1564,7 +1564,7 @@ module Google
         #   characters long.
         # @param [String] default_landing_page_url
         #   Default landing page URL for this new campaign.
-        # @param [Google::Apis::DfareportingV2_1::Campaign] campaign_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Campaign] campaign_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1574,24 +1574,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Campaign] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Campaign] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Campaign]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Campaign]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_campaign(profile_id, default_landing_page_name, default_landing_page_url, campaign_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/campaigns', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Campaign::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Campaign::Representation
           command.request_object = campaign_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Campaign::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Campaign
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Campaign::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Campaign
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['defaultLandingPageName'] = default_landing_page_name unless default_landing_page_name.nil?
           command.query['defaultLandingPageUrl'] = default_landing_page_url unless default_landing_page_url.nil?
@@ -1645,22 +1645,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListCampaignsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListCampaignsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListCampaignsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListCampaignsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_campaigns(profile_id, advertiser_group_ids: nil, advertiser_ids: nil, archived: nil, at_least_one_optimization_activity: nil, excluded_ids: nil, ids: nil, max_results: nil, overridden_event_tag_id: nil, page_token: nil, search_string: nil, sort_field: nil, sort_order: nil, subaccount_id: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/campaigns', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListCampaignsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListCampaignsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListCampaignsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListCampaignsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['advertiserGroupIds'] = advertiser_group_ids unless advertiser_group_ids.nil?
           command.query['advertiserIds'] = advertiser_ids unless advertiser_ids.nil?
@@ -1686,7 +1686,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Campaign ID.
-        # @param [Google::Apis::DfareportingV2_1::Campaign] campaign_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Campaign] campaign_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1696,24 +1696,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Campaign] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Campaign] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Campaign]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Campaign]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_campaign(profile_id, id, campaign_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/campaigns', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Campaign::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Campaign::Representation
           command.request_object = campaign_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Campaign::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Campaign
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Campaign::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Campaign
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1725,7 +1725,7 @@ module Google
         # Updates an existing campaign.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::Campaign] campaign_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Campaign] campaign_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1735,24 +1735,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Campaign] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Campaign] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Campaign]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Campaign]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_campaign(profile_id, campaign_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/campaigns', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Campaign::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Campaign::Representation
           command.request_object = campaign_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Campaign::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Campaign
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Campaign::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Campaign
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -1774,22 +1774,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ChangeLog] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ChangeLog] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ChangeLog]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ChangeLog]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_change_log(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/changeLogs/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ChangeLog::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ChangeLog
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ChangeLog::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ChangeLog
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1841,22 +1841,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListChangeLogsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListChangeLogsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListChangeLogsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListChangeLogsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_change_logs(profile_id, action: nil, ids: nil, max_change_time: nil, max_results: nil, min_change_time: nil, object_ids: nil, object_type: nil, page_token: nil, search_string: nil, user_profile_ids: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/changeLogs', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListChangeLogsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListChangeLogsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListChangeLogsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListChangeLogsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['action'] = action unless action.nil?
           command.query['ids'] = ids unless ids.nil?
@@ -1894,22 +1894,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListCitiesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListCitiesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListCitiesResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListCitiesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_cities(profile_id, country_dart_ids: nil, dart_ids: nil, name_prefix: nil, region_dart_ids: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/cities', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListCitiesResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListCitiesResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListCitiesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListCitiesResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['countryDartIds'] = country_dart_ids unless country_dart_ids.nil?
           command.query['dartIds'] = dart_ids unless dart_ids.nil?
@@ -1935,22 +1935,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ConnectionType] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ConnectionType] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ConnectionType]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ConnectionType]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_connection_type(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/connectionTypes/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ConnectionType::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ConnectionType
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ConnectionType::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ConnectionType
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1971,22 +1971,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListConnectionTypesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListConnectionTypesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListConnectionTypesResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListConnectionTypesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_connection_types(profile_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/connectionTypes', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListConnectionTypesResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListConnectionTypesResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListConnectionTypesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListConnectionTypesResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -2008,7 +2008,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -2017,9 +2017,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_content_category(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'userprofiles/{profileId}/contentCategories/{id}', options)
           command.params['profileId'] = profile_id unless profile_id.nil?
@@ -2044,22 +2044,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ContentCategory] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ContentCategory] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ContentCategory]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ContentCategory]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_content_category(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/contentCategories/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ContentCategory::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ContentCategory
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ContentCategory::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ContentCategory
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2071,7 +2071,7 @@ module Google
         # Inserts a new content category.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::ContentCategory] content_category_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::ContentCategory] content_category_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2081,24 +2081,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ContentCategory] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ContentCategory] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ContentCategory]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ContentCategory]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_content_category(profile_id, content_category_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/contentCategories', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::ContentCategory::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::ContentCategory::Representation
           command.request_object = content_category_object
-          command.response_representation = Google::Apis::DfareportingV2_1::ContentCategory::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ContentCategory
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ContentCategory::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ContentCategory
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -2136,22 +2136,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListContentCategoriesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListContentCategoriesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListContentCategoriesResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListContentCategoriesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_content_categories(profile_id, ids: nil, max_results: nil, page_token: nil, search_string: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/contentCategories', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListContentCategoriesResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListContentCategoriesResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListContentCategoriesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListContentCategoriesResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['ids'] = ids unless ids.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -2170,7 +2170,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Content category ID.
-        # @param [Google::Apis::DfareportingV2_1::ContentCategory] content_category_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::ContentCategory] content_category_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2180,24 +2180,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ContentCategory] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ContentCategory] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ContentCategory]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ContentCategory]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_content_category(profile_id, id, content_category_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/contentCategories', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::ContentCategory::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::ContentCategory::Representation
           command.request_object = content_category_object
-          command.response_representation = Google::Apis::DfareportingV2_1::ContentCategory::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ContentCategory
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ContentCategory::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ContentCategory
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2209,7 +2209,7 @@ module Google
         # Updates an existing content category.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::ContentCategory] content_category_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::ContentCategory] content_category_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2219,24 +2219,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ContentCategory] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ContentCategory] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ContentCategory]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ContentCategory]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_content_category(profile_id, content_category_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/contentCategories', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::ContentCategory::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::ContentCategory::Representation
           command.request_object = content_category_object
-          command.response_representation = Google::Apis::DfareportingV2_1::ContentCategory::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ContentCategory
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ContentCategory::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ContentCategory
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -2258,22 +2258,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Country] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Country] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Country]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Country]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_country(profile_id, dart_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/countries/{dartId}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::Country::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Country
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Country::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Country
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['dartId'] = dart_id unless dart_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2294,22 +2294,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListCountriesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListCountriesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListCountriesResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListCountriesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_countries(profile_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/countries', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListCountriesResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListCountriesResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListCountriesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListCountriesResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -2322,7 +2322,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] advertiser_id
         #   Advertiser ID of this creative. This is a required field.
-        # @param [Google::Apis::DfareportingV2_1::CreativeAssetMetadata] creative_asset_metadata_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::CreativeAssetMetadata] creative_asset_metadata_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2336,18 +2336,18 @@ module Google
         #   IO stream or filename containing content to upload
         # @param [String] content_type
         #   Content type of the uploaded content.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::CreativeAssetMetadata] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::CreativeAssetMetadata] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::CreativeAssetMetadata]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::CreativeAssetMetadata]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_creative_asset(profile_id, advertiser_id, creative_asset_metadata_object = nil, fields: nil, quota_user: nil, user_ip: nil, upload_source: nil, content_type: nil, options: nil, &block)
           if upload_source.nil?
             command =  make_simple_command(:post, 'userprofiles/{profileId}/creativeAssets/{advertiserId}/creativeAssets', options)
@@ -2356,10 +2356,10 @@ module Google
             command.upload_source = upload_source
             command.upload_content_type = content_type
           end
-          command.request_representation = Google::Apis::DfareportingV2_1::CreativeAssetMetadata::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeAssetMetadata::Representation
           command.request_object = creative_asset_metadata_object
-          command.response_representation = Google::Apis::DfareportingV2_1::CreativeAssetMetadata::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::CreativeAssetMetadata
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeAssetMetadata::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::CreativeAssetMetadata
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['advertiserId'] = advertiser_id unless advertiser_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2384,7 +2384,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -2393,9 +2393,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_creative_field_value(profile_id, creative_field_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues/{id}', options)
           command.params['profileId'] = profile_id unless profile_id.nil?
@@ -2423,22 +2423,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::CreativeFieldValue] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::CreativeFieldValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_creative_field_value(profile_id, creative_field_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::CreativeFieldValue::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::CreativeFieldValue
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['creativeFieldId'] = creative_field_id unless creative_field_id.nil?
           command.params['id'] = id unless id.nil?
@@ -2453,7 +2453,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] creative_field_id
         #   Creative field ID for this creative field value.
-        # @param [Google::Apis::DfareportingV2_1::CreativeFieldValue] creative_field_value_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue] creative_field_value_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2463,24 +2463,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::CreativeFieldValue] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::CreativeFieldValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_creative_field_value(profile_id, creative_field_id, creative_field_value_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::CreativeFieldValue::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue::Representation
           command.request_object = creative_field_value_object
-          command.response_representation = Google::Apis::DfareportingV2_1::CreativeFieldValue::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::CreativeFieldValue
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['creativeFieldId'] = creative_field_id unless creative_field_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2516,22 +2516,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListCreativeFieldValuesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListCreativeFieldValuesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListCreativeFieldValuesResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListCreativeFieldValuesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_creative_field_values(profile_id, creative_field_id, ids: nil, max_results: nil, page_token: nil, search_string: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListCreativeFieldValuesResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListCreativeFieldValuesResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListCreativeFieldValuesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListCreativeFieldValuesResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['creativeFieldId'] = creative_field_id unless creative_field_id.nil?
           command.query['ids'] = ids unless ids.nil?
@@ -2553,7 +2553,7 @@ module Google
         #   Creative field ID for this creative field value.
         # @param [String] id
         #   Creative Field Value ID
-        # @param [Google::Apis::DfareportingV2_1::CreativeFieldValue] creative_field_value_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue] creative_field_value_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2563,24 +2563,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::CreativeFieldValue] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::CreativeFieldValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_creative_field_value(profile_id, creative_field_id, id, creative_field_value_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::CreativeFieldValue::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue::Representation
           command.request_object = creative_field_value_object
-          command.response_representation = Google::Apis::DfareportingV2_1::CreativeFieldValue::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::CreativeFieldValue
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['creativeFieldId'] = creative_field_id unless creative_field_id.nil?
           command.query['id'] = id unless id.nil?
@@ -2595,7 +2595,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] creative_field_id
         #   Creative field ID for this creative field value.
-        # @param [Google::Apis::DfareportingV2_1::CreativeFieldValue] creative_field_value_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue] creative_field_value_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2605,24 +2605,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::CreativeFieldValue] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::CreativeFieldValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_creative_field_value(profile_id, creative_field_id, creative_field_value_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::CreativeFieldValue::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue::Representation
           command.request_object = creative_field_value_object
-          command.response_representation = Google::Apis::DfareportingV2_1::CreativeFieldValue::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::CreativeFieldValue
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::CreativeFieldValue
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['creativeFieldId'] = creative_field_id unless creative_field_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2645,7 +2645,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -2654,9 +2654,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_creative_field(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'userprofiles/{profileId}/creativeFields/{id}', options)
           command.params['profileId'] = profile_id unless profile_id.nil?
@@ -2681,22 +2681,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::CreativeField] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::CreativeField] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::CreativeField]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::CreativeField]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_creative_field(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/creativeFields/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::CreativeField::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::CreativeField
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeField::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::CreativeField
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2708,7 +2708,7 @@ module Google
         # Inserts a new creative field.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::CreativeField] creative_field_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::CreativeField] creative_field_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2718,24 +2718,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::CreativeField] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::CreativeField] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::CreativeField]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::CreativeField]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_creative_field(profile_id, creative_field_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/creativeFields', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::CreativeField::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeField::Representation
           command.request_object = creative_field_object
-          command.response_representation = Google::Apis::DfareportingV2_1::CreativeField::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::CreativeField
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeField::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::CreativeField
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -2775,22 +2775,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListCreativeFieldsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListCreativeFieldsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListCreativeFieldsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListCreativeFieldsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_creative_fields(profile_id, advertiser_ids: nil, ids: nil, max_results: nil, page_token: nil, search_string: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/creativeFields', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListCreativeFieldsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListCreativeFieldsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListCreativeFieldsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListCreativeFieldsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['advertiserIds'] = advertiser_ids unless advertiser_ids.nil?
           command.query['ids'] = ids unless ids.nil?
@@ -2810,7 +2810,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Creative Field ID
-        # @param [Google::Apis::DfareportingV2_1::CreativeField] creative_field_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::CreativeField] creative_field_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2820,24 +2820,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::CreativeField] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::CreativeField] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::CreativeField]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::CreativeField]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_creative_field(profile_id, id, creative_field_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/creativeFields', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::CreativeField::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeField::Representation
           command.request_object = creative_field_object
-          command.response_representation = Google::Apis::DfareportingV2_1::CreativeField::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::CreativeField
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeField::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::CreativeField
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2849,7 +2849,7 @@ module Google
         # Updates an existing creative field.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::CreativeField] creative_field_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::CreativeField] creative_field_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2859,24 +2859,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::CreativeField] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::CreativeField] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::CreativeField]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::CreativeField]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_creative_field(profile_id, creative_field_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/creativeFields', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::CreativeField::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeField::Representation
           command.request_object = creative_field_object
-          command.response_representation = Google::Apis::DfareportingV2_1::CreativeField::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::CreativeField
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeField::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::CreativeField
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -2898,22 +2898,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::CreativeGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::CreativeGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::CreativeGroup]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::CreativeGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_creative_group(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/creativeGroups/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::CreativeGroup::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::CreativeGroup
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeGroup::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::CreativeGroup
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2925,7 +2925,7 @@ module Google
         # Inserts a new creative group.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::CreativeGroup] creative_group_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::CreativeGroup] creative_group_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2935,24 +2935,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::CreativeGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::CreativeGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::CreativeGroup]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::CreativeGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_creative_group(profile_id, creative_group_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/creativeGroups', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::CreativeGroup::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeGroup::Representation
           command.request_object = creative_group_object
-          command.response_representation = Google::Apis::DfareportingV2_1::CreativeGroup::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::CreativeGroup
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeGroup::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::CreativeGroup
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -2994,22 +2994,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListCreativeGroupsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListCreativeGroupsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListCreativeGroupsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListCreativeGroupsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_creative_groups(profile_id, advertiser_ids: nil, group_number: nil, ids: nil, max_results: nil, page_token: nil, search_string: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/creativeGroups', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListCreativeGroupsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListCreativeGroupsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListCreativeGroupsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListCreativeGroupsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['advertiserIds'] = advertiser_ids unless advertiser_ids.nil?
           command.query['groupNumber'] = group_number unless group_number.nil?
@@ -3030,7 +3030,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Creative group ID.
-        # @param [Google::Apis::DfareportingV2_1::CreativeGroup] creative_group_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::CreativeGroup] creative_group_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -3040,24 +3040,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::CreativeGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::CreativeGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::CreativeGroup]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::CreativeGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_creative_group(profile_id, id, creative_group_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/creativeGroups', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::CreativeGroup::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeGroup::Representation
           command.request_object = creative_group_object
-          command.response_representation = Google::Apis::DfareportingV2_1::CreativeGroup::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::CreativeGroup
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeGroup::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::CreativeGroup
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -3069,7 +3069,7 @@ module Google
         # Updates an existing creative group.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::CreativeGroup] creative_group_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::CreativeGroup] creative_group_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -3079,24 +3079,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::CreativeGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::CreativeGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::CreativeGroup]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::CreativeGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_creative_group(profile_id, creative_group_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/creativeGroups', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::CreativeGroup::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeGroup::Representation
           command.request_object = creative_group_object
-          command.response_representation = Google::Apis::DfareportingV2_1::CreativeGroup::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::CreativeGroup
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::CreativeGroup::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::CreativeGroup
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -3118,22 +3118,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Creative] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Creative] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Creative]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Creative]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_creative(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/creatives/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::Creative::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Creative
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Creative::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Creative
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -3145,7 +3145,7 @@ module Google
         # Inserts a new creative.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::Creative] creative_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Creative] creative_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -3155,24 +3155,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Creative] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Creative] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Creative]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Creative]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_creative(profile_id, creative_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/creatives', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Creative::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Creative::Representation
           command.request_object = creative_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Creative::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Creative
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Creative::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Creative
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -3231,22 +3231,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListCreativesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListCreativesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListCreativesResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListCreativesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_creatives(profile_id, active: nil, advertiser_id: nil, archived: nil, campaign_id: nil, companion_creative_ids: nil, creative_field_ids: nil, ids: nil, max_results: nil, page_token: nil, rendering_ids: nil, search_string: nil, size_ids: nil, sort_field: nil, sort_order: nil, studio_creative_id: nil, types: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/creatives', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListCreativesResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListCreativesResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListCreativesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListCreativesResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['active'] = active unless active.nil?
           command.query['advertiserId'] = advertiser_id unless advertiser_id.nil?
@@ -3275,7 +3275,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Creative ID.
-        # @param [Google::Apis::DfareportingV2_1::Creative] creative_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Creative] creative_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -3285,24 +3285,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Creative] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Creative] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Creative]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Creative]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_creative(profile_id, id, creative_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/creatives', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Creative::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Creative::Representation
           command.request_object = creative_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Creative::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Creative
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Creative::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Creative
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -3314,7 +3314,7 @@ module Google
         # Updates an existing creative.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::Creative] creative_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Creative] creative_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -3324,24 +3324,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Creative] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Creative] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Creative]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Creative]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_creative(profile_id, creative_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/creatives', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Creative::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Creative::Representation
           command.request_object = creative_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Creative::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Creative
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Creative::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Creative
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -3352,7 +3352,7 @@ module Google
         # Retrieves list of report dimension values for a list of filters.
         # @param [String] profile_id
         #   The DFA user profile ID.
-        # @param [Google::Apis::DfareportingV2_1::DimensionValueRequest] dimension_value_request_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::DimensionValueRequest] dimension_value_request_object
         # @param [Fixnum] max_results
         #   Maximum number of results to return.
         # @param [String] page_token
@@ -3366,24 +3366,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::DimensionValueList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::DimensionValueList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::DimensionValueList]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::DimensionValueList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def query_dimension_value(profile_id, dimension_value_request_object = nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/dimensionvalues/query', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::DimensionValueRequest::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::DimensionValueRequest::Representation
           command.request_object = dimension_value_request_object
-          command.response_representation = Google::Apis::DfareportingV2_1::DimensionValueList::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::DimensionValueList
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::DimensionValueList::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::DimensionValueList
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -3407,22 +3407,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::DirectorySiteContact] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::DirectorySiteContact] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::DirectorySiteContact]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::DirectorySiteContact]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_directory_site_contact(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/directorySiteContacts/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::DirectorySiteContact::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::DirectorySiteContact
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::DirectorySiteContact::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::DirectorySiteContact
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -3465,22 +3465,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListDirectorySiteContactsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListDirectorySiteContactsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListDirectorySiteContactsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListDirectorySiteContactsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_directory_site_contacts(profile_id, directory_site_ids: nil, ids: nil, max_results: nil, page_token: nil, search_string: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/directorySiteContacts', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListDirectorySiteContactsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListDirectorySiteContactsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListDirectorySiteContactsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListDirectorySiteContactsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['directorySiteIds'] = directory_site_ids unless directory_site_ids.nil?
           command.query['ids'] = ids unless ids.nil?
@@ -3509,22 +3509,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::DirectorySite] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::DirectorySite] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::DirectorySite]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::DirectorySite]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_directory_site(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/directorySites/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::DirectorySite::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::DirectorySite
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::DirectorySite::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::DirectorySite
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -3536,7 +3536,7 @@ module Google
         # Inserts a new directory site.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::DirectorySite] directory_site_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::DirectorySite] directory_site_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -3546,24 +3546,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::DirectorySite] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::DirectorySite] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::DirectorySite]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::DirectorySite]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_directory_site(profile_id, directory_site_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/directorySites', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::DirectorySite::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::DirectorySite::Representation
           command.request_object = directory_site_object
-          command.response_representation = Google::Apis::DfareportingV2_1::DirectorySite::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::DirectorySite
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::DirectorySite::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::DirectorySite
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -3619,22 +3619,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListDirectorySitesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListDirectorySitesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListDirectorySitesResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListDirectorySitesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_directory_sites(profile_id, accepts_in_stream_video_placements: nil, accepts_interstitial_placements: nil, accepts_publisher_paid_placements: nil, active: nil, country_id: nil, dfp_network_code: nil, ids: nil, max_results: nil, page_token: nil, parent_id: nil, search_string: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/directorySites', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListDirectorySitesResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListDirectorySitesResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListDirectorySitesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListDirectorySitesResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['acceptsInStreamVideoPlacements'] = accepts_in_stream_video_placements unless accepts_in_stream_video_placements.nil?
           command.query['acceptsInterstitialPlacements'] = accepts_interstitial_placements unless accepts_interstitial_placements.nil?
@@ -3669,7 +3669,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -3678,9 +3678,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_event_tag(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'userprofiles/{profileId}/eventTags/{id}', options)
           command.params['profileId'] = profile_id unless profile_id.nil?
@@ -3705,22 +3705,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::EventTag] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::EventTag] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::EventTag]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::EventTag]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_event_tag(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/eventTags/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::EventTag::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::EventTag
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::EventTag::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::EventTag
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -3732,7 +3732,7 @@ module Google
         # Inserts a new event tag.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::EventTag] event_tag_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::EventTag] event_tag_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -3742,24 +3742,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::EventTag] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::EventTag] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::EventTag]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::EventTag]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_event_tag(profile_id, event_tag_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/eventTags', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::EventTag::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::EventTag::Representation
           command.request_object = event_tag_object
-          command.response_representation = Google::Apis::DfareportingV2_1::EventTag::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::EventTag
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::EventTag::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::EventTag
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -3817,22 +3817,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListEventTagsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListEventTagsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListEventTagsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListEventTagsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_event_tags(profile_id, ad_id: nil, advertiser_id: nil, campaign_id: nil, definitions_only: nil, enabled: nil, event_tag_types: nil, ids: nil, search_string: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/eventTags', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListEventTagsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListEventTagsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListEventTagsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListEventTagsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['adId'] = ad_id unless ad_id.nil?
           command.query['advertiserId'] = advertiser_id unless advertiser_id.nil?
@@ -3855,7 +3855,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Event tag ID.
-        # @param [Google::Apis::DfareportingV2_1::EventTag] event_tag_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::EventTag] event_tag_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -3865,24 +3865,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::EventTag] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::EventTag] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::EventTag]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::EventTag]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_event_tag(profile_id, id, event_tag_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/eventTags', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::EventTag::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::EventTag::Representation
           command.request_object = event_tag_object
-          command.response_representation = Google::Apis::DfareportingV2_1::EventTag::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::EventTag
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::EventTag::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::EventTag
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -3894,7 +3894,7 @@ module Google
         # Updates an existing event tag.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::EventTag] event_tag_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::EventTag] event_tag_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -3904,24 +3904,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::EventTag] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::EventTag] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::EventTag]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::EventTag]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_event_tag(profile_id, event_tag_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/eventTags', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::EventTag::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::EventTag::Representation
           command.request_object = event_tag_object
-          command.response_representation = Google::Apis::DfareportingV2_1::EventTag::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::EventTag
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::EventTag::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::EventTag
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -3945,18 +3945,18 @@ module Google
         #   enforce per-user limits.
         # @param [IO, String] download_dest
         #   IO stream or filename to receive content download
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::File] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::File] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::File]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::File]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_file(report_id, file_id, fields: nil, quota_user: nil, user_ip: nil, download_dest: nil, options: nil, &block)
           if download_dest.nil?
             command =  make_simple_command(:get, 'reports/{reportId}/files/{fileId}', options)
@@ -3964,8 +3964,8 @@ module Google
             command = make_download_command(:get, 'reports/{reportId}/files/{fileId}', options)
             command.download_dest = download_dest
           end
-          command.response_representation = Google::Apis::DfareportingV2_1::File::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::File
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::File::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::File
           command.params['reportId'] = report_id unless report_id.nil?
           command.params['fileId'] = file_id unless file_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -3996,22 +3996,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::FileList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::FileList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::FileList]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::FileList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_files(profile_id, max_results: nil, page_token: nil, scope: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/files', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::FileList::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::FileList
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::FileList::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::FileList
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -4038,7 +4038,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -4047,9 +4047,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_floodlight_activity(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'userprofiles/{profileId}/floodlightActivities/{id}', options)
           command.params['profileId'] = profile_id unless profile_id.nil?
@@ -4074,22 +4074,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::FloodlightActivitiesGenerateTagResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivitiesGenerateTagResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::FloodlightActivitiesGenerateTagResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivitiesGenerateTagResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def generate_floodlight_activity_tag(profile_id, floodlight_activity_id: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/floodlightActivities/generatetag', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::FloodlightActivitiesGenerateTagResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::FloodlightActivitiesGenerateTagResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivitiesGenerateTagResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivitiesGenerateTagResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['floodlightActivityId'] = floodlight_activity_id unless floodlight_activity_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -4112,22 +4112,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::FloodlightActivity] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::FloodlightActivity]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_floodlight_activity(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/floodlightActivities/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::FloodlightActivity::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::FloodlightActivity
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -4139,7 +4139,7 @@ module Google
         # Inserts a new floodlight activity.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::FloodlightActivity] floodlight_activity_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity] floodlight_activity_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -4149,24 +4149,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::FloodlightActivity] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::FloodlightActivity]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_floodlight_activity(profile_id, floodlight_activity_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/floodlightActivities', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::FloodlightActivity::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity::Representation
           command.request_object = floodlight_activity_object
-          command.response_representation = Google::Apis::DfareportingV2_1::FloodlightActivity::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::FloodlightActivity
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -4227,22 +4227,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListFloodlightActivitiesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListFloodlightActivitiesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListFloodlightActivitiesResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListFloodlightActivitiesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_floodlight_activities(profile_id, advertiser_id: nil, floodlight_activity_group_ids: nil, floodlight_activity_group_name: nil, floodlight_activity_group_tag_string: nil, floodlight_activity_group_type: nil, floodlight_configuration_id: nil, ids: nil, max_results: nil, page_token: nil, search_string: nil, sort_field: nil, sort_order: nil, tag_string: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/floodlightActivities', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListFloodlightActivitiesResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListFloodlightActivitiesResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListFloodlightActivitiesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListFloodlightActivitiesResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['advertiserId'] = advertiser_id unless advertiser_id.nil?
           command.query['floodlightActivityGroupIds'] = floodlight_activity_group_ids unless floodlight_activity_group_ids.nil?
@@ -4268,7 +4268,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Floodlight activity ID.
-        # @param [Google::Apis::DfareportingV2_1::FloodlightActivity] floodlight_activity_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity] floodlight_activity_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -4278,24 +4278,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::FloodlightActivity] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::FloodlightActivity]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_floodlight_activity(profile_id, id, floodlight_activity_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/floodlightActivities', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::FloodlightActivity::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity::Representation
           command.request_object = floodlight_activity_object
-          command.response_representation = Google::Apis::DfareportingV2_1::FloodlightActivity::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::FloodlightActivity
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -4307,7 +4307,7 @@ module Google
         # Updates an existing floodlight activity.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::FloodlightActivity] floodlight_activity_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity] floodlight_activity_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -4317,24 +4317,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::FloodlightActivity] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::FloodlightActivity]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_floodlight_activity(profile_id, floodlight_activity_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/floodlightActivities', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::FloodlightActivity::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity::Representation
           command.request_object = floodlight_activity_object
-          command.response_representation = Google::Apis::DfareportingV2_1::FloodlightActivity::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::FloodlightActivity
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivity
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -4356,7 +4356,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -4365,9 +4365,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_floodlight_activity_group(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'userprofiles/{profileId}/floodlightActivityGroups/{id}', options)
           command.params['profileId'] = profile_id unless profile_id.nil?
@@ -4392,22 +4392,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::FloodlightActivityGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::FloodlightActivityGroup]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_floodlight_activity_group(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/floodlightActivityGroups/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::FloodlightActivityGroup::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::FloodlightActivityGroup
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -4419,7 +4419,7 @@ module Google
         # Inserts a new floodlight activity group.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::FloodlightActivityGroup] floodlight_activity_group_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup] floodlight_activity_group_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -4429,24 +4429,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::FloodlightActivityGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::FloodlightActivityGroup]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_floodlight_activity_group(profile_id, floodlight_activity_group_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/floodlightActivityGroups', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::FloodlightActivityGroup::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup::Representation
           command.request_object = floodlight_activity_group_object
-          command.response_representation = Google::Apis::DfareportingV2_1::FloodlightActivityGroup::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::FloodlightActivityGroup
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -4497,22 +4497,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListFloodlightActivityGroupsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListFloodlightActivityGroupsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListFloodlightActivityGroupsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListFloodlightActivityGroupsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_floodlight_activity_groups(profile_id, advertiser_id: nil, floodlight_configuration_id: nil, ids: nil, max_results: nil, page_token: nil, search_string: nil, sort_field: nil, sort_order: nil, type: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/floodlightActivityGroups', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListFloodlightActivityGroupsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListFloodlightActivityGroupsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListFloodlightActivityGroupsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListFloodlightActivityGroupsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['advertiserId'] = advertiser_id unless advertiser_id.nil?
           command.query['floodlightConfigurationId'] = floodlight_configuration_id unless floodlight_configuration_id.nil?
@@ -4535,7 +4535,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Floodlight activity Group ID.
-        # @param [Google::Apis::DfareportingV2_1::FloodlightActivityGroup] floodlight_activity_group_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup] floodlight_activity_group_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -4545,24 +4545,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::FloodlightActivityGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::FloodlightActivityGroup]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_floodlight_activity_group(profile_id, id, floodlight_activity_group_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/floodlightActivityGroups', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::FloodlightActivityGroup::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup::Representation
           command.request_object = floodlight_activity_group_object
-          command.response_representation = Google::Apis::DfareportingV2_1::FloodlightActivityGroup::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::FloodlightActivityGroup
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -4574,7 +4574,7 @@ module Google
         # Updates an existing floodlight activity group.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::FloodlightActivityGroup] floodlight_activity_group_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup] floodlight_activity_group_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -4584,24 +4584,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::FloodlightActivityGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::FloodlightActivityGroup]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_floodlight_activity_group(profile_id, floodlight_activity_group_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/floodlightActivityGroups', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::FloodlightActivityGroup::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup::Representation
           command.request_object = floodlight_activity_group_object
-          command.response_representation = Google::Apis::DfareportingV2_1::FloodlightActivityGroup::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::FloodlightActivityGroup
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::FloodlightActivityGroup
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -4623,22 +4623,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::FloodlightConfiguration] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::FloodlightConfiguration] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::FloodlightConfiguration]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::FloodlightConfiguration]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_floodlight_configuration(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/floodlightConfigurations/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::FloodlightConfiguration::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::FloodlightConfiguration
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightConfiguration::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::FloodlightConfiguration
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -4662,22 +4662,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListFloodlightConfigurationsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListFloodlightConfigurationsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListFloodlightConfigurationsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListFloodlightConfigurationsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_floodlight_configurations(profile_id, ids: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/floodlightConfigurations', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListFloodlightConfigurationsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListFloodlightConfigurationsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListFloodlightConfigurationsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListFloodlightConfigurationsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['ids'] = ids unless ids.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -4692,7 +4692,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Floodlight configuration ID.
-        # @param [Google::Apis::DfareportingV2_1::FloodlightConfiguration] floodlight_configuration_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::FloodlightConfiguration] floodlight_configuration_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -4702,24 +4702,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::FloodlightConfiguration] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::FloodlightConfiguration] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::FloodlightConfiguration]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::FloodlightConfiguration]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_floodlight_configuration(profile_id, id, floodlight_configuration_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/floodlightConfigurations', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::FloodlightConfiguration::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightConfiguration::Representation
           command.request_object = floodlight_configuration_object
-          command.response_representation = Google::Apis::DfareportingV2_1::FloodlightConfiguration::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::FloodlightConfiguration
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightConfiguration::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::FloodlightConfiguration
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -4731,7 +4731,7 @@ module Google
         # Updates an existing floodlight configuration.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::FloodlightConfiguration] floodlight_configuration_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::FloodlightConfiguration] floodlight_configuration_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -4741,24 +4741,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::FloodlightConfiguration] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::FloodlightConfiguration] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::FloodlightConfiguration]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::FloodlightConfiguration]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_floodlight_configuration(profile_id, floodlight_configuration_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/floodlightConfigurations', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::FloodlightConfiguration::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightConfiguration::Representation
           command.request_object = floodlight_configuration_object
-          command.response_representation = Google::Apis::DfareportingV2_1::FloodlightConfiguration::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::FloodlightConfiguration
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::FloodlightConfiguration::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::FloodlightConfiguration
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -4782,22 +4782,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::InventoryItem] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::InventoryItem] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::InventoryItem]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::InventoryItem]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_inventory_item(profile_id, project_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/projects/{projectId}/inventoryItems/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::InventoryItem::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::InventoryItem
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::InventoryItem::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::InventoryItem
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['projectId'] = project_id unless project_id.nil?
           command.params['id'] = id unless id.nil?
@@ -4837,22 +4837,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListInventoryItemsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListInventoryItemsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListInventoryItemsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListInventoryItemsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_inventory_items(profile_id, project_id, ids: nil, in_plan: nil, max_results: nil, order_id: nil, page_token: nil, site_id: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/projects/{projectId}/inventoryItems', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListInventoryItemsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListInventoryItemsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListInventoryItemsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListInventoryItemsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['projectId'] = project_id unless project_id.nil?
           command.query['ids'] = ids unless ids.nil?
@@ -4885,7 +4885,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -4894,9 +4894,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_landing_page(profile_id, campaign_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'userprofiles/{profileId}/campaigns/{campaignId}/landingPages/{id}', options)
           command.params['profileId'] = profile_id unless profile_id.nil?
@@ -4924,22 +4924,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::LandingPage] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::LandingPage] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::LandingPage]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::LandingPage]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_landing_page(profile_id, campaign_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/campaigns/{campaignId}/landingPages/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::LandingPage::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::LandingPage
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::LandingPage::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::LandingPage
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['campaignId'] = campaign_id unless campaign_id.nil?
           command.params['id'] = id unless id.nil?
@@ -4954,7 +4954,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] campaign_id
         #   Landing page campaign ID.
-        # @param [Google::Apis::DfareportingV2_1::LandingPage] landing_page_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::LandingPage] landing_page_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -4964,24 +4964,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::LandingPage] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::LandingPage] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::LandingPage]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::LandingPage]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_landing_page(profile_id, campaign_id, landing_page_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/campaigns/{campaignId}/landingPages', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::LandingPage::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::LandingPage::Representation
           command.request_object = landing_page_object
-          command.response_representation = Google::Apis::DfareportingV2_1::LandingPage::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::LandingPage
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::LandingPage::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::LandingPage
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['campaignId'] = campaign_id unless campaign_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -5004,22 +5004,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListLandingPagesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListLandingPagesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListLandingPagesResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListLandingPagesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_landing_pages(profile_id, campaign_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/campaigns/{campaignId}/landingPages', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListLandingPagesResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListLandingPagesResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListLandingPagesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListLandingPagesResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['campaignId'] = campaign_id unless campaign_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -5036,7 +5036,7 @@ module Google
         #   Landing page campaign ID.
         # @param [String] id
         #   Landing page ID.
-        # @param [Google::Apis::DfareportingV2_1::LandingPage] landing_page_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::LandingPage] landing_page_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -5046,24 +5046,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::LandingPage] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::LandingPage] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::LandingPage]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::LandingPage]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_landing_page(profile_id, campaign_id, id, landing_page_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/campaigns/{campaignId}/landingPages', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::LandingPage::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::LandingPage::Representation
           command.request_object = landing_page_object
-          command.response_representation = Google::Apis::DfareportingV2_1::LandingPage::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::LandingPage
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::LandingPage::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::LandingPage
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['campaignId'] = campaign_id unless campaign_id.nil?
           command.query['id'] = id unless id.nil?
@@ -5078,7 +5078,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] campaign_id
         #   Landing page campaign ID.
-        # @param [Google::Apis::DfareportingV2_1::LandingPage] landing_page_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::LandingPage] landing_page_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -5088,24 +5088,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::LandingPage] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::LandingPage] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::LandingPage]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::LandingPage]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_landing_page(profile_id, campaign_id, landing_page_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/campaigns/{campaignId}/landingPages', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::LandingPage::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::LandingPage::Representation
           command.request_object = landing_page_object
-          command.response_representation = Google::Apis::DfareportingV2_1::LandingPage::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::LandingPage
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::LandingPage::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::LandingPage
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['campaignId'] = campaign_id unless campaign_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -5126,22 +5126,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListMetrosResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListMetrosResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListMetrosResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListMetrosResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_metros(profile_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/metros', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListMetrosResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListMetrosResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListMetrosResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListMetrosResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -5163,22 +5163,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::MobileCarrier] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::MobileCarrier] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::MobileCarrier]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::MobileCarrier]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_mobile_carrier(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/mobileCarriers/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::MobileCarrier::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::MobileCarrier
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::MobileCarrier::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::MobileCarrier
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -5199,22 +5199,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListMobileCarriersResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListMobileCarriersResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListMobileCarriersResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListMobileCarriersResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_mobile_carriers(profile_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/mobileCarriers', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListMobileCarriersResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListMobileCarriersResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListMobileCarriersResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListMobileCarriersResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -5236,22 +5236,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::OperatingSystemVersion] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::OperatingSystemVersion] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::OperatingSystemVersion]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::OperatingSystemVersion]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_operating_system_version(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/operatingSystemVersions/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::OperatingSystemVersion::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::OperatingSystemVersion
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::OperatingSystemVersion::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::OperatingSystemVersion
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -5272,22 +5272,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListOperatingSystemVersionsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListOperatingSystemVersionsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListOperatingSystemVersionsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListOperatingSystemVersionsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_operating_system_versions(profile_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/operatingSystemVersions', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListOperatingSystemVersionsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListOperatingSystemVersionsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListOperatingSystemVersionsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListOperatingSystemVersionsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -5309,22 +5309,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::OperatingSystem] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::OperatingSystem] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::OperatingSystem]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::OperatingSystem]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_operating_system(profile_id, dart_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/operatingSystems/{dartId}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::OperatingSystem::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::OperatingSystem
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::OperatingSystem::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::OperatingSystem
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['dartId'] = dart_id unless dart_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -5345,22 +5345,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListOperatingSystemsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListOperatingSystemsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListOperatingSystemsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListOperatingSystemsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_operating_systems(profile_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/operatingSystems', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListOperatingSystemsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListOperatingSystemsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListOperatingSystemsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListOperatingSystemsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -5384,22 +5384,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::OrderDocument] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::OrderDocument] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::OrderDocument]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::OrderDocument]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_order_document(profile_id, project_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/projects/{projectId}/orderDocuments/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::OrderDocument::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::OrderDocument
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::OrderDocument::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::OrderDocument
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['projectId'] = project_id unless project_id.nil?
           command.params['id'] = id unless id.nil?
@@ -5447,22 +5447,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListOrderDocumentsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListOrderDocumentsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListOrderDocumentsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListOrderDocumentsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_order_documents(profile_id, project_id, approved: nil, ids: nil, max_results: nil, order_id: nil, page_token: nil, search_string: nil, site_id: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/projects/{projectId}/orderDocuments', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListOrderDocumentsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListOrderDocumentsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListOrderDocumentsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListOrderDocumentsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['projectId'] = project_id unless project_id.nil?
           command.query['approved'] = approved unless approved.nil?
@@ -5496,22 +5496,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Order] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Order] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Order]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Order]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_order(profile_id, project_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/projects/{projectId}/orders/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::Order::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Order
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Order::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Order
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['projectId'] = project_id unless project_id.nil?
           command.params['id'] = id unless id.nil?
@@ -5554,22 +5554,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListOrdersResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListOrdersResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListOrdersResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListOrdersResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_orders(profile_id, project_id, ids: nil, max_results: nil, page_token: nil, search_string: nil, site_id: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/projects/{projectId}/orders', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListOrdersResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListOrdersResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListOrdersResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListOrdersResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['projectId'] = project_id unless project_id.nil?
           command.query['ids'] = ids unless ids.nil?
@@ -5599,22 +5599,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::PlacementGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::PlacementGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::PlacementGroup]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::PlacementGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_placement_group(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/placementGroups/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::PlacementGroup::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::PlacementGroup
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::PlacementGroup::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::PlacementGroup
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -5626,7 +5626,7 @@ module Google
         # Inserts a new placement group.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::PlacementGroup] placement_group_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::PlacementGroup] placement_group_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -5636,24 +5636,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::PlacementGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::PlacementGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::PlacementGroup]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::PlacementGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_placement_group(profile_id, placement_group_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/placementGroups', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::PlacementGroup::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::PlacementGroup::Representation
           command.request_object = placement_group_object
-          command.response_representation = Google::Apis::DfareportingV2_1::PlacementGroup::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::PlacementGroup
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::PlacementGroup::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::PlacementGroup
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -5716,22 +5716,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListPlacementGroupsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListPlacementGroupsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListPlacementGroupsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListPlacementGroupsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_placement_groups(profile_id, advertiser_ids: nil, archived: nil, campaign_ids: nil, content_category_ids: nil, directory_site_ids: nil, ids: nil, max_results: nil, page_token: nil, placement_group_type: nil, placement_strategy_ids: nil, pricing_types: nil, search_string: nil, site_ids: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/placementGroups', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListPlacementGroupsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListPlacementGroupsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListPlacementGroupsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListPlacementGroupsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['advertiserIds'] = advertiser_ids unless advertiser_ids.nil?
           command.query['archived'] = archived unless archived.nil?
@@ -5759,7 +5759,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Placement group ID.
-        # @param [Google::Apis::DfareportingV2_1::PlacementGroup] placement_group_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::PlacementGroup] placement_group_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -5769,24 +5769,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::PlacementGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::PlacementGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::PlacementGroup]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::PlacementGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_placement_group(profile_id, id, placement_group_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/placementGroups', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::PlacementGroup::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::PlacementGroup::Representation
           command.request_object = placement_group_object
-          command.response_representation = Google::Apis::DfareportingV2_1::PlacementGroup::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::PlacementGroup
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::PlacementGroup::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::PlacementGroup
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -5798,7 +5798,7 @@ module Google
         # Updates an existing placement group.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::PlacementGroup] placement_group_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::PlacementGroup] placement_group_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -5808,24 +5808,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::PlacementGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::PlacementGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::PlacementGroup]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::PlacementGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_placement_group(profile_id, placement_group_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/placementGroups', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::PlacementGroup::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::PlacementGroup::Representation
           command.request_object = placement_group_object
-          command.response_representation = Google::Apis::DfareportingV2_1::PlacementGroup::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::PlacementGroup
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::PlacementGroup::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::PlacementGroup
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -5847,7 +5847,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -5856,9 +5856,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_placement_strategy(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'userprofiles/{profileId}/placementStrategies/{id}', options)
           command.params['profileId'] = profile_id unless profile_id.nil?
@@ -5883,22 +5883,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::PlacementStrategy] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::PlacementStrategy]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_placement_strategy(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/placementStrategies/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::PlacementStrategy::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::PlacementStrategy
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -5910,7 +5910,7 @@ module Google
         # Inserts a new placement strategy.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::PlacementStrategy] placement_strategy_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy] placement_strategy_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -5920,24 +5920,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::PlacementStrategy] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::PlacementStrategy]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_placement_strategy(profile_id, placement_strategy_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/placementStrategies', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::PlacementStrategy::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy::Representation
           command.request_object = placement_strategy_object
-          command.response_representation = Google::Apis::DfareportingV2_1::PlacementStrategy::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::PlacementStrategy
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -5975,22 +5975,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListPlacementStrategiesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListPlacementStrategiesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListPlacementStrategiesResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListPlacementStrategiesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_placement_strategies(profile_id, ids: nil, max_results: nil, page_token: nil, search_string: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/placementStrategies', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListPlacementStrategiesResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListPlacementStrategiesResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListPlacementStrategiesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListPlacementStrategiesResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['ids'] = ids unless ids.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -6009,7 +6009,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Placement strategy ID.
-        # @param [Google::Apis::DfareportingV2_1::PlacementStrategy] placement_strategy_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy] placement_strategy_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -6019,24 +6019,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::PlacementStrategy] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::PlacementStrategy]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_placement_strategy(profile_id, id, placement_strategy_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/placementStrategies', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::PlacementStrategy::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy::Representation
           command.request_object = placement_strategy_object
-          command.response_representation = Google::Apis::DfareportingV2_1::PlacementStrategy::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::PlacementStrategy
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -6048,7 +6048,7 @@ module Google
         # Updates an existing placement strategy.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::PlacementStrategy] placement_strategy_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy] placement_strategy_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -6058,24 +6058,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::PlacementStrategy] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::PlacementStrategy]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_placement_strategy(profile_id, placement_strategy_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/placementStrategies', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::PlacementStrategy::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy::Representation
           command.request_object = placement_strategy_object
-          command.response_representation = Google::Apis::DfareportingV2_1::PlacementStrategy::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::PlacementStrategy
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::PlacementStrategy
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -6101,22 +6101,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::GeneratePlacementsTagsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::GeneratePlacementsTagsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::GeneratePlacementsTagsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::GeneratePlacementsTagsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def generate_placement_tags(profile_id, campaign_id: nil, placement_ids: nil, tag_formats: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/placements/generatetags', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::GeneratePlacementsTagsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::GeneratePlacementsTagsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::GeneratePlacementsTagsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::GeneratePlacementsTagsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['campaignId'] = campaign_id unless campaign_id.nil?
           command.query['placementIds'] = placement_ids unless placement_ids.nil?
@@ -6141,22 +6141,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Placement] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Placement] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Placement]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Placement]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_placement(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/placements/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::Placement::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Placement
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Placement::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Placement
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -6168,7 +6168,7 @@ module Google
         # Inserts a new placement.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::Placement] placement_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Placement] placement_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -6178,24 +6178,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Placement] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Placement] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Placement]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Placement]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_placement(profile_id, placement_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/placements', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Placement::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Placement::Representation
           command.request_object = placement_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Placement::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Placement
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Placement::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Placement
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -6261,22 +6261,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListPlacementsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListPlacementsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListPlacementsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListPlacementsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_placements(profile_id, advertiser_ids: nil, archived: nil, campaign_ids: nil, compatibilities: nil, content_category_ids: nil, directory_site_ids: nil, group_ids: nil, ids: nil, max_results: nil, page_token: nil, payment_source: nil, placement_strategy_ids: nil, pricing_types: nil, search_string: nil, site_ids: nil, size_ids: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/placements', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListPlacementsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListPlacementsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListPlacementsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListPlacementsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['advertiserIds'] = advertiser_ids unless advertiser_ids.nil?
           command.query['archived'] = archived unless archived.nil?
@@ -6307,7 +6307,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Placement ID.
-        # @param [Google::Apis::DfareportingV2_1::Placement] placement_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Placement] placement_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -6317,24 +6317,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Placement] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Placement] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Placement]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Placement]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_placement(profile_id, id, placement_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/placements', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Placement::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Placement::Representation
           command.request_object = placement_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Placement::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Placement
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Placement::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Placement
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -6346,7 +6346,7 @@ module Google
         # Updates an existing placement.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::Placement] placement_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Placement] placement_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -6356,24 +6356,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Placement] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Placement] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Placement]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Placement]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_placement(profile_id, placement_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/placements', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Placement::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Placement::Representation
           command.request_object = placement_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Placement::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Placement
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Placement::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Placement
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -6395,22 +6395,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::PlatformType] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::PlatformType] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::PlatformType]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::PlatformType]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_platform_type(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/platformTypes/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::PlatformType::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::PlatformType
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::PlatformType::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::PlatformType
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -6431,22 +6431,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListPlatformTypesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListPlatformTypesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListPlatformTypesResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListPlatformTypesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_platform_types(profile_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/platformTypes', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListPlatformTypesResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListPlatformTypesResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListPlatformTypesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListPlatformTypesResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -6468,22 +6468,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::PostalCode] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::PostalCode] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::PostalCode]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::PostalCode]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_postal_code(profile_id, code, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/postalCodes/{code}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::PostalCode::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::PostalCode
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::PostalCode::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::PostalCode
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['code'] = code unless code.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -6504,22 +6504,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListPostalCodesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListPostalCodesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListPostalCodesResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListPostalCodesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_postal_codes(profile_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/postalCodes', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListPostalCodesResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListPostalCodesResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListPostalCodesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListPostalCodesResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -6541,22 +6541,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Project] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Project] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Project]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Project]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_project(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/projects/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::Project::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Project
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Project::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Project
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -6596,22 +6596,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListProjectsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListProjectsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListProjectsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListProjectsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_projects(profile_id, advertiser_ids: nil, ids: nil, max_results: nil, page_token: nil, search_string: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/projects', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListProjectsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListProjectsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListProjectsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListProjectsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['advertiserIds'] = advertiser_ids unless advertiser_ids.nil?
           command.query['ids'] = ids unless ids.nil?
@@ -6638,22 +6638,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListRegionsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListRegionsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListRegionsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListRegionsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_regions(profile_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/regions', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListRegionsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListRegionsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListRegionsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListRegionsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -6675,22 +6675,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::RemarketingListShare] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::RemarketingListShare] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::RemarketingListShare]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::RemarketingListShare]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_remarketing_list_share(profile_id, remarketing_list_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/remarketingListShares/{remarketingListId}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::RemarketingListShare::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::RemarketingListShare
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::RemarketingListShare::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::RemarketingListShare
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['remarketingListId'] = remarketing_list_id unless remarketing_list_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -6705,7 +6705,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] remarketing_list_id
         #   Remarketing list ID.
-        # @param [Google::Apis::DfareportingV2_1::RemarketingListShare] remarketing_list_share_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::RemarketingListShare] remarketing_list_share_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -6715,24 +6715,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::RemarketingListShare] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::RemarketingListShare] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::RemarketingListShare]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::RemarketingListShare]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_remarketing_list_share(profile_id, remarketing_list_id, remarketing_list_share_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/remarketingListShares', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::RemarketingListShare::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::RemarketingListShare::Representation
           command.request_object = remarketing_list_share_object
-          command.response_representation = Google::Apis::DfareportingV2_1::RemarketingListShare::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::RemarketingListShare
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::RemarketingListShare::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::RemarketingListShare
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['remarketingListId'] = remarketing_list_id unless remarketing_list_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -6744,7 +6744,7 @@ module Google
         # Updates an existing remarketing list share.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::RemarketingListShare] remarketing_list_share_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::RemarketingListShare] remarketing_list_share_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -6754,24 +6754,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::RemarketingListShare] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::RemarketingListShare] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::RemarketingListShare]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::RemarketingListShare]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_remarketing_list_share(profile_id, remarketing_list_share_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/remarketingListShares', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::RemarketingListShare::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::RemarketingListShare::Representation
           command.request_object = remarketing_list_share_object
-          command.response_representation = Google::Apis::DfareportingV2_1::RemarketingListShare::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::RemarketingListShare
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::RemarketingListShare::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::RemarketingListShare
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -6793,22 +6793,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::RemarketingList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::RemarketingList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::RemarketingList]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::RemarketingList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_remarketing_list(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/remarketingLists/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::RemarketingList::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::RemarketingList
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::RemarketingList::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::RemarketingList
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -6820,7 +6820,7 @@ module Google
         # Inserts a new remarketing list.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::RemarketingList] remarketing_list_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::RemarketingList] remarketing_list_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -6830,24 +6830,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::RemarketingList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::RemarketingList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::RemarketingList]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::RemarketingList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_remarketing_list(profile_id, remarketing_list_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/remarketingLists', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::RemarketingList::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::RemarketingList::Representation
           command.request_object = remarketing_list_object
-          command.response_representation = Google::Apis::DfareportingV2_1::RemarketingList::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::RemarketingList
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::RemarketingList::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::RemarketingList
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -6889,22 +6889,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListRemarketingListsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListRemarketingListsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListRemarketingListsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListRemarketingListsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_remarketing_lists(profile_id, advertiser_id, active: nil, floodlight_activity_id: nil, max_results: nil, name: nil, page_token: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/remarketingLists', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListRemarketingListsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListRemarketingListsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListRemarketingListsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListRemarketingListsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['active'] = active unless active.nil?
           command.query['advertiserId'] = advertiser_id unless advertiser_id.nil?
@@ -6925,7 +6925,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Remarketing list ID.
-        # @param [Google::Apis::DfareportingV2_1::RemarketingList] remarketing_list_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::RemarketingList] remarketing_list_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -6935,24 +6935,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::RemarketingList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::RemarketingList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::RemarketingList]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::RemarketingList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_remarketing_list(profile_id, id, remarketing_list_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/remarketingLists', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::RemarketingList::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::RemarketingList::Representation
           command.request_object = remarketing_list_object
-          command.response_representation = Google::Apis::DfareportingV2_1::RemarketingList::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::RemarketingList
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::RemarketingList::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::RemarketingList
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -6964,7 +6964,7 @@ module Google
         # Updates an existing remarketing list.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::RemarketingList] remarketing_list_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::RemarketingList] remarketing_list_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -6974,24 +6974,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::RemarketingList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::RemarketingList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::RemarketingList]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::RemarketingList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_remarketing_list(profile_id, remarketing_list_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/remarketingLists', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::RemarketingList::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::RemarketingList::Representation
           command.request_object = remarketing_list_object
-          command.response_representation = Google::Apis::DfareportingV2_1::RemarketingList::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::RemarketingList
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::RemarketingList::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::RemarketingList
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -7013,7 +7013,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -7022,9 +7022,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_report(profile_id, report_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'userprofiles/{profileId}/reports/{reportId}', options)
           command.params['profileId'] = profile_id unless profile_id.nil?
@@ -7049,22 +7049,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Report] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Report] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Report]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Report]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_report(profile_id, report_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/reports/{reportId}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::Report::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Report
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Report::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Report
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['reportId'] = report_id unless report_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -7076,7 +7076,7 @@ module Google
         # Creates a report.
         # @param [String] profile_id
         #   The DFA user profile ID.
-        # @param [Google::Apis::DfareportingV2_1::Report] report_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Report] report_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -7086,24 +7086,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Report] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Report] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Report]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Report]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_report(profile_id, report_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/reports', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Report::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Report::Representation
           command.request_object = report_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Report::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Report
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Report::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Report
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -7133,22 +7133,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ReportList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ReportList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ReportList]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ReportList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_reports(profile_id, max_results: nil, page_token: nil, scope: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/reports', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ReportList::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ReportList
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ReportList::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ReportList
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -7166,7 +7166,7 @@ module Google
         #   The DFA user profile ID.
         # @param [String] report_id
         #   The ID of the report.
-        # @param [Google::Apis::DfareportingV2_1::Report] report_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Report] report_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -7176,24 +7176,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Report] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Report] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Report]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Report]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_report(profile_id, report_id, report_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/reports/{reportId}', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Report::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Report::Representation
           command.request_object = report_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Report::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Report
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Report::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Report
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['reportId'] = report_id unless report_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -7218,22 +7218,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::File] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::File] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::File]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::File]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def run_report(profile_id, report_id, synchronous: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/reports/{reportId}/run', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::File::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::File
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::File::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::File
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['reportId'] = report_id unless report_id.nil?
           command.query['synchronous'] = synchronous unless synchronous.nil?
@@ -7248,7 +7248,7 @@ module Google
         #   The DFA user profile ID.
         # @param [String] report_id
         #   The ID of the report.
-        # @param [Google::Apis::DfareportingV2_1::Report] report_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Report] report_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -7258,24 +7258,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Report] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Report] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Report]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Report]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_report(profile_id, report_id, report_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/reports/{reportId}', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Report::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Report::Representation
           command.request_object = report_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Report::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Report
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Report::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Report
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['reportId'] = report_id unless report_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -7289,7 +7289,7 @@ module Google
         # report and user permissions.
         # @param [String] profile_id
         #   The DFA user profile ID.
-        # @param [Google::Apis::DfareportingV2_1::Report] report_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Report] report_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -7299,24 +7299,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::CompatibleFields] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::CompatibleFields] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::CompatibleFields]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::CompatibleFields]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def query_report_compatible_field(profile_id, report_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/reports/compatiblefields/query', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Report::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Report::Representation
           command.request_object = report_object
-          command.response_representation = Google::Apis::DfareportingV2_1::CompatibleFields::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::CompatibleFields
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::CompatibleFields::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::CompatibleFields
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -7342,18 +7342,18 @@ module Google
         #   enforce per-user limits.
         # @param [IO, String] download_dest
         #   IO stream or filename to receive content download
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::File] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::File] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::File]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::File]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_report_file(profile_id, report_id, file_id, fields: nil, quota_user: nil, user_ip: nil, download_dest: nil, options: nil, &block)
           if download_dest.nil?
             command =  make_simple_command(:get, 'userprofiles/{profileId}/reports/{reportId}/files/{fileId}', options)
@@ -7361,8 +7361,8 @@ module Google
             command = make_download_command(:get, 'userprofiles/{profileId}/reports/{reportId}/files/{fileId}', options)
             command.download_dest = download_dest
           end
-          command.response_representation = Google::Apis::DfareportingV2_1::File::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::File
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::File::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::File
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['reportId'] = report_id unless report_id.nil?
           command.params['fileId'] = file_id unless file_id.nil?
@@ -7394,22 +7394,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::FileList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::FileList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::FileList]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::FileList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_report_files(profile_id, report_id, max_results: nil, page_token: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/reports/{reportId}/files', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::FileList::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::FileList
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::FileList::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::FileList
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['reportId'] = report_id unless report_id.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -7436,22 +7436,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Site] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Site] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Site]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Site]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_site(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/sites/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::Site::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Site
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Site::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Site
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -7463,7 +7463,7 @@ module Google
         # Inserts a new site.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::Site] site_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Site] site_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -7473,24 +7473,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Site] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Site] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Site]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Site]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_site(profile_id, site_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/sites', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Site::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Site::Representation
           command.request_object = site_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Site::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Site
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Site::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Site
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -7547,22 +7547,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListSitesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListSitesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListSitesResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListSitesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_sites(profile_id, accepts_in_stream_video_placements: nil, accepts_interstitial_placements: nil, accepts_publisher_paid_placements: nil, ad_words_site: nil, approved: nil, campaign_ids: nil, directory_site_ids: nil, ids: nil, max_results: nil, page_token: nil, search_string: nil, sort_field: nil, sort_order: nil, subaccount_id: nil, unmapped_site: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/sites', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListSitesResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListSitesResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListSitesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListSitesResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['acceptsInStreamVideoPlacements'] = accepts_in_stream_video_placements unless accepts_in_stream_video_placements.nil?
           command.query['acceptsInterstitialPlacements'] = accepts_interstitial_placements unless accepts_interstitial_placements.nil?
@@ -7590,7 +7590,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Site ID.
-        # @param [Google::Apis::DfareportingV2_1::Site] site_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Site] site_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -7600,24 +7600,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Site] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Site] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Site]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Site]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_site(profile_id, id, site_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/sites', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Site::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Site::Representation
           command.request_object = site_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Site::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Site
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Site::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Site
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -7629,7 +7629,7 @@ module Google
         # Updates an existing site.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::Site] site_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Site] site_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -7639,24 +7639,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Site] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Site] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Site]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Site]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_site(profile_id, site_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/sites', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Site::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Site::Representation
           command.request_object = site_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Site::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Site
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Site::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Site
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -7678,22 +7678,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Size] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Size] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Size]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Size]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_size(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/sizes/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::Size::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Size
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Size::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Size
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -7705,7 +7705,7 @@ module Google
         # Inserts a new size.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::Size] size_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Size] size_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -7715,24 +7715,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Size] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Size] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Size]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Size]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_size(profile_id, size_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/sizes', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Size::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Size::Representation
           command.request_object = size_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Size::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Size
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Size::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Size
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -7760,22 +7760,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListSizesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListSizesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListSizesResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListSizesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_sizes(profile_id, height: nil, iab_standard: nil, ids: nil, width: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/sizes', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListSizesResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListSizesResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListSizesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListSizesResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['height'] = height unless height.nil?
           command.query['iabStandard'] = iab_standard unless iab_standard.nil?
@@ -7801,22 +7801,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Subaccount] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Subaccount] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Subaccount]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Subaccount]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_subaccount(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/subaccounts/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::Subaccount::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Subaccount
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Subaccount::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Subaccount
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -7828,7 +7828,7 @@ module Google
         # Inserts a new subaccount.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::Subaccount] subaccount_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Subaccount] subaccount_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -7838,24 +7838,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Subaccount] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Subaccount] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Subaccount]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Subaccount]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_subaccount(profile_id, subaccount_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/subaccounts', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Subaccount::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Subaccount::Representation
           command.request_object = subaccount_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Subaccount::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Subaccount
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Subaccount::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Subaccount
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -7892,22 +7892,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListSubaccountsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListSubaccountsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListSubaccountsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListSubaccountsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_subaccounts(profile_id, ids: nil, max_results: nil, page_token: nil, search_string: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/subaccounts', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListSubaccountsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListSubaccountsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListSubaccountsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListSubaccountsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['ids'] = ids unless ids.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -7926,7 +7926,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   Subaccount ID.
-        # @param [Google::Apis::DfareportingV2_1::Subaccount] subaccount_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Subaccount] subaccount_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -7936,24 +7936,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Subaccount] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Subaccount] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Subaccount]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Subaccount]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_subaccount(profile_id, id, subaccount_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/subaccounts', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Subaccount::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Subaccount::Representation
           command.request_object = subaccount_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Subaccount::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Subaccount
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Subaccount::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Subaccount
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -7965,7 +7965,7 @@ module Google
         # Updates an existing subaccount.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::Subaccount] subaccount_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::Subaccount] subaccount_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -7975,24 +7975,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::Subaccount] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::Subaccount] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::Subaccount]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::Subaccount]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_subaccount(profile_id, subaccount_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/subaccounts', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::Subaccount::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::Subaccount::Representation
           command.request_object = subaccount_object
-          command.response_representation = Google::Apis::DfareportingV2_1::Subaccount::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::Subaccount
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::Subaccount::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::Subaccount
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -8014,22 +8014,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::TargetableRemarketingList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::TargetableRemarketingList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::TargetableRemarketingList]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::TargetableRemarketingList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_targetable_remarketing_list(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/targetableRemarketingLists/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::TargetableRemarketingList::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::TargetableRemarketingList
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::TargetableRemarketingList::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::TargetableRemarketingList
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -8070,22 +8070,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListTargetableRemarketingListsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListTargetableRemarketingListsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListTargetableRemarketingListsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListTargetableRemarketingListsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_targetable_remarketing_lists(profile_id, advertiser_id, active: nil, max_results: nil, name: nil, page_token: nil, sort_field: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/targetableRemarketingLists', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListTargetableRemarketingListsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListTargetableRemarketingListsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListTargetableRemarketingListsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListTargetableRemarketingListsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['active'] = active unless active.nil?
           command.query['advertiserId'] = advertiser_id unless advertiser_id.nil?
@@ -8112,22 +8112,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::UserProfile] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::UserProfile] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::UserProfile]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::UserProfile]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_user_profile(profile_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::UserProfile::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::UserProfile
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::UserProfile::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::UserProfile
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -8145,22 +8145,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::UserProfileList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::UserProfileList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::UserProfileList]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::UserProfileList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_user_profiles(fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::UserProfileList::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::UserProfileList
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::UserProfileList::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::UserProfileList
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['userIp'] = user_ip unless user_ip.nil?
@@ -8181,22 +8181,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::UserRolePermissionGroup] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::UserRolePermissionGroup] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::UserRolePermissionGroup]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::UserRolePermissionGroup]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_user_role_permission_group(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/userRolePermissionGroups/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::UserRolePermissionGroup::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::UserRolePermissionGroup
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::UserRolePermissionGroup::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::UserRolePermissionGroup
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -8217,22 +8217,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListUserRolePermissionGroupsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListUserRolePermissionGroupsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListUserRolePermissionGroupsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListUserRolePermissionGroupsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_user_role_permission_groups(profile_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/userRolePermissionGroups', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListUserRolePermissionGroupsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListUserRolePermissionGroupsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListUserRolePermissionGroupsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListUserRolePermissionGroupsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -8254,22 +8254,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::UserRolePermission] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::UserRolePermission] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::UserRolePermission]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::UserRolePermission]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_user_role_permission(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/userRolePermissions/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::UserRolePermission::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::UserRolePermission
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::UserRolePermission::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::UserRolePermission
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -8292,22 +8292,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListUserRolePermissionsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListUserRolePermissionsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListUserRolePermissionsResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListUserRolePermissionsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_user_role_permissions(profile_id, ids: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/userRolePermissions', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListUserRolePermissionsResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListUserRolePermissionsResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListUserRolePermissionsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListUserRolePermissionsResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['ids'] = ids unless ids.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -8330,7 +8330,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -8339,9 +8339,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_user_role(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'userprofiles/{profileId}/userRoles/{id}', options)
           command.params['profileId'] = profile_id unless profile_id.nil?
@@ -8366,22 +8366,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::UserRole] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::UserRole] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::UserRole]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::UserRole]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_user_role(profile_id, id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/userRoles/{id}', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::UserRole::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::UserRole
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::UserRole::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::UserRole
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -8393,7 +8393,7 @@ module Google
         # Inserts a new user role.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::UserRole] user_role_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::UserRole] user_role_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -8403,24 +8403,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::UserRole] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::UserRole] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::UserRole]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::UserRole]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_user_role(profile_id, user_role_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'userprofiles/{profileId}/userRoles', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::UserRole::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::UserRole::Representation
           command.request_object = user_role_object
-          command.response_representation = Google::Apis::DfareportingV2_1::UserRole::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::UserRole
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::UserRole::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::UserRole
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -8462,22 +8462,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::ListUserRolesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::ListUserRolesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::ListUserRolesResponse]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::ListUserRolesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_user_roles(profile_id, account_user_role_only: nil, ids: nil, max_results: nil, page_token: nil, search_string: nil, sort_field: nil, sort_order: nil, subaccount_id: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'userprofiles/{profileId}/userRoles', options)
-          command.response_representation = Google::Apis::DfareportingV2_1::ListUserRolesResponse::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::ListUserRolesResponse
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::ListUserRolesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::ListUserRolesResponse
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['accountUserRoleOnly'] = account_user_role_only unless account_user_role_only.nil?
           command.query['ids'] = ids unless ids.nil?
@@ -8498,7 +8498,7 @@ module Google
         #   User profile ID associated with this request.
         # @param [String] id
         #   User role ID.
-        # @param [Google::Apis::DfareportingV2_1::UserRole] user_role_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::UserRole] user_role_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -8508,24 +8508,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::UserRole] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::UserRole] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::UserRole]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::UserRole]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_user_role(profile_id, id, user_role_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'userprofiles/{profileId}/userRoles', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::UserRole::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::UserRole::Representation
           command.request_object = user_role_object
-          command.response_representation = Google::Apis::DfareportingV2_1::UserRole::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::UserRole
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::UserRole::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::UserRole
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -8537,7 +8537,7 @@ module Google
         # Updates an existing user role.
         # @param [String] profile_id
         #   User profile ID associated with this request.
-        # @param [Google::Apis::DfareportingV2_1::UserRole] user_role_object
+        # @param [GoogleAPI::Apis::DfareportingV2_1::UserRole] user_role_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -8547,24 +8547,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DfareportingV2_1::UserRole] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DfareportingV2_1::UserRole] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DfareportingV2_1::UserRole]
+        # @return [GoogleAPI::Apis::DfareportingV2_1::UserRole]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_user_role(profile_id, user_role_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'userprofiles/{profileId}/userRoles', options)
-          command.request_representation = Google::Apis::DfareportingV2_1::UserRole::Representation
+          command.request_representation = GoogleAPI::Apis::DfareportingV2_1::UserRole::Representation
           command.request_object = user_role_object
-          command.response_representation = Google::Apis::DfareportingV2_1::UserRole::Representation
-          command.response_class = Google::Apis::DfareportingV2_1::UserRole
+          command.response_representation = GoogleAPI::Apis::DfareportingV2_1::UserRole::Representation
+          command.response_class = GoogleAPI::Apis::DfareportingV2_1::UserRole
           command.params['profileId'] = profile_id unless profile_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?

@@ -18,110 +18,110 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ContainerV1
       
       class ListClustersResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Cluster
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class NodeConfig
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class MasterAuth
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AddonsConfig
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class HttpLoadBalancing
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class HorizontalPodAutoscaling
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class NodePool
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class CreateClusterRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Operation
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UpdateClusterRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ClusterUpdate
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListOperationsResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ServerConfig
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListNodePoolsResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class CreateNodePoolRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListClustersResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :clusters, as: 'clusters', class: Google::Apis::ContainerV1::Cluster, decorator: Google::Apis::ContainerV1::Cluster::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :clusters, as: 'clusters', class: GoogleAPI::Apis::ContainerV1::Cluster, decorator: GoogleAPI::Apis::ContainerV1::Cluster::Representation
       
           collection :missing_zones, as: 'missingZones'
         end
@@ -129,22 +129,22 @@ module Google
       
       class Cluster
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :name, as: 'name'
           property :description, as: 'description'
           property :initial_node_count, as: 'initialNodeCount'
-          property :node_config, as: 'nodeConfig', class: Google::Apis::ContainerV1::NodeConfig, decorator: Google::Apis::ContainerV1::NodeConfig::Representation
+          property :node_config, as: 'nodeConfig', class: GoogleAPI::Apis::ContainerV1::NodeConfig, decorator: GoogleAPI::Apis::ContainerV1::NodeConfig::Representation
       
-          property :master_auth, as: 'masterAuth', class: Google::Apis::ContainerV1::MasterAuth, decorator: Google::Apis::ContainerV1::MasterAuth::Representation
+          property :master_auth, as: 'masterAuth', class: GoogleAPI::Apis::ContainerV1::MasterAuth, decorator: GoogleAPI::Apis::ContainerV1::MasterAuth::Representation
       
           property :logging_service, as: 'loggingService'
           property :monitoring_service, as: 'monitoringService'
           property :network, as: 'network'
           property :cluster_ipv4_cidr, as: 'clusterIpv4Cidr'
-          property :addons_config, as: 'addonsConfig', class: Google::Apis::ContainerV1::AddonsConfig, decorator: Google::Apis::ContainerV1::AddonsConfig::Representation
+          property :addons_config, as: 'addonsConfig', class: GoogleAPI::Apis::ContainerV1::AddonsConfig, decorator: GoogleAPI::Apis::ContainerV1::AddonsConfig::Representation
       
           property :subnetwork, as: 'subnetwork'
-          collection :node_pools, as: 'nodePools', class: Google::Apis::ContainerV1::NodePool, decorator: Google::Apis::ContainerV1::NodePool::Representation
+          collection :node_pools, as: 'nodePools', class: GoogleAPI::Apis::ContainerV1::NodePool, decorator: GoogleAPI::Apis::ContainerV1::NodePool::Representation
       
           collection :locations, as: 'locations'
           property :self_link, as: 'selfLink'
@@ -165,7 +165,7 @@ module Google
       
       class NodeConfig
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :machine_type, as: 'machineType'
           property :disk_size_gb, as: 'diskSizeGb'
           collection :oauth_scopes, as: 'oauthScopes'
@@ -175,7 +175,7 @@ module Google
       
       class MasterAuth
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :username, as: 'username'
           property :password, as: 'password'
           property :cluster_ca_certificate, as: 'clusterCaCertificate'
@@ -186,33 +186,33 @@ module Google
       
       class AddonsConfig
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :http_load_balancing, as: 'httpLoadBalancing', class: Google::Apis::ContainerV1::HttpLoadBalancing, decorator: Google::Apis::ContainerV1::HttpLoadBalancing::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :http_load_balancing, as: 'httpLoadBalancing', class: GoogleAPI::Apis::ContainerV1::HttpLoadBalancing, decorator: GoogleAPI::Apis::ContainerV1::HttpLoadBalancing::Representation
       
-          property :horizontal_pod_autoscaling, as: 'horizontalPodAutoscaling', class: Google::Apis::ContainerV1::HorizontalPodAutoscaling, decorator: Google::Apis::ContainerV1::HorizontalPodAutoscaling::Representation
+          property :horizontal_pod_autoscaling, as: 'horizontalPodAutoscaling', class: GoogleAPI::Apis::ContainerV1::HorizontalPodAutoscaling, decorator: GoogleAPI::Apis::ContainerV1::HorizontalPodAutoscaling::Representation
       
         end
       end
       
       class HttpLoadBalancing
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :disabled, as: 'disabled'
         end
       end
       
       class HorizontalPodAutoscaling
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :disabled, as: 'disabled'
         end
       end
       
       class NodePool
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :name, as: 'name'
-          property :config, as: 'config', class: Google::Apis::ContainerV1::NodeConfig, decorator: Google::Apis::ContainerV1::NodeConfig::Representation
+          property :config, as: 'config', class: GoogleAPI::Apis::ContainerV1::NodeConfig, decorator: GoogleAPI::Apis::ContainerV1::NodeConfig::Representation
       
           property :initial_node_count, as: 'initialNodeCount'
           property :self_link, as: 'selfLink'
@@ -225,15 +225,15 @@ module Google
       
       class CreateClusterRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :cluster, as: 'cluster', class: Google::Apis::ContainerV1::Cluster, decorator: Google::Apis::ContainerV1::Cluster::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :cluster, as: 'cluster', class: GoogleAPI::Apis::ContainerV1::Cluster, decorator: GoogleAPI::Apis::ContainerV1::Cluster::Representation
       
         end
       end
       
       class Operation
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :name, as: 'name'
           property :zone, as: 'zone'
           property :operation_type, as: 'operationType'
@@ -247,18 +247,18 @@ module Google
       
       class UpdateClusterRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :update, as: 'update', class: Google::Apis::ContainerV1::ClusterUpdate, decorator: Google::Apis::ContainerV1::ClusterUpdate::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :update, as: 'update', class: GoogleAPI::Apis::ContainerV1::ClusterUpdate, decorator: GoogleAPI::Apis::ContainerV1::ClusterUpdate::Representation
       
         end
       end
       
       class ClusterUpdate
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :desired_node_version, as: 'desiredNodeVersion'
           property :desired_monitoring_service, as: 'desiredMonitoringService'
-          property :desired_addons_config, as: 'desiredAddonsConfig', class: Google::Apis::ContainerV1::AddonsConfig, decorator: Google::Apis::ContainerV1::AddonsConfig::Representation
+          property :desired_addons_config, as: 'desiredAddonsConfig', class: GoogleAPI::Apis::ContainerV1::AddonsConfig, decorator: GoogleAPI::Apis::ContainerV1::AddonsConfig::Representation
       
           property :desired_node_pool_id, as: 'desiredNodePoolId'
           property :desired_master_version, as: 'desiredMasterVersion'
@@ -267,8 +267,8 @@ module Google
       
       class ListOperationsResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :operations, as: 'operations', class: Google::Apis::ContainerV1::Operation, decorator: Google::Apis::ContainerV1::Operation::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :operations, as: 'operations', class: GoogleAPI::Apis::ContainerV1::Operation, decorator: GoogleAPI::Apis::ContainerV1::Operation::Representation
       
           collection :missing_zones, as: 'missingZones'
         end
@@ -276,7 +276,7 @@ module Google
       
       class ServerConfig
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :default_cluster_version, as: 'defaultClusterVersion'
           collection :valid_node_versions, as: 'validNodeVersions'
           property :default_image_family, as: 'defaultImageFamily'
@@ -286,16 +286,16 @@ module Google
       
       class ListNodePoolsResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :node_pools, as: 'nodePools', class: Google::Apis::ContainerV1::NodePool, decorator: Google::Apis::ContainerV1::NodePool::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :node_pools, as: 'nodePools', class: GoogleAPI::Apis::ContainerV1::NodePool, decorator: GoogleAPI::Apis::ContainerV1::NodePool::Representation
       
         end
       end
       
       class CreateNodePoolRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :node_pool, as: 'nodePool', class: Google::Apis::ContainerV1::NodePool, decorator: Google::Apis::ContainerV1::NodePool::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :node_pool, as: 'nodePool', class: GoogleAPI::Apis::ContainerV1::NodePool, decorator: GoogleAPI::Apis::ContainerV1::NodePool::Representation
       
         end
       end

@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ReplicapoolV1beta2
       # Google Compute Engine Instance Group Manager API
@@ -28,11 +28,11 @@ module Google
       # @example
       #    require 'google/apis/replicapool_v1beta2'
       #
-      #    Replicapool = Google::Apis::ReplicapoolV1beta2 # Alias the module
+      #    Replicapool = GoogleAPI::Apis::ReplicapoolV1beta2 # Alias the module
       #    service = Replicapool::ReplicapoolService.new
       #
       # @see https://developers.google.com/compute/docs/instance-groups/manager/v1beta2
-      class ReplicapoolService < Google::Apis::Core::BaseService
+      class ReplicapoolService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -61,7 +61,7 @@ module Google
         #   The name of the zone in which the instance group manager resides.
         # @param [String] instance_group_manager
         #   The name of the instance group manager.
-        # @param [Google::Apis::ReplicapoolV1beta2::AbandonInstancesRequest] abandon_instances_request_object
+        # @param [GoogleAPI::Apis::ReplicapoolV1beta2::AbandonInstancesRequest] abandon_instances_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -71,24 +71,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ReplicapoolV1beta2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ReplicapoolV1beta2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ReplicapoolV1beta2::Operation]
+        # @return [GoogleAPI::Apis::ReplicapoolV1beta2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def abandon_instances(project, zone, instance_group_manager, abandon_instances_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/abandonInstances', options)
-          command.request_representation = Google::Apis::ReplicapoolV1beta2::AbandonInstancesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ReplicapoolV1beta2::AbandonInstancesRequest::Representation
           command.request_object = abandon_instances_request_object
-          command.response_representation = Google::Apis::ReplicapoolV1beta2::Operation::Representation
-          command.response_class = Google::Apis::ReplicapoolV1beta2::Operation
+          command.response_representation = GoogleAPI::Apis::ReplicapoolV1beta2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ReplicapoolV1beta2::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroupManager'] = instance_group_manager unless instance_group_manager.nil?
@@ -116,22 +116,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ReplicapoolV1beta2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ReplicapoolV1beta2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ReplicapoolV1beta2::Operation]
+        # @return [GoogleAPI::Apis::ReplicapoolV1beta2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_instance_group_manager(project, zone, instance_group_manager, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}', options)
-          command.response_representation = Google::Apis::ReplicapoolV1beta2::Operation::Representation
-          command.response_class = Google::Apis::ReplicapoolV1beta2::Operation
+          command.response_representation = GoogleAPI::Apis::ReplicapoolV1beta2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ReplicapoolV1beta2::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroupManager'] = instance_group_manager unless instance_group_manager.nil?
@@ -151,7 +151,7 @@ module Google
         #   The name of the zone in which the instance group manager resides.
         # @param [String] instance_group_manager
         #   The name of the instance group manager.
-        # @param [Google::Apis::ReplicapoolV1beta2::DeleteInstancesRequest] delete_instances_request_object
+        # @param [GoogleAPI::Apis::ReplicapoolV1beta2::DeleteInstancesRequest] delete_instances_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -161,24 +161,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ReplicapoolV1beta2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ReplicapoolV1beta2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ReplicapoolV1beta2::Operation]
+        # @return [GoogleAPI::Apis::ReplicapoolV1beta2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_instances(project, zone, instance_group_manager, delete_instances_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/deleteInstances', options)
-          command.request_representation = Google::Apis::ReplicapoolV1beta2::DeleteInstancesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ReplicapoolV1beta2::DeleteInstancesRequest::Representation
           command.request_object = delete_instances_request_object
-          command.response_representation = Google::Apis::ReplicapoolV1beta2::Operation::Representation
-          command.response_class = Google::Apis::ReplicapoolV1beta2::Operation
+          command.response_representation = GoogleAPI::Apis::ReplicapoolV1beta2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ReplicapoolV1beta2::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroupManager'] = instance_group_manager unless instance_group_manager.nil?
@@ -204,22 +204,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ReplicapoolV1beta2::InstanceGroupManager] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ReplicapoolV1beta2::InstanceGroupManager] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ReplicapoolV1beta2::InstanceGroupManager]
+        # @return [GoogleAPI::Apis::ReplicapoolV1beta2::InstanceGroupManager]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_instance_group_manager(project, zone, instance_group_manager, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}', options)
-          command.response_representation = Google::Apis::ReplicapoolV1beta2::InstanceGroupManager::Representation
-          command.response_class = Google::Apis::ReplicapoolV1beta2::InstanceGroupManager
+          command.response_representation = GoogleAPI::Apis::ReplicapoolV1beta2::InstanceGroupManager::Representation
+          command.response_class = GoogleAPI::Apis::ReplicapoolV1beta2::InstanceGroupManager
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroupManager'] = instance_group_manager unless instance_group_manager.nil?
@@ -237,7 +237,7 @@ module Google
         #   The name of the zone in which the instance group manager resides.
         # @param [Fixnum] size
         #   Number of instances that should exist.
-        # @param [Google::Apis::ReplicapoolV1beta2::InstanceGroupManager] instance_group_manager_object
+        # @param [GoogleAPI::Apis::ReplicapoolV1beta2::InstanceGroupManager] instance_group_manager_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -247,24 +247,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ReplicapoolV1beta2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ReplicapoolV1beta2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ReplicapoolV1beta2::Operation]
+        # @return [GoogleAPI::Apis::ReplicapoolV1beta2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_instance_group_manager(project, zone, size, instance_group_manager_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroupManagers', options)
-          command.request_representation = Google::Apis::ReplicapoolV1beta2::InstanceGroupManager::Representation
+          command.request_representation = GoogleAPI::Apis::ReplicapoolV1beta2::InstanceGroupManager::Representation
           command.request_object = instance_group_manager_object
-          command.response_representation = Google::Apis::ReplicapoolV1beta2::Operation::Representation
-          command.response_class = Google::Apis::ReplicapoolV1beta2::Operation
+          command.response_representation = GoogleAPI::Apis::ReplicapoolV1beta2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ReplicapoolV1beta2::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['size'] = size unless size.nil?
@@ -297,22 +297,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ReplicapoolV1beta2::InstanceGroupManagerList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ReplicapoolV1beta2::InstanceGroupManagerList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ReplicapoolV1beta2::InstanceGroupManagerList]
+        # @return [GoogleAPI::Apis::ReplicapoolV1beta2::InstanceGroupManagerList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_instance_group_managers(project, zone, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/instanceGroupManagers', options)
-          command.response_representation = Google::Apis::ReplicapoolV1beta2::InstanceGroupManagerList::Representation
-          command.response_class = Google::Apis::ReplicapoolV1beta2::InstanceGroupManagerList
+          command.response_representation = GoogleAPI::Apis::ReplicapoolV1beta2::InstanceGroupManagerList::Representation
+          command.response_class = GoogleAPI::Apis::ReplicapoolV1beta2::InstanceGroupManagerList
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -332,7 +332,7 @@ module Google
         #   The name of the zone in which the instance group manager resides.
         # @param [String] instance_group_manager
         #   The name of the instance group manager.
-        # @param [Google::Apis::ReplicapoolV1beta2::RecreateInstancesRequest] recreate_instances_request_object
+        # @param [GoogleAPI::Apis::ReplicapoolV1beta2::RecreateInstancesRequest] recreate_instances_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -342,24 +342,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ReplicapoolV1beta2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ReplicapoolV1beta2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ReplicapoolV1beta2::Operation]
+        # @return [GoogleAPI::Apis::ReplicapoolV1beta2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def recreate_instances(project, zone, instance_group_manager, recreate_instances_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/recreateInstances', options)
-          command.request_representation = Google::Apis::ReplicapoolV1beta2::RecreateInstancesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ReplicapoolV1beta2::RecreateInstancesRequest::Representation
           command.request_object = recreate_instances_request_object
-          command.response_representation = Google::Apis::ReplicapoolV1beta2::Operation::Representation
-          command.response_class = Google::Apis::ReplicapoolV1beta2::Operation
+          command.response_representation = GoogleAPI::Apis::ReplicapoolV1beta2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ReplicapoolV1beta2::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroupManager'] = instance_group_manager unless instance_group_manager.nil?
@@ -389,22 +389,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ReplicapoolV1beta2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ReplicapoolV1beta2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ReplicapoolV1beta2::Operation]
+        # @return [GoogleAPI::Apis::ReplicapoolV1beta2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def resize_instance(project, zone, instance_group_manager, size, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resize', options)
-          command.response_representation = Google::Apis::ReplicapoolV1beta2::Operation::Representation
-          command.response_class = Google::Apis::ReplicapoolV1beta2::Operation
+          command.response_representation = GoogleAPI::Apis::ReplicapoolV1beta2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ReplicapoolV1beta2::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroupManager'] = instance_group_manager unless instance_group_manager.nil?
@@ -423,7 +423,7 @@ module Google
         #   The name of the zone in which the instance group manager resides.
         # @param [String] instance_group_manager
         #   The name of the instance group manager.
-        # @param [Google::Apis::ReplicapoolV1beta2::SetInstanceTemplateRequest] set_instance_template_request_object
+        # @param [GoogleAPI::Apis::ReplicapoolV1beta2::SetInstanceTemplateRequest] set_instance_template_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -433,24 +433,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ReplicapoolV1beta2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ReplicapoolV1beta2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ReplicapoolV1beta2::Operation]
+        # @return [GoogleAPI::Apis::ReplicapoolV1beta2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_instance_template(project, zone, instance_group_manager, set_instance_template_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/setInstanceTemplate', options)
-          command.request_representation = Google::Apis::ReplicapoolV1beta2::SetInstanceTemplateRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ReplicapoolV1beta2::SetInstanceTemplateRequest::Representation
           command.request_object = set_instance_template_request_object
-          command.response_representation = Google::Apis::ReplicapoolV1beta2::Operation::Representation
-          command.response_class = Google::Apis::ReplicapoolV1beta2::Operation
+          command.response_representation = GoogleAPI::Apis::ReplicapoolV1beta2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ReplicapoolV1beta2::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroupManager'] = instance_group_manager unless instance_group_manager.nil?
@@ -468,7 +468,7 @@ module Google
         #   The name of the zone in which the instance group manager resides.
         # @param [String] instance_group_manager
         #   The name of the instance group manager.
-        # @param [Google::Apis::ReplicapoolV1beta2::SetTargetPoolsRequest] set_target_pools_request_object
+        # @param [GoogleAPI::Apis::ReplicapoolV1beta2::SetTargetPoolsRequest] set_target_pools_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -478,24 +478,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ReplicapoolV1beta2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ReplicapoolV1beta2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ReplicapoolV1beta2::Operation]
+        # @return [GoogleAPI::Apis::ReplicapoolV1beta2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_target_pools(project, zone, instance_group_manager, set_target_pools_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/setTargetPools', options)
-          command.request_representation = Google::Apis::ReplicapoolV1beta2::SetTargetPoolsRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ReplicapoolV1beta2::SetTargetPoolsRequest::Representation
           command.request_object = set_target_pools_request_object
-          command.response_representation = Google::Apis::ReplicapoolV1beta2::Operation::Representation
-          command.response_class = Google::Apis::ReplicapoolV1beta2::Operation
+          command.response_representation = GoogleAPI::Apis::ReplicapoolV1beta2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ReplicapoolV1beta2::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['instanceGroupManager'] = instance_group_manager unless instance_group_manager.nil?
@@ -521,22 +521,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ReplicapoolV1beta2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ReplicapoolV1beta2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ReplicapoolV1beta2::Operation]
+        # @return [GoogleAPI::Apis::ReplicapoolV1beta2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_zone_operation(project, zone, operation, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/operations/{operation}', options)
-          command.response_representation = Google::Apis::ReplicapoolV1beta2::Operation::Representation
-          command.response_class = Google::Apis::ReplicapoolV1beta2::Operation
+          command.response_representation = GoogleAPI::Apis::ReplicapoolV1beta2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ReplicapoolV1beta2::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['operation'] = operation unless operation.nil?
@@ -568,22 +568,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ReplicapoolV1beta2::OperationList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ReplicapoolV1beta2::OperationList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ReplicapoolV1beta2::OperationList]
+        # @return [GoogleAPI::Apis::ReplicapoolV1beta2::OperationList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_zone_operations(project, zone, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/operations', options)
-          command.response_representation = Google::Apis::ReplicapoolV1beta2::OperationList::Representation
-          command.response_class = Google::Apis::ReplicapoolV1beta2::OperationList
+          command.response_representation = GoogleAPI::Apis::ReplicapoolV1beta2::OperationList::Representation
+          command.response_class = GoogleAPI::Apis::ReplicapoolV1beta2::OperationList
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['filter'] = filter unless filter.nil?

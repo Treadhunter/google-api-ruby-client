@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module GenomicsV1beta2
       
       # The read group set align request.
       class AlignReadGroupSetsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The BAM source files for alignment. Exactly one of readGroupSetId,
         # bamSourceUris, interleavedFastqSource or pairedFastqSource must be provided.
@@ -41,12 +41,12 @@ module Google
       
         # Describes an interleaved FASTQ file source for alignment.
         # Corresponds to the JSON property `interleavedFastqSource`
-        # @return [Google::Apis::GenomicsV1beta2::InterleavedFastqSource]
+        # @return [GoogleAPI::Apis::GenomicsV1beta2::InterleavedFastqSource]
         attr_accessor :interleaved_fastq_source
       
         # Describes a paired-end FASTQ file source for alignment.
         # Corresponds to the JSON property `pairedFastqSource`
-        # @return [Google::Apis::GenomicsV1beta2::PairedFastqSource]
+        # @return [GoogleAPI::Apis::GenomicsV1beta2::PairedFastqSource]
         attr_accessor :paired_fastq_source
       
         # The ID of the read group set which will be aligned. A new read group set will
@@ -74,7 +74,7 @@ module Google
       
       # The read group set align response.
       class AlignReadGroupSetsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A job ID that can be used to get status information.
         # Corresponds to the JSON property `jobId`
@@ -98,7 +98,7 @@ module Google
       # sample or individual (though a client could choose to use annotations in this
       # way). Example canonical annotation types are 'Gene' and 'Variant'.
       class Annotation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the containing annotation set.
         # Corresponds to the JSON property `annotationSetId`
@@ -123,13 +123,13 @@ module Google
         # A 0-based half-open genomic coordinate range over a reference sequence, for
         # representing the position of a genomic resource.
         # Corresponds to the JSON property `position`
-        # @return [Google::Apis::GenomicsV1beta2::RangePosition]
+        # @return [GoogleAPI::Apis::GenomicsV1beta2::RangePosition]
         attr_accessor :position
       
         # A transcript represents the assertion that a particular region of the
         # reference genome may be transcribed as RNA.
         # Corresponds to the JSON property `transcript`
-        # @return [Google::Apis::GenomicsV1beta2::Transcript]
+        # @return [GoogleAPI::Apis::GenomicsV1beta2::Transcript]
         attr_accessor :transcript
       
         # The data type for this annotation. Must match the containing annotation set's
@@ -140,7 +140,7 @@ module Google
       
         # A Variant annotation.
         # Corresponds to the JSON property `variant`
-        # @return [Google::Apis::GenomicsV1beta2::VariantAnnotation]
+        # @return [GoogleAPI::Apis::GenomicsV1beta2::VariantAnnotation]
         attr_accessor :variant
       
         def initialize(**args)
@@ -164,7 +164,7 @@ module Google
       # type information and provenance. Examples of annotation sets include 'all
       # genes from refseq', and 'all variant annotations from ClinVar'.
       class AnnotationSet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the containing dataset.
         # Corresponds to the JSON property `datasetId`
@@ -221,12 +221,12 @@ module Google
       
       # 
       class BatchAnnotationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The resulting per-annotation entries, ordered consistently with the original
         # request.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::GenomicsV1beta2::BatchAnnotationsResponseEntry>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::BatchAnnotationsResponseEntry>]
         attr_accessor :entries
       
         def initialize(**args)
@@ -241,7 +241,7 @@ module Google
       
       # 
       class BatchAnnotationsResponseEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An annotation describes a region of reference genome. The value of an
         # annotation may be one of several canonical types, supplemented by arbitrary
@@ -250,12 +250,12 @@ module Google
         # sample or individual (though a client could choose to use annotations in this
         # way). Example canonical annotation types are 'Gene' and 'Variant'.
         # Corresponds to the JSON property `annotation`
-        # @return [Google::Apis::GenomicsV1beta2::Annotation]
+        # @return [GoogleAPI::Apis::GenomicsV1beta2::Annotation]
         attr_accessor :annotation
       
         # 
         # Corresponds to the JSON property `status`
-        # @return [Google::Apis::GenomicsV1beta2::BatchAnnotationsResponseEntryStatus]
+        # @return [GoogleAPI::Apis::GenomicsV1beta2::BatchAnnotationsResponseEntryStatus]
         attr_accessor :status
       
         def initialize(**args)
@@ -271,7 +271,7 @@ module Google
       
       # 
       class BatchAnnotationsResponseEntryStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The HTTP status code for this operation.
         # Corresponds to the JSON property `code`
@@ -296,12 +296,12 @@ module Google
       
       # 
       class BatchCreateAnnotationsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The annotations to be created. At most 4096 can be specified in a single
         # request.
         # Corresponds to the JSON property `annotations`
-        # @return [Array<Google::Apis::GenomicsV1beta2::Annotation>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::Annotation>]
         attr_accessor :annotations
       
         def initialize(**args)
@@ -319,7 +319,7 @@ module Google
       # For example, a call might assign a probability of 0.32 to the occurrence of a
       # SNP named rs1234 in a call set with the name NA12345.
       class Call
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the call set this variant call belongs to.
         # Corresponds to the JSON property `callSetId`
@@ -384,7 +384,7 @@ module Google
       
       # The read group set call request.
       class CallReadGroupSetsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Required. The ID of the dataset the called variants will belong to. The caller
         # must have WRITE permissions to this dataset.
@@ -420,7 +420,7 @@ module Google
       
       # The read group set call response.
       class CallReadGroupSetsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A job ID that can be used to get status information.
         # Corresponds to the JSON property `jobId`
@@ -440,7 +440,7 @@ module Google
       # A call set is a collection of variant calls, typically for one sample. It
       # belongs to a variant set.
       class CallSet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The date this call set was created in milliseconds from the epoch.
         # Corresponds to the JSON property `created`
@@ -489,7 +489,7 @@ module Google
       
       # A single CIGAR operation.
       class CigarUnit
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `operation`
@@ -523,7 +523,7 @@ module Google
       # A bucket over which read coverage has been precomputed. A bucket corresponds
       # to a specific range of the reference sequence.
       class CoverageBucket
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The average number of reads which are aligned to each individual reference
         # base in this bucket.
@@ -533,7 +533,7 @@ module Google
       
         # A 0-based half-open genomic coordinate range over a reference sequence.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::GenomicsV1beta2::Range]
+        # @return [GoogleAPI::Apis::GenomicsV1beta2::Range]
         attr_accessor :range
       
         def initialize(**args)
@@ -549,7 +549,7 @@ module Google
       
       # A Dataset is a collection of genomic data.
       class Dataset
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The time this dataset was created, in seconds from the epoch.
         # Corresponds to the JSON property `createTime`
@@ -594,7 +594,7 @@ module Google
       
       # The job creation request.
       class ExperimentalCreateJobRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Specifies whether or not to run the alignment pipeline. Either align or
         # callVariants must be set.
@@ -653,7 +653,7 @@ module Google
       
       # The job creation response.
       class ExperimentalCreateJobResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A job ID that can be used to get status information.
         # Corresponds to the JSON property `jobId`
@@ -672,7 +672,7 @@ module Google
       
       # The read group set export request.
       class ExportReadGroupSetsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Required. A Google Cloud Storage URI for the exported BAM file. The currently
         # authenticated user must have write access to the new file. An error will be
@@ -713,7 +713,7 @@ module Google
       
       # The read group set export response.
       class ExportReadGroupSetsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A job ID that can be used to get status information.
         # Corresponds to the JSON property `jobId`
@@ -732,7 +732,7 @@ module Google
       
       # The variant data export request.
       class ExportVariantSetRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Required. The BigQuery dataset to export data to. This dataset must already
         # exist. Note that this is distinct from the Genomics concept of "dataset".
@@ -780,7 +780,7 @@ module Google
       
       # The variant data export response.
       class ExportVariantSetResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A job ID that can be used to get status information.
         # Corresponds to the JSON property `jobId`
@@ -799,7 +799,7 @@ module Google
       
       # 
       class ExternalId
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The id used by the source of this data.
         # Corresponds to the JSON property `id`
@@ -824,7 +824,7 @@ module Google
       
       # 
       class FastqMetadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Optionally specifies the library name for alignment from FASTQ.
         # Corresponds to the JSON property `libraryName`
@@ -869,7 +869,7 @@ module Google
       
       # The read group set import request.
       class ImportReadGroupSetsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Required. The ID of the dataset these read group sets will belong to. The
         # caller must have WRITE permissions to this dataset.
@@ -911,7 +911,7 @@ module Google
       
       # The read group set import response.
       class ImportReadGroupSetsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A job ID that can be used to get status information.
         # Corresponds to the JSON property `jobId`
@@ -930,7 +930,7 @@ module Google
       
       # The variant data import request.
       class ImportVariantsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The format of the variant data being imported. If unspecified, defaults to to "
         # VCF".
@@ -970,7 +970,7 @@ module Google
       
       # The variant data import response.
       class ImportVariantsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A job ID that can be used to get status information.
         # Corresponds to the JSON property `jobId`
@@ -990,7 +990,7 @@ module Google
       # Wrapper message for `int32`.
       # The JSON representation for `Int32Value` is JSON number.
       class Int32Value
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The int32 value.
         # Corresponds to the JSON property `value`
@@ -1009,12 +1009,12 @@ module Google
       
       # Describes an interleaved FASTQ file source for alignment.
       class InterleavedFastqSource
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Optionally specifies the metadata to be associated with the final aligned read
         # group set.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::GenomicsV1beta2::FastqMetadata]
+        # @return [GoogleAPI::Apis::GenomicsV1beta2::FastqMetadata]
         attr_accessor :metadata
       
         # A list of URIs pointing at interleaved FASTQ files in Google Cloud Storage
@@ -1037,7 +1037,7 @@ module Google
       # A Job represents an ongoing process that can be monitored for status
       # information.
       class Job
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The date this job was created, in milliseconds from the epoch.
         # Corresponds to the JSON property `created`
@@ -1072,7 +1072,7 @@ module Google
       
         # A summary representation of the service request that spawned the job.
         # Corresponds to the JSON property `request`
-        # @return [Google::Apis::GenomicsV1beta2::JobRequest]
+        # @return [GoogleAPI::Apis::GenomicsV1beta2::JobRequest]
         attr_accessor :request
       
         # The status of this job.
@@ -1105,7 +1105,7 @@ module Google
       
       # A summary representation of the service request that spawned the job.
       class JobRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The data destination of the request, for example, a Google BigQuery Table or
         # Dataset ID.
@@ -1138,7 +1138,7 @@ module Google
       
       # Used to hold basic key value information.
       class KeyValue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A string which maps to an array of values.
         # Corresponds to the JSON property `key`
@@ -1164,12 +1164,12 @@ module Google
       # A linear alignment can be represented by one CIGAR string. Describes the
       # mapped position and local alignment of the read to the reference.
       class LinearAlignment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Represents the local alignment of this sequence (alignment matches, indels,
         # etc) against the reference.
         # Corresponds to the JSON property `cigar`
-        # @return [Array<Google::Apis::GenomicsV1beta2::CigarUnit>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::CigarUnit>]
         attr_accessor :cigar
       
         # The mapping quality of this alignment. Represents how likely the read maps to
@@ -1183,7 +1183,7 @@ module Google
         # name, a base number on that reference (0-based), and a determination of
         # forward or reverse strand.
         # Corresponds to the JSON property `position`
-        # @return [Google::Apis::GenomicsV1beta2::Position]
+        # @return [GoogleAPI::Apis::GenomicsV1beta2::Position]
         attr_accessor :position
       
         def initialize(**args)
@@ -1200,7 +1200,7 @@ module Google
       
       # 
       class ListBasesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The continuation token, which is used to page through large result sets.
         # Provide this value in a subsequent request to return the next page of results.
@@ -1234,7 +1234,7 @@ module Google
       
       # 
       class ListCoverageBucketsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The length of each coverage bucket in base pairs. Note that buckets at the end
         # of a reference sequence may be shorter. This value is omitted if the bucket
@@ -1248,7 +1248,7 @@ module Google
         # reference sequence. Each bucket has width bucketWidth, unless its end is the
         # end of the reference sequence.
         # Corresponds to the JSON property `coverageBuckets`
-        # @return [Array<Google::Apis::GenomicsV1beta2::CoverageBucket>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::CoverageBucket>]
         attr_accessor :coverage_buckets
       
         # The continuation token, which is used to page through large result sets.
@@ -1272,11 +1272,11 @@ module Google
       
       # The dataset list response.
       class ListDatasetsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of matching Datasets.
         # Corresponds to the JSON property `datasets`
-        # @return [Array<Google::Apis::GenomicsV1beta2::Dataset>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::Dataset>]
         attr_accessor :datasets
       
         # The continuation token, which is used to page through large result sets.
@@ -1299,11 +1299,11 @@ module Google
       
       # 
       class MergeVariantsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The variants to be merged with existing variants.
         # Corresponds to the JSON property `variants`
-        # @return [Array<Google::Apis::GenomicsV1beta2::Variant>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::Variant>]
         attr_accessor :variants
       
         def initialize(**args)
@@ -1320,7 +1320,7 @@ module Google
       # a top level key and either a single value string (value) or a list of key-
       # value pairs (info.) Value and info are mutually exclusive.
       class Metadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A textual description of this metadata.
         # Corresponds to the JSON property `description`
@@ -1378,7 +1378,7 @@ module Google
       
       # Describes a paired-end FASTQ file source for alignment.
       class PairedFastqSource
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of URIs pointing at paired end FASTQ files in Google Cloud Storage
         # which will be aligned. The first of each paired file should be specified here,
@@ -1393,7 +1393,7 @@ module Google
         # Optionally specifies the metadata to be associated with the final aligned read
         # group set.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::GenomicsV1beta2::FastqMetadata]
+        # @return [GoogleAPI::Apis::GenomicsV1beta2::FastqMetadata]
         attr_accessor :metadata
       
         # A list of URIs pointing at paired end FASTQ files in Google Cloud Storage
@@ -1423,7 +1423,7 @@ module Google
       # name, a base number on that reference (0-based), and a determination of
       # forward or reverse strand.
       class Position
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The 0-based offset from the start of the forward strand for that reference.
         # Corresponds to the JSON property `position`
@@ -1456,7 +1456,7 @@ module Google
       
       # A 0-based half-open genomic coordinate range for search requests.
       class QueryRange
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The end position of the range on the reference, 0-based exclusive. If
         # specified, referenceId or referenceName must also be specified. If unset or 0,
@@ -1498,7 +1498,7 @@ module Google
       
       # A 0-based half-open genomic coordinate range over a reference sequence.
       class Range
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The end position of the range on the reference, 0-based exclusive. If
         # specified, referenceName must also be specified.
@@ -1532,7 +1532,7 @@ module Google
       # A 0-based half-open genomic coordinate range over a reference sequence, for
       # representing the position of a genomic resource.
       class RangePosition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The end position of the range on the reference, 0-based exclusive.
         # Corresponds to the JSON property `end`
@@ -1600,7 +1600,7 @@ module Google
       # SEQUENCE_MISMATCH": "X", ` cigarStr = "" for c in read.alignment.cigar `
       # cigarStr += c.operationLength + cigarMap[c.operation] ` return cigarStr
       class Read
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The quality of the read sequence contained in this alignment record.
         # alignedSequence and alignedQuality may be shorter than the full read sequence
@@ -1625,7 +1625,7 @@ module Google
         # A linear alignment can be represented by one CIGAR string. Describes the
         # mapped position and local alignment of the read to the reference.
         # Corresponds to the JSON property `alignment`
-        # @return [Google::Apis::GenomicsV1beta2::LinearAlignment]
+        # @return [GoogleAPI::Apis::GenomicsV1beta2::LinearAlignment]
         attr_accessor :alignment
       
         # The fragment is a PCR or optical duplicate (SAM flag 0x400)
@@ -1666,7 +1666,7 @@ module Google
         # name, a base number on that reference (0-based), and a determination of
         # forward or reverse strand.
         # Corresponds to the JSON property `nextMatePosition`
-        # @return [Google::Apis::GenomicsV1beta2::Position]
+        # @return [GoogleAPI::Apis::GenomicsV1beta2::Position]
         attr_accessor :next_mate_position
       
         # The number of reads in the fragment (extension to SAM flag 0x1).
@@ -1753,7 +1753,7 @@ module Google
       
       # A read group is all the data that's processed the same way by the sequencer.
       class ReadGroup
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the dataset this read group belongs to.
         # Corresponds to the JSON property `datasetId`
@@ -1767,7 +1767,7 @@ module Google
       
         # The experiment used to generate this read group.
         # Corresponds to the JSON property `experiment`
-        # @return [Google::Apis::GenomicsV1beta2::ReadGroupExperiment]
+        # @return [GoogleAPI::Apis::GenomicsV1beta2::ReadGroupExperiment]
         attr_accessor :experiment
       
         # The generated unique read group ID. Note: This is different than the @RG ID
@@ -1796,7 +1796,7 @@ module Google
         # for all read groups within a read group set. For this reason, only the first
         # read group in a returned set will have this field populated.
         # Corresponds to the JSON property `programs`
-        # @return [Array<Google::Apis::GenomicsV1beta2::ReadGroupProgram>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::ReadGroupProgram>]
         attr_accessor :programs
       
         # The reference set the reads in this read group are aligned to. Required if
@@ -1833,7 +1833,7 @@ module Google
       
       # 
       class ReadGroupExperiment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The instrument model used as part of this experiment. This maps to sequencing
         # technology in BAM.
@@ -1874,7 +1874,7 @@ module Google
       
       # 
       class ReadGroupProgram
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The command line used to run this program.
         # Corresponds to the JSON property `commandLine`
@@ -1923,7 +1923,7 @@ module Google
       # - A read group belongs to one read group set.
       # - A read belongs to one read group.
       class ReadGroupSet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The dataset ID.
         # Corresponds to the JSON property `datasetId`
@@ -1954,7 +1954,7 @@ module Google
         # The read groups in this set. There are typically 1-10 read groups in a read
         # group set.
         # Corresponds to the JSON property `readGroups`
-        # @return [Array<Google::Apis::GenomicsV1beta2::ReadGroup>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::ReadGroup>]
         attr_accessor :read_groups
       
         # The reference set the reads in this read group set are aligned to.
@@ -1983,7 +1983,7 @@ module Google
       # might represent the human chromosome 1 or mitochandrial DNA, for instance. A
       # reference belongs to one or more reference sets.
       class Reference
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The Google generated immutable ID of the reference.
         # Corresponds to the JSON property `id`
@@ -2044,7 +2044,7 @@ module Google
       # ReferenceBound records an upper bound for the starting coordinate of variants
       # in a particular reference.
       class ReferenceBound
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The reference the bound is associate with.
         # Corresponds to the JSON property `referenceName`
@@ -2074,7 +2074,7 @@ module Google
       # reference-aligned experimental data. A reference set contains 1 or more
       # references.
       class ReferenceSet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Public id of this reference set, such as GRCh37.
         # Corresponds to the JSON property `assemblyId`
@@ -2145,7 +2145,7 @@ module Google
       
       # 
       class SearchAnnotationSetsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The dataset IDs to search within. Caller must have READ access to these
         # datasets.
@@ -2200,11 +2200,11 @@ module Google
       
       # 
       class SearchAnnotationSetsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The matching annotation sets.
         # Corresponds to the JSON property `annotationSets`
-        # @return [Array<Google::Apis::GenomicsV1beta2::AnnotationSet>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::AnnotationSet>]
         attr_accessor :annotation_sets
       
         # The continuation token, which is used to page through large result sets.
@@ -2227,7 +2227,7 @@ module Google
       
       # 
       class SearchAnnotationsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The annotation sets to search within. The caller must have READ access to
         # these annotation sets. Required. All queried annotation sets must have the
@@ -2251,7 +2251,7 @@ module Google
       
         # A 0-based half-open genomic coordinate range for search requests.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::GenomicsV1beta2::QueryRange]
+        # @return [GoogleAPI::Apis::GenomicsV1beta2::QueryRange]
         attr_accessor :range
       
         def initialize(**args)
@@ -2269,11 +2269,11 @@ module Google
       
       # 
       class SearchAnnotationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The matching annotations.
         # Corresponds to the JSON property `annotations`
-        # @return [Array<Google::Apis::GenomicsV1beta2::Annotation>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::Annotation>]
         attr_accessor :annotations
       
         # The continuation token, which is used to page through large result sets.
@@ -2296,7 +2296,7 @@ module Google
       
       # The call set search request.
       class SearchCallSetsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Only return call sets for which a substring of the name matches this string.
         # Corresponds to the JSON property `name`
@@ -2336,11 +2336,11 @@ module Google
       
       # The call set search response.
       class SearchCallSetsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of matching call sets.
         # Corresponds to the JSON property `callSets`
-        # @return [Array<Google::Apis::GenomicsV1beta2::CallSet>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::CallSet>]
         attr_accessor :call_sets
       
         # The continuation token, which is used to page through large result sets.
@@ -2363,7 +2363,7 @@ module Google
       
       # The jobs search request.
       class SearchJobsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If specified, only jobs created on or after this date, given in milliseconds
         # since Unix epoch, will be returned.
@@ -2418,11 +2418,11 @@ module Google
       
       # The job search response.
       class SearchJobsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of jobs results, ordered newest to oldest.
         # Corresponds to the JSON property `jobs`
-        # @return [Array<Google::Apis::GenomicsV1beta2::Job>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::Job>]
         attr_accessor :jobs
       
         # The continuation token which is used to page through large result sets.
@@ -2445,7 +2445,7 @@ module Google
       
       # The read group set search request.
       class SearchReadGroupSetsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Restricts this query to read group sets within the given datasets. At least
         # one ID must be provided.
@@ -2487,7 +2487,7 @@ module Google
       
       # The read group set search response.
       class SearchReadGroupSetsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The continuation token, which is used to page through large result sets.
         # Provide this value in a subsequent request to return the next page of results.
@@ -2498,7 +2498,7 @@ module Google
       
         # The list of matching read group sets.
         # Corresponds to the JSON property `readGroupSets`
-        # @return [Array<Google::Apis::GenomicsV1beta2::ReadGroupSet>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::ReadGroupSet>]
         attr_accessor :read_group_sets
       
         def initialize(**args)
@@ -2514,7 +2514,7 @@ module Google
       
       # The read search request.
       class SearchReadsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The end position of the range on the reference, 0-based exclusive. If
         # specified, referenceName must also be specified.
@@ -2580,14 +2580,14 @@ module Google
       
       # The read search response.
       class SearchReadsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of matching alignments sorted by mapped genomic coordinate, if any,
         # ascending in position within the same reference. Unmapped reads, which have no
         # position, are returned last and are further sorted in ascending lexicographic
         # order by fragment name.
         # Corresponds to the JSON property `alignments`
-        # @return [Array<Google::Apis::GenomicsV1beta2::Read>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::Read>]
         attr_accessor :alignments
       
         # The continuation token, which is used to page through large result sets.
@@ -2610,7 +2610,7 @@ module Google
       
       # 
       class SearchReferenceSetsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If present, return references for which the accession matches any of these
         # strings. Best to give a version number, for example GCF_000001405.26. If only
@@ -2661,7 +2661,7 @@ module Google
       
       # 
       class SearchReferenceSetsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The continuation token, which is used to page through large result sets.
         # Provide this value in a subsequent request to return the next page of results.
@@ -2672,7 +2672,7 @@ module Google
       
         # The matching references sets.
         # Corresponds to the JSON property `referenceSets`
-        # @return [Array<Google::Apis::GenomicsV1beta2::ReferenceSet>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::ReferenceSet>]
         attr_accessor :reference_sets
       
         def initialize(**args)
@@ -2688,7 +2688,7 @@ module Google
       
       # 
       class SearchReferencesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If present, return references for which the accession matches this string.
         # Best to give a version number, for example GCF_000001405.26. If only the main
@@ -2738,7 +2738,7 @@ module Google
       
       # 
       class SearchReferencesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The continuation token, which is used to page through large result sets.
         # Provide this value in a subsequent request to return the next page of results.
@@ -2749,7 +2749,7 @@ module Google
       
         # The matching references.
         # Corresponds to the JSON property `references`
-        # @return [Array<Google::Apis::GenomicsV1beta2::Reference>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::Reference>]
         attr_accessor :references
       
         def initialize(**args)
@@ -2765,7 +2765,7 @@ module Google
       
       # The search variant sets request.
       class SearchVariantSetsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Exactly one dataset ID must be provided here. Only variant sets which belong
         # to this dataset will be returned.
@@ -2799,7 +2799,7 @@ module Google
       
       # The search variant sets response.
       class SearchVariantSetsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The continuation token, which is used to page through large result sets.
         # Provide this value in a subsequent request to return the next page of results.
@@ -2810,7 +2810,7 @@ module Google
       
         # The variant sets belonging to the requested dataset.
         # Corresponds to the JSON property `variantSets`
-        # @return [Array<Google::Apis::GenomicsV1beta2::VariantSet>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::VariantSet>]
         attr_accessor :variant_sets
       
         def initialize(**args)
@@ -2826,7 +2826,7 @@ module Google
       
       # The variant search request.
       class SearchVariantsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Only return variant calls which belong to call sets with these ids. Leaving
         # this blank returns all variant calls. If a variant has no calls belonging to
@@ -2904,7 +2904,7 @@ module Google
       
       # The variant search response.
       class SearchVariantsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The continuation token, which is used to page through large result sets.
         # Provide this value in a subsequent request to return the next page of results.
@@ -2915,7 +2915,7 @@ module Google
       
         # The list of matching Variants.
         # Corresponds to the JSON property `variants`
-        # @return [Array<Google::Apis::GenomicsV1beta2::Variant>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::Variant>]
         attr_accessor :variants
       
         def initialize(**args)
@@ -2932,7 +2932,7 @@ module Google
       # A transcript represents the assertion that a particular region of the
       # reference genome may be transcribed as RNA.
       class Transcript
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The range of the coding sequence for this transcript, if any. To determine the
         # exact ranges of coding sequence, intersect this range with those of the exons,
@@ -2944,7 +2944,7 @@ module Google
         # reference reading frame and coding exon reference bases cannot necessarily be
         # concatenated to produce the original transcript mRNA.
         # Corresponds to the JSON property `codingSequence`
-        # @return [Google::Apis::GenomicsV1beta2::TranscriptCodingSequence]
+        # @return [GoogleAPI::Apis::GenomicsV1beta2::TranscriptCodingSequence]
         attr_accessor :coding_sequence
       
         # The exons that compose this transcript. This field should be unset for genomes
@@ -2957,7 +2957,7 @@ module Google
         # coding DNA sequence.
         # Exons are ordered by start position and may not overlap.
         # Corresponds to the JSON property `exons`
-        # @return [Array<Google::Apis::GenomicsV1beta2::TranscriptExon>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::TranscriptExon>]
         attr_accessor :exons
       
         # The annotation ID of the gene from which this transcript is transcribed.
@@ -2979,7 +2979,7 @@ module Google
       
       # 
       class TranscriptCodingSequence
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The end of the coding sequence on this annotation's reference sequence, 0-
         # based exclusive. Note that this position is relative to the reference start,
@@ -3008,7 +3008,7 @@ module Google
       
       # 
       class TranscriptExon
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The end position of the exon on this annotation's reference sequence, 0-based
         # exclusive. Note that this is relative to the reference start, and not the
@@ -3020,7 +3020,7 @@ module Google
         # Wrapper message for `int32`.
         # The JSON representation for `Int32Value` is JSON number.
         # Corresponds to the JSON property `frame`
-        # @return [Google::Apis::GenomicsV1beta2::Int32Value]
+        # @return [GoogleAPI::Apis::GenomicsV1beta2::Int32Value]
         attr_accessor :frame
       
         # The start position of the exon on this annotation's reference sequence, 0-
@@ -3050,7 +3050,7 @@ module Google
       # NA12345. A call belongs to a call set, which contains related calls typically
       # from one sample.
       class Variant
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The bases that appear instead of the reference bases.
         # Corresponds to the JSON property `alternateBases`
@@ -3060,7 +3060,7 @@ module Google
         # The variant calls for this particular variant. Each one represents the
         # determination of genotype with respect to this variant.
         # Corresponds to the JSON property `calls`
-        # @return [Array<Google::Apis::GenomicsV1beta2::Call>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::Call>]
         attr_accessor :calls
       
         # The date this variant was created, in milliseconds from the epoch.
@@ -3147,7 +3147,7 @@ module Google
       
       # A Variant annotation.
       class VariantAnnotation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The alternate allele for this variant. If multiple alternate alleles exist at
         # this location, create a separate variant for each one, as they may represent
@@ -3166,7 +3166,7 @@ module Google
         # The set of conditions associated with this variant. A condition describes the
         # way a variant influences human health.
         # Corresponds to the JSON property `conditions`
-        # @return [Array<Google::Apis::GenomicsV1beta2::VariantAnnotationCondition>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::VariantAnnotationCondition>]
         attr_accessor :conditions
       
         # Effect of the variant on the coding sequence.
@@ -3209,7 +3209,7 @@ module Google
       
       # 
       class VariantAnnotationCondition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The MedGen concept id associated with this gene. Search for these IDs at http:/
         # /www.ncbi.nlm.nih.gov/medgen/
@@ -3219,7 +3219,7 @@ module Google
       
         # The set of external IDs for this condition.
         # Corresponds to the JSON property `externalIds`
-        # @return [Array<Google::Apis::GenomicsV1beta2::ExternalId>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::ExternalId>]
         attr_accessor :external_ids
       
         # A set of names for the condition.
@@ -3248,7 +3248,7 @@ module Google
       # A variant set is a collection of call sets and variants. It contains summary
       # statistics of those contents. A variant set belongs to a dataset.
       class VariantSet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The dataset to which this variant set belongs. Immutable.
         # Corresponds to the JSON property `datasetId`
@@ -3262,13 +3262,13 @@ module Google
       
         # The metadata associated with this variant set.
         # Corresponds to the JSON property `metadata`
-        # @return [Array<Google::Apis::GenomicsV1beta2::Metadata>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::Metadata>]
         attr_accessor :metadata
       
         # A list of all references used by the variants in a variant set with associated
         # coordinate upper bounds for each one.
         # Corresponds to the JSON property `referenceBounds`
-        # @return [Array<Google::Apis::GenomicsV1beta2::ReferenceBound>]
+        # @return [Array<GoogleAPI::Apis::GenomicsV1beta2::ReferenceBound>]
         attr_accessor :reference_bounds
       
         def initialize(**args)

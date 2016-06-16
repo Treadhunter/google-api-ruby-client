@@ -18,115 +18,115 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module DoubleclicksearchV2
       
       class Availability
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Conversion
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ConversionList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class CustomDimension
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class CustomMetric
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Report
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class File
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ReportApiColumnSpec
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ReportRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Filter
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
         
         class OrderBy
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
         
         class ReportScope
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
         
         class TimeRange
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SavedColumn
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SavedColumnList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UpdateAvailabilityRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UpdateAvailabilityResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Availability
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :advertiser_id, as: 'advertiserId'
           property :agency_id, as: 'agencyId'
           property :availability_timestamp, as: 'availabilityTimestamp'
@@ -138,7 +138,7 @@ module Google
       
       class Conversion
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :ad_group_id, as: 'adGroupId'
           property :ad_id, as: 'adId'
           property :advertiser_id, as: 'advertiserId'
@@ -153,9 +153,9 @@ module Google
           property :count_millis, as: 'countMillis'
           property :criterion_id, as: 'criterionId'
           property :currency_code, as: 'currencyCode'
-          collection :custom_dimension, as: 'customDimension', class: Google::Apis::DoubleclicksearchV2::CustomDimension, decorator: Google::Apis::DoubleclicksearchV2::CustomDimension::Representation
+          collection :custom_dimension, as: 'customDimension', class: GoogleAPI::Apis::DoubleclicksearchV2::CustomDimension, decorator: GoogleAPI::Apis::DoubleclicksearchV2::CustomDimension::Representation
       
-          collection :custom_metric, as: 'customMetric', class: Google::Apis::DoubleclicksearchV2::CustomMetric, decorator: Google::Apis::DoubleclicksearchV2::CustomMetric::Representation
+          collection :custom_metric, as: 'customMetric', class: GoogleAPI::Apis::DoubleclicksearchV2::CustomMetric, decorator: GoogleAPI::Apis::DoubleclicksearchV2::CustomMetric::Representation
       
           property :device_type, as: 'deviceType'
           property :ds_conversion_id, as: 'dsConversionId'
@@ -179,8 +179,8 @@ module Google
       
       class ConversionList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :conversion, as: 'conversion', class: Google::Apis::DoubleclicksearchV2::Conversion, decorator: Google::Apis::DoubleclicksearchV2::Conversion::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :conversion, as: 'conversion', class: GoogleAPI::Apis::DoubleclicksearchV2::Conversion, decorator: GoogleAPI::Apis::DoubleclicksearchV2::Conversion::Representation
       
           property :kind, as: 'kind'
         end
@@ -188,7 +188,7 @@ module Google
       
       class CustomDimension
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :name, as: 'name'
           property :value, as: 'value'
         end
@@ -196,7 +196,7 @@ module Google
       
       class CustomMetric
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :name, as: 'name'
           property :value, as: 'value'
         end
@@ -204,13 +204,13 @@ module Google
       
       class Report
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :files, as: 'files', class: Google::Apis::DoubleclicksearchV2::Report::File, decorator: Google::Apis::DoubleclicksearchV2::Report::File::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :files, as: 'files', class: GoogleAPI::Apis::DoubleclicksearchV2::Report::File, decorator: GoogleAPI::Apis::DoubleclicksearchV2::Report::File::Representation
       
           property :id, as: 'id'
           property :is_report_ready, as: 'isReportReady'
           property :kind, as: 'kind'
-          property :request, as: 'request', class: Google::Apis::DoubleclicksearchV2::ReportRequest, decorator: Google::Apis::DoubleclicksearchV2::ReportRequest::Representation
+          property :request, as: 'request', class: GoogleAPI::Apis::DoubleclicksearchV2::ReportRequest, decorator: GoogleAPI::Apis::DoubleclicksearchV2::ReportRequest::Representation
       
           property :row_count, as: 'rowCount'
           collection :rows, as: 'rows'
@@ -220,7 +220,7 @@ module Google
         
         class File
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :byte_count, as: 'byteCount'
             property :url, as: 'url'
           end
@@ -229,7 +229,7 @@ module Google
       
       class ReportApiColumnSpec
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :column_name, as: 'columnName'
           property :custom_dimension_name, as: 'customDimensionName'
           property :custom_metric_name, as: 'customMetricName'
@@ -245,32 +245,32 @@ module Google
       
       class ReportRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :columns, as: 'columns', class: Google::Apis::DoubleclicksearchV2::ReportApiColumnSpec, decorator: Google::Apis::DoubleclicksearchV2::ReportApiColumnSpec::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :columns, as: 'columns', class: GoogleAPI::Apis::DoubleclicksearchV2::ReportApiColumnSpec, decorator: GoogleAPI::Apis::DoubleclicksearchV2::ReportApiColumnSpec::Representation
       
           property :download_format, as: 'downloadFormat'
-          collection :filters, as: 'filters', class: Google::Apis::DoubleclicksearchV2::ReportRequest::Filter, decorator: Google::Apis::DoubleclicksearchV2::ReportRequest::Filter::Representation
+          collection :filters, as: 'filters', class: GoogleAPI::Apis::DoubleclicksearchV2::ReportRequest::Filter, decorator: GoogleAPI::Apis::DoubleclicksearchV2::ReportRequest::Filter::Representation
       
           property :include_deleted_entities, as: 'includeDeletedEntities'
           property :include_removed_entities, as: 'includeRemovedEntities'
           property :max_rows_per_file, as: 'maxRowsPerFile'
-          collection :order_by, as: 'orderBy', class: Google::Apis::DoubleclicksearchV2::ReportRequest::OrderBy, decorator: Google::Apis::DoubleclicksearchV2::ReportRequest::OrderBy::Representation
+          collection :order_by, as: 'orderBy', class: GoogleAPI::Apis::DoubleclicksearchV2::ReportRequest::OrderBy, decorator: GoogleAPI::Apis::DoubleclicksearchV2::ReportRequest::OrderBy::Representation
       
-          property :report_scope, as: 'reportScope', class: Google::Apis::DoubleclicksearchV2::ReportRequest::ReportScope, decorator: Google::Apis::DoubleclicksearchV2::ReportRequest::ReportScope::Representation
+          property :report_scope, as: 'reportScope', class: GoogleAPI::Apis::DoubleclicksearchV2::ReportRequest::ReportScope, decorator: GoogleAPI::Apis::DoubleclicksearchV2::ReportRequest::ReportScope::Representation
       
           property :report_type, as: 'reportType'
           property :row_count, as: 'rowCount'
           property :start_row, as: 'startRow'
           property :statistics_currency, as: 'statisticsCurrency'
-          property :time_range, as: 'timeRange', class: Google::Apis::DoubleclicksearchV2::ReportRequest::TimeRange, decorator: Google::Apis::DoubleclicksearchV2::ReportRequest::TimeRange::Representation
+          property :time_range, as: 'timeRange', class: GoogleAPI::Apis::DoubleclicksearchV2::ReportRequest::TimeRange, decorator: GoogleAPI::Apis::DoubleclicksearchV2::ReportRequest::TimeRange::Representation
       
           property :verify_single_time_zone, as: 'verifySingleTimeZone'
         end
         
         class Filter
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
-            property :column, as: 'column', class: Google::Apis::DoubleclicksearchV2::ReportApiColumnSpec, decorator: Google::Apis::DoubleclicksearchV2::ReportApiColumnSpec::Representation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+            property :column, as: 'column', class: GoogleAPI::Apis::DoubleclicksearchV2::ReportApiColumnSpec, decorator: GoogleAPI::Apis::DoubleclicksearchV2::ReportApiColumnSpec::Representation
         
             property :operator, as: 'operator'
             collection :values, as: 'values'
@@ -279,8 +279,8 @@ module Google
         
         class OrderBy
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
-            property :column, as: 'column', class: Google::Apis::DoubleclicksearchV2::ReportApiColumnSpec, decorator: Google::Apis::DoubleclicksearchV2::ReportApiColumnSpec::Representation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+            property :column, as: 'column', class: GoogleAPI::Apis::DoubleclicksearchV2::ReportApiColumnSpec, decorator: GoogleAPI::Apis::DoubleclicksearchV2::ReportApiColumnSpec::Representation
         
             property :sort_order, as: 'sortOrder'
           end
@@ -288,7 +288,7 @@ module Google
         
         class ReportScope
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :ad_group_id, as: 'adGroupId'
             property :ad_id, as: 'adId'
             property :advertiser_id, as: 'advertiserId'
@@ -301,7 +301,7 @@ module Google
         
         class TimeRange
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :changed_attributes_since_timestamp, as: 'changedAttributesSinceTimestamp', type: DateTime
         
             property :changed_metrics_since_timestamp, as: 'changedMetricsSinceTimestamp', type: DateTime
@@ -314,7 +314,7 @@ module Google
       
       class SavedColumn
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
           property :saved_column_name, as: 'savedColumnName'
           property :type, as: 'type'
@@ -323,8 +323,8 @@ module Google
       
       class SavedColumnList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :items, as: 'items', class: Google::Apis::DoubleclicksearchV2::SavedColumn, decorator: Google::Apis::DoubleclicksearchV2::SavedColumn::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :items, as: 'items', class: GoogleAPI::Apis::DoubleclicksearchV2::SavedColumn, decorator: GoogleAPI::Apis::DoubleclicksearchV2::SavedColumn::Representation
       
           property :kind, as: 'kind'
         end
@@ -332,16 +332,16 @@ module Google
       
       class UpdateAvailabilityRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :availabilities, as: 'availabilities', class: Google::Apis::DoubleclicksearchV2::Availability, decorator: Google::Apis::DoubleclicksearchV2::Availability::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :availabilities, as: 'availabilities', class: GoogleAPI::Apis::DoubleclicksearchV2::Availability, decorator: GoogleAPI::Apis::DoubleclicksearchV2::Availability::Representation
       
         end
       end
       
       class UpdateAvailabilityResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :availabilities, as: 'availabilities', class: Google::Apis::DoubleclicksearchV2::Availability, decorator: Google::Apis::DoubleclicksearchV2::Availability::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :availabilities, as: 'availabilities', class: GoogleAPI::Apis::DoubleclicksearchV2::Availability, decorator: GoogleAPI::Apis::DoubleclicksearchV2::Availability::Representation
       
         end
       end

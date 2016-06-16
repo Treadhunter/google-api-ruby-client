@@ -32,7 +32,7 @@ require 'google/apis/core/upload'
 require 'google/apis/core/download'
 require 'addressable/uri'
 require 'securerandom'
-module Google
+module GoogleAPI
   module Apis
     module Core
       # Wrapper request for batching multiple calls in a single server request
@@ -53,9 +53,9 @@ module Google
         ##
         # Add a new call to the batch request.
         #
-        # @param [Google::Apis::Core::HttpCommand] call API Request to add
+        # @param [GoogleAPI::Apis::Core::HttpCommand] call API Request to add
         # @yield [result, err] Result & error when response available
-        # @return [Google::Apis::Core::BatchCommand] self
+        # @return [GoogleAPI::Apis::Core::BatchCommand] self
         def add(call, &block)
           ensure_valid_command(call)
           @calls << [call, block]
@@ -101,7 +101,7 @@ module Google
 
         # Encode the batch request
         # @return [void]
-        # @raise [Google::Apis::BatchError] if batch is empty
+        # @raise [GoogleAPI::Apis::BatchError] if batch is empty
         def prepare!
           fail BatchError, 'Cannot make an empty batch request' if @calls.empty?
 
@@ -121,10 +121,10 @@ module Google
         end
 
         def ensure_valid_command(command)
-          if command.is_a?(Google::Apis::Core::BaseUploadCommand) || command.is_a?(Google::Apis::Core::DownloadCommand)
-            fail Google::Apis::ClientError, 'Can not include media requests in batch'
+          if command.is_a?(GoogleAPI::Apis::Core::BaseUploadCommand) || command.is_a?(GoogleAPI::Apis::Core::DownloadCommand)
+            fail GoogleAPI::Apis::ClientError, 'Can not include media requests in batch'
           end
-          fail Google::Apis::ClientError, 'Invalid command object' unless command.is_a?(HttpCommand)
+          fail GoogleAPI::Apis::ClientError, 'Invalid command object' unless command.is_a?(HttpCommand)
         end
 
         def id_to_header(call_id)
@@ -142,8 +142,8 @@ module Google
       # Wrapper request for batching multiple uploads in a single server request
       class BatchUploadCommand < BatchCommand
         def ensure_valid_command(command)
-          fail Google::Apis::ClientError, 'Can only include upload commands in batch' \
-            unless command.is_a?(Google::Apis::Core::BaseUploadCommand)
+          fail GoogleAPI::Apis::ClientError, 'Can only include upload commands in batch' \
+            unless command.is_a?(GoogleAPI::Apis::Core::BaseUploadCommand)
         end
 
         def prepare!
@@ -160,7 +160,7 @@ module Google
         ##
         # Serialize a single batched call for assembling the multipart message
         #
-        # @param [Google::Apis::Core::HttpCommand] call
+        # @param [GoogleAPI::Apis::Core::HttpCommand] call
         #   the call to serialize.
         # @return [Hurley::UploadIO]
         #   the serialized request

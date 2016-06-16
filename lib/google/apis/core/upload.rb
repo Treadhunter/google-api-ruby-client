@@ -20,7 +20,7 @@ require 'addressable/uri'
 require 'mime-types'
 require 'tempfile'
 
-module Google
+module GoogleAPI
   module Apis
     module Core
       # Extension of Hurley's UploadIO to add length accessor
@@ -38,7 +38,7 @@ module Google
         #  Path to file
         # @param [String] content_type
         #  Optional content type. If nil, will attempt to auto-detect
-        # @return [Google::Apis::Core::UploadIO]
+        # @return [GoogleAPI::Apis::Core::UploadIO]
         def self.from_file(file_name, content_type: nil)
           if content_type.nil?
             type = MIME::Types.of(file_name)
@@ -52,7 +52,7 @@ module Google
         #  IO to wrap
         # @param [String] content_type
         #  Optional content type.
-        # @return [Google::Apis::Core::UploadIO]
+        # @return [GoogleAPI::Apis::Core::UploadIO]
         def self.from_io(io, content_type: OCTET_STREAM_CONTENT_TYPE)
           new(io, content_type)
         end
@@ -74,13 +74,13 @@ module Google
         attr_accessor :upload_content_type
 
         # Content, as UploadIO
-        # @return [Google::Apis::Core::UploadIO]
+        # @return [GoogleAPI::Apis::Core::UploadIO]
         attr_accessor :upload_io
 
-        # Ensure the content is readable and wrapped in an {{Google::Apis::Core::UploadIO}} instance.
+        # Ensure the content is readable and wrapped in an {{GoogleAPI::Apis::Core::UploadIO}} instance.
         #
         # @return [void]
-        # @raise [Google::Apis::ClientError] if upload source is invalid
+        # @raise [GoogleAPI::Apis::ClientError] if upload source is invalid
         def prepare!
           super
           if streamable?(upload_source)
@@ -90,7 +90,7 @@ module Google
             self.upload_io = UploadIO.from_file(upload_source, content_type: upload_content_type)
             @close_io_on_finish = true
           else
-            fail Google::Apis::ClientError, 'Invalid upload source'
+            fail GoogleAPI::Apis::ClientError, 'Invalid upload source'
           end
         end
 
@@ -110,10 +110,10 @@ module Google
       class RawUploadCommand < BaseUploadCommand
         RAW_PROTOCOL = 'raw'
 
-        # Ensure the content is readable and wrapped in an {{Google::Apis::Core::UploadIO}} instance.
+        # Ensure the content is readable and wrapped in an {{GoogleAPI::Apis::Core::UploadIO}} instance.
         #
         # @return [void]
-        # @raise [Google::Apis::ClientError] if upload source is invalid
+        # @raise [GoogleAPI::Apis::ClientError] if upload source is invalid
         def prepare!
           super
           self.body = upload_io
@@ -131,7 +131,7 @@ module Google
         # Encode the multipart request
         #
         # @return [void]
-        # @raise [Google::Apis::ClientError] if upload source is invalid
+        # @raise [GoogleAPI::Apis::ClientError] if upload source is invalid
         def prepare!
           super
           @multipart = Multipart.new(boundary: UPLOAD_BOUNDARY, content_type: MULTIPART_RELATED)
@@ -161,7 +161,7 @@ module Google
         # Reset upload to initial state.
         #
         # @return [void]
-        # @raise [Google::Apis::ClientError] if upload source is invalid
+        # @raise [GoogleAPI::Apis::ClientError] if upload source is invalid
         def prepare!
           @state = :start
           @upload_url = nil
@@ -179,9 +179,9 @@ module Google
         #  Response body
         # @return [Object]
         #   Response object
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def process_response(status, header, body)
           @offset = Integer(header[BYTES_RECEIVED_HEADER]) if header.key?(BYTES_RECEIVED_HEADER)
           @upload_url = header[UPLOAD_URL_HEADER] if header.key?(UPLOAD_URL_HEADER)
@@ -193,7 +193,7 @@ module Google
             @state = :final
           elsif upload_status == STATUS_CANCELLED
             @state = :cancelled
-            fail Google::Apis::ClientError, body
+            fail GoogleAPI::Apis::ClientError, body
           end
           super(status, header, body)
         end
@@ -203,7 +203,7 @@ module Google
         # @param [Hurley::Client] client
         #   HTTP client
         # @return [Hurley::Response]
-        # @raise [Google::Apis::ServerError] Unable to send the request
+        # @raise [GoogleAPI::Apis::ServerError] Unable to send the request
         def send_start_command(client)
           logger.debug { sprintf('Sending upload start command to %s', url) }
           client.send(method, url, body) do |req|
@@ -214,7 +214,7 @@ module Google
             req.header[UPLOAD_CONTENT_TYPE_HEADER] = upload_io.content_type
           end
         rescue => e
-          raise Google::Apis::ServerError, e.message
+          raise GoogleAPI::Apis::ServerError, e.message
         end
 
         # Query for the status of an incomplete upload
@@ -222,7 +222,7 @@ module Google
         # @param [Hurley::Client] client
         #   HTTP client
         # @return [Hurley::Response]
-        # @raise [Google::Apis::ServerError] Unable to send the request
+        # @raise [GoogleAPI::Apis::ServerError] Unable to send the request
         def send_query_command(client)
           logger.debug { sprintf('Sending upload query command to %s', @upload_url) }
           client.post(@upload_url, nil) do |req|
@@ -236,7 +236,7 @@ module Google
         # @param [Hurley::Client] client
         #   HTTP client
         # @return [Hurley::Response]
-        # @raise [Google::Apis::ServerError] Unable to send the request
+        # @raise [GoogleAPI::Apis::ServerError] Unable to send the request
         def send_upload_command(client)
           logger.debug { sprintf('Sending upload command to %s', @upload_url) }
           content = upload_io
@@ -256,9 +256,9 @@ module Google
         #   HTTP client
         # @yield [result, err] Result or error if block supplied
         # @return [Object]
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def execute_once(client, &block)
           case @state
           when :start

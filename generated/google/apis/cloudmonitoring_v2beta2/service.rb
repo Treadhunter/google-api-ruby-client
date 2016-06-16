@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CloudmonitoringV2beta2
       # Cloud Monitoring API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/cloudmonitoring_v2beta2'
       #
-      #    Cloudmonitoring = Google::Apis::CloudmonitoringV2beta2 # Alias the module
+      #    Cloudmonitoring = GoogleAPI::Apis::CloudmonitoringV2beta2 # Alias the module
       #    service = Cloudmonitoring::CloudMonitoringService.new
       #
       # @see https://cloud.google.com/monitoring/v2beta2/
-      class CloudMonitoringService < Google::Apis::Core::BaseService
+      class CloudMonitoringService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -56,7 +56,7 @@ module Google
         # @param [String] project
         #   The project id. The value can be the numeric project ID or string-based
         #   project name.
-        # @param [Google::Apis::CloudmonitoringV2beta2::MetricDescriptor] metric_descriptor_object
+        # @param [GoogleAPI::Apis::CloudmonitoringV2beta2::MetricDescriptor] metric_descriptor_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -66,24 +66,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudmonitoringV2beta2::MetricDescriptor] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudmonitoringV2beta2::MetricDescriptor] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudmonitoringV2beta2::MetricDescriptor]
+        # @return [GoogleAPI::Apis::CloudmonitoringV2beta2::MetricDescriptor]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_metric_descriptor(project, metric_descriptor_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/metricDescriptors', options)
-          command.request_representation = Google::Apis::CloudmonitoringV2beta2::MetricDescriptor::Representation
+          command.request_representation = GoogleAPI::Apis::CloudmonitoringV2beta2::MetricDescriptor::Representation
           command.request_object = metric_descriptor_object
-          command.response_representation = Google::Apis::CloudmonitoringV2beta2::MetricDescriptor::Representation
-          command.response_class = Google::Apis::CloudmonitoringV2beta2::MetricDescriptor
+          command.response_representation = GoogleAPI::Apis::CloudmonitoringV2beta2::MetricDescriptor::Representation
+          command.response_class = GoogleAPI::Apis::CloudmonitoringV2beta2::MetricDescriptor
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -105,22 +105,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudmonitoringV2beta2::DeleteMetricDescriptorResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudmonitoringV2beta2::DeleteMetricDescriptorResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudmonitoringV2beta2::DeleteMetricDescriptorResponse]
+        # @return [GoogleAPI::Apis::CloudmonitoringV2beta2::DeleteMetricDescriptorResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_metric_descriptor(project, metric, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/metricDescriptors/{metric}', options)
-          command.response_representation = Google::Apis::CloudmonitoringV2beta2::DeleteMetricDescriptorResponse::Representation
-          command.response_class = Google::Apis::CloudmonitoringV2beta2::DeleteMetricDescriptorResponse
+          command.response_representation = GoogleAPI::Apis::CloudmonitoringV2beta2::DeleteMetricDescriptorResponse::Representation
+          command.response_class = GoogleAPI::Apis::CloudmonitoringV2beta2::DeleteMetricDescriptorResponse
           command.params['project'] = project unless project.nil?
           command.params['metric'] = metric unless metric.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -137,7 +137,7 @@ module Google
         # @param [String] project
         #   The project id. The value can be the numeric project ID or string-based
         #   project name.
-        # @param [Google::Apis::CloudmonitoringV2beta2::ListMetricDescriptorsRequest] list_metric_descriptors_request_object
+        # @param [GoogleAPI::Apis::CloudmonitoringV2beta2::ListMetricDescriptorsRequest] list_metric_descriptors_request_object
         # @param [Fixnum] count
         #   Maximum number of metric descriptors per page. Used for pagination. If not
         #   specified, count = 100.
@@ -160,24 +160,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudmonitoringV2beta2::ListMetricDescriptorsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudmonitoringV2beta2::ListMetricDescriptorsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudmonitoringV2beta2::ListMetricDescriptorsResponse]
+        # @return [GoogleAPI::Apis::CloudmonitoringV2beta2::ListMetricDescriptorsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_metric_descriptors(project, list_metric_descriptors_request_object = nil, count: nil, page_token: nil, query: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/metricDescriptors', options)
-          command.request_representation = Google::Apis::CloudmonitoringV2beta2::ListMetricDescriptorsRequest::Representation
+          command.request_representation = GoogleAPI::Apis::CloudmonitoringV2beta2::ListMetricDescriptorsRequest::Representation
           command.request_object = list_metric_descriptors_request_object
-          command.response_representation = Google::Apis::CloudmonitoringV2beta2::ListMetricDescriptorsResponse::Representation
-          command.response_class = Google::Apis::CloudmonitoringV2beta2::ListMetricDescriptorsResponse
+          command.response_representation = GoogleAPI::Apis::CloudmonitoringV2beta2::ListMetricDescriptorsResponse::Representation
+          command.response_class = GoogleAPI::Apis::CloudmonitoringV2beta2::ListMetricDescriptorsResponse
           command.params['project'] = project unless project.nil?
           command.query['count'] = count unless count.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -202,7 +202,7 @@ module Google
         # @param [String] youngest
         #   End of the time interval (inclusive), which is expressed as an RFC 3339
         #   timestamp.
-        # @param [Google::Apis::CloudmonitoringV2beta2::ListTimeseriesRequest] list_timeseries_request_object
+        # @param [GoogleAPI::Apis::CloudmonitoringV2beta2::ListTimeseriesRequest] list_timeseries_request_object
         # @param [String] aggregator
         #   The aggregation function that will reduce the data points in each window to a
         #   single point. This parameter is only valid for non-cumulative metrics with a
@@ -257,24 +257,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudmonitoringV2beta2::ListTimeseriesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudmonitoringV2beta2::ListTimeseriesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudmonitoringV2beta2::ListTimeseriesResponse]
+        # @return [GoogleAPI::Apis::CloudmonitoringV2beta2::ListTimeseriesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_timeseries(project, metric, youngest, list_timeseries_request_object = nil, aggregator: nil, count: nil, labels: nil, oldest: nil, page_token: nil, timespan: nil, window: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/timeseries/{metric}', options)
-          command.request_representation = Google::Apis::CloudmonitoringV2beta2::ListTimeseriesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::CloudmonitoringV2beta2::ListTimeseriesRequest::Representation
           command.request_object = list_timeseries_request_object
-          command.response_representation = Google::Apis::CloudmonitoringV2beta2::ListTimeseriesResponse::Representation
-          command.response_class = Google::Apis::CloudmonitoringV2beta2::ListTimeseriesResponse
+          command.response_representation = GoogleAPI::Apis::CloudmonitoringV2beta2::ListTimeseriesResponse::Representation
+          command.response_class = GoogleAPI::Apis::CloudmonitoringV2beta2::ListTimeseriesResponse
           command.params['project'] = project unless project.nil?
           command.params['metric'] = metric unless metric.nil?
           command.query['aggregator'] = aggregator unless aggregator.nil?
@@ -301,7 +301,7 @@ module Google
         # @param [String] project
         #   The project ID. The value can be the numeric project ID or string-based
         #   project name.
-        # @param [Google::Apis::CloudmonitoringV2beta2::WriteTimeseriesRequest] write_timeseries_request_object
+        # @param [GoogleAPI::Apis::CloudmonitoringV2beta2::WriteTimeseriesRequest] write_timeseries_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -311,24 +311,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudmonitoringV2beta2::WriteTimeseriesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudmonitoringV2beta2::WriteTimeseriesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudmonitoringV2beta2::WriteTimeseriesResponse]
+        # @return [GoogleAPI::Apis::CloudmonitoringV2beta2::WriteTimeseriesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def write_timeseries(project, write_timeseries_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/timeseries:write', options)
-          command.request_representation = Google::Apis::CloudmonitoringV2beta2::WriteTimeseriesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::CloudmonitoringV2beta2::WriteTimeseriesRequest::Representation
           command.request_object = write_timeseries_request_object
-          command.response_representation = Google::Apis::CloudmonitoringV2beta2::WriteTimeseriesResponse::Representation
-          command.response_class = Google::Apis::CloudmonitoringV2beta2::WriteTimeseriesResponse
+          command.response_representation = GoogleAPI::Apis::CloudmonitoringV2beta2::WriteTimeseriesResponse::Representation
+          command.response_class = GoogleAPI::Apis::CloudmonitoringV2beta2::WriteTimeseriesResponse
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -350,7 +350,7 @@ module Google
         # @param [String] youngest
         #   End of the time interval (inclusive), which is expressed as an RFC 3339
         #   timestamp.
-        # @param [Google::Apis::CloudmonitoringV2beta2::ListTimeseriesDescriptorsRequest] list_timeseries_descriptors_request_object
+        # @param [GoogleAPI::Apis::CloudmonitoringV2beta2::ListTimeseriesDescriptorsRequest] list_timeseries_descriptors_request_object
         # @param [String] aggregator
         #   The aggregation function that will reduce the data points in each window to a
         #   single point. This parameter is only valid for non-cumulative metrics with a
@@ -405,24 +405,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudmonitoringV2beta2::ListTimeseriesDescriptorsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudmonitoringV2beta2::ListTimeseriesDescriptorsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudmonitoringV2beta2::ListTimeseriesDescriptorsResponse]
+        # @return [GoogleAPI::Apis::CloudmonitoringV2beta2::ListTimeseriesDescriptorsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_timeseries_descriptors(project, metric, youngest, list_timeseries_descriptors_request_object = nil, aggregator: nil, count: nil, labels: nil, oldest: nil, page_token: nil, timespan: nil, window: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/timeseriesDescriptors/{metric}', options)
-          command.request_representation = Google::Apis::CloudmonitoringV2beta2::ListTimeseriesDescriptorsRequest::Representation
+          command.request_representation = GoogleAPI::Apis::CloudmonitoringV2beta2::ListTimeseriesDescriptorsRequest::Representation
           command.request_object = list_timeseries_descriptors_request_object
-          command.response_representation = Google::Apis::CloudmonitoringV2beta2::ListTimeseriesDescriptorsResponse::Representation
-          command.response_class = Google::Apis::CloudmonitoringV2beta2::ListTimeseriesDescriptorsResponse
+          command.response_representation = GoogleAPI::Apis::CloudmonitoringV2beta2::ListTimeseriesDescriptorsResponse::Representation
+          command.response_class = GoogleAPI::Apis::CloudmonitoringV2beta2::ListTimeseriesDescriptorsResponse
           command.params['project'] = project unless project.nil?
           command.params['metric'] = metric unless metric.nil?
           command.query['aggregator'] = aggregator unless aggregator.nil?

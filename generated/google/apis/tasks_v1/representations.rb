@@ -18,43 +18,43 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module TasksV1
       
       class Task
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Link
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TaskList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TaskLists
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Tasks
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Task
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :completed, as: 'completed', type: DateTime
       
           property :deleted, as: 'deleted'
@@ -64,7 +64,7 @@ module Google
           property :hidden, as: 'hidden'
           property :id, as: 'id'
           property :kind, as: 'kind'
-          collection :links, as: 'links', class: Google::Apis::TasksV1::Task::Link, decorator: Google::Apis::TasksV1::Task::Link::Representation
+          collection :links, as: 'links', class: GoogleAPI::Apis::TasksV1::Task::Link, decorator: GoogleAPI::Apis::TasksV1::Task::Link::Representation
       
           property :notes, as: 'notes'
           property :parent, as: 'parent'
@@ -78,7 +78,7 @@ module Google
         
         class Link
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :description, as: 'description'
             property :link, as: 'link'
             property :type, as: 'type'
@@ -88,7 +88,7 @@ module Google
       
       class TaskList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :etag, as: 'etag'
           property :id, as: 'id'
           property :kind, as: 'kind'
@@ -101,9 +101,9 @@ module Google
       
       class TaskLists
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :etag, as: 'etag'
-          collection :items, as: 'items', class: Google::Apis::TasksV1::TaskList, decorator: Google::Apis::TasksV1::TaskList::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::TasksV1::TaskList, decorator: GoogleAPI::Apis::TasksV1::TaskList::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -112,9 +112,9 @@ module Google
       
       class Tasks
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :etag, as: 'etag'
-          collection :items, as: 'items', class: Google::Apis::TasksV1::Task, decorator: Google::Apis::TasksV1::Task::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::TasksV1::Task, decorator: GoogleAPI::Apis::TasksV1::Task::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'

@@ -17,7 +17,7 @@ require 'google/apis/core/api_command'
 require 'google/apis/errors'
 require 'addressable/uri'
 
-module Google
+module GoogleAPI
   module Apis
     module Core
       # Streaming/resumable media download support
@@ -61,9 +61,9 @@ module Google
         #   HTTP client
         # @yield [result, err] Result or error if block supplied
         # @return [Object]
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def execute_once(client, &block)
           client.get(@download_url || url) do |req|
             apply_request_options(req)

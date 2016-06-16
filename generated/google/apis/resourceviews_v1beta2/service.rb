@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ResourceviewsV1beta2
       # Google Compute Engine Instance Groups API
@@ -28,11 +28,11 @@ module Google
       # @example
       #    require 'google/apis/resourceviews_v1beta2'
       #
-      #    Resourceviews = Google::Apis::ResourceviewsV1beta2 # Alias the module
+      #    Resourceviews = GoogleAPI::Apis::ResourceviewsV1beta2 # Alias the module
       #    service = Resourceviews::ResourceviewsService.new
       #
       # @see https://developers.google.com/compute/
-      class ResourceviewsService < Google::Apis::Core::BaseService
+      class ResourceviewsService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -69,22 +69,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ResourceviewsV1beta2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ResourceviewsV1beta2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ResourceviewsV1beta2::Operation]
+        # @return [GoogleAPI::Apis::ResourceviewsV1beta2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_zone_operation(project, zone, operation, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/operations/{operation}', options)
-          command.response_representation = Google::Apis::ResourceviewsV1beta2::Operation::Representation
-          command.response_class = Google::Apis::ResourceviewsV1beta2::Operation
+          command.response_representation = GoogleAPI::Apis::ResourceviewsV1beta2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ResourceviewsV1beta2::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['operation'] = operation unless operation.nil?
@@ -116,22 +116,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ResourceviewsV1beta2::OperationList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ResourceviewsV1beta2::OperationList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ResourceviewsV1beta2::OperationList]
+        # @return [GoogleAPI::Apis::ResourceviewsV1beta2::OperationList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_zone_operations(project, zone, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/operations', options)
-          command.response_representation = Google::Apis::ResourceviewsV1beta2::OperationList::Representation
-          command.response_class = Google::Apis::ResourceviewsV1beta2::OperationList
+          command.response_representation = GoogleAPI::Apis::ResourceviewsV1beta2::OperationList::Representation
+          command.response_class = GoogleAPI::Apis::ResourceviewsV1beta2::OperationList
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -150,7 +150,7 @@ module Google
         #   The zone name of the resource view.
         # @param [String] resource_view
         #   The name of the resource view.
-        # @param [Google::Apis::ResourceviewsV1beta2::AddResourcesRequest] add_resources_request_object
+        # @param [GoogleAPI::Apis::ResourceviewsV1beta2::AddResourcesRequest] add_resources_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -160,24 +160,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ResourceviewsV1beta2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ResourceviewsV1beta2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ResourceviewsV1beta2::Operation]
+        # @return [GoogleAPI::Apis::ResourceviewsV1beta2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def add_zone_view_resources(project, zone, resource_view, add_resources_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/resourceViews/{resourceView}/addResources', options)
-          command.request_representation = Google::Apis::ResourceviewsV1beta2::AddResourcesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ResourceviewsV1beta2::AddResourcesRequest::Representation
           command.request_object = add_resources_request_object
-          command.response_representation = Google::Apis::ResourceviewsV1beta2::Operation::Representation
-          command.response_class = Google::Apis::ResourceviewsV1beta2::Operation
+          command.response_representation = GoogleAPI::Apis::ResourceviewsV1beta2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ResourceviewsV1beta2::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['resourceView'] = resource_view unless resource_view.nil?
@@ -203,22 +203,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ResourceviewsV1beta2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ResourceviewsV1beta2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ResourceviewsV1beta2::Operation]
+        # @return [GoogleAPI::Apis::ResourceviewsV1beta2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_zone_view(project, zone, resource_view, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/zones/{zone}/resourceViews/{resourceView}', options)
-          command.response_representation = Google::Apis::ResourceviewsV1beta2::Operation::Representation
-          command.response_class = Google::Apis::ResourceviewsV1beta2::Operation
+          command.response_representation = GoogleAPI::Apis::ResourceviewsV1beta2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ResourceviewsV1beta2::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['resourceView'] = resource_view unless resource_view.nil?
@@ -244,22 +244,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ResourceviewsV1beta2::ResourceView] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ResourceviewsV1beta2::ResourceView] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ResourceviewsV1beta2::ResourceView]
+        # @return [GoogleAPI::Apis::ResourceviewsV1beta2::ResourceView]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_zone_view(project, zone, resource_view, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/resourceViews/{resourceView}', options)
-          command.response_representation = Google::Apis::ResourceviewsV1beta2::ResourceView::Representation
-          command.response_class = Google::Apis::ResourceviewsV1beta2::ResourceView
+          command.response_representation = GoogleAPI::Apis::ResourceviewsV1beta2::ResourceView::Representation
+          command.response_class = GoogleAPI::Apis::ResourceviewsV1beta2::ResourceView
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['resourceView'] = resource_view unless resource_view.nil?
@@ -288,22 +288,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ResourceviewsV1beta2::GetServiceResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ResourceviewsV1beta2::GetServiceResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ResourceviewsV1beta2::GetServiceResponse]
+        # @return [GoogleAPI::Apis::ResourceviewsV1beta2::GetServiceResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_zone_view_service(project, zone, resource_view, resource_name: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/resourceViews/{resourceView}/getService', options)
-          command.response_representation = Google::Apis::ResourceviewsV1beta2::GetServiceResponse::Representation
-          command.response_class = Google::Apis::ResourceviewsV1beta2::GetServiceResponse
+          command.response_representation = GoogleAPI::Apis::ResourceviewsV1beta2::GetServiceResponse::Representation
+          command.response_class = GoogleAPI::Apis::ResourceviewsV1beta2::GetServiceResponse
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['resourceView'] = resource_view unless resource_view.nil?
@@ -319,7 +319,7 @@ module Google
         #   The project name of the resource view.
         # @param [String] zone
         #   The zone name of the resource view.
-        # @param [Google::Apis::ResourceviewsV1beta2::ResourceView] resource_view_object
+        # @param [GoogleAPI::Apis::ResourceviewsV1beta2::ResourceView] resource_view_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -329,24 +329,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ResourceviewsV1beta2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ResourceviewsV1beta2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ResourceviewsV1beta2::Operation]
+        # @return [GoogleAPI::Apis::ResourceviewsV1beta2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_zone_view(project, zone, resource_view_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/resourceViews', options)
-          command.request_representation = Google::Apis::ResourceviewsV1beta2::ResourceView::Representation
+          command.request_representation = GoogleAPI::Apis::ResourceviewsV1beta2::ResourceView::Representation
           command.request_object = resource_view_object
-          command.response_representation = Google::Apis::ResourceviewsV1beta2::Operation::Representation
-          command.response_class = Google::Apis::ResourceviewsV1beta2::Operation
+          command.response_representation = GoogleAPI::Apis::ResourceviewsV1beta2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ResourceviewsV1beta2::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -375,22 +375,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ResourceviewsV1beta2::ZoneViewsList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ResourceviewsV1beta2::ZoneViewsList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ResourceviewsV1beta2::ZoneViewsList]
+        # @return [GoogleAPI::Apis::ResourceviewsV1beta2::ZoneViewsList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_zone_views(project, zone, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/resourceViews', options)
-          command.response_representation = Google::Apis::ResourceviewsV1beta2::ZoneViewsList::Representation
-          command.response_class = Google::Apis::ResourceviewsV1beta2::ZoneViewsList
+          command.response_representation = GoogleAPI::Apis::ResourceviewsV1beta2::ZoneViewsList::Representation
+          command.response_class = GoogleAPI::Apis::ResourceviewsV1beta2::ZoneViewsList
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -432,22 +432,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ResourceviewsV1beta2::ListResourcesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ResourceviewsV1beta2::ListResourcesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ResourceviewsV1beta2::ListResourcesResponse]
+        # @return [GoogleAPI::Apis::ResourceviewsV1beta2::ListResourcesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_zone_view_resources(project, zone, resource_view, format: nil, list_state: nil, max_results: nil, page_token: nil, service_name: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/zones/{zone}/resourceViews/{resourceView}/resources', options)
-          command.response_representation = Google::Apis::ResourceviewsV1beta2::ListResourcesResponse::Representation
-          command.response_class = Google::Apis::ResourceviewsV1beta2::ListResourcesResponse
+          command.response_representation = GoogleAPI::Apis::ResourceviewsV1beta2::ListResourcesResponse::Representation
+          command.response_class = GoogleAPI::Apis::ResourceviewsV1beta2::ListResourcesResponse
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['resourceView'] = resource_view unless resource_view.nil?
@@ -469,7 +469,7 @@ module Google
         #   The zone name of the resource view.
         # @param [String] resource_view
         #   The name of the resource view.
-        # @param [Google::Apis::ResourceviewsV1beta2::RemoveResourcesRequest] remove_resources_request_object
+        # @param [GoogleAPI::Apis::ResourceviewsV1beta2::RemoveResourcesRequest] remove_resources_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -479,24 +479,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ResourceviewsV1beta2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ResourceviewsV1beta2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ResourceviewsV1beta2::Operation]
+        # @return [GoogleAPI::Apis::ResourceviewsV1beta2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def remove_zone_view_resources(project, zone, resource_view, remove_resources_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/resourceViews/{resourceView}/removeResources', options)
-          command.request_representation = Google::Apis::ResourceviewsV1beta2::RemoveResourcesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ResourceviewsV1beta2::RemoveResourcesRequest::Representation
           command.request_object = remove_resources_request_object
-          command.response_representation = Google::Apis::ResourceviewsV1beta2::Operation::Representation
-          command.response_class = Google::Apis::ResourceviewsV1beta2::Operation
+          command.response_representation = GoogleAPI::Apis::ResourceviewsV1beta2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ResourceviewsV1beta2::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['resourceView'] = resource_view unless resource_view.nil?
@@ -513,7 +513,7 @@ module Google
         #   The zone name of the resource view.
         # @param [String] resource_view
         #   The name of the resource view.
-        # @param [Google::Apis::ResourceviewsV1beta2::SetServiceRequest] set_service_request_object
+        # @param [GoogleAPI::Apis::ResourceviewsV1beta2::SetServiceRequest] set_service_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -523,24 +523,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ResourceviewsV1beta2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ResourceviewsV1beta2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ResourceviewsV1beta2::Operation]
+        # @return [GoogleAPI::Apis::ResourceviewsV1beta2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_zone_view_service(project, zone, resource_view, set_service_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/zones/{zone}/resourceViews/{resourceView}/setService', options)
-          command.request_representation = Google::Apis::ResourceviewsV1beta2::SetServiceRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ResourceviewsV1beta2::SetServiceRequest::Representation
           command.request_object = set_service_request_object
-          command.response_representation = Google::Apis::ResourceviewsV1beta2::Operation::Representation
-          command.response_class = Google::Apis::ResourceviewsV1beta2::Operation
+          command.response_representation = GoogleAPI::Apis::ResourceviewsV1beta2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ResourceviewsV1beta2::Operation
           command.params['project'] = project unless project.nil?
           command.params['zone'] = zone unless zone.nil?
           command.params['resourceView'] = resource_view unless resource_view.nil?

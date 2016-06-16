@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AndroidpublisherV2
       
       # 
       class Apk
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Represents the binary payload of an APK.
         # Corresponds to the JSON property `binary`
-        # @return [Google::Apis::AndroidpublisherV2::ApkBinary]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ApkBinary]
         attr_accessor :binary
       
         # The version code of the APK, as specified in the APK's manifest file.
@@ -49,7 +49,7 @@ module Google
       
       # Represents the binary payload of an APK.
       class ApkBinary
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A sha1 hash of the APK payload, encoded as a hex string and matching the
         # output of the sha1sum command.
@@ -69,7 +69,7 @@ module Google
       
       # 
       class ApkListing
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The language code, in BCP 47 format (eg "en-US").
         # Corresponds to the JSON property `language`
@@ -94,7 +94,7 @@ module Google
       
       # 
       class ListApkListingsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # androidpublisher#apkListingsListResponse".
@@ -104,7 +104,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `listings`
-        # @return [Array<Google::Apis::AndroidpublisherV2::ApkListing>]
+        # @return [Array<GoogleAPI::Apis::AndroidpublisherV2::ApkListing>]
         attr_accessor :listings
       
         def initialize(**args)
@@ -120,14 +120,14 @@ module Google
       
       # 
       class ApksAddExternallyHostedRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Defines an APK available for this application that is hosted externally and
         # not uploaded to Google Play. This function is only available to enterprises
         # who are using Google Play for Work, and whos application is restricted to the
         # enterprise private channel
         # Corresponds to the JSON property `externallyHostedApk`
-        # @return [Google::Apis::AndroidpublisherV2::ExternallyHostedApk]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ExternallyHostedApk]
         attr_accessor :externally_hosted_apk
       
         def initialize(**args)
@@ -142,14 +142,14 @@ module Google
       
       # 
       class ApksAddExternallyHostedResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Defines an APK available for this application that is hosted externally and
         # not uploaded to Google Play. This function is only available to enterprises
         # who are using Google Play for Work, and whos application is restricted to the
         # enterprise private channel
         # Corresponds to the JSON property `externallyHostedApk`
-        # @return [Google::Apis::AndroidpublisherV2::ExternallyHostedApk]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ExternallyHostedApk]
         attr_accessor :externally_hosted_apk
       
         def initialize(**args)
@@ -164,11 +164,11 @@ module Google
       
       # 
       class ListApksResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `apks`
-        # @return [Array<Google::Apis::AndroidpublisherV2::Apk>]
+        # @return [Array<GoogleAPI::Apis::AndroidpublisherV2::Apk>]
         attr_accessor :apks
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -190,7 +190,7 @@ module Google
       
       # 
       class AppDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The user-visible support email for this app.
         # Corresponds to the JSON property `contactEmail`
@@ -228,7 +228,7 @@ module Google
       # Represents an edit of an app. An edit allows clients to make multiple changes
       # before committing them in one operation.
       class AppEdit
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The time at which the edit will expire and will be no longer valid for use in
         # any subsequent API calls (encoded as seconds since the Epoch).
@@ -254,16 +254,16 @@ module Google
       
       # 
       class Comment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A comment from a developer.
         # Corresponds to the JSON property `developerComment`
-        # @return [Google::Apis::AndroidpublisherV2::DeveloperComment]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::DeveloperComment]
         attr_accessor :developer_comment
       
         # A comment from a user.
         # Corresponds to the JSON property `userComment`
-        # @return [Google::Apis::AndroidpublisherV2::UserComment]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::UserComment]
         attr_accessor :user_comment
       
         def initialize(**args)
@@ -279,11 +279,11 @@ module Google
       
       # 
       class DeveloperComment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The last time at which this comment was updated.
         # Corresponds to the JSON property `lastModified`
-        # @return [Google::Apis::AndroidpublisherV2::Timestamp]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::Timestamp]
         attr_accessor :last_modified
       
         # The content of the comment, i.e. reply body.
@@ -305,7 +305,7 @@ module Google
       # An Entitlement resource indicates a user's current entitlement to an inapp
       # item or subscription.
       class Entitlement
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This kind represents an entitlement object in the androidpublisher service.
         # Corresponds to the JSON property `kind`
@@ -344,21 +344,21 @@ module Google
       
       # 
       class ListEntitlementsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::AndroidpublisherV2::PageInfo]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::PageInfo]
         attr_accessor :page_info
       
         # 
         # Corresponds to the JSON property `resources`
-        # @return [Array<Google::Apis::AndroidpublisherV2::Entitlement>]
+        # @return [Array<GoogleAPI::Apis::AndroidpublisherV2::Entitlement>]
         attr_accessor :resources
       
         # 
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::AndroidpublisherV2::TokenPagination]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::TokenPagination]
         attr_accessor :token_pagination
       
         def initialize(**args)
@@ -375,7 +375,7 @@ module Google
       
       # 
       class ExpansionFile
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If set this field indicates that this APK has an Expansion File uploaded to it:
         # this APK does not reference another APK's Expansion File. The field's value
@@ -403,11 +403,11 @@ module Google
       
       # 
       class UploadExpansionFilesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `expansionFile`
-        # @return [Google::Apis::AndroidpublisherV2::ExpansionFile]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ExpansionFile]
         attr_accessor :expansion_file
       
         def initialize(**args)
@@ -425,7 +425,7 @@ module Google
       # who are using Google Play for Work, and whos application is restricted to the
       # enterprise private channel
       class ExternallyHostedApk
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The application label.
         # Corresponds to the JSON property `applicationLabel`
@@ -490,7 +490,7 @@ module Google
       
         # The permissions requested by this APK.
         # Corresponds to the JSON property `usesPermissions`
-        # @return [Array<Google::Apis::AndroidpublisherV2::ExternallyHostedApkUsesPermission>]
+        # @return [Array<GoogleAPI::Apis::AndroidpublisherV2::ExternallyHostedApkUsesPermission>]
         attr_accessor :uses_permissions
       
         # The version code of this APK.
@@ -529,7 +529,7 @@ module Google
       
       # A permission used by this APK.
       class ExternallyHostedApkUsesPermission
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Optionally, the maximum SDK version for which the permission is required.
         # Corresponds to the JSON property `maxSdkVersion`
@@ -554,7 +554,7 @@ module Google
       
       # 
       class Image
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A unique id representing this image.
         # Corresponds to the JSON property `id`
@@ -585,11 +585,11 @@ module Google
       
       # 
       class DeleteAllImagesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `deleted`
-        # @return [Array<Google::Apis::AndroidpublisherV2::Image>]
+        # @return [Array<GoogleAPI::Apis::AndroidpublisherV2::Image>]
         attr_accessor :deleted
       
         def initialize(**args)
@@ -604,11 +604,11 @@ module Google
       
       # 
       class ListImagesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `images`
-        # @return [Array<Google::Apis::AndroidpublisherV2::Image>]
+        # @return [Array<GoogleAPI::Apis::AndroidpublisherV2::Image>]
         attr_accessor :images
       
         def initialize(**args)
@@ -623,11 +623,11 @@ module Google
       
       # 
       class UploadImagesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `image`
-        # @return [Google::Apis::AndroidpublisherV2::Image]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::Image]
         attr_accessor :image
       
         def initialize(**args)
@@ -642,7 +642,7 @@ module Google
       
       # 
       class InAppProduct
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The default language of the localized data, as defined by BCP 47. e.g. "en-US",
         # "en-GB".
@@ -653,12 +653,12 @@ module Google
         # Default price cannot be zero. In-app products can never be free. Default price
         # is always in the developer's Checkout merchant currency.
         # Corresponds to the JSON property `defaultPrice`
-        # @return [Google::Apis::AndroidpublisherV2::Price]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::Price]
         attr_accessor :default_price
       
         # List of localized title and description data.
         # Corresponds to the JSON property `listings`
-        # @return [Hash<String,Google::Apis::AndroidpublisherV2::InAppProductListing>]
+        # @return [Hash<String,GoogleAPI::Apis::AndroidpublisherV2::InAppProductListing>]
         attr_accessor :listings
       
         # The package name of the parent app.
@@ -669,7 +669,7 @@ module Google
         # Prices per buyer region. None of these prices should be zero. In-app products
         # can never be free.
         # Corresponds to the JSON property `prices`
-        # @return [Hash<String,Google::Apis::AndroidpublisherV2::Price>]
+        # @return [Hash<String,GoogleAPI::Apis::AndroidpublisherV2::Price>]
         attr_accessor :prices
       
         # Purchase type enum value. Unmodifiable after creation.
@@ -680,7 +680,7 @@ module Google
         # Definition of a season for a seasonal subscription. Can be defined only for
         # yearly subscriptions.
         # Corresponds to the JSON property `season`
-        # @return [Google::Apis::AndroidpublisherV2::Season]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::Season]
         attr_accessor :season
       
         # The stock-keeping-unit (SKU) of the product, unique within an app.
@@ -729,7 +729,7 @@ module Google
       
       # 
       class InAppProductListing
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `description`
@@ -754,11 +754,11 @@ module Google
       
       # 
       class InAppProductsBatchRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `entrys`
-        # @return [Array<Google::Apis::AndroidpublisherV2::InAppProductsBatchRequestEntry>]
+        # @return [Array<GoogleAPI::Apis::AndroidpublisherV2::InAppProductsBatchRequestEntry>]
         attr_accessor :entrys
       
         def initialize(**args)
@@ -773,7 +773,7 @@ module Google
       
       # 
       class InAppProductsBatchRequestEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `batchId`
@@ -782,12 +782,12 @@ module Google
       
         # 
         # Corresponds to the JSON property `inappproductsinsertrequest`
-        # @return [Google::Apis::AndroidpublisherV2::InsertInAppProductsRequest]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::InsertInAppProductsRequest]
         attr_accessor :inappproductsinsertrequest
       
         # 
         # Corresponds to the JSON property `inappproductsupdaterequest`
-        # @return [Google::Apis::AndroidpublisherV2::UpdateInAppProductsRequest]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::UpdateInAppProductsRequest]
         attr_accessor :inappproductsupdaterequest
       
         # 
@@ -810,11 +810,11 @@ module Google
       
       # 
       class InAppProductsBatchResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `entrys`
-        # @return [Array<Google::Apis::AndroidpublisherV2::InAppProductsBatchResponseEntry>]
+        # @return [Array<GoogleAPI::Apis::AndroidpublisherV2::InAppProductsBatchResponseEntry>]
         attr_accessor :entrys
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -836,7 +836,7 @@ module Google
       
       # 
       class InAppProductsBatchResponseEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `batchId`
@@ -845,12 +845,12 @@ module Google
       
         # 
         # Corresponds to the JSON property `inappproductsinsertresponse`
-        # @return [Google::Apis::AndroidpublisherV2::InsertInAppProductsResponse]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::InsertInAppProductsResponse]
         attr_accessor :inappproductsinsertresponse
       
         # 
         # Corresponds to the JSON property `inappproductsupdateresponse`
-        # @return [Google::Apis::AndroidpublisherV2::UpdateInAppProductsResponse]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::UpdateInAppProductsResponse]
         attr_accessor :inappproductsupdateresponse
       
         def initialize(**args)
@@ -867,11 +867,11 @@ module Google
       
       # 
       class InsertInAppProductsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `inappproduct`
-        # @return [Google::Apis::AndroidpublisherV2::InAppProduct]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::InAppProduct]
         attr_accessor :inappproduct
       
         def initialize(**args)
@@ -886,11 +886,11 @@ module Google
       
       # 
       class InsertInAppProductsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `inappproduct`
-        # @return [Google::Apis::AndroidpublisherV2::InAppProduct]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::InAppProduct]
         attr_accessor :inappproduct
       
         def initialize(**args)
@@ -905,11 +905,11 @@ module Google
       
       # 
       class ListInAppProductsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `inappproduct`
-        # @return [Array<Google::Apis::AndroidpublisherV2::InAppProduct>]
+        # @return [Array<GoogleAPI::Apis::AndroidpublisherV2::InAppProduct>]
         attr_accessor :inappproduct
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -920,12 +920,12 @@ module Google
       
         # 
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::AndroidpublisherV2::PageInfo]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::PageInfo]
         attr_accessor :page_info
       
         # 
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::AndroidpublisherV2::TokenPagination]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::TokenPagination]
         attr_accessor :token_pagination
       
         def initialize(**args)
@@ -943,11 +943,11 @@ module Google
       
       # 
       class UpdateInAppProductsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `inappproduct`
-        # @return [Google::Apis::AndroidpublisherV2::InAppProduct]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::InAppProduct]
         attr_accessor :inappproduct
       
         def initialize(**args)
@@ -962,11 +962,11 @@ module Google
       
       # 
       class UpdateInAppProductsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `inappproduct`
-        # @return [Google::Apis::AndroidpublisherV2::InAppProduct]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::InAppProduct]
         attr_accessor :inappproduct
       
         def initialize(**args)
@@ -981,7 +981,7 @@ module Google
       
       # 
       class Listing
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Full description of the app; this may be up to 4000 characters in length.
         # Corresponds to the JSON property `fullDescription`
@@ -1025,7 +1025,7 @@ module Google
       
       # 
       class ListListingsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # androidpublisher#listingsListResponse".
@@ -1035,7 +1035,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `listings`
-        # @return [Array<Google::Apis::AndroidpublisherV2::Listing>]
+        # @return [Array<GoogleAPI::Apis::AndroidpublisherV2::Listing>]
         attr_accessor :listings
       
         def initialize(**args)
@@ -1051,7 +1051,7 @@ module Google
       
       # 
       class MonthDay
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Day of a month, value in [1, 31] range. Valid range depends on the specified
         # month.
@@ -1077,7 +1077,7 @@ module Google
       
       # 
       class PageInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `resultPerPage`
@@ -1108,7 +1108,7 @@ module Google
       
       # 
       class Price
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 3 letter Currency code, as defined by ISO 4217.
         # Corresponds to the JSON property `currency`
@@ -1134,7 +1134,7 @@ module Google
       # A ProductPurchase resource indicates the status of a user's inapp product
       # purchase.
       class ProductPurchase
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The consumption state of the inapp product. Possible values are:
         # - Yet to be consumed
@@ -1183,19 +1183,19 @@ module Google
       
       # 
       class Prorate
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Default price cannot be zero and must be less than the full subscription price.
         # Default price is always in the developer's Checkout merchant currency.
         # Targeted countries have their prices set automatically based on the
         # default_price.
         # Corresponds to the JSON property `defaultPrice`
-        # @return [Google::Apis::AndroidpublisherV2::Price]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::Price]
         attr_accessor :default_price
       
         # Defines the first day on which the price takes effect.
         # Corresponds to the JSON property `start`
-        # @return [Google::Apis::AndroidpublisherV2::MonthDay]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::MonthDay]
         attr_accessor :start
       
         def initialize(**args)
@@ -1211,7 +1211,7 @@ module Google
       
       # 
       class Review
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the user who wrote the review.
         # Corresponds to the JSON property `authorName`
@@ -1220,7 +1220,7 @@ module Google
       
         # A repeated field containing comments for the review.
         # Corresponds to the JSON property `comments`
-        # @return [Array<Google::Apis::AndroidpublisherV2::Comment>]
+        # @return [Array<GoogleAPI::Apis::AndroidpublisherV2::Comment>]
         attr_accessor :comments
       
         # Unique identifier for this review.
@@ -1242,11 +1242,11 @@ module Google
       
       # 
       class ReviewReplyResult
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The time at which the reply took effect.
         # Corresponds to the JSON property `lastEdited`
-        # @return [Google::Apis::AndroidpublisherV2::Timestamp]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::Timestamp]
         attr_accessor :last_edited
       
         # The reply text that was applied.
@@ -1267,21 +1267,21 @@ module Google
       
       # 
       class ReviewsListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::AndroidpublisherV2::PageInfo]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::PageInfo]
         attr_accessor :page_info
       
         # 
         # Corresponds to the JSON property `reviews`
-        # @return [Array<Google::Apis::AndroidpublisherV2::Review>]
+        # @return [Array<GoogleAPI::Apis::AndroidpublisherV2::Review>]
         attr_accessor :reviews
       
         # 
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::AndroidpublisherV2::TokenPagination]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::TokenPagination]
         attr_accessor :token_pagination
       
         def initialize(**args)
@@ -1298,7 +1298,7 @@ module Google
       
       # 
       class ReviewsReplyRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The text to set as the reply. Replies of more than approximately 350
         # characters will be rejected. HTML tags will be stripped.
@@ -1318,11 +1318,11 @@ module Google
       
       # 
       class ReviewsReplyResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `result`
-        # @return [Google::Apis::AndroidpublisherV2::ReviewReplyResult]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ReviewReplyResult]
         attr_accessor :result
       
         def initialize(**args)
@@ -1337,23 +1337,23 @@ module Google
       
       # 
       class Season
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Inclusive end date of the recurrence period.
         # Corresponds to the JSON property `end`
-        # @return [Google::Apis::AndroidpublisherV2::MonthDay]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::MonthDay]
         attr_accessor :end
       
         # Optionally present list of prorations for the season. Each proration is a one-
         # off discounted entry into a subscription. Each proration contains the first
         # date on which the discount is available and the new pricing information.
         # Corresponds to the JSON property `prorations`
-        # @return [Array<Google::Apis::AndroidpublisherV2::Prorate>]
+        # @return [Array<GoogleAPI::Apis::AndroidpublisherV2::Prorate>]
         attr_accessor :prorations
       
         # Inclusive start date of the recurrence period.
         # Corresponds to the JSON property `start`
-        # @return [Google::Apis::AndroidpublisherV2::MonthDay]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::MonthDay]
         attr_accessor :start
       
         def initialize(**args)
@@ -1371,7 +1371,7 @@ module Google
       # A SubscriptionDeferralInfo contains the data needed to defer a subscription
       # purchase to a future expiry time.
       class SubscriptionDeferralInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The desired next expiry time for the subscription in milliseconds since Epoch.
         # The given time must be after the current expiry time for the subscription.
@@ -1399,7 +1399,7 @@ module Google
       # A SubscriptionPurchase resource indicates the status of a user's subscription
       # purchase.
       class SubscriptionPurchase
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether the subscription will automatically be renewed when it reaches its
         # current expiry time.
@@ -1486,12 +1486,12 @@ module Google
       
       # 
       class DeferSubscriptionPurchasesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A SubscriptionDeferralInfo contains the data needed to defer a subscription
         # purchase to a future expiry time.
         # Corresponds to the JSON property `deferralInfo`
-        # @return [Google::Apis::AndroidpublisherV2::SubscriptionDeferralInfo]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::SubscriptionDeferralInfo]
         attr_accessor :deferral_info
       
         def initialize(**args)
@@ -1506,7 +1506,7 @@ module Google
       
       # 
       class DeferSubscriptionPurchasesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The new expiry time for the subscription in milliseconds since the Epoch.
         # Corresponds to the JSON property `newExpiryTimeMillis`
@@ -1525,7 +1525,7 @@ module Google
       
       # 
       class Testers
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `googleGroups`
@@ -1550,7 +1550,7 @@ module Google
       
       # 
       class Timestamp
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `nanos`
@@ -1575,7 +1575,7 @@ module Google
       
       # 
       class TokenPagination
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `nextPageToken`
@@ -1600,7 +1600,7 @@ module Google
       
       # 
       class Track
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `track`
@@ -1631,7 +1631,7 @@ module Google
       
       # 
       class ListTracksResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # androidpublisher#tracksListResponse".
@@ -1641,7 +1641,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `tracks`
-        # @return [Array<Google::Apis::AndroidpublisherV2::Track>]
+        # @return [Array<GoogleAPI::Apis::AndroidpublisherV2::Track>]
         attr_accessor :tracks
       
         def initialize(**args)
@@ -1657,7 +1657,7 @@ module Google
       
       # 
       class UserComment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Integer Android SDK version of the user's device at the time the review was
         # written, e.g. 23 is Marshmallow. May be absent.
@@ -1684,7 +1684,7 @@ module Google
       
         # The last time at which this comment was updated.
         # Corresponds to the JSON property `lastModified`
-        # @return [Google::Apis::AndroidpublisherV2::Timestamp]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::Timestamp]
         attr_accessor :last_modified
       
         # Language code for the reviewer. This is taken from the device settings so is

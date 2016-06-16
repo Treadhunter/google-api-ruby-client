@@ -18,63 +18,63 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AdminDatatransferV1
       
       class Application
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ApplicationDataTransfer
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ApplicationTransferParam
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ApplicationsListResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DataTransfer
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DataTransfersListResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Application
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :etag, as: 'etag'
           property :id, as: 'id'
           property :kind, as: 'kind'
           property :name, as: 'name'
-          collection :transfer_params, as: 'transferParams', class: Google::Apis::AdminDatatransferV1::ApplicationTransferParam, decorator: Google::Apis::AdminDatatransferV1::ApplicationTransferParam::Representation
+          collection :transfer_params, as: 'transferParams', class: GoogleAPI::Apis::AdminDatatransferV1::ApplicationTransferParam, decorator: GoogleAPI::Apis::AdminDatatransferV1::ApplicationTransferParam::Representation
       
         end
       end
       
       class ApplicationDataTransfer
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :application_id, as: 'applicationId'
-          collection :application_transfer_params, as: 'applicationTransferParams', class: Google::Apis::AdminDatatransferV1::ApplicationTransferParam, decorator: Google::Apis::AdminDatatransferV1::ApplicationTransferParam::Representation
+          collection :application_transfer_params, as: 'applicationTransferParams', class: GoogleAPI::Apis::AdminDatatransferV1::ApplicationTransferParam, decorator: GoogleAPI::Apis::AdminDatatransferV1::ApplicationTransferParam::Representation
       
           property :application_transfer_status, as: 'applicationTransferStatus'
         end
@@ -82,7 +82,7 @@ module Google
       
       class ApplicationTransferParam
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :key, as: 'key'
           collection :value, as: 'value'
         end
@@ -90,8 +90,8 @@ module Google
       
       class ApplicationsListResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :applications, as: 'applications', class: Google::Apis::AdminDatatransferV1::Application, decorator: Google::Apis::AdminDatatransferV1::Application::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :applications, as: 'applications', class: GoogleAPI::Apis::AdminDatatransferV1::Application, decorator: GoogleAPI::Apis::AdminDatatransferV1::Application::Representation
       
           property :etag, as: 'etag'
           property :kind, as: 'kind'
@@ -101,8 +101,8 @@ module Google
       
       class DataTransfer
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :application_data_transfers, as: 'applicationDataTransfers', class: Google::Apis::AdminDatatransferV1::ApplicationDataTransfer, decorator: Google::Apis::AdminDatatransferV1::ApplicationDataTransfer::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :application_data_transfers, as: 'applicationDataTransfers', class: GoogleAPI::Apis::AdminDatatransferV1::ApplicationDataTransfer, decorator: GoogleAPI::Apis::AdminDatatransferV1::ApplicationDataTransfer::Representation
       
           property :etag, as: 'etag'
           property :id, as: 'id'
@@ -117,8 +117,8 @@ module Google
       
       class DataTransfersListResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :data_transfers, as: 'dataTransfers', class: Google::Apis::AdminDatatransferV1::DataTransfer, decorator: Google::Apis::AdminDatatransferV1::DataTransfer::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :data_transfers, as: 'dataTransfers', class: GoogleAPI::Apis::AdminDatatransferV1::DataTransfer, decorator: GoogleAPI::Apis::AdminDatatransferV1::DataTransfer::Representation
       
           property :etag, as: 'etag'
           property :kind, as: 'kind'

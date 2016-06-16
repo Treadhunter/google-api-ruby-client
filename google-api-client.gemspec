@@ -4,7 +4,7 @@ require 'google/apis/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'google-api-client'
-  spec.version       = Google::Apis::VERSION
+  spec.version       = GoogleAPI::Apis::VERSION
   spec.authors       = ['Steven Bazyl', 'Tim Emiola', 'Sergio Gomes', 'Bob Aman']
   spec.email         = ['sbazyl@google.com']
   spec.summary       = %q{Client for accessing Google APIs}

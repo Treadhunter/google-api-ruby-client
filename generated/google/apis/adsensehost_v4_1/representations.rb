@@ -18,133 +18,133 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AdsensehostV4_1
       
       class Account
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Accounts
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AdClient
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AdClients
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AdCode
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AdStyle
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Colors
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
         
         class Font
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AdUnit
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class ContentAdsSettings
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class BackupOption
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
         
         class MobileContentAdsSettings
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AdUnits
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AssociationSession
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class CustomChannel
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class CustomChannels
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Report
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Header
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UrlChannel
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UrlChannels
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Account
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
           property :kind, as: 'kind'
           property :name, as: 'name'
@@ -154,9 +154,9 @@ module Google
       
       class Accounts
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :etag, as: 'etag'
-          collection :items, as: 'items', class: Google::Apis::AdsensehostV4_1::Account, decorator: Google::Apis::AdsensehostV4_1::Account::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::AdsensehostV4_1::Account, decorator: GoogleAPI::Apis::AdsensehostV4_1::Account::Representation
       
           property :kind, as: 'kind'
         end
@@ -164,7 +164,7 @@ module Google
       
       class AdClient
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :arc_opt_in, as: 'arcOptIn'
           property :id, as: 'id'
           property :kind, as: 'kind'
@@ -175,9 +175,9 @@ module Google
       
       class AdClients
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :etag, as: 'etag'
-          collection :items, as: 'items', class: Google::Apis::AdsensehostV4_1::AdClient, decorator: Google::Apis::AdsensehostV4_1::AdClient::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::AdsensehostV4_1::AdClient, decorator: GoogleAPI::Apis::AdsensehostV4_1::AdClient::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -186,7 +186,7 @@ module Google
       
       class AdCode
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :ad_code, as: 'adCode'
           property :kind, as: 'kind'
         end
@@ -194,18 +194,18 @@ module Google
       
       class AdStyle
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :colors, as: 'colors', class: Google::Apis::AdsensehostV4_1::AdStyle::Colors, decorator: Google::Apis::AdsensehostV4_1::AdStyle::Colors::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :colors, as: 'colors', class: GoogleAPI::Apis::AdsensehostV4_1::AdStyle::Colors, decorator: GoogleAPI::Apis::AdsensehostV4_1::AdStyle::Colors::Representation
       
           property :corners, as: 'corners'
-          property :font, as: 'font', class: Google::Apis::AdsensehostV4_1::AdStyle::Font, decorator: Google::Apis::AdsensehostV4_1::AdStyle::Font::Representation
+          property :font, as: 'font', class: GoogleAPI::Apis::AdsensehostV4_1::AdStyle::Font, decorator: GoogleAPI::Apis::AdsensehostV4_1::AdStyle::Font::Representation
       
           property :kind, as: 'kind'
         end
         
         class Colors
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :background, as: 'background'
             property :border, as: 'border'
             property :text, as: 'text'
@@ -216,7 +216,7 @@ module Google
         
         class Font
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :family, as: 'family'
             property :size, as: 'size'
           end
@@ -225,15 +225,15 @@ module Google
       
       class AdUnit
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :code, as: 'code'
-          property :content_ads_settings, as: 'contentAdsSettings', class: Google::Apis::AdsensehostV4_1::AdUnit::ContentAdsSettings, decorator: Google::Apis::AdsensehostV4_1::AdUnit::ContentAdsSettings::Representation
+          property :content_ads_settings, as: 'contentAdsSettings', class: GoogleAPI::Apis::AdsensehostV4_1::AdUnit::ContentAdsSettings, decorator: GoogleAPI::Apis::AdsensehostV4_1::AdUnit::ContentAdsSettings::Representation
       
-          property :custom_style, as: 'customStyle', class: Google::Apis::AdsensehostV4_1::AdStyle, decorator: Google::Apis::AdsensehostV4_1::AdStyle::Representation
+          property :custom_style, as: 'customStyle', class: GoogleAPI::Apis::AdsensehostV4_1::AdStyle, decorator: GoogleAPI::Apis::AdsensehostV4_1::AdStyle::Representation
       
           property :id, as: 'id'
           property :kind, as: 'kind'
-          property :mobile_content_ads_settings, as: 'mobileContentAdsSettings', class: Google::Apis::AdsensehostV4_1::AdUnit::MobileContentAdsSettings, decorator: Google::Apis::AdsensehostV4_1::AdUnit::MobileContentAdsSettings::Representation
+          property :mobile_content_ads_settings, as: 'mobileContentAdsSettings', class: GoogleAPI::Apis::AdsensehostV4_1::AdUnit::MobileContentAdsSettings, decorator: GoogleAPI::Apis::AdsensehostV4_1::AdUnit::MobileContentAdsSettings::Representation
       
           property :name, as: 'name'
           property :status, as: 'status'
@@ -241,8 +241,8 @@ module Google
         
         class ContentAdsSettings
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
-            property :backup_option, as: 'backupOption', class: Google::Apis::AdsensehostV4_1::AdUnit::ContentAdsSettings::BackupOption, decorator: Google::Apis::AdsensehostV4_1::AdUnit::ContentAdsSettings::BackupOption::Representation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+            property :backup_option, as: 'backupOption', class: GoogleAPI::Apis::AdsensehostV4_1::AdUnit::ContentAdsSettings::BackupOption, decorator: GoogleAPI::Apis::AdsensehostV4_1::AdUnit::ContentAdsSettings::BackupOption::Representation
         
             property :size, as: 'size'
             property :type, as: 'type'
@@ -250,7 +250,7 @@ module Google
           
           class BackupOption
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :color, as: 'color'
               property :type, as: 'type'
               property :url, as: 'url'
@@ -260,7 +260,7 @@ module Google
         
         class MobileContentAdsSettings
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :markup_language, as: 'markupLanguage'
             property :scripting_language, as: 'scriptingLanguage'
             property :size, as: 'size'
@@ -271,9 +271,9 @@ module Google
       
       class AdUnits
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :etag, as: 'etag'
-          collection :items, as: 'items', class: Google::Apis::AdsensehostV4_1::AdUnit, decorator: Google::Apis::AdsensehostV4_1::AdUnit::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::AdsensehostV4_1::AdUnit, decorator: GoogleAPI::Apis::AdsensehostV4_1::AdUnit::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -282,7 +282,7 @@ module Google
       
       class AssociationSession
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :account_id, as: 'accountId'
           property :id, as: 'id'
           property :kind, as: 'kind'
@@ -297,7 +297,7 @@ module Google
       
       class CustomChannel
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :code, as: 'code'
           property :id, as: 'id'
           property :kind, as: 'kind'
@@ -307,9 +307,9 @@ module Google
       
       class CustomChannels
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :etag, as: 'etag'
-          collection :items, as: 'items', class: Google::Apis::AdsensehostV4_1::CustomChannel, decorator: Google::Apis::AdsensehostV4_1::CustomChannel::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::AdsensehostV4_1::CustomChannel, decorator: GoogleAPI::Apis::AdsensehostV4_1::CustomChannel::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -318,9 +318,9 @@ module Google
       
       class Report
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :averages, as: 'averages'
-          collection :headers, as: 'headers', class: Google::Apis::AdsensehostV4_1::Report::Header, decorator: Google::Apis::AdsensehostV4_1::Report::Header::Representation
+          collection :headers, as: 'headers', class: GoogleAPI::Apis::AdsensehostV4_1::Report::Header, decorator: GoogleAPI::Apis::AdsensehostV4_1::Report::Header::Representation
       
           property :kind, as: 'kind'
           collection :rows, as: 'rows', :class => Array do
@@ -335,7 +335,7 @@ module Google
         
         class Header
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :currency, as: 'currency'
             property :name, as: 'name'
             property :type, as: 'type'
@@ -345,7 +345,7 @@ module Google
       
       class UrlChannel
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
           property :kind, as: 'kind'
           property :url_pattern, as: 'urlPattern'
@@ -354,9 +354,9 @@ module Google
       
       class UrlChannels
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :etag, as: 'etag'
-          collection :items, as: 'items', class: Google::Apis::AdsensehostV4_1::UrlChannel, decorator: Google::Apis::AdsensehostV4_1::UrlChannel::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::AdsensehostV4_1::UrlChannel, decorator: GoogleAPI::Apis::AdsensehostV4_1::UrlChannel::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'

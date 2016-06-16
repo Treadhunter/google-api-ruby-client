@@ -18,104 +18,104 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AutoscalerV1beta2
       
       class Autoscaler
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListAutoscalerResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AutoscalingPolicy
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AutoscalingPolicyCpuUtilization
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AutoscalingPolicyCustomMetricUtilization
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AutoscalingPolicyLoadBalancingUtilization
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DeprecationStatus
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Operation
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Error
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Error
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class OperationList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Zone
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ZoneList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Autoscaler
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :autoscaling_policy, as: 'autoscalingPolicy', class: Google::Apis::AutoscalerV1beta2::AutoscalingPolicy, decorator: Google::Apis::AutoscalerV1beta2::AutoscalingPolicy::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :autoscaling_policy, as: 'autoscalingPolicy', class: GoogleAPI::Apis::AutoscalerV1beta2::AutoscalingPolicy, decorator: GoogleAPI::Apis::AutoscalerV1beta2::AutoscalingPolicy::Representation
       
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
@@ -129,8 +129,8 @@ module Google
       
       class ListAutoscalerResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :items, as: 'items', class: Google::Apis::AutoscalerV1beta2::Autoscaler, decorator: Google::Apis::AutoscalerV1beta2::Autoscaler::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :items, as: 'items', class: GoogleAPI::Apis::AutoscalerV1beta2::Autoscaler, decorator: GoogleAPI::Apis::AutoscalerV1beta2::Autoscaler::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -139,13 +139,13 @@ module Google
       
       class AutoscalingPolicy
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :cool_down_period_sec, as: 'coolDownPeriodSec'
-          property :cpu_utilization, as: 'cpuUtilization', class: Google::Apis::AutoscalerV1beta2::AutoscalingPolicyCpuUtilization, decorator: Google::Apis::AutoscalerV1beta2::AutoscalingPolicyCpuUtilization::Representation
+          property :cpu_utilization, as: 'cpuUtilization', class: GoogleAPI::Apis::AutoscalerV1beta2::AutoscalingPolicyCpuUtilization, decorator: GoogleAPI::Apis::AutoscalerV1beta2::AutoscalingPolicyCpuUtilization::Representation
       
-          collection :custom_metric_utilizations, as: 'customMetricUtilizations', class: Google::Apis::AutoscalerV1beta2::AutoscalingPolicyCustomMetricUtilization, decorator: Google::Apis::AutoscalerV1beta2::AutoscalingPolicyCustomMetricUtilization::Representation
+          collection :custom_metric_utilizations, as: 'customMetricUtilizations', class: GoogleAPI::Apis::AutoscalerV1beta2::AutoscalingPolicyCustomMetricUtilization, decorator: GoogleAPI::Apis::AutoscalerV1beta2::AutoscalingPolicyCustomMetricUtilization::Representation
       
-          property :load_balancing_utilization, as: 'loadBalancingUtilization', class: Google::Apis::AutoscalerV1beta2::AutoscalingPolicyLoadBalancingUtilization, decorator: Google::Apis::AutoscalerV1beta2::AutoscalingPolicyLoadBalancingUtilization::Representation
+          property :load_balancing_utilization, as: 'loadBalancingUtilization', class: GoogleAPI::Apis::AutoscalerV1beta2::AutoscalingPolicyLoadBalancingUtilization, decorator: GoogleAPI::Apis::AutoscalerV1beta2::AutoscalingPolicyLoadBalancingUtilization::Representation
       
           property :max_num_replicas, as: 'maxNumReplicas'
           property :min_num_replicas, as: 'minNumReplicas'
@@ -154,14 +154,14 @@ module Google
       
       class AutoscalingPolicyCpuUtilization
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :utilization_target, as: 'utilizationTarget'
         end
       end
       
       class AutoscalingPolicyCustomMetricUtilization
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :metric, as: 'metric'
           property :utilization_target, as: 'utilizationTarget'
           property :utilization_target_type, as: 'utilizationTargetType'
@@ -170,14 +170,14 @@ module Google
       
       class AutoscalingPolicyLoadBalancingUtilization
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :utilization_target, as: 'utilizationTarget'
         end
       end
       
       class DeprecationStatus
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :deleted, as: 'deleted'
           property :deprecated, as: 'deprecated'
           property :obsolete, as: 'obsolete'
@@ -188,12 +188,12 @@ module Google
       
       class Operation
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :client_operation_id, as: 'clientOperationId'
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
           property :end_time, as: 'endTime'
-          property :error, as: 'error', class: Google::Apis::AutoscalerV1beta2::Operation::Error, decorator: Google::Apis::AutoscalerV1beta2::Operation::Error::Representation
+          property :error, as: 'error', class: GoogleAPI::Apis::AutoscalerV1beta2::Operation::Error, decorator: GoogleAPI::Apis::AutoscalerV1beta2::Operation::Error::Representation
       
           property :http_error_message, as: 'httpErrorMessage'
           property :http_error_status_code, as: 'httpErrorStatusCode'
@@ -211,21 +211,21 @@ module Google
           property :target_id, as: 'targetId'
           property :target_link, as: 'targetLink'
           property :user, as: 'user'
-          collection :warnings, as: 'warnings', class: Google::Apis::AutoscalerV1beta2::Operation::Warning, decorator: Google::Apis::AutoscalerV1beta2::Operation::Warning::Representation
+          collection :warnings, as: 'warnings', class: GoogleAPI::Apis::AutoscalerV1beta2::Operation::Warning, decorator: GoogleAPI::Apis::AutoscalerV1beta2::Operation::Warning::Representation
       
           property :zone, as: 'zone'
         end
         
         class Error
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
-            collection :errors, as: 'errors', class: Google::Apis::AutoscalerV1beta2::Operation::Error::Error, decorator: Google::Apis::AutoscalerV1beta2::Operation::Error::Error::Representation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+            collection :errors, as: 'errors', class: GoogleAPI::Apis::AutoscalerV1beta2::Operation::Error::Error, decorator: GoogleAPI::Apis::AutoscalerV1beta2::Operation::Error::Error::Representation
         
           end
           
           class Error
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :code, as: 'code'
               property :location, as: 'location'
               property :message, as: 'message'
@@ -235,16 +235,16 @@ module Google
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::AutoscalerV1beta2::Operation::Warning::Datum, decorator: Google::Apis::AutoscalerV1beta2::Operation::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::AutoscalerV1beta2::Operation::Warning::Datum, decorator: GoogleAPI::Apis::AutoscalerV1beta2::Operation::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -254,9 +254,9 @@ module Google
       
       class OperationList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::AutoscalerV1beta2::Operation, decorator: Google::Apis::AutoscalerV1beta2::Operation::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::AutoscalerV1beta2::Operation, decorator: GoogleAPI::Apis::AutoscalerV1beta2::Operation::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -266,9 +266,9 @@ module Google
       
       class Zone
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :creation_timestamp, as: 'creationTimestamp'
-          property :deprecated, as: 'deprecated', class: Google::Apis::AutoscalerV1beta2::DeprecationStatus, decorator: Google::Apis::AutoscalerV1beta2::DeprecationStatus::Representation
+          property :deprecated, as: 'deprecated', class: GoogleAPI::Apis::AutoscalerV1beta2::DeprecationStatus, decorator: GoogleAPI::Apis::AutoscalerV1beta2::DeprecationStatus::Representation
       
           property :description, as: 'description'
           property :id, as: 'id'
@@ -282,9 +282,9 @@ module Google
       
       class ZoneList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::AutoscalerV1beta2::Zone, decorator: Google::Apis::AutoscalerV1beta2::Zone::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::AutoscalerV1beta2::Zone, decorator: GoogleAPI::Apis::AutoscalerV1beta2::Zone::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'

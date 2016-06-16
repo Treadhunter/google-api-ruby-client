@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module LoggingV1beta3
       
       # Result returned from ListLogs.
       class ListLogsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of log descriptions matching the criteria.
         # Corresponds to the JSON property `logs`
-        # @return [Array<Google::Apis::LoggingV1beta3::Log>]
+        # @return [Array<GoogleAPI::Apis::LoggingV1beta3::Log>]
         attr_accessor :logs
       
         # If there are more results, then `nextPageToken` is returned in the response.
@@ -52,7 +52,7 @@ module Google
       
       # _Output only._ Describes a log, which is a named stream of log entries.
       class Log
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The resource name of the log. Example: `"/projects/my-gcp-project-id/logs/
         # LOG_NAME"`, where `LOG_NAME` is the URL-encoded given name of the log. The log
@@ -92,7 +92,7 @@ module Google
       # protobuf.Empty) returns (google.protobuf.Empty); ` The JSON representation for
       # `Empty` is empty JSON object ````.
       class Empty
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -105,7 +105,7 @@ module Google
       
       # The parameters to WriteLogEntries.
       class WriteLogEntriesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata labels that apply to all log entries in this request, so that you don'
         # t have to repeat them in each log entry's `metadata.labels` field. If any of
@@ -118,7 +118,7 @@ module Google
       
         # Log entries to insert.
         # Corresponds to the JSON property `entries`
-        # @return [Array<Google::Apis::LoggingV1beta3::LogEntry>]
+        # @return [Array<GoogleAPI::Apis::LoggingV1beta3::LogEntry>]
         attr_accessor :entries
       
         def initialize(**args)
@@ -134,12 +134,12 @@ module Google
       
       # An individual entry in a log.
       class LogEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Additional data that is associated with a log entry, set by the service
         # creating the log entry.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::LoggingV1beta3::LogEntryMetadata]
+        # @return [GoogleAPI::Apis::LoggingV1beta3::LogEntryMetadata]
         attr_accessor :metadata
       
         # The log entry payload, represented as a protocol buffer that is expressed as a
@@ -175,7 +175,7 @@ module Google
       
         # A common proto for logging HTTP requests.
         # Corresponds to the JSON property `httpRequest`
-        # @return [Google::Apis::LoggingV1beta3::HttpRequest]
+        # @return [GoogleAPI::Apis::LoggingV1beta3::HttpRequest]
         attr_accessor :http_request
       
         def initialize(**args)
@@ -197,7 +197,7 @@ module Google
       # Additional data that is associated with a log entry, set by the service
       # creating the log entry.
       class LogEntryMetadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The time the event described by the log entry occurred. Timestamps must be
         # later than January 1, 1970.
@@ -273,7 +273,7 @@ module Google
       
       # A common proto for logging HTTP requests.
       class HttpRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Request method, such as `GET`, `HEAD`, `PUT` or `POST`.
         # Corresponds to the JSON property `requestMethod`
@@ -355,7 +355,7 @@ module Google
       
       # Result returned from WriteLogEntries. empty
       class WriteLogEntriesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -368,11 +368,11 @@ module Google
       
       # Result returned from `ListLogServicesRequest`.
       class ListLogServicesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of log services.
         # Corresponds to the JSON property `logServices`
-        # @return [Array<Google::Apis::LoggingV1beta3::LogService>]
+        # @return [Array<GoogleAPI::Apis::LoggingV1beta3::LogService>]
         attr_accessor :log_services
       
         # If there are more results, then `nextPageToken` is returned in the response.
@@ -396,7 +396,7 @@ module Google
       
       # _Output only._ Describes a service that writes log entries.
       class LogService
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The service's name. Example: `"appengine.googleapis.com"`. Log names beginning
         # with this string are reserved for this service. This value can appear in the `
@@ -429,7 +429,7 @@ module Google
       
       # Result returned from ListLogServiceIndexesRequest.
       class ListLogServiceIndexesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of log service index values. Each index value has the form `"/value1/
         # value2/..."`, where `value1` is a value in the primary index, `value2` is a
@@ -459,13 +459,13 @@ module Google
       
       # Result returned from `ListLogSinks`.
       class ListLogSinksResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The requested log sinks. If a returned `LogSink` object has an empty `
         # destination` field, the client can retrieve the complete `LogSink` object by
         # calling `log.sinks.get`.
         # Corresponds to the JSON property `sinks`
-        # @return [Array<Google::Apis::LoggingV1beta3::LogSink>]
+        # @return [Array<GoogleAPI::Apis::LoggingV1beta3::LogSink>]
         attr_accessor :sinks
       
         def initialize(**args)
@@ -480,7 +480,7 @@ module Google
       
       # Describes where log entries are written outside of Cloud Logging.
       class LogSink
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The client-assigned name of this sink. For example, `"my-syslog-sink"`. The
         # name must be unique among the sinks of a similar kind in the project.
@@ -505,7 +505,7 @@ module Google
         # _Output only._ If any errors occur when invoking a sink method, then this
         # field contains descriptions of the errors.
         # Corresponds to the JSON property `errors`
-        # @return [Array<Google::Apis::LoggingV1beta3::LogError>]
+        # @return [Array<GoogleAPI::Apis::LoggingV1beta3::LogError>]
         attr_accessor :errors
       
         def initialize(**args)
@@ -523,7 +523,7 @@ module Google
       
       # Describes a problem with a logging resource or operation.
       class LogError
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A resource name associated with this error. For example, the name of a Cloud
         # Storage bucket that has insufficient permissions to be a destination for log
@@ -565,7 +565,7 @@ module Google
         # the message `Status` could be used directly after any stripping needed for
         # security/privacy reasons.
         # Corresponds to the JSON property `status`
-        # @return [Google::Apis::LoggingV1beta3::Status]
+        # @return [GoogleAPI::Apis::LoggingV1beta3::Status]
         attr_accessor :status
       
         # The time the error was observed, in nanoseconds since the Unix epoch.
@@ -618,7 +618,7 @@ module Google
       # the message `Status` could be used directly after any stripping needed for
       # security/privacy reasons.
       class Status
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The status code, which should be an enum value of google.rpc.Code.
         # Corresponds to the JSON property `code`
@@ -652,13 +652,13 @@ module Google
       
       # Result returned from `ListLogServiceSinks`.
       class ListLogServiceSinksResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The requested log service sinks. If a returned `LogSink` object has an empty `
         # destination` field, the client can retrieve the complete `LogSink` object by
         # calling `logServices.sinks.get`.
         # Corresponds to the JSON property `sinks`
-        # @return [Array<Google::Apis::LoggingV1beta3::LogSink>]
+        # @return [Array<GoogleAPI::Apis::LoggingV1beta3::LogSink>]
         attr_accessor :sinks
       
         def initialize(**args)
@@ -673,13 +673,13 @@ module Google
       
       # Result returned from `ListSinks`.
       class ListSinksResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The requested sinks. If a returned `LogSink` object has an empty `destination`
         # field, the client can retrieve the complete `LogSink` object by calling `
         # projects.sinks.get`.
         # Corresponds to the JSON property `sinks`
-        # @return [Array<Google::Apis::LoggingV1beta3::LogSink>]
+        # @return [Array<GoogleAPI::Apis::LoggingV1beta3::LogSink>]
         attr_accessor :sinks
       
         def initialize(**args)
@@ -694,11 +694,11 @@ module Google
       
       # Result returned from ListLogMetrics.
       class ListLogMetricsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of metrics that was requested.
         # Corresponds to the JSON property `metrics`
-        # @return [Array<Google::Apis::LoggingV1beta3::LogMetric>]
+        # @return [Array<GoogleAPI::Apis::LoggingV1beta3::LogMetric>]
         attr_accessor :metrics
       
         # If there are more results, then `nextPageToken` is returned in the response.
@@ -723,7 +723,7 @@ module Google
       # Describes a logs-based metric. The value of the metric is the number of log
       # entries in your project that match a logs filter.
       class LogMetric
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The client-assigned name for this metric, such as `"severe_errors"`. Metric
         # names are limited to 1000 characters and can include only the following
@@ -759,7 +759,7 @@ module Google
       
       # Complete log information about a single request to an application.
       class RequestLog
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies the application that handled this request.
         # Corresponds to the JSON property `appId`
@@ -914,7 +914,7 @@ module Google
         # List of log lines emitted by the application while serving this request, if
         # requested.
         # Corresponds to the JSON property `line`
-        # @return [Array<Google::Apis::LoggingV1beta3::LogLine>]
+        # @return [Array<GoogleAPI::Apis::LoggingV1beta3::LogLine>]
         attr_accessor :line
       
         # App Engine release version string.
@@ -931,7 +931,7 @@ module Google
         # than one source reference per deployed application if source code is
         # distributed among multiple repositories.
         # Corresponds to the JSON property `sourceReference`
-        # @return [Array<Google::Apis::LoggingV1beta3::SourceReference>]
+        # @return [Array<GoogleAPI::Apis::LoggingV1beta3::SourceReference>]
         attr_accessor :source_reference
       
         def initialize(**args)
@@ -976,7 +976,7 @@ module Google
       
       # Application log line emitted while processing a request.
       class LogLine
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Time when log entry was made. May be inaccurate.
         # Corresponds to the JSON property `time`
@@ -995,7 +995,7 @@ module Google
       
         # Specifies a location in a source file.
         # Corresponds to the JSON property `sourceLocation`
-        # @return [Google::Apis::LoggingV1beta3::SourceLocation]
+        # @return [GoogleAPI::Apis::LoggingV1beta3::SourceLocation]
         attr_accessor :source_location
       
         def initialize(**args)
@@ -1013,7 +1013,7 @@ module Google
       
       # Specifies a location in a source file.
       class SourceLocation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Source file name. May or may not be a fully qualified name, depending on the
         # runtime environment.
@@ -1050,7 +1050,7 @@ module Google
       # A reference to a particular snapshot of the source tree used to build and
       # deploy an application.
       class SourceReference
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Optional. A URI string identifying the repository. Example: "https://github.
         # com/GoogleCloudPlatform/kubernetes.git"

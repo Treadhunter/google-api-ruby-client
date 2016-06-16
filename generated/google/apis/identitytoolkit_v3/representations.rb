@@ -18,229 +18,229 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module IdentitytoolkitV3
       
       class CreateAuthUriResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DeleteAccountResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DownloadAccountResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class EmailTemplate
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class GetAccountInfoResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class GetOobConfirmationCodeResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class GetRecaptchaParamResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class CreateAuthUriRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DeleteAccountRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DownloadAccountRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class GetAccountInfoRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class GetProjectConfigResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ResetPasswordRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SetAccountInfoRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SetProjectConfigRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class IdentitytoolkitRelyingpartySetProjectConfigResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SignOutUserRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SignOutUserResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SignupNewUserRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UploadAccountRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class VerifyAssertionRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class VerifyCustomTokenRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class VerifyPasswordRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class IdpConfig
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Relyingparty
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ResetPasswordResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SetAccountInfoResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class ProviderUserInfo
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SignupNewUserResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UploadAccountResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Error
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UserInfo
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class ProviderUserInfo
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class VerifyAssertionResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class VerifyCustomTokenResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class VerifyPasswordResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class CreateAuthUriResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :all_providers, as: 'allProviders'
           property :auth_uri, as: 'authUri'
           property :captcha_required, as: 'captchaRequired'
@@ -254,24 +254,24 @@ module Google
       
       class DeleteAccountResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
         end
       end
       
       class DownloadAccountResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
-          collection :users, as: 'users', class: Google::Apis::IdentitytoolkitV3::UserInfo, decorator: Google::Apis::IdentitytoolkitV3::UserInfo::Representation
+          collection :users, as: 'users', class: GoogleAPI::Apis::IdentitytoolkitV3::UserInfo, decorator: GoogleAPI::Apis::IdentitytoolkitV3::UserInfo::Representation
       
         end
       end
       
       class EmailTemplate
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :body, as: 'body'
           property :format, as: 'format'
           property :from, as: 'from'
@@ -283,16 +283,16 @@ module Google
       
       class GetAccountInfoResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
-          collection :users, as: 'users', class: Google::Apis::IdentitytoolkitV3::UserInfo, decorator: Google::Apis::IdentitytoolkitV3::UserInfo::Representation
+          collection :users, as: 'users', class: GoogleAPI::Apis::IdentitytoolkitV3::UserInfo, decorator: GoogleAPI::Apis::IdentitytoolkitV3::UserInfo::Representation
       
         end
       end
       
       class GetOobConfirmationCodeResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :email, as: 'email'
           property :kind, as: 'kind'
           property :oob_code, as: 'oobCode'
@@ -301,7 +301,7 @@ module Google
       
       class GetRecaptchaParamResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
           property :recaptcha_site_key, as: 'recaptchaSiteKey'
           property :recaptcha_stoken, as: 'recaptchaStoken'
@@ -310,7 +310,7 @@ module Google
       
       class CreateAuthUriRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :app_id, as: 'appId'
           property :client_id, as: 'clientId'
           property :context, as: 'context'
@@ -326,7 +326,7 @@ module Google
       
       class DeleteAccountRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :delegated_project_number, as: 'delegatedProjectNumber'
           property :id_token, as: 'idToken'
           property :local_id, as: 'localId'
@@ -335,7 +335,7 @@ module Google
       
       class DownloadAccountRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :delegated_project_number, as: 'delegatedProjectNumber'
           property :max_results, as: 'maxResults'
           property :next_page_token, as: 'nextPageToken'
@@ -344,7 +344,7 @@ module Google
       
       class GetAccountInfoRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :delegated_project_number, as: 'delegatedProjectNumber'
           collection :email, as: 'email'
           property :id_token, as: 'idToken'
@@ -354,29 +354,29 @@ module Google
       
       class GetProjectConfigResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :allow_password_user, as: 'allowPasswordUser'
           property :api_key, as: 'apiKey'
           collection :authorized_domains, as: 'authorizedDomains'
-          property :change_email_template, as: 'changeEmailTemplate', class: Google::Apis::IdentitytoolkitV3::EmailTemplate, decorator: Google::Apis::IdentitytoolkitV3::EmailTemplate::Representation
+          property :change_email_template, as: 'changeEmailTemplate', class: GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate, decorator: GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate::Representation
       
           property :enable_anonymous_user, as: 'enableAnonymousUser'
-          collection :idp_config, as: 'idpConfig', class: Google::Apis::IdentitytoolkitV3::IdpConfig, decorator: Google::Apis::IdentitytoolkitV3::IdpConfig::Representation
+          collection :idp_config, as: 'idpConfig', class: GoogleAPI::Apis::IdentitytoolkitV3::IdpConfig, decorator: GoogleAPI::Apis::IdentitytoolkitV3::IdpConfig::Representation
       
-          property :legacy_reset_password_template, as: 'legacyResetPasswordTemplate', class: Google::Apis::IdentitytoolkitV3::EmailTemplate, decorator: Google::Apis::IdentitytoolkitV3::EmailTemplate::Representation
+          property :legacy_reset_password_template, as: 'legacyResetPasswordTemplate', class: GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate, decorator: GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate::Representation
       
           property :project_id, as: 'projectId'
-          property :reset_password_template, as: 'resetPasswordTemplate', class: Google::Apis::IdentitytoolkitV3::EmailTemplate, decorator: Google::Apis::IdentitytoolkitV3::EmailTemplate::Representation
+          property :reset_password_template, as: 'resetPasswordTemplate', class: GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate, decorator: GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate::Representation
       
           property :use_email_sending, as: 'useEmailSending'
-          property :verify_email_template, as: 'verifyEmailTemplate', class: Google::Apis::IdentitytoolkitV3::EmailTemplate, decorator: Google::Apis::IdentitytoolkitV3::EmailTemplate::Representation
+          property :verify_email_template, as: 'verifyEmailTemplate', class: GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate, decorator: GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate::Representation
       
         end
       end
       
       class ResetPasswordRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :email, as: 'email'
           property :new_password, as: 'newPassword'
           property :old_password, as: 'oldPassword'
@@ -386,7 +386,7 @@ module Google
       
       class SetAccountInfoRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :captcha_challenge, as: 'captchaChallenge'
           property :captcha_response, as: 'captchaResponse'
           property :created_at, as: 'createdAt'
@@ -413,36 +413,36 @@ module Google
       
       class SetProjectConfigRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :allow_password_user, as: 'allowPasswordUser'
           property :api_key, as: 'apiKey'
           collection :authorized_domains, as: 'authorizedDomains'
-          property :change_email_template, as: 'changeEmailTemplate', class: Google::Apis::IdentitytoolkitV3::EmailTemplate, decorator: Google::Apis::IdentitytoolkitV3::EmailTemplate::Representation
+          property :change_email_template, as: 'changeEmailTemplate', class: GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate, decorator: GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate::Representation
       
           property :delegated_project_number, as: 'delegatedProjectNumber'
           property :enable_anonymous_user, as: 'enableAnonymousUser'
-          collection :idp_config, as: 'idpConfig', class: Google::Apis::IdentitytoolkitV3::IdpConfig, decorator: Google::Apis::IdentitytoolkitV3::IdpConfig::Representation
+          collection :idp_config, as: 'idpConfig', class: GoogleAPI::Apis::IdentitytoolkitV3::IdpConfig, decorator: GoogleAPI::Apis::IdentitytoolkitV3::IdpConfig::Representation
       
-          property :legacy_reset_password_template, as: 'legacyResetPasswordTemplate', class: Google::Apis::IdentitytoolkitV3::EmailTemplate, decorator: Google::Apis::IdentitytoolkitV3::EmailTemplate::Representation
+          property :legacy_reset_password_template, as: 'legacyResetPasswordTemplate', class: GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate, decorator: GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate::Representation
       
-          property :reset_password_template, as: 'resetPasswordTemplate', class: Google::Apis::IdentitytoolkitV3::EmailTemplate, decorator: Google::Apis::IdentitytoolkitV3::EmailTemplate::Representation
+          property :reset_password_template, as: 'resetPasswordTemplate', class: GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate, decorator: GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate::Representation
       
           property :use_email_sending, as: 'useEmailSending'
-          property :verify_email_template, as: 'verifyEmailTemplate', class: Google::Apis::IdentitytoolkitV3::EmailTemplate, decorator: Google::Apis::IdentitytoolkitV3::EmailTemplate::Representation
+          property :verify_email_template, as: 'verifyEmailTemplate', class: GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate, decorator: GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate::Representation
       
         end
       end
       
       class IdentitytoolkitRelyingpartySetProjectConfigResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :project_id, as: 'projectId'
         end
       end
       
       class SignOutUserRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :instance_id, as: 'instanceId'
           property :local_id, as: 'localId'
         end
@@ -450,14 +450,14 @@ module Google
       
       class SignOutUserResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :local_id, as: 'localId'
         end
       end
       
       class SignupNewUserRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :captcha_challenge, as: 'captchaChallenge'
           property :captcha_response, as: 'captchaResponse'
           property :display_name, as: 'displayName'
@@ -470,21 +470,21 @@ module Google
       
       class UploadAccountRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :delegated_project_number, as: 'delegatedProjectNumber'
           property :hash_algorithm, as: 'hashAlgorithm'
           property :memory_cost, as: 'memoryCost'
           property :rounds, as: 'rounds'
           property :salt_separator, :base64 => true, as: 'saltSeparator'
           property :signer_key, :base64 => true, as: 'signerKey'
-          collection :users, as: 'users', class: Google::Apis::IdentitytoolkitV3::UserInfo, decorator: Google::Apis::IdentitytoolkitV3::UserInfo::Representation
+          collection :users, as: 'users', class: GoogleAPI::Apis::IdentitytoolkitV3::UserInfo, decorator: GoogleAPI::Apis::IdentitytoolkitV3::UserInfo::Representation
       
         end
       end
       
       class VerifyAssertionRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :delegated_project_number, as: 'delegatedProjectNumber'
           property :id_token, as: 'idToken'
           property :instance_id, as: 'instanceId'
@@ -499,7 +499,7 @@ module Google
       
       class VerifyCustomTokenRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :delegated_project_number, as: 'delegatedProjectNumber'
           property :instance_id, as: 'instanceId'
           property :return_secure_token, as: 'returnSecureToken'
@@ -509,7 +509,7 @@ module Google
       
       class VerifyPasswordRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :captcha_challenge, as: 'captchaChallenge'
           property :captcha_response, as: 'captchaResponse'
           property :delegated_project_number, as: 'delegatedProjectNumber'
@@ -524,7 +524,7 @@ module Google
       
       class IdpConfig
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :client_id, as: 'clientId'
           property :enabled, as: 'enabled'
           property :experiment_percent, as: 'experimentPercent'
@@ -536,7 +536,7 @@ module Google
       
       class Relyingparty
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :captcha_resp, as: 'captchaResp'
           property :challenge, as: 'challenge'
           property :email, as: 'email'
@@ -550,7 +550,7 @@ module Google
       
       class ResetPasswordResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :email, as: 'email'
           property :kind, as: 'kind'
         end
@@ -558,7 +558,7 @@ module Google
       
       class SetAccountInfoResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :display_name, as: 'displayName'
           property :email, as: 'email'
           property :expires_in, as: 'expiresIn'
@@ -568,14 +568,14 @@ module Google
           property :new_email, as: 'newEmail'
           property :password_hash, :base64 => true, as: 'passwordHash'
           property :photo_url, as: 'photoUrl'
-          collection :provider_user_info, as: 'providerUserInfo', class: Google::Apis::IdentitytoolkitV3::SetAccountInfoResponse::ProviderUserInfo, decorator: Google::Apis::IdentitytoolkitV3::SetAccountInfoResponse::ProviderUserInfo::Representation
+          collection :provider_user_info, as: 'providerUserInfo', class: GoogleAPI::Apis::IdentitytoolkitV3::SetAccountInfoResponse::ProviderUserInfo, decorator: GoogleAPI::Apis::IdentitytoolkitV3::SetAccountInfoResponse::ProviderUserInfo::Representation
       
           property :refresh_token, as: 'refreshToken'
         end
         
         class ProviderUserInfo
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :display_name, as: 'displayName'
             property :federated_id, as: 'federatedId'
             property :photo_url, as: 'photoUrl'
@@ -586,7 +586,7 @@ module Google
       
       class SignupNewUserResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :display_name, as: 'displayName'
           property :email, as: 'email'
           property :expires_in, as: 'expiresIn'
@@ -599,15 +599,15 @@ module Google
       
       class UploadAccountResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :error, as: 'error', class: Google::Apis::IdentitytoolkitV3::UploadAccountResponse::Error, decorator: Google::Apis::IdentitytoolkitV3::UploadAccountResponse::Error::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :error, as: 'error', class: GoogleAPI::Apis::IdentitytoolkitV3::UploadAccountResponse::Error, decorator: GoogleAPI::Apis::IdentitytoolkitV3::UploadAccountResponse::Error::Representation
       
           property :kind, as: 'kind'
         end
         
         class Error
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :index, as: 'index'
             property :message, as: 'message'
           end
@@ -616,7 +616,7 @@ module Google
       
       class UserInfo
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :created_at, as: 'createdAt'
           property :disabled, as: 'disabled'
           property :display_name, as: 'displayName'
@@ -627,7 +627,7 @@ module Google
           property :password_hash, :base64 => true, as: 'passwordHash'
           property :password_updated_at, as: 'passwordUpdatedAt'
           property :photo_url, as: 'photoUrl'
-          collection :provider_user_info, as: 'providerUserInfo', class: Google::Apis::IdentitytoolkitV3::UserInfo::ProviderUserInfo, decorator: Google::Apis::IdentitytoolkitV3::UserInfo::ProviderUserInfo::Representation
+          collection :provider_user_info, as: 'providerUserInfo', class: GoogleAPI::Apis::IdentitytoolkitV3::UserInfo::ProviderUserInfo, decorator: GoogleAPI::Apis::IdentitytoolkitV3::UserInfo::ProviderUserInfo::Representation
       
           property :salt, :base64 => true, as: 'salt'
           property :valid_since, as: 'validSince'
@@ -636,7 +636,7 @@ module Google
         
         class ProviderUserInfo
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :display_name, as: 'displayName'
             property :email, as: 'email'
             property :federated_id, as: 'federatedId'
@@ -649,7 +649,7 @@ module Google
       
       class VerifyAssertionResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :action, as: 'action'
           property :app_installation_url, as: 'appInstallationUrl'
           property :app_scheme, as: 'appScheme'
@@ -690,7 +690,7 @@ module Google
       
       class VerifyCustomTokenResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :expires_in, as: 'expiresIn'
           property :id_token, as: 'idToken'
           property :kind, as: 'kind'
@@ -700,7 +700,7 @@ module Google
       
       class VerifyPasswordResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :display_name, as: 'displayName'
           property :email, as: 'email'
           property :expires_in, as: 'expiresIn'

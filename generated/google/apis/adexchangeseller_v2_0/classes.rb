@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AdexchangesellerV2_0
       
       # 
       class Account
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Unique identifier of this account.
         # Corresponds to the JSON property `id`
@@ -55,7 +55,7 @@ module Google
       
       # 
       class Accounts
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of this response for caching purposes.
         # Corresponds to the JSON property `etag`
@@ -64,7 +64,7 @@ module Google
       
         # The accounts returned in this list response.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdexchangesellerV2_0::Account>]
+        # @return [Array<GoogleAPI::Apis::AdexchangesellerV2_0::Account>]
         attr_accessor :items
       
         # Kind of list this is, in this case adexchangeseller#accounts.
@@ -93,7 +93,7 @@ module Google
       
       # 
       class AdClient
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether this ad client is opted in to ARC.
         # Corresponds to the JSON property `arcOptIn`
@@ -139,7 +139,7 @@ module Google
       
       # 
       class AdClients
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of this response for caching purposes.
         # Corresponds to the JSON property `etag`
@@ -148,7 +148,7 @@ module Google
       
         # The ad clients returned in this list response.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdexchangesellerV2_0::AdClient>]
+        # @return [Array<GoogleAPI::Apis::AdexchangesellerV2_0::AdClient>]
         attr_accessor :items
       
         # Kind of list this is, in this case adexchangeseller#adClients.
@@ -177,7 +177,7 @@ module Google
       
       # 
       class Alert
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Unique identifier of this alert. This should be considered an opaque
         # identifier; it is not safe to rely on it being in any particular format.
@@ -223,11 +223,11 @@ module Google
       
       # 
       class Alerts
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The alerts returned in this list response.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdexchangesellerV2_0::Alert>]
+        # @return [Array<GoogleAPI::Apis::AdexchangesellerV2_0::Alert>]
         attr_accessor :items
       
         # Kind of list this is, in this case adexchangeseller#alerts.
@@ -248,7 +248,7 @@ module Google
       
       # 
       class CustomChannel
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Code of this custom channel, not necessarily unique across ad clients.
         # Corresponds to the JSON property `code`
@@ -273,7 +273,7 @@ module Google
       
         # The targeting information of this custom channel, if activated.
         # Corresponds to the JSON property `targetingInfo`
-        # @return [Google::Apis::AdexchangesellerV2_0::CustomChannel::TargetingInfo]
+        # @return [GoogleAPI::Apis::AdexchangesellerV2_0::CustomChannel::TargetingInfo]
         attr_accessor :targeting_info
       
         def initialize(**args)
@@ -291,7 +291,7 @@ module Google
         
         # The targeting information of this custom channel, if activated.
         class TargetingInfo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The name used to describe this channel externally.
           # Corresponds to the JSON property `adsAppearOn`
@@ -333,7 +333,7 @@ module Google
       
       # 
       class CustomChannels
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of this response for caching purposes.
         # Corresponds to the JSON property `etag`
@@ -342,7 +342,7 @@ module Google
       
         # The custom channels returned in this list response.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdexchangesellerV2_0::CustomChannel>]
+        # @return [Array<GoogleAPI::Apis::AdexchangesellerV2_0::CustomChannel>]
         attr_accessor :items
       
         # Kind of list this is, in this case adexchangeseller#customChannels.
@@ -371,11 +371,11 @@ module Google
       
       # 
       class Metadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdexchangesellerV2_0::ReportingMetadataEntry>]
+        # @return [Array<GoogleAPI::Apis::AdexchangesellerV2_0::ReportingMetadataEntry>]
         attr_accessor :items
       
         # Kind of list this is, in this case adexchangeseller#metadata.
@@ -396,7 +396,7 @@ module Google
       
       # 
       class PreferredDeal
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the advertiser this deal is for.
         # Corresponds to the JSON property `advertiserName`
@@ -463,11 +463,11 @@ module Google
       
       # 
       class PreferredDeals
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The preferred deals returned in this list response.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdexchangesellerV2_0::PreferredDeal>]
+        # @return [Array<GoogleAPI::Apis::AdexchangesellerV2_0::PreferredDeal>]
         attr_accessor :items
       
         # Kind of list this is, in this case adexchangeseller#preferredDeals.
@@ -488,7 +488,7 @@ module Google
       
       # 
       class Report
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The averages of the report. This is the same length as any other row in the
         # report; cells corresponding to dimension columns are empty.
@@ -500,7 +500,7 @@ module Google
         # of headers; one for each dimension in the request, followed by one for each
         # metric in the request.
         # Corresponds to the JSON property `headers`
-        # @return [Array<Google::Apis::AdexchangesellerV2_0::Report::Header>]
+        # @return [Array<GoogleAPI::Apis::AdexchangesellerV2_0::Report::Header>]
         attr_accessor :headers
       
         # Kind this is, in this case adexchangeseller#report.
@@ -550,7 +550,7 @@ module Google
         
         # 
         class Header
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The currency of this column. Only present if the header type is
           # METRIC_CURRENCY.
@@ -584,7 +584,7 @@ module Google
       
       # 
       class ReportingMetadataEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # For metrics this is a list of dimension IDs which the metric is compatible
         # with, for dimensions it is a list of compatibility groups the dimension
@@ -650,7 +650,7 @@ module Google
       
       # 
       class SavedReport
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Unique identifier of this saved report.
         # Corresponds to the JSON property `id`
@@ -681,7 +681,7 @@ module Google
       
       # 
       class SavedReports
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of this response for caching purposes.
         # Corresponds to the JSON property `etag`
@@ -690,7 +690,7 @@ module Google
       
         # The saved reports returned in this list response.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdexchangesellerV2_0::SavedReport>]
+        # @return [Array<GoogleAPI::Apis::AdexchangesellerV2_0::SavedReport>]
         attr_accessor :items
       
         # Kind of list this is, in this case adexchangeseller#savedReports.
@@ -719,7 +719,7 @@ module Google
       
       # 
       class UrlChannel
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Unique identifier of this URL channel. This should be considered an opaque
         # identifier; it is not safe to rely on it being in any particular format.
@@ -752,7 +752,7 @@ module Google
       
       # 
       class UrlChannels
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of this response for caching purposes.
         # Corresponds to the JSON property `etag`
@@ -761,7 +761,7 @@ module Google
       
         # The URL channels returned in this list response.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AdexchangesellerV2_0::UrlChannel>]
+        # @return [Array<GoogleAPI::Apis::AdexchangesellerV2_0::UrlChannel>]
         attr_accessor :items
       
         # Kind of list this is, in this case adexchangeseller#urlChannels.

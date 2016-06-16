@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module PlusV1
       # Google+ API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/plus_v1'
       #
-      #    Plus = Google::Apis::PlusV1 # Alias the module
+      #    Plus = GoogleAPI::Apis::PlusV1 # Alias the module
       #    service = Plus::PlusService.new
       #
       # @see https://developers.google.com/+/api/
-      class PlusService < Google::Apis::Core::BaseService
+      class PlusService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -64,22 +64,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PlusV1::Activity] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PlusV1::Activity] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PlusV1::Activity]
+        # @return [GoogleAPI::Apis::PlusV1::Activity]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_activity(activity_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'activities/{activityId}', options)
-          command.response_representation = Google::Apis::PlusV1::Activity::Representation
-          command.response_class = Google::Apis::PlusV1::Activity
+          command.response_representation = GoogleAPI::Apis::PlusV1::Activity::Representation
+          command.response_class = GoogleAPI::Apis::PlusV1::Activity
           command.params['activityId'] = activity_id unless activity_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -110,22 +110,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PlusV1::ActivityFeed] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PlusV1::ActivityFeed] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PlusV1::ActivityFeed]
+        # @return [GoogleAPI::Apis::PlusV1::ActivityFeed]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_activities(user_id, collection, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'people/{userId}/activities/{collection}', options)
-          command.response_representation = Google::Apis::PlusV1::ActivityFeed::Representation
-          command.response_class = Google::Apis::PlusV1::ActivityFeed
+          command.response_representation = GoogleAPI::Apis::PlusV1::ActivityFeed::Representation
+          command.response_class = GoogleAPI::Apis::PlusV1::ActivityFeed
           command.params['userId'] = user_id unless user_id.nil?
           command.params['collection'] = collection unless collection.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -161,22 +161,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PlusV1::ActivityFeed] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PlusV1::ActivityFeed] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PlusV1::ActivityFeed]
+        # @return [GoogleAPI::Apis::PlusV1::ActivityFeed]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def search_activities(query, language: nil, max_results: nil, order_by: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'activities', options)
-          command.response_representation = Google::Apis::PlusV1::ActivityFeed::Representation
-          command.response_class = Google::Apis::PlusV1::ActivityFeed
+          command.response_representation = GoogleAPI::Apis::PlusV1::ActivityFeed::Representation
+          command.response_class = GoogleAPI::Apis::PlusV1::ActivityFeed
           command.query['language'] = language unless language.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['orderBy'] = order_by unless order_by.nil?
@@ -200,22 +200,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PlusV1::Comment] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PlusV1::Comment] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PlusV1::Comment]
+        # @return [GoogleAPI::Apis::PlusV1::Comment]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_comment(comment_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'comments/{commentId}', options)
-          command.response_representation = Google::Apis::PlusV1::Comment::Representation
-          command.response_class = Google::Apis::PlusV1::Comment
+          command.response_representation = GoogleAPI::Apis::PlusV1::Comment::Representation
+          command.response_class = GoogleAPI::Apis::PlusV1::Comment
           command.params['commentId'] = comment_id unless comment_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -245,22 +245,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PlusV1::CommentFeed] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PlusV1::CommentFeed] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PlusV1::CommentFeed]
+        # @return [GoogleAPI::Apis::PlusV1::CommentFeed]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_comments(activity_id, max_results: nil, page_token: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'activities/{activityId}/comments', options)
-          command.response_representation = Google::Apis::PlusV1::CommentFeed::Representation
-          command.response_class = Google::Apis::PlusV1::CommentFeed
+          command.response_representation = GoogleAPI::Apis::PlusV1::CommentFeed::Representation
+          command.response_class = GoogleAPI::Apis::PlusV1::CommentFeed
           command.params['activityId'] = activity_id unless activity_id.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -285,22 +285,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PlusV1::Person] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PlusV1::Person] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PlusV1::Person]
+        # @return [GoogleAPI::Apis::PlusV1::Person]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_person(user_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'people/{userId}', options)
-          command.response_representation = Google::Apis::PlusV1::Person::Representation
-          command.response_class = Google::Apis::PlusV1::Person
+          command.response_representation = GoogleAPI::Apis::PlusV1::Person::Representation
+          command.response_class = GoogleAPI::Apis::PlusV1::Person
           command.params['userId'] = user_id unless user_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -333,22 +333,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PlusV1::PeopleFeed] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PlusV1::PeopleFeed] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PlusV1::PeopleFeed]
+        # @return [GoogleAPI::Apis::PlusV1::PeopleFeed]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_people(user_id, collection, max_results: nil, order_by: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'people/{userId}/people/{collection}', options)
-          command.response_representation = Google::Apis::PlusV1::PeopleFeed::Representation
-          command.response_class = Google::Apis::PlusV1::PeopleFeed
+          command.response_representation = GoogleAPI::Apis::PlusV1::PeopleFeed::Representation
+          command.response_class = GoogleAPI::Apis::PlusV1::PeopleFeed
           command.params['userId'] = user_id unless user_id.nil?
           command.params['collection'] = collection unless collection.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -382,22 +382,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PlusV1::PeopleFeed] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PlusV1::PeopleFeed] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PlusV1::PeopleFeed]
+        # @return [GoogleAPI::Apis::PlusV1::PeopleFeed]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_people_by_activity(activity_id, collection, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'activities/{activityId}/people/{collection}', options)
-          command.response_representation = Google::Apis::PlusV1::PeopleFeed::Representation
-          command.response_class = Google::Apis::PlusV1::PeopleFeed
+          command.response_representation = GoogleAPI::Apis::PlusV1::PeopleFeed::Representation
+          command.response_class = GoogleAPI::Apis::PlusV1::PeopleFeed
           command.params['activityId'] = activity_id unless activity_id.nil?
           command.params['collection'] = collection unless collection.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -431,22 +431,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PlusV1::PeopleFeed] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PlusV1::PeopleFeed] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PlusV1::PeopleFeed]
+        # @return [GoogleAPI::Apis::PlusV1::PeopleFeed]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def search_people(query, language: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'people', options)
-          command.response_representation = Google::Apis::PlusV1::PeopleFeed::Representation
-          command.response_class = Google::Apis::PlusV1::PeopleFeed
+          command.response_representation = GoogleAPI::Apis::PlusV1::PeopleFeed::Representation
+          command.response_class = GoogleAPI::Apis::PlusV1::PeopleFeed
           command.query['language'] = language unless language.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['pageToken'] = page_token unless page_token.nil?

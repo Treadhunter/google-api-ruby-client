@@ -16,7 +16,7 @@ require 'google/apis/adsensehost_v4_1/service.rb'
 require 'google/apis/adsensehost_v4_1/classes.rb'
 require 'google/apis/adsensehost_v4_1/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # AdSense Host API
     #

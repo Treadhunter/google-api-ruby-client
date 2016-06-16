@@ -16,7 +16,7 @@ require 'google/apis/prediction_v1_6/service.rb'
 require 'google/apis/prediction_v1_6/classes.rb'
 require 'google/apis/prediction_v1_6/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Prediction API
     #

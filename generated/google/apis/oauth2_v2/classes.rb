@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module Oauth2V2
       
       # 
       class Jwk
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `keys`
-        # @return [Array<Google::Apis::Oauth2V2::Jwk::Key>]
+        # @return [Array<GoogleAPI::Apis::Oauth2V2::Jwk::Key>]
         attr_accessor :keys
       
         def initialize(**args)
@@ -42,7 +42,7 @@ module Google
         
         # 
         class Key
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `alg`
@@ -92,7 +92,7 @@ module Google
       
       # 
       class Tokeninfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The access type granted with this token. It can be offline or online.
         # Corresponds to the JSON property `access_type`
@@ -162,7 +162,7 @@ module Google
       
       # 
       class Userinfoplus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The user's email address.
         # Corresponds to the JSON property `email`

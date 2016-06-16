@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module GroupsmigrationV1
       
       # JSON response template for groups migration API.
       class Groups
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The kind of insert resource this is.
         # Corresponds to the JSON property `kind`

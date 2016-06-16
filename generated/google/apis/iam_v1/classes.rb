@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module IamV1
       
       # The service account list response.
       class ListServiceAccountsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of matching service accounts.
         # Corresponds to the JSON property `accounts`
-        # @return [Array<Google::Apis::IamV1::ServiceAccount>]
+        # @return [Array<GoogleAPI::Apis::IamV1::ServiceAccount>]
         attr_accessor :accounts
       
         # To retrieve the next page of results, set [ListServiceAccountsRequest.
@@ -57,7 +57,7 @@ module Google
       # account. The account value can be the email address or the unique_id of the
       # service account.
       class ServiceAccount
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The resource name of the service account in the format "projects/`project`/
         # serviceAccounts/`account`". In requests using '-' as a wildcard for the
@@ -120,7 +120,7 @@ module Google
       
       # The service account create request.
       class CreateServiceAccountRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Required. The account id that is used to generate the service account email
         # address and a stable unique id. It is unique within a project, must be 1-63
@@ -139,7 +139,7 @@ module Google
         # account. The account value can be the email address or the unique_id of the
         # service account.
         # Corresponds to the JSON property `serviceAccount`
-        # @return [Google::Apis::IamV1::ServiceAccount]
+        # @return [GoogleAPI::Apis::IamV1::ServiceAccount]
         attr_accessor :service_account
       
         def initialize(**args)
@@ -159,7 +159,7 @@ module Google
       # protobuf.Empty) returns (google.protobuf.Empty); ` The JSON representation for
       # `Empty` is empty JSON object ````.
       class Empty
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -172,11 +172,11 @@ module Google
       
       # The service account keys list response.
       class ListServiceAccountKeysResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The public keys for the service account.
         # Corresponds to the JSON property `keys`
-        # @return [Array<Google::Apis::IamV1::ServiceAccountKey>]
+        # @return [Array<GoogleAPI::Apis::IamV1::ServiceAccountKey>]
         attr_accessor :keys
       
         def initialize(**args)
@@ -193,7 +193,7 @@ module Google
       # pairs. The private keys for these are not stored by Google. ServiceAccountKeys
       # are immutable.
       class ServiceAccountKey
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The resource name of the service account key in the format "projects/`project`/
         # serviceAccounts/`email`/keys/`key`".
@@ -237,7 +237,7 @@ module Google
       
       # The service account key create request.
       class CreateServiceAccountKeyRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of the key requested. GOOGLE_CREDENTIALS is the default key type.
         # Corresponds to the JSON property `privateKeyType`
@@ -256,7 +256,7 @@ module Google
       
       # The service account sign blob request.
       class SignBlobRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The bytes to sign
         # Corresponds to the JSON property `bytesToSign`
@@ -275,7 +275,7 @@ module Google
       
       # The service account sign blob response.
       class SignBlobResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The id of the key used to sign the blob.
         # Corresponds to the JSON property `keyId`
@@ -309,7 +309,7 @@ module Google
       # sean@example.com"] ` ] ` For a description of IAM and its features, see the [
       # IAM developer's guide](https://cloud.google.com/iam).
       class Policy
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Version of the `Policy`. The default version is 0.
         # Corresponds to the JSON property `version`
@@ -320,12 +320,12 @@ module Google
         # specified for the same `role`. `bindings` with no members will result in an
         # error.
         # Corresponds to the JSON property `bindings`
-        # @return [Array<Google::Apis::IamV1::Binding>]
+        # @return [Array<GoogleAPI::Apis::IamV1::Binding>]
         attr_accessor :bindings
       
         # 
         # Corresponds to the JSON property `rules`
-        # @return [Array<Google::Apis::IamV1::Rule>]
+        # @return [Array<GoogleAPI::Apis::IamV1::Rule>]
         attr_accessor :rules
       
         # `etag` is used for optimistic concurrency control as a way to help prevent
@@ -355,7 +355,7 @@ module Google
       
       # Associates `members` with a `role`.
       class Binding
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`
         # , or `roles/owner`. Required
@@ -392,7 +392,7 @@ module Google
       
       # A rule to be applied in a Policy.
       class Rule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Human-readable description of the rule.
         # Corresponds to the JSON property `description`
@@ -425,13 +425,13 @@ module Google
       
         # Additional restrictions that must be met
         # Corresponds to the JSON property `conditions`
-        # @return [Array<Google::Apis::IamV1::Condition>]
+        # @return [Array<GoogleAPI::Apis::IamV1::Condition>]
         attr_accessor :conditions
       
         # The config returned to callers of tech.iam.IAM.CheckPolicy for any entries
         # that match the LOG action.
         # Corresponds to the JSON property `logConfig`
-        # @return [Array<Google::Apis::IamV1::LogConfig>]
+        # @return [Array<GoogleAPI::Apis::IamV1::LogConfig>]
         attr_accessor :log_config
       
         def initialize(**args)
@@ -452,7 +452,7 @@ module Google
       
       # A condition to be met.
       class Condition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Trusted attributes supplied by the IAM system.
         # Corresponds to the JSON property `iam`
@@ -513,21 +513,21 @@ module Google
       # this may be supported in the future) * decrementing the counter * incrementing
       # it by anything other than 1
       class LogConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Options for counters
         # Corresponds to the JSON property `counter`
-        # @return [Google::Apis::IamV1::CounterOptions]
+        # @return [GoogleAPI::Apis::IamV1::CounterOptions]
         attr_accessor :counter
       
         # Write a Data Access (Gin) log
         # Corresponds to the JSON property `dataAccess`
-        # @return [Google::Apis::IamV1::DataAccessOptions]
+        # @return [GoogleAPI::Apis::IamV1::DataAccessOptions]
         attr_accessor :data_access
       
         # Write a Cloud Audit log
         # Corresponds to the JSON property `cloudAudit`
-        # @return [Google::Apis::IamV1::CloudAuditOptions]
+        # @return [GoogleAPI::Apis::IamV1::CloudAuditOptions]
         attr_accessor :cloud_audit
       
         def initialize(**args)
@@ -544,7 +544,7 @@ module Google
       
       # Options for counters
       class CounterOptions
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The metric to update.
         # Corresponds to the JSON property `metric`
@@ -569,7 +569,7 @@ module Google
       
       # Write a Data Access (Gin) log
       class DataAccessOptions
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -582,7 +582,7 @@ module Google
       
       # Write a Cloud Audit log
       class CloudAuditOptions
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -595,7 +595,7 @@ module Google
       
       # Request message for `SetIamPolicy` method.
       class SetIamPolicyRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Defines an Identity and Access Management (IAM) policy. It is used to specify
         # access control policies for Cloud Platform resources. A `Policy` consists of a
@@ -608,7 +608,7 @@ module Google
         # sean@example.com"] ` ] ` For a description of IAM and its features, see the [
         # IAM developer's guide](https://cloud.google.com/iam).
         # Corresponds to the JSON property `policy`
-        # @return [Google::Apis::IamV1::Policy]
+        # @return [GoogleAPI::Apis::IamV1::Policy]
         attr_accessor :policy
       
         def initialize(**args)
@@ -623,7 +623,7 @@ module Google
       
       # Request message for `TestIamPermissions` method.
       class TestIamPermissionsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The set of permissions to check for the `resource`. Permissions with wildcards
         # (such as '*' or 'storage.*') are not allowed. For more information see IAM
@@ -644,7 +644,7 @@ module Google
       
       # Response message for `TestIamPermissions` method.
       class TestIamPermissionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A subset of `TestPermissionsRequest.permissions` that the caller is allowed.
         # Corresponds to the JSON property `permissions`

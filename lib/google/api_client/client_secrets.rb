@@ -15,7 +15,7 @@
 require 'json'
 
 
-module Google
+module GoogleAPI
   class APIClient
     ##
     # Manages the persistence of client configuration data and secrets. Format
@@ -51,7 +51,7 @@ module Google
       # @param [String] filename
       #   Path to file to load
       #
-      # @return [Google::APIClient::ClientSecrets]
+      # @return [GoogleAPI::APIClient::ClientSecrets]
       #   OAuth client settings
       def self.load(filename=nil)
         if filename && File.directory?(filename)

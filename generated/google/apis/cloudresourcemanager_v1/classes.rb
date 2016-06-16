@@ -18,14 +18,14 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CloudresourcemanagerV1
       
       # A Project is a high-level Google Cloud Platform entity. It is a container for
       # ACLs, APIs, AppEngine Apps, VMs, and other Google Cloud Platform resources.
       class Project
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number uniquely identifying the project. Example: 415104041262 Read-only.
         # Corresponds to the JSON property `projectNumber`
@@ -73,7 +73,7 @@ module Google
         # interact with through one of our API's. Some examples are an AppEngine app, a
         # Compute Engine instance, a Cloud SQL database, and so on.
         # Corresponds to the JSON property `parent`
-        # @return [Google::Apis::CloudresourcemanagerV1::ResourceId]
+        # @return [GoogleAPI::Apis::CloudresourcemanagerV1::ResourceId]
         attr_accessor :parent
       
         def initialize(**args)
@@ -97,7 +97,7 @@ module Google
       # interact with through one of our API's. Some examples are an AppEngine app, a
       # Compute Engine instance, a Cloud SQL database, and so on.
       class ResourceId
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Required field representing the resource type this id is for. At present, the
         # only valid type is "organization".
@@ -126,11 +126,11 @@ module Google
       # response where more pages are available has `next_page_token` set. This token
       # can be used in a subsequent request to retrieve the next request page.
       class ListProjectsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of Projects that matched the list filter. This list can be paginated.
         # Corresponds to the JSON property `projects`
-        # @return [Array<Google::Apis::CloudresourcemanagerV1::Project>]
+        # @return [Array<GoogleAPI::Apis::CloudresourcemanagerV1::Project>]
         attr_accessor :projects
       
         # Pagination token. If the result set is too large to fit in a single response,
@@ -160,7 +160,7 @@ module Google
       # protobuf.Empty) returns (google.protobuf.Empty); ` The JSON representation for
       # `Empty` is empty JSON object ````.
       class Empty
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -173,7 +173,7 @@ module Google
       
       # The request sent to the UndeleteProject method.
       class UndeleteProjectRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -186,7 +186,7 @@ module Google
       
       # Request message for `GetIamPolicy` method.
       class GetIamPolicyRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -208,7 +208,7 @@ module Google
       # sean@example.com"] ` ] ` For a description of IAM and its features, see the [
       # IAM developer's guide](https://cloud.google.com/iam).
       class Policy
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Version of the `Policy`. The default version is 0.
         # Corresponds to the JSON property `version`
@@ -219,7 +219,7 @@ module Google
         # specified for the same `role`. `bindings` with no members will result in an
         # error.
         # Corresponds to the JSON property `bindings`
-        # @return [Array<Google::Apis::CloudresourcemanagerV1::Binding>]
+        # @return [Array<GoogleAPI::Apis::CloudresourcemanagerV1::Binding>]
         attr_accessor :bindings
       
         # `etag` is used for optimistic concurrency control as a way to help prevent
@@ -248,7 +248,7 @@ module Google
       
       # Associates `members` with a `role`.
       class Binding
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`
         # , or `roles/owner`. Required
@@ -285,7 +285,7 @@ module Google
       
       # Request message for `SetIamPolicy` method.
       class SetIamPolicyRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Defines an Identity and Access Management (IAM) policy. It is used to specify
         # access control policies for Cloud Platform resources. A `Policy` consists of a
@@ -298,7 +298,7 @@ module Google
         # sean@example.com"] ` ] ` For a description of IAM and its features, see the [
         # IAM developer's guide](https://cloud.google.com/iam).
         # Corresponds to the JSON property `policy`
-        # @return [Google::Apis::CloudresourcemanagerV1::Policy]
+        # @return [GoogleAPI::Apis::CloudresourcemanagerV1::Policy]
         attr_accessor :policy
       
         def initialize(**args)
@@ -313,7 +313,7 @@ module Google
       
       # Request message for `TestIamPermissions` method.
       class TestIamPermissionsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The set of permissions to check for the `resource`. Permissions with wildcards
         # (such as '*' or 'storage.*') are not allowed. For more information see IAM
@@ -334,7 +334,7 @@ module Google
       
       # Response message for `TestIamPermissions` method.
       class TestIamPermissionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A subset of `TestPermissionsRequest.permissions` that the caller is allowed.
         # Corresponds to the JSON property `permissions`

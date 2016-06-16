@@ -60,7 +60,7 @@
 * No longer swallow exceptions raised in blocks
 * Preserve query parameters in URLs when using `http()` for generic requests
 * Avoid masking errors caused by retries with resumable uploads
-* Deprecating the authorization support under Google::APIClient. Equivalent
+* Deprecating the authorization support under GoogleAPI::APIClient. Equivalent
   functionality is now available in google-auth-library-ruby. These will
   be removed in the 0.9 release.
 
@@ -118,7 +118,7 @@
 # 0.7.0
 * Remove CLI
 * Support for automatic retires & backoff. Off by default, enable by setting `retries` on `APIClient`
-* Experimental new interface (see `Google::APIClient::Service`)
+* Experimental new interface (see `GoogleAPI::APIClient::Service`)
 * Fix warnings when using Faraday separately
 * Support Google Compute Engine service accounts
 * Enable gzip compression for responses

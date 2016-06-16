@@ -15,7 +15,7 @@
 require 'webrick'
 require 'launchy'
 
-module Google
+module GoogleAPI
   class APIClient
 
     # Small helper for the sample apps for performing OAuth 2.0 flows from the command
@@ -23,13 +23,13 @@ module Google
     #
     # @example
     #
-    #    flow = Google::APIClient::InstalledAppFlow.new(
+    #    flow = GoogleAPI::APIClient::InstalledAppFlow.new(
     #      :client_id => '691380668085.apps.googleusercontent.com',
     #      :client_secret => '...',
     #      :scope => 'https://www.googleapis.com/auth/drive'
     #    )
     #    authorization = flow.authorize
-    #    Drive = Google::Apis::DriveV2
+    #    Drive = GoogleAPI::Apis::DriveV2
     #    drive = Drive::DriveService.new
     #    drive.authorization = authorization
     #
@@ -80,7 +80,7 @@ module Google
       ##
       # Request authorization. Opens a browser and waits for response.
       #
-      # @param [Google::APIClient::Storage] storage
+      # @param [GoogleAPI::APIClient::Storage] storage
       #  Optional object that responds to :write_credentials, used to serialize
       #  the OAuth 2 credentials after completing the flow.
       #

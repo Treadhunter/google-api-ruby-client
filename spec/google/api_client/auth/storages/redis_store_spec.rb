@@ -2,7 +2,7 @@ require 'spec_helper'
 
 require 'google/api_client/auth/storages/redis_store'
 
-describe Google::APIClient::RedisStore do
+describe GoogleAPI::APIClient::RedisStore do
   let(:root_path) { File.expand_path(File.join(__FILE__, '..', '..', '..', '..', '..')) }
   let(:json_file) { File.expand_path(File.join(root_path, 'fixtures', 'files', 'auth_stored_credentials.json')) }
   let(:redis) {double}
@@ -18,7 +18,7 @@ describe Google::APIClient::RedisStore do
       "issued_at" => 1384440275
   } }
 
-  subject { Google::APIClient::RedisStore.new('a redis instance') }
+  subject { GoogleAPI::APIClient::RedisStore.new('a redis instance') }
 
   it 'should have a redis instance' do
     expect(subject.redis).to be == 'a redis instance'
@@ -48,7 +48,7 @@ describe Google::APIClient::RedisStore do
       end
     end
     context 'with given key' do
-      let(:redis_store) { Google::APIClient::RedisStore.new('a redis instance', 'another_google_api_credentials') }
+      let(:redis_store) { GoogleAPI::APIClient::RedisStore.new('a redis instance', 'another_google_api_credentials') }
       it 'should use given key' do
         expect(redis_store.redis_credentials_key).to be == "another_google_api_credentials"
       end

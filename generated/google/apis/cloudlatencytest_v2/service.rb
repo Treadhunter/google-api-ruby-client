@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CloudlatencytestV2
       # Google Cloud Network Performance Monitoring API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/cloudlatencytest_v2'
       #
-      #    Cloudlatencytest = Google::Apis::CloudlatencytestV2 # Alias the module
+      #    Cloudlatencytest = GoogleAPI::Apis::CloudlatencytestV2 # Alias the module
       #    service = Cloudlatencytest::CloudlatencytestService.new
       #
       # @see 
-      class CloudlatencytestService < Google::Apis::Core::BaseService
+      class CloudlatencytestService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -53,7 +53,7 @@ module Google
         end
         
         # RPC to update the new TCP stats.
-        # @param [Google::Apis::CloudlatencytestV2::AggregatedStats] aggregated_stats_object
+        # @param [GoogleAPI::Apis::CloudlatencytestV2::AggregatedStats] aggregated_stats_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -63,24 +63,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudlatencytestV2::AggregatedStatsReply] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudlatencytestV2::AggregatedStatsReply] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudlatencytestV2::AggregatedStatsReply]
+        # @return [GoogleAPI::Apis::CloudlatencytestV2::AggregatedStatsReply]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_aggregated_stats(aggregated_stats_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'updateaggregatedstats', options)
-          command.request_representation = Google::Apis::CloudlatencytestV2::AggregatedStats::Representation
+          command.request_representation = GoogleAPI::Apis::CloudlatencytestV2::AggregatedStats::Representation
           command.request_object = aggregated_stats_object
-          command.response_representation = Google::Apis::CloudlatencytestV2::AggregatedStatsReply::Representation
-          command.response_class = Google::Apis::CloudlatencytestV2::AggregatedStatsReply
+          command.response_representation = GoogleAPI::Apis::CloudlatencytestV2::AggregatedStatsReply::Representation
+          command.response_class = GoogleAPI::Apis::CloudlatencytestV2::AggregatedStatsReply
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['userIp'] = user_ip unless user_ip.nil?
@@ -88,7 +88,7 @@ module Google
         end
         
         # RPC to update the new TCP stats.
-        # @param [Google::Apis::CloudlatencytestV2::Stats] stats_object
+        # @param [GoogleAPI::Apis::CloudlatencytestV2::Stats] stats_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -98,24 +98,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudlatencytestV2::StatsReply] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudlatencytestV2::StatsReply] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudlatencytestV2::StatsReply]
+        # @return [GoogleAPI::Apis::CloudlatencytestV2::StatsReply]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_stats(stats_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'updatestats', options)
-          command.request_representation = Google::Apis::CloudlatencytestV2::Stats::Representation
+          command.request_representation = GoogleAPI::Apis::CloudlatencytestV2::Stats::Representation
           command.request_object = stats_object
-          command.response_representation = Google::Apis::CloudlatencytestV2::StatsReply::Representation
-          command.response_class = Google::Apis::CloudlatencytestV2::StatsReply
+          command.response_representation = GoogleAPI::Apis::CloudlatencytestV2::StatsReply::Representation
+          command.response_class = GoogleAPI::Apis::CloudlatencytestV2::StatsReply
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['userIp'] = user_ip unless user_ip.nil?

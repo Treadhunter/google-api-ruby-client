@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module GmailV1
       
       # 
       class BatchDeleteMessagesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The IDs of the messages to delete.
         # Corresponds to the JSON property `ids`
@@ -43,7 +43,7 @@ module Google
       
       # A draft email in the user's mailbox.
       class Draft
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The immutable ID of the draft.
         # Corresponds to the JSON property `id`
@@ -52,7 +52,7 @@ module Google
       
         # An email message.
         # Corresponds to the JSON property `message`
-        # @return [Google::Apis::GmailV1::Message]
+        # @return [GoogleAPI::Apis::GmailV1::Message]
         attr_accessor :message
       
         def initialize(**args)
@@ -69,7 +69,7 @@ module Google
       # A record of a change to the user's mailbox. Each history change may affect
       # multiple messages in multiple ways.
       class History
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The mailbox sequence ID.
         # Corresponds to the JSON property `id`
@@ -78,29 +78,29 @@ module Google
       
         # Labels added to messages in this history record.
         # Corresponds to the JSON property `labelsAdded`
-        # @return [Array<Google::Apis::GmailV1::HistoryLabelAdded>]
+        # @return [Array<GoogleAPI::Apis::GmailV1::HistoryLabelAdded>]
         attr_accessor :labels_added
       
         # Labels removed from messages in this history record.
         # Corresponds to the JSON property `labelsRemoved`
-        # @return [Array<Google::Apis::GmailV1::HistoryLabelRemoved>]
+        # @return [Array<GoogleAPI::Apis::GmailV1::HistoryLabelRemoved>]
         attr_accessor :labels_removed
       
         # List of messages changed in this history record. The fields for specific
         # change types, such as messagesAdded may duplicate messages in this field. We
         # recommend using the specific change-type fields instead of this.
         # Corresponds to the JSON property `messages`
-        # @return [Array<Google::Apis::GmailV1::Message>]
+        # @return [Array<GoogleAPI::Apis::GmailV1::Message>]
         attr_accessor :messages
       
         # Messages added to the mailbox in this history record.
         # Corresponds to the JSON property `messagesAdded`
-        # @return [Array<Google::Apis::GmailV1::HistoryMessageAdded>]
+        # @return [Array<GoogleAPI::Apis::GmailV1::HistoryMessageAdded>]
         attr_accessor :messages_added
       
         # Messages deleted (not Trashed) from the mailbox in this history record.
         # Corresponds to the JSON property `messagesDeleted`
-        # @return [Array<Google::Apis::GmailV1::HistoryMessageDeleted>]
+        # @return [Array<GoogleAPI::Apis::GmailV1::HistoryMessageDeleted>]
         attr_accessor :messages_deleted
       
         def initialize(**args)
@@ -120,7 +120,7 @@ module Google
       
       # 
       class HistoryLabelAdded
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Label IDs added to the message.
         # Corresponds to the JSON property `labelIds`
@@ -129,7 +129,7 @@ module Google
       
         # An email message.
         # Corresponds to the JSON property `message`
-        # @return [Google::Apis::GmailV1::Message]
+        # @return [GoogleAPI::Apis::GmailV1::Message]
         attr_accessor :message
       
         def initialize(**args)
@@ -145,7 +145,7 @@ module Google
       
       # 
       class HistoryLabelRemoved
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Label IDs removed from the message.
         # Corresponds to the JSON property `labelIds`
@@ -154,7 +154,7 @@ module Google
       
         # An email message.
         # Corresponds to the JSON property `message`
-        # @return [Google::Apis::GmailV1::Message]
+        # @return [GoogleAPI::Apis::GmailV1::Message]
         attr_accessor :message
       
         def initialize(**args)
@@ -170,11 +170,11 @@ module Google
       
       # 
       class HistoryMessageAdded
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An email message.
         # Corresponds to the JSON property `message`
-        # @return [Google::Apis::GmailV1::Message]
+        # @return [GoogleAPI::Apis::GmailV1::Message]
         attr_accessor :message
       
         def initialize(**args)
@@ -189,11 +189,11 @@ module Google
       
       # 
       class HistoryMessageDeleted
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An email message.
         # Corresponds to the JSON property `message`
-        # @return [Google::Apis::GmailV1::Message]
+        # @return [GoogleAPI::Apis::GmailV1::Message]
         attr_accessor :message
       
         def initialize(**args)
@@ -208,7 +208,7 @@ module Google
       
       # Labels are used to categorize messages and threads within the user's mailbox.
       class Label
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The immutable ID of the label.
         # Corresponds to the JSON property `id`
@@ -282,11 +282,11 @@ module Google
       
       # 
       class ListDraftsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of drafts.
         # Corresponds to the JSON property `drafts`
-        # @return [Array<Google::Apis::GmailV1::Draft>]
+        # @return [Array<GoogleAPI::Apis::GmailV1::Draft>]
         attr_accessor :drafts
       
         # Token to retrieve the next page of results in the list.
@@ -313,12 +313,12 @@ module Google
       
       # 
       class ListHistoryResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of history records. Any messages contained in the response will typically
         # only have id and threadId fields populated.
         # Corresponds to the JSON property `history`
-        # @return [Array<Google::Apis::GmailV1::History>]
+        # @return [Array<GoogleAPI::Apis::GmailV1::History>]
         attr_accessor :history
       
         # The ID of the mailbox's current history record.
@@ -345,11 +345,11 @@ module Google
       
       # 
       class ListLabelsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of labels.
         # Corresponds to the JSON property `labels`
-        # @return [Array<Google::Apis::GmailV1::Label>]
+        # @return [Array<GoogleAPI::Apis::GmailV1::Label>]
         attr_accessor :labels
       
         def initialize(**args)
@@ -364,11 +364,11 @@ module Google
       
       # 
       class ListMessagesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of messages.
         # Corresponds to the JSON property `messages`
-        # @return [Array<Google::Apis::GmailV1::Message>]
+        # @return [Array<GoogleAPI::Apis::GmailV1::Message>]
         attr_accessor :messages
       
         # Token to retrieve the next page of results in the list.
@@ -395,7 +395,7 @@ module Google
       
       # 
       class ListThreadsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Page token to retrieve the next page of results in the list.
         # Corresponds to the JSON property `nextPageToken`
@@ -409,7 +409,7 @@ module Google
       
         # List of threads.
         # Corresponds to the JSON property `threads`
-        # @return [Array<Google::Apis::GmailV1::Thread>]
+        # @return [Array<GoogleAPI::Apis::GmailV1::Thread>]
         attr_accessor :threads
       
         def initialize(**args)
@@ -426,7 +426,7 @@ module Google
       
       # An email message.
       class Message
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the last history record that modified this message.
         # Corresponds to the JSON property `historyId`
@@ -454,7 +454,7 @@ module Google
       
         # A single MIME message part.
         # Corresponds to the JSON property `payload`
-        # @return [Google::Apis::GmailV1::MessagePart]
+        # @return [GoogleAPI::Apis::GmailV1::MessagePart]
         attr_accessor :payload
       
         # The entire email message in an RFC 2822 formatted and base64url encoded string.
@@ -505,11 +505,11 @@ module Google
       
       # A single MIME message part.
       class MessagePart
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The body of a single MIME message part.
         # Corresponds to the JSON property `body`
-        # @return [Google::Apis::GmailV1::MessagePartBody]
+        # @return [GoogleAPI::Apis::GmailV1::MessagePartBody]
         attr_accessor :body
       
         # The filename of the attachment. Only present if this message part represents
@@ -522,7 +522,7 @@ module Google
         # representing the entire message payload, it will contain the standard RFC 2822
         # email headers such as To, From, and Subject.
         # Corresponds to the JSON property `headers`
-        # @return [Array<Google::Apis::GmailV1::MessagePartHeader>]
+        # @return [Array<GoogleAPI::Apis::GmailV1::MessagePartHeader>]
         attr_accessor :headers
       
         # The MIME type of the message part.
@@ -540,7 +540,7 @@ module Google
         # types, such as text/plain, this field is empty. For more information, see RFC
         # 1521.
         # Corresponds to the JSON property `parts`
-        # @return [Array<Google::Apis::GmailV1::MessagePart>]
+        # @return [Array<GoogleAPI::Apis::GmailV1::MessagePart>]
         attr_accessor :parts
       
         def initialize(**args)
@@ -560,7 +560,7 @@ module Google
       
       # The body of a single MIME message part.
       class MessagePartBody
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # When present, contains the ID of an external attachment that can be retrieved
         # in a separate messages.attachments.get request. When not present, the entire
@@ -596,7 +596,7 @@ module Google
       
       # 
       class MessagePartHeader
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the header before the : separator. For example, To.
         # Corresponds to the JSON property `name`
@@ -622,7 +622,7 @@ module Google
       
       # 
       class ModifyMessageRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of IDs of labels to add to this message.
         # Corresponds to the JSON property `addLabelIds`
@@ -647,7 +647,7 @@ module Google
       
       # 
       class ModifyThreadRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of IDs of labels to add to this thread.
         # Corresponds to the JSON property `addLabelIds`
@@ -672,7 +672,7 @@ module Google
       
       # Profile for a Gmail user.
       class Profile
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The user's email address.
         # Corresponds to the JSON property `emailAddress`
@@ -709,7 +709,7 @@ module Google
       
       # A collection of messages representing a conversation.
       class Thread
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the last history record that modified this thread.
         # Corresponds to the JSON property `historyId`
@@ -723,7 +723,7 @@ module Google
       
         # The list of messages in the thread.
         # Corresponds to the JSON property `messages`
-        # @return [Array<Google::Apis::GmailV1::Message>]
+        # @return [Array<GoogleAPI::Apis::GmailV1::Message>]
         attr_accessor :messages
       
         # A short part of the message text.
@@ -746,7 +746,7 @@ module Google
       
       # Set up or update a new push notification watch on this user's mailbox.
       class WatchRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Filtering behavior of labelIds list specified.
         # Corresponds to the JSON property `labelFilterAction`
@@ -785,7 +785,7 @@ module Google
       
       # Push notification watch response.
       class WatchResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # When Gmail will stop sending notifications for mailbox updates (epoch millis).
         # Call watch again before this time to renew the watch.

@@ -2,9 +2,9 @@ require 'spec_helper'
 require 'google/apis/pubsub_v1'
 require 'googleauth'
 
-Pubsub = Google::Apis::PubsubV1
+Pubsub = GoogleAPI::Apis::PubsubV1
 
-RSpec.describe Google::Apis::PubsubV1, :if => run_integration_tests? do
+RSpec.describe GoogleAPI::Apis::PubsubV1, :if => run_integration_tests? do
 
   before(:context) do
     WebMock.allow_net_connect!
@@ -13,7 +13,7 @@ RSpec.describe Google::Apis::PubsubV1, :if => run_integration_tests? do
     @subscription_name = "projects/#{project}/subscriptions/test"
 
     @pubsub = Pubsub::PubsubService.new
-    @pubsub.authorization = Google::Auth.get_application_default([Pubsub::AUTH_PUBSUB])
+    @pubsub.authorization = GoogleAPI::Auth.get_application_default([Pubsub::AUTH_PUBSUB])
     @pubsub.create_topic(@topic_name)
     @pubsub.create_subscription(@subscription_name, Pubsub::Subscription.new(topic: @topic_name))
   end

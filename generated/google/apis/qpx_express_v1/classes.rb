@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module QpxExpressV1
       
       # The make, model, and type of an aircraft.
       class AircraftData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The aircraft code. For example, for a Boeing 777 the code would be 777.
         # Corresponds to the JSON property `code`
@@ -56,7 +56,7 @@ module Google
       
       # An airport.
       class AirportData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The city code an airport is located in. For example, for JFK airport, this is
         # NYC.
@@ -96,7 +96,7 @@ module Google
       
       # Information about an item of baggage.
       class BagDescriptor
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Provides the commercial name for an optional service.
         # Corresponds to the JSON property `commercialName`
@@ -141,7 +141,7 @@ module Google
       # Information about a carrier (ie. an airline, bus line, railroad, etc) that
       # might be useful to display to an end-user.
       class CarrierData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The IATA designator of a carrier (airline, etc). For example, for American
         # Airlines, the code is AA.
@@ -175,7 +175,7 @@ module Google
       # Information about a city that might be useful to an end-user; typically the
       # city of an airport.
       class CityData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The IATA character ID of a city. For example, for Boston this is BOS.
         # Corresponds to the JSON property `code`
@@ -215,27 +215,27 @@ module Google
       # Detailed information about components found in the solutions of this response,
       # including a trip's airport, city, taxes, airline, and aircraft.
       class Data
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The aircraft that is flying between an origin and destination.
         # Corresponds to the JSON property `aircraft`
-        # @return [Array<Google::Apis::QpxExpressV1::AircraftData>]
+        # @return [Array<GoogleAPI::Apis::QpxExpressV1::AircraftData>]
         attr_accessor :aircraft
       
         # The airport of an origin or destination.
         # Corresponds to the JSON property `airport`
-        # @return [Array<Google::Apis::QpxExpressV1::AirportData>]
+        # @return [Array<GoogleAPI::Apis::QpxExpressV1::AirportData>]
         attr_accessor :airport
       
         # The airline carrier of the aircraft flying between an origin and destination.
         # Allowed values are IATA carrier codes.
         # Corresponds to the JSON property `carrier`
-        # @return [Array<Google::Apis::QpxExpressV1::CarrierData>]
+        # @return [Array<GoogleAPI::Apis::QpxExpressV1::CarrierData>]
         attr_accessor :carrier
       
         # The city that is either the origin or destination of part of a trip.
         # Corresponds to the JSON property `city`
-        # @return [Array<Google::Apis::QpxExpressV1::CityData>]
+        # @return [Array<GoogleAPI::Apis::QpxExpressV1::CityData>]
         attr_accessor :city
       
         # Identifies this as QPX Express response resource, including a trip's airport,
@@ -246,7 +246,7 @@ module Google
       
         # The taxes due for flying between an origin and a destination.
         # Corresponds to the JSON property `tax`
-        # @return [Array<Google::Apis::QpxExpressV1::TaxData>]
+        # @return [Array<GoogleAPI::Apis::QpxExpressV1::TaxData>]
         attr_accessor :tax
       
         def initialize(**args)
@@ -270,7 +270,7 @@ module Google
       # city codes, a price, and a fare basis. (A fare basis is a one-to-eight
       # character alphanumeric code used to identify a fare.)
       class FareInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `basisCode`
@@ -333,7 +333,7 @@ module Google
       # but carriers will frequently list flights that require a change of aircraft
       # between legs.
       class FlightInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `carrier`
@@ -358,12 +358,12 @@ module Google
       
       # Information about free baggage allowed on one segment of a trip.
       class FreeBaggageAllowance
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A representation of a type of bag, such as an ATPCo subcode, Commercial Name,
         # or other description.
         # Corresponds to the JSON property `bagDescriptor`
-        # @return [Array<Google::Apis::QpxExpressV1::BagDescriptor>]
+        # @return [Array<GoogleAPI::Apis::QpxExpressV1::BagDescriptor>]
         attr_accessor :bag_descriptor
       
         # The maximum number of kilos all the free baggage together may weigh.
@@ -411,7 +411,7 @@ module Google
       # a flight a takeoff immediately followed by a landing at two set points on a
       # particular carrier with a particular flight number.)
       class LegInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The aircraft (or bus, ferry, railcar, etc) travelling between the two points
         # of this leg.
@@ -541,7 +541,7 @@ module Google
       # child, adult, and senior citizen varies across carriers and reservation
       # systems.
       class PassengerCounts
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of passengers that are adults.
         # Corresponds to the JSON property `adultCount`
@@ -594,7 +594,7 @@ module Google
       # country, unless none are specified, in which case it defaults to that of the
       # journey origin country.
       class PricingInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The total fare in the base fare currency (the currency of the country of
         # origin). This element is only present when the sales currency and the currency
@@ -605,7 +605,7 @@ module Google
       
         # The fare used to price one or more segments.
         # Corresponds to the JSON property `fare`
-        # @return [Array<Google::Apis::QpxExpressV1::FareInfo>]
+        # @return [Array<GoogleAPI::Apis::QpxExpressV1::FareInfo>]
         attr_accessor :fare
       
         # The horizontal fare calculation. This is a field on a ticket that displays all
@@ -631,7 +631,7 @@ module Google
         # child, adult, and senior citizen varies across carriers and reservation
         # systems.
         # Corresponds to the JSON property `passengers`
-        # @return [Google::Apis::QpxExpressV1::PassengerCounts]
+        # @return [GoogleAPI::Apis::QpxExpressV1::PassengerCounts]
         attr_accessor :passengers
       
         # The passenger type code for this pricing. An alphanumeric code used by a
@@ -664,12 +664,12 @@ module Google
       
         # The per-segment price and baggage information.
         # Corresponds to the JSON property `segmentPricing`
-        # @return [Array<Google::Apis::QpxExpressV1::SegmentPricing>]
+        # @return [Array<GoogleAPI::Apis::QpxExpressV1::SegmentPricing>]
         attr_accessor :segment_pricing
       
         # The taxes used to calculate the tax total per ticket.
         # Corresponds to the JSON property `tax`
-        # @return [Array<Google::Apis::QpxExpressV1::TaxInfo>]
+        # @return [Array<GoogleAPI::Apis::QpxExpressV1::TaxInfo>]
         attr_accessor :tax
       
         def initialize(**args)
@@ -699,7 +699,7 @@ module Google
       # would have one segment with two legs: DFW to HNL (leg 1), HNL to OGG (leg 2),
       # and DFW to OGG (legs 1 and 2).
       class SegmentInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The booking code or class for this segment.
         # Corresponds to the JSON property `bookingCode`
@@ -734,7 +734,7 @@ module Google
         # but carriers will frequently list flights that require a change of aircraft
         # between legs.
         # Corresponds to the JSON property `flight`
-        # @return [Google::Apis::QpxExpressV1::FlightInfo]
+        # @return [GoogleAPI::Apis::QpxExpressV1::FlightInfo]
         attr_accessor :flight
       
         # An id uniquely identifying the segment in the solution.
@@ -752,7 +752,7 @@ module Google
       
         # The legs composing this segment.
         # Corresponds to the JSON property `leg`
-        # @return [Array<Google::Apis::QpxExpressV1::LegInfo>]
+        # @return [Array<GoogleAPI::Apis::QpxExpressV1::LegInfo>]
         attr_accessor :leg
       
         # The solution-based index of a segment in a married segment group. Married
@@ -796,7 +796,7 @@ module Google
       
       # The price of this segment.
       class SegmentPricing
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A segment identifier unique within a single solution. It is used to refer to
         # different parts of the same solution.
@@ -806,7 +806,7 @@ module Google
       
         # Details of the free baggage allowance on this segment.
         # Corresponds to the JSON property `freeBaggageOption`
-        # @return [Array<Google::Apis::QpxExpressV1::FreeBaggageAllowance>]
+        # @return [Array<GoogleAPI::Apis::QpxExpressV1::FreeBaggageAllowance>]
         attr_accessor :free_baggage_option
       
         # Identifies this as a segment pricing object, representing the price of this
@@ -842,7 +842,7 @@ module Google
       # | SYD | March 17, 2007 | | SYD | BOS | March 22, 2007 |
       # then this is a three slice trip.
       class SliceInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The duration of the slice in minutes.
         # Corresponds to the JSON property `duration`
@@ -859,7 +859,7 @@ module Google
       
         # The segment(s) constituting the slice.
         # Corresponds to the JSON property `segment`
-        # @return [Array<Google::Apis::QpxExpressV1::SegmentInfo>]
+        # @return [Array<GoogleAPI::Apis::QpxExpressV1::SegmentInfo>]
         attr_accessor :segment
       
         def initialize(**args)
@@ -876,7 +876,7 @@ module Google
       
       # Criteria a desired slice must satisfy.
       class SliceInput
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Slices with only the carriers in this alliance should be returned; do not use
         # this field with permittedCarrier. Allowed values are ONEWORLD, SKYTEAM, and
@@ -924,7 +924,7 @@ module Google
       
         # Two times in a single day defining a time range.
         # Corresponds to the JSON property `permittedDepartureTime`
-        # @return [Google::Apis::QpxExpressV1::TimeOfDayRange]
+        # @return [GoogleAPI::Apis::QpxExpressV1::TimeOfDayRange]
         attr_accessor :permitted_departure_time
       
         # Prefer solutions that book in this cabin for this slice. Allowed values are
@@ -961,7 +961,7 @@ module Google
       
       # Tax data.
       class TaxData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An identifier uniquely identifying a tax in a response.
         # Corresponds to the JSON property `id`
@@ -993,7 +993,7 @@ module Google
       
       # Tax information.
       class TaxInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether this is a government charge or a carrier surcharge.
         # Corresponds to the JSON property `chargeType`
@@ -1044,7 +1044,7 @@ module Google
       
       # Two times in a single day defining a time range.
       class TimeOfDayRange
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The earliest time of day in HH:MM format.
         # Corresponds to the JSON property `earliestTime`
@@ -1077,7 +1077,7 @@ module Google
       
       # Trip information.
       class TripOption
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifier uniquely identifying this trip in a response.
         # Corresponds to the JSON property `id`
@@ -1092,7 +1092,7 @@ module Google
       
         # Per passenger pricing information.
         # Corresponds to the JSON property `pricing`
-        # @return [Array<Google::Apis::QpxExpressV1::PricingInfo>]
+        # @return [Array<GoogleAPI::Apis::QpxExpressV1::PricingInfo>]
         attr_accessor :pricing
       
         # The total price for all passengers on the trip, in the form of a currency
@@ -1103,7 +1103,7 @@ module Google
       
         # The slices that make up this trip's itinerary.
         # Corresponds to the JSON property `slice`
-        # @return [Array<Google::Apis::QpxExpressV1::SliceInfo>]
+        # @return [Array<GoogleAPI::Apis::QpxExpressV1::SliceInfo>]
         attr_accessor :slice
       
         def initialize(**args)
@@ -1122,7 +1122,7 @@ module Google
       
       # A QPX Express search request, which will yield one or more solutions.
       class TripOptionsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Do not return solutions that cost more than this price. The alphabetical part
         # of the price is in ISO 4217. The format, in regex, is [A-Z]`3`\d+(\.\d+)?
@@ -1135,7 +1135,7 @@ module Google
         # child, adult, and senior citizen varies across carriers and reservation
         # systems.
         # Corresponds to the JSON property `passengers`
-        # @return [Google::Apis::QpxExpressV1::PassengerCounts]
+        # @return [GoogleAPI::Apis::QpxExpressV1::PassengerCounts]
         attr_accessor :passengers
       
         # Return only solutions with refundable fares.
@@ -1157,7 +1157,7 @@ module Google
         # trip with three segments might be BOS-SYD, SYD-LAX, LAX-BOS if the traveler
         # only stopped in SYD and LAX just long enough to change planes.
         # Corresponds to the JSON property `slice`
-        # @return [Array<Google::Apis::QpxExpressV1::SliceInput>]
+        # @return [Array<GoogleAPI::Apis::QpxExpressV1::SliceInput>]
         attr_accessor :slice
       
         # The number of solutions to return, maximum 500.
@@ -1182,12 +1182,12 @@ module Google
       
       # A QPX Express search response.
       class TripOptionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Detailed information about components found in the solutions of this response,
         # including a trip's airport, city, taxes, airline, and aircraft.
         # Corresponds to the JSON property `data`
-        # @return [Google::Apis::QpxExpressV1::Data]
+        # @return [GoogleAPI::Apis::QpxExpressV1::Data]
         attr_accessor :data
       
         # Identifies this as a QPX Express trip response object, which consists of zero
@@ -1203,7 +1203,7 @@ module Google
       
         # A list of priced itinerary solutions to the QPX Express query.
         # Corresponds to the JSON property `tripOption`
-        # @return [Array<Google::Apis::QpxExpressV1::TripOption>]
+        # @return [Array<GoogleAPI::Apis::QpxExpressV1::TripOption>]
         attr_accessor :trip_option
       
         def initialize(**args)
@@ -1221,11 +1221,11 @@ module Google
       
       # A QPX Express search request.
       class SearchTripsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A QPX Express search request, which will yield one or more solutions.
         # Corresponds to the JSON property `request`
-        # @return [Google::Apis::QpxExpressV1::TripOptionsRequest]
+        # @return [GoogleAPI::Apis::QpxExpressV1::TripOptionsRequest]
         attr_accessor :request
       
         def initialize(**args)
@@ -1240,7 +1240,7 @@ module Google
       
       # A QPX Express search response.
       class SearchTripsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies this as a QPX Express API search response resource. Value: the
         # fixed string qpxExpress#tripsSearch.
@@ -1250,7 +1250,7 @@ module Google
       
         # A QPX Express search response.
         # Corresponds to the JSON property `trips`
-        # @return [Google::Apis::QpxExpressV1::TripOptionsResponse]
+        # @return [GoogleAPI::Apis::QpxExpressV1::TripOptionsResponse]
         attr_accessor :trips
       
         def initialize(**args)

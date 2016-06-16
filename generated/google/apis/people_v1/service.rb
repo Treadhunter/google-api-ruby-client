@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module PeopleV1
       # Google People API
@@ -28,11 +28,11 @@ module Google
       # @example
       #    require 'google/apis/people_v1'
       #
-      #    People = Google::Apis::PeopleV1 # Alias the module
+      #    People = GoogleAPI::Apis::PeopleV1 # Alias the module
       #    service = People::PeopleService.new
       #
       # @see https://developers.google.com/people/
-      class PeopleService < Google::Apis::Core::BaseService
+      class PeopleService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -64,22 +64,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PeopleV1::Person] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PeopleV1::Person] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PeopleV1::Person]
+        # @return [GoogleAPI::Apis::PeopleV1::Person]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_person(resource_name, request_mask_include_field: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/{+resourceName}', options)
-          command.response_representation = Google::Apis::PeopleV1::Person::Representation
-          command.response_class = Google::Apis::PeopleV1::Person
+          command.response_representation = GoogleAPI::Apis::PeopleV1::Person::Representation
+          command.response_class = GoogleAPI::Apis::PeopleV1::Person
           command.params['resourceName'] = resource_name unless resource_name.nil?
           command.query['requestMask.includeField'] = request_mask_include_field unless request_mask_include_field.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -103,22 +103,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PeopleV1::GetPeopleResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PeopleV1::GetPeopleResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PeopleV1::GetPeopleResponse]
+        # @return [GoogleAPI::Apis::PeopleV1::GetPeopleResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_people(resource_names: nil, request_mask_include_field: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/people:batchGet', options)
-          command.response_representation = Google::Apis::PeopleV1::GetPeopleResponse::Representation
-          command.response_class = Google::Apis::PeopleV1::GetPeopleResponse
+          command.response_representation = GoogleAPI::Apis::PeopleV1::GetPeopleResponse::Representation
+          command.response_class = GoogleAPI::Apis::PeopleV1::GetPeopleResponse
           command.query['resourceNames'] = resource_names unless resource_names.nil?
           command.query['requestMask.includeField'] = request_mask_include_field unless request_mask_include_field.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -150,22 +150,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PeopleV1::ListConnectionsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PeopleV1::ListConnectionsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PeopleV1::ListConnectionsResponse]
+        # @return [GoogleAPI::Apis::PeopleV1::ListConnectionsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_person_connections(resource_name, page_token: nil, page_size: nil, sort_order: nil, sync_token: nil, request_mask_include_field: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/{+resourceName}/connections', options)
-          command.response_representation = Google::Apis::PeopleV1::ListConnectionsResponse::Representation
-          command.response_class = Google::Apis::PeopleV1::ListConnectionsResponse
+          command.response_representation = GoogleAPI::Apis::PeopleV1::ListConnectionsResponse::Representation
+          command.response_class = GoogleAPI::Apis::PeopleV1::ListConnectionsResponse
           command.params['resourceName'] = resource_name unless resource_name.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
           command.query['pageSize'] = page_size unless page_size.nil?

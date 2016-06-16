@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module GanV1beta1
       
       # An AdvertiserResource.
       class Advertiser
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # True if the advertiser allows publisher created links, otherwise false.
         # Corresponds to the JSON property `allowPublisherCreatedLinks`
@@ -67,12 +67,12 @@ module Google
       
         # An ApiMoneyProto.
         # Corresponds to the JSON property `epcNinetyDayAverage`
-        # @return [Google::Apis::GanV1beta1::Money]
+        # @return [GoogleAPI::Apis::GanV1beta1::Money]
         attr_accessor :epc_ninety_day_average
       
         # An ApiMoneyProto.
         # Corresponds to the JSON property `epcSevenDayAverage`
-        # @return [Google::Apis::GanV1beta1::Money]
+        # @return [GoogleAPI::Apis::GanV1beta1::Money]
         attr_accessor :epc_seven_day_average
       
         # The ID of this advertiser.
@@ -82,7 +82,7 @@ module Google
       
         # An AdvertiserResource.
         # Corresponds to the JSON property `item`
-        # @return [Google::Apis::GanV1beta1::Advertiser]
+        # @return [GoogleAPI::Apis::GanV1beta1::Advertiser]
         attr_accessor :item
       
         # Date that this advertiser was approved as a Google Affiliate Network
@@ -171,11 +171,11 @@ module Google
       
       # 
       class Advertisers
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The advertiser list.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GanV1beta1::Advertiser>]
+        # @return [Array<GoogleAPI::Apis::GanV1beta1::Advertiser>]
         attr_accessor :items
       
         # The kind for a page of advertisers.
@@ -207,7 +207,7 @@ module Google
       # includes a smaller subset of the fields. The fields included in the summary
       # projection are marked as such in their descriptions.
       class CcOffer
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # More marketing copy about the card's benefits. A summary field.
         # Corresponds to the JSON property `additionalCardBenefits`
@@ -269,7 +269,7 @@ module Google
         # For cards with rewards programs, extra circumstances whereby additional
         # rewards may be granted.
         # Corresponds to the JSON property `bonusRewards`
-        # @return [Array<Google::Apis::GanV1beta1::CcOffer::BonusReward>]
+        # @return [Array<GoogleAPI::Apis::GanV1beta1::CcOffer::BonusReward>]
         attr_accessor :bonus_rewards
       
         # If you get coverage when you use the card for the given activity, this field
@@ -318,7 +318,7 @@ module Google
       
         # Fees for defaulting on your payments.
         # Corresponds to the JSON property `defaultFees`
-        # @return [Array<Google::Apis::GanV1beta1::CcOffer::DefaultFee>]
+        # @return [Array<GoogleAPI::Apis::GanV1beta1::CcOffer::DefaultFee>]
         attr_accessor :default_fees
       
         # A notice that, if present, is referenced via an asterisk by many of the other
@@ -512,7 +512,7 @@ module Google
       
         # For cards with rewards programs, detailed rules about how the program works.
         # Corresponds to the JSON property `rewards`
-        # @return [Array<Google::Apis::GanV1beta1::CcOffer::Reward>]
+        # @return [Array<GoogleAPI::Apis::GanV1beta1::CcOffer::Reward>]
         attr_accessor :rewards
       
         # Whether accumulated rewards ever expire.
@@ -626,7 +626,7 @@ module Google
         
         # 
         class BonusReward
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # How many units of reward will be granted.
           # Corresponds to the JSON property `amount`
@@ -652,7 +652,7 @@ module Google
         
         # 
         class DefaultFee
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The type of charge, for example Purchases.
           # Corresponds to the JSON property `category`
@@ -691,7 +691,7 @@ module Google
         
         # 
         class Reward
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Other limits, for example, if this rule only applies during an introductory
           # period.
@@ -742,11 +742,11 @@ module Google
       
       # 
       class CcOffers
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The credit card offers.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GanV1beta1::CcOffer>]
+        # @return [Array<GoogleAPI::Apis::GanV1beta1::CcOffer>]
         attr_accessor :items
       
         # The kind for a page of credit card offers.
@@ -767,7 +767,7 @@ module Google
       
       # An EventResource.
       class Event
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of advertiser for this event.
         # Corresponds to the JSON property `advertiserId`
@@ -792,12 +792,12 @@ module Google
       
         # An ApiMoneyProto.
         # Corresponds to the JSON property `commissionableSales`
-        # @return [Google::Apis::GanV1beta1::Money]
+        # @return [GoogleAPI::Apis::GanV1beta1::Money]
         attr_accessor :commissionable_sales
       
         # An ApiMoneyProto.
         # Corresponds to the JSON property `earnings`
-        # @return [Google::Apis::GanV1beta1::Money]
+        # @return [GoogleAPI::Apis::GanV1beta1::Money]
         attr_accessor :earnings
       
         # The date-time this event was initiated as a RFC 3339 date-time value.
@@ -823,7 +823,7 @@ module Google
       
         # An ApiMoneyProto.
         # Corresponds to the JSON property `networkFee`
-        # @return [Google::Apis::GanV1beta1::Money]
+        # @return [GoogleAPI::Apis::GanV1beta1::Money]
         attr_accessor :network_fee
       
         # The order ID for this event. Only returned for conversion events.
@@ -833,12 +833,12 @@ module Google
       
         # Products associated with the event.
         # Corresponds to the JSON property `products`
-        # @return [Array<Google::Apis::GanV1beta1::Event::Product>]
+        # @return [Array<GoogleAPI::Apis::GanV1beta1::Event::Product>]
         attr_accessor :products
       
         # An ApiMoneyProto.
         # Corresponds to the JSON property `publisherFee`
-        # @return [Google::Apis::GanV1beta1::Money]
+        # @return [GoogleAPI::Apis::GanV1beta1::Money]
         attr_accessor :publisher_fee
       
         # The ID of the publisher for this event.
@@ -890,7 +890,7 @@ module Google
         
         # 
         class Product
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Id of the category this product belongs to.
           # Corresponds to the JSON property `categoryId`
@@ -904,17 +904,17 @@ module Google
         
           # An ApiMoneyProto.
           # Corresponds to the JSON property `earnings`
-          # @return [Google::Apis::GanV1beta1::Money]
+          # @return [GoogleAPI::Apis::GanV1beta1::Money]
           attr_accessor :earnings
         
           # An ApiMoneyProto.
           # Corresponds to the JSON property `networkFee`
-          # @return [Google::Apis::GanV1beta1::Money]
+          # @return [GoogleAPI::Apis::GanV1beta1::Money]
           attr_accessor :network_fee
         
           # An ApiMoneyProto.
           # Corresponds to the JSON property `publisherFee`
-          # @return [Google::Apis::GanV1beta1::Money]
+          # @return [GoogleAPI::Apis::GanV1beta1::Money]
           attr_accessor :publisher_fee
         
           # Quantity of this product bought/exchanged.
@@ -934,7 +934,7 @@ module Google
         
           # An ApiMoneyProto.
           # Corresponds to the JSON property `unitPrice`
-          # @return [Google::Apis::GanV1beta1::Money]
+          # @return [GoogleAPI::Apis::GanV1beta1::Money]
           attr_accessor :unit_price
         
           def initialize(**args)
@@ -958,11 +958,11 @@ module Google
       
       # 
       class Events
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The event list.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GanV1beta1::Event>]
+        # @return [Array<GoogleAPI::Apis::GanV1beta1::Event>]
         attr_accessor :items
       
         # The kind for a page of events.
@@ -990,7 +990,7 @@ module Google
       
       # A LinkResource.
       class Link
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The advertiser id for the advertiser who owns this link.
         # Corresponds to the JSON property `advertiserId`
@@ -1039,12 +1039,12 @@ module Google
       
         # An ApiMoneyProto.
         # Corresponds to the JSON property `epcNinetyDayAverage`
-        # @return [Google::Apis::GanV1beta1::Money]
+        # @return [GoogleAPI::Apis::GanV1beta1::Money]
         attr_accessor :epc_ninety_day_average
       
         # An ApiMoneyProto.
         # Corresponds to the JSON property `epcSevenDayAverage`
-        # @return [Google::Apis::GanV1beta1::Money]
+        # @return [GoogleAPI::Apis::GanV1beta1::Money]
         attr_accessor :epc_seven_day_average
       
         # The ID of this link.
@@ -1090,7 +1090,7 @@ module Google
       
         # Special offers on the link.
         # Corresponds to the JSON property `specialOffers`
-        # @return [Google::Apis::GanV1beta1::Link::SpecialOffers]
+        # @return [GoogleAPI::Apis::GanV1beta1::Link::SpecialOffers]
         attr_accessor :special_offers
       
         # Date that this link becomes active.
@@ -1129,7 +1129,7 @@ module Google
         
         # Special offers on the link.
         class SpecialOffers
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Whether there is a free gift
           # Corresponds to the JSON property `freeGift`
@@ -1145,7 +1145,7 @@ module Google
         
           # An ApiMoneyProto.
           # Corresponds to the JSON property `freeShippingMin`
-          # @return [Google::Apis::GanV1beta1::Money]
+          # @return [GoogleAPI::Apis::GanV1beta1::Money]
           attr_accessor :free_shipping_min
         
           # Percent off on the purchase
@@ -1155,17 +1155,17 @@ module Google
         
           # An ApiMoneyProto.
           # Corresponds to the JSON property `percentOffMin`
-          # @return [Google::Apis::GanV1beta1::Money]
+          # @return [GoogleAPI::Apis::GanV1beta1::Money]
           attr_accessor :percent_off_min
         
           # An ApiMoneyProto.
           # Corresponds to the JSON property `priceCut`
-          # @return [Google::Apis::GanV1beta1::Money]
+          # @return [GoogleAPI::Apis::GanV1beta1::Money]
           attr_accessor :price_cut
         
           # An ApiMoneyProto.
           # Corresponds to the JSON property `priceCutMin`
-          # @return [Google::Apis::GanV1beta1::Money]
+          # @return [GoogleAPI::Apis::GanV1beta1::Money]
           attr_accessor :price_cut_min
         
           # List of promotion code associated with the link
@@ -1193,11 +1193,11 @@ module Google
       
       # 
       class Links
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The links.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GanV1beta1::Link>]
+        # @return [Array<GoogleAPI::Apis::GanV1beta1::Link>]
         attr_accessor :items
       
         # The kind for a page of links.
@@ -1224,7 +1224,7 @@ module Google
       
       # An ApiMoneyProto.
       class Money
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The amount of money.
         # Corresponds to the JSON property `amount`
@@ -1249,7 +1249,7 @@ module Google
       
       # A PublisherResource.
       class Publisher
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Classification that this publisher belongs to. See this link for all publisher
         # classifications: http://www.google.com/support/affiliatenetwork/advertiser/bin/
@@ -1260,12 +1260,12 @@ module Google
       
         # An ApiMoneyProto.
         # Corresponds to the JSON property `epcNinetyDayAverage`
-        # @return [Google::Apis::GanV1beta1::Money]
+        # @return [GoogleAPI::Apis::GanV1beta1::Money]
         attr_accessor :epc_ninety_day_average
       
         # An ApiMoneyProto.
         # Corresponds to the JSON property `epcSevenDayAverage`
-        # @return [Google::Apis::GanV1beta1::Money]
+        # @return [GoogleAPI::Apis::GanV1beta1::Money]
         attr_accessor :epc_seven_day_average
       
         # The ID of this publisher.
@@ -1275,7 +1275,7 @@ module Google
       
         # A PublisherResource.
         # Corresponds to the JSON property `item`
-        # @return [Google::Apis::GanV1beta1::Publisher]
+        # @return [GoogleAPI::Apis::GanV1beta1::Publisher]
         attr_accessor :item
       
         # Date that this publisher was approved as a Google Affiliate Network publisher.
@@ -1332,11 +1332,11 @@ module Google
       
       # 
       class Publishers
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The entity list.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GanV1beta1::Publisher>]
+        # @return [Array<GoogleAPI::Apis::GanV1beta1::Publisher>]
         attr_accessor :items
       
         # The kind for a page of entities.
@@ -1365,7 +1365,7 @@ module Google
       # A ReportResource representing a report of a certain type either for an
       # advertiser or publisher.
       class Report
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The column names for the report
         # Corresponds to the JSON property `column_names`

@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module DnsV1
       # Google Cloud DNS API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/dns_v1'
       #
-      #    Dns = Google::Apis::DnsV1 # Alias the module
+      #    Dns = GoogleAPI::Apis::DnsV1 # Alias the module
       #    service = Dns::DnsService.new
       #
       # @see https://developers.google.com/cloud-dns
-      class DnsService < Google::Apis::Core::BaseService
+      class DnsService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -58,7 +58,7 @@ module Google
         # @param [String] managed_zone
         #   Identifies the managed zone addressed by this request. Can be the managed zone
         #   name or id.
-        # @param [Google::Apis::DnsV1::Change] change_object
+        # @param [GoogleAPI::Apis::DnsV1::Change] change_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -68,24 +68,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DnsV1::Change] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DnsV1::Change] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DnsV1::Change]
+        # @return [GoogleAPI::Apis::DnsV1::Change]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_change(project, managed_zone, change_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/managedZones/{managedZone}/changes', options)
-          command.request_representation = Google::Apis::DnsV1::Change::Representation
+          command.request_representation = GoogleAPI::Apis::DnsV1::Change::Representation
           command.request_object = change_object
-          command.response_representation = Google::Apis::DnsV1::Change::Representation
-          command.response_class = Google::Apis::DnsV1::Change
+          command.response_representation = GoogleAPI::Apis::DnsV1::Change::Representation
+          command.response_class = GoogleAPI::Apis::DnsV1::Change
           command.params['project'] = project unless project.nil?
           command.params['managedZone'] = managed_zone unless managed_zone.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -112,22 +112,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DnsV1::Change] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DnsV1::Change] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DnsV1::Change]
+        # @return [GoogleAPI::Apis::DnsV1::Change]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_change(project, managed_zone, change_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/managedZones/{managedZone}/changes/{changeId}', options)
-          command.response_representation = Google::Apis::DnsV1::Change::Representation
-          command.response_class = Google::Apis::DnsV1::Change
+          command.response_representation = GoogleAPI::Apis::DnsV1::Change::Representation
+          command.response_class = GoogleAPI::Apis::DnsV1::Change
           command.params['project'] = project unless project.nil?
           command.params['managedZone'] = managed_zone unless managed_zone.nil?
           command.params['changeId'] = change_id unless change_id.nil?
@@ -162,22 +162,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DnsV1::ListChangesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DnsV1::ListChangesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DnsV1::ListChangesResponse]
+        # @return [GoogleAPI::Apis::DnsV1::ListChangesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_changes(project, managed_zone, max_results: nil, page_token: nil, sort_by: nil, sort_order: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/managedZones/{managedZone}/changes', options)
-          command.response_representation = Google::Apis::DnsV1::ListChangesResponse::Representation
-          command.response_class = Google::Apis::DnsV1::ListChangesResponse
+          command.response_representation = GoogleAPI::Apis::DnsV1::ListChangesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DnsV1::ListChangesResponse
           command.params['project'] = project unless project.nil?
           command.params['managedZone'] = managed_zone unless managed_zone.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -193,7 +193,7 @@ module Google
         # Create a new ManagedZone.
         # @param [String] project
         #   Identifies the project addressed by this request.
-        # @param [Google::Apis::DnsV1::ManagedZone] managed_zone_object
+        # @param [GoogleAPI::Apis::DnsV1::ManagedZone] managed_zone_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -203,24 +203,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DnsV1::ManagedZone] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DnsV1::ManagedZone] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DnsV1::ManagedZone]
+        # @return [GoogleAPI::Apis::DnsV1::ManagedZone]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_managed_zone(project, managed_zone_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/managedZones', options)
-          command.request_representation = Google::Apis::DnsV1::ManagedZone::Representation
+          command.request_representation = GoogleAPI::Apis::DnsV1::ManagedZone::Representation
           command.request_object = managed_zone_object
-          command.response_representation = Google::Apis::DnsV1::ManagedZone::Representation
-          command.response_class = Google::Apis::DnsV1::ManagedZone
+          command.response_representation = GoogleAPI::Apis::DnsV1::ManagedZone::Representation
+          command.response_class = GoogleAPI::Apis::DnsV1::ManagedZone
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -243,7 +243,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -252,9 +252,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_managed_zone(project, managed_zone, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/managedZones/{managedZone}', options)
           command.params['project'] = project unless project.nil?
@@ -280,22 +280,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DnsV1::ManagedZone] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DnsV1::ManagedZone] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DnsV1::ManagedZone]
+        # @return [GoogleAPI::Apis::DnsV1::ManagedZone]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_managed_zone(project, managed_zone, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/managedZones/{managedZone}', options)
-          command.response_representation = Google::Apis::DnsV1::ManagedZone::Representation
-          command.response_class = Google::Apis::DnsV1::ManagedZone
+          command.response_representation = GoogleAPI::Apis::DnsV1::ManagedZone::Representation
+          command.response_class = GoogleAPI::Apis::DnsV1::ManagedZone
           command.params['project'] = project unless project.nil?
           command.params['managedZone'] = managed_zone unless managed_zone.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -324,22 +324,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DnsV1::ListManagedZonesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DnsV1::ListManagedZonesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DnsV1::ListManagedZonesResponse]
+        # @return [GoogleAPI::Apis::DnsV1::ListManagedZonesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_managed_zones(project, dns_name: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/managedZones', options)
-          command.response_representation = Google::Apis::DnsV1::ListManagedZonesResponse::Representation
-          command.response_class = Google::Apis::DnsV1::ListManagedZonesResponse
+          command.response_representation = GoogleAPI::Apis::DnsV1::ListManagedZonesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DnsV1::ListManagedZonesResponse
           command.params['project'] = project unless project.nil?
           command.query['dnsName'] = dns_name unless dns_name.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -362,22 +362,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DnsV1::Project] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DnsV1::Project] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DnsV1::Project]
+        # @return [GoogleAPI::Apis::DnsV1::Project]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_project(project, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}', options)
-          command.response_representation = Google::Apis::DnsV1::Project::Representation
-          command.response_class = Google::Apis::DnsV1::Project
+          command.response_representation = GoogleAPI::Apis::DnsV1::Project::Representation
+          command.response_class = GoogleAPI::Apis::DnsV1::Project
           command.params['project'] = project unless project.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -412,22 +412,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DnsV1::ListResourceRecordSetsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DnsV1::ListResourceRecordSetsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DnsV1::ListResourceRecordSetsResponse]
+        # @return [GoogleAPI::Apis::DnsV1::ListResourceRecordSetsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_resource_record_sets(project, managed_zone, max_results: nil, name: nil, page_token: nil, type: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/managedZones/{managedZone}/rrsets', options)
-          command.response_representation = Google::Apis::DnsV1::ListResourceRecordSetsResponse::Representation
-          command.response_class = Google::Apis::DnsV1::ListResourceRecordSetsResponse
+          command.response_representation = GoogleAPI::Apis::DnsV1::ListResourceRecordSetsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DnsV1::ListResourceRecordSetsResponse
           command.params['project'] = project unless project.nil?
           command.params['managedZone'] = managed_zone unless managed_zone.nil?
           command.query['maxResults'] = max_results unless max_results.nil?

@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module DfareportingV2_3
       
       # Contains properties of a DCM account.
       class Account
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account permissions assigned to this account.
         # Corresponds to the JSON property `accountPermissionIds`
@@ -187,7 +187,7 @@ module Google
       
         # Reporting Configuration
         # Corresponds to the JSON property `reportsConfiguration`
-        # @return [Google::Apis::DfareportingV2_3::ReportsConfiguration]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::ReportsConfiguration]
         attr_accessor :reports_configuration
       
         # File size limit in kilobytes of Rich Media teaser creatives. Must be between 1
@@ -226,7 +226,7 @@ module Google
       
       # Gets a summary of active ads in an account.
       class AccountActiveAdSummary
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of the account.
         # Corresponds to the JSON property `accountId`
@@ -272,7 +272,7 @@ module Google
       # Some features of DCM require an account permission to be present in the
       # account.
       class AccountPermission
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account profiles associated with this account permission.
         # Possible values are:
@@ -326,7 +326,7 @@ module Google
       # AccountPermissionGroups contains a mapping of permission group IDs to names. A
       # permission group is a grouping of account permissions.
       class AccountPermissionGroup
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of this account permission group.
         # Corresponds to the JSON property `id`
@@ -358,11 +358,11 @@ module Google
       
       # Account Permission Group List Response
       class ListAccountPermissionGroupsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account permission group collection.
         # Corresponds to the JSON property `accountPermissionGroups`
-        # @return [Array<Google::Apis::DfareportingV2_3::AccountPermissionGroup>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::AccountPermissionGroup>]
         attr_accessor :account_permission_groups
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -384,11 +384,11 @@ module Google
       
       # Account Permission List Response
       class ListAccountPermissionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account permission collection.
         # Corresponds to the JSON property `accountPermissions`
-        # @return [Array<Google::Apis::DfareportingV2_3::AccountPermission>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::AccountPermission>]
         attr_accessor :account_permissions
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -412,7 +412,7 @@ module Google
       # is specifically for managing user profiles, whereas UserProfiles is for
       # accessing the API.
       class AccountUserProfile
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of the user profile. This is a read-only field that can be left
         # blank.
@@ -429,12 +429,12 @@ module Google
       
         # Object Filter.
         # Corresponds to the JSON property `advertiserFilter`
-        # @return [Google::Apis::DfareportingV2_3::ObjectFilter]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::ObjectFilter]
         attr_accessor :advertiser_filter
       
         # Object Filter.
         # Corresponds to the JSON property `campaignFilter`
-        # @return [Google::Apis::DfareportingV2_3::ObjectFilter]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::ObjectFilter]
         attr_accessor :campaign_filter
       
         # Comments for this user profile.
@@ -490,7 +490,7 @@ module Google
       
         # Object Filter.
         # Corresponds to the JSON property `siteFilter`
-        # @return [Google::Apis::DfareportingV2_3::ObjectFilter]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::ObjectFilter]
         attr_accessor :site_filter
       
         # Subaccount ID of the user profile. This is a read-only field that can be left
@@ -512,7 +512,7 @@ module Google
       
         # Object Filter.
         # Corresponds to the JSON property `userRoleFilter`
-        # @return [Google::Apis::DfareportingV2_3::ObjectFilter]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::ObjectFilter]
         attr_accessor :user_role_filter
       
         # User role ID of the user profile. This is a required field.
@@ -547,11 +547,11 @@ module Google
       
       # Account User Profile List Response
       class ListAccountUserProfilesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account user profile collection.
         # Corresponds to the JSON property `accountUserProfiles`
-        # @return [Array<Google::Apis::DfareportingV2_3::AccountUserProfile>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::AccountUserProfile>]
         attr_accessor :account_user_profiles
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -579,11 +579,11 @@ module Google
       
       # Account List Response
       class ListAccountsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account collection.
         # Corresponds to the JSON property `accounts`
-        # @return [Array<Google::Apis::DfareportingV2_3::Account>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Account>]
         attr_accessor :accounts
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -611,12 +611,12 @@ module Google
       
       # Represents an activity group.
       class Activities
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of activity filters. The dimension values need to be all either of type "
         # dfa:activity" or "dfa:activityGroup".
         # Corresponds to the JSON property `filters`
-        # @return [Array<Google::Apis::DfareportingV2_3::DimensionValue>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::DimensionValue>]
         attr_accessor :filters
       
         # The kind of resource this is, in this case dfareporting#activities.
@@ -643,7 +643,7 @@ module Google
       
       # Contains properties of a DCM ad.
       class Ad
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this ad. This is a read-only field that can be left blank.
         # Corresponds to the JSON property `accountId`
@@ -663,7 +663,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `advertiserIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :advertiser_id_dimension_value
       
         # Whether this ad is archived.
@@ -685,17 +685,17 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `campaignIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :campaign_id_dimension_value
       
         # Click-through URL
         # Corresponds to the JSON property `clickThroughUrl`
-        # @return [Google::Apis::DfareportingV2_3::ClickThroughUrl]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::ClickThroughUrl]
         attr_accessor :click_through_url
       
         # Click Through URL Suffix settings.
         # Corresponds to the JSON property `clickThroughUrlSuffixProperties`
-        # @return [Google::Apis::DfareportingV2_3::ClickThroughUrlSuffixProperties]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::ClickThroughUrlSuffixProperties]
         attr_accessor :click_through_url_suffix_properties
       
         # Comments for this ad.
@@ -714,36 +714,36 @@ module Google
       
         # Modification timestamp.
         # Corresponds to the JSON property `createInfo`
-        # @return [Google::Apis::DfareportingV2_3::LastModifiedInfo]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LastModifiedInfo]
         attr_accessor :create_info
       
         # Creative group assignments for this ad. Applicable when type is
         # AD_SERVING_CLICK_TRACKER. Only one assignment per creative group number is
         # allowed for a maximum of two assignments.
         # Corresponds to the JSON property `creativeGroupAssignments`
-        # @return [Array<Google::Apis::DfareportingV2_3::CreativeGroupAssignment>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::CreativeGroupAssignment>]
         attr_accessor :creative_group_assignments
       
         # Creative Rotation.
         # Corresponds to the JSON property `creativeRotation`
-        # @return [Google::Apis::DfareportingV2_3::CreativeRotation]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::CreativeRotation]
         attr_accessor :creative_rotation
       
         # Day Part Targeting.
         # Corresponds to the JSON property `dayPartTargeting`
-        # @return [Google::Apis::DfareportingV2_3::DayPartTargeting]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DayPartTargeting]
         attr_accessor :day_part_targeting
       
         # Properties of inheriting and overriding the default click-through event tag. A
         # campaign may override the event tag defined at the advertiser level, and an ad
         # may also override the campaign's setting further.
         # Corresponds to the JSON property `defaultClickThroughEventTagProperties`
-        # @return [Google::Apis::DfareportingV2_3::DefaultClickThroughEventTagProperties]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DefaultClickThroughEventTagProperties]
         attr_accessor :default_click_through_event_tag_properties
       
         # Delivery Schedule.
         # Corresponds to the JSON property `deliverySchedule`
-        # @return [Google::Apis::DfareportingV2_3::DeliverySchedule]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DeliverySchedule]
         attr_accessor :delivery_schedule
       
         # Whether this ad is a dynamic click tracker. Applicable when type is
@@ -762,12 +762,12 @@ module Google
       
         # Event tag overrides for this ad.
         # Corresponds to the JSON property `eventTagOverrides`
-        # @return [Array<Google::Apis::DfareportingV2_3::EventTagOverride>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::EventTagOverride>]
         attr_accessor :event_tag_overrides
       
         # Geographical Targeting.
         # Corresponds to the JSON property `geoTargeting`
-        # @return [Google::Apis::DfareportingV2_3::GeoTargeting]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::GeoTargeting]
         attr_accessor :geo_targeting
       
         # ID of this ad. This is a read-only, auto-generated field.
@@ -777,12 +777,12 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `idDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :id_dimension_value
       
         # Key Value Targeting Expression.
         # Corresponds to the JSON property `keyValueTargetingExpression`
-        # @return [Google::Apis::DfareportingV2_3::KeyValueTargetingExpression]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::KeyValueTargetingExpression]
         attr_accessor :key_value_targeting_expression
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -793,7 +793,7 @@ module Google
       
         # Modification timestamp.
         # Corresponds to the JSON property `lastModifiedInfo`
-        # @return [Google::Apis::DfareportingV2_3::LastModifiedInfo]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LastModifiedInfo]
         attr_accessor :last_modified_info
       
         # Name of this ad. This is a required field and must be less than 256 characters
@@ -804,17 +804,17 @@ module Google
       
         # Placement assignments for this ad.
         # Corresponds to the JSON property `placementAssignments`
-        # @return [Array<Google::Apis::DfareportingV2_3::PlacementAssignment>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::PlacementAssignment>]
         attr_accessor :placement_assignments
       
         # Remarketing List Targeting Expression.
         # Corresponds to the JSON property `remarketingListExpression`
-        # @return [Google::Apis::DfareportingV2_3::ListTargetingExpression]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::ListTargetingExpression]
         attr_accessor :remarketing_list_expression
       
         # Represents the dimensions of ads, placements, creatives, or creative assets.
         # Corresponds to the JSON property `size`
-        # @return [Google::Apis::DfareportingV2_3::Size]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::Size]
         attr_accessor :size
       
         # Whether this ad is ssl compliant. This is a read-only field that is auto-
@@ -844,7 +844,7 @@ module Google
       
         # Technology Targeting.
         # Corresponds to the JSON property `technologyTargeting`
-        # @return [Google::Apis::DfareportingV2_3::TechnologyTargeting]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::TechnologyTargeting]
         attr_accessor :technology_targeting
       
         # Type of ad. This is a required field on insertion. Note that default ads (
@@ -901,7 +901,7 @@ module Google
       
       # Ad Slot
       class AdSlot
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Comment for this ad slot.
         # Corresponds to the JSON property `comment`
@@ -966,11 +966,11 @@ module Google
       
       # Ad List Response
       class ListAdsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Ad collection.
         # Corresponds to the JSON property `ads`
-        # @return [Array<Google::Apis::DfareportingV2_3::Ad>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Ad>]
         attr_accessor :ads
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -998,7 +998,7 @@ module Google
       
       # Contains properties of a DCM advertiser.
       class Advertiser
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this advertiser.This is a read-only field that can be left blank.
         # Corresponds to the JSON property `accountId`
@@ -1044,7 +1044,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `floodlightConfigurationIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :floodlight_configuration_id_dimension_value
       
         # ID of this advertiser. This is a read-only, auto-generated field.
@@ -1054,7 +1054,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `idDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :id_dimension_value
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -1123,7 +1123,7 @@ module Google
       # Groups advertisers together so that reports can be generated for the entire
       # group at once.
       class AdvertiserGroup
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this advertiser group. This is a read-only field that can be
         # left blank.
@@ -1163,11 +1163,11 @@ module Google
       
       # Advertiser Group List Response
       class ListAdvertiserGroupsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Advertiser group collection.
         # Corresponds to the JSON property `advertiserGroups`
-        # @return [Array<Google::Apis::DfareportingV2_3::AdvertiserGroup>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::AdvertiserGroup>]
         attr_accessor :advertiser_groups
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -1195,11 +1195,11 @@ module Google
       
       # Advertiser List Response
       class ListAdvertisersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Advertiser collection.
         # Corresponds to the JSON property `advertisers`
-        # @return [Array<Google::Apis::DfareportingV2_3::Advertiser>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Advertiser>]
         attr_accessor :advertisers
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -1227,7 +1227,7 @@ module Google
       
       # Audience Segment.
       class AudienceSegment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Weight allocated to this segment. Must be between 1 and 1000. The weight
         # assigned will be understood in proportion to the weights assigned to other
@@ -1261,12 +1261,12 @@ module Google
       
       # Audience Segment Group.
       class AudienceSegmentGroup
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Audience segments assigned to this group. The number of segments must be
         # between 2 and 100.
         # Corresponds to the JSON property `audienceSegments`
-        # @return [Array<Google::Apis::DfareportingV2_3::AudienceSegment>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::AudienceSegment>]
         attr_accessor :audience_segments
       
         # ID of this audience segment group. This is a read-only, auto-generated field.
@@ -1294,7 +1294,7 @@ module Google
       
       # Contains information about a browser that can be targeted by ads.
       class Browser
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID referring to this grouping of browser and version numbers. This is the ID
         # used for targeting.
@@ -1358,11 +1358,11 @@ module Google
       
       # Browser List Response
       class ListBrowsersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Browser collection.
         # Corresponds to the JSON property `browsers`
-        # @return [Array<Google::Apis::DfareportingV2_3::Browser>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Browser>]
         attr_accessor :browsers
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -1384,7 +1384,7 @@ module Google
       
       # Contains properties of a DCM campaign.
       class Campaign
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this campaign. This is a read-only field that can be left blank.
         # Corresponds to the JSON property `accountId`
@@ -1393,7 +1393,7 @@ module Google
       
         # Additional creative optimization configurations for the campaign.
         # Corresponds to the JSON property `additionalCreativeOptimizationConfigurations`
-        # @return [Array<Google::Apis::DfareportingV2_3::CreativeOptimizationConfiguration>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::CreativeOptimizationConfiguration>]
         attr_accessor :additional_creative_optimization_configurations
       
         # Advertiser group ID of the associated advertiser.
@@ -1408,7 +1408,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `advertiserIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :advertiser_id_dimension_value
       
         # Whether this campaign has been archived.
@@ -1420,7 +1420,7 @@ module Google
         # Audience segment groups assigned to this campaign. Cannot have more than 300
         # segment groups.
         # Corresponds to the JSON property `audienceSegmentGroups`
-        # @return [Array<Google::Apis::DfareportingV2_3::AudienceSegmentGroup>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::AudienceSegmentGroup>]
         attr_accessor :audience_segment_groups
       
         # Billing invoice code included in the DCM client billing invoices associated
@@ -1431,7 +1431,7 @@ module Google
       
         # Click Through URL Suffix settings.
         # Corresponds to the JSON property `clickThroughUrlSuffixProperties`
-        # @return [Google::Apis::DfareportingV2_3::ClickThroughUrlSuffixProperties]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::ClickThroughUrlSuffixProperties]
         attr_accessor :click_through_url_suffix_properties
       
         # Arbitrary comments about this campaign. Must be less than 256 characters long.
@@ -1447,7 +1447,7 @@ module Google
       
         # Modification timestamp.
         # Corresponds to the JSON property `createInfo`
-        # @return [Google::Apis::DfareportingV2_3::LastModifiedInfo]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LastModifiedInfo]
         attr_accessor :create_info
       
         # List of creative group IDs that are assigned to the campaign.
@@ -1457,14 +1457,14 @@ module Google
       
         # Creative optimization settings.
         # Corresponds to the JSON property `creativeOptimizationConfiguration`
-        # @return [Google::Apis::DfareportingV2_3::CreativeOptimizationConfiguration]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::CreativeOptimizationConfiguration]
         attr_accessor :creative_optimization_configuration
       
         # Properties of inheriting and overriding the default click-through event tag. A
         # campaign may override the event tag defined at the advertiser level, and an ad
         # may also override the campaign's setting further.
         # Corresponds to the JSON property `defaultClickThroughEventTagProperties`
-        # @return [Google::Apis::DfareportingV2_3::DefaultClickThroughEventTagProperties]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DefaultClickThroughEventTagProperties]
         attr_accessor :default_click_through_event_tag_properties
       
         # Date on which the campaign will stop running. On insert, the end date must be
@@ -1479,7 +1479,7 @@ module Google
       
         # Overrides that can be used to activate or deactivate advertiser event tags.
         # Corresponds to the JSON property `eventTagOverrides`
-        # @return [Array<Google::Apis::DfareportingV2_3::EventTagOverride>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::EventTagOverride>]
         attr_accessor :event_tag_overrides
       
         # External ID for this campaign.
@@ -1494,7 +1494,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `idDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :id_dimension_value
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -1505,12 +1505,12 @@ module Google
       
         # Modification timestamp.
         # Corresponds to the JSON property `lastModifiedInfo`
-        # @return [Google::Apis::DfareportingV2_3::LastModifiedInfo]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LastModifiedInfo]
         attr_accessor :last_modified_info
       
         # Lookback configuration settings.
         # Corresponds to the JSON property `lookbackConfiguration`
-        # @return [Google::Apis::DfareportingV2_3::LookbackConfiguration]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LookbackConfiguration]
         attr_accessor :lookback_configuration
       
         # Name of this campaign. This is a required field and must be less than 256
@@ -1582,7 +1582,7 @@ module Google
       
       # Identifies a creative which has been associated with a given campaign.
       class CampaignCreativeAssociation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of the creative associated with the campaign. This is a required field.
         # Corresponds to the JSON property `creativeId`
@@ -1608,11 +1608,11 @@ module Google
       
       # Campaign Creative Association List Response
       class ListCampaignCreativeAssociationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Campaign creative association collection
         # Corresponds to the JSON property `campaignCreativeAssociations`
-        # @return [Array<Google::Apis::DfareportingV2_3::CampaignCreativeAssociation>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::CampaignCreativeAssociation>]
         attr_accessor :campaign_creative_associations
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -1640,11 +1640,11 @@ module Google
       
       # Campaign List Response
       class ListCampaignsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Campaign collection.
         # Corresponds to the JSON property `campaigns`
-        # @return [Array<Google::Apis::DfareportingV2_3::Campaign>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Campaign>]
         attr_accessor :campaigns
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -1672,7 +1672,7 @@ module Google
       
       # Describes a change that a user has made to a resource.
       class ChangeLog
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of the modified object.
         # Corresponds to the JSON property `accountId`
@@ -1773,11 +1773,11 @@ module Google
       
       # Change Log List Response
       class ListChangeLogsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Change log collection.
         # Corresponds to the JSON property `changeLogs`
-        # @return [Array<Google::Apis::DfareportingV2_3::ChangeLog>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::ChangeLog>]
         attr_accessor :change_logs
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -1805,11 +1805,11 @@ module Google
       
       # City List Response
       class ListCitiesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # City collection.
         # Corresponds to the JSON property `cities`
-        # @return [Array<Google::Apis::DfareportingV2_3::City>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::City>]
         attr_accessor :cities
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -1831,7 +1831,7 @@ module Google
       
       # Contains information about a city that can be targeted by ads.
       class City
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Country code of the country to which this city belongs.
         # Corresponds to the JSON property `countryCode`
@@ -1899,7 +1899,7 @@ module Google
       
       # Creative Click Tag.
       class ClickTag
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Advertiser event name associated with the click tag. This field is used by
         # ENHANCED_BANNER, ENHANCED_IMAGE, and HTML5_BANNER creatives.
@@ -1934,7 +1934,7 @@ module Google
       
       # Click-through URL
       class ClickThroughUrl
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Read-only convenience field representing the actual URL that will be used for
         # this click-through. The URL is computed as follows:
@@ -1981,7 +1981,7 @@ module Google
       
       # Click Through URL Suffix settings.
       class ClickThroughUrlSuffixProperties
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Click-through URL suffix to apply to all ads in this entity's scope. Must be
         # less than 128 characters long.
@@ -2009,11 +2009,11 @@ module Google
       
       # Companion Click-through override.
       class CompanionClickThroughOverride
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Click-through URL
         # Corresponds to the JSON property `clickThroughUrl`
-        # @return [Google::Apis::DfareportingV2_3::ClickThroughUrl]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::ClickThroughUrl]
         attr_accessor :click_through_url
       
         # ID of the creative for this companion click-through override.
@@ -2034,18 +2034,18 @@ module Google
       
       # Represents a response to the queryCompatibleFields method.
       class CompatibleFields
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Represents fields that are compatible to be selected for a report of type "
         # CROSS_DIMENSION_REACH".
         # Corresponds to the JSON property `crossDimensionReachReportCompatibleFields`
-        # @return [Google::Apis::DfareportingV2_3::CrossDimensionReachReportCompatibleFields]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::CrossDimensionReachReportCompatibleFields]
         attr_accessor :cross_dimension_reach_report_compatible_fields
       
         # Represents fields that are compatible to be selected for a report of type "
         # FlOODLIGHT".
         # Corresponds to the JSON property `floodlightReportCompatibleFields`
-        # @return [Google::Apis::DfareportingV2_3::FloodlightReportCompatibleFields]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::FloodlightReportCompatibleFields]
         attr_accessor :floodlight_report_compatible_fields
       
         # The kind of resource this is, in this case dfareporting#compatibleFields.
@@ -2056,19 +2056,19 @@ module Google
         # Represents fields that are compatible to be selected for a report of type "
         # PATH_TO_CONVERSION".
         # Corresponds to the JSON property `pathToConversionReportCompatibleFields`
-        # @return [Google::Apis::DfareportingV2_3::PathToConversionReportCompatibleFields]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::PathToConversionReportCompatibleFields]
         attr_accessor :path_to_conversion_report_compatible_fields
       
         # Represents fields that are compatible to be selected for a report of type "
         # REACH".
         # Corresponds to the JSON property `reachReportCompatibleFields`
-        # @return [Google::Apis::DfareportingV2_3::ReachReportCompatibleFields]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::ReachReportCompatibleFields]
         attr_accessor :reach_report_compatible_fields
       
         # Represents fields that are compatible to be selected for a report of type "
         # STANDARD".
         # Corresponds to the JSON property `reportCompatibleFields`
-        # @return [Google::Apis::DfareportingV2_3::ReportCompatibleFields]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::ReportCompatibleFields]
         attr_accessor :report_compatible_fields
       
         def initialize(**args)
@@ -2089,7 +2089,7 @@ module Google
       # Contains information about an internet connection type that can be targeted by
       # ads. Clients can use the connection type to target mobile vs. broadband users.
       class ConnectionType
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of this connection type.
         # Corresponds to the JSON property `id`
@@ -2121,11 +2121,11 @@ module Google
       
       # Connection Type List Response
       class ListConnectionTypesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Collection of connection types such as broadband and mobile.
         # Corresponds to the JSON property `connectionTypes`
-        # @return [Array<Google::Apis::DfareportingV2_3::ConnectionType>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::ConnectionType>]
         attr_accessor :connection_types
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -2147,11 +2147,11 @@ module Google
       
       # Content Category List Response
       class ListContentCategoriesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Content category collection.
         # Corresponds to the JSON property `contentCategories`
-        # @return [Array<Google::Apis::DfareportingV2_3::ContentCategory>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::ContentCategory>]
         attr_accessor :content_categories
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -2179,7 +2179,7 @@ module Google
       
       # Organizes placements according to the contents of their associated webpages.
       class ContentCategory
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this content category. This is a read-only field that can be
         # left blank.
@@ -2219,11 +2219,11 @@ module Google
       
       # Country List Response
       class ListCountriesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Country collection.
         # Corresponds to the JSON property `countries`
-        # @return [Array<Google::Apis::DfareportingV2_3::Country>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Country>]
         attr_accessor :countries
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -2245,7 +2245,7 @@ module Google
       
       # Contains information about a country that can be targeted by ads.
       class Country
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Country code.
         # Corresponds to the JSON property `countryCode`
@@ -2291,7 +2291,7 @@ module Google
       
       # Contains properties of a Creative.
       class Creative
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this creative. This field, if left unset, will be auto-generated
         # for both insert and update operations. Applicable to all creative types.
@@ -2400,7 +2400,7 @@ module Google
       
         # Target Window.
         # Corresponds to the JSON property `backupImageTargetWindow`
-        # @return [Google::Apis::DfareportingV2_3::TargetWindow]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::TargetWindow]
         attr_accessor :backup_image_target_window
       
         # Click tags of the creative. For ENHANCED_BANNER, FLASH_INPAGE, and
@@ -2416,7 +2416,7 @@ module Google
         # HTML5_BANNER. Applicable to ENHANCED_BANNER when the primary asset type is not
         # HTML_IMAGE.
         # Corresponds to the JSON property `clickTags`
-        # @return [Array<Google::Apis::DfareportingV2_3::ClickTag>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::ClickTag>]
         attr_accessor :click_tags
       
         # Industry standard ID assigned to creative for reach and frequency. Applicable
@@ -2461,19 +2461,19 @@ module Google
         # creatives, these are read-only and auto-generated from clickTags. Applicable
         # to the following creative types: ENHANCED_IMAGE, all RICH_MEDIA, and all VPAID.
         # Corresponds to the JSON property `counterCustomEvents`
-        # @return [Array<Google::Apis::DfareportingV2_3::CreativeCustomEvent>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::CreativeCustomEvent>]
         attr_accessor :counter_custom_events
       
         # Assets associated with a creative. Applicable to all but the following
         # creative types: INTERNAL_REDIRECT, INTERSTITIAL_INTERNAL_REDIRECT, and
         # REDIRECT
         # Corresponds to the JSON property `creativeAssets`
-        # @return [Array<Google::Apis::DfareportingV2_3::CreativeAsset>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::CreativeAsset>]
         attr_accessor :creative_assets
       
         # Creative field assignments for this creative. Applicable to all creative types.
         # Corresponds to the JSON property `creativeFieldAssignments`
-        # @return [Array<Google::Apis::DfareportingV2_3::CreativeFieldAssignment>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::CreativeFieldAssignment>]
         attr_accessor :creative_field_assignments
       
         # Custom key-values for a Rich Media creative. Key-values let you customize the
@@ -2492,12 +2492,12 @@ module Google
         # ENHANCED_IMAGE, all RICH_MEDIA, and all VPAID. Applicable to ENHANCED_BANNER
         # when the primary asset is not HTML_IMAGE.
         # Corresponds to the JSON property `exitCustomEvents`
-        # @return [Array<Google::Apis::DfareportingV2_3::CreativeCustomEvent>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::CreativeCustomEvent>]
         attr_accessor :exit_custom_events
       
         # FsCommand.
         # Corresponds to the JSON property `fsCommand`
-        # @return [Google::Apis::DfareportingV2_3::FsCommand]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::FsCommand]
         attr_accessor :fs_command
       
         # HTML code for the creative. This is a required field when applicable. This
@@ -2523,7 +2523,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `idDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :id_dimension_value
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -2534,7 +2534,7 @@ module Google
       
         # Modification timestamp.
         # Corresponds to the JSON property `lastModifiedInfo`
-        # @return [Google::Apis::DfareportingV2_3::LastModifiedInfo]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LastModifiedInfo]
         attr_accessor :last_modified_info
       
         # Latest Studio trafficked creative ID associated with rich media and VPAID
@@ -2574,7 +2574,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `renderingIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :rendering_id_dimension_value
       
         # The minimum required Flash plugin version for this creative. For example, 11.2.
@@ -2594,7 +2594,7 @@ module Google
       
         # Represents the dimensions of ads, placements, creatives, or creative assets.
         # Corresponds to the JSON property `size`
-        # @return [Google::Apis::DfareportingV2_3::Size]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::Size]
         attr_accessor :size
       
         # Whether the user can choose to skip the creative. Applicable to the following
@@ -2661,7 +2661,7 @@ module Google
         # Third-party URLs for tracking in-stream video creative events. Applicable to
         # the following creative types: all INSTREAM_VIDEO and all VPAID.
         # Corresponds to the JSON property `thirdPartyUrls`
-        # @return [Array<Google::Apis::DfareportingV2_3::ThirdPartyTrackingUrl>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::ThirdPartyTrackingUrl>]
         attr_accessor :third_party_urls
       
         # List of timer events configured for the creative. For ENHANCED_IMAGE creatives,
@@ -2669,7 +2669,7 @@ module Google
         # following creative types: ENHANCED_IMAGE, all RICH_MEDIA, and all VPAID.
         # Applicable to ENHANCED_BANNER when the primary asset is not HTML_IMAGE.
         # Corresponds to the JSON property `timerCustomEvents`
-        # @return [Array<Google::Apis::DfareportingV2_3::CreativeCustomEvent>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::CreativeCustomEvent>]
         attr_accessor :timer_custom_events
       
         # Combined size of all creative assets. This is a read-only field. Applicable to
@@ -2776,7 +2776,7 @@ module Google
       
       # Creative Asset.
       class CreativeAsset
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether ActionScript3 is enabled for the flash asset. This is a read-only
         # field. Applicable to the following creative type: FLASH_INPAGE. Applicable to
@@ -2808,12 +2808,12 @@ module Google
       
         # Creative Asset ID.
         # Corresponds to the JSON property `assetIdentifier`
-        # @return [Google::Apis::DfareportingV2_3::CreativeAssetId]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::CreativeAssetId]
         attr_accessor :asset_identifier
       
         # Creative Custom Event.
         # Corresponds to the JSON property `backupImageExit`
-        # @return [Google::Apis::DfareportingV2_3::CreativeCustomEvent]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::CreativeCustomEvent]
         attr_accessor :backup_image_exit
       
         # Detected bit-rate for video asset. This is a read-only field. Applicable to
@@ -2830,7 +2830,7 @@ module Google
       
         # Represents the dimensions of ads, placements, creatives, or creative assets.
         # Corresponds to the JSON property `collapsedSize`
-        # @return [Google::Apis::DfareportingV2_3::Size]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::Size]
         attr_accessor :collapsed_size
       
         # Custom start time in seconds for making the asset visible. Applicable to the
@@ -2868,7 +2868,7 @@ module Google
       
         # Represents the dimensions of ads, placements, creatives, or creative assets.
         # Corresponds to the JSON property `expandedDimension`
-        # @return [Google::Apis::DfareportingV2_3::Size]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::Size]
         attr_accessor :expanded_dimension
       
         # File size associated with this creative asset. This is a read-only field.
@@ -2921,7 +2921,7 @@ module Google
       
         # Offset Position.
         # Corresponds to the JSON property `offset`
-        # @return [Google::Apis::DfareportingV2_3::OffsetPosition]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::OffsetPosition]
         attr_accessor :offset
       
         # Whether the backup asset is original or changed by the user in DCM. Applicable
@@ -2933,7 +2933,7 @@ module Google
       
         # Offset Position.
         # Corresponds to the JSON property `position`
-        # @return [Google::Apis::DfareportingV2_3::OffsetPosition]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::OffsetPosition]
         attr_accessor :position
       
         # Offset left unit for an asset. This is a read-only field. Applicable to the
@@ -3000,7 +3000,7 @@ module Google
       
         # Represents the dimensions of ads, placements, creatives, or creative assets.
         # Corresponds to the JSON property `size`
-        # @return [Google::Apis::DfareportingV2_3::Size]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::Size]
         attr_accessor :size
       
         # Whether the asset is SSL-compliant. This is a read-only field. Applicable to
@@ -3122,7 +3122,7 @@ module Google
       
       # Creative Asset ID.
       class CreativeAssetId
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Name of the creative asset. This is a required field while inserting an asset.
         # After insertion, this assetIdentifier is used to identify the uploaded asset.
@@ -3153,17 +3153,17 @@ module Google
       # uploaded or has already been uploaded. Refer to the creative sample code for
       # how to upload assets and insert a creative.
       class CreativeAssetMetadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Creative Asset ID.
         # Corresponds to the JSON property `assetIdentifier`
-        # @return [Google::Apis::DfareportingV2_3::CreativeAssetId]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::CreativeAssetId]
         attr_accessor :asset_identifier
       
         # List of detected click tags for assets. This is a read-only auto-generated
         # field.
         # Corresponds to the JSON property `clickTags`
-        # @return [Array<Google::Apis::DfareportingV2_3::ClickTag>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::ClickTag>]
         attr_accessor :click_tags
       
         # List of feature dependencies for the creative asset that are detected by DCM.
@@ -3227,7 +3227,7 @@ module Google
       
       # Creative Assignment.
       class CreativeAssignment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether this creative assignment is active. When true, the creative will be
         # included in the ad's rotation.
@@ -3247,19 +3247,19 @@ module Google
       
         # Click-through URL
         # Corresponds to the JSON property `clickThroughUrl`
-        # @return [Google::Apis::DfareportingV2_3::ClickThroughUrl]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::ClickThroughUrl]
         attr_accessor :click_through_url
       
         # Companion creative overrides for this creative assignment. Applicable to video
         # ads.
         # Corresponds to the JSON property `companionCreativeOverrides`
-        # @return [Array<Google::Apis::DfareportingV2_3::CompanionClickThroughOverride>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::CompanionClickThroughOverride>]
         attr_accessor :companion_creative_overrides
       
         # Creative group assignments for this creative assignment. Only one assignment
         # per creative group number is allowed for a maximum of two assignments.
         # Corresponds to the JSON property `creativeGroupAssignments`
-        # @return [Array<Google::Apis::DfareportingV2_3::CreativeGroupAssignment>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::CreativeGroupAssignment>]
         attr_accessor :creative_group_assignments
       
         # ID of the creative to be assigned. This is a required field.
@@ -3269,7 +3269,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `creativeIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :creative_id_dimension_value
       
         # Date and time that the assigned creative should stop serving. Must be later
@@ -3292,7 +3292,7 @@ module Google
         # - VPAID_LINEAR
         # - VPAID_NON_LINEAR
         # Corresponds to the JSON property `richMediaExitOverrides`
-        # @return [Array<Google::Apis::DfareportingV2_3::RichMediaExitOverride>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::RichMediaExitOverride>]
         attr_accessor :rich_media_exit_overrides
       
         # Sequence number of the creative assignment, applicable when the rotation type
@@ -3343,7 +3343,7 @@ module Google
       
       # Creative Custom Event.
       class CreativeCustomEvent
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Unique ID of this event used by DDM Reporting and Data Transfer. This is a
         # read-only field.
@@ -3385,7 +3385,7 @@ module Google
       
         # Popup Window Properties.
         # Corresponds to the JSON property `popupWindowProperties`
-        # @return [Google::Apis::DfareportingV2_3::PopupWindowProperties]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::PopupWindowProperties]
         attr_accessor :popup_window_properties
       
         # Target type used by the event.
@@ -3420,7 +3420,7 @@ module Google
       
       # Contains properties of a creative field.
       class CreativeField
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this creative field. This is a read-only field that can be left
         # blank.
@@ -3435,7 +3435,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `advertiserIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :advertiser_id_dimension_value
       
         # ID of this creative field. This is a read-only, auto-generated field.
@@ -3479,7 +3479,7 @@ module Google
       
       # Creative Field Assignment.
       class CreativeFieldAssignment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of the creative field.
         # Corresponds to the JSON property `creativeFieldId`
@@ -3504,7 +3504,7 @@ module Google
       
       # Contains properties of a creative field value.
       class CreativeFieldValue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of this creative field value. This is a read-only, auto-generated field.
         # Corresponds to the JSON property `id`
@@ -3537,11 +3537,11 @@ module Google
       
       # Creative Field Value List Response
       class ListCreativeFieldValuesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Creative field value collection.
         # Corresponds to the JSON property `creativeFieldValues`
-        # @return [Array<Google::Apis::DfareportingV2_3::CreativeFieldValue>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::CreativeFieldValue>]
         attr_accessor :creative_field_values
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -3569,11 +3569,11 @@ module Google
       
       # Creative Field List Response
       class ListCreativeFieldsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Creative field collection.
         # Corresponds to the JSON property `creativeFields`
-        # @return [Array<Google::Apis::DfareportingV2_3::CreativeField>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::CreativeField>]
         attr_accessor :creative_fields
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -3601,7 +3601,7 @@ module Google
       
       # Contains properties of a creative group.
       class CreativeGroup
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this creative group. This is a read-only field that can be left
         # blank.
@@ -3616,7 +3616,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `advertiserIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :advertiser_id_dimension_value
       
         # Subgroup of the creative group. Assign your creative groups to one of the
@@ -3671,7 +3671,7 @@ module Google
       
       # Creative Group Assignment.
       class CreativeGroupAssignment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of the creative group to be assigned.
         # Corresponds to the JSON property `creativeGroupId`
@@ -3696,11 +3696,11 @@ module Google
       
       # Creative Group List Response
       class ListCreativeGroupsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Creative group collection.
         # Corresponds to the JSON property `creativeGroups`
-        # @return [Array<Google::Apis::DfareportingV2_3::CreativeGroup>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::CreativeGroup>]
         attr_accessor :creative_groups
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -3728,7 +3728,7 @@ module Google
       
       # Creative optimization settings.
       class CreativeOptimizationConfiguration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of this creative optimization config. This field is auto-generated when the
         # campaign is inserted or updated. It can be null for existing campaigns.
@@ -3744,7 +3744,7 @@ module Google
       
         # List of optimization activities associated with this configuration.
         # Corresponds to the JSON property `optimizationActivitys`
-        # @return [Array<Google::Apis::DfareportingV2_3::OptimizationActivity>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::OptimizationActivity>]
         attr_accessor :optimization_activitys
       
         # Optimization model for this configuration.
@@ -3767,11 +3767,11 @@ module Google
       
       # Creative Rotation.
       class CreativeRotation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Creative assignments in this creative rotation.
         # Corresponds to the JSON property `creativeAssignments`
-        # @return [Array<Google::Apis::DfareportingV2_3::CreativeAssignment>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::CreativeAssignment>]
         attr_accessor :creative_assignments
       
         # Creative optimization configuration that is used by this ad. It should refer
@@ -3808,7 +3808,7 @@ module Google
       
       # Creative Settings
       class CreativeSettings
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Header text for iFrames for this site. Must be less than or equal to 2000
         # characters long.
@@ -3835,11 +3835,11 @@ module Google
       
       # Creative List Response
       class ListCreativesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Creative collection.
         # Corresponds to the JSON property `creatives`
-        # @return [Array<Google::Apis::DfareportingV2_3::Creative>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Creative>]
         attr_accessor :creatives
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -3868,18 +3868,18 @@ module Google
       # Represents fields that are compatible to be selected for a report of type "
       # CROSS_DIMENSION_REACH".
       class CrossDimensionReachReportCompatibleFields
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Dimensions which are compatible to be selected in the "breakdown" section of
         # the report.
         # Corresponds to the JSON property `breakdown`
-        # @return [Array<Google::Apis::DfareportingV2_3::Dimension>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Dimension>]
         attr_accessor :breakdown
       
         # Dimensions which are compatible to be selected in the "dimensionFilters"
         # section of the report.
         # Corresponds to the JSON property `dimensionFilters`
-        # @return [Array<Google::Apis::DfareportingV2_3::Dimension>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Dimension>]
         attr_accessor :dimension_filters
       
         # The kind of resource this is, in this case dfareporting#
@@ -3891,13 +3891,13 @@ module Google
         # Metrics which are compatible to be selected in the "metricNames" section of
         # the report.
         # Corresponds to the JSON property `metrics`
-        # @return [Array<Google::Apis::DfareportingV2_3::Metric>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Metric>]
         attr_accessor :metrics
       
         # Metrics which are compatible to be selected in the "overlapMetricNames"
         # section of the report.
         # Corresponds to the JSON property `overlapMetrics`
-        # @return [Array<Google::Apis::DfareportingV2_3::Metric>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Metric>]
         attr_accessor :overlap_metrics
       
         def initialize(**args)
@@ -3916,12 +3916,12 @@ module Google
       
       # Represents a Custom Rich Media Events group.
       class CustomRichMediaEvents
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of custom rich media event IDs. Dimension values must be all of type dfa:
         # richMediaEventTypeIdAndName.
         # Corresponds to the JSON property `filteredEventIds`
-        # @return [Array<Google::Apis::DfareportingV2_3::DimensionValue>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::DimensionValue>]
         attr_accessor :filtered_event_ids
       
         # The kind of resource this is, in this case dfareporting#customRichMediaEvents.
@@ -3942,7 +3942,7 @@ module Google
       
       # Represents a date range.
       class DateRange
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The end date of the date range, inclusive. A string of the format: "yyyy-MM-dd"
         # .
@@ -3981,7 +3981,7 @@ module Google
       
       # Day Part Targeting.
       class DayPartTargeting
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Days of the week when the ad will serve.
         # Acceptable values are:
@@ -4029,7 +4029,7 @@ module Google
       # campaign may override the event tag defined at the advertiser level, and an ad
       # may also override the campaign's setting further.
       class DefaultClickThroughEventTagProperties
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of the click-through event tag to apply to all ads in this entity's scope.
         # Corresponds to the JSON property `defaultClickThroughEventTagId`
@@ -4056,11 +4056,11 @@ module Google
       
       # Delivery Schedule.
       class DeliverySchedule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Frequency Cap.
         # Corresponds to the JSON property `frequencyCap`
-        # @return [Google::Apis::DfareportingV2_3::FrequencyCap]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::FrequencyCap]
         attr_accessor :frequency_cap
       
         # Whether or not hard cutoff is enabled. If true, the ad will not serve after
@@ -4100,7 +4100,7 @@ module Google
       
       # DFP Settings
       class DfpSettings
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # DFP network code for this directory site.
         # Corresponds to the JSON property `dfp_network_code`
@@ -4146,7 +4146,7 @@ module Google
       
       # Represents a dimension.
       class Dimension
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The kind of resource this is, in this case dfareporting#dimension.
         # Corresponds to the JSON property `kind`
@@ -4171,7 +4171,7 @@ module Google
       
       # Represents a dimension filter.
       class DimensionFilter
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the dimension to filter.
         # Corresponds to the JSON property `dimensionName`
@@ -4202,7 +4202,7 @@ module Google
       
       # Represents a DimensionValue resource.
       class DimensionValue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the dimension.
         # Corresponds to the JSON property `dimensionName`
@@ -4255,7 +4255,7 @@ module Google
       
       # Represents the list of DimensionValue resources.
       class DimensionValueList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The eTag of this response for caching purposes.
         # Corresponds to the JSON property `etag`
@@ -4264,7 +4264,7 @@ module Google
       
         # The dimension values returned in this response.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::DfareportingV2_3::DimensionValue>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::DimensionValue>]
         attr_accessor :items
       
         # The kind of list this is, in this case dfareporting#dimensionValueList.
@@ -4295,7 +4295,7 @@ module Google
       
       # Represents a DimensionValuesRequest.
       class DimensionValueRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the dimension for which values should be requested.
         # Corresponds to the JSON property `dimensionName`
@@ -4310,7 +4310,7 @@ module Google
       
         # The list of filters by which to filter values. The filters are ANDed.
         # Corresponds to the JSON property `filters`
-        # @return [Array<Google::Apis::DfareportingV2_3::DimensionFilter>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::DimensionFilter>]
         attr_accessor :filters
       
         # The kind of request this is, in this case dfareporting#dimensionValueRequest.
@@ -4342,7 +4342,7 @@ module Google
       # need to be added to an account via the Sites resource before they can be
       # assigned to a placement.
       class DirectorySite
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether this directory site is active.
         # Corresponds to the JSON property `active`
@@ -4352,7 +4352,7 @@ module Google
       
         # Directory site contacts.
         # Corresponds to the JSON property `contactAssignments`
-        # @return [Array<Google::Apis::DfareportingV2_3::DirectorySiteContactAssignment>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::DirectorySiteContactAssignment>]
         attr_accessor :contact_assignments
       
         # Country ID of this directory site.
@@ -4425,7 +4425,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `idDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :id_dimension_value
       
         # Tag types for regular placements.
@@ -4465,7 +4465,7 @@ module Google
       
         # Directory Site Settings
         # Corresponds to the JSON property `settings`
-        # @return [Google::Apis::DfareportingV2_3::DirectorySiteSettings]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DirectorySiteSettings]
         attr_accessor :settings
       
         # URL of this directory site.
@@ -4498,7 +4498,7 @@ module Google
       
       # Contains properties of a Site Directory contact.
       class DirectorySiteContact
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Address of this directory site contact.
         # Corresponds to the JSON property `address`
@@ -4572,7 +4572,7 @@ module Google
       
       # Directory Site Contact Assignment
       class DirectorySiteContactAssignment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of this directory site contact. This is a read-only, auto-generated field.
         # Corresponds to the JSON property `contactId`
@@ -4599,11 +4599,11 @@ module Google
       
       # Directory Site Contact List Response
       class ListDirectorySiteContactsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Directory site contact collection
         # Corresponds to the JSON property `directorySiteContacts`
-        # @return [Array<Google::Apis::DfareportingV2_3::DirectorySiteContact>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::DirectorySiteContact>]
         attr_accessor :directory_site_contacts
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -4631,7 +4631,7 @@ module Google
       
       # Directory Site Settings
       class DirectorySiteSettings
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether this directory site has disabled active view creatives.
         # Corresponds to the JSON property `activeViewOptOut`
@@ -4641,7 +4641,7 @@ module Google
       
         # DFP Settings
         # Corresponds to the JSON property `dfp_settings`
-        # @return [Google::Apis::DfareportingV2_3::DfpSettings]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DfpSettings]
         attr_accessor :dfp_settings
       
         # Whether this site accepts in-stream video ads.
@@ -4693,11 +4693,11 @@ module Google
       
       # Directory Site List Response
       class ListDirectorySitesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Directory site collection.
         # Corresponds to the JSON property `directorySites`
-        # @return [Array<Google::Apis::DfareportingV2_3::DirectorySite>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::DirectorySite>]
         attr_accessor :directory_sites
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -4725,7 +4725,7 @@ module Google
       
       # Contains properties of an event tag.
       class EventTag
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this event tag. This is a read-only field that can be left blank.
         # Corresponds to the JSON property `accountId`
@@ -4740,7 +4740,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `advertiserIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :advertiser_id_dimension_value
       
         # Campaign ID of this event tag. This field or the advertiserId field is
@@ -4751,7 +4751,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `campaignIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :campaign_id_dimension_value
       
         # Whether this event tag should be automatically enabled for all of the
@@ -4867,7 +4867,7 @@ module Google
       
       # Event tag override information.
       class EventTagOverride
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether this override is enabled.
         # Corresponds to the JSON property `enabled`
@@ -4893,11 +4893,11 @@ module Google
       
       # Event Tag List Response
       class ListEventTagsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Event tag collection.
         # Corresponds to the JSON property `eventTags`
-        # @return [Array<Google::Apis::DfareportingV2_3::EventTag>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::EventTag>]
         attr_accessor :event_tags
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -4921,11 +4921,11 @@ module Google
       # shows the status of the run and holds the URLs to the generated report data if
       # the run is finished and the status is "REPORT_AVAILABLE".
       class File
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Represents a date range.
         # Corresponds to the JSON property `dateRange`
-        # @return [Google::Apis::DfareportingV2_3::DateRange]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DateRange]
         attr_accessor :date_range
       
         # The eTag of this response for caching purposes.
@@ -4970,7 +4970,7 @@ module Google
       
         # The URLs where the completed report file can be downloaded.
         # Corresponds to the JSON property `urls`
-        # @return [Google::Apis::DfareportingV2_3::File::Urls]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::File::Urls]
         attr_accessor :urls
       
         def initialize(**args)
@@ -4993,7 +4993,7 @@ module Google
         
         # The URLs where the completed report file can be downloaded.
         class Urls
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The URL for downloading the report data through the API.
           # Corresponds to the JSON property `apiUrl`
@@ -5019,7 +5019,7 @@ module Google
       
       # Represents the list of File resources.
       class FileList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The eTag of this response for caching purposes.
         # Corresponds to the JSON property `etag`
@@ -5028,7 +5028,7 @@ module Google
       
         # The files returned in this response.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::DfareportingV2_3::File>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::File>]
         attr_accessor :items
       
         # The kind of list this is, in this case dfareporting#fileList.
@@ -5059,7 +5059,7 @@ module Google
       
       # Flight
       class Flight
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Inventory item flight end date.
         # Corresponds to the JSON property `endDate`
@@ -5096,7 +5096,7 @@ module Google
       
       # Floodlight Activity GenerateTag Response
       class FloodlightActivitiesGenerateTagResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Generated tag for this floodlight activity.
         # Corresponds to the JSON property `floodlightActivityTag`
@@ -5122,11 +5122,11 @@ module Google
       
       # Floodlight Activity List Response
       class ListFloodlightActivitiesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Floodlight activity collection.
         # Corresponds to the JSON property `floodlightActivities`
-        # @return [Array<Google::Apis::DfareportingV2_3::FloodlightActivity>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::FloodlightActivity>]
         attr_accessor :floodlight_activities
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -5154,7 +5154,7 @@ module Google
       
       # Contains properties of a Floodlight activity.
       class FloodlightActivity
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this floodlight activity. This is a read-only field that can be
         # left blank.
@@ -5171,7 +5171,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `advertiserIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :advertiser_id_dimension_value
       
         # Code type used for cache busting in the generated tag.
@@ -5187,7 +5187,7 @@ module Google
       
         # Dynamic floodlight tags.
         # Corresponds to the JSON property `defaultTags`
-        # @return [Array<Google::Apis::DfareportingV2_3::FloodlightActivityDynamicTag>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::FloodlightActivityDynamicTag>]
         attr_accessor :default_tags
       
         # URL where this tag will be deployed. If specified, must be less than 256
@@ -5228,7 +5228,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `floodlightConfigurationIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :floodlight_configuration_id_dimension_value
       
         # Whether this activity is archived.
@@ -5244,7 +5244,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `idDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :id_dimension_value
       
         # Whether the image tag is enabled for this activity.
@@ -5272,7 +5272,7 @@ module Google
       
         # Publisher dynamic floodlight tags.
         # Corresponds to the JSON property `publisherTags`
-        # @return [Array<Google::Apis::DfareportingV2_3::FloodlightActivityPublisherDynamicTag>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::FloodlightActivityPublisherDynamicTag>]
         attr_accessor :publisher_tags
       
         # Whether this tag should use SSL.
@@ -5382,7 +5382,7 @@ module Google
       
       # Dynamic Tag
       class FloodlightActivityDynamicTag
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of this dynamic tag. This is a read-only, auto-generated field.
         # Corresponds to the JSON property `id`
@@ -5413,7 +5413,7 @@ module Google
       
       # Contains properties of a Floodlight activity group.
       class FloodlightActivityGroup
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this floodlight activity group. This is a read-only field that
         # can be left blank.
@@ -5430,7 +5430,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `advertiserIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :advertiser_id_dimension_value
       
         # Floodlight configuration ID of this floodlight activity group. This is a
@@ -5441,7 +5441,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `floodlightConfigurationIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :floodlight_configuration_id_dimension_value
       
         # ID of this floodlight activity group. This is a read-only, auto-generated
@@ -5452,7 +5452,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `idDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :id_dimension_value
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -5512,11 +5512,11 @@ module Google
       
       # Floodlight Activity Group List Response
       class ListFloodlightActivityGroupsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Floodlight activity group collection.
         # Corresponds to the JSON property `floodlightActivityGroups`
-        # @return [Array<Google::Apis::DfareportingV2_3::FloodlightActivityGroup>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::FloodlightActivityGroup>]
         attr_accessor :floodlight_activity_groups
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -5544,7 +5544,7 @@ module Google
       
       # Publisher Dynamic Tag
       class FloodlightActivityPublisherDynamicTag
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether this tag is applicable only for click-throughs.
         # Corresponds to the JSON property `clickThrough`
@@ -5561,7 +5561,7 @@ module Google
       
         # Dynamic Tag
         # Corresponds to the JSON property `dynamicTag`
-        # @return [Google::Apis::DfareportingV2_3::FloodlightActivityDynamicTag]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::FloodlightActivityDynamicTag]
         attr_accessor :dynamic_tag
       
         # Site ID of this dynamic tag.
@@ -5571,7 +5571,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `siteIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :site_id_dimension_value
       
         # Whether this tag is applicable only for view-throughs.
@@ -5597,7 +5597,7 @@ module Google
       
       # Contains properties of a Floodlight configuration.
       class FloodlightConfiguration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this floodlight configuration. This is a read-only field that
         # can be left blank.
@@ -5612,7 +5612,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `advertiserIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :advertiser_id_dimension_value
       
         # Whether advertiser data is shared with Google Analytics.
@@ -5642,7 +5642,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `idDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :id_dimension_value
       
         # Whether in-app attribution tracking is enabled.
@@ -5659,7 +5659,7 @@ module Google
       
         # Lookback configuration settings.
         # Corresponds to the JSON property `lookbackConfiguration`
-        # @return [Google::Apis::DfareportingV2_3::LookbackConfiguration]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LookbackConfiguration]
         attr_accessor :lookback_configuration
       
         # Types of attribution options for natural search conversions.
@@ -5669,7 +5669,7 @@ module Google
       
         # Omniture Integration Settings.
         # Corresponds to the JSON property `omnitureSettings`
-        # @return [Google::Apis::DfareportingV2_3::OmnitureSettings]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::OmnitureSettings]
         attr_accessor :omniture_settings
       
         # List of standard variables enabled for this configuration.
@@ -5688,17 +5688,17 @@ module Google
       
         # Dynamic and Image Tag Settings.
         # Corresponds to the JSON property `tagSettings`
-        # @return [Google::Apis::DfareportingV2_3::TagSettings]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::TagSettings]
         attr_accessor :tag_settings
       
         # List of third-party authentication tokens enabled for this configuration.
         # Corresponds to the JSON property `thirdPartyAuthenticationTokens`
-        # @return [Array<Google::Apis::DfareportingV2_3::ThirdPartyAuthenticationToken>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::ThirdPartyAuthenticationToken>]
         attr_accessor :third_party_authentication_tokens
       
         # List of user defined variables enabled for this configuration.
         # Corresponds to the JSON property `userDefinedVariableConfigurations`
-        # @return [Array<Google::Apis::DfareportingV2_3::UserDefinedVariableConfiguration>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::UserDefinedVariableConfiguration>]
         attr_accessor :user_defined_variable_configurations
       
         def initialize(**args)
@@ -5730,11 +5730,11 @@ module Google
       
       # Floodlight Configuration List Response
       class ListFloodlightConfigurationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Floodlight configuration collection.
         # Corresponds to the JSON property `floodlightConfigurations`
-        # @return [Array<Google::Apis::DfareportingV2_3::FloodlightConfiguration>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::FloodlightConfiguration>]
         attr_accessor :floodlight_configurations
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -5757,18 +5757,18 @@ module Google
       # Represents fields that are compatible to be selected for a report of type "
       # FlOODLIGHT".
       class FloodlightReportCompatibleFields
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Dimensions which are compatible to be selected in the "dimensionFilters"
         # section of the report.
         # Corresponds to the JSON property `dimensionFilters`
-        # @return [Array<Google::Apis::DfareportingV2_3::Dimension>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Dimension>]
         attr_accessor :dimension_filters
       
         # Dimensions which are compatible to be selected in the "dimensions" section of
         # the report.
         # Corresponds to the JSON property `dimensions`
-        # @return [Array<Google::Apis::DfareportingV2_3::Dimension>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Dimension>]
         attr_accessor :dimensions
       
         # The kind of resource this is, in this case dfareporting#
@@ -5780,7 +5780,7 @@ module Google
         # Metrics which are compatible to be selected in the "metricNames" section of
         # the report.
         # Corresponds to the JSON property `metrics`
-        # @return [Array<Google::Apis::DfareportingV2_3::Metric>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Metric>]
         attr_accessor :metrics
       
         def initialize(**args)
@@ -5798,7 +5798,7 @@ module Google
       
       # Frequency Cap.
       class FrequencyCap
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Duration of time, in seconds, for this frequency cap. The maximum duration is
         # 90 days in seconds, or 7,776,000.
@@ -5825,7 +5825,7 @@ module Google
       
       # FsCommand.
       class FsCommand
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Distance from the left of the browser.Applicable when positionOption is
         # DISTANCE_FROM_TOP_LEFT_CORNER.
@@ -5870,14 +5870,14 @@ module Google
       
       # Geographical Targeting.
       class GeoTargeting
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Cities to be targeted. For each city only dartId is required. The other fields
         # are populated automatically when the ad is inserted or updated. If targeting a
         # city, do not target or exclude the country of the city, and do not target the
         # metro or region of the city.
         # Corresponds to the JSON property `cities`
-        # @return [Array<Google::Apis::DfareportingV2_3::City>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::City>]
         attr_accessor :cities
       
         # Countries to be targeted or excluded from targeting, depending on the setting
@@ -5886,7 +5886,7 @@ module Google
         # If targeting or excluding a country, do not target regions, cities, metros, or
         # postal codes in the same country.
         # Corresponds to the JSON property `countries`
-        # @return [Array<Google::Apis::DfareportingV2_3::Country>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Country>]
         attr_accessor :countries
       
         # Whether or not to exclude the countries in the countries field from targeting.
@@ -5901,7 +5901,7 @@ module Google
         # are populated automatically when the ad is inserted or updated. If targeting a
         # metro, do not target or exclude the country of the metro.
         # Corresponds to the JSON property `metros`
-        # @return [Array<Google::Apis::DfareportingV2_3::Metro>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Metro>]
         attr_accessor :metros
       
         # Postal codes to be targeted. For each postal code only id is required. The
@@ -5909,14 +5909,14 @@ module Google
         # If targeting a postal code, do not target or exclude the country of the postal
         # code.
         # Corresponds to the JSON property `postalCodes`
-        # @return [Array<Google::Apis::DfareportingV2_3::PostalCode>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::PostalCode>]
         attr_accessor :postal_codes
       
         # Regions to be targeted. For each region only dartId is required. The other
         # fields are populated automatically when the ad is inserted or updated. If
         # targeting a region, do not target or exclude the country of the region.
         # Corresponds to the JSON property `regions`
-        # @return [Array<Google::Apis::DfareportingV2_3::Region>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Region>]
         attr_accessor :regions
       
         def initialize(**args)
@@ -5936,7 +5936,7 @@ module Google
       
       # Represents a buy from the DoubleClick Planning inventory store.
       class InventoryItem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this inventory item.
         # Corresponds to the JSON property `accountId`
@@ -5948,7 +5948,7 @@ module Google
         # item represents a placement group, there will be more than one ad slot, each
         # representing one child placement in that placement group.
         # Corresponds to the JSON property `adSlots`
-        # @return [Array<Google::Apis::DfareportingV2_3::AdSlot>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::AdSlot>]
         attr_accessor :ad_slots
       
         # Advertiser ID of this inventory item.
@@ -5990,7 +5990,7 @@ module Google
       
         # Modification timestamp.
         # Corresponds to the JSON property `lastModifiedInfo`
-        # @return [Google::Apis::DfareportingV2_3::LastModifiedInfo]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LastModifiedInfo]
         attr_accessor :last_modified_info
       
         # Name of this inventory item. For standalone inventory items, this is the same
@@ -6017,7 +6017,7 @@ module Google
       
         # Pricing Information
         # Corresponds to the JSON property `pricing`
-        # @return [Google::Apis::DfareportingV2_3::Pricing]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::Pricing]
         attr_accessor :pricing
       
         # Project ID of this inventory item.
@@ -6070,11 +6070,11 @@ module Google
       
       # Inventory item List Response
       class ListInventoryItemsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Inventory item collection
         # Corresponds to the JSON property `inventoryItems`
-        # @return [Array<Google::Apis::DfareportingV2_3::InventoryItem>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::InventoryItem>]
         attr_accessor :inventory_items
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -6102,7 +6102,7 @@ module Google
       
       # Key Value Targeting Expression.
       class KeyValueTargetingExpression
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Keyword expression being targeted by the ad.
         # Corresponds to the JSON property `expression`
@@ -6122,7 +6122,7 @@ module Google
       # Contains information about where a user's browser is taken after the user
       # clicks an ad.
       class LandingPage
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether or not this landing page will be assigned to any ads or creatives that
         # do not have a landing page assigned explicitly. Only one default landing page
@@ -6170,7 +6170,7 @@ module Google
       
       # Landing Page List Response
       class ListLandingPagesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#landingPagesListResponse".
@@ -6180,7 +6180,7 @@ module Google
       
         # Landing page collection
         # Corresponds to the JSON property `landingPages`
-        # @return [Array<Google::Apis::DfareportingV2_3::LandingPage>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::LandingPage>]
         attr_accessor :landing_pages
       
         def initialize(**args)
@@ -6196,7 +6196,7 @@ module Google
       
       # Modification timestamp.
       class LastModifiedInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Timestamp of the last change in milliseconds since epoch.
         # Corresponds to the JSON property `time`
@@ -6216,12 +6216,12 @@ module Google
       # A group clause made up of list population terms representing constraints
       # joined by ORs.
       class ListPopulationClause
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Terms of this list population clause. Each clause is made up of list
         # population terms representing constraints and are joined by ORs.
         # Corresponds to the JSON property `terms`
-        # @return [Array<Google::Apis::DfareportingV2_3::ListPopulationTerm>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::ListPopulationTerm>]
         attr_accessor :terms
       
         def initialize(**args)
@@ -6236,7 +6236,7 @@ module Google
       
       # Remarketing List Population Rule.
       class ListPopulationRule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Floodlight activity ID associated with this rule. This field can be left blank.
         # Corresponds to the JSON property `floodlightActivityId`
@@ -6253,7 +6253,7 @@ module Google
         # and the clauses themselves are made up of list population terms which are
         # joined by ORs.
         # Corresponds to the JSON property `listPopulationClauses`
-        # @return [Array<Google::Apis::DfareportingV2_3::ListPopulationClause>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::ListPopulationClause>]
         attr_accessor :list_population_clauses
       
         def initialize(**args)
@@ -6270,7 +6270,7 @@ module Google
       
       # Remarketing List Population Rule Term.
       class ListPopulationTerm
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Will be true if the term should check if the user is in the list and false if
         # the term should check if the user is not in the list. This field is only
@@ -6347,7 +6347,7 @@ module Google
       
       # Remarketing List Targeting Expression.
       class ListTargetingExpression
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Expression describing which lists are being targeted by the ad.
         # Corresponds to the JSON property `expression`
@@ -6366,7 +6366,7 @@ module Google
       
       # Lookback configuration settings.
       class LookbackConfiguration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Lookback window, in days, from the last time a given user clicked on one of
         # your ads. If you enter 0, clicks will not be considered as triggering events
@@ -6397,7 +6397,7 @@ module Google
       
       # Represents a metric.
       class Metric
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The kind of resource this is, in this case dfareporting#metric.
         # Corresponds to the JSON property `kind`
@@ -6422,7 +6422,7 @@ module Google
       
       # Contains information about a metro region that can be targeted by ads.
       class Metro
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Country code of the country to which this metro region belongs.
         # Corresponds to the JSON property `countryCode`
@@ -6479,7 +6479,7 @@ module Google
       
       # Metro List Response
       class ListMetrosResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#metrosListResponse".
@@ -6489,7 +6489,7 @@ module Google
       
         # Metro collection.
         # Corresponds to the JSON property `metros`
-        # @return [Array<Google::Apis::DfareportingV2_3::Metro>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Metro>]
         attr_accessor :metros
       
         def initialize(**args)
@@ -6505,7 +6505,7 @@ module Google
       
       # Contains information about a mobile carrier that can be targeted by ads.
       class MobileCarrier
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Country code of the country to which this mobile carrier belongs.
         # Corresponds to the JSON property `countryCode`
@@ -6549,7 +6549,7 @@ module Google
       
       # Mobile Carrier List Response
       class ListMobileCarriersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#mobileCarriersListResponse".
@@ -6559,7 +6559,7 @@ module Google
       
         # Mobile carrier collection.
         # Corresponds to the JSON property `mobileCarriers`
-        # @return [Array<Google::Apis::DfareportingV2_3::MobileCarrier>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::MobileCarrier>]
         attr_accessor :mobile_carriers
       
         def initialize(**args)
@@ -6575,7 +6575,7 @@ module Google
       
       # Object Filter.
       class ObjectFilter
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#objectFilter".
@@ -6610,7 +6610,7 @@ module Google
       
       # Offset Position.
       class OffsetPosition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Offset distance from left side of an asset or a window.
         # Corresponds to the JSON property `left`
@@ -6635,7 +6635,7 @@ module Google
       
       # Omniture Integration Settings.
       class OmnitureSettings
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether placement cost data will be sent to Omniture. This property can be
         # enabled only if omnitureIntegrationEnabled is true.
@@ -6664,7 +6664,7 @@ module Google
       
       # Contains information about an operating system that can be targeted by ads.
       class OperatingSystem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # DART ID of this operating system. This is the ID used for targeting.
         # Corresponds to the JSON property `dartId`
@@ -6711,7 +6711,7 @@ module Google
       # Contains information about a particular version of an operating system that
       # can be targeted by ads.
       class OperatingSystemVersion
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of this operating system version.
         # Corresponds to the JSON property `id`
@@ -6741,7 +6741,7 @@ module Google
       
         # Contains information about an operating system that can be targeted by ads.
         # Corresponds to the JSON property `operatingSystem`
-        # @return [Google::Apis::DfareportingV2_3::OperatingSystem]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::OperatingSystem]
         attr_accessor :operating_system
       
         def initialize(**args)
@@ -6761,7 +6761,7 @@ module Google
       
       # Operating System Version List Response
       class ListOperatingSystemVersionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#operatingSystemVersionsListResponse".
@@ -6771,7 +6771,7 @@ module Google
       
         # Operating system version collection.
         # Corresponds to the JSON property `operatingSystemVersions`
-        # @return [Array<Google::Apis::DfareportingV2_3::OperatingSystemVersion>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::OperatingSystemVersion>]
         attr_accessor :operating_system_versions
       
         def initialize(**args)
@@ -6787,7 +6787,7 @@ module Google
       
       # Operating System List Response
       class ListOperatingSystemsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#operatingSystemsListResponse".
@@ -6797,7 +6797,7 @@ module Google
       
         # Operating system collection.
         # Corresponds to the JSON property `operatingSystems`
-        # @return [Array<Google::Apis::DfareportingV2_3::OperatingSystem>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::OperatingSystem>]
         attr_accessor :operating_systems
       
         def initialize(**args)
@@ -6813,7 +6813,7 @@ module Google
       
       # Creative optimization activity.
       class OptimizationActivity
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Floodlight activity ID of this optimization activity. This is a required field.
         # Corresponds to the JSON property `floodlightActivityId`
@@ -6822,7 +6822,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `floodlightActivityIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :floodlight_activity_id_dimension_value
       
         # Weight associated with this optimization. Must be greater than 1. The weight
@@ -6846,7 +6846,7 @@ module Google
       
       # Describes properties of a DoubleClick Planning order.
       class Order
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this order.
         # Corresponds to the JSON property `accountId`
@@ -6880,7 +6880,7 @@ module Google
       
         # Contacts for this order.
         # Corresponds to the JSON property `contacts`
-        # @return [Array<Google::Apis::DfareportingV2_3::OrderContact>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::OrderContact>]
         attr_accessor :contacts
       
         # ID of this order. This is a read-only, auto-generated field.
@@ -6896,7 +6896,7 @@ module Google
       
         # Modification timestamp.
         # Corresponds to the JSON property `lastModifiedInfo`
-        # @return [Google::Apis::DfareportingV2_3::LastModifiedInfo]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LastModifiedInfo]
         attr_accessor :last_modified_info
       
         # Name of this order.
@@ -6980,7 +6980,7 @@ module Google
       
       # Contact of an order.
       class OrderContact
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Free-form information about this contact. It could be any information related
         # to this contact in addition to type, title, name, and signature user profile
@@ -7026,7 +7026,7 @@ module Google
       
       # Contains properties of a DoubleClick Planning order document.
       class OrderDocument
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this order document.
         # Corresponds to the JSON property `accountId`
@@ -7058,7 +7058,7 @@ module Google
       
         # Modification timestamp.
         # Corresponds to the JSON property `createdInfo`
-        # @return [Google::Apis::DfareportingV2_3::LastModifiedInfo]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LastModifiedInfo]
         attr_accessor :created_info
       
         # Effective date of this order document.
@@ -7146,7 +7146,7 @@ module Google
       
       # Order document List Response
       class ListOrderDocumentsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#orderDocumentsListResponse".
@@ -7161,7 +7161,7 @@ module Google
       
         # Order document collection
         # Corresponds to the JSON property `orderDocuments`
-        # @return [Array<Google::Apis::DfareportingV2_3::OrderDocument>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::OrderDocument>]
         attr_accessor :order_documents
       
         def initialize(**args)
@@ -7178,7 +7178,7 @@ module Google
       
       # Order List Response
       class ListOrdersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#ordersListResponse".
@@ -7193,7 +7193,7 @@ module Google
       
         # Order collection.
         # Corresponds to the JSON property `orders`
-        # @return [Array<Google::Apis::DfareportingV2_3::Order>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Order>]
         attr_accessor :orders
       
         def initialize(**args)
@@ -7211,18 +7211,18 @@ module Google
       # Represents fields that are compatible to be selected for a report of type "
       # PATH_TO_CONVERSION".
       class PathToConversionReportCompatibleFields
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Conversion dimensions which are compatible to be selected in the "
         # conversionDimensions" section of the report.
         # Corresponds to the JSON property `conversionDimensions`
-        # @return [Array<Google::Apis::DfareportingV2_3::Dimension>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Dimension>]
         attr_accessor :conversion_dimensions
       
         # Custom floodlight variables which are compatible to be selected in the "
         # customFloodlightVariables" section of the report.
         # Corresponds to the JSON property `customFloodlightVariables`
-        # @return [Array<Google::Apis::DfareportingV2_3::Dimension>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Dimension>]
         attr_accessor :custom_floodlight_variables
       
         # The kind of resource this is, in this case dfareporting#
@@ -7234,13 +7234,13 @@ module Google
         # Metrics which are compatible to be selected in the "metricNames" section of
         # the report.
         # Corresponds to the JSON property `metrics`
-        # @return [Array<Google::Apis::DfareportingV2_3::Metric>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Metric>]
         attr_accessor :metrics
       
         # Per-interaction dimensions which are compatible to be selected in the "
         # perInteractionDimensions" section of the report.
         # Corresponds to the JSON property `perInteractionDimensions`
-        # @return [Array<Google::Apis::DfareportingV2_3::Dimension>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Dimension>]
         attr_accessor :per_interaction_dimensions
       
         def initialize(**args)
@@ -7259,7 +7259,7 @@ module Google
       
       # Contains properties of a placement.
       class Placement
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this placement. This field can be left blank.
         # Corresponds to the JSON property `accountId`
@@ -7273,7 +7273,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `advertiserIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :advertiser_id_dimension_value
       
         # Whether this placement is archived.
@@ -7289,7 +7289,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `campaignIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :campaign_id_dimension_value
       
         # Comments for this placement.
@@ -7313,7 +7313,7 @@ module Google
       
         # Modification timestamp.
         # Corresponds to the JSON property `createInfo`
-        # @return [Google::Apis::DfareportingV2_3::LastModifiedInfo]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LastModifiedInfo]
         attr_accessor :create_info
       
         # Directory site ID of this placement. On insert, you must set either this field
@@ -7325,7 +7325,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `directorySiteIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :directory_site_id_dimension_value
       
         # External ID for this placement.
@@ -7340,7 +7340,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `idDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :id_dimension_value
       
         # Key name of this placement. This is a read-only, auto-generated field.
@@ -7356,12 +7356,12 @@ module Google
       
         # Modification timestamp.
         # Corresponds to the JSON property `lastModifiedInfo`
-        # @return [Google::Apis::DfareportingV2_3::LastModifiedInfo]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LastModifiedInfo]
         attr_accessor :last_modified_info
       
         # Lookback configuration settings.
         # Corresponds to the JSON property `lookbackConfiguration`
-        # @return [Google::Apis::DfareportingV2_3::LookbackConfiguration]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LookbackConfiguration]
         attr_accessor :lookback_configuration
       
         # Name of this placement.This is a required field and must be less than 256
@@ -7390,7 +7390,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `placementGroupIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :placement_group_id_dimension_value
       
         # ID of the placement strategy assigned to this placement.
@@ -7400,7 +7400,7 @@ module Google
       
         # Pricing Schedule
         # Corresponds to the JSON property `pricingSchedule`
-        # @return [Google::Apis::DfareportingV2_3::PricingSchedule]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::PricingSchedule]
         attr_accessor :pricing_schedule
       
         # Whether this placement is the primary placement of a roadblock (placement
@@ -7415,7 +7415,7 @@ module Google
       
         # Modification timestamp.
         # Corresponds to the JSON property `publisherUpdateInfo`
-        # @return [Google::Apis::DfareportingV2_3::LastModifiedInfo]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LastModifiedInfo]
         attr_accessor :publisher_update_info
       
         # Site ID associated with this placement. On insert, you must set either this
@@ -7427,12 +7427,12 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `siteIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :site_id_dimension_value
       
         # Represents the dimensions of ads, placements, creatives, or creative assets.
         # Corresponds to the JSON property `size`
-        # @return [Google::Apis::DfareportingV2_3::Size]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::Size]
         attr_accessor :size
       
         # Whether creatives assigned to this placement must be SSL-compliant.
@@ -7473,7 +7473,7 @@ module Google
       
         # Tag Settings
         # Corresponds to the JSON property `tagSetting`
-        # @return [Google::Apis::DfareportingV2_3::TagSetting]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::TagSetting]
         attr_accessor :tag_setting
       
         def initialize(**args)
@@ -7523,7 +7523,7 @@ module Google
       
       # Placement Assignment.
       class PlacementAssignment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether this placement assignment is active. When true, the placement will be
         # included in the ad's rotation.
@@ -7539,7 +7539,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `placementIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :placement_id_dimension_value
       
         # Whether the placement to be assigned requires SSL. This is a read-only field
@@ -7564,7 +7564,7 @@ module Google
       
       # Contains properties of a package or roadblock.
       class PlacementGroup
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this placement group. This is a read-only field that can be left
         # blank.
@@ -7579,7 +7579,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `advertiserIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :advertiser_id_dimension_value
       
         # Whether this placement group is archived.
@@ -7595,7 +7595,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `campaignIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :campaign_id_dimension_value
       
         # IDs of placements which are assigned to this placement group. This is a read-
@@ -7616,7 +7616,7 @@ module Google
       
         # Modification timestamp.
         # Corresponds to the JSON property `createInfo`
-        # @return [Google::Apis::DfareportingV2_3::LastModifiedInfo]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LastModifiedInfo]
         attr_accessor :create_info
       
         # Directory site ID associated with this placement group. On insert, you must
@@ -7629,7 +7629,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `directorySiteIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :directory_site_id_dimension_value
       
         # External ID for this placement.
@@ -7644,7 +7644,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `idDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :id_dimension_value
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -7655,7 +7655,7 @@ module Google
       
         # Modification timestamp.
         # Corresponds to the JSON property `lastModifiedInfo`
-        # @return [Google::Apis::DfareportingV2_3::LastModifiedInfo]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LastModifiedInfo]
         attr_accessor :last_modified_info
       
         # Name of this placement group. This is a required field and must be less than
@@ -7681,7 +7681,7 @@ module Google
       
         # Pricing Schedule
         # Corresponds to the JSON property `pricingSchedule`
-        # @return [Google::Apis::DfareportingV2_3::PricingSchedule]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::PricingSchedule]
         attr_accessor :pricing_schedule
       
         # ID of the primary placement, used to calculate the media cost of a roadblock (
@@ -7693,7 +7693,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `primaryPlacementIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :primary_placement_id_dimension_value
       
         # Site ID associated with this placement group. On insert, you must set either
@@ -7706,7 +7706,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `siteIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :site_id_dimension_value
       
         # Subaccount ID of this placement group. This is a read-only field that can be
@@ -7752,7 +7752,7 @@ module Google
       
       # Placement Group List Response
       class ListPlacementGroupsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#placementGroupsListResponse".
@@ -7767,7 +7767,7 @@ module Google
       
         # Placement group collection.
         # Corresponds to the JSON property `placementGroups`
-        # @return [Array<Google::Apis::DfareportingV2_3::PlacementGroup>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::PlacementGroup>]
         attr_accessor :placement_groups
       
         def initialize(**args)
@@ -7784,7 +7784,7 @@ module Google
       
       # Placement Strategy List Response
       class ListPlacementStrategiesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#placementStrategiesListResponse".
@@ -7799,7 +7799,7 @@ module Google
       
         # Placement strategy collection.
         # Corresponds to the JSON property `placementStrategies`
-        # @return [Array<Google::Apis::DfareportingV2_3::PlacementStrategy>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::PlacementStrategy>]
         attr_accessor :placement_strategies
       
         def initialize(**args)
@@ -7816,7 +7816,7 @@ module Google
       
       # Contains properties of a placement strategy.
       class PlacementStrategy
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this placement strategy.This is a read-only field that can be
         # left blank.
@@ -7857,7 +7857,7 @@ module Google
       
       # Placement Tag
       class PlacementTag
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Placement ID
         # Corresponds to the JSON property `placementId`
@@ -7866,7 +7866,7 @@ module Google
       
         # Tags generated for this placement.
         # Corresponds to the JSON property `tagDatas`
-        # @return [Array<Google::Apis::DfareportingV2_3::TagData>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::TagData>]
         attr_accessor :tag_datas
       
         def initialize(**args)
@@ -7882,7 +7882,7 @@ module Google
       
       # Placement GenerateTags Response
       class GeneratePlacementsTagsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#placementsGenerateTagsResponse".
@@ -7892,7 +7892,7 @@ module Google
       
         # Set of generated tags for the specified placements.
         # Corresponds to the JSON property `placementTags`
-        # @return [Array<Google::Apis::DfareportingV2_3::PlacementTag>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::PlacementTag>]
         attr_accessor :placement_tags
       
         def initialize(**args)
@@ -7908,7 +7908,7 @@ module Google
       
       # Placement List Response
       class ListPlacementsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#placementsListResponse".
@@ -7923,7 +7923,7 @@ module Google
       
         # Placement collection.
         # Corresponds to the JSON property `placements`
-        # @return [Array<Google::Apis::DfareportingV2_3::Placement>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Placement>]
         attr_accessor :placements
       
         def initialize(**args)
@@ -7940,7 +7940,7 @@ module Google
       
       # Contains information about a platform type that can be targeted by ads.
       class PlatformType
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of this platform type.
         # Corresponds to the JSON property `id`
@@ -7972,7 +7972,7 @@ module Google
       
       # Platform Type List Response
       class ListPlatformTypesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#platformTypesListResponse".
@@ -7982,7 +7982,7 @@ module Google
       
         # Platform type collection.
         # Corresponds to the JSON property `platformTypes`
-        # @return [Array<Google::Apis::DfareportingV2_3::PlatformType>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::PlatformType>]
         attr_accessor :platform_types
       
         def initialize(**args)
@@ -7998,16 +7998,16 @@ module Google
       
       # Popup Window Properties.
       class PopupWindowProperties
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Represents the dimensions of ads, placements, creatives, or creative assets.
         # Corresponds to the JSON property `dimension`
-        # @return [Google::Apis::DfareportingV2_3::Size]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::Size]
         attr_accessor :dimension
       
         # Offset Position.
         # Corresponds to the JSON property `offset`
-        # @return [Google::Apis::DfareportingV2_3::OffsetPosition]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::OffsetPosition]
         attr_accessor :offset
       
         # Popup window position either centered or at specific coordinate.
@@ -8070,7 +8070,7 @@ module Google
       
       # Contains information about a postal code that can be targeted by ads.
       class PostalCode
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Postal code. This is equivalent to the id field.
         # Corresponds to the JSON property `code`
@@ -8114,7 +8114,7 @@ module Google
       
       # Postal Code List Response
       class ListPostalCodesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#postalCodesListResponse".
@@ -8124,7 +8124,7 @@ module Google
       
         # Postal code collection.
         # Corresponds to the JSON property `postalCodes`
-        # @return [Array<Google::Apis::DfareportingV2_3::PostalCode>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::PostalCode>]
         attr_accessor :postal_codes
       
         def initialize(**args)
@@ -8140,7 +8140,7 @@ module Google
       
       # Pricing Information
       class Pricing
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Cap cost type of this inventory item.
         # Corresponds to the JSON property `capCostType`
@@ -8155,7 +8155,7 @@ module Google
         # Flights of this inventory item. A flight (a.k.a. pricing period) represents
         # the inventory item pricing information for a specific period of time.
         # Corresponds to the JSON property `flights`
-        # @return [Array<Google::Apis::DfareportingV2_3::Flight>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Flight>]
         attr_accessor :flights
       
         # Group type of this inventory item if it represents a placement group. Is null
@@ -8197,7 +8197,7 @@ module Google
       
       # Pricing Schedule
       class PricingSchedule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Placement cap cost option.
         # Corresponds to the JSON property `capCostOption`
@@ -8235,7 +8235,7 @@ module Google
       
         # Pricing periods for this placement.
         # Corresponds to the JSON property `pricingPeriods`
-        # @return [Array<Google::Apis::DfareportingV2_3::PricingSchedulePricingPeriod>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::PricingSchedulePricingPeriod>]
         attr_accessor :pricing_periods
       
         # Placement pricing type. This field is required on insertion.
@@ -8277,7 +8277,7 @@ module Google
       
       # Pricing Period
       class PricingSchedulePricingPeriod
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Pricing period end date. This date must be later than, or the same day as, the
         # pricing period start date, but not later than the placement end date. The
@@ -8327,7 +8327,7 @@ module Google
       
       # Contains properties of a DoubleClick Planning project.
       class Project
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this project.
         # Corresponds to the JSON property `accountId`
@@ -8385,7 +8385,7 @@ module Google
       
         # Modification timestamp.
         # Corresponds to the JSON property `lastModifiedInfo`
-        # @return [Google::Apis::DfareportingV2_3::LastModifiedInfo]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LastModifiedInfo]
         attr_accessor :last_modified_info
       
         # Name of this project.
@@ -8470,7 +8470,7 @@ module Google
       
       # Project List Response
       class ListProjectsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#projectsListResponse".
@@ -8485,7 +8485,7 @@ module Google
       
         # Project collection.
         # Corresponds to the JSON property `projects`
-        # @return [Array<Google::Apis::DfareportingV2_3::Project>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Project>]
         attr_accessor :projects
       
         def initialize(**args)
@@ -8503,18 +8503,18 @@ module Google
       # Represents fields that are compatible to be selected for a report of type "
       # REACH".
       class ReachReportCompatibleFields
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Dimensions which are compatible to be selected in the "dimensionFilters"
         # section of the report.
         # Corresponds to the JSON property `dimensionFilters`
-        # @return [Array<Google::Apis::DfareportingV2_3::Dimension>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Dimension>]
         attr_accessor :dimension_filters
       
         # Dimensions which are compatible to be selected in the "dimensions" section of
         # the report.
         # Corresponds to the JSON property `dimensions`
-        # @return [Array<Google::Apis::DfareportingV2_3::Dimension>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Dimension>]
         attr_accessor :dimensions
       
         # The kind of resource this is, in this case dfareporting#
@@ -8526,19 +8526,19 @@ module Google
         # Metrics which are compatible to be selected in the "metricNames" section of
         # the report.
         # Corresponds to the JSON property `metrics`
-        # @return [Array<Google::Apis::DfareportingV2_3::Metric>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Metric>]
         attr_accessor :metrics
       
         # Metrics which are compatible to be selected as activity metrics to pivot on in
         # the "activities" section of the report.
         # Corresponds to the JSON property `pivotedActivityMetrics`
-        # @return [Array<Google::Apis::DfareportingV2_3::Metric>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Metric>]
         attr_accessor :pivoted_activity_metrics
       
         # Metrics which are compatible to be selected in the "
         # reachByFrequencyMetricNames" section of the report.
         # Corresponds to the JSON property `reachByFrequencyMetrics`
-        # @return [Array<Google::Apis::DfareportingV2_3::Metric>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Metric>]
         attr_accessor :reach_by_frequency_metrics
       
         def initialize(**args)
@@ -8558,7 +8558,7 @@ module Google
       
       # Represents a recipient.
       class Recipient
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The delivery type for the recipient.
         # Corresponds to the JSON property `deliveryType`
@@ -8589,7 +8589,7 @@ module Google
       
       # Contains information about a region that can be targeted by ads.
       class Region
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Country code of the country to which this region belongs.
         # Corresponds to the JSON property `countryCode`
@@ -8639,7 +8639,7 @@ module Google
       
       # Region List Response
       class ListRegionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#regionsListResponse".
@@ -8649,7 +8649,7 @@ module Google
       
         # Region collection.
         # Corresponds to the JSON property `regions`
-        # @return [Array<Google::Apis::DfareportingV2_3::Region>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Region>]
         attr_accessor :regions
       
         def initialize(**args)
@@ -8670,7 +8670,7 @@ module Google
       # are visible to your advertisers, including those that are shared to your
       # advertiser or account, use the TargetableRemarketingLists resource.
       class RemarketingList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this remarketing list. This is a read-only, auto-generated field
         # that is only returned in GET requests.
@@ -8692,7 +8692,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `advertiserIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :advertiser_id_dimension_value
       
         # Remarketing list description.
@@ -8719,7 +8719,7 @@ module Google
       
         # Remarketing List Population Rule.
         # Corresponds to the JSON property `listPopulationRule`
-        # @return [Google::Apis::DfareportingV2_3::ListPopulationRule]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::ListPopulationRule]
         attr_accessor :list_population_rule
       
         # Number of users currently in the list. This is a read-only field.
@@ -8771,7 +8771,7 @@ module Google
       # resource can be used to manage remarketing list sharing to other accounts and
       # advertisers.
       class RemarketingListShare
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#remarketingListShare".
@@ -8809,7 +8809,7 @@ module Google
       
       # Remarketing list response
       class ListRemarketingListsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#remarketingListsListResponse".
@@ -8824,7 +8824,7 @@ module Google
       
         # Remarketing list collection.
         # Corresponds to the JSON property `remarketingLists`
-        # @return [Array<Google::Apis::DfareportingV2_3::RemarketingList>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::RemarketingList>]
         attr_accessor :remarketing_lists
       
         def initialize(**args)
@@ -8841,7 +8841,7 @@ module Google
       
       # Represents a Report resource.
       class Report
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The account ID to which this report belongs.
         # Corresponds to the JSON property `accountId`
@@ -8850,17 +8850,17 @@ module Google
       
         # The report criteria for a report of type "STANDARD".
         # Corresponds to the JSON property `criteria`
-        # @return [Google::Apis::DfareportingV2_3::Report::Criteria]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::Report::Criteria]
         attr_accessor :criteria
       
         # The report criteria for a report of type "CROSS_DIMENSION_REACH".
         # Corresponds to the JSON property `crossDimensionReachCriteria`
-        # @return [Google::Apis::DfareportingV2_3::Report::CrossDimensionReachCriteria]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::Report::CrossDimensionReachCriteria]
         attr_accessor :cross_dimension_reach_criteria
       
         # The report's email delivery settings.
         # Corresponds to the JSON property `delivery`
-        # @return [Google::Apis::DfareportingV2_3::Report::Delivery]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::Report::Delivery]
         attr_accessor :delivery
       
         # The eTag of this response for caching purposes.
@@ -8875,7 +8875,7 @@ module Google
       
         # The report criteria for a report of type "FLOODLIGHT".
         # Corresponds to the JSON property `floodlightCriteria`
-        # @return [Google::Apis::DfareportingV2_3::Report::FloodlightCriteria]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::Report::FloodlightCriteria]
         attr_accessor :floodlight_criteria
       
         # The output format of the report. If not specified, default format is "CSV".
@@ -8914,18 +8914,18 @@ module Google
       
         # The report criteria for a report of type "PATH_TO_CONVERSION".
         # Corresponds to the JSON property `pathToConversionCriteria`
-        # @return [Google::Apis::DfareportingV2_3::Report::PathToConversionCriteria]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::Report::PathToConversionCriteria]
         attr_accessor :path_to_conversion_criteria
       
         # The report criteria for a report of type "REACH".
         # Corresponds to the JSON property `reachCriteria`
-        # @return [Google::Apis::DfareportingV2_3::Report::ReachCriteria]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::Report::ReachCriteria]
         attr_accessor :reach_criteria
       
         # The report's schedule. Can only be set if the report's 'dateRange' is a
         # relative date range and the relative date range is not "TODAY".
         # Corresponds to the JSON property `schedule`
-        # @return [Google::Apis::DfareportingV2_3::Report::Schedule]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::Report::Schedule]
         attr_accessor :schedule
       
         # The subaccount ID to which this report belongs if applicable.
@@ -8966,33 +8966,33 @@ module Google
         
         # The report criteria for a report of type "STANDARD".
         class Criteria
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Represents an activity group.
           # Corresponds to the JSON property `activities`
-          # @return [Google::Apis::DfareportingV2_3::Activities]
+          # @return [GoogleAPI::Apis::DfareportingV2_3::Activities]
           attr_accessor :activities
         
           # Represents a Custom Rich Media Events group.
           # Corresponds to the JSON property `customRichMediaEvents`
-          # @return [Google::Apis::DfareportingV2_3::CustomRichMediaEvents]
+          # @return [GoogleAPI::Apis::DfareportingV2_3::CustomRichMediaEvents]
           attr_accessor :custom_rich_media_events
         
           # Represents a date range.
           # Corresponds to the JSON property `dateRange`
-          # @return [Google::Apis::DfareportingV2_3::DateRange]
+          # @return [GoogleAPI::Apis::DfareportingV2_3::DateRange]
           attr_accessor :date_range
         
           # The list of filters on which dimensions are filtered.
           # Filters for different dimensions are ANDed, filters for the same dimension are
           # grouped together and ORed.
           # Corresponds to the JSON property `dimensionFilters`
-          # @return [Array<Google::Apis::DfareportingV2_3::DimensionValue>]
+          # @return [Array<GoogleAPI::Apis::DfareportingV2_3::DimensionValue>]
           attr_accessor :dimension_filters
         
           # The list of standard dimensions the report should include.
           # Corresponds to the JSON property `dimensions`
-          # @return [Array<Google::Apis::DfareportingV2_3::SortedDimension>]
+          # @return [Array<GoogleAPI::Apis::DfareportingV2_3::SortedDimension>]
           attr_accessor :dimensions
         
           # The list of names of metrics the report should include.
@@ -9017,16 +9017,16 @@ module Google
         
         # The report criteria for a report of type "CROSS_DIMENSION_REACH".
         class CrossDimensionReachCriteria
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The list of dimensions the report should include.
           # Corresponds to the JSON property `breakdown`
-          # @return [Array<Google::Apis::DfareportingV2_3::SortedDimension>]
+          # @return [Array<GoogleAPI::Apis::DfareportingV2_3::SortedDimension>]
           attr_accessor :breakdown
         
           # Represents a date range.
           # Corresponds to the JSON property `dateRange`
-          # @return [Google::Apis::DfareportingV2_3::DateRange]
+          # @return [GoogleAPI::Apis::DfareportingV2_3::DateRange]
           attr_accessor :date_range
         
           # The dimension option.
@@ -9036,7 +9036,7 @@ module Google
         
           # The list of filters on which dimensions are filtered.
           # Corresponds to the JSON property `dimensionFilters`
-          # @return [Array<Google::Apis::DfareportingV2_3::DimensionValue>]
+          # @return [Array<GoogleAPI::Apis::DfareportingV2_3::DimensionValue>]
           attr_accessor :dimension_filters
         
           # The list of names of metrics the report should include.
@@ -9073,7 +9073,7 @@ module Google
         
         # The report's email delivery settings.
         class Delivery
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Whether the report should be emailed to the report owner.
           # Corresponds to the JSON property `emailOwner`
@@ -9093,7 +9093,7 @@ module Google
         
           # The list of recipients to which to email the report.
           # Corresponds to the JSON property `recipients`
-          # @return [Array<Google::Apis::DfareportingV2_3::Recipient>]
+          # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Recipient>]
           attr_accessor :recipients
         
           def initialize(**args)
@@ -9111,33 +9111,33 @@ module Google
         
         # The report criteria for a report of type "FLOODLIGHT".
         class FloodlightCriteria
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The list of custom rich media events to include.
           # Corresponds to the JSON property `customRichMediaEvents`
-          # @return [Array<Google::Apis::DfareportingV2_3::DimensionValue>]
+          # @return [Array<GoogleAPI::Apis::DfareportingV2_3::DimensionValue>]
           attr_accessor :custom_rich_media_events
         
           # Represents a date range.
           # Corresponds to the JSON property `dateRange`
-          # @return [Google::Apis::DfareportingV2_3::DateRange]
+          # @return [GoogleAPI::Apis::DfareportingV2_3::DateRange]
           attr_accessor :date_range
         
           # The list of filters on which dimensions are filtered.
           # Filters for different dimensions are ANDed, filters for the same dimension are
           # grouped together and ORed.
           # Corresponds to the JSON property `dimensionFilters`
-          # @return [Array<Google::Apis::DfareportingV2_3::DimensionValue>]
+          # @return [Array<GoogleAPI::Apis::DfareportingV2_3::DimensionValue>]
           attr_accessor :dimension_filters
         
           # The list of dimensions the report should include.
           # Corresponds to the JSON property `dimensions`
-          # @return [Array<Google::Apis::DfareportingV2_3::SortedDimension>]
+          # @return [Array<GoogleAPI::Apis::DfareportingV2_3::SortedDimension>]
           attr_accessor :dimensions
         
           # Represents a DimensionValue resource.
           # Corresponds to the JSON property `floodlightConfigId`
-          # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+          # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
           attr_accessor :floodlight_config_id
         
           # The list of names of metrics the report should include.
@@ -9147,7 +9147,7 @@ module Google
         
           # The properties of the report.
           # Corresponds to the JSON property `reportProperties`
-          # @return [Google::Apis::DfareportingV2_3::Report::FloodlightCriteria::ReportProperties]
+          # @return [GoogleAPI::Apis::DfareportingV2_3::Report::FloodlightCriteria::ReportProperties]
           attr_accessor :report_properties
         
           def initialize(**args)
@@ -9167,7 +9167,7 @@ module Google
           
           # The properties of the report.
           class ReportProperties
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Include conversions that have no cookie, but do have an exposure path.
             # Corresponds to the JSON property `includeAttributedIPConversions`
@@ -9206,36 +9206,36 @@ module Google
         
         # The report criteria for a report of type "PATH_TO_CONVERSION".
         class PathToConversionCriteria
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The list of 'dfa:activity' values to filter on.
           # Corresponds to the JSON property `activityFilters`
-          # @return [Array<Google::Apis::DfareportingV2_3::DimensionValue>]
+          # @return [Array<GoogleAPI::Apis::DfareportingV2_3::DimensionValue>]
           attr_accessor :activity_filters
         
           # The list of conversion dimensions the report should include.
           # Corresponds to the JSON property `conversionDimensions`
-          # @return [Array<Google::Apis::DfareportingV2_3::SortedDimension>]
+          # @return [Array<GoogleAPI::Apis::DfareportingV2_3::SortedDimension>]
           attr_accessor :conversion_dimensions
         
           # The list of custom floodlight variables the report should include.
           # Corresponds to the JSON property `customFloodlightVariables`
-          # @return [Array<Google::Apis::DfareportingV2_3::SortedDimension>]
+          # @return [Array<GoogleAPI::Apis::DfareportingV2_3::SortedDimension>]
           attr_accessor :custom_floodlight_variables
         
           # The list of custom rich media events to include.
           # Corresponds to the JSON property `customRichMediaEvents`
-          # @return [Array<Google::Apis::DfareportingV2_3::DimensionValue>]
+          # @return [Array<GoogleAPI::Apis::DfareportingV2_3::DimensionValue>]
           attr_accessor :custom_rich_media_events
         
           # Represents a date range.
           # Corresponds to the JSON property `dateRange`
-          # @return [Google::Apis::DfareportingV2_3::DateRange]
+          # @return [GoogleAPI::Apis::DfareportingV2_3::DateRange]
           attr_accessor :date_range
         
           # Represents a DimensionValue resource.
           # Corresponds to the JSON property `floodlightConfigId`
-          # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+          # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
           attr_accessor :floodlight_config_id
         
           # The list of names of metrics the report should include.
@@ -9245,12 +9245,12 @@ module Google
         
           # The list of per interaction dimensions the report should include.
           # Corresponds to the JSON property `perInteractionDimensions`
-          # @return [Array<Google::Apis::DfareportingV2_3::SortedDimension>]
+          # @return [Array<GoogleAPI::Apis::DfareportingV2_3::SortedDimension>]
           attr_accessor :per_interaction_dimensions
         
           # The properties of the report.
           # Corresponds to the JSON property `reportProperties`
-          # @return [Google::Apis::DfareportingV2_3::Report::PathToConversionCriteria::ReportProperties]
+          # @return [GoogleAPI::Apis::DfareportingV2_3::Report::PathToConversionCriteria::ReportProperties]
           attr_accessor :report_properties
         
           def initialize(**args)
@@ -9272,7 +9272,7 @@ module Google
           
           # The properties of the report.
           class ReportProperties
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # DFA checks to see if a click interaction occurred within the specified period
             # of time before a conversion. By default the value is pulled from Floodlight or
@@ -9359,33 +9359,33 @@ module Google
         
         # The report criteria for a report of type "REACH".
         class ReachCriteria
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Represents an activity group.
           # Corresponds to the JSON property `activities`
-          # @return [Google::Apis::DfareportingV2_3::Activities]
+          # @return [GoogleAPI::Apis::DfareportingV2_3::Activities]
           attr_accessor :activities
         
           # Represents a Custom Rich Media Events group.
           # Corresponds to the JSON property `customRichMediaEvents`
-          # @return [Google::Apis::DfareportingV2_3::CustomRichMediaEvents]
+          # @return [GoogleAPI::Apis::DfareportingV2_3::CustomRichMediaEvents]
           attr_accessor :custom_rich_media_events
         
           # Represents a date range.
           # Corresponds to the JSON property `dateRange`
-          # @return [Google::Apis::DfareportingV2_3::DateRange]
+          # @return [GoogleAPI::Apis::DfareportingV2_3::DateRange]
           attr_accessor :date_range
         
           # The list of filters on which dimensions are filtered.
           # Filters for different dimensions are ANDed, filters for the same dimension are
           # grouped together and ORed.
           # Corresponds to the JSON property `dimensionFilters`
-          # @return [Array<Google::Apis::DfareportingV2_3::DimensionValue>]
+          # @return [Array<GoogleAPI::Apis::DfareportingV2_3::DimensionValue>]
           attr_accessor :dimension_filters
         
           # The list of dimensions the report should include.
           # Corresponds to the JSON property `dimensions`
-          # @return [Array<Google::Apis::DfareportingV2_3::SortedDimension>]
+          # @return [Array<GoogleAPI::Apis::DfareportingV2_3::SortedDimension>]
           attr_accessor :dimensions
         
           # Whether to enable all reach dimension combinations in the report. Defaults to
@@ -9426,7 +9426,7 @@ module Google
         # The report's schedule. Can only be set if the report's 'dateRange' is a
         # relative date range and the relative date range is not "TODAY".
         class Schedule
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Whether the schedule is active or not. Must be set to either true or false.
           # Corresponds to the JSON property `active`
@@ -9493,18 +9493,18 @@ module Google
       # Represents fields that are compatible to be selected for a report of type "
       # STANDARD".
       class ReportCompatibleFields
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Dimensions which are compatible to be selected in the "dimensionFilters"
         # section of the report.
         # Corresponds to the JSON property `dimensionFilters`
-        # @return [Array<Google::Apis::DfareportingV2_3::Dimension>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Dimension>]
         attr_accessor :dimension_filters
       
         # Dimensions which are compatible to be selected in the "dimensions" section of
         # the report.
         # Corresponds to the JSON property `dimensions`
-        # @return [Array<Google::Apis::DfareportingV2_3::Dimension>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Dimension>]
         attr_accessor :dimensions
       
         # The kind of resource this is, in this case dfareporting#reportCompatibleFields.
@@ -9515,13 +9515,13 @@ module Google
         # Metrics which are compatible to be selected in the "metricNames" section of
         # the report.
         # Corresponds to the JSON property `metrics`
-        # @return [Array<Google::Apis::DfareportingV2_3::Metric>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Metric>]
         attr_accessor :metrics
       
         # Metrics which are compatible to be selected as activity metrics to pivot on in
         # the "activities" section of the report.
         # Corresponds to the JSON property `pivotedActivityMetrics`
-        # @return [Array<Google::Apis::DfareportingV2_3::Metric>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Metric>]
         attr_accessor :pivoted_activity_metrics
       
         def initialize(**args)
@@ -9540,7 +9540,7 @@ module Google
       
       # Represents the list of reports.
       class ReportList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The eTag of this response for caching purposes.
         # Corresponds to the JSON property `etag`
@@ -9549,7 +9549,7 @@ module Google
       
         # The reports returned in this response.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::DfareportingV2_3::Report>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Report>]
         attr_accessor :items
       
         # The kind of list this is, in this case dfareporting#reportList.
@@ -9580,7 +9580,7 @@ module Google
       
       # Reporting Configuration
       class ReportsConfiguration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether the exposure to conversion report is enabled. This report shows
         # detailed pathway information on up to 10 of the most recent ad exposures seen
@@ -9592,7 +9592,7 @@ module Google
       
         # Lookback configuration settings.
         # Corresponds to the JSON property `lookbackConfiguration`
-        # @return [Google::Apis::DfareportingV2_3::LookbackConfiguration]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LookbackConfiguration]
         attr_accessor :lookback_configuration
       
         # Report generation time zone ID of this account. This is a required field that
@@ -9629,7 +9629,7 @@ module Google
       
       # Rich Media Exit Override.
       class RichMediaExitOverride
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Click-through URL to override the default exit URL. Applicable if the
         # useCustomExitUrl field is set to true.
@@ -9662,7 +9662,7 @@ module Google
       
       # Contains properties of a site.
       class Site
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this site. This is a read-only field that can be left blank.
         # Corresponds to the JSON property `accountId`
@@ -9683,7 +9683,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `directorySiteIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :directory_site_id_dimension_value
       
         # ID of this site. This is a read-only, auto-generated field.
@@ -9693,7 +9693,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `idDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :id_dimension_value
       
         # Key name of this site. This is a read-only, auto-generated field.
@@ -9717,12 +9717,12 @@ module Google
       
         # Site contacts.
         # Corresponds to the JSON property `siteContacts`
-        # @return [Array<Google::Apis::DfareportingV2_3::SiteContact>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::SiteContact>]
         attr_accessor :site_contacts
       
         # Site Settings
         # Corresponds to the JSON property `siteSettings`
-        # @return [Google::Apis::DfareportingV2_3::SiteSettings]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::SiteSettings]
         attr_accessor :site_settings
       
         # Subaccount ID of this site. This is a read-only field that can be left blank.
@@ -9753,7 +9753,7 @@ module Google
       
       # Site Contact
       class SiteContact
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Address of this site contact.
         # Corresponds to the JSON property `address`
@@ -9814,7 +9814,7 @@ module Google
       
       # Site Settings
       class SiteSettings
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether active view creatives are disabled for this site.
         # Corresponds to the JSON property `activeViewOptOut`
@@ -9824,7 +9824,7 @@ module Google
       
         # Creative Settings
         # Corresponds to the JSON property `creativeSettings`
-        # @return [Google::Apis::DfareportingV2_3::CreativeSettings]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::CreativeSettings]
         attr_accessor :creative_settings
       
         # Whether brand safe ads are disabled for this site.
@@ -9841,12 +9841,12 @@ module Google
       
         # Lookback configuration settings.
         # Corresponds to the JSON property `lookbackConfiguration`
-        # @return [Google::Apis::DfareportingV2_3::LookbackConfiguration]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::LookbackConfiguration]
         attr_accessor :lookback_configuration
       
         # Tag Settings
         # Corresponds to the JSON property `tagSetting`
-        # @return [Google::Apis::DfareportingV2_3::TagSetting]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::TagSetting]
         attr_accessor :tag_setting
       
         # Whether Verification and ActiveView are disabled for in-stream video creatives
@@ -9879,7 +9879,7 @@ module Google
       
       # Site List Response
       class ListSitesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#sitesListResponse".
@@ -9894,7 +9894,7 @@ module Google
       
         # Site collection.
         # Corresponds to the JSON property `sites`
-        # @return [Array<Google::Apis::DfareportingV2_3::Site>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Site>]
         attr_accessor :sites
       
         def initialize(**args)
@@ -9911,7 +9911,7 @@ module Google
       
       # Represents the dimensions of ads, placements, creatives, or creative assets.
       class Size
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Height of this size.
         # Corresponds to the JSON property `height`
@@ -9956,7 +9956,7 @@ module Google
       
       # Size List Response
       class ListSizesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#sizesListResponse".
@@ -9966,7 +9966,7 @@ module Google
       
         # Size collection.
         # Corresponds to the JSON property `sizes`
-        # @return [Array<Google::Apis::DfareportingV2_3::Size>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Size>]
         attr_accessor :sizes
       
         def initialize(**args)
@@ -9982,7 +9982,7 @@ module Google
       
       # Represents a sorted dimension.
       class SortedDimension
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The kind of resource this is, in this case dfareporting#sortedDimension.
         # Corresponds to the JSON property `kind`
@@ -10013,7 +10013,7 @@ module Google
       
       # Contains properties of a DCM subaccount.
       class Subaccount
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of the account that contains this subaccount. This is a read-only field
         # that can be left blank.
@@ -10059,7 +10059,7 @@ module Google
       
       # Subaccount List Response
       class ListSubaccountsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#subaccountsListResponse".
@@ -10074,7 +10074,7 @@ module Google
       
         # Subaccount collection.
         # Corresponds to the JSON property `subaccounts`
-        # @return [Array<Google::Apis::DfareportingV2_3::Subaccount>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Subaccount>]
         attr_accessor :subaccounts
       
         def initialize(**args)
@@ -10091,7 +10091,7 @@ module Google
       
       # Placement Tag Data
       class TagData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Ad associated with this placement tag.
         # Corresponds to the JSON property `adId`
@@ -10134,7 +10134,7 @@ module Google
       
       # Tag Settings
       class TagSetting
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Additional key-values to be included in tags. Each key-value pair must be of
         # the form key=value, and pairs must be separated by a semicolon (;). Keys and
@@ -10179,7 +10179,7 @@ module Google
       
       # Dynamic and Image Tag Settings.
       class TagSettings
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether dynamic floodlight tags are enabled.
         # Corresponds to the JSON property `dynamicTagEnabled`
@@ -10206,7 +10206,7 @@ module Google
       
       # Target Window.
       class TargetWindow
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # User-entered value.
         # Corresponds to the JSON property `customHtml`
@@ -10239,7 +10239,7 @@ module Google
       # remarketing lists that are owned by your advertisers, use the RemarketingLists
       # resource.
       class TargetableRemarketingList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this remarketing list. This is a read-only, auto-generated field
         # that is only returned in GET requests.
@@ -10261,7 +10261,7 @@ module Google
       
         # Represents a DimensionValue resource.
         # Corresponds to the JSON property `advertiserIdDimensionValue`
-        # @return [Google::Apis::DfareportingV2_3::DimensionValue]
+        # @return [GoogleAPI::Apis::DfareportingV2_3::DimensionValue]
         attr_accessor :advertiser_id_dimension_value
       
         # Targetable remarketing list description.
@@ -10331,7 +10331,7 @@ module Google
       
       # Targetable remarketing list response
       class ListTargetableRemarketingListsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#targetableRemarketingListsListResponse".
@@ -10346,7 +10346,7 @@ module Google
       
         # Targetable remarketing list collection.
         # Corresponds to the JSON property `targetableRemarketingLists`
-        # @return [Array<Google::Apis::DfareportingV2_3::TargetableRemarketingList>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::TargetableRemarketingList>]
         attr_accessor :targetable_remarketing_lists
       
         def initialize(**args)
@@ -10363,21 +10363,21 @@ module Google
       
       # Technology Targeting.
       class TechnologyTargeting
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Browsers that this ad targets. For each browser either set browserVersionId or
         # dartId along with the version numbers. If both are specified, only
         # browserVersionId will be used.The other fields are populated automatically
         # when the ad is inserted or updated.
         # Corresponds to the JSON property `browsers`
-        # @return [Array<Google::Apis::DfareportingV2_3::Browser>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::Browser>]
         attr_accessor :browsers
       
         # Connection types that this ad targets. For each connection type only id is
         # required.The other fields are populated automatically when the ad is inserted
         # or updated.
         # Corresponds to the JSON property `connectionTypes`
-        # @return [Array<Google::Apis::DfareportingV2_3::ConnectionType>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::ConnectionType>]
         attr_accessor :connection_types
       
         # Mobile carriers that this ad targets. For each mobile carrier only id is
@@ -10385,7 +10385,7 @@ module Google
         # inserted or updated. If targeting a mobile carrier, do not set targeting for
         # any zip codes.
         # Corresponds to the JSON property `mobileCarriers`
-        # @return [Array<Google::Apis::DfareportingV2_3::MobileCarrier>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::MobileCarrier>]
         attr_accessor :mobile_carriers
       
         # Operating system versions that this ad targets. To target all versions, use
@@ -10394,7 +10394,7 @@ module Google
         # If targeting an operating system version, do not set targeting for the
         # corresponding operating system in operatingSystems.
         # Corresponds to the JSON property `operatingSystemVersions`
-        # @return [Array<Google::Apis::DfareportingV2_3::OperatingSystemVersion>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::OperatingSystemVersion>]
         attr_accessor :operating_system_versions
       
         # Operating systems that this ad targets. To target specific versions, use
@@ -10403,14 +10403,14 @@ module Google
         # updated. If targeting an operating system, do not set targeting for operating
         # system versions for the same operating system.
         # Corresponds to the JSON property `operatingSystems`
-        # @return [Array<Google::Apis::DfareportingV2_3::OperatingSystem>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::OperatingSystem>]
         attr_accessor :operating_systems
       
         # Platform types that this ad targets. For example, desktop, mobile, or tablet.
         # For each platform type, only id is required, and the other fields are
         # populated automatically when the ad is inserted or updated.
         # Corresponds to the JSON property `platformTypes`
-        # @return [Array<Google::Apis::DfareportingV2_3::PlatformType>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::PlatformType>]
         attr_accessor :platform_types
       
         def initialize(**args)
@@ -10430,7 +10430,7 @@ module Google
       
       # Third Party Authentication Token
       class ThirdPartyAuthenticationToken
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Name of the third-party authentication token.
         # Corresponds to the JSON property `name`
@@ -10456,7 +10456,7 @@ module Google
       
       # Third-party Tracking URL.
       class ThirdPartyTrackingUrl
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Third-party URL type for in-stream video creatives.
         # Corresponds to the JSON property `thirdPartyUrlType`
@@ -10481,7 +10481,7 @@ module Google
       
       # User Defined Variable configuration.
       class UserDefinedVariableConfiguration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Data type for the variable. This is a required field.
         # Corresponds to the JSON property `dataType`
@@ -10514,7 +10514,7 @@ module Google
       
       # Represents a UserProfile resource.
       class UserProfile
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The account ID to which this profile belongs.
         # Corresponds to the JSON property `accountId`
@@ -10575,7 +10575,7 @@ module Google
       
       # Represents the list of user profiles.
       class UserProfileList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The eTag of this response for caching purposes.
         # Corresponds to the JSON property `etag`
@@ -10584,7 +10584,7 @@ module Google
       
         # The user profiles returned in this response.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::DfareportingV2_3::UserProfile>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::UserProfile>]
         attr_accessor :items
       
         # The kind of list this is, in this case dfareporting#userProfileList.
@@ -10606,7 +10606,7 @@ module Google
       
       # Contains properties of auser role, which is used to manage user access.
       class UserRole
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID of this user role. This is a read-only field that can be left blank.
         # Corresponds to the JSON property `accountId`
@@ -10649,7 +10649,7 @@ module Google
       
         # List of permissions associated with this user role.
         # Corresponds to the JSON property `permissions`
-        # @return [Array<Google::Apis::DfareportingV2_3::UserRolePermission>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::UserRolePermission>]
         attr_accessor :permissions
       
         # Subaccount ID of this user role. This is a read-only field that can be left
@@ -10677,7 +10677,7 @@ module Google
       
       # Contains properties of a user role permission.
       class UserRolePermission
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Levels of availability for a user role permission.
         # Corresponds to the JSON property `availability`
@@ -10721,7 +10721,7 @@ module Google
       
       # Represents a grouping of related user role permissions.
       class UserRolePermissionGroup
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of this user role permission.
         # Corresponds to the JSON property `id`
@@ -10753,7 +10753,7 @@ module Google
       
       # User Role Permission Group List Response
       class ListUserRolePermissionGroupsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#userRolePermissionGroupsListResponse".
@@ -10763,7 +10763,7 @@ module Google
       
         # User role permission group collection.
         # Corresponds to the JSON property `userRolePermissionGroups`
-        # @return [Array<Google::Apis::DfareportingV2_3::UserRolePermissionGroup>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::UserRolePermissionGroup>]
         attr_accessor :user_role_permission_groups
       
         def initialize(**args)
@@ -10779,7 +10779,7 @@ module Google
       
       # User Role Permission List Response
       class ListUserRolePermissionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#userRolePermissionsListResponse".
@@ -10789,7 +10789,7 @@ module Google
       
         # User role permission collection.
         # Corresponds to the JSON property `userRolePermissions`
-        # @return [Array<Google::Apis::DfareportingV2_3::UserRolePermission>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::UserRolePermission>]
         attr_accessor :user_role_permissions
       
         def initialize(**args)
@@ -10805,7 +10805,7 @@ module Google
       
       # User Role List Response
       class ListUserRolesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # dfareporting#userRolesListResponse".
@@ -10820,7 +10820,7 @@ module Google
       
         # User role collection.
         # Corresponds to the JSON property `userRoles`
-        # @return [Array<Google::Apis::DfareportingV2_3::UserRole>]
+        # @return [Array<GoogleAPI::Apis::DfareportingV2_3::UserRole>]
         attr_accessor :user_roles
       
         def initialize(**args)

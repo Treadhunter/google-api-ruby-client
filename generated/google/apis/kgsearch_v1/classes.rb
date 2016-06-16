@@ -18,14 +18,14 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module KgsearchV1
       
       # Response message includes the context and a list of matching results which
       # contain the detail of associated entities.
       class SearchResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The local context applicable for the response. See more details at http://www.
         # w3.org/TR/json-ld/#context-definitions.

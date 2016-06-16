@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AdminDatatransferV1
       # Admin Data Transfer API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/admin_datatransfer_v1'
       #
-      #    Admin = Google::Apis::AdminDatatransferV1 # Alias the module
+      #    Admin = GoogleAPI::Apis::AdminDatatransferV1 # Alias the module
       #    service = Admin::DataTransferService.new
       #
       # @see https://developers.google.com/admin-sdk/data-transfer/
-      class DataTransferService < Google::Apis::Core::BaseService
+      class DataTransferService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -64,22 +64,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdminDatatransferV1::Application] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdminDatatransferV1::Application] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdminDatatransferV1::Application]
+        # @return [GoogleAPI::Apis::AdminDatatransferV1::Application]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_application(application_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'applications/{applicationId}', options)
-          command.response_representation = Google::Apis::AdminDatatransferV1::Application::Representation
-          command.response_class = Google::Apis::AdminDatatransferV1::Application
+          command.response_representation = GoogleAPI::Apis::AdminDatatransferV1::Application::Representation
+          command.response_class = GoogleAPI::Apis::AdminDatatransferV1::Application
           command.params['applicationId'] = application_id unless application_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -103,22 +103,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdminDatatransferV1::ApplicationsListResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdminDatatransferV1::ApplicationsListResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdminDatatransferV1::ApplicationsListResponse]
+        # @return [GoogleAPI::Apis::AdminDatatransferV1::ApplicationsListResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_applications(customer_id: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'applications', options)
-          command.response_representation = Google::Apis::AdminDatatransferV1::ApplicationsListResponse::Representation
-          command.response_class = Google::Apis::AdminDatatransferV1::ApplicationsListResponse
+          command.response_representation = GoogleAPI::Apis::AdminDatatransferV1::ApplicationsListResponse::Representation
+          command.response_class = GoogleAPI::Apis::AdminDatatransferV1::ApplicationsListResponse
           command.query['customerId'] = customer_id unless customer_id.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -141,22 +141,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdminDatatransferV1::DataTransfer] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdminDatatransferV1::DataTransfer] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdminDatatransferV1::DataTransfer]
+        # @return [GoogleAPI::Apis::AdminDatatransferV1::DataTransfer]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_transfer(data_transfer_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'transfers/{dataTransferId}', options)
-          command.response_representation = Google::Apis::AdminDatatransferV1::DataTransfer::Representation
-          command.response_class = Google::Apis::AdminDatatransferV1::DataTransfer
+          command.response_representation = GoogleAPI::Apis::AdminDatatransferV1::DataTransfer::Representation
+          command.response_class = GoogleAPI::Apis::AdminDatatransferV1::DataTransfer
           command.params['dataTransferId'] = data_transfer_id unless data_transfer_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -165,7 +165,7 @@ module Google
         end
         
         # Inserts a data transfer request.
-        # @param [Google::Apis::AdminDatatransferV1::DataTransfer] data_transfer_object
+        # @param [GoogleAPI::Apis::AdminDatatransferV1::DataTransfer] data_transfer_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -175,24 +175,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdminDatatransferV1::DataTransfer] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdminDatatransferV1::DataTransfer] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdminDatatransferV1::DataTransfer]
+        # @return [GoogleAPI::Apis::AdminDatatransferV1::DataTransfer]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_transfer(data_transfer_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'transfers', options)
-          command.request_representation = Google::Apis::AdminDatatransferV1::DataTransfer::Representation
+          command.request_representation = GoogleAPI::Apis::AdminDatatransferV1::DataTransfer::Representation
           command.request_object = data_transfer_object
-          command.response_representation = Google::Apis::AdminDatatransferV1::DataTransfer::Representation
-          command.response_class = Google::Apis::AdminDatatransferV1::DataTransfer
+          command.response_representation = GoogleAPI::Apis::AdminDatatransferV1::DataTransfer::Representation
+          command.response_class = GoogleAPI::Apis::AdminDatatransferV1::DataTransfer
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['userIp'] = user_ip unless user_ip.nil?
@@ -221,22 +221,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdminDatatransferV1::DataTransfersListResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdminDatatransferV1::DataTransfersListResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdminDatatransferV1::DataTransfersListResponse]
+        # @return [GoogleAPI::Apis::AdminDatatransferV1::DataTransfersListResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_transfers(customer_id: nil, max_results: nil, new_owner_user_id: nil, old_owner_user_id: nil, page_token: nil, status: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'transfers', options)
-          command.response_representation = Google::Apis::AdminDatatransferV1::DataTransfersListResponse::Representation
-          command.response_class = Google::Apis::AdminDatatransferV1::DataTransfersListResponse
+          command.response_representation = GoogleAPI::Apis::AdminDatatransferV1::DataTransfersListResponse::Representation
+          command.response_class = GoogleAPI::Apis::AdminDatatransferV1::DataTransfersListResponse
           command.query['customerId'] = customer_id unless customer_id.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['newOwnerUserId'] = new_owner_user_id unless new_owner_user_id.nil?

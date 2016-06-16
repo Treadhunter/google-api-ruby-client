@@ -23,7 +23,7 @@ module Samples
   #
   #     $ ./google-api-samples calendar list --limit 10
   class Calendar < BaseCli
-    Calendar = Google::Apis::CalendarV3
+    Calendar = GoogleAPI::Apis::CalendarV3
 
     desc 'schedule', 'Create an event'
     method_option :summary, type: :string, required: true

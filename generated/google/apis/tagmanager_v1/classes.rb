@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module TagmanagerV1
       
       # Represents a Google Tag Manager Account.
       class Account
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The Account ID uniquely identifies the GTM Account.
         # Corresponds to the JSON property `accountId`
@@ -63,7 +63,7 @@ module Google
       
       # Defines the Google Tag Manager Account access permissions.
       class AccountAccess
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of Account permissions. Valid account permissions are read and manage.
         # Corresponds to the JSON property `permission`
@@ -82,7 +82,7 @@ module Google
       
       # Represents a predicate.
       class Condition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of named parameters (key/value), depending on the condition's type.
         # Notes:
@@ -95,7 +95,7 @@ module Google
         # - To negate an operator, include a boolean parameter named negate boolean
         # parameter that is set to true.
         # Corresponds to the JSON property `parameter`
-        # @return [Array<Google::Apis::TagmanagerV1::Parameter>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Parameter>]
         attr_accessor :parameter
       
         # The type of operator for this condition.
@@ -116,7 +116,7 @@ module Google
       
       # Represents a Google Tag Manager Container.
       class Container
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # GTM Account ID.
         # Corresponds to the JSON property `accountId`
@@ -202,7 +202,7 @@ module Google
       
       # Defines the Google Tag Manager Container access permissions.
       class ContainerAccess
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # GTM Container ID.
         # Corresponds to the JSON property `containerId`
@@ -228,7 +228,7 @@ module Google
       
       # Represents a Google Tag Manager Container Version.
       class ContainerVersion
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # GTM Account ID.
         # Corresponds to the JSON property `accountId`
@@ -237,7 +237,7 @@ module Google
       
         # Represents a Google Tag Manager Container.
         # Corresponds to the JSON property `container`
-        # @return [Google::Apis::TagmanagerV1::Container]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Container]
         attr_accessor :container
       
         # GTM Container ID.
@@ -264,12 +264,12 @@ module Google
       
         # The folders in the container that this version was taken from.
         # Corresponds to the JSON property `folder`
-        # @return [Array<Google::Apis::TagmanagerV1::Folder>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Folder>]
         attr_accessor :folder
       
         # The macros in the container that this version was taken from.
         # Corresponds to the JSON property `macro`
-        # @return [Array<Google::Apis::TagmanagerV1::Macro>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Macro>]
         attr_accessor :macro
       
         # Container version display name.
@@ -284,22 +284,22 @@ module Google
       
         # The rules in the container that this version was taken from.
         # Corresponds to the JSON property `rule`
-        # @return [Array<Google::Apis::TagmanagerV1::Rule>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Rule>]
         attr_accessor :rule
       
         # The tags in the container that this version was taken from.
         # Corresponds to the JSON property `tag`
-        # @return [Array<Google::Apis::TagmanagerV1::Tag>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Tag>]
         attr_accessor :tag
       
         # The triggers in the container that this version was taken from.
         # Corresponds to the JSON property `trigger`
-        # @return [Array<Google::Apis::TagmanagerV1::Trigger>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Trigger>]
         attr_accessor :trigger
       
         # The variables in the container that this version was taken from.
         # Corresponds to the JSON property `variable`
-        # @return [Array<Google::Apis::TagmanagerV1::Variable>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Variable>]
         attr_accessor :variable
       
         def initialize(**args)
@@ -327,7 +327,7 @@ module Google
       
       # Represents a Google Tag Manager Container Version Header.
       class ContainerVersionHeader
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # GTM Account ID.
         # Corresponds to the JSON property `accountId`
@@ -401,7 +401,7 @@ module Google
       
       # Options for new container versions.
       class CreateContainerVersionRequestVersionOptions
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the container version to be created.
         # Corresponds to the JSON property `name`
@@ -433,7 +433,7 @@ module Google
       
       # Create container versions response.
       class CreateContainerVersionResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Compiler errors or not.
         # Corresponds to the JSON property `compilerError`
@@ -443,7 +443,7 @@ module Google
       
         # Represents a Google Tag Manager Container Version.
         # Corresponds to the JSON property `containerVersion`
-        # @return [Google::Apis::TagmanagerV1::ContainerVersion]
+        # @return [GoogleAPI::Apis::TagmanagerV1::ContainerVersion]
         attr_accessor :container_version
       
         def initialize(**args)
@@ -461,7 +461,7 @@ module Google
       # delete and update environments of type USER, but can only update the
       # enable_debug and url fields of environments of other types.
       class Environment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # GTM Account ID.
         # Corresponds to the JSON property `accountId`
@@ -550,7 +550,7 @@ module Google
       
       # Represents a Google Tag Manager Folder.
       class Folder
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # GTM Account ID.
         # Corresponds to the JSON property `accountId`
@@ -594,21 +594,21 @@ module Google
       
       # Represents a Google Tag Manager Folder's contents.
       class FolderEntities
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of tags inside the folder.
         # Corresponds to the JSON property `tag`
-        # @return [Array<Google::Apis::TagmanagerV1::Tag>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Tag>]
         attr_accessor :tag
       
         # The list of triggers inside the folder.
         # Corresponds to the JSON property `trigger`
-        # @return [Array<Google::Apis::TagmanagerV1::Trigger>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Trigger>]
         attr_accessor :trigger
       
         # The list of variables inside the folder.
         # Corresponds to the JSON property `variable`
-        # @return [Array<Google::Apis::TagmanagerV1::Variable>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Variable>]
         attr_accessor :variable
       
         def initialize(**args)
@@ -625,11 +625,11 @@ module Google
       
       # List AccountUsers Response.
       class ListAccountUsersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # All GTM AccountUsers of a GTM Account.
         # Corresponds to the JSON property `userAccess`
-        # @return [Array<Google::Apis::TagmanagerV1::UserAccess>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::UserAccess>]
         attr_accessor :user_access
       
         def initialize(**args)
@@ -644,11 +644,11 @@ module Google
       
       # List Accounts Response.
       class ListAccountsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of GTM Accounts that a user has access to.
         # Corresponds to the JSON property `accounts`
-        # @return [Array<Google::Apis::TagmanagerV1::Account>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Account>]
         attr_accessor :accounts
       
         def initialize(**args)
@@ -663,16 +663,16 @@ module Google
       
       # List container versions response.
       class ListContainerVersionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # All versions of a GTM Container.
         # Corresponds to the JSON property `containerVersion`
-        # @return [Array<Google::Apis::TagmanagerV1::ContainerVersion>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::ContainerVersion>]
         attr_accessor :container_version
       
         # All container version headers of a GTM Container.
         # Corresponds to the JSON property `containerVersionHeader`
-        # @return [Array<Google::Apis::TagmanagerV1::ContainerVersionHeader>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::ContainerVersionHeader>]
         attr_accessor :container_version_header
       
         def initialize(**args)
@@ -688,11 +688,11 @@ module Google
       
       # List Containers Response.
       class ListContainersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # All Containers of a GTM Account.
         # Corresponds to the JSON property `containers`
-        # @return [Array<Google::Apis::TagmanagerV1::Container>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Container>]
         attr_accessor :containers
       
         def initialize(**args)
@@ -707,11 +707,11 @@ module Google
       
       # List Environments Response.
       class ListEnvironmentsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # All Environments of a GTM Container.
         # Corresponds to the JSON property `environments`
-        # @return [Array<Google::Apis::TagmanagerV1::Environment>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Environment>]
         attr_accessor :environments
       
         def initialize(**args)
@@ -726,11 +726,11 @@ module Google
       
       # List Folders Response.
       class ListFoldersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # All GTM Folders of a GTM Container.
         # Corresponds to the JSON property `folders`
-        # @return [Array<Google::Apis::TagmanagerV1::Folder>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Folder>]
         attr_accessor :folders
       
         def initialize(**args)
@@ -745,11 +745,11 @@ module Google
       
       # List Tags Response.
       class ListTagsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # All GTM Tags of a GTM Container.
         # Corresponds to the JSON property `tags`
-        # @return [Array<Google::Apis::TagmanagerV1::Tag>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Tag>]
         attr_accessor :tags
       
         def initialize(**args)
@@ -764,11 +764,11 @@ module Google
       
       # List triggers response.
       class ListTriggersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # All GTM Triggers of a GTM Container.
         # Corresponds to the JSON property `triggers`
-        # @return [Array<Google::Apis::TagmanagerV1::Trigger>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Trigger>]
         attr_accessor :triggers
       
         def initialize(**args)
@@ -783,11 +783,11 @@ module Google
       
       # List Variables Response.
       class ListVariablesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # All GTM Variables of a GTM Container.
         # Corresponds to the JSON property `variables`
-        # @return [Array<Google::Apis::TagmanagerV1::Variable>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Variable>]
         attr_accessor :variables
       
         def initialize(**args)
@@ -802,7 +802,7 @@ module Google
       
       # Represents a Google Tag Manager Macro.
       class Macro
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # GTM Account ID.
         # Corresponds to the JSON property `accountId`
@@ -851,7 +851,7 @@ module Google
       
         # The macro's parameters.
         # Corresponds to the JSON property `parameter`
-        # @return [Array<Google::Apis::TagmanagerV1::Parameter>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Parameter>]
         attr_accessor :parameter
       
         # Parent folder id.
@@ -898,7 +898,7 @@ module Google
       
       # Represents a Google Tag Manager Parameter.
       class Parameter
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The named key that uniquely identifies a parameter. Required for top-level
         # parameters, as well as map values. Ignored for list values.
@@ -908,12 +908,12 @@ module Google
       
         # This list parameter's parameters (keys will be ignored).
         # Corresponds to the JSON property `list`
-        # @return [Array<Google::Apis::TagmanagerV1::Parameter>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Parameter>]
         attr_accessor :list
       
         # This map parameter's parameters (must have keys; keys must be unique).
         # Corresponds to the JSON property `map`
-        # @return [Array<Google::Apis::TagmanagerV1::Parameter>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Parameter>]
         attr_accessor :map
       
         # The parameter type. Valid values are:
@@ -949,7 +949,7 @@ module Google
       
       # Publish container version response.
       class PublishContainerVersionResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Compiler errors or not.
         # Corresponds to the JSON property `compilerError`
@@ -959,7 +959,7 @@ module Google
       
         # Represents a Google Tag Manager Container Version.
         # Corresponds to the JSON property `containerVersion`
-        # @return [Google::Apis::TagmanagerV1::ContainerVersion]
+        # @return [GoogleAPI::Apis::TagmanagerV1::ContainerVersion]
         attr_accessor :container_version
       
         def initialize(**args)
@@ -975,7 +975,7 @@ module Google
       
       # Represents a Google Tag Manager Rule.
       class Rule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # GTM Account ID.
         # Corresponds to the JSON property `accountId`
@@ -984,7 +984,7 @@ module Google
       
         # The list of conditions that make up this rule (implicit AND between them).
         # Corresponds to the JSON property `condition`
-        # @return [Array<Google::Apis::TagmanagerV1::Condition>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Condition>]
         attr_accessor :condition
       
         # GTM Container ID.
@@ -1031,7 +1031,7 @@ module Google
       
       # 
       class SetupTag
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If true, fire the main tag if and only if the setup tag fires successfully. If
         # false, fire the main tag regardless of setup tag firing status.
@@ -1058,7 +1058,7 @@ module Google
       
       # Represents a Google Tag Manager Tag.
       class Tag
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # GTM Account ID.
         # Corresponds to the JSON property `accountId`
@@ -1119,7 +1119,7 @@ module Google
       
         # The tag's parameters.
         # Corresponds to the JSON property `parameter`
-        # @return [Array<Google::Apis::TagmanagerV1::Parameter>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Parameter>]
         attr_accessor :parameter
       
         # Parent folder id.
@@ -1129,7 +1129,7 @@ module Google
       
         # Represents a Google Tag Manager Parameter.
         # Corresponds to the JSON property `priority`
-        # @return [Google::Apis::TagmanagerV1::Parameter]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Parameter]
         attr_accessor :priority
       
         # The end timestamp in milliseconds to schedule a tag.
@@ -1144,7 +1144,7 @@ module Google
       
         # The list of setup tags. Currently we only allow one.
         # Corresponds to the JSON property `setupTag`
-        # @return [Array<Google::Apis::TagmanagerV1::SetupTag>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::SetupTag>]
         attr_accessor :setup_tag
       
         # Option to fire this tag.
@@ -1159,7 +1159,7 @@ module Google
       
         # The list of teardown tags. Currently we only allow one.
         # Corresponds to the JSON property `teardownTag`
-        # @return [Array<Google::Apis::TagmanagerV1::TeardownTag>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::TeardownTag>]
         attr_accessor :teardown_tag
       
         # GTM Tag Type.
@@ -1198,7 +1198,7 @@ module Google
       
       # 
       class TeardownTag
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If true, fire the teardown tag if and only if the main tag fires successfully.
         # If false, fire the teardown tag regardless of main tag firing status.
@@ -1225,7 +1225,7 @@ module Google
       
       # Represents a Google Tag Manager Trigger
       class Trigger
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # GTM Account ID.
         # Corresponds to the JSON property `accountId`
@@ -1234,12 +1234,12 @@ module Google
       
         # Used in the case of auto event tracking.
         # Corresponds to the JSON property `autoEventFilter`
-        # @return [Array<Google::Apis::TagmanagerV1::Condition>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Condition>]
         attr_accessor :auto_event_filter
       
         # Represents a Google Tag Manager Parameter.
         # Corresponds to the JSON property `checkValidation`
-        # @return [Google::Apis::TagmanagerV1::Parameter]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Parameter]
         attr_accessor :check_validation
       
         # GTM Container ID.
@@ -1249,22 +1249,22 @@ module Google
       
         # Used in the case of custom event, which is fired iff all Conditions are true.
         # Corresponds to the JSON property `customEventFilter`
-        # @return [Array<Google::Apis::TagmanagerV1::Condition>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Condition>]
         attr_accessor :custom_event_filter
       
         # Represents a Google Tag Manager Parameter.
         # Corresponds to the JSON property `enableAllVideos`
-        # @return [Google::Apis::TagmanagerV1::Parameter]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Parameter]
         attr_accessor :enable_all_videos
       
         # Represents a Google Tag Manager Parameter.
         # Corresponds to the JSON property `eventName`
-        # @return [Google::Apis::TagmanagerV1::Parameter]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Parameter]
         attr_accessor :event_name
       
         # The trigger will only fire iff all Conditions are true.
         # Corresponds to the JSON property `filter`
-        # @return [Array<Google::Apis::TagmanagerV1::Condition>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Condition>]
         attr_accessor :filter
       
         # The fingerprint of the GTM Trigger as computed at storage time. This value is
@@ -1275,12 +1275,12 @@ module Google
       
         # Represents a Google Tag Manager Parameter.
         # Corresponds to the JSON property `interval`
-        # @return [Google::Apis::TagmanagerV1::Parameter]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Parameter]
         attr_accessor :interval
       
         # Represents a Google Tag Manager Parameter.
         # Corresponds to the JSON property `limit`
-        # @return [Google::Apis::TagmanagerV1::Parameter]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Parameter]
         attr_accessor :limit
       
         # Trigger display name.
@@ -1305,22 +1305,22 @@ module Google
       
         # Represents a Google Tag Manager Parameter.
         # Corresponds to the JSON property `uniqueTriggerId`
-        # @return [Google::Apis::TagmanagerV1::Parameter]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Parameter]
         attr_accessor :unique_trigger_id
       
         # Represents a Google Tag Manager Parameter.
         # Corresponds to the JSON property `videoPercentageList`
-        # @return [Google::Apis::TagmanagerV1::Parameter]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Parameter]
         attr_accessor :video_percentage_list
       
         # Represents a Google Tag Manager Parameter.
         # Corresponds to the JSON property `waitForTags`
-        # @return [Google::Apis::TagmanagerV1::Parameter]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Parameter]
         attr_accessor :wait_for_tags
       
         # Represents a Google Tag Manager Parameter.
         # Corresponds to the JSON property `waitForTagsTimeout`
-        # @return [Google::Apis::TagmanagerV1::Parameter]
+        # @return [GoogleAPI::Apis::TagmanagerV1::Parameter]
         attr_accessor :wait_for_tags_timeout
       
         def initialize(**args)
@@ -1353,11 +1353,11 @@ module Google
       
       # Represents a user's permissions to an account and its container.
       class UserAccess
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Defines the Google Tag Manager Account access permissions.
         # Corresponds to the JSON property `accountAccess`
-        # @return [Google::Apis::TagmanagerV1::AccountAccess]
+        # @return [GoogleAPI::Apis::TagmanagerV1::AccountAccess]
         attr_accessor :account_access
       
         # GTM Account ID.
@@ -1367,7 +1367,7 @@ module Google
       
         # GTM Container access permissions.
         # Corresponds to the JSON property `containerAccess`
-        # @return [Array<Google::Apis::TagmanagerV1::ContainerAccess>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::ContainerAccess>]
         attr_accessor :container_access
       
         # User's email address.
@@ -1396,7 +1396,7 @@ module Google
       
       # Represents a Google Tag Manager Variable.
       class Variable
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # GTM Account ID.
         # Corresponds to the JSON property `accountId`
@@ -1440,7 +1440,7 @@ module Google
       
         # The variable's parameters.
         # Corresponds to the JSON property `parameter`
-        # @return [Array<Google::Apis::TagmanagerV1::Parameter>]
+        # @return [Array<GoogleAPI::Apis::TagmanagerV1::Parameter>]
         attr_accessor :parameter
       
         # Parent folder id.

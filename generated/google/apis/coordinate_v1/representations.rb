@@ -18,121 +18,121 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CoordinateV1
       
       class CustomField
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class CustomFieldDef
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListCustomFieldDefResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class CustomFields
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class EnumItemDef
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Job
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class JobChange
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListJobResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class JobState
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Location
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListLocationResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class LocationRecord
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Schedule
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Team
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListTeamResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TokenPagination
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Worker
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListWorkerResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class CustomField
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :custom_field_id, as: 'customFieldId'
           property :kind, as: 'kind'
           property :value, as: 'value'
@@ -141,9 +141,9 @@ module Google
       
       class CustomFieldDef
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :enabled, as: 'enabled'
-          collection :enumitems, as: 'enumitems', class: Google::Apis::CoordinateV1::EnumItemDef, decorator: Google::Apis::CoordinateV1::EnumItemDef::Representation
+          collection :enumitems, as: 'enumitems', class: GoogleAPI::Apis::CoordinateV1::EnumItemDef, decorator: GoogleAPI::Apis::CoordinateV1::EnumItemDef::Representation
       
           property :id, as: 'id'
           property :kind, as: 'kind'
@@ -155,8 +155,8 @@ module Google
       
       class ListCustomFieldDefResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :items, as: 'items', class: Google::Apis::CoordinateV1::CustomFieldDef, decorator: Google::Apis::CoordinateV1::CustomFieldDef::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :items, as: 'items', class: GoogleAPI::Apis::CoordinateV1::CustomFieldDef, decorator: GoogleAPI::Apis::CoordinateV1::CustomFieldDef::Representation
       
           property :kind, as: 'kind'
         end
@@ -164,8 +164,8 @@ module Google
       
       class CustomFields
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :custom_field, as: 'customField', class: Google::Apis::CoordinateV1::CustomField, decorator: Google::Apis::CoordinateV1::CustomField::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :custom_field, as: 'customField', class: GoogleAPI::Apis::CoordinateV1::CustomField, decorator: GoogleAPI::Apis::CoordinateV1::CustomField::Representation
       
           property :kind, as: 'kind'
         end
@@ -173,7 +173,7 @@ module Google
       
       class EnumItemDef
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :active, as: 'active'
           property :kind, as: 'kind'
           property :value, as: 'value'
@@ -182,21 +182,21 @@ module Google
       
       class Job
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :job_change, as: 'jobChange', class: Google::Apis::CoordinateV1::JobChange, decorator: Google::Apis::CoordinateV1::JobChange::Representation
+          collection :job_change, as: 'jobChange', class: GoogleAPI::Apis::CoordinateV1::JobChange, decorator: GoogleAPI::Apis::CoordinateV1::JobChange::Representation
       
           property :kind, as: 'kind'
-          property :state, as: 'state', class: Google::Apis::CoordinateV1::JobState, decorator: Google::Apis::CoordinateV1::JobState::Representation
+          property :state, as: 'state', class: GoogleAPI::Apis::CoordinateV1::JobState, decorator: GoogleAPI::Apis::CoordinateV1::JobState::Representation
       
         end
       end
       
       class JobChange
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
-          property :state, as: 'state', class: Google::Apis::CoordinateV1::JobState, decorator: Google::Apis::CoordinateV1::JobState::Representation
+          property :state, as: 'state', class: GoogleAPI::Apis::CoordinateV1::JobState, decorator: GoogleAPI::Apis::CoordinateV1::JobState::Representation
       
           property :timestamp, as: 'timestamp'
         end
@@ -204,8 +204,8 @@ module Google
       
       class ListJobResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :items, as: 'items', class: Google::Apis::CoordinateV1::Job, decorator: Google::Apis::CoordinateV1::Job::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :items, as: 'items', class: GoogleAPI::Apis::CoordinateV1::Job, decorator: GoogleAPI::Apis::CoordinateV1::Job::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -214,14 +214,14 @@ module Google
       
       class JobState
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :assignee, as: 'assignee'
-          property :custom_fields, as: 'customFields', class: Google::Apis::CoordinateV1::CustomFields, decorator: Google::Apis::CoordinateV1::CustomFields::Representation
+          property :custom_fields, as: 'customFields', class: GoogleAPI::Apis::CoordinateV1::CustomFields, decorator: GoogleAPI::Apis::CoordinateV1::CustomFields::Representation
       
           property :customer_name, as: 'customerName'
           property :customer_phone_number, as: 'customerPhoneNumber'
           property :kind, as: 'kind'
-          property :location, as: 'location', class: Google::Apis::CoordinateV1::Location, decorator: Google::Apis::CoordinateV1::Location::Representation
+          property :location, as: 'location', class: GoogleAPI::Apis::CoordinateV1::Location, decorator: GoogleAPI::Apis::CoordinateV1::Location::Representation
       
           collection :note, as: 'note'
           property :progress, as: 'progress'
@@ -231,7 +231,7 @@ module Google
       
       class Location
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :address_line, as: 'addressLine'
           property :kind, as: 'kind'
           property :lat, as: 'lat'
@@ -241,19 +241,19 @@ module Google
       
       class ListLocationResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :items, as: 'items', class: Google::Apis::CoordinateV1::LocationRecord, decorator: Google::Apis::CoordinateV1::LocationRecord::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :items, as: 'items', class: GoogleAPI::Apis::CoordinateV1::LocationRecord, decorator: GoogleAPI::Apis::CoordinateV1::LocationRecord::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
-          property :token_pagination, as: 'tokenPagination', class: Google::Apis::CoordinateV1::TokenPagination, decorator: Google::Apis::CoordinateV1::TokenPagination::Representation
+          property :token_pagination, as: 'tokenPagination', class: GoogleAPI::Apis::CoordinateV1::TokenPagination, decorator: GoogleAPI::Apis::CoordinateV1::TokenPagination::Representation
       
         end
       end
       
       class LocationRecord
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :collection_time, as: 'collectionTime'
           property :confidence_radius, as: 'confidenceRadius'
           property :kind, as: 'kind'
@@ -264,7 +264,7 @@ module Google
       
       class Schedule
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :all_day, as: 'allDay'
           property :duration, as: 'duration'
           property :end_time, as: 'endTime'
@@ -275,7 +275,7 @@ module Google
       
       class Team
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
           property :kind, as: 'kind'
           property :name, as: 'name'
@@ -284,8 +284,8 @@ module Google
       
       class ListTeamResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :items, as: 'items', class: Google::Apis::CoordinateV1::Team, decorator: Google::Apis::CoordinateV1::Team::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :items, as: 'items', class: GoogleAPI::Apis::CoordinateV1::Team, decorator: GoogleAPI::Apis::CoordinateV1::Team::Representation
       
           property :kind, as: 'kind'
         end
@@ -293,7 +293,7 @@ module Google
       
       class TokenPagination
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
           property :previous_page_token, as: 'previousPageToken'
@@ -302,7 +302,7 @@ module Google
       
       class Worker
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
           property :kind, as: 'kind'
         end
@@ -310,8 +310,8 @@ module Google
       
       class ListWorkerResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :items, as: 'items', class: Google::Apis::CoordinateV1::Worker, decorator: Google::Apis::CoordinateV1::Worker::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :items, as: 'items', class: GoogleAPI::Apis::CoordinateV1::Worker, decorator: GoogleAPI::Apis::CoordinateV1::Worker::Representation
       
           property :kind, as: 'kind'
         end

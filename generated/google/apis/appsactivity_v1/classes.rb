@@ -18,7 +18,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AppsactivityV1
       
@@ -26,16 +26,16 @@ module Google
       # list of individual events and a combined view of the common fields among all
       # events.
       class Activity
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Represents the changes associated with an action taken by a user.
         # Corresponds to the JSON property `combinedEvent`
-        # @return [Google::Apis::AppsactivityV1::Event]
+        # @return [GoogleAPI::Apis::AppsactivityV1::Event]
         attr_accessor :combined_event
       
         # A list of all the Events that make up the Activity.
         # Corresponds to the JSON property `singleEvents`
-        # @return [Array<Google::Apis::AppsactivityV1::Event>]
+        # @return [Array<GoogleAPI::Apis::AppsactivityV1::Event>]
         attr_accessor :single_events
       
         def initialize(**args)
@@ -51,7 +51,7 @@ module Google
       
       # Represents the changes associated with an action taken by a user.
       class Event
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Additional event types. Some events may have multiple types when multiple
         # actions are part of a single event. For example, creating a document, renaming
@@ -74,13 +74,13 @@ module Google
         # Contains information about changes in an object's parents as a result of a
         # move type event.
         # Corresponds to the JSON property `move`
-        # @return [Google::Apis::AppsactivityV1::Move]
+        # @return [GoogleAPI::Apis::AppsactivityV1::Move]
         attr_accessor :move
       
         # Extra information for permissionChange type events, such as the user or group
         # the new permission applies to.
         # Corresponds to the JSON property `permissionChanges`
-        # @return [Array<Google::Apis::AppsactivityV1::PermissionChange>]
+        # @return [Array<GoogleAPI::Apis::AppsactivityV1::PermissionChange>]
         attr_accessor :permission_changes
       
         # The main type of event that occurred.
@@ -90,17 +90,17 @@ module Google
       
         # Contains information about a renametype event.
         # Corresponds to the JSON property `rename`
-        # @return [Google::Apis::AppsactivityV1::Rename]
+        # @return [GoogleAPI::Apis::AppsactivityV1::Rename]
         attr_accessor :rename
       
         # Information about the object modified by the event.
         # Corresponds to the JSON property `target`
-        # @return [Google::Apis::AppsactivityV1::Target]
+        # @return [GoogleAPI::Apis::AppsactivityV1::Target]
         attr_accessor :target
       
         # A representation of a user.
         # Corresponds to the JSON property `user`
-        # @return [Google::Apis::AppsactivityV1::User]
+        # @return [GoogleAPI::Apis::AppsactivityV1::User]
         attr_accessor :user
       
         def initialize(**args)
@@ -124,11 +124,11 @@ module Google
       # The response from the list request. Contains a list of activities and a token
       # to retrieve the next page of results.
       class ListActivitiesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of activities.
         # Corresponds to the JSON property `activities`
-        # @return [Array<Google::Apis::AppsactivityV1::Activity>]
+        # @return [Array<GoogleAPI::Apis::AppsactivityV1::Activity>]
         attr_accessor :activities
       
         # Token for the next page of results.
@@ -150,16 +150,16 @@ module Google
       # Contains information about changes in an object's parents as a result of a
       # move type event.
       class Move
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The added parent(s).
         # Corresponds to the JSON property `addedParents`
-        # @return [Array<Google::Apis::AppsactivityV1::Parent>]
+        # @return [Array<GoogleAPI::Apis::AppsactivityV1::Parent>]
         attr_accessor :added_parents
       
         # The removed parent(s).
         # Corresponds to the JSON property `removedParents`
-        # @return [Array<Google::Apis::AppsactivityV1::Parent>]
+        # @return [Array<GoogleAPI::Apis::AppsactivityV1::Parent>]
         attr_accessor :removed_parents
       
         def initialize(**args)
@@ -176,7 +176,7 @@ module Google
       # Contains information about a parent object. For example, a folder in Drive is
       # a parent for all files within it.
       class Parent
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The parent's ID.
         # Corresponds to the JSON property `id`
@@ -210,7 +210,7 @@ module Google
       # regards to a Google Drive object. This is a subset of the fields contained in
       # a corresponding Drive Permissions object.
       class Permission
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the user or group the permission applies to.
         # Corresponds to the JSON property `name`
@@ -236,7 +236,7 @@ module Google
       
         # A representation of a user.
         # Corresponds to the JSON property `user`
-        # @return [Google::Apis::AppsactivityV1::User]
+        # @return [GoogleAPI::Apis::AppsactivityV1::User]
         attr_accessor :user
       
         # Whether the permission requires a link to the file.
@@ -263,16 +263,16 @@ module Google
       # Contains information about a Drive object's permissions that changed as a
       # result of a permissionChange type event.
       class PermissionChange
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Lists all Permission objects added.
         # Corresponds to the JSON property `addedPermissions`
-        # @return [Array<Google::Apis::AppsactivityV1::Permission>]
+        # @return [Array<GoogleAPI::Apis::AppsactivityV1::Permission>]
         attr_accessor :added_permissions
       
         # Lists all Permission objects removed.
         # Corresponds to the JSON property `removedPermissions`
-        # @return [Array<Google::Apis::AppsactivityV1::Permission>]
+        # @return [Array<GoogleAPI::Apis::AppsactivityV1::Permission>]
         attr_accessor :removed_permissions
       
         def initialize(**args)
@@ -288,7 +288,7 @@ module Google
       
       # Photo information for a user.
       class Photo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The URL of the photo.
         # Corresponds to the JSON property `url`
@@ -307,7 +307,7 @@ module Google
       
       # Contains information about a renametype event.
       class Rename
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The new title.
         # Corresponds to the JSON property `newTitle`
@@ -332,7 +332,7 @@ module Google
       
       # Information about the object modified by the event.
       class Target
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the target. For example, in Google Drive, this is the file or folder
         # ID.
@@ -365,7 +365,7 @@ module Google
       
       # A representation of a user.
       class User
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A boolean which indicates whether the specified User was deleted. If true,
         # name, photo and permission_id will be omitted.
@@ -388,7 +388,7 @@ module Google
       
         # Photo information for a user.
         # Corresponds to the JSON property `photo`
-        # @return [Google::Apis::AppsactivityV1::Photo]
+        # @return [GoogleAPI::Apis::AppsactivityV1::Photo]
         attr_accessor :photo
       
         def initialize(**args)

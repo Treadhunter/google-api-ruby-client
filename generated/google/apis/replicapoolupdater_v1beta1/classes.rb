@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ReplicapoolupdaterV1beta1
       
       # Update of a single instance.
       class InstanceUpdate
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Errors that occurred during the instance update.
         # Corresponds to the JSON property `error`
-        # @return [Google::Apis::ReplicapoolupdaterV1beta1::InstanceUpdate::Error]
+        # @return [GoogleAPI::Apis::ReplicapoolupdaterV1beta1::InstanceUpdate::Error]
         attr_accessor :error
       
         # Fully-qualified URL of the instance being updated.
@@ -64,11 +64,11 @@ module Google
         
         # Errors that occurred during the instance update.
         class Error
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] The array of errors encountered while processing this operation.
           # Corresponds to the JSON property `errors`
-          # @return [Array<Google::Apis::ReplicapoolupdaterV1beta1::InstanceUpdate::Error::Error>]
+          # @return [Array<GoogleAPI::Apis::ReplicapoolupdaterV1beta1::InstanceUpdate::Error::Error>]
           attr_accessor :errors
         
           def initialize(**args)
@@ -82,7 +82,7 @@ module Google
           
           # 
           class Error
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] The error type identifier for this error.
             # Corresponds to the JSON property `code`
@@ -116,11 +116,11 @@ module Google
       
       # Response returned by ListInstanceUpdates method.
       class InstanceUpdateList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Collection of requested instance updates.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ReplicapoolupdaterV1beta1::InstanceUpdate>]
+        # @return [Array<GoogleAPI::Apis::ReplicapoolupdaterV1beta1::InstanceUpdate>]
         attr_accessor :items
       
         # [Output Only] Type of the resource.
@@ -153,7 +153,7 @@ module Google
       
       # An operation resource, used to manage asynchronous API requests.
       class Operation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `clientOperationId`
@@ -173,7 +173,7 @@ module Google
         # [Output Only] If errors occurred during processing of this operation, this
         # field will be populated.
         # Corresponds to the JSON property `error`
-        # @return [Google::Apis::ReplicapoolupdaterV1beta1::Operation::Error]
+        # @return [GoogleAPI::Apis::ReplicapoolupdaterV1beta1::Operation::Error]
         attr_accessor :error
       
         # 
@@ -264,7 +264,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `warnings`
-        # @return [Array<Google::Apis::ReplicapoolupdaterV1beta1::Operation::Warning>]
+        # @return [Array<GoogleAPI::Apis::ReplicapoolupdaterV1beta1::Operation::Warning>]
         attr_accessor :warnings
       
         # [Output Only] URL of the zone where the operation resides.
@@ -305,11 +305,11 @@ module Google
         # [Output Only] If errors occurred during processing of this operation, this
         # field will be populated.
         class Error
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] The array of errors encountered while processing this operation.
           # Corresponds to the JSON property `errors`
-          # @return [Array<Google::Apis::ReplicapoolupdaterV1beta1::Operation::Error::Error>]
+          # @return [Array<GoogleAPI::Apis::ReplicapoolupdaterV1beta1::Operation::Error::Error>]
           attr_accessor :errors
         
           def initialize(**args)
@@ -323,7 +323,7 @@ module Google
           
           # 
           class Error
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] The error type identifier for this error.
             # Corresponds to the JSON property `code`
@@ -356,7 +356,7 @@ module Google
         
         # 
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output only] The warning type identifier for this warning.
           # Corresponds to the JSON property `code`
@@ -365,7 +365,7 @@ module Google
         
           # [Output only] Metadata for this warning in key:value format.
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ReplicapoolupdaterV1beta1::Operation::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ReplicapoolupdaterV1beta1::Operation::Warning::Datum>]
           attr_accessor :data
         
           # [Output only] Optional human-readable details for this warning.
@@ -386,7 +386,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] Metadata key for this warning.
             # Corresponds to the JSON property `key`
@@ -413,7 +413,7 @@ module Google
       
       # Contains a list of Operation resources.
       class OperationList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Unique identifier for the resource; defined by the server.
         # Corresponds to the JSON property `id`
@@ -422,7 +422,7 @@ module Google
       
         # [Output Only] The Operation resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ReplicapoolupdaterV1beta1::Operation>]
+        # @return [Array<GoogleAPI::Apis::ReplicapoolupdaterV1beta1::Operation>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always replicapoolupdater#operationList for
@@ -458,7 +458,7 @@ module Google
       # The following represents a resource describing a single update (rollout) of a
       # group of instances to the given template.
       class RollingUpdate
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Specifies the action to take for each instance within the instance group. This
         # can be RECREATE which will recreate each instance and is only available for
@@ -482,7 +482,7 @@ module Google
       
         # [Output Only] Errors that occurred during the rolling update.
         # Corresponds to the JSON property `error`
-        # @return [Google::Apis::ReplicapoolupdaterV1beta1::RollingUpdate::Error]
+        # @return [GoogleAPI::Apis::ReplicapoolupdaterV1beta1::RollingUpdate::Error]
         attr_accessor :error
       
         # [Output Only] Unique identifier for the resource; defined by the server.
@@ -520,7 +520,7 @@ module Google
       
         # Parameters of the update process.
         # Corresponds to the JSON property `policy`
-        # @return [Google::Apis::ReplicapoolupdaterV1beta1::RollingUpdate::Policy]
+        # @return [GoogleAPI::Apis::ReplicapoolupdaterV1beta1::RollingUpdate::Policy]
         attr_accessor :policy
       
         # [Output Only] An optional progress indicator that ranges from 0 to 100. There
@@ -587,11 +587,11 @@ module Google
         
         # [Output Only] Errors that occurred during the rolling update.
         class Error
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] The array of errors encountered while processing this operation.
           # Corresponds to the JSON property `errors`
-          # @return [Array<Google::Apis::ReplicapoolupdaterV1beta1::RollingUpdate::Error::Error>]
+          # @return [Array<GoogleAPI::Apis::ReplicapoolupdaterV1beta1::RollingUpdate::Error::Error>]
           attr_accessor :errors
         
           def initialize(**args)
@@ -605,7 +605,7 @@ module Google
           
           # 
           class Error
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] The error type identifier for this error.
             # Corresponds to the JSON property `code`
@@ -638,7 +638,7 @@ module Google
         
         # Parameters of the update process.
         class Policy
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Number of instances to update before the updater pauses the rolling update.
           # Corresponds to the JSON property `autoPauseAfterInstances`
@@ -694,11 +694,11 @@ module Google
       
       # Response returned by List method.
       class RollingUpdateList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Collection of requested updates.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ReplicapoolupdaterV1beta1::RollingUpdate>]
+        # @return [Array<GoogleAPI::Apis::ReplicapoolupdaterV1beta1::RollingUpdate>]
         attr_accessor :items
       
         # [Output Only] Type of the resource.

@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module TasksV1
       
       # 
       class Task
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Completion date of the task (as a RFC 3339 timestamp). This field is omitted
         # if the task has not been completed.
@@ -68,7 +68,7 @@ module Google
       
         # Collection of links. This collection is read-only.
         # Corresponds to the JSON property `links`
-        # @return [Array<Google::Apis::TasksV1::Task::Link>]
+        # @return [Array<GoogleAPI::Apis::TasksV1::Task::Link>]
         attr_accessor :links
       
         # Notes describing the task. Optional.
@@ -138,7 +138,7 @@ module Google
         
         # 
         class Link
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The description. In HTML speak: Everything between <a> and </a>.
           # Corresponds to the JSON property `description`
@@ -170,7 +170,7 @@ module Google
       
       # 
       class TaskList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -220,7 +220,7 @@ module Google
       
       # 
       class TaskLists
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -229,7 +229,7 @@ module Google
       
         # Collection of task lists.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::TasksV1::TaskList>]
+        # @return [Array<GoogleAPI::Apis::TasksV1::TaskList>]
         attr_accessor :items
       
         # Type of the resource. This is always "tasks#taskLists".
@@ -257,7 +257,7 @@ module Google
       
       # 
       class Tasks
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -266,7 +266,7 @@ module Google
       
         # Collection of tasks.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::TasksV1::Task>]
+        # @return [Array<GoogleAPI::Apis::TasksV1::Task>]
         attr_accessor :items
       
         # Type of the resource. This is always "tasks#tasks".

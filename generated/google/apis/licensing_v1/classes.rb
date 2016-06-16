@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module LicensingV1
       
       # Template for LiscenseAssignment Resource
       class LicenseAssignment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etags`
@@ -73,7 +73,7 @@ module Google
       
       # Template for LicenseAssignment Insert request
       class LicenseAssignmentInsert
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Email id of the user
         # Corresponds to the JSON property `userId`
@@ -92,7 +92,7 @@ module Google
       
       # LicesnseAssignment List for a given product/sku for a customer.
       class LicenseAssignmentList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -101,7 +101,7 @@ module Google
       
         # The LicenseAssignments in this page of results.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::LicensingV1::LicenseAssignment>]
+        # @return [Array<GoogleAPI::Apis::LicensingV1::LicenseAssignment>]
         attr_accessor :items
       
         # Identifies the resource as a collection of LicenseAssignments.

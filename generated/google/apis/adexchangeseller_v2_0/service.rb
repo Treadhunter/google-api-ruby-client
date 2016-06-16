@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AdexchangesellerV2_0
       # Ad Exchange Seller API
@@ -28,11 +28,11 @@ module Google
       # @example
       #    require 'google/apis/adexchangeseller_v2_0'
       #
-      #    Adexchangeseller = Google::Apis::AdexchangesellerV2_0 # Alias the module
+      #    Adexchangeseller = GoogleAPI::Apis::AdexchangesellerV2_0 # Alias the module
       #    service = Adexchangeseller::AdExchangeSellerService.new
       #
       # @see https://developers.google.com/ad-exchange/seller-rest/
-      class AdExchangeSellerService < Google::Apis::Core::BaseService
+      class AdExchangeSellerService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -65,22 +65,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdexchangesellerV2_0::Account] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdexchangesellerV2_0::Account] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdexchangesellerV2_0::Account]
+        # @return [GoogleAPI::Apis::AdexchangesellerV2_0::Account]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_account(account_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}', options)
-          command.response_representation = Google::Apis::AdexchangesellerV2_0::Account::Representation
-          command.response_class = Google::Apis::AdexchangesellerV2_0::Account
+          command.response_representation = GoogleAPI::Apis::AdexchangesellerV2_0::Account::Representation
+          command.response_class = GoogleAPI::Apis::AdexchangesellerV2_0::Account
           command.params['accountId'] = account_id unless account_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -103,22 +103,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdexchangesellerV2_0::Accounts] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdexchangesellerV2_0::Accounts] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdexchangesellerV2_0::Accounts]
+        # @return [GoogleAPI::Apis::AdexchangesellerV2_0::Accounts]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_accounts(max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts', options)
-          command.response_representation = Google::Apis::AdexchangesellerV2_0::Accounts::Representation
-          command.response_class = Google::Apis::AdexchangesellerV2_0::Accounts
+          command.response_representation = GoogleAPI::Apis::AdexchangesellerV2_0::Accounts::Representation
+          command.response_class = GoogleAPI::Apis::AdexchangesellerV2_0::Accounts
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -145,22 +145,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdexchangesellerV2_0::AdClients] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdexchangesellerV2_0::AdClients] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdexchangesellerV2_0::AdClients]
+        # @return [GoogleAPI::Apis::AdexchangesellerV2_0::AdClients]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_account_ad_clients(account_id, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/adclients', options)
-          command.response_representation = Google::Apis::AdexchangesellerV2_0::AdClients::Representation
-          command.response_class = Google::Apis::AdexchangesellerV2_0::AdClients
+          command.response_representation = GoogleAPI::Apis::AdexchangesellerV2_0::AdClients::Representation
+          command.response_class = GoogleAPI::Apis::AdexchangesellerV2_0::AdClients
           command.params['accountId'] = account_id unless account_id.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -186,22 +186,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdexchangesellerV2_0::Alerts] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdexchangesellerV2_0::Alerts] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdexchangesellerV2_0::Alerts]
+        # @return [GoogleAPI::Apis::AdexchangesellerV2_0::Alerts]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_account_alerts(account_id, locale: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/alerts', options)
-          command.response_representation = Google::Apis::AdexchangesellerV2_0::Alerts::Representation
-          command.response_class = Google::Apis::AdexchangesellerV2_0::Alerts
+          command.response_representation = GoogleAPI::Apis::AdexchangesellerV2_0::Alerts::Representation
+          command.response_class = GoogleAPI::Apis::AdexchangesellerV2_0::Alerts
           command.params['accountId'] = account_id unless account_id.nil?
           command.query['locale'] = locale unless locale.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -226,22 +226,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdexchangesellerV2_0::CustomChannel] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdexchangesellerV2_0::CustomChannel] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdexchangesellerV2_0::CustomChannel]
+        # @return [GoogleAPI::Apis::AdexchangesellerV2_0::CustomChannel]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_account_custom_channel(account_id, ad_client_id, custom_channel_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/adclients/{adClientId}/customchannels/{customChannelId}', options)
-          command.response_representation = Google::Apis::AdexchangesellerV2_0::CustomChannel::Representation
-          command.response_class = Google::Apis::AdexchangesellerV2_0::CustomChannel
+          command.response_representation = GoogleAPI::Apis::AdexchangesellerV2_0::CustomChannel::Representation
+          command.response_class = GoogleAPI::Apis::AdexchangesellerV2_0::CustomChannel
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.params['customChannelId'] = custom_channel_id unless custom_channel_id.nil?
@@ -273,22 +273,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdexchangesellerV2_0::CustomChannels] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdexchangesellerV2_0::CustomChannels] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdexchangesellerV2_0::CustomChannels]
+        # @return [GoogleAPI::Apis::AdexchangesellerV2_0::CustomChannels]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_account_custom_channels(account_id, ad_client_id, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/adclients/{adClientId}/customchannels', options)
-          command.response_representation = Google::Apis::AdexchangesellerV2_0::CustomChannels::Representation
-          command.response_class = Google::Apis::AdexchangesellerV2_0::CustomChannels
+          command.response_representation = GoogleAPI::Apis::AdexchangesellerV2_0::CustomChannels::Representation
+          command.response_class = GoogleAPI::Apis::AdexchangesellerV2_0::CustomChannels
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -311,22 +311,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdexchangesellerV2_0::Metadata] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdexchangesellerV2_0::Metadata] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdexchangesellerV2_0::Metadata]
+        # @return [GoogleAPI::Apis::AdexchangesellerV2_0::Metadata]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_account_metadata_dimensions(account_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/metadata/dimensions', options)
-          command.response_representation = Google::Apis::AdexchangesellerV2_0::Metadata::Representation
-          command.response_class = Google::Apis::AdexchangesellerV2_0::Metadata
+          command.response_representation = GoogleAPI::Apis::AdexchangesellerV2_0::Metadata::Representation
+          command.response_class = GoogleAPI::Apis::AdexchangesellerV2_0::Metadata
           command.params['accountId'] = account_id unless account_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -346,22 +346,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdexchangesellerV2_0::Metadata] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdexchangesellerV2_0::Metadata] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdexchangesellerV2_0::Metadata]
+        # @return [GoogleAPI::Apis::AdexchangesellerV2_0::Metadata]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_account_metadata_metrics(account_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/metadata/metrics', options)
-          command.response_representation = Google::Apis::AdexchangesellerV2_0::Metadata::Representation
-          command.response_class = Google::Apis::AdexchangesellerV2_0::Metadata
+          command.response_representation = GoogleAPI::Apis::AdexchangesellerV2_0::Metadata::Representation
+          command.response_class = GoogleAPI::Apis::AdexchangesellerV2_0::Metadata
           command.params['accountId'] = account_id unless account_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -383,22 +383,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdexchangesellerV2_0::PreferredDeal] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdexchangesellerV2_0::PreferredDeal] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdexchangesellerV2_0::PreferredDeal]
+        # @return [GoogleAPI::Apis::AdexchangesellerV2_0::PreferredDeal]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_account_preferred_deal(account_id, deal_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/preferreddeals/{dealId}', options)
-          command.response_representation = Google::Apis::AdexchangesellerV2_0::PreferredDeal::Representation
-          command.response_class = Google::Apis::AdexchangesellerV2_0::PreferredDeal
+          command.response_representation = GoogleAPI::Apis::AdexchangesellerV2_0::PreferredDeal::Representation
+          command.response_class = GoogleAPI::Apis::AdexchangesellerV2_0::PreferredDeal
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['dealId'] = deal_id unless deal_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -419,22 +419,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdexchangesellerV2_0::PreferredDeals] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdexchangesellerV2_0::PreferredDeals] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdexchangesellerV2_0::PreferredDeals]
+        # @return [GoogleAPI::Apis::AdexchangesellerV2_0::PreferredDeals]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_account_preferred_deals(account_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/preferreddeals', options)
-          command.response_representation = Google::Apis::AdexchangesellerV2_0::PreferredDeals::Representation
-          command.response_class = Google::Apis::AdexchangesellerV2_0::PreferredDeals
+          command.response_representation = GoogleAPI::Apis::AdexchangesellerV2_0::PreferredDeals::Representation
+          command.response_class = GoogleAPI::Apis::AdexchangesellerV2_0::PreferredDeals
           command.params['accountId'] = account_id unless account_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -479,18 +479,18 @@ module Google
         #   enforce per-user limits.
         # @param [IO, String] download_dest
         #   IO stream or filename to receive content download
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdexchangesellerV2_0::Report] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdexchangesellerV2_0::Report] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdexchangesellerV2_0::Report]
+        # @return [GoogleAPI::Apis::AdexchangesellerV2_0::Report]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def generate_account_report(account_id, start_date, end_date, dimension: nil, filter: nil, locale: nil, max_results: nil, metric: nil, sort: nil, start_index: nil, fields: nil, quota_user: nil, user_ip: nil, download_dest: nil, options: nil, &block)
           if download_dest.nil?
             command =  make_simple_command(:get, 'accounts/{accountId}/reports', options)
@@ -498,8 +498,8 @@ module Google
             command = make_download_command(:get, 'accounts/{accountId}/reports', options)
             command.download_dest = download_dest
           end
-          command.response_representation = Google::Apis::AdexchangesellerV2_0::Report::Representation
-          command.response_class = Google::Apis::AdexchangesellerV2_0::Report
+          command.response_representation = GoogleAPI::Apis::AdexchangesellerV2_0::Report::Representation
+          command.response_class = GoogleAPI::Apis::AdexchangesellerV2_0::Report
           command.params['accountId'] = account_id unless account_id.nil?
           command.query['dimension'] = dimension unless dimension.nil?
           command.query['endDate'] = end_date unless end_date.nil?
@@ -538,22 +538,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdexchangesellerV2_0::Report] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdexchangesellerV2_0::Report] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdexchangesellerV2_0::Report]
+        # @return [GoogleAPI::Apis::AdexchangesellerV2_0::Report]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def generate_account_saved_report(account_id, saved_report_id, locale: nil, max_results: nil, start_index: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/reports/{savedReportId}', options)
-          command.response_representation = Google::Apis::AdexchangesellerV2_0::Report::Representation
-          command.response_class = Google::Apis::AdexchangesellerV2_0::Report
+          command.response_representation = GoogleAPI::Apis::AdexchangesellerV2_0::Report::Representation
+          command.response_class = GoogleAPI::Apis::AdexchangesellerV2_0::Report
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['savedReportId'] = saved_report_id unless saved_report_id.nil?
           command.query['locale'] = locale unless locale.nil?
@@ -584,22 +584,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdexchangesellerV2_0::SavedReports] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdexchangesellerV2_0::SavedReports] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdexchangesellerV2_0::SavedReports]
+        # @return [GoogleAPI::Apis::AdexchangesellerV2_0::SavedReports]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_account_saved_reports(account_id, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/reports/saved', options)
-          command.response_representation = Google::Apis::AdexchangesellerV2_0::SavedReports::Representation
-          command.response_class = Google::Apis::AdexchangesellerV2_0::SavedReports
+          command.response_representation = GoogleAPI::Apis::AdexchangesellerV2_0::SavedReports::Representation
+          command.response_class = GoogleAPI::Apis::AdexchangesellerV2_0::SavedReports
           command.params['accountId'] = account_id unless account_id.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -629,22 +629,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdexchangesellerV2_0::UrlChannels] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdexchangesellerV2_0::UrlChannels] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdexchangesellerV2_0::UrlChannels]
+        # @return [GoogleAPI::Apis::AdexchangesellerV2_0::UrlChannels]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_account_url_channels(account_id, ad_client_id, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'accounts/{accountId}/adclients/{adClientId}/urlchannels', options)
-          command.response_representation = Google::Apis::AdexchangesellerV2_0::UrlChannels::Representation
-          command.response_class = Google::Apis::AdexchangesellerV2_0::UrlChannels
+          command.response_representation = GoogleAPI::Apis::AdexchangesellerV2_0::UrlChannels::Representation
+          command.response_class = GoogleAPI::Apis::AdexchangesellerV2_0::UrlChannels
           command.params['accountId'] = account_id unless account_id.nil?
           command.params['adClientId'] = ad_client_id unless ad_client_id.nil?
           command.query['maxResults'] = max_results unless max_results.nil?

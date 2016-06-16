@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CustomsearchV1
       
       # 
       class Context
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `facets`
-        # @return [Array<Array<Google::Apis::CustomsearchV1::Context::Facet>>]
+        # @return [Array<Array<GoogleAPI::Apis::CustomsearchV1::Context::Facet>>]
         attr_accessor :facets
       
         # 
@@ -48,7 +48,7 @@ module Google
         
         # 
         class Facet
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `anchor`
@@ -80,11 +80,11 @@ module Google
       
       # 
       class Promotion
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `bodyLines`
-        # @return [Array<Google::Apis::CustomsearchV1::Promotion::BodyLine>]
+        # @return [Array<GoogleAPI::Apis::CustomsearchV1::Promotion::BodyLine>]
         attr_accessor :body_lines
       
         # 
@@ -99,7 +99,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `image`
-        # @return [Google::Apis::CustomsearchV1::Promotion::Image]
+        # @return [GoogleAPI::Apis::CustomsearchV1::Promotion::Image]
         attr_accessor :image
       
         # 
@@ -128,7 +128,7 @@ module Google
         
         # 
         class BodyLine
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `htmlTitle`
@@ -165,7 +165,7 @@ module Google
         
         # 
         class Image
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `height`
@@ -197,7 +197,7 @@ module Google
       
       # 
       class Query
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `count`
@@ -432,7 +432,7 @@ module Google
       
       # 
       class Result
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `cacheId`
@@ -471,7 +471,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `image`
-        # @return [Google::Apis::CustomsearchV1::Result::Image]
+        # @return [GoogleAPI::Apis::CustomsearchV1::Result::Image]
         attr_accessor :image
       
         # 
@@ -481,7 +481,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `labels`
-        # @return [Array<Google::Apis::CustomsearchV1::Result::Label>]
+        # @return [Array<GoogleAPI::Apis::CustomsearchV1::Result::Label>]
         attr_accessor :labels
       
         # 
@@ -534,7 +534,7 @@ module Google
         
         # 
         class Image
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `byteSize`
@@ -589,7 +589,7 @@ module Google
         
         # 
         class Label
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `displayName`
@@ -621,16 +621,16 @@ module Google
       
       # 
       class Search
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `context`
-        # @return [Google::Apis::CustomsearchV1::Context]
+        # @return [GoogleAPI::Apis::CustomsearchV1::Context]
         attr_accessor :context
       
         # 
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::CustomsearchV1::Result>]
+        # @return [Array<GoogleAPI::Apis::CustomsearchV1::Result>]
         attr_accessor :items
       
         # 
@@ -640,27 +640,27 @@ module Google
       
         # 
         # Corresponds to the JSON property `promotions`
-        # @return [Array<Google::Apis::CustomsearchV1::Promotion>]
+        # @return [Array<GoogleAPI::Apis::CustomsearchV1::Promotion>]
         attr_accessor :promotions
       
         # 
         # Corresponds to the JSON property `queries`
-        # @return [Hash<String,Array<Google::Apis::CustomsearchV1::Query>>]
+        # @return [Hash<String,Array<GoogleAPI::Apis::CustomsearchV1::Query>>]
         attr_accessor :queries
       
         # 
         # Corresponds to the JSON property `searchInformation`
-        # @return [Google::Apis::CustomsearchV1::Search::SearchInformation]
+        # @return [GoogleAPI::Apis::CustomsearchV1::Search::SearchInformation]
         attr_accessor :search_information
       
         # 
         # Corresponds to the JSON property `spelling`
-        # @return [Google::Apis::CustomsearchV1::Search::Spelling]
+        # @return [GoogleAPI::Apis::CustomsearchV1::Search::Spelling]
         attr_accessor :spelling
       
         # 
         # Corresponds to the JSON property `url`
-        # @return [Google::Apis::CustomsearchV1::Search::Url]
+        # @return [GoogleAPI::Apis::CustomsearchV1::Search::Url]
         attr_accessor :url
       
         def initialize(**args)
@@ -681,7 +681,7 @@ module Google
         
         # 
         class SearchInformation
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `formattedSearchTime`
@@ -718,7 +718,7 @@ module Google
         
         # 
         class Spelling
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `correctedQuery`
@@ -743,7 +743,7 @@ module Google
         
         # 
         class Url
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `template`

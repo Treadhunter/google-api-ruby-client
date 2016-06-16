@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ResourceviewsV1beta2
       
       # The Label to be applied to the resource views.
       class Label
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Key of the label.
         # Corresponds to the JSON property `key`
@@ -49,7 +49,7 @@ module Google
       
       # The list response item that contains the resource and end points information.
       class ListResourceResponseItem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of service end points on the resource.
         # Corresponds to the JSON property `endpoints`
@@ -74,7 +74,7 @@ module Google
       
       # An operation resource, used to manage asynchronous API requests.
       class Operation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output only] An optional identifier specified by the client when the mutation
         # was initiated. Must be unique for all operation resources in the project.
@@ -97,7 +97,7 @@ module Google
         # [Output Only] If errors occurred during processing of this operation, this
         # field will be populated.
         # Corresponds to the JSON property `error`
-        # @return [Google::Apis::ResourceviewsV1beta2::Operation::Error]
+        # @return [GoogleAPI::Apis::ResourceviewsV1beta2::Operation::Error]
         attr_accessor :error
       
         # [Output only] If operation fails, the HTTP error message returned.
@@ -191,7 +191,7 @@ module Google
       
         # [Output Only] If there are issues with this operation, a warning is returned.
         # Corresponds to the JSON property `warnings`
-        # @return [Array<Google::Apis::ResourceviewsV1beta2::Operation::Warning>]
+        # @return [Array<GoogleAPI::Apis::ResourceviewsV1beta2::Operation::Warning>]
         attr_accessor :warnings
       
         # [Output Only] URL of the zone where the operation resides. Only available when
@@ -233,11 +233,11 @@ module Google
         # [Output Only] If errors occurred during processing of this operation, this
         # field will be populated.
         class Error
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] The array of errors encountered while processing this operation.
           # Corresponds to the JSON property `errors`
-          # @return [Array<Google::Apis::ResourceviewsV1beta2::Operation::Error::Error>]
+          # @return [Array<GoogleAPI::Apis::ResourceviewsV1beta2::Operation::Error::Error>]
           attr_accessor :errors
         
           def initialize(**args)
@@ -251,7 +251,7 @@ module Google
           
           # 
           class Error
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] The error type identifier for this error.
             # Corresponds to the JSON property `code`
@@ -284,7 +284,7 @@ module Google
         
         # 
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output only] The warning type identifier for this warning.
           # Corresponds to the JSON property `code`
@@ -293,7 +293,7 @@ module Google
         
           # [Output only] Metadata for this warning in key:value format.
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ResourceviewsV1beta2::Operation::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ResourceviewsV1beta2::Operation::Warning::Datum>]
           attr_accessor :data
         
           # [Output only] Optional human-readable details for this warning.
@@ -314,7 +314,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] Metadata key for this warning.
             # Corresponds to the JSON property `key`
@@ -341,7 +341,7 @@ module Google
       
       # 
       class OperationList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Unique identifier for the resource; defined by the server (output only).
         # Corresponds to the JSON property `id`
@@ -350,7 +350,7 @@ module Google
       
         # The operation resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ResourceviewsV1beta2::Operation>]
+        # @return [Array<GoogleAPI::Apis::ResourceviewsV1beta2::Operation>]
         attr_accessor :items
       
         # Type of resource.
@@ -384,7 +384,7 @@ module Google
       
       # The resource view object.
       class ResourceView
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The creation time of the resource view.
         # Corresponds to the JSON property `creationTimestamp`
@@ -398,7 +398,7 @@ module Google
       
         # Services endpoint information.
         # Corresponds to the JSON property `endpoints`
-        # @return [Array<Google::Apis::ResourceviewsV1beta2::ServiceEndpoint>]
+        # @return [Array<GoogleAPI::Apis::ResourceviewsV1beta2::ServiceEndpoint>]
         attr_accessor :endpoints
       
         # The fingerprint of the service endpoint information.
@@ -418,7 +418,7 @@ module Google
       
         # The labels for events.
         # Corresponds to the JSON property `labels`
-        # @return [Array<Google::Apis::ResourceviewsV1beta2::Label>]
+        # @return [Array<GoogleAPI::Apis::ResourceviewsV1beta2::Label>]
         attr_accessor :labels
       
         # The name of the resource view.
@@ -469,7 +469,7 @@ module Google
       
       # The service endpoint that may be started in a VM.
       class ServiceEndpoint
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the service endpoint.
         # Corresponds to the JSON property `name`
@@ -494,7 +494,7 @@ module Google
       
       # The request to add resources to the resource view.
       class AddResourcesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of resources to be added.
         # Corresponds to the JSON property `resources`
@@ -513,11 +513,11 @@ module Google
       
       # 
       class GetServiceResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The service information.
         # Corresponds to the JSON property `endpoints`
-        # @return [Array<Google::Apis::ResourceviewsV1beta2::ServiceEndpoint>]
+        # @return [Array<GoogleAPI::Apis::ResourceviewsV1beta2::ServiceEndpoint>]
         attr_accessor :endpoints
       
         # The fingerprint of the service information.
@@ -538,11 +538,11 @@ module Google
       
       # The response to a list request.
       class ZoneViewsList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The result that contains all resource views that meet the criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ResourceviewsV1beta2::ResourceView>]
+        # @return [Array<GoogleAPI::Apis::ResourceviewsV1beta2::ResourceView>]
         attr_accessor :items
       
         # Type of resource.
@@ -575,11 +575,11 @@ module Google
       
       # The response to a list resource request.
       class ListResourcesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The formatted JSON that is requested by the user.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ResourceviewsV1beta2::ListResourceResponseItem>]
+        # @return [Array<GoogleAPI::Apis::ResourceviewsV1beta2::ListResourceResponseItem>]
         attr_accessor :items
       
         # The URL of a Compute Engine network to which the resources in the view belong.
@@ -606,7 +606,7 @@ module Google
       
       # The request to remove resources from the resource view.
       class RemoveResourcesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of resources to be removed.
         # Corresponds to the JSON property `resources`
@@ -625,11 +625,11 @@ module Google
       
       # 
       class SetServiceRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The service information to be updated.
         # Corresponds to the JSON property `endpoints`
-        # @return [Array<Google::Apis::ResourceviewsV1beta2::ServiceEndpoint>]
+        # @return [Array<GoogleAPI::Apis::ResourceviewsV1beta2::ServiceEndpoint>]
         attr_accessor :endpoints
       
         # Fingerprint of the service information; a hash of the contents. This field is

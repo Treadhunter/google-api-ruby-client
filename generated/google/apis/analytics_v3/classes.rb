@@ -18,18 +18,18 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AnalyticsV3
       
       # JSON template for Analytics account entry.
       class Account
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Child link for an account entry. Points to the list of web properties for this
         # account.
         # Corresponds to the JSON property `childLink`
-        # @return [Google::Apis::AnalyticsV3::Account::ChildLink]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Account::ChildLink]
         attr_accessor :child_link
       
         # Time the account was created.
@@ -54,7 +54,7 @@ module Google
       
         # Permissions the user has for this account.
         # Corresponds to the JSON property `permissions`
-        # @return [Google::Apis::AnalyticsV3::Account::Permissions]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Account::Permissions]
         attr_accessor :permissions
       
         # Link for this account.
@@ -93,7 +93,7 @@ module Google
         # Child link for an account entry. Points to the list of web properties for this
         # account.
         class ChildLink
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Link to the list of web properties for this account.
           # Corresponds to the JSON property `href`
@@ -118,7 +118,7 @@ module Google
         
         # Permissions the user has for this account.
         class Permissions
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # All the permissions that the user has for this account. These include any
           # implied permissions (e.g., EDIT implies VIEW).
@@ -139,7 +139,7 @@ module Google
       
       # JSON template for a linked account.
       class AccountRef
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Link for this account.
         # Corresponds to the JSON property `href`
@@ -178,11 +178,11 @@ module Google
       # (profiles) to which the user has access. Each resource in the collection
       # corresponds to a single AccountSummary.
       class AccountSummaries
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of AccountSummaries.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AnalyticsV3::AccountSummary>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::AccountSummary>]
         attr_accessor :items
       
         # The maximum number of resources the response can contain, regardless of the
@@ -245,7 +245,7 @@ module Google
       # JSON template for an Analytics AccountSummary. An AccountSummary is a
       # lightweight tree comprised of properties/profiles.
       class AccountSummary
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID.
         # Corresponds to the JSON property `id`
@@ -270,7 +270,7 @@ module Google
       
         # List of web properties under this account.
         # Corresponds to the JSON property `webProperties`
-        # @return [Array<Google::Apis::AnalyticsV3::WebPropertySummary>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::WebPropertySummary>]
         attr_accessor :web_properties
       
         def initialize(**args)
@@ -290,11 +290,11 @@ module Google
       # JSON template for an Analytics account ticket. The account ticket consists of
       # the ticket ID and the basic information for the account, property and profile.
       class AccountTicket
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # JSON template for Analytics account entry.
         # Corresponds to the JSON property `account`
-        # @return [Google::Apis::AnalyticsV3::Account]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Account]
         attr_accessor :account
       
         # Account ticket ID used to access the account ticket.
@@ -309,7 +309,7 @@ module Google
       
         # JSON template for an Analytics view (profile).
         # Corresponds to the JSON property `profile`
-        # @return [Google::Apis::AnalyticsV3::Profile]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Profile]
         attr_accessor :profile
       
         # Redirect URI where the user will be sent after accepting Terms of Service.
@@ -320,7 +320,7 @@ module Google
       
         # JSON template for an Analytics web property.
         # Corresponds to the JSON property `webproperty`
-        # @return [Google::Apis::AnalyticsV3::Webproperty]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Webproperty]
         attr_accessor :webproperty
       
         def initialize(**args)
@@ -343,11 +343,11 @@ module Google
       # information. Each resource in the collection corresponds to a single Analytics
       # account.
       class Accounts
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of accounts.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AnalyticsV3::Account>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::Account>]
         attr_accessor :items
       
         # The maximum number of entries the response can contain, regardless of the
@@ -409,7 +409,7 @@ module Google
       
       # JSON template for an AdWords account.
       class AdWordsAccount
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # True if auto-tagging is enabled on the AdWords account. Read-only after the
         # insert operation.
@@ -442,7 +442,7 @@ module Google
       
       # Request template for the delete upload data request.
       class DeleteUploadDataRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of upload UIDs.
         # Corresponds to the JSON property `customDataImportUids`
@@ -461,7 +461,7 @@ module Google
       
       # JSON template for a metadata column.
       class Column
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Map of attribute name and value for this column.
         # Corresponds to the JSON property `attributes`
@@ -492,7 +492,7 @@ module Google
       
       # Lists columns (dimensions and metrics) for a particular report type.
       class Columns
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of attributes names returned by columns.
         # Corresponds to the JSON property `attributeNames`
@@ -507,7 +507,7 @@ module Google
       
         # List of columns for a report type.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AnalyticsV3::Column>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::Column>]
         attr_accessor :items
       
         # Collection type.
@@ -536,7 +536,7 @@ module Google
       
       # JSON template for an Analytics custom data source.
       class CustomDataSource
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID to which this custom data source belongs.
         # Corresponds to the JSON property `accountId`
@@ -545,7 +545,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `childLink`
-        # @return [Google::Apis::AnalyticsV3::CustomDataSource::ChildLink]
+        # @return [GoogleAPI::Apis::AnalyticsV3::CustomDataSource::ChildLink]
         attr_accessor :child_link
       
         # Time this custom data source was created.
@@ -581,7 +581,7 @@ module Google
         # Parent link for this custom data source. Points to the web property to which
         # this custom data source belongs.
         # Corresponds to the JSON property `parentLink`
-        # @return [Google::Apis::AnalyticsV3::CustomDataSource::ParentLink]
+        # @return [GoogleAPI::Apis::AnalyticsV3::CustomDataSource::ParentLink]
         attr_accessor :parent_link
       
         # IDs of views (profiles) linked to the custom data source.
@@ -640,7 +640,7 @@ module Google
         
         # 
         class ChildLink
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Link to the list of daily uploads for this custom data source. Link to the
           # list of uploads for this custom data source.
@@ -667,7 +667,7 @@ module Google
         # Parent link for this custom data source. Points to the web property to which
         # this custom data source belongs.
         class ParentLink
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Link to the web property to which this custom data source belongs.
           # Corresponds to the JSON property `href`
@@ -695,11 +695,11 @@ module Google
       # resource in the collection corresponds to a single Analytics custom data
       # source.
       class CustomDataSources
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Collection of custom data sources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AnalyticsV3::CustomDataSource>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::CustomDataSource>]
         attr_accessor :items
       
         # The maximum number of resources the response can contain, regardless of the
@@ -761,7 +761,7 @@ module Google
       
       # JSON template for Analytics Custom Dimension.
       class CustomDimension
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID.
         # Corresponds to the JSON property `accountId`
@@ -803,7 +803,7 @@ module Google
         # Parent link for the custom dimension. Points to the property to which the
         # custom dimension belongs.
         # Corresponds to the JSON property `parentLink`
-        # @return [Google::Apis::AnalyticsV3::CustomDimension::ParentLink]
+        # @return [GoogleAPI::Apis::AnalyticsV3::CustomDimension::ParentLink]
         attr_accessor :parent_link
       
         # Scope of the custom dimension: HIT, SESSION, USER or PRODUCT.
@@ -849,7 +849,7 @@ module Google
         # Parent link for the custom dimension. Points to the property to which the
         # custom dimension belongs.
         class ParentLink
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Link to the property to which the custom dimension belongs.
           # Corresponds to the JSON property `href`
@@ -877,11 +877,11 @@ module Google
       # user has access. Each resource in the collection corresponds to a single
       # Analytics custom dimension.
       class CustomDimensions
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Collection of custom dimensions.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AnalyticsV3::CustomDimension>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::CustomDimension>]
         attr_accessor :items
       
         # The maximum number of resources the response can contain, regardless of the
@@ -943,7 +943,7 @@ module Google
       
       # JSON template for Analytics Custom Metric.
       class CustomMetric
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID.
         # Corresponds to the JSON property `accountId`
@@ -995,7 +995,7 @@ module Google
         # Parent link for the custom metric. Points to the property to which the custom
         # metric belongs.
         # Corresponds to the JSON property `parentLink`
-        # @return [Google::Apis::AnalyticsV3::CustomMetric::ParentLink]
+        # @return [GoogleAPI::Apis::AnalyticsV3::CustomMetric::ParentLink]
         attr_accessor :parent_link
       
         # Scope of the custom metric: HIT or PRODUCT.
@@ -1049,7 +1049,7 @@ module Google
         # Parent link for the custom metric. Points to the property to which the custom
         # metric belongs.
         class ParentLink
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Link to the property to which the custom metric belongs.
           # Corresponds to the JSON property `href`
@@ -1077,11 +1077,11 @@ module Google
       # has access. Each resource in the collection corresponds to a single Analytics
       # custom metric.
       class CustomMetrics
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Collection of custom metrics.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AnalyticsV3::CustomMetric>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::CustomMetric>]
         attr_accessor :items
       
         # The maximum number of resources the response can contain, regardless of the
@@ -1143,17 +1143,17 @@ module Google
       
       # JSON template for Analytics Entity AdWords Link.
       class EntityAdWordsLink
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of AdWords client accounts. These cannot be MCC accounts. This field is
         # required when creating an AdWords link. It cannot be empty.
         # Corresponds to the JSON property `adWordsAccounts`
-        # @return [Array<Google::Apis::AnalyticsV3::AdWordsAccount>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::AdWordsAccount>]
         attr_accessor :ad_words_accounts
       
         # Web property being linked.
         # Corresponds to the JSON property `entity`
-        # @return [Google::Apis::AnalyticsV3::EntityAdWordsLink::Entity]
+        # @return [GoogleAPI::Apis::AnalyticsV3::EntityAdWordsLink::Entity]
         attr_accessor :entity
       
         # Entity AdWords link ID
@@ -1198,11 +1198,11 @@ module Google
         
         # Web property being linked.
         class Entity
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # JSON template for a web property reference.
           # Corresponds to the JSON property `webPropertyRef`
-          # @return [Google::Apis::AnalyticsV3::WebPropertyRef]
+          # @return [GoogleAPI::Apis::AnalyticsV3::WebPropertyRef]
           attr_accessor :web_property_ref
         
           def initialize(**args)
@@ -1219,11 +1219,11 @@ module Google
       # An entity AdWords link collection provides a list of GA-AdWords links Each
       # resource in this collection corresponds to a single link.
       class EntityAdWordsLinks
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of entity AdWords links.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AnalyticsV3::EntityAdWordsLink>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::EntityAdWordsLink>]
         attr_accessor :items
       
         # The maximum number of entries the response can contain, regardless of the
@@ -1280,12 +1280,12 @@ module Google
       # JSON template for an Analytics Entity-User Link. Returns permissions that a
       # user has for an entity.
       class EntityUserLink
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Entity for this link. It can be an account, a web property, or a view (profile)
         # .
         # Corresponds to the JSON property `entity`
-        # @return [Google::Apis::AnalyticsV3::EntityUserLink::Entity]
+        # @return [GoogleAPI::Apis::AnalyticsV3::EntityUserLink::Entity]
         attr_accessor :entity
       
         # Entity user link ID
@@ -1300,7 +1300,7 @@ module Google
       
         # Permissions the user has for this entity.
         # Corresponds to the JSON property `permissions`
-        # @return [Google::Apis::AnalyticsV3::EntityUserLink::Permissions]
+        # @return [GoogleAPI::Apis::AnalyticsV3::EntityUserLink::Permissions]
         attr_accessor :permissions
       
         # Self link for this resource.
@@ -1310,7 +1310,7 @@ module Google
       
         # JSON template for a user reference.
         # Corresponds to the JSON property `userRef`
-        # @return [Google::Apis::AnalyticsV3::UserRef]
+        # @return [GoogleAPI::Apis::AnalyticsV3::UserRef]
         attr_accessor :user_ref
       
         def initialize(**args)
@@ -1330,21 +1330,21 @@ module Google
         # Entity for this link. It can be an account, a web property, or a view (profile)
         # .
         class Entity
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # JSON template for a linked account.
           # Corresponds to the JSON property `accountRef`
-          # @return [Google::Apis::AnalyticsV3::AccountRef]
+          # @return [GoogleAPI::Apis::AnalyticsV3::AccountRef]
           attr_accessor :account_ref
         
           # JSON template for a linked view (profile).
           # Corresponds to the JSON property `profileRef`
-          # @return [Google::Apis::AnalyticsV3::ProfileRef]
+          # @return [GoogleAPI::Apis::AnalyticsV3::ProfileRef]
           attr_accessor :profile_ref
         
           # JSON template for a web property reference.
           # Corresponds to the JSON property `webPropertyRef`
-          # @return [Google::Apis::AnalyticsV3::WebPropertyRef]
+          # @return [GoogleAPI::Apis::AnalyticsV3::WebPropertyRef]
           attr_accessor :web_property_ref
         
           def initialize(**args)
@@ -1361,7 +1361,7 @@ module Google
         
         # Permissions the user has for this entity.
         class Permissions
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Effective permissions represent all the permissions that a user has for this
           # entity. These include any implied permissions (e.g., EDIT implies VIEW) or
@@ -1392,11 +1392,11 @@ module Google
       # An entity user link collection provides a list of Analytics ACL links Each
       # resource in this collection corresponds to a single link.
       class EntityUserLinks
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of entity user links.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AnalyticsV3::EntityUserLink>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::EntityUserLink>]
         attr_accessor :items
       
         # The maximum number of entries the response can contain, regardless of the
@@ -1452,7 +1452,7 @@ module Google
       
       # JSON template for Analytics experiment resource.
       class Experiment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID to which this experiment belongs. This field is read-only.
         # Corresponds to the JSON property `accountId`
@@ -1542,7 +1542,7 @@ module Google
         # Parent link for an experiment. Points to the view (profile) to which this
         # experiment belongs.
         # Corresponds to the JSON property `parentLink`
-        # @return [Google::Apis::AnalyticsV3::Experiment::ParentLink]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Experiment::ParentLink]
         attr_accessor :parent_link
       
         # View (Profile) ID to which this experiment belongs. This field is read-only.
@@ -1621,7 +1621,7 @@ module Google
         # number of variations may not change once an experiment is in the RUNNING state.
         # At least two variations are required before status can be set to RUNNING.
         # Corresponds to the JSON property `variations`
-        # @return [Array<Google::Apis::AnalyticsV3::Experiment::Variation>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::Experiment::Variation>]
         attr_accessor :variations
       
         # Web property ID to which this experiment belongs. The web property ID is of
@@ -1683,7 +1683,7 @@ module Google
         # Parent link for an experiment. Points to the view (profile) to which this
         # experiment belongs.
         class ParentLink
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Link to the view (profile) to which this experiment belongs. This field is
           # read-only.
@@ -1709,7 +1709,7 @@ module Google
         
         # 
         class Variation
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The name of the variation. This field is required when creating an experiment.
           # This field may not be changed for an experiment whose status is ENDED.
@@ -1762,11 +1762,11 @@ module Google
       # access. Each view (profile) can have a set of experiments. Each resource in
       # the Experiment collection corresponds to a single Analytics experiment.
       class Experiments
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of experiments.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AnalyticsV3::Experiment>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::Experiment>]
         attr_accessor :items
       
         # The maximum number of resources the response can contain, regardless of the
@@ -1828,7 +1828,7 @@ module Google
       
       # JSON template for an Analytics account filter.
       class Filter
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID to which this filter belongs.
         # Corresponds to the JSON property `accountId`
@@ -1837,7 +1837,7 @@ module Google
       
         # Details for the filter of the type ADVANCED.
         # Corresponds to the JSON property `advancedDetails`
-        # @return [Google::Apis::AnalyticsV3::Filter::AdvancedDetails]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Filter::AdvancedDetails]
         attr_accessor :advanced_details
       
         # Time this filter was created.
@@ -1847,7 +1847,7 @@ module Google
       
         # JSON template for an Analytics filter expression.
         # Corresponds to the JSON property `excludeDetails`
-        # @return [Google::Apis::AnalyticsV3::FilterExpression]
+        # @return [GoogleAPI::Apis::AnalyticsV3::FilterExpression]
         attr_accessor :exclude_details
       
         # Filter ID.
@@ -1857,7 +1857,7 @@ module Google
       
         # JSON template for an Analytics filter expression.
         # Corresponds to the JSON property `includeDetails`
-        # @return [Google::Apis::AnalyticsV3::FilterExpression]
+        # @return [GoogleAPI::Apis::AnalyticsV3::FilterExpression]
         attr_accessor :include_details
       
         # Resource type for Analytics filter.
@@ -1867,7 +1867,7 @@ module Google
       
         # Details for the filter of the type LOWER.
         # Corresponds to the JSON property `lowercaseDetails`
-        # @return [Google::Apis::AnalyticsV3::Filter::LowercaseDetails]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Filter::LowercaseDetails]
         attr_accessor :lowercase_details
       
         # Name of this filter.
@@ -1878,12 +1878,12 @@ module Google
         # Parent link for this filter. Points to the account to which this filter
         # belongs.
         # Corresponds to the JSON property `parentLink`
-        # @return [Google::Apis::AnalyticsV3::Filter::ParentLink]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Filter::ParentLink]
         attr_accessor :parent_link
       
         # Details for the filter of the type SEARCH_AND_REPLACE.
         # Corresponds to the JSON property `searchAndReplaceDetails`
-        # @return [Google::Apis::AnalyticsV3::Filter::SearchAndReplaceDetails]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Filter::SearchAndReplaceDetails]
         attr_accessor :search_and_replace_details
       
         # Link for this filter.
@@ -1904,7 +1904,7 @@ module Google
       
         # Details for the filter of the type UPPER.
         # Corresponds to the JSON property `uppercaseDetails`
-        # @return [Google::Apis::AnalyticsV3::Filter::UppercaseDetails]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Filter::UppercaseDetails]
         attr_accessor :uppercase_details
       
         def initialize(**args)
@@ -1932,7 +1932,7 @@ module Google
         
         # Details for the filter of the type ADVANCED.
         class AdvancedDetails
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Indicates if the filter expressions are case sensitive.
           # Corresponds to the JSON property `caseSensitive`
@@ -2028,7 +2028,7 @@ module Google
         
         # Details for the filter of the type LOWER.
         class LowercaseDetails
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Field to use in the filter.
           # Corresponds to the JSON property `field`
@@ -2054,7 +2054,7 @@ module Google
         # Parent link for this filter. Points to the account to which this filter
         # belongs.
         class ParentLink
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Link to the account to which this filter belongs.
           # Corresponds to the JSON property `href`
@@ -2079,7 +2079,7 @@ module Google
         
         # Details for the filter of the type SEARCH_AND_REPLACE.
         class SearchAndReplaceDetails
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Determines if the filter is case sensitive.
           # Corresponds to the JSON property `caseSensitive`
@@ -2123,7 +2123,7 @@ module Google
         
         # Details for the filter of the type UPPER.
         class UppercaseDetails
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Field to use in the filter.
           # Corresponds to the JSON property `field`
@@ -2149,7 +2149,7 @@ module Google
       
       # JSON template for an Analytics filter expression.
       class FilterExpression
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Determines if the filter is case sensitive.
         # Corresponds to the JSON property `caseSensitive`
@@ -2289,7 +2289,7 @@ module Google
       
       # JSON template for a profile filter link.
       class FilterRef
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID to which this filter belongs.
         # Corresponds to the JSON property `accountId`
@@ -2333,11 +2333,11 @@ module Google
       # A filter collection lists filters created by users in an Analytics account.
       # Each resource in the collection corresponds to a filter.
       class Filters
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of filters.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AnalyticsV3::Filter>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::Filter>]
         attr_accessor :items
       
         # The maximum number of resources the response can contain, regardless of the
@@ -2399,12 +2399,12 @@ module Google
       
       # Analytics data for a given view (profile).
       class GaData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Column headers that list dimension names followed by the metric names. The
         # order of dimensions and metrics is same as specified in the request.
         # Corresponds to the JSON property `columnHeaders`
-        # @return [Array<Google::Apis::AnalyticsV3::GaData::ColumnHeader>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::GaData::ColumnHeader>]
         attr_accessor :column_headers
       
         # Determines if Analytics data contains samples.
@@ -2415,7 +2415,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `dataTable`
-        # @return [Google::Apis::AnalyticsV3::GaData::DataTable]
+        # @return [GoogleAPI::Apis::AnalyticsV3::GaData::DataTable]
         attr_accessor :data_table
       
         # Unique ID for this data response.
@@ -2447,12 +2447,12 @@ module Google
       
         # Information for the view (profile), for which the Analytics data was requested.
         # Corresponds to the JSON property `profileInfo`
-        # @return [Google::Apis::AnalyticsV3::GaData::ProfileInfo]
+        # @return [GoogleAPI::Apis::AnalyticsV3::GaData::ProfileInfo]
         attr_accessor :profile_info
       
         # Analytics data request query parameters.
         # Corresponds to the JSON property `query`
-        # @return [Google::Apis::AnalyticsV3::GaData::Query]
+        # @return [GoogleAPI::Apis::AnalyticsV3::GaData::Query]
         attr_accessor :query
       
         # Analytics data rows, where each row contains a list of dimension values
@@ -2516,7 +2516,7 @@ module Google
         
         # 
         class ColumnHeader
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Column Type. Either DIMENSION or METRIC.
           # Corresponds to the JSON property `columnType`
@@ -2549,16 +2549,16 @@ module Google
         
         # 
         class DataTable
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `cols`
-          # @return [Array<Google::Apis::AnalyticsV3::GaData::DataTable::Col>]
+          # @return [Array<GoogleAPI::Apis::AnalyticsV3::GaData::DataTable::Col>]
           attr_accessor :cols
         
           # 
           # Corresponds to the JSON property `rows`
-          # @return [Array<Google::Apis::AnalyticsV3::GaData::DataTable::Row>]
+          # @return [Array<GoogleAPI::Apis::AnalyticsV3::GaData::DataTable::Row>]
           attr_accessor :rows
         
           def initialize(**args)
@@ -2573,7 +2573,7 @@ module Google
           
           # 
           class Col
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `id`
@@ -2604,11 +2604,11 @@ module Google
           
           # 
           class Row
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `c`
-            # @return [Array<Google::Apis::AnalyticsV3::GaData::DataTable::Row::C>]
+            # @return [Array<GoogleAPI::Apis::AnalyticsV3::GaData::DataTable::Row::C>]
             attr_accessor :c
           
             def initialize(**args)
@@ -2622,7 +2622,7 @@ module Google
             
             # 
             class C
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # 
               # Corresponds to the JSON property `v`
@@ -2643,7 +2643,7 @@ module Google
         
         # Information for the view (profile), for which the Analytics data was requested.
         class ProfileInfo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Account ID to which this view (profile) belongs.
           # Corresponds to the JSON property `accountId`
@@ -2692,7 +2692,7 @@ module Google
         
         # Analytics data request query parameters.
         class Query
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # List of analytics dimensions.
           # Corresponds to the JSON property `dimensions`
@@ -2772,7 +2772,7 @@ module Google
       
       # JSON template for Analytics goal resource.
       class Goal
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID to which this goal belongs.
         # Corresponds to the JSON property `accountId`
@@ -2792,7 +2792,7 @@ module Google
       
         # Details for the goal of the type EVENT.
         # Corresponds to the JSON property `eventDetails`
-        # @return [Google::Apis::AnalyticsV3::Goal::EventDetails]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Goal::EventDetails]
         attr_accessor :event_details
       
         # Goal ID.
@@ -2818,7 +2818,7 @@ module Google
         # Parent link for a goal. Points to the view (profile) to which this goal
         # belongs.
         # Corresponds to the JSON property `parentLink`
-        # @return [Google::Apis::AnalyticsV3::Goal::ParentLink]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Goal::ParentLink]
         attr_accessor :parent_link
       
         # View (Profile) ID to which this goal belongs.
@@ -2844,7 +2844,7 @@ module Google
       
         # Details for the goal of the type URL_DESTINATION.
         # Corresponds to the JSON property `urlDestinationDetails`
-        # @return [Google::Apis::AnalyticsV3::Goal::UrlDestinationDetails]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Goal::UrlDestinationDetails]
         attr_accessor :url_destination_details
       
         # Goal value.
@@ -2854,12 +2854,12 @@ module Google
       
         # Details for the goal of the type VISIT_NUM_PAGES.
         # Corresponds to the JSON property `visitNumPagesDetails`
-        # @return [Google::Apis::AnalyticsV3::Goal::VisitNumPagesDetails]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Goal::VisitNumPagesDetails]
         attr_accessor :visit_num_pages_details
       
         # Details for the goal of the type VISIT_TIME_ON_SITE.
         # Corresponds to the JSON property `visitTimeOnSiteDetails`
-        # @return [Google::Apis::AnalyticsV3::Goal::VisitTimeOnSiteDetails]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Goal::VisitTimeOnSiteDetails]
         attr_accessor :visit_time_on_site_details
       
         # Web property ID to which this goal belongs. The web property ID is of the form
@@ -2896,11 +2896,11 @@ module Google
         
         # Details for the goal of the type EVENT.
         class EventDetails
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # List of event conditions.
           # Corresponds to the JSON property `eventConditions`
-          # @return [Array<Google::Apis::AnalyticsV3::Goal::EventDetails::EventCondition>]
+          # @return [Array<GoogleAPI::Apis::AnalyticsV3::Goal::EventDetails::EventCondition>]
           attr_accessor :event_conditions
         
           # Determines if the event value should be used as the value for this goal.
@@ -2921,7 +2921,7 @@ module Google
           
           # 
           class EventCondition
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Type of comparison. Possible values are LESS_THAN, GREATER_THAN or EQUAL.
             # Corresponds to the JSON property `comparisonType`
@@ -2968,7 +2968,7 @@ module Google
         # Parent link for a goal. Points to the view (profile) to which this goal
         # belongs.
         class ParentLink
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Link to the view (profile) to which this goal belongs.
           # Corresponds to the JSON property `href`
@@ -2993,7 +2993,7 @@ module Google
         
         # Details for the goal of the type URL_DESTINATION.
         class UrlDestinationDetails
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Determines if the goal URL must exactly match the capitalization of visited
           # URLs.
@@ -3015,7 +3015,7 @@ module Google
         
           # List of steps configured for this goal funnel.
           # Corresponds to the JSON property `steps`
-          # @return [Array<Google::Apis::AnalyticsV3::Goal::UrlDestinationDetails::Step>]
+          # @return [Array<GoogleAPI::Apis::AnalyticsV3::Goal::UrlDestinationDetails::Step>]
           attr_accessor :steps
         
           # URL for this goal.
@@ -3038,7 +3038,7 @@ module Google
           
           # 
           class Step
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Step name.
             # Corresponds to the JSON property `name`
@@ -3070,7 +3070,7 @@ module Google
         
         # Details for the goal of the type VISIT_NUM_PAGES.
         class VisitNumPagesDetails
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Type of comparison. Possible values are LESS_THAN, GREATER_THAN, or EQUAL.
           # Corresponds to the JSON property `comparisonType`
@@ -3095,7 +3095,7 @@ module Google
         
         # Details for the goal of the type VISIT_TIME_ON_SITE.
         class VisitTimeOnSiteDetails
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Type of comparison. Possible values are LESS_THAN or GREATER_THAN.
           # Corresponds to the JSON property `comparisonType`
@@ -3123,11 +3123,11 @@ module Google
       # view (profile) can have a set of goals. Each resource in the Goal collection
       # corresponds to a single Analytics goal.
       class Goals
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of goals.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AnalyticsV3::Goal>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::Goal>]
         attr_accessor :items
       
         # The maximum number of resources the response can contain, regardless of the
@@ -3189,12 +3189,12 @@ module Google
       
       # Multi-Channel Funnels data for a given view (profile).
       class McfData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Column headers that list dimension names followed by the metric names. The
         # order of dimensions and metrics is same as specified in the request.
         # Corresponds to the JSON property `columnHeaders`
-        # @return [Array<Google::Apis::AnalyticsV3::McfData::ColumnHeader>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::McfData::ColumnHeader>]
         attr_accessor :column_headers
       
         # Determines if the Analytics data contains sampled data.
@@ -3232,19 +3232,19 @@ module Google
       
         # Information for the view (profile), for which the Analytics data was requested.
         # Corresponds to the JSON property `profileInfo`
-        # @return [Google::Apis::AnalyticsV3::McfData::ProfileInfo]
+        # @return [GoogleAPI::Apis::AnalyticsV3::McfData::ProfileInfo]
         attr_accessor :profile_info
       
         # Analytics data request query parameters.
         # Corresponds to the JSON property `query`
-        # @return [Google::Apis::AnalyticsV3::McfData::Query]
+        # @return [GoogleAPI::Apis::AnalyticsV3::McfData::Query]
         attr_accessor :query
       
         # Analytics data rows, where each row contains a list of dimension values
         # followed by the metric values. The order of dimensions and metrics is same as
         # specified in the request.
         # Corresponds to the JSON property `rows`
-        # @return [Array<Array<Google::Apis::AnalyticsV3::McfData::Row>>]
+        # @return [Array<Array<GoogleAPI::Apis::AnalyticsV3::McfData::Row>>]
         attr_accessor :rows
       
         # The number of samples used to calculate the result.
@@ -3300,7 +3300,7 @@ module Google
         
         # 
         class ColumnHeader
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Column Type. Either DIMENSION or METRIC.
           # Corresponds to the JSON property `columnType`
@@ -3332,7 +3332,7 @@ module Google
         
         # Information for the view (profile), for which the Analytics data was requested.
         class ProfileInfo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Account ID to which this view (profile) belongs.
           # Corresponds to the JSON property `accountId`
@@ -3381,7 +3381,7 @@ module Google
         
         # Analytics data request query parameters.
         class Query
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # List of analytics dimensions.
           # Corresponds to the JSON property `dimensions`
@@ -3461,12 +3461,12 @@ module Google
         # A union object representing a dimension or metric value. Only one of "
         # primitiveValue" or "conversionPathValue" attribute will be populated.
         class Row
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # A conversion path dimension value, containing a list of interactions with
           # their attributes.
           # Corresponds to the JSON property `conversionPathValue`
-          # @return [Array<Google::Apis::AnalyticsV3::McfData::Row::ConversionPathValue>]
+          # @return [Array<GoogleAPI::Apis::AnalyticsV3::McfData::Row::ConversionPathValue>]
           attr_accessor :conversion_path_value
         
           # A primitive dimension value. A primitive metric value.
@@ -3486,7 +3486,7 @@ module Google
           
           # 
           class ConversionPathValue
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Type of an interaction on conversion path. Such as CLICK, IMPRESSION etc.
             # Corresponds to the JSON property `interactionType`
@@ -3513,7 +3513,7 @@ module Google
       
       # JSON template for an Analytics view (profile).
       class Profile
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID to which this view (profile) belongs.
         # Corresponds to the JSON property `accountId`
@@ -3529,7 +3529,7 @@ module Google
         # Child link for this view (profile). Points to the list of goals for this view (
         # profile).
         # Corresponds to the JSON property `childLink`
-        # @return [Google::Apis::AnalyticsV3::Profile::ChildLink]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Profile::ChildLink]
         attr_accessor :child_link
       
         # Time this view (profile) was created.
@@ -3591,12 +3591,12 @@ module Google
         # Parent link for this view (profile). Points to the web property to which this
         # view (profile) belongs.
         # Corresponds to the JSON property `parentLink`
-        # @return [Google::Apis::AnalyticsV3::Profile::ParentLink]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Profile::ParentLink]
         attr_accessor :parent_link
       
         # Permissions the user has for this view (profile).
         # Corresponds to the JSON property `permissions`
-        # @return [Google::Apis::AnalyticsV3::Profile::Permissions]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Profile::Permissions]
         attr_accessor :permissions
       
         # Link for this view (profile).
@@ -3697,7 +3697,7 @@ module Google
         # Child link for this view (profile). Points to the list of goals for this view (
         # profile).
         class ChildLink
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Link to the list of goals for this view (profile).
           # Corresponds to the JSON property `href`
@@ -3723,7 +3723,7 @@ module Google
         # Parent link for this view (profile). Points to the web property to which this
         # view (profile) belongs.
         class ParentLink
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Link to the web property to which this view (profile) belongs.
           # Corresponds to the JSON property `href`
@@ -3748,7 +3748,7 @@ module Google
         
         # Permissions the user has for this view (profile).
         class Permissions
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # All the permissions that the user has for this view (profile). These include
           # any implied permissions (e.g., EDIT implies VIEW) or inherited permissions
@@ -3770,11 +3770,11 @@ module Google
       
       # JSON template for an Analytics profile filter link.
       class ProfileFilterLink
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # JSON template for a profile filter link.
         # Corresponds to the JSON property `filterRef`
-        # @return [Google::Apis::AnalyticsV3::FilterRef]
+        # @return [GoogleAPI::Apis::AnalyticsV3::FilterRef]
         attr_accessor :filter_ref
       
         # Profile filter link ID.
@@ -3789,7 +3789,7 @@ module Google
       
         # JSON template for a linked view (profile).
         # Corresponds to the JSON property `profileRef`
-        # @return [Google::Apis::AnalyticsV3::ProfileRef]
+        # @return [GoogleAPI::Apis::AnalyticsV3::ProfileRef]
         attr_accessor :profile_ref
       
         # The rank of this profile filter link relative to the other filters linked to
@@ -3831,11 +3831,11 @@ module Google
       # and filters. Each resource in the collection corresponds to a profile filter
       # link.
       class ProfileFilterLinks
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of profile filter links.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AnalyticsV3::ProfileFilterLink>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::ProfileFilterLink>]
         attr_accessor :items
       
         # The maximum number of resources the response can contain, regardless of the
@@ -3897,7 +3897,7 @@ module Google
       
       # JSON template for a linked view (profile).
       class ProfileRef
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID to which this view (profile) belongs.
         # Corresponds to the JSON property `accountId`
@@ -3953,7 +3953,7 @@ module Google
       # JSON template for an Analytics ProfileSummary. ProfileSummary returns basic
       # information (i.e., summary) for a profile.
       class ProfileSummary
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # View (profile) ID.
         # Corresponds to the JSON property `id`
@@ -3999,11 +3999,11 @@ module Google
       # has access. Each resource in the collection corresponds to a single Analytics
       # view (profile).
       class Profiles
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of views (profiles).
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AnalyticsV3::Profile>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::Profile>]
         attr_accessor :items
       
         # The maximum number of resources the response can contain, regardless of the
@@ -4065,12 +4065,12 @@ module Google
       
       # Real time data for a given view (profile).
       class RealtimeData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Column headers that list dimension names followed by the metric names. The
         # order of dimensions and metrics is same as specified in the request.
         # Corresponds to the JSON property `columnHeaders`
-        # @return [Array<Google::Apis::AnalyticsV3::RealtimeData::ColumnHeader>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::RealtimeData::ColumnHeader>]
         attr_accessor :column_headers
       
         # Unique ID for this data response.
@@ -4085,12 +4085,12 @@ module Google
       
         # Information for the view (profile), for which the real time data was requested.
         # Corresponds to the JSON property `profileInfo`
-        # @return [Google::Apis::AnalyticsV3::RealtimeData::ProfileInfo]
+        # @return [GoogleAPI::Apis::AnalyticsV3::RealtimeData::ProfileInfo]
         attr_accessor :profile_info
       
         # Real time data request query parameters.
         # Corresponds to the JSON property `query`
-        # @return [Google::Apis::AnalyticsV3::RealtimeData::Query]
+        # @return [GoogleAPI::Apis::AnalyticsV3::RealtimeData::Query]
         attr_accessor :query
       
         # Real time data rows, where each row contains a list of dimension values
@@ -4137,7 +4137,7 @@ module Google
         
         # 
         class ColumnHeader
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Column Type. Either DIMENSION or METRIC.
           # Corresponds to the JSON property `columnType`
@@ -4170,7 +4170,7 @@ module Google
         
         # Information for the view (profile), for which the real time data was requested.
         class ProfileInfo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Account ID to which this view (profile) belongs.
           # Corresponds to the JSON property `accountId`
@@ -4219,7 +4219,7 @@ module Google
         
         # Real time data request query parameters.
         class Query
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # List of real time dimensions.
           # Corresponds to the JSON property `dimensions`
@@ -4269,7 +4269,7 @@ module Google
       
       # JSON template for an Analytics segment.
       class Segment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Time the segment was created.
         # Corresponds to the JSON property `created`
@@ -4337,11 +4337,11 @@ module Google
       # An segment collection lists Analytics segments that the user has access to.
       # Each resource in the collection corresponds to a single Analytics segment.
       class Segments
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of segments.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AnalyticsV3::Segment>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::Segment>]
         attr_accessor :items
       
         # The maximum number of resources the response can contain, regardless of the
@@ -4403,7 +4403,7 @@ module Google
       
       # JSON template for Analytics unsampled report resource.
       class UnsampledReport
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID to which this unsampled report belongs.
         # Corresponds to the JSON property `accountId`
@@ -4412,7 +4412,7 @@ module Google
       
         # Download details for a file stored in Google Cloud Storage.
         # Corresponds to the JSON property `cloudStorageDownloadDetails`
-        # @return [Google::Apis::AnalyticsV3::UnsampledReport::CloudStorageDownloadDetails]
+        # @return [GoogleAPI::Apis::AnalyticsV3::UnsampledReport::CloudStorageDownloadDetails]
         attr_accessor :cloud_storage_download_details
       
         # Time this unsampled report was created.
@@ -4432,7 +4432,7 @@ module Google
       
         # Download details for a file stored in Google Drive.
         # Corresponds to the JSON property `driveDownloadDetails`
-        # @return [Google::Apis::AnalyticsV3::UnsampledReport::DriveDownloadDetails]
+        # @return [GoogleAPI::Apis::AnalyticsV3::UnsampledReport::DriveDownloadDetails]
         attr_accessor :drive_download_details
       
         # The end date for the unsampled report.
@@ -4531,7 +4531,7 @@ module Google
         
         # Download details for a file stored in Google Cloud Storage.
         class CloudStorageDownloadDetails
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Id of the bucket the file object is stored in.
           # Corresponds to the JSON property `bucketId`
@@ -4556,7 +4556,7 @@ module Google
         
         # Download details for a file stored in Google Drive.
         class DriveDownloadDetails
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Id of the document/file containing the report data.
           # Corresponds to the JSON property `documentId`
@@ -4579,11 +4579,11 @@ module Google
       # resource in the unsampled report collection corresponds to a single Analytics
       # unsampled report.
       class UnsampledReports
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of unsampled reports.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AnalyticsV3::UnsampledReport>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::UnsampledReport>]
         attr_accessor :items
       
         # The maximum number of resources the response can contain, regardless of the
@@ -4645,7 +4645,7 @@ module Google
       
       # Metadata returned for an upload operation.
       class Upload
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account Id to which this upload belongs.
         # Corresponds to the JSON property `accountId`
@@ -4696,11 +4696,11 @@ module Google
       # custom data source can have a set of uploads. Each resource in the upload
       # collection corresponds to a single Analytics data upload.
       class Uploads
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of uploads.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AnalyticsV3::Upload>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::Upload>]
         attr_accessor :items
       
         # The maximum number of resources the response can contain, regardless of the
@@ -4756,7 +4756,7 @@ module Google
       
       # JSON template for a user reference.
       class UserRef
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Email ID of this user.
         # Corresponds to the JSON property `email`
@@ -4787,7 +4787,7 @@ module Google
       
       # JSON template for a web property reference.
       class WebPropertyRef
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID to which this web property belongs.
         # Corresponds to the JSON property `accountId`
@@ -4837,7 +4837,7 @@ module Google
       # JSON template for an Analytics WebPropertySummary. WebPropertySummary returns
       # basic information (i.e., summary) for a web property.
       class WebPropertySummary
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Web property ID of the form UA-XXXXX-YY.
         # Corresponds to the JSON property `id`
@@ -4866,7 +4866,7 @@ module Google
       
         # List of profiles under this web property.
         # Corresponds to the JSON property `profiles`
-        # @return [Array<Google::Apis::AnalyticsV3::ProfileSummary>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::ProfileSummary>]
         attr_accessor :profiles
       
         # Indicates whether this web property is starred or not.
@@ -4901,11 +4901,11 @@ module Google
       # access. Each resource in the collection corresponds to a single Analytics web
       # property.
       class Webproperties
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of web properties.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AnalyticsV3::Webproperty>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsV3::Webproperty>]
         attr_accessor :items
       
         # The maximum number of resources the response can contain, regardless of the
@@ -4967,7 +4967,7 @@ module Google
       
       # JSON template for an Analytics web property.
       class Webproperty
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Account ID to which this web property belongs.
         # Corresponds to the JSON property `accountId`
@@ -4977,7 +4977,7 @@ module Google
         # Child link for this web property. Points to the list of views (profiles) for
         # this web property.
         # Corresponds to the JSON property `childLink`
-        # @return [Google::Apis::AnalyticsV3::Webproperty::ChildLink]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Webproperty::ChildLink]
         attr_accessor :child_link
       
         # Time this web property was created.
@@ -5023,12 +5023,12 @@ module Google
         # Parent link for this web property. Points to the account to which this web
         # property belongs.
         # Corresponds to the JSON property `parentLink`
-        # @return [Google::Apis::AnalyticsV3::Webproperty::ParentLink]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Webproperty::ParentLink]
         attr_accessor :parent_link
       
         # Permissions the user has for this web property.
         # Corresponds to the JSON property `permissions`
-        # @return [Google::Apis::AnalyticsV3::Webproperty::Permissions]
+        # @return [GoogleAPI::Apis::AnalyticsV3::Webproperty::Permissions]
         attr_accessor :permissions
       
         # View (Profile) count for this web property.
@@ -5085,7 +5085,7 @@ module Google
         # Child link for this web property. Points to the list of views (profiles) for
         # this web property.
         class ChildLink
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Link to the list of views (profiles) for this web property.
           # Corresponds to the JSON property `href`
@@ -5111,7 +5111,7 @@ module Google
         # Parent link for this web property. Points to the account to which this web
         # property belongs.
         class ParentLink
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Link to the account for this web property.
           # Corresponds to the JSON property `href`
@@ -5136,7 +5136,7 @@ module Google
         
         # Permissions the user has for this web property.
         class Permissions
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # All the permissions that the user has for this web property. These include any
           # implied permissions (e.g., EDIT implies VIEW) or inherited permissions from

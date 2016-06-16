@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module UrlshortenerV1
       # URL Shortener API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/urlshortener_v1'
       #
-      #    Urlshortener = Google::Apis::UrlshortenerV1 # Alias the module
+      #    Urlshortener = GoogleAPI::Apis::UrlshortenerV1 # Alias the module
       #    service = Urlshortener::UrlshortenerService.new
       #
       # @see https://developers.google.com/url-shortener/v1/getting_started
-      class UrlshortenerService < Google::Apis::Core::BaseService
+      class UrlshortenerService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -66,22 +66,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::UrlshortenerV1::Url] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::UrlshortenerV1::Url] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::UrlshortenerV1::Url]
+        # @return [GoogleAPI::Apis::UrlshortenerV1::Url]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_url(short_url, projection: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'url', options)
-          command.response_representation = Google::Apis::UrlshortenerV1::Url::Representation
-          command.response_class = Google::Apis::UrlshortenerV1::Url
+          command.response_representation = GoogleAPI::Apis::UrlshortenerV1::Url::Representation
+          command.response_class = GoogleAPI::Apis::UrlshortenerV1::Url
           command.query['projection'] = projection unless projection.nil?
           command.query['shortUrl'] = short_url unless short_url.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -91,7 +91,7 @@ module Google
         end
         
         # Creates a new short URL.
-        # @param [Google::Apis::UrlshortenerV1::Url] url_object
+        # @param [GoogleAPI::Apis::UrlshortenerV1::Url] url_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -101,24 +101,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::UrlshortenerV1::Url] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::UrlshortenerV1::Url] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::UrlshortenerV1::Url]
+        # @return [GoogleAPI::Apis::UrlshortenerV1::Url]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_url(url_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'url', options)
-          command.request_representation = Google::Apis::UrlshortenerV1::Url::Representation
+          command.request_representation = GoogleAPI::Apis::UrlshortenerV1::Url::Representation
           command.request_object = url_object
-          command.response_representation = Google::Apis::UrlshortenerV1::Url::Representation
-          command.response_class = Google::Apis::UrlshortenerV1::Url
+          command.response_representation = GoogleAPI::Apis::UrlshortenerV1::Url::Representation
+          command.response_class = GoogleAPI::Apis::UrlshortenerV1::Url
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['userIp'] = user_ip unless user_ip.nil?
@@ -139,22 +139,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::UrlshortenerV1::UrlHistory] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::UrlshortenerV1::UrlHistory] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::UrlshortenerV1::UrlHistory]
+        # @return [GoogleAPI::Apis::UrlshortenerV1::UrlHistory]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_urls(projection: nil, start_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'url/history', options)
-          command.response_representation = Google::Apis::UrlshortenerV1::UrlHistory::Representation
-          command.response_class = Google::Apis::UrlshortenerV1::UrlHistory
+          command.response_representation = GoogleAPI::Apis::UrlshortenerV1::UrlHistory::Representation
+          command.response_class = GoogleAPI::Apis::UrlshortenerV1::UrlHistory
           command.query['projection'] = projection unless projection.nil?
           command.query['start-token'] = start_token unless start_token.nil?
           command.query['fields'] = fields unless fields.nil?

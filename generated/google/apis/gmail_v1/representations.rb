@@ -18,218 +18,218 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module GmailV1
       
       class BatchDeleteMessagesRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Draft
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class History
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class HistoryLabelAdded
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class HistoryLabelRemoved
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class HistoryMessageAdded
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class HistoryMessageDeleted
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Label
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListDraftsResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListHistoryResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListLabelsResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListMessagesResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListThreadsResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Message
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class MessagePart
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class MessagePartBody
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class MessagePartHeader
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ModifyMessageRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ModifyThreadRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Profile
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Thread
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class WatchRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class WatchResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class BatchDeleteMessagesRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :ids, as: 'ids'
         end
       end
       
       class Draft
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          property :message, as: 'message', class: Google::Apis::GmailV1::Message, decorator: Google::Apis::GmailV1::Message::Representation
+          property :message, as: 'message', class: GoogleAPI::Apis::GmailV1::Message, decorator: GoogleAPI::Apis::GmailV1::Message::Representation
       
         end
       end
       
       class History
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :labels_added, as: 'labelsAdded', class: Google::Apis::GmailV1::HistoryLabelAdded, decorator: Google::Apis::GmailV1::HistoryLabelAdded::Representation
+          collection :labels_added, as: 'labelsAdded', class: GoogleAPI::Apis::GmailV1::HistoryLabelAdded, decorator: GoogleAPI::Apis::GmailV1::HistoryLabelAdded::Representation
       
-          collection :labels_removed, as: 'labelsRemoved', class: Google::Apis::GmailV1::HistoryLabelRemoved, decorator: Google::Apis::GmailV1::HistoryLabelRemoved::Representation
+          collection :labels_removed, as: 'labelsRemoved', class: GoogleAPI::Apis::GmailV1::HistoryLabelRemoved, decorator: GoogleAPI::Apis::GmailV1::HistoryLabelRemoved::Representation
       
-          collection :messages, as: 'messages', class: Google::Apis::GmailV1::Message, decorator: Google::Apis::GmailV1::Message::Representation
+          collection :messages, as: 'messages', class: GoogleAPI::Apis::GmailV1::Message, decorator: GoogleAPI::Apis::GmailV1::Message::Representation
       
-          collection :messages_added, as: 'messagesAdded', class: Google::Apis::GmailV1::HistoryMessageAdded, decorator: Google::Apis::GmailV1::HistoryMessageAdded::Representation
+          collection :messages_added, as: 'messagesAdded', class: GoogleAPI::Apis::GmailV1::HistoryMessageAdded, decorator: GoogleAPI::Apis::GmailV1::HistoryMessageAdded::Representation
       
-          collection :messages_deleted, as: 'messagesDeleted', class: Google::Apis::GmailV1::HistoryMessageDeleted, decorator: Google::Apis::GmailV1::HistoryMessageDeleted::Representation
+          collection :messages_deleted, as: 'messagesDeleted', class: GoogleAPI::Apis::GmailV1::HistoryMessageDeleted, decorator: GoogleAPI::Apis::GmailV1::HistoryMessageDeleted::Representation
       
         end
       end
       
       class HistoryLabelAdded
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :label_ids, as: 'labelIds'
-          property :message, as: 'message', class: Google::Apis::GmailV1::Message, decorator: Google::Apis::GmailV1::Message::Representation
+          property :message, as: 'message', class: GoogleAPI::Apis::GmailV1::Message, decorator: GoogleAPI::Apis::GmailV1::Message::Representation
       
         end
       end
       
       class HistoryLabelRemoved
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :label_ids, as: 'labelIds'
-          property :message, as: 'message', class: Google::Apis::GmailV1::Message, decorator: Google::Apis::GmailV1::Message::Representation
+          property :message, as: 'message', class: GoogleAPI::Apis::GmailV1::Message, decorator: GoogleAPI::Apis::GmailV1::Message::Representation
       
         end
       end
       
       class HistoryMessageAdded
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :message, as: 'message', class: Google::Apis::GmailV1::Message, decorator: Google::Apis::GmailV1::Message::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :message, as: 'message', class: GoogleAPI::Apis::GmailV1::Message, decorator: GoogleAPI::Apis::GmailV1::Message::Representation
       
         end
       end
       
       class HistoryMessageDeleted
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :message, as: 'message', class: Google::Apis::GmailV1::Message, decorator: Google::Apis::GmailV1::Message::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :message, as: 'message', class: GoogleAPI::Apis::GmailV1::Message, decorator: GoogleAPI::Apis::GmailV1::Message::Representation
       
         end
       end
       
       class Label
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
           property :label_list_visibility, as: 'labelListVisibility'
           property :message_list_visibility, as: 'messageListVisibility'
@@ -244,8 +244,8 @@ module Google
       
       class ListDraftsResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :drafts, as: 'drafts', class: Google::Apis::GmailV1::Draft, decorator: Google::Apis::GmailV1::Draft::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :drafts, as: 'drafts', class: GoogleAPI::Apis::GmailV1::Draft, decorator: GoogleAPI::Apis::GmailV1::Draft::Representation
       
           property :next_page_token, as: 'nextPageToken'
           property :result_size_estimate, as: 'resultSizeEstimate'
@@ -254,8 +254,8 @@ module Google
       
       class ListHistoryResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :history, as: 'history', class: Google::Apis::GmailV1::History, decorator: Google::Apis::GmailV1::History::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :history, as: 'history', class: GoogleAPI::Apis::GmailV1::History, decorator: GoogleAPI::Apis::GmailV1::History::Representation
       
           property :history_id, as: 'historyId'
           property :next_page_token, as: 'nextPageToken'
@@ -264,16 +264,16 @@ module Google
       
       class ListLabelsResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :labels, as: 'labels', class: Google::Apis::GmailV1::Label, decorator: Google::Apis::GmailV1::Label::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :labels, as: 'labels', class: GoogleAPI::Apis::GmailV1::Label, decorator: GoogleAPI::Apis::GmailV1::Label::Representation
       
         end
       end
       
       class ListMessagesResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :messages, as: 'messages', class: Google::Apis::GmailV1::Message, decorator: Google::Apis::GmailV1::Message::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :messages, as: 'messages', class: GoogleAPI::Apis::GmailV1::Message, decorator: GoogleAPI::Apis::GmailV1::Message::Representation
       
           property :next_page_token, as: 'nextPageToken'
           property :result_size_estimate, as: 'resultSizeEstimate'
@@ -282,22 +282,22 @@ module Google
       
       class ListThreadsResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :next_page_token, as: 'nextPageToken'
           property :result_size_estimate, as: 'resultSizeEstimate'
-          collection :threads, as: 'threads', class: Google::Apis::GmailV1::Thread, decorator: Google::Apis::GmailV1::Thread::Representation
+          collection :threads, as: 'threads', class: GoogleAPI::Apis::GmailV1::Thread, decorator: GoogleAPI::Apis::GmailV1::Thread::Representation
       
         end
       end
       
       class Message
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :history_id, as: 'historyId'
           property :id, as: 'id'
           property :internal_date, as: 'internalDate'
           collection :label_ids, as: 'labelIds'
-          property :payload, as: 'payload', class: Google::Apis::GmailV1::MessagePart, decorator: Google::Apis::GmailV1::MessagePart::Representation
+          property :payload, as: 'payload', class: GoogleAPI::Apis::GmailV1::MessagePart, decorator: GoogleAPI::Apis::GmailV1::MessagePart::Representation
       
           property :raw, :base64 => true, as: 'raw'
           property :size_estimate, as: 'sizeEstimate'
@@ -308,22 +308,22 @@ module Google
       
       class MessagePart
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :body, as: 'body', class: Google::Apis::GmailV1::MessagePartBody, decorator: Google::Apis::GmailV1::MessagePartBody::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :body, as: 'body', class: GoogleAPI::Apis::GmailV1::MessagePartBody, decorator: GoogleAPI::Apis::GmailV1::MessagePartBody::Representation
       
           property :filename, as: 'filename'
-          collection :headers, as: 'headers', class: Google::Apis::GmailV1::MessagePartHeader, decorator: Google::Apis::GmailV1::MessagePartHeader::Representation
+          collection :headers, as: 'headers', class: GoogleAPI::Apis::GmailV1::MessagePartHeader, decorator: GoogleAPI::Apis::GmailV1::MessagePartHeader::Representation
       
           property :mime_type, as: 'mimeType'
           property :part_id, as: 'partId'
-          collection :parts, as: 'parts', class: Google::Apis::GmailV1::MessagePart, decorator: Google::Apis::GmailV1::MessagePart::Representation
+          collection :parts, as: 'parts', class: GoogleAPI::Apis::GmailV1::MessagePart, decorator: GoogleAPI::Apis::GmailV1::MessagePart::Representation
       
         end
       end
       
       class MessagePartBody
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :attachment_id, as: 'attachmentId'
           property :data, :base64 => true, as: 'data'
           property :size, as: 'size'
@@ -332,7 +332,7 @@ module Google
       
       class MessagePartHeader
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :name, as: 'name'
           property :value, as: 'value'
         end
@@ -340,7 +340,7 @@ module Google
       
       class ModifyMessageRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :add_label_ids, as: 'addLabelIds'
           collection :remove_label_ids, as: 'removeLabelIds'
         end
@@ -348,7 +348,7 @@ module Google
       
       class ModifyThreadRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :add_label_ids, as: 'addLabelIds'
           collection :remove_label_ids, as: 'removeLabelIds'
         end
@@ -356,7 +356,7 @@ module Google
       
       class Profile
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :email_address, as: 'emailAddress'
           property :history_id, as: 'historyId'
           property :messages_total, as: 'messagesTotal'
@@ -366,10 +366,10 @@ module Google
       
       class Thread
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :history_id, as: 'historyId'
           property :id, as: 'id'
-          collection :messages, as: 'messages', class: Google::Apis::GmailV1::Message, decorator: Google::Apis::GmailV1::Message::Representation
+          collection :messages, as: 'messages', class: GoogleAPI::Apis::GmailV1::Message, decorator: GoogleAPI::Apis::GmailV1::Message::Representation
       
           property :snippet, as: 'snippet'
         end
@@ -377,7 +377,7 @@ module Google
       
       class WatchRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :label_filter_action, as: 'labelFilterAction'
           collection :label_ids, as: 'labelIds'
           property :topic_name, as: 'topicName'
@@ -386,7 +386,7 @@ module Google
       
       class WatchResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :expiration, as: 'expiration'
           property :history_id, as: 'historyId'
         end

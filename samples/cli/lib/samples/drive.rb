@@ -23,7 +23,7 @@ module Samples
   #
   #     $ ./google-api-samples drive upload ~/myvideo.mov
   class Drive < BaseCli
-    Drive = Google::Apis::DriveV3
+    Drive = GoogleAPI::Apis::DriveV3
 
     desc 'upload FILE', 'Upload a file to Google Drive'
     method_option :name, type: :string

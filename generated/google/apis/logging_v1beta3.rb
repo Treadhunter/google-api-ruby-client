@@ -16,7 +16,7 @@ require 'google/apis/logging_v1beta3/service.rb'
 require 'google/apis/logging_v1beta3/classes.rb'
 require 'google/apis/logging_v1beta3/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Google Cloud Logging API
     #

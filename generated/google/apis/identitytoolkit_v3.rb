@@ -16,7 +16,7 @@ require 'google/apis/identitytoolkit_v3/service.rb'
 require 'google/apis/identitytoolkit_v3/classes.rb'
 require 'google/apis/identitytoolkit_v3/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Google Identity Toolkit API
     #

@@ -17,7 +17,7 @@ require 'representable/json/hash'
 require 'base64'
 require 'date'
 
-module Google
+module GoogleAPI
   module Apis
     module Core
       # Support for serializing hashes + propery value/nil/unset tracking

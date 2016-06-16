@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module PartnersV2
       
       # Request message for LogUserEvent.
       class LogUserEventRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Common data that is in each API request.
         # Corresponds to the JSON property `requestMetadata`
-        # @return [Google::Apis::PartnersV2::RequestMetadata]
+        # @return [GoogleAPI::Apis::PartnersV2::RequestMetadata]
         attr_accessor :request_metadata
       
         # The action that occurred.
@@ -48,7 +48,7 @@ module Google
       
         # List of event data for the event.
         # Corresponds to the JSON property `eventDatas`
-        # @return [Array<Google::Apis::PartnersV2::EventData>]
+        # @return [Array<GoogleAPI::Apis::PartnersV2::EventData>]
         attr_accessor :event_datas
       
         # The URL where the event occurred.
@@ -59,7 +59,7 @@ module Google
         # A lead resource that represents an advertiser contact for a `Company`. These
         # are usually generated via Google Partner Search (the advertiser portal).
         # Corresponds to the JSON property `lead`
-        # @return [Google::Apis::PartnersV2::Lead]
+        # @return [GoogleAPI::Apis::PartnersV2::Lead]
         attr_accessor :lead
       
         def initialize(**args)
@@ -80,12 +80,12 @@ module Google
       
       # Common data that is in each API request.
       class RequestMetadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Values to use instead of the user's respective defaults. These are only
         # honored by whitelisted products.
         # Corresponds to the JSON property `userOverrides`
-        # @return [Google::Apis::PartnersV2::UserOverrides]
+        # @return [GoogleAPI::Apis::PartnersV2::UserOverrides]
         attr_accessor :user_overrides
       
         # Locale to use for the current request.
@@ -105,7 +105,7 @@ module Google
       
         # Source of traffic for the current request.
         # Corresponds to the JSON property `trafficSource`
-        # @return [Google::Apis::PartnersV2::TrafficSource]
+        # @return [GoogleAPI::Apis::PartnersV2::TrafficSource]
         attr_accessor :traffic_source
       
         def initialize(**args)
@@ -125,7 +125,7 @@ module Google
       # Values to use instead of the user's respective defaults. These are only
       # honored by whitelisted products.
       class UserOverrides
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # IP address to use instead of the user's geo-located IP address.
         # Corresponds to the JSON property `ipAddress`
@@ -150,7 +150,7 @@ module Google
       
       # Source of traffic for the current request.
       class TrafficSource
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifier to indicate where the traffic comes from. An identifier has
         # multiple letters created by a team which redirected the traffic to us.
@@ -178,7 +178,7 @@ module Google
       
       # Key value data pair for an event.
       class EventData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Data type.
         # Corresponds to the JSON property `key`
@@ -204,7 +204,7 @@ module Google
       # A lead resource that represents an advertiser contact for a `Company`. These
       # are usually generated via Google Partner Search (the advertiser portal).
       class Lead
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of the lead.
         # Corresponds to the JSON property `id`
@@ -253,7 +253,7 @@ module Google
       
         # Represents an amount of money with its currency type.
         # Corresponds to the JSON property `minMonthlyBudget`
-        # @return [Google::Apis::PartnersV2::Money]
+        # @return [GoogleAPI::Apis::PartnersV2::Money]
         attr_accessor :min_monthly_budget
       
         def initialize(**args)
@@ -277,7 +277,7 @@ module Google
       
       # Represents an amount of money with its currency type.
       class Money
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The 3-letter currency code defined in ISO 4217.
         # Corresponds to the JSON property `currencyCode`
@@ -313,11 +313,11 @@ module Google
       
       # Response message for LogUserEvent.
       class LogUserEventResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Common data that is in each API response.
         # Corresponds to the JSON property `responseMetadata`
-        # @return [Google::Apis::PartnersV2::ResponseMetadata]
+        # @return [GoogleAPI::Apis::PartnersV2::ResponseMetadata]
         attr_accessor :response_metadata
       
         def initialize(**args)
@@ -332,11 +332,11 @@ module Google
       
       # Common data that is in each API response.
       class ResponseMetadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Debug information about this request.
         # Corresponds to the JSON property `debugInfo`
-        # @return [Google::Apis::PartnersV2::DebugInfo]
+        # @return [GoogleAPI::Apis::PartnersV2::DebugInfo]
         attr_accessor :debug_info
       
         def initialize(**args)
@@ -351,7 +351,7 @@ module Google
       
       # Debug information about this request.
       class DebugInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Info about the server that serviced this request.
         # Corresponds to the JSON property `serverInfo`
@@ -382,11 +382,11 @@ module Google
       
       # Request message for LogClientMessage.
       class LogMessageRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Common data that is in each API request.
         # Corresponds to the JSON property `requestMetadata`
-        # @return [Google::Apis::PartnersV2::RequestMetadata]
+        # @return [GoogleAPI::Apis::PartnersV2::RequestMetadata]
         attr_accessor :request_metadata
       
         # Message level of client message.
@@ -419,11 +419,11 @@ module Google
       
       # Response message for LogClientMessage.
       class LogMessageResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Common data that is in each API response.
         # Corresponds to the JSON property `responseMetadata`
-        # @return [Google::Apis::PartnersV2::ResponseMetadata]
+        # @return [GoogleAPI::Apis::PartnersV2::ResponseMetadata]
         attr_accessor :response_metadata
       
         def initialize(**args)
@@ -438,11 +438,11 @@ module Google
       
       # Response message for ListUserStates.
       class ListUserStatesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Common data that is in each API response.
         # Corresponds to the JSON property `responseMetadata`
-        # @return [Google::Apis::PartnersV2::ResponseMetadata]
+        # @return [GoogleAPI::Apis::PartnersV2::ResponseMetadata]
         attr_accessor :response_metadata
       
         # User's states.
@@ -463,17 +463,17 @@ module Google
       
       # Response message for GetCompany.
       class GetCompanyResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Common data that is in each API response.
         # Corresponds to the JSON property `responseMetadata`
-        # @return [Google::Apis::PartnersV2::ResponseMetadata]
+        # @return [GoogleAPI::Apis::PartnersV2::ResponseMetadata]
         attr_accessor :response_metadata
       
         # A company resource in the Google Partners API. Once certified, it qualifies
         # for being searched by advertisers.
         # Corresponds to the JSON property `company`
-        # @return [Google::Apis::PartnersV2::Company]
+        # @return [GoogleAPI::Apis::PartnersV2::Company]
         attr_accessor :company
       
         def initialize(**args)
@@ -490,7 +490,7 @@ module Google
       # A company resource in the Google Partners API. Once certified, it qualifies
       # for being searched by advertisers.
       class Company
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the company.
         # Corresponds to the JSON property `id`
@@ -504,37 +504,37 @@ module Google
       
         # The list of localized info for the company.
         # Corresponds to the JSON property `localizedInfos`
-        # @return [Array<Google::Apis::PartnersV2::LocalizedCompanyInfo>]
+        # @return [Array<GoogleAPI::Apis::PartnersV2::LocalizedCompanyInfo>]
         attr_accessor :localized_infos
       
         # The list of company locations.
         # Corresponds to the JSON property `locations`
-        # @return [Array<Google::Apis::PartnersV2::Location>]
+        # @return [Array<GoogleAPI::Apis::PartnersV2::Location>]
         attr_accessor :locations
       
         # Represents an amount of money with its currency type.
         # Corresponds to the JSON property `convertedMinMonthlyBudget`
-        # @return [Google::Apis::PartnersV2::Money]
+        # @return [GoogleAPI::Apis::PartnersV2::Money]
         attr_accessor :converted_min_monthly_budget
       
         # Represents an amount of money with its currency type.
         # Corresponds to the JSON property `originalMinMonthlyBudget`
-        # @return [Google::Apis::PartnersV2::Money]
+        # @return [GoogleAPI::Apis::PartnersV2::Money]
         attr_accessor :original_min_monthly_budget
       
         # Basic information from a public profile.
         # Corresponds to the JSON property `publicProfile`
-        # @return [Google::Apis::PartnersV2::PublicProfile]
+        # @return [GoogleAPI::Apis::PartnersV2::PublicProfile]
         attr_accessor :public_profile
       
         # The list of Google Partners certification statuses for the company.
         # Corresponds to the JSON property `certificationStatuses`
-        # @return [Array<Google::Apis::PartnersV2::CertificationStatus>]
+        # @return [Array<GoogleAPI::Apis::PartnersV2::CertificationStatus>]
         attr_accessor :certification_statuses
       
         # Information related to the ranking of the company within the list of companies.
         # Corresponds to the JSON property `ranks`
-        # @return [Array<Google::Apis::PartnersV2::Rank>]
+        # @return [Array<GoogleAPI::Apis::PartnersV2::Rank>]
         attr_accessor :ranks
       
         # URL of the company's website.
@@ -575,7 +575,7 @@ module Google
       
       # The localized company information.
       class LocalizedCompanyInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Language code of the localized company info, as defined by BCP 47 (IETF BCP 47,
         # "Tags for Identifying Languages").
@@ -613,7 +613,7 @@ module Google
       
       # A location with address and geographic coordinates.
       class Location
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The complete address of the location.
         # Corresponds to the JSON property `address`
@@ -640,7 +640,7 @@ module Google
         # NormalizeLatLng(180.0, 10.0) assert (-90.0, 10.0) == NormalizeLatLng(270.0, 10.
         # 0) assert (90.0, 10.0) == NormalizeLatLng(-270.0, 10.0)
         # Corresponds to the JSON property `latLng`
-        # @return [Google::Apis::PartnersV2::LatLng]
+        # @return [GoogleAPI::Apis::PartnersV2::LatLng]
         attr_accessor :lat_lng
       
         def initialize(**args)
@@ -674,7 +674,7 @@ module Google
       # NormalizeLatLng(180.0, 10.0) assert (-90.0, 10.0) == NormalizeLatLng(270.0, 10.
       # 0) assert (90.0, 10.0) == NormalizeLatLng(-270.0, 10.0)
       class LatLng
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The latitude in degrees. It must be in the range [-90.0, +90.0].
         # Corresponds to the JSON property `latitude`
@@ -699,7 +699,7 @@ module Google
       
       # Basic information from a public profile.
       class PublicProfile
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID which can be used to retrieve more details about the public profile.
         # Corresponds to the JSON property `id`
@@ -736,7 +736,7 @@ module Google
       
       # Google Partners certification status.
       class CertificationStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of the certification.
         # Corresponds to the JSON property `type`
@@ -745,7 +745,7 @@ module Google
       
         # List of certification exam statuses.
         # Corresponds to the JSON property `examStatuses`
-        # @return [Array<Google::Apis::PartnersV2::CertificationExamStatus>]
+        # @return [Array<GoogleAPI::Apis::PartnersV2::CertificationExamStatus>]
         attr_accessor :exam_statuses
       
         # Whether certification is passing.
@@ -768,7 +768,7 @@ module Google
       
       # Status for a Google Partners certification exam.
       class CertificationExamStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of certification exam.
         # Corresponds to the JSON property `type`
@@ -793,7 +793,7 @@ module Google
       
       # Information related to ranking of results.
       class Rank
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of rank.
         # Corresponds to the JSON property `type`
@@ -818,16 +818,16 @@ module Google
       
       # Response message for ListCompanies.
       class ListCompaniesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Common data that is in each API response.
         # Corresponds to the JSON property `responseMetadata`
-        # @return [Google::Apis::PartnersV2::ResponseMetadata]
+        # @return [GoogleAPI::Apis::PartnersV2::ResponseMetadata]
         attr_accessor :response_metadata
       
         # The list of companies.
         # Corresponds to the JSON property `companies`
-        # @return [Array<Google::Apis::PartnersV2::Company>]
+        # @return [Array<GoogleAPI::Apis::PartnersV2::Company>]
         attr_accessor :companies
       
         # A token to retrieve next page of results. Pass this value in the `
@@ -851,22 +851,22 @@ module Google
       
       # Request message for CreateLead.
       class CreateLeadRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Common data that is in each API request.
         # Corresponds to the JSON property `requestMetadata`
-        # @return [Google::Apis::PartnersV2::RequestMetadata]
+        # @return [GoogleAPI::Apis::PartnersV2::RequestMetadata]
         attr_accessor :request_metadata
       
         # A lead resource that represents an advertiser contact for a `Company`. These
         # are usually generated via Google Partner Search (the advertiser portal).
         # Corresponds to the JSON property `lead`
-        # @return [Google::Apis::PartnersV2::Lead]
+        # @return [GoogleAPI::Apis::PartnersV2::Lead]
         attr_accessor :lead
       
         # reCaptcha challenge info.
         # Corresponds to the JSON property `recaptchaChallenge`
-        # @return [Google::Apis::PartnersV2::RecaptchaChallenge]
+        # @return [GoogleAPI::Apis::PartnersV2::RecaptchaChallenge]
         attr_accessor :recaptcha_challenge
       
         def initialize(**args)
@@ -883,7 +883,7 @@ module Google
       
       # reCaptcha challenge info.
       class RecaptchaChallenge
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the reCaptcha challenge.
         # Corresponds to the JSON property `id`
@@ -908,17 +908,17 @@ module Google
       
       # Response message for CreateLead. Debug information about this request.
       class CreateLeadResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Common data that is in each API response.
         # Corresponds to the JSON property `responseMetadata`
-        # @return [Google::Apis::PartnersV2::ResponseMetadata]
+        # @return [GoogleAPI::Apis::PartnersV2::ResponseMetadata]
         attr_accessor :response_metadata
       
         # A lead resource that represents an advertiser contact for a `Company`. These
         # are usually generated via Google Partner Search (the advertiser portal).
         # Corresponds to the JSON property `lead`
-        # @return [Google::Apis::PartnersV2::Lead]
+        # @return [GoogleAPI::Apis::PartnersV2::Lead]
         attr_accessor :lead
       
         # The outcome of reCaptcha validation.

@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module GanV1beta1
       # Google Affiliate Network API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/gan_v1beta1'
       #
-      #    Gan = Google::Apis::GanV1beta1 # Alias the module
+      #    Gan = GoogleAPI::Apis::GanV1beta1 # Alias the module
       #    service = Gan::GanService.new
       #
       # @see https://developers.google.com/affiliate-network/
-      class GanService < Google::Apis::Core::BaseService
+      class GanService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -71,22 +71,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::GanV1beta1::Advertiser] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::GanV1beta1::Advertiser] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::GanV1beta1::Advertiser]
+        # @return [GoogleAPI::Apis::GanV1beta1::Advertiser]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_advertiser(role, role_id, advertiser_id: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{role}/{roleId}/advertiser', options)
-          command.response_representation = Google::Apis::GanV1beta1::Advertiser::Representation
-          command.response_class = Google::Apis::GanV1beta1::Advertiser
+          command.response_representation = GoogleAPI::Apis::GanV1beta1::Advertiser::Representation
+          command.response_class = GoogleAPI::Apis::GanV1beta1::Advertiser
           command.params['role'] = role unless role.nil?
           command.params['roleId'] = role_id unless role_id.nil?
           command.query['advertiserId'] = advertiser_id unless advertiser_id.nil?
@@ -135,22 +135,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::GanV1beta1::Advertisers] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::GanV1beta1::Advertisers] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::GanV1beta1::Advertisers]
+        # @return [GoogleAPI::Apis::GanV1beta1::Advertisers]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_advertisers(role, role_id, advertiser_category: nil, max_results: nil, min_ninety_day_epc: nil, min_payout_rank: nil, min_seven_day_epc: nil, page_token: nil, relationship_status: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{role}/{roleId}/advertisers', options)
-          command.response_representation = Google::Apis::GanV1beta1::Advertisers::Representation
-          command.response_class = Google::Apis::GanV1beta1::Advertisers
+          command.response_representation = GoogleAPI::Apis::GanV1beta1::Advertisers::Representation
+          command.response_class = GoogleAPI::Apis::GanV1beta1::Advertisers
           command.params['role'] = role unless role.nil?
           command.params['roleId'] = role_id unless role_id.nil?
           command.query['advertiserCategory'] = advertiser_category unless advertiser_category.nil?
@@ -183,22 +183,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::GanV1beta1::CcOffers] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::GanV1beta1::CcOffers] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::GanV1beta1::CcOffers]
+        # @return [GoogleAPI::Apis::GanV1beta1::CcOffers]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_cc_offers(publisher, advertiser: nil, projection: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'publishers/{publisher}/ccOffers', options)
-          command.response_representation = Google::Apis::GanV1beta1::CcOffers::Representation
-          command.response_class = Google::Apis::GanV1beta1::CcOffers
+          command.response_representation = GoogleAPI::Apis::GanV1beta1::CcOffers::Representation
+          command.response_class = GoogleAPI::Apis::GanV1beta1::CcOffers
           command.params['publisher'] = publisher unless publisher.nil?
           command.query['advertiser'] = advertiser unless advertiser.nil?
           command.query['projection'] = projection unless projection.nil?
@@ -271,22 +271,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::GanV1beta1::Events] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::GanV1beta1::Events] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::GanV1beta1::Events]
+        # @return [GoogleAPI::Apis::GanV1beta1::Events]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_events(role, role_id, advertiser_id: nil, charge_type: nil, event_date_max: nil, event_date_min: nil, link_id: nil, max_results: nil, member_id: nil, modify_date_max: nil, modify_date_min: nil, order_id: nil, page_token: nil, product_category: nil, publisher_id: nil, sku: nil, status: nil, type: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{role}/{roleId}/events', options)
-          command.response_representation = Google::Apis::GanV1beta1::Events::Representation
-          command.response_class = Google::Apis::GanV1beta1::Events
+          command.response_representation = GoogleAPI::Apis::GanV1beta1::Events::Representation
+          command.response_class = GoogleAPI::Apis::GanV1beta1::Events
           command.params['role'] = role unless role.nil?
           command.params['roleId'] = role_id unless role_id.nil?
           command.query['advertiserId'] = advertiser_id unless advertiser_id.nil?
@@ -330,22 +330,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::GanV1beta1::Link] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::GanV1beta1::Link] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::GanV1beta1::Link]
+        # @return [GoogleAPI::Apis::GanV1beta1::Link]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_link(role, role_id, link_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{role}/{roleId}/link/{linkId}', options)
-          command.response_representation = Google::Apis::GanV1beta1::Link::Representation
-          command.response_class = Google::Apis::GanV1beta1::Link
+          command.response_representation = GoogleAPI::Apis::GanV1beta1::Link::Representation
+          command.response_class = GoogleAPI::Apis::GanV1beta1::Link
           command.params['role'] = role unless role.nil?
           command.params['roleId'] = role_id unless role_id.nil?
           command.params['linkId'] = link_id unless link_id.nil?
@@ -360,7 +360,7 @@ module Google
         #   The role of the requester. Valid values: 'advertisers' or 'publishers'.
         # @param [String] role_id
         #   The ID of the requesting advertiser or publisher.
-        # @param [Google::Apis::GanV1beta1::Link] link_object
+        # @param [GoogleAPI::Apis::GanV1beta1::Link] link_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -370,24 +370,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::GanV1beta1::Link] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::GanV1beta1::Link] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::GanV1beta1::Link]
+        # @return [GoogleAPI::Apis::GanV1beta1::Link]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_link(role, role_id, link_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{role}/{roleId}/link', options)
-          command.request_representation = Google::Apis::GanV1beta1::Link::Representation
+          command.request_representation = GoogleAPI::Apis::GanV1beta1::Link::Representation
           command.request_object = link_object
-          command.response_representation = Google::Apis::GanV1beta1::Link::Representation
-          command.response_class = Google::Apis::GanV1beta1::Link
+          command.response_representation = GoogleAPI::Apis::GanV1beta1::Link::Representation
+          command.response_class = GoogleAPI::Apis::GanV1beta1::Link
           command.params['role'] = role unless role.nil?
           command.params['roleId'] = role_id unless role_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -437,22 +437,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::GanV1beta1::Links] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::GanV1beta1::Links] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::GanV1beta1::Links]
+        # @return [GoogleAPI::Apis::GanV1beta1::Links]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_links(role, role_id, advertiser_id: nil, asset_size: nil, authorship: nil, create_date_max: nil, create_date_min: nil, link_type: nil, max_results: nil, page_token: nil, promotion_type: nil, relationship_status: nil, search_text: nil, start_date_max: nil, start_date_min: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{role}/{roleId}/links', options)
-          command.response_representation = Google::Apis::GanV1beta1::Links::Representation
-          command.response_class = Google::Apis::GanV1beta1::Links
+          command.response_representation = GoogleAPI::Apis::GanV1beta1::Links::Representation
+          command.response_class = GoogleAPI::Apis::GanV1beta1::Links
           command.params['role'] = role unless role.nil?
           command.params['roleId'] = role_id unless role_id.nil?
           command.query['advertiserId'] = advertiser_id unless advertiser_id.nil?
@@ -493,22 +493,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::GanV1beta1::Publisher] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::GanV1beta1::Publisher] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::GanV1beta1::Publisher]
+        # @return [GoogleAPI::Apis::GanV1beta1::Publisher]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_publisher(role, role_id, publisher_id: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{role}/{roleId}/publisher', options)
-          command.response_representation = Google::Apis::GanV1beta1::Publisher::Representation
-          command.response_class = Google::Apis::GanV1beta1::Publisher
+          command.response_representation = GoogleAPI::Apis::GanV1beta1::Publisher::Representation
+          command.response_class = GoogleAPI::Apis::GanV1beta1::Publisher
           command.params['role'] = role unless role.nil?
           command.params['roleId'] = role_id unless role_id.nil?
           command.query['publisherId'] = publisher_id unless publisher_id.nil?
@@ -557,22 +557,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::GanV1beta1::Publishers] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::GanV1beta1::Publishers] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::GanV1beta1::Publishers]
+        # @return [GoogleAPI::Apis::GanV1beta1::Publishers]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_publishers(role, role_id, max_results: nil, min_ninety_day_epc: nil, min_payout_rank: nil, min_seven_day_epc: nil, page_token: nil, publisher_category: nil, relationship_status: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{role}/{roleId}/publishers', options)
-          command.response_representation = Google::Apis::GanV1beta1::Publishers::Representation
-          command.response_class = Google::Apis::GanV1beta1::Publishers
+          command.response_representation = GoogleAPI::Apis::GanV1beta1::Publishers::Representation
+          command.response_class = GoogleAPI::Apis::GanV1beta1::Publishers
           command.params['role'] = role unless role.nil?
           command.params['roleId'] = role_id unless role_id.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -633,22 +633,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::GanV1beta1::Report] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::GanV1beta1::Report] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::GanV1beta1::Report]
+        # @return [GoogleAPI::Apis::GanV1beta1::Report]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_report(role, role_id, report_type, advertiser_id: nil, calculate_totals: nil, end_date: nil, event_type: nil, link_id: nil, max_results: nil, order_id: nil, publisher_id: nil, start_date: nil, start_index: nil, status: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{role}/{roleId}/report/{reportType}', options)
-          command.response_representation = Google::Apis::GanV1beta1::Report::Representation
-          command.response_class = Google::Apis::GanV1beta1::Report
+          command.response_representation = GoogleAPI::Apis::GanV1beta1::Report::Representation
+          command.response_class = GoogleAPI::Apis::GanV1beta1::Report
           command.params['role'] = role unless role.nil?
           command.params['roleId'] = role_id unless role_id.nil?
           command.params['reportType'] = report_type unless report_type.nil?

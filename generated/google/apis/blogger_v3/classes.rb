@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module BloggerV3
       
       # 
       class Blog
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The JSON custom meta-data for the Blog
         # Corresponds to the JSON property `customMetaData`
@@ -48,7 +48,7 @@ module Google
       
         # The locale this Blog is set to.
         # Corresponds to the JSON property `locale`
-        # @return [Google::Apis::BloggerV3::Blog::Locale]
+        # @return [GoogleAPI::Apis::BloggerV3::Blog::Locale]
         attr_accessor :locale
       
         # The name of this blog. This is displayed as the title.
@@ -58,12 +58,12 @@ module Google
       
         # The container of pages in this blog.
         # Corresponds to the JSON property `pages`
-        # @return [Google::Apis::BloggerV3::Blog::Pages]
+        # @return [GoogleAPI::Apis::BloggerV3::Blog::Pages]
         attr_accessor :pages
       
         # The container of posts in this blog.
         # Corresponds to the JSON property `posts`
-        # @return [Google::Apis::BloggerV3::Blog::Posts]
+        # @return [GoogleAPI::Apis::BloggerV3::Blog::Posts]
         attr_accessor :posts
       
         # RFC 3339 date-time when this blog was published.
@@ -114,7 +114,7 @@ module Google
         
         # The locale this Blog is set to.
         class Locale
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The country this blog's locale is set to.
           # Corresponds to the JSON property `country`
@@ -145,7 +145,7 @@ module Google
         
         # The container of pages in this blog.
         class Pages
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The URL of the container for pages in this blog.
           # Corresponds to the JSON property `selfLink`
@@ -170,11 +170,11 @@ module Google
         
         # The container of posts in this blog.
         class Posts
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The List of Posts for this Blog.
           # Corresponds to the JSON property `items`
-          # @return [Array<Google::Apis::BloggerV3::Post>]
+          # @return [Array<GoogleAPI::Apis::BloggerV3::Post>]
           attr_accessor :items
         
           # The URL of the container for posts in this blog.
@@ -202,16 +202,16 @@ module Google
       
       # 
       class BlogList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Admin level list of blog per-user information
         # Corresponds to the JSON property `blogUserInfos`
-        # @return [Array<Google::Apis::BloggerV3::BlogUserInfo>]
+        # @return [Array<GoogleAPI::Apis::BloggerV3::BlogUserInfo>]
         attr_accessor :blog_user_infos
       
         # The list of Blogs this user has Authorship or Admin rights over.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::BloggerV3::Blog>]
+        # @return [Array<GoogleAPI::Apis::BloggerV3::Blog>]
         attr_accessor :items
       
         # The kind of this entity. Always blogger#blogList
@@ -233,7 +233,7 @@ module Google
       
       # 
       class BlogPerUserInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of the Blog resource
         # Corresponds to the JSON property `blogId`
@@ -283,16 +283,16 @@ module Google
       
       # 
       class BlogUserInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The Blog resource.
         # Corresponds to the JSON property `blog`
-        # @return [Google::Apis::BloggerV3::Blog]
+        # @return [GoogleAPI::Apis::BloggerV3::Blog]
         attr_accessor :blog
       
         # Information about a User for the Blog.
         # Corresponds to the JSON property `blog_user_info`
-        # @return [Google::Apis::BloggerV3::BlogPerUserInfo]
+        # @return [GoogleAPI::Apis::BloggerV3::BlogPerUserInfo]
         attr_accessor :blog_user_info
       
         # The kind of this entity. Always blogger#blogUserInfo
@@ -314,16 +314,16 @@ module Google
       
       # 
       class Comment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The author of this Comment.
         # Corresponds to the JSON property `author`
-        # @return [Google::Apis::BloggerV3::Comment::Author]
+        # @return [GoogleAPI::Apis::BloggerV3::Comment::Author]
         attr_accessor :author
       
         # Data about the blog containing this comment.
         # Corresponds to the JSON property `blog`
-        # @return [Google::Apis::BloggerV3::Comment::Blog]
+        # @return [GoogleAPI::Apis::BloggerV3::Comment::Blog]
         attr_accessor :blog
       
         # The actual content of the comment. May include HTML markup.
@@ -338,7 +338,7 @@ module Google
       
         # Data about the comment this is in reply to.
         # Corresponds to the JSON property `inReplyTo`
-        # @return [Google::Apis::BloggerV3::Comment::InReplyTo]
+        # @return [GoogleAPI::Apis::BloggerV3::Comment::InReplyTo]
         attr_accessor :in_reply_to
       
         # The kind of this entry. Always blogger#comment
@@ -348,7 +348,7 @@ module Google
       
         # Data about the post containing this comment.
         # Corresponds to the JSON property `post`
-        # @return [Google::Apis::BloggerV3::Comment::Post]
+        # @return [GoogleAPI::Apis::BloggerV3::Comment::Post]
         attr_accessor :post
       
         # RFC 3339 date-time when this comment was published.
@@ -392,7 +392,7 @@ module Google
         
         # The author of this Comment.
         class Author
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The display name.
           # Corresponds to the JSON property `displayName`
@@ -406,7 +406,7 @@ module Google
         
           # The comment creator's avatar.
           # Corresponds to the JSON property `image`
-          # @return [Google::Apis::BloggerV3::Comment::Author::Image]
+          # @return [GoogleAPI::Apis::BloggerV3::Comment::Author::Image]
           attr_accessor :image
         
           # The URL of the Comment creator's Profile page.
@@ -428,7 +428,7 @@ module Google
           
           # The comment creator's avatar.
           class Image
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The comment creator's avatar URL.
             # Corresponds to the JSON property `url`
@@ -448,7 +448,7 @@ module Google
         
         # Data about the blog containing this comment.
         class Blog
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The identifier of the blog containing this comment.
           # Corresponds to the JSON property `id`
@@ -467,7 +467,7 @@ module Google
         
         # Data about the comment this is in reply to.
         class InReplyTo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The identified of the parent of this comment.
           # Corresponds to the JSON property `id`
@@ -486,7 +486,7 @@ module Google
         
         # Data about the post containing this comment.
         class Post
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The identifier of the post containing this comment.
           # Corresponds to the JSON property `id`
@@ -506,7 +506,7 @@ module Google
       
       # 
       class CommentList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of the response.
         # Corresponds to the JSON property `etag`
@@ -515,7 +515,7 @@ module Google
       
         # The List of Comments for a Post.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::BloggerV3::Comment>]
+        # @return [Array<GoogleAPI::Apis::BloggerV3::Comment>]
         attr_accessor :items
       
         # The kind of this entry. Always blogger#commentList
@@ -549,16 +549,16 @@ module Google
       
       # 
       class Page
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The author of this Page.
         # Corresponds to the JSON property `author`
-        # @return [Google::Apis::BloggerV3::Page::Author]
+        # @return [GoogleAPI::Apis::BloggerV3::Page::Author]
         attr_accessor :author
       
         # Data about the blog containing this Page.
         # Corresponds to the JSON property `blog`
-        # @return [Google::Apis::BloggerV3::Page::Blog]
+        # @return [GoogleAPI::Apis::BloggerV3::Page::Blog]
         attr_accessor :blog
       
         # The body content of this Page, in HTML.
@@ -634,7 +634,7 @@ module Google
         
         # The author of this Page.
         class Author
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The display name.
           # Corresponds to the JSON property `displayName`
@@ -648,7 +648,7 @@ module Google
         
           # The page author's avatar.
           # Corresponds to the JSON property `image`
-          # @return [Google::Apis::BloggerV3::Page::Author::Image]
+          # @return [GoogleAPI::Apis::BloggerV3::Page::Author::Image]
           attr_accessor :image
         
           # The URL of the Page creator's Profile page.
@@ -670,7 +670,7 @@ module Google
           
           # The page author's avatar.
           class Image
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The page author's avatar URL.
             # Corresponds to the JSON property `url`
@@ -690,7 +690,7 @@ module Google
         
         # Data about the blog containing this Page.
         class Blog
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The identifier of the blog containing this page.
           # Corresponds to the JSON property `id`
@@ -710,7 +710,7 @@ module Google
       
       # 
       class PageList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of the response.
         # Corresponds to the JSON property `etag`
@@ -719,7 +719,7 @@ module Google
       
         # The list of Pages for a Blog.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::BloggerV3::Page>]
+        # @return [Array<GoogleAPI::Apis::BloggerV3::Page>]
         attr_accessor :items
       
         # The kind of this entity. Always blogger#pageList
@@ -747,7 +747,7 @@ module Google
       
       # 
       class Pageviews
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Blog Id
         # Corresponds to the JSON property `blogId`
@@ -756,7 +756,7 @@ module Google
       
         # The container of posts in this blog.
         # Corresponds to the JSON property `counts`
-        # @return [Array<Google::Apis::BloggerV3::Pageviews::Count>]
+        # @return [Array<GoogleAPI::Apis::BloggerV3::Pageviews::Count>]
         attr_accessor :counts
       
         # The kind of this entry. Always blogger#page_views
@@ -777,7 +777,7 @@ module Google
         
         # 
         class Count
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Count of page views for the given time range
           # Corresponds to the JSON property `count`
@@ -803,16 +803,16 @@ module Google
       
       # 
       class Post
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The author of this Post.
         # Corresponds to the JSON property `author`
-        # @return [Google::Apis::BloggerV3::Post::Author]
+        # @return [GoogleAPI::Apis::BloggerV3::Post::Author]
         attr_accessor :author
       
         # Data about the blog containing this Post.
         # Corresponds to the JSON property `blog`
-        # @return [Google::Apis::BloggerV3::Post::Blog]
+        # @return [GoogleAPI::Apis::BloggerV3::Post::Blog]
         attr_accessor :blog
       
         # The content of the Post. May contain HTML markup.
@@ -837,7 +837,7 @@ module Google
       
         # Display image for the Post.
         # Corresponds to the JSON property `images`
-        # @return [Array<Google::Apis::BloggerV3::Post::Image>]
+        # @return [Array<GoogleAPI::Apis::BloggerV3::Post::Image>]
         attr_accessor :images
       
         # The kind of this entity. Always blogger#post
@@ -852,7 +852,7 @@ module Google
       
         # The location for geotagged posts.
         # Corresponds to the JSON property `location`
-        # @return [Google::Apis::BloggerV3::Post::Location]
+        # @return [GoogleAPI::Apis::BloggerV3::Post::Location]
         attr_accessor :location
       
         # RFC 3339 date-time when this Post was published.
@@ -867,7 +867,7 @@ module Google
       
         # The container of comments on this Post.
         # Corresponds to the JSON property `replies`
-        # @return [Google::Apis::BloggerV3::Post::Replies]
+        # @return [GoogleAPI::Apis::BloggerV3::Post::Replies]
         attr_accessor :replies
       
         # The API REST URL to fetch this resource from.
@@ -929,7 +929,7 @@ module Google
         
         # The author of this Post.
         class Author
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The display name.
           # Corresponds to the JSON property `displayName`
@@ -943,7 +943,7 @@ module Google
         
           # The Post author's avatar.
           # Corresponds to the JSON property `image`
-          # @return [Google::Apis::BloggerV3::Post::Author::Image]
+          # @return [GoogleAPI::Apis::BloggerV3::Post::Author::Image]
           attr_accessor :image
         
           # The URL of the Post creator's Profile page.
@@ -965,7 +965,7 @@ module Google
           
           # The Post author's avatar.
           class Image
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The Post author's avatar URL.
             # Corresponds to the JSON property `url`
@@ -985,7 +985,7 @@ module Google
         
         # Data about the blog containing this Post.
         class Blog
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The identifier of the Blog that contains this Post.
           # Corresponds to the JSON property `id`
@@ -1004,7 +1004,7 @@ module Google
         
         # 
         class Image
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `url`
@@ -1023,7 +1023,7 @@ module Google
         
         # The location for geotagged posts.
         class Location
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Location's latitude.
           # Corresponds to the JSON property `lat`
@@ -1060,11 +1060,11 @@ module Google
         
         # The container of comments on this Post.
         class Replies
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The List of Comments for this Post.
           # Corresponds to the JSON property `items`
-          # @return [Array<Google::Apis::BloggerV3::Comment>]
+          # @return [Array<GoogleAPI::Apis::BloggerV3::Comment>]
           attr_accessor :items
         
           # The URL of the comments on this post.
@@ -1092,7 +1092,7 @@ module Google
       
       # 
       class PostList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of the response.
         # Corresponds to the JSON property `etag`
@@ -1101,7 +1101,7 @@ module Google
       
         # The list of Posts for this Blog.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::BloggerV3::Post>]
+        # @return [Array<GoogleAPI::Apis::BloggerV3::Post>]
         attr_accessor :items
       
         # The kind of this entity. Always blogger#postList
@@ -1129,7 +1129,7 @@ module Google
       
       # 
       class PostPerUserInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of the Blog that the post resource belongs to.
         # Corresponds to the JSON property `blogId`
@@ -1173,7 +1173,7 @@ module Google
       
       # 
       class PostUserInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The kind of this entity. Always blogger#postUserInfo
         # Corresponds to the JSON property `kind`
@@ -1182,12 +1182,12 @@ module Google
       
         # The Post resource.
         # Corresponds to the JSON property `post`
-        # @return [Google::Apis::BloggerV3::Post]
+        # @return [GoogleAPI::Apis::BloggerV3::Post]
         attr_accessor :post
       
         # Information about a User for the Post.
         # Corresponds to the JSON property `post_user_info`
-        # @return [Google::Apis::BloggerV3::PostPerUserInfo]
+        # @return [GoogleAPI::Apis::BloggerV3::PostPerUserInfo]
         attr_accessor :post_user_info
       
         def initialize(**args)
@@ -1204,11 +1204,11 @@ module Google
       
       # 
       class PostUserInfosList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of Posts with User information for the post, for this Blog.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::BloggerV3::PostUserInfo>]
+        # @return [Array<GoogleAPI::Apis::BloggerV3::PostUserInfo>]
         attr_accessor :items
       
         # The kind of this entity. Always blogger#postList
@@ -1235,7 +1235,7 @@ module Google
       
       # 
       class User
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Profile summary information.
         # Corresponds to the JSON property `about`
@@ -1244,7 +1244,7 @@ module Google
       
         # The container of blogs for this user.
         # Corresponds to the JSON property `blogs`
-        # @return [Google::Apis::BloggerV3::User::Blogs]
+        # @return [GoogleAPI::Apis::BloggerV3::User::Blogs]
         attr_accessor :blogs
       
         # The timestamp of when this profile was created, in seconds since epoch.
@@ -1269,7 +1269,7 @@ module Google
       
         # This user's locale
         # Corresponds to the JSON property `locale`
-        # @return [Google::Apis::BloggerV3::User::Locale]
+        # @return [GoogleAPI::Apis::BloggerV3::User::Locale]
         attr_accessor :locale
       
         # The API REST URL to fetch this resource from.
@@ -1301,7 +1301,7 @@ module Google
         
         # The container of blogs for this user.
         class Blogs
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The URL of the Blogs for this user.
           # Corresponds to the JSON property `selfLink`
@@ -1320,7 +1320,7 @@ module Google
         
         # This user's locale
         class Locale
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The user's country setting.
           # Corresponds to the JSON property `country`

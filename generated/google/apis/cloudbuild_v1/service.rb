@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CloudbuildV1
       # Google Cloud Container Builder API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/cloudbuild_v1'
       #
-      #    Cloudbuild = Google::Apis::CloudbuildV1 # Alias the module
+      #    Cloudbuild = GoogleAPI::Apis::CloudbuildV1 # Alias the module
       #    service = Cloudbuild::CloudBuildService.new
       #
       # @see https://cloud.google.com/container-builder/docs/
-      class CloudBuildService < Google::Apis::Core::BaseService
+      class CloudBuildService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -52,30 +52,30 @@ module Google
         # success or failure).
         # @param [String] project_id
         #   ID of the project.
-        # @param [Google::Apis::CloudbuildV1::Build] build_object
+        # @param [GoogleAPI::Apis::CloudbuildV1::Build] build_object
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudbuildV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudbuildV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudbuildV1::Operation]
+        # @return [GoogleAPI::Apis::CloudbuildV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_project_build(project_id, build_object = nil, quota_user: nil, fields: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/projects/{projectId}/builds', options)
-          command.request_representation = Google::Apis::CloudbuildV1::Build::Representation
+          command.request_representation = GoogleAPI::Apis::CloudbuildV1::Build::Representation
           command.request_object = build_object
-          command.response_representation = Google::Apis::CloudbuildV1::Operation::Representation
-          command.response_class = Google::Apis::CloudbuildV1::Operation
+          command.response_representation = GoogleAPI::Apis::CloudbuildV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::CloudbuildV1::Operation
           command.params['projectId'] = project_id unless project_id.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -94,22 +94,22 @@ module Google
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudbuildV1::Build] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudbuildV1::Build] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudbuildV1::Build]
+        # @return [GoogleAPI::Apis::CloudbuildV1::Build]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_project_build(project_id, id, quota_user: nil, fields: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/projects/{projectId}/builds/{id}', options)
-          command.response_representation = Google::Apis::CloudbuildV1::Build::Representation
-          command.response_class = Google::Apis::CloudbuildV1::Build
+          command.response_representation = GoogleAPI::Apis::CloudbuildV1::Build::Representation
+          command.response_class = GoogleAPI::Apis::CloudbuildV1::Build
           command.params['projectId'] = project_id unless project_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -131,22 +131,22 @@ module Google
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudbuildV1::ListBuildsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudbuildV1::ListBuildsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudbuildV1::ListBuildsResponse]
+        # @return [GoogleAPI::Apis::CloudbuildV1::ListBuildsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_project_builds(project_id, page_size: nil, page_token: nil, quota_user: nil, fields: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/projects/{projectId}/builds', options)
-          command.response_representation = Google::Apis::CloudbuildV1::ListBuildsResponse::Representation
-          command.response_class = Google::Apis::CloudbuildV1::ListBuildsResponse
+          command.response_representation = GoogleAPI::Apis::CloudbuildV1::ListBuildsResponse::Representation
+          command.response_class = GoogleAPI::Apis::CloudbuildV1::ListBuildsResponse
           command.params['projectId'] = project_id unless project_id.nil?
           command.query['pageSize'] = page_size unless page_size.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -160,30 +160,30 @@ module Google
         #   ID of the project.
         # @param [String] id
         #   ID of the build.
-        # @param [Google::Apis::CloudbuildV1::CancelBuildRequest] cancel_build_request_object
+        # @param [GoogleAPI::Apis::CloudbuildV1::CancelBuildRequest] cancel_build_request_object
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudbuildV1::Build] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudbuildV1::Build] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudbuildV1::Build]
+        # @return [GoogleAPI::Apis::CloudbuildV1::Build]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def cancel_build(project_id, id, cancel_build_request_object = nil, quota_user: nil, fields: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/projects/{projectId}/builds/{id}:cancel', options)
-          command.request_representation = Google::Apis::CloudbuildV1::CancelBuildRequest::Representation
+          command.request_representation = GoogleAPI::Apis::CloudbuildV1::CancelBuildRequest::Representation
           command.request_object = cancel_build_request_object
-          command.response_representation = Google::Apis::CloudbuildV1::Build::Representation
-          command.response_class = Google::Apis::CloudbuildV1::Build
+          command.response_representation = GoogleAPI::Apis::CloudbuildV1::Build::Representation
+          command.response_class = GoogleAPI::Apis::CloudbuildV1::Build
           command.params['projectId'] = project_id unless project_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -201,22 +201,22 @@ module Google
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudbuildV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudbuildV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudbuildV1::Operation]
+        # @return [GoogleAPI::Apis::CloudbuildV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_operation(name, quota_user: nil, fields: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/{+name}', options)
-          command.response_representation = Google::Apis::CloudbuildV1::Operation::Representation
-          command.response_class = Google::Apis::CloudbuildV1::Operation
+          command.response_representation = GoogleAPI::Apis::CloudbuildV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::CloudbuildV1::Operation
           command.params['name'] = name unless name.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -240,22 +240,22 @@ module Google
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudbuildV1::ListOperationsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudbuildV1::ListOperationsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudbuildV1::ListOperationsResponse]
+        # @return [GoogleAPI::Apis::CloudbuildV1::ListOperationsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_operations(name, page_size: nil, filter: nil, page_token: nil, quota_user: nil, fields: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/{+name}', options)
-          command.response_representation = Google::Apis::CloudbuildV1::ListOperationsResponse::Representation
-          command.response_class = Google::Apis::CloudbuildV1::ListOperationsResponse
+          command.response_representation = GoogleAPI::Apis::CloudbuildV1::ListOperationsResponse::Representation
+          command.response_class = GoogleAPI::Apis::CloudbuildV1::ListOperationsResponse
           command.params['name'] = name unless name.nil?
           command.query['pageSize'] = page_size unless page_size.nil?
           command.query['filter'] = filter unless filter.nil?

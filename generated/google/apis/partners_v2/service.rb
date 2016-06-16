@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module PartnersV2
       # Google Partners API
@@ -28,11 +28,11 @@ module Google
       # @example
       #    require 'google/apis/partners_v2'
       #
-      #    Partners = Google::Apis::PartnersV2 # Alias the module
+      #    Partners = GoogleAPI::Apis::PartnersV2 # Alias the module
       #    service = Partners::PartnersService.new
       #
       # @see https://developers.google.com/partners/
-      class PartnersService < Google::Apis::Core::BaseService
+      class PartnersService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -48,30 +48,30 @@ module Google
         end
         
         # Logs a user event.
-        # @param [Google::Apis::PartnersV2::LogUserEventRequest] log_user_event_request_object
+        # @param [GoogleAPI::Apis::PartnersV2::LogUserEventRequest] log_user_event_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PartnersV2::LogUserEventResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PartnersV2::LogUserEventResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PartnersV2::LogUserEventResponse]
+        # @return [GoogleAPI::Apis::PartnersV2::LogUserEventResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def log_user_event(log_user_event_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v2/userEvents:log', options)
-          command.request_representation = Google::Apis::PartnersV2::LogUserEventRequest::Representation
+          command.request_representation = GoogleAPI::Apis::PartnersV2::LogUserEventRequest::Representation
           command.request_object = log_user_event_request_object
-          command.response_representation = Google::Apis::PartnersV2::LogUserEventResponse::Representation
-          command.response_class = Google::Apis::PartnersV2::LogUserEventResponse
+          command.response_representation = GoogleAPI::Apis::PartnersV2::LogUserEventResponse::Representation
+          command.response_class = GoogleAPI::Apis::PartnersV2::LogUserEventResponse
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           execute_or_queue_command(command, &block)
@@ -80,30 +80,30 @@ module Google
         # Logs a generic message from the client, such as `Failed to render component`, `
         # Profile page is running slow`, `More than 500 users have accessed this result.`
         # , etc.
-        # @param [Google::Apis::PartnersV2::LogMessageRequest] log_message_request_object
+        # @param [GoogleAPI::Apis::PartnersV2::LogMessageRequest] log_message_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PartnersV2::LogMessageResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PartnersV2::LogMessageResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PartnersV2::LogMessageResponse]
+        # @return [GoogleAPI::Apis::PartnersV2::LogMessageResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def log_client_message_message(log_message_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v2/clientMessages:log', options)
-          command.request_representation = Google::Apis::PartnersV2::LogMessageRequest::Representation
+          command.request_representation = GoogleAPI::Apis::PartnersV2::LogMessageRequest::Representation
           command.request_object = log_message_request_object
-          command.response_representation = Google::Apis::PartnersV2::LogMessageResponse::Representation
-          command.response_class = Google::Apis::PartnersV2::LogMessageResponse
+          command.response_representation = GoogleAPI::Apis::PartnersV2::LogMessageResponse::Representation
+          command.response_class = GoogleAPI::Apis::PartnersV2::LogMessageResponse
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           execute_or_queue_command(command, &block)
@@ -132,22 +132,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PartnersV2::ListUserStatesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PartnersV2::ListUserStatesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PartnersV2::ListUserStatesResponse]
+        # @return [GoogleAPI::Apis::PartnersV2::ListUserStatesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_user_states(request_metadata_user_overrides_ip_address: nil, request_metadata_user_overrides_user_id: nil, request_metadata_locale: nil, request_metadata_partners_session_id: nil, request_metadata_experiment_ids: nil, request_metadata_traffic_source_traffic_source_id: nil, request_metadata_traffic_source_traffic_sub_id: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v2/userStates', options)
-          command.response_representation = Google::Apis::PartnersV2::ListUserStatesResponse::Representation
-          command.response_class = Google::Apis::PartnersV2::ListUserStatesResponse
+          command.response_representation = GoogleAPI::Apis::PartnersV2::ListUserStatesResponse::Representation
+          command.response_class = GoogleAPI::Apis::PartnersV2::ListUserStatesResponse
           command.query['requestMetadata.userOverrides.ipAddress'] = request_metadata_user_overrides_ip_address unless request_metadata_user_overrides_ip_address.nil?
           command.query['requestMetadata.userOverrides.userId'] = request_metadata_user_overrides_user_id unless request_metadata_user_overrides_user_id.nil?
           command.query['requestMetadata.locale'] = request_metadata_locale unless request_metadata_locale.nil?
@@ -200,22 +200,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PartnersV2::GetCompanyResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PartnersV2::GetCompanyResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PartnersV2::GetCompanyResponse]
+        # @return [GoogleAPI::Apis::PartnersV2::GetCompanyResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_company(company_id, request_metadata_user_overrides_ip_address: nil, request_metadata_user_overrides_user_id: nil, request_metadata_locale: nil, request_metadata_partners_session_id: nil, request_metadata_experiment_ids: nil, request_metadata_traffic_source_traffic_source_id: nil, request_metadata_traffic_source_traffic_sub_id: nil, view: nil, order_by: nil, currency_code: nil, address: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v2/companies/{companyId}', options)
-          command.response_representation = Google::Apis::PartnersV2::GetCompanyResponse::Representation
-          command.response_class = Google::Apis::PartnersV2::GetCompanyResponse
+          command.response_representation = GoogleAPI::Apis::PartnersV2::GetCompanyResponse::Representation
+          command.response_class = GoogleAPI::Apis::PartnersV2::GetCompanyResponse
           command.params['companyId'] = company_id unless company_id.nil?
           command.query['requestMetadata.userOverrides.ipAddress'] = request_metadata_user_overrides_ip_address unless request_metadata_user_overrides_ip_address.nil?
           command.query['requestMetadata.userOverrides.userId'] = request_metadata_user_overrides_user_id unless request_metadata_user_overrides_user_id.nil?
@@ -310,22 +310,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PartnersV2::ListCompaniesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PartnersV2::ListCompaniesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PartnersV2::ListCompaniesResponse]
+        # @return [GoogleAPI::Apis::PartnersV2::ListCompaniesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_companies(request_metadata_user_overrides_ip_address: nil, request_metadata_user_overrides_user_id: nil, request_metadata_locale: nil, request_metadata_partners_session_id: nil, request_metadata_experiment_ids: nil, request_metadata_traffic_source_traffic_source_id: nil, request_metadata_traffic_source_traffic_sub_id: nil, page_size: nil, page_token: nil, company_name: nil, view: nil, min_monthly_budget_currency_code: nil, min_monthly_budget_units: nil, min_monthly_budget_nanos: nil, max_monthly_budget_currency_code: nil, max_monthly_budget_units: nil, max_monthly_budget_nanos: nil, industries: nil, services: nil, language_codes: nil, address: nil, order_by: nil, gps_motivations: nil, website_url: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v2/companies', options)
-          command.response_representation = Google::Apis::PartnersV2::ListCompaniesResponse::Representation
-          command.response_class = Google::Apis::PartnersV2::ListCompaniesResponse
+          command.response_representation = GoogleAPI::Apis::PartnersV2::ListCompaniesResponse::Representation
+          command.response_class = GoogleAPI::Apis::PartnersV2::ListCompaniesResponse
           command.query['requestMetadata.userOverrides.ipAddress'] = request_metadata_user_overrides_ip_address unless request_metadata_user_overrides_ip_address.nil?
           command.query['requestMetadata.userOverrides.userId'] = request_metadata_user_overrides_user_id unless request_metadata_user_overrides_user_id.nil?
           command.query['requestMetadata.locale'] = request_metadata_locale unless request_metadata_locale.nil?
@@ -358,30 +358,30 @@ module Google
         # Creates an advertiser lead for the given company ID.
         # @param [String] company_id
         #   The ID of the company to contact.
-        # @param [Google::Apis::PartnersV2::CreateLeadRequest] create_lead_request_object
+        # @param [GoogleAPI::Apis::PartnersV2::CreateLeadRequest] create_lead_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PartnersV2::CreateLeadResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PartnersV2::CreateLeadResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PartnersV2::CreateLeadResponse]
+        # @return [GoogleAPI::Apis::PartnersV2::CreateLeadResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_lead(company_id, create_lead_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v2/companies/{companyId}/leads', options)
-          command.request_representation = Google::Apis::PartnersV2::CreateLeadRequest::Representation
+          command.request_representation = GoogleAPI::Apis::PartnersV2::CreateLeadRequest::Representation
           command.request_object = create_lead_request_object
-          command.response_representation = Google::Apis::PartnersV2::CreateLeadResponse::Representation
-          command.response_class = Google::Apis::PartnersV2::CreateLeadResponse
+          command.response_representation = GoogleAPI::Apis::PartnersV2::CreateLeadResponse::Representation
+          command.response_class = GoogleAPI::Apis::PartnersV2::CreateLeadResponse
           command.params['companyId'] = company_id unless company_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?

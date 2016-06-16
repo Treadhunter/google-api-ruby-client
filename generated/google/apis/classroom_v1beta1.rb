@@ -16,7 +16,7 @@ require 'google/apis/classroom_v1beta1/service.rb'
 require 'google/apis/classroom_v1beta1/classes.rb'
 require 'google/apis/classroom_v1beta1/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Google Classroom API
     #

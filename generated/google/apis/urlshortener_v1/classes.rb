@@ -18,24 +18,24 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module UrlshortenerV1
       
       # 
       class AnalyticsSnapshot
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Top browsers, e.g. "Chrome"; sorted by (descending) click counts. Only present
         # if this data is available.
         # Corresponds to the JSON property `browsers`
-        # @return [Array<Google::Apis::UrlshortenerV1::StringCount>]
+        # @return [Array<GoogleAPI::Apis::UrlshortenerV1::StringCount>]
         attr_accessor :browsers
       
         # Top countries (expressed as country codes), e.g. "US" or "DE"; sorted by (
         # descending) click counts. Only present if this data is available.
         # Corresponds to the JSON property `countries`
-        # @return [Array<Google::Apis::UrlshortenerV1::StringCount>]
+        # @return [Array<GoogleAPI::Apis::UrlshortenerV1::StringCount>]
         attr_accessor :countries
       
         # Number of clicks on all goo.gl short URLs pointing to this long URL.
@@ -46,13 +46,13 @@ module Google
         # Top platforms or OSes, e.g. "Windows"; sorted by (descending) click counts.
         # Only present if this data is available.
         # Corresponds to the JSON property `platforms`
-        # @return [Array<Google::Apis::UrlshortenerV1::StringCount>]
+        # @return [Array<GoogleAPI::Apis::UrlshortenerV1::StringCount>]
         attr_accessor :platforms
       
         # Top referring hosts, e.g. "www.google.com"; sorted by (descending) click
         # counts. Only present if this data is available.
         # Corresponds to the JSON property `referrers`
-        # @return [Array<Google::Apis::UrlshortenerV1::StringCount>]
+        # @return [Array<GoogleAPI::Apis::UrlshortenerV1::StringCount>]
         attr_accessor :referrers
       
         # Number of clicks on this short URL.
@@ -77,31 +77,31 @@ module Google
       
       # 
       class AnalyticsSummary
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Click analytics over all time.
         # Corresponds to the JSON property `allTime`
-        # @return [Google::Apis::UrlshortenerV1::AnalyticsSnapshot]
+        # @return [GoogleAPI::Apis::UrlshortenerV1::AnalyticsSnapshot]
         attr_accessor :all_time
       
         # Click analytics over the last day.
         # Corresponds to the JSON property `day`
-        # @return [Google::Apis::UrlshortenerV1::AnalyticsSnapshot]
+        # @return [GoogleAPI::Apis::UrlshortenerV1::AnalyticsSnapshot]
         attr_accessor :day
       
         # Click analytics over the last month.
         # Corresponds to the JSON property `month`
-        # @return [Google::Apis::UrlshortenerV1::AnalyticsSnapshot]
+        # @return [GoogleAPI::Apis::UrlshortenerV1::AnalyticsSnapshot]
         attr_accessor :month
       
         # Click analytics over the last two hours.
         # Corresponds to the JSON property `twoHours`
-        # @return [Google::Apis::UrlshortenerV1::AnalyticsSnapshot]
+        # @return [GoogleAPI::Apis::UrlshortenerV1::AnalyticsSnapshot]
         attr_accessor :two_hours
       
         # Click analytics over the last week.
         # Corresponds to the JSON property `week`
-        # @return [Google::Apis::UrlshortenerV1::AnalyticsSnapshot]
+        # @return [GoogleAPI::Apis::UrlshortenerV1::AnalyticsSnapshot]
         attr_accessor :week
       
         def initialize(**args)
@@ -120,7 +120,7 @@ module Google
       
       # 
       class StringCount
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Number of clicks for this top entry, e.g. for this particular country or
         # browser.
@@ -146,12 +146,12 @@ module Google
       
       # 
       class Url
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A summary of the click analytics for the short and long URL. Might not be
         # present if not requested or currently unavailable.
         # Corresponds to the JSON property `analytics`
-        # @return [Google::Apis::UrlshortenerV1::AnalyticsSummary]
+        # @return [GoogleAPI::Apis::UrlshortenerV1::AnalyticsSummary]
         attr_accessor :analytics
       
         # Time the short URL was created; ISO 8601 representation using the yyyy-MM-dd'T'
@@ -200,11 +200,11 @@ module Google
       
       # 
       class UrlHistory
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of URL resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::UrlshortenerV1::Url>]
+        # @return [Array<GoogleAPI::Apis::UrlshortenerV1::Url>]
         attr_accessor :items
       
         # Number of items returned with each full "page" of results. Note that the last

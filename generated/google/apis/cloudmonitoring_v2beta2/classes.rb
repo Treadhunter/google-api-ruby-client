@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CloudmonitoringV2beta2
       
       # The response of cloudmonitoring.metricDescriptors.delete.
       class DeleteMetricDescriptorResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # cloudmonitoring#deleteMetricDescriptorResponse".
@@ -44,7 +44,7 @@ module Google
       
       # The request of cloudmonitoring.metricDescriptors.list.
       class ListMetricDescriptorsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # cloudmonitoring#listMetricDescriptorsRequest".
@@ -64,7 +64,7 @@ module Google
       
       # The response of cloudmonitoring.metricDescriptors.list.
       class ListMetricDescriptorsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # cloudmonitoring#listMetricDescriptorsResponse".
@@ -74,7 +74,7 @@ module Google
       
         # The returned metric descriptors.
         # Corresponds to the JSON property `metrics`
-        # @return [Array<Google::Apis::CloudmonitoringV2beta2::MetricDescriptor>]
+        # @return [Array<GoogleAPI::Apis::CloudmonitoringV2beta2::MetricDescriptor>]
         attr_accessor :metrics
       
         # Pagination token. If present, indicates that additional results are available
@@ -98,7 +98,7 @@ module Google
       
       # The request of cloudmonitoring.timeseriesDescriptors.list
       class ListTimeseriesDescriptorsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # cloudmonitoring#listTimeseriesDescriptorsRequest".
@@ -118,7 +118,7 @@ module Google
       
       # The response of cloudmonitoring.timeseriesDescriptors.list
       class ListTimeseriesDescriptorsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # cloudmonitoring#listTimeseriesDescriptorsResponse".
@@ -140,7 +140,7 @@ module Google
       
         # The returned time series descriptors.
         # Corresponds to the JSON property `timeseries`
-        # @return [Array<Google::Apis::CloudmonitoringV2beta2::TimeseriesDescriptor>]
+        # @return [Array<GoogleAPI::Apis::CloudmonitoringV2beta2::TimeseriesDescriptor>]
         attr_accessor :timeseries
       
         # The youngest timestamp of the interval of this query, as an RFC 3339 string.
@@ -164,7 +164,7 @@ module Google
       
       # The request of cloudmonitoring.timeseries.list
       class ListTimeseriesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # cloudmonitoring#listTimeseriesRequest".
@@ -184,7 +184,7 @@ module Google
       
       # The response of cloudmonitoring.timeseries.list
       class ListTimeseriesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # cloudmonitoring#listTimeseriesResponse".
@@ -207,7 +207,7 @@ module Google
       
         # The returned time series.
         # Corresponds to the JSON property `timeseries`
-        # @return [Array<Google::Apis::CloudmonitoringV2beta2::Timeseries>]
+        # @return [Array<GoogleAPI::Apis::CloudmonitoringV2beta2::Timeseries>]
         attr_accessor :timeseries
       
         # The youngest timestamp of the interval of this query as an RFC 3339 string.
@@ -232,7 +232,7 @@ module Google
       # A metricDescriptor defines the name, label keys, and data type of a particular
       # metric.
       class MetricDescriptor
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Description of this metric.
         # Corresponds to the JSON property `description`
@@ -241,7 +241,7 @@ module Google
       
         # Labels defined for this metric.
         # Corresponds to the JSON property `labels`
-        # @return [Array<Google::Apis::CloudmonitoringV2beta2::MetricDescriptorLabelDescriptor>]
+        # @return [Array<GoogleAPI::Apis::CloudmonitoringV2beta2::MetricDescriptorLabelDescriptor>]
         attr_accessor :labels
       
         # The name of this metric.
@@ -257,7 +257,7 @@ module Google
         # A type in a metric contains information about how the metric is collected and
         # what its data points look like.
         # Corresponds to the JSON property `typeDescriptor`
-        # @return [Google::Apis::CloudmonitoringV2beta2::MetricDescriptorTypeDescriptor]
+        # @return [GoogleAPI::Apis::CloudmonitoringV2beta2::MetricDescriptorTypeDescriptor]
         attr_accessor :type_descriptor
       
         def initialize(**args)
@@ -277,7 +277,7 @@ module Google
       # A label in a metric is a description of this metric, including the key of this
       # description (what the description is), and the value for this description.
       class MetricDescriptorLabelDescriptor
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Label description.
         # Corresponds to the JSON property `description`
@@ -303,7 +303,7 @@ module Google
       # A type in a metric contains information about how the metric is collected and
       # what its data points look like.
       class MetricDescriptorTypeDescriptor
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The method of collecting data for the metric. See Metric types.
         # Corresponds to the JSON property `metricType`
@@ -330,7 +330,7 @@ module Google
       # Point is a single point in a time series. It consists of a start time, an end
       # time, and a value.
       class Point
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The value of this data point. Either "true" or "false".
         # Corresponds to the JSON property `boolValue`
@@ -343,7 +343,7 @@ module Google
         # bucket boundaries, then do so by merging, partitioning, or appending rather
         # than skewing them.
         # Corresponds to the JSON property `distributionValue`
-        # @return [Google::Apis::CloudmonitoringV2beta2::PointDistribution]
+        # @return [GoogleAPI::Apis::CloudmonitoringV2beta2::PointDistribution]
         attr_accessor :distribution_value
       
         # The value of this data point as a double-precision floating-point number.
@@ -400,23 +400,23 @@ module Google
       # bucket boundaries, then do so by merging, partitioning, or appending rather
       # than skewing them.
       class PointDistribution
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The finite buckets.
         # Corresponds to the JSON property `buckets`
-        # @return [Array<Google::Apis::CloudmonitoringV2beta2::PointDistributionBucket>]
+        # @return [Array<GoogleAPI::Apis::CloudmonitoringV2beta2::PointDistributionBucket>]
         attr_accessor :buckets
       
         # The overflow bucket is a special bucket that does not have the upperBound
         # field; it includes all of the events that are no less than its lower bound.
         # Corresponds to the JSON property `overflowBucket`
-        # @return [Google::Apis::CloudmonitoringV2beta2::PointDistributionOverflowBucket]
+        # @return [GoogleAPI::Apis::CloudmonitoringV2beta2::PointDistributionOverflowBucket]
         attr_accessor :overflow_bucket
       
         # The underflow bucket is a special bucket that does not have the lowerBound
         # field; it includes all of the events that are less than its upper bound.
         # Corresponds to the JSON property `underflowBucket`
-        # @return [Google::Apis::CloudmonitoringV2beta2::PointDistributionUnderflowBucket]
+        # @return [GoogleAPI::Apis::CloudmonitoringV2beta2::PointDistributionUnderflowBucket]
         attr_accessor :underflow_bucket
       
         def initialize(**args)
@@ -435,7 +435,7 @@ module Google
       # value. If the upper bound of a bucket, say U1, does not equal the lower bound
       # of the next bucket, say L2, this means that there is no event in [U1, L2).
       class PointDistributionBucket
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of events whose values are in the interval defined by this bucket.
         # Corresponds to the JSON property `count`
@@ -467,7 +467,7 @@ module Google
       # The overflow bucket is a special bucket that does not have the upperBound
       # field; it includes all of the events that are no less than its lower bound.
       class PointDistributionOverflowBucket
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of events whose values are in the interval defined by this bucket.
         # Corresponds to the JSON property `count`
@@ -493,7 +493,7 @@ module Google
       # The underflow bucket is a special bucket that does not have the lowerBound
       # field; it includes all of the events that are less than its upper bound.
       class PointDistributionUnderflowBucket
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of events whose values are in the interval defined by this bucket.
         # Corresponds to the JSON property `count`
@@ -521,17 +521,17 @@ module Google
       # utilization of your virtual machine. A historical record of these data points
       # is called a time series.
       class Timeseries
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The data points of this time series. The points are listed in order of their
         # end timestamp, from younger to older.
         # Corresponds to the JSON property `points`
-        # @return [Array<Google::Apis::CloudmonitoringV2beta2::Point>]
+        # @return [Array<GoogleAPI::Apis::CloudmonitoringV2beta2::Point>]
         attr_accessor :points
       
         # TimeseriesDescriptor identifies a single time series.
         # Corresponds to the JSON property `timeseriesDesc`
-        # @return [Google::Apis::CloudmonitoringV2beta2::TimeseriesDescriptor]
+        # @return [GoogleAPI::Apis::CloudmonitoringV2beta2::TimeseriesDescriptor]
         attr_accessor :timeseries_desc
       
         def initialize(**args)
@@ -547,7 +547,7 @@ module Google
       
       # TimeseriesDescriptor identifies a single time series.
       class TimeseriesDescriptor
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The label's name.
         # Corresponds to the JSON property `labels`
@@ -578,7 +578,7 @@ module Google
       
       # 
       class TimeseriesDescriptorLabel
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The label's name.
         # Corresponds to the JSON property `key`
@@ -604,17 +604,17 @@ module Google
       # When writing time series, TimeseriesPoint should be used instead of Timeseries,
       # to enforce single point for each time series in the timeseries.write request.
       class TimeseriesPoint
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Point is a single point in a time series. It consists of a start time, an end
         # time, and a value.
         # Corresponds to the JSON property `point`
-        # @return [Google::Apis::CloudmonitoringV2beta2::Point]
+        # @return [GoogleAPI::Apis::CloudmonitoringV2beta2::Point]
         attr_accessor :point
       
         # TimeseriesDescriptor identifies a single time series.
         # Corresponds to the JSON property `timeseriesDesc`
-        # @return [Google::Apis::CloudmonitoringV2beta2::TimeseriesDescriptor]
+        # @return [GoogleAPI::Apis::CloudmonitoringV2beta2::TimeseriesDescriptor]
         attr_accessor :timeseries_desc
       
         def initialize(**args)
@@ -630,7 +630,7 @@ module Google
       
       # The request of cloudmonitoring.timeseries.write
       class WriteTimeseriesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The label's name.
         # Corresponds to the JSON property `commonLabels`
@@ -641,7 +641,7 @@ module Google
         # The labels in timeseries and the common_labels should form a complete list of
         # labels that required by the metric.
         # Corresponds to the JSON property `timeseries`
-        # @return [Array<Google::Apis::CloudmonitoringV2beta2::TimeseriesPoint>]
+        # @return [Array<GoogleAPI::Apis::CloudmonitoringV2beta2::TimeseriesPoint>]
         attr_accessor :timeseries
       
         def initialize(**args)
@@ -657,7 +657,7 @@ module Google
       
       # The response of cloudmonitoring.timeseries.write
       class WriteTimeseriesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # cloudmonitoring#writeTimeseriesResponse".

@@ -32,7 +32,7 @@ module Samples
   #     20151208  2            2         1            50.0                   0.0                 0.0
   #
   class Analytics < BaseCli
-    Analytics = Google::Apis::AnalyticsV3
+    Analytics = GoogleAPI::Apis::AnalyticsV3
 
     desc 'show_visits PROFILE_ID', 'Show visists for the given analytics profile ID'
     method_option :start, type: :string, required: true

@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module PredictionV1_6
       
       # 
       class Analyze
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Description of the data the model was trained on.
         # Corresponds to the JSON property `dataDescription`
-        # @return [Google::Apis::PredictionV1_6::Analyze::DataDescription]
+        # @return [GoogleAPI::Apis::PredictionV1_6::Analyze::DataDescription]
         attr_accessor :data_description
       
         # List of errors with the data.
@@ -48,7 +48,7 @@ module Google
       
         # Description of the model.
         # Corresponds to the JSON property `modelDescription`
-        # @return [Google::Apis::PredictionV1_6::Analyze::ModelDescription]
+        # @return [GoogleAPI::Apis::PredictionV1_6::Analyze::ModelDescription]
         attr_accessor :model_description
       
         # A URL to re-request this resource.
@@ -72,16 +72,16 @@ module Google
         
         # Description of the data the model was trained on.
         class DataDescription
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Description of the input features in the data set.
           # Corresponds to the JSON property `features`
-          # @return [Array<Google::Apis::PredictionV1_6::Analyze::DataDescription::Feature>]
+          # @return [Array<GoogleAPI::Apis::PredictionV1_6::Analyze::DataDescription::Feature>]
           attr_accessor :features
         
           # Description of the output value or label.
           # Corresponds to the JSON property `outputFeature`
-          # @return [Google::Apis::PredictionV1_6::Analyze::DataDescription::OutputFeature]
+          # @return [GoogleAPI::Apis::PredictionV1_6::Analyze::DataDescription::OutputFeature]
           attr_accessor :output_feature
         
           def initialize(**args)
@@ -96,11 +96,11 @@ module Google
           
           # 
           class Feature
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Description of the categorical values of this feature.
             # Corresponds to the JSON property `categorical`
-            # @return [Google::Apis::PredictionV1_6::Analyze::DataDescription::Feature::Categorical]
+            # @return [GoogleAPI::Apis::PredictionV1_6::Analyze::DataDescription::Feature::Categorical]
             attr_accessor :categorical
           
             # The feature index.
@@ -110,12 +110,12 @@ module Google
           
             # Description of the numeric values of this feature.
             # Corresponds to the JSON property `numeric`
-            # @return [Google::Apis::PredictionV1_6::Analyze::DataDescription::Feature::Numeric]
+            # @return [GoogleAPI::Apis::PredictionV1_6::Analyze::DataDescription::Feature::Numeric]
             attr_accessor :numeric
           
             # Description of multiple-word text values of this feature.
             # Corresponds to the JSON property `text`
-            # @return [Google::Apis::PredictionV1_6::Analyze::DataDescription::Feature::Text]
+            # @return [GoogleAPI::Apis::PredictionV1_6::Analyze::DataDescription::Feature::Text]
             attr_accessor :text
           
             def initialize(**args)
@@ -132,7 +132,7 @@ module Google
             
             # Description of the categorical values of this feature.
             class Categorical
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # Number of categorical values for this feature in the data.
               # Corresponds to the JSON property `count`
@@ -141,7 +141,7 @@ module Google
             
               # List of all the categories for this feature in the data set.
               # Corresponds to the JSON property `values`
-              # @return [Array<Google::Apis::PredictionV1_6::Analyze::DataDescription::Feature::Categorical::Value>]
+              # @return [Array<GoogleAPI::Apis::PredictionV1_6::Analyze::DataDescription::Feature::Categorical::Value>]
               attr_accessor :values
             
               def initialize(**args)
@@ -156,7 +156,7 @@ module Google
               
               # 
               class Value
-                include Google::Apis::Core::Hashable
+                include GoogleAPI::Apis::Core::Hashable
               
                 # Number of times this feature had this value.
                 # Corresponds to the JSON property `count`
@@ -182,7 +182,7 @@ module Google
             
             # Description of the numeric values of this feature.
             class Numeric
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # Number of numeric values for this feature in the data set.
               # Corresponds to the JSON property `count`
@@ -213,7 +213,7 @@ module Google
             
             # Description of multiple-word text values of this feature.
             class Text
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # Number of multiple-word text values for this feature.
               # Corresponds to the JSON property `count`
@@ -233,16 +233,16 @@ module Google
           
           # Description of the output value or label.
           class OutputFeature
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Description of the output values in the data set.
             # Corresponds to the JSON property `numeric`
-            # @return [Google::Apis::PredictionV1_6::Analyze::DataDescription::OutputFeature::Numeric]
+            # @return [GoogleAPI::Apis::PredictionV1_6::Analyze::DataDescription::OutputFeature::Numeric]
             attr_accessor :numeric
           
             # Description of the output labels in the data set.
             # Corresponds to the JSON property `text`
-            # @return [Array<Google::Apis::PredictionV1_6::Analyze::DataDescription::OutputFeature::Text>]
+            # @return [Array<GoogleAPI::Apis::PredictionV1_6::Analyze::DataDescription::OutputFeature::Text>]
             attr_accessor :text
           
             def initialize(**args)
@@ -257,7 +257,7 @@ module Google
             
             # Description of the output values in the data set.
             class Numeric
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # Number of numeric output values in the data set.
               # Corresponds to the JSON property `count`
@@ -288,7 +288,7 @@ module Google
             
             # 
             class Text
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # Number of times the output label occurred in the data set.
               # Corresponds to the JSON property `count`
@@ -315,7 +315,7 @@ module Google
         
         # Description of the model.
         class ModelDescription
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # An output confusion matrix. This shows an estimate for how this model will do
           # in predictions. This is first indexed by the true class label. For each true
@@ -333,7 +333,7 @@ module Google
         
           # Basic information about the model.
           # Corresponds to the JSON property `modelinfo`
-          # @return [Google::Apis::PredictionV1_6::Insert2]
+          # @return [GoogleAPI::Apis::PredictionV1_6::Insert2]
           attr_accessor :modelinfo
         
           def initialize(**args)
@@ -351,11 +351,11 @@ module Google
       
       # 
       class Input
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Input to the model for a prediction.
         # Corresponds to the JSON property `input`
-        # @return [Google::Apis::PredictionV1_6::Input::Input]
+        # @return [GoogleAPI::Apis::PredictionV1_6::Input::Input]
         attr_accessor :input
       
         def initialize(**args)
@@ -369,7 +369,7 @@ module Google
         
         # Input to the model for a prediction.
         class Input
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # A list of input features, these can be strings or doubles.
           # Corresponds to the JSON property `csvInstance`
@@ -389,7 +389,7 @@ module Google
       
       # 
       class Insert
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The unique name for the predictive model.
         # Corresponds to the JSON property `id`
@@ -423,7 +423,7 @@ module Google
       
         # Instances to train model on.
         # Corresponds to the JSON property `trainingInstances`
-        # @return [Array<Google::Apis::PredictionV1_6::Insert::TrainingInstance>]
+        # @return [Array<GoogleAPI::Apis::PredictionV1_6::Insert::TrainingInstance>]
         attr_accessor :training_instances
       
         # A class weighting function, which allows the importance weights for class
@@ -450,7 +450,7 @@ module Google
         
         # 
         class TrainingInstance
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The input features for this instance.
           # Corresponds to the JSON property `csvInstance`
@@ -476,7 +476,7 @@ module Google
       
       # 
       class Insert2
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Insert time of the model (as a RFC 3339 timestamp).
         # Corresponds to the JSON property `created`
@@ -495,7 +495,7 @@ module Google
       
         # Model metadata.
         # Corresponds to the JSON property `modelInfo`
-        # @return [Google::Apis::PredictionV1_6::Insert2::ModelInfo]
+        # @return [GoogleAPI::Apis::PredictionV1_6::Insert2::ModelInfo]
         attr_accessor :model_info
       
         # Type of predictive model (CLASSIFICATION or REGRESSION).
@@ -555,7 +555,7 @@ module Google
         
         # Model metadata.
         class ModelInfo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Estimated accuracy of model taking utility weights into account (Categorical
           # models only).
@@ -612,11 +612,11 @@ module Google
       
       # 
       class List
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of models.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::PredictionV1_6::Insert2>]
+        # @return [Array<GoogleAPI::Apis::PredictionV1_6::Insert2>]
         attr_accessor :items
       
         # What kind of resource this is.
@@ -649,7 +649,7 @@ module Google
       
       # 
       class Output
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The unique name for the predictive model.
         # Corresponds to the JSON property `id`
@@ -669,7 +669,7 @@ module Google
         # A list of class labels with their estimated probabilities (Categorical models
         # only).
         # Corresponds to the JSON property `outputMulti`
-        # @return [Array<Google::Apis::PredictionV1_6::Output::OutputMulti>]
+        # @return [Array<GoogleAPI::Apis::PredictionV1_6::Output::OutputMulti>]
         attr_accessor :output_multi
       
         # The estimated regression value (Regression models only).
@@ -698,7 +698,7 @@ module Google
         
         # 
         class OutputMulti
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The class label.
           # Corresponds to the JSON property `label`
@@ -724,7 +724,7 @@ module Google
       
       # 
       class Update
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The input features for this instance.
         # Corresponds to the JSON property `csvInstance`

@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module QpxExpressV1
       # QPX Express API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/qpx_express_v1'
       #
-      #    QpxExpress = Google::Apis::QpxExpressV1 # Alias the module
+      #    QpxExpress = GoogleAPI::Apis::QpxExpressV1 # Alias the module
       #    service = QpxExpress::QPXExpressService.new
       #
       # @see http://developers.google.com/qpx-express
-      class QPXExpressService < Google::Apis::Core::BaseService
+      class QPXExpressService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -53,7 +53,7 @@ module Google
         end
         
         # Returns a list of flights.
-        # @param [Google::Apis::QpxExpressV1::SearchTripsRequest] search_trips_request_object
+        # @param [GoogleAPI::Apis::QpxExpressV1::SearchTripsRequest] search_trips_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -63,24 +63,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::QpxExpressV1::SearchTripsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::QpxExpressV1::SearchTripsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::QpxExpressV1::SearchTripsResponse]
+        # @return [GoogleAPI::Apis::QpxExpressV1::SearchTripsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def search_trips(search_trips_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'search', options)
-          command.request_representation = Google::Apis::QpxExpressV1::SearchTripsRequest::Representation
+          command.request_representation = GoogleAPI::Apis::QpxExpressV1::SearchTripsRequest::Representation
           command.request_object = search_trips_request_object
-          command.response_representation = Google::Apis::QpxExpressV1::SearchTripsResponse::Representation
-          command.response_class = Google::Apis::QpxExpressV1::SearchTripsResponse
+          command.response_representation = GoogleAPI::Apis::QpxExpressV1::SearchTripsResponse::Representation
+          command.response_class = GoogleAPI::Apis::QpxExpressV1::SearchTripsResponse
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['userIp'] = user_ip unless user_ip.nil?

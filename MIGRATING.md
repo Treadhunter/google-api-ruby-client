@@ -18,7 +18,7 @@ To get the `drive` client in `0.8.x` required this:
 ```ruby
 require 'google/api_client'
 
-client = Google::APIClient.new
+client = GoogleAPI::APIClient.new
 drive = client.discovered_api('drive', 'v2')
 ```
 
@@ -27,7 +27,7 @@ In `0.9` the same thing can be accomplished like this:
 ```ruby
 require 'google/apis/drive_v2'
 
-drive = Google::Apis::DriveV2::DriveService.new
+drive = GoogleAPI::Apis::DriveV2::DriveService.new
 ```
 
 All APIs are immediately accessible without requiring additional network calls or runtime code generation.
@@ -68,7 +68,7 @@ Media uploads are significantly simpler in `0.9`.
 The old `0.8.x` way of uploading media:
 
 ```ruby
-media = Google::APIClient::UploadIO.new('mymovie.m4v', 'video/mp4')
+media = GoogleAPI::APIClient::UploadIO.new('mymovie.m4v', 'video/mp4')
 metadata = {
   'title' => 'My movie',
   'description' => 'The best home movie ever made'
@@ -108,10 +108,10 @@ drive.get_file('abc123', download_dest: '/tmp/myfile.txt')
 The old `0.8.x` way of performing batch requests:
 
 ```ruby
-client = Google::APIClient.new
+client = GoogleAPI::APIClient.new
 urlshortener = client.discovered_api('urlshortener')
 
-batch = Google::APIClient::BatchRequest.new do |result|
+batch = GoogleAPI::APIClient::BatchRequest.new do |result|
     puts result.data
 end
 
@@ -127,7 +127,7 @@ In `0.9`, the equivalent code is:
 ```ruby
 require 'google/apis/urlshortner_v1'
 
-urlshortener = Google::Apis::UrlshortenerV1::UrlshortenerService.new
+urlshortener = GoogleAPI::Apis::UrlshortenerV1::UrlshortenerService.new
 
 urlshortener.batch do |urlshortener|
   urlshortner.insert_url({long_url: 'http://example.com/foo'}) do |res, err|
@@ -144,7 +144,7 @@ Or if sharing the same block:
 ```ruby
 require 'google/apis/urlshortner_v1'
 
-urlshortener = Google::Apis::UrlshortenerV1::UrlshortenerService.new
+urlshortener = GoogleAPI::Apis::UrlshortenerV1::UrlshortenerService.new
 
 callback = lambda { |res, err| puts res }
 urlshortener.batch do |urlshortener|

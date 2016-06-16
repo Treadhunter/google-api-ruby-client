@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module MybusinessV3
       
       # 
       class ListAccountsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A collection of accounts to which the user has access.
         # Corresponds to the JSON property `accounts`
-        # @return [Array<Google::Apis::MybusinessV3::Account>]
+        # @return [Array<GoogleAPI::Apis::MybusinessV3::Account>]
         attr_accessor :accounts
       
         # If the number of accounts exceeds the requested page size, this field is
@@ -56,7 +56,7 @@ module Google
       # [create a business account]
       # (https://support.google.com/business/answer/6085339?hl=en&ref_topic=6085325).
       class Account
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The resource name, in the format `accounts/`account_id``.
         # Corresponds to the JSON property `name`
@@ -87,7 +87,7 @@ module Google
         # Indicates status of the account, such as whether the account
         # has been verified by Google.
         # Corresponds to the JSON property `state`
-        # @return [Google::Apis::MybusinessV3::AccountState]
+        # @return [GoogleAPI::Apis::MybusinessV3::AccountState]
         attr_accessor :state
       
         def initialize(**args)
@@ -107,7 +107,7 @@ module Google
       # Indicates status of the account, such as whether the account
       # has been verified by Google.
       class AccountState
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If verified, future locations that are created are automatically
         # be connected to maps, and have Google+ pages created, without requiring
@@ -128,11 +128,11 @@ module Google
       
       # 
       class ListAccountAdminsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A collection of Admin instances.
         # Corresponds to the JSON property `admins`
-        # @return [Array<Google::Apis::MybusinessV3::Admin>]
+        # @return [Array<GoogleAPI::Apis::MybusinessV3::Admin>]
         attr_accessor :admins
       
         def initialize(**args)
@@ -148,7 +148,7 @@ module Google
       # An administrator of an Account, or a
       # Location.
       class Admin
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The resource name. For account admins, this is in the form:
         # `accounts/`account_id`/admins/`admin_id``
@@ -202,7 +202,7 @@ module Google
       # `
       # The JSON representation for `Empty` is empty JSON object ````.
       class Empty
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -215,11 +215,11 @@ module Google
       
       # 
       class ListLocationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The locations
         # Corresponds to the JSON property `locations`
-        # @return [Array<Google::Apis::MybusinessV3::Location>]
+        # @return [Array<GoogleAPI::Apis::MybusinessV3::Location>]
         attr_accessor :locations
       
         # If the number of locations exceeded the requested page size, this field
@@ -248,7 +248,7 @@ module Google
       # list](/my-business/content/categories] for a list of valid business
       # categories.
       class Location
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Google identifier for this location in the form:
         # `accounts/`account_id`/locations/`location_id``
@@ -307,14 +307,14 @@ module Google
         # country: IN
         # postal_code: 560071
         # Corresponds to the JSON property `address`
-        # @return [Google::Apis::MybusinessV3::Address]
+        # @return [GoogleAPI::Apis::MybusinessV3::Address]
         attr_accessor :address
       
         # A category describing what this business is (not what it does). For a list of
         # valid category IDs, and the mappings to their human readable names, see
         # the [category list](/my-business/content/categories).
         # Corresponds to the JSON property `primaryCategory`
-        # @return [Google::Apis::MybusinessV3::Category]
+        # @return [GoogleAPI::Apis::MybusinessV3::Category]
         attr_accessor :primary_category
       
         # Additional categories to describe your business.
@@ -325,7 +325,7 @@ module Google
         # Choose categories that are as specific as possible, but representative of
         # your main business.
         # Corresponds to the JSON property `additionalCategories`
-        # @return [Array<Google::Apis::MybusinessV3::Category>]
+        # @return [Array<GoogleAPI::Apis::MybusinessV3::Category>]
         attr_accessor :additional_categories
       
         # A URL for this business. If possible, use a URL that represents this
@@ -339,24 +339,24 @@ module Google
         # Holds a collection of TimePeriod
         # instances.
         # Corresponds to the JSON property `regularHours`
-        # @return [Google::Apis::MybusinessV3::BusinessHours]
+        # @return [GoogleAPI::Apis::MybusinessV3::BusinessHours]
         attr_accessor :regular_hours
       
         # Represents a set of time periods when a location's operational hours differ
         # from its normal business hours.
         # Corresponds to the JSON property `specialHours`
-        # @return [Google::Apis::MybusinessV3::SpecialHours]
+        # @return [GoogleAPI::Apis::MybusinessV3::SpecialHours]
         attr_accessor :special_hours
       
         # Service area businesses provide their service at the customer's location (for
         # example a locksmith or plumber).
         # Corresponds to the JSON property `serviceArea`
-        # @return [Google::Apis::MybusinessV3::ServiceAreaBusiness]
+        # @return [GoogleAPI::Apis::MybusinessV3::ServiceAreaBusiness]
         attr_accessor :service_area
       
         # Alternate / surrogate key references for a location.
         # Corresponds to the JSON property `locationKey`
-        # @return [Google::Apis::MybusinessV3::LocationKey]
+        # @return [GoogleAPI::Apis::MybusinessV3::LocationKey]
         attr_accessor :location_key
       
         # A collection of free-form strings to allow you to tag your business. These
@@ -368,7 +368,7 @@ module Google
       
         # Additional information that is surfaced in AdWords.
         # Corresponds to the JSON property `adWordsLocationExtensions`
-        # @return [Google::Apis::MybusinessV3::AdWordsLocationExtensions]
+        # @return [GoogleAPI::Apis::MybusinessV3::AdWordsLocationExtensions]
         attr_accessor :ad_words_location_extensions
       
         # A collection of photos representing the business, categorized by photo type.
@@ -383,7 +383,7 @@ module Google
         # must measure a minimum of 250px on the short edge, with a file size of at
         # least 10240 bytes.
         # Corresponds to the JSON property `photos`
-        # @return [Google::Apis::MybusinessV3::Photos]
+        # @return [GoogleAPI::Apis::MybusinessV3::Photos]
         attr_accessor :photos
       
         # An object representing a latitude/longitude pair. This is expressed as a pair
@@ -422,28 +422,28 @@ module Google
         # assert (-90.0, 10.0) == NormalizeLatLng(270.0, 10.0)
         # assert (90.0, 10.0) == NormalizeLatLng(-270.0, 10.0)
         # Corresponds to the JSON property `latlng`
-        # @return [Google::Apis::MybusinessV3::LatLng]
+        # @return [GoogleAPI::Apis::MybusinessV3::LatLng]
         attr_accessor :latlng
       
         # Indicates whether the location is currently open for business.
         # All locations are open by default, unless updated to be closed.
         # Corresponds to the JSON property `openInfo`
-        # @return [Google::Apis::MybusinessV3::OpenInfo]
+        # @return [GoogleAPI::Apis::MybusinessV3::OpenInfo]
         attr_accessor :open_info
       
         # Contains a set of booleans that reflect the state of a Location.
         # Corresponds to the JSON property `locationState`
-        # @return [Google::Apis::MybusinessV3::LocationState]
+        # @return [GoogleAPI::Apis::MybusinessV3::LocationState]
         attr_accessor :location_state
       
         # Attributes for this location.
         # Corresponds to the JSON property `attributes`
-        # @return [Array<Google::Apis::MybusinessV3::Attribute>]
+        # @return [Array<GoogleAPI::Apis::MybusinessV3::Attribute>]
         attr_accessor :attributes
       
         # Additional non-user-editable information about the location.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::MybusinessV3::Metadata]
+        # @return [GoogleAPI::Apis::MybusinessV3::Metadata]
         attr_accessor :metadata
       
         def initialize(**args)
@@ -490,7 +490,7 @@ module Google
       # country: IN
       # postal_code: 560071
       class Address
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The precise address information for the business below the sub-locality
         # level. For most countries, the first line should include a street number
@@ -575,7 +575,7 @@ module Google
       # valid category IDs, and the mappings to their human readable names, see
       # the [category list](/my-business/content/categories).
       class Category
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The human-readable name of the category.
         # Corresponds to the JSON property `name`
@@ -608,12 +608,12 @@ module Google
       # Holds a collection of TimePeriod
       # instances.
       class BusinessHours
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A collection of times that this location is open for business. Each period
         # represents a range of hours when the location is open during the week.
         # Corresponds to the JSON property `periods`
-        # @return [Array<Google::Apis::MybusinessV3::TimePeriod>]
+        # @return [Array<GoogleAPI::Apis::MybusinessV3::TimePeriod>]
         attr_accessor :periods
       
         def initialize(**args)
@@ -632,7 +632,7 @@ module Google
       # The closing time must occur after the opening time, for example later in the
       # same day, or on a subsequent day.
       class TimePeriod
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Indicates the day of the week this period starts
         # on.
@@ -675,11 +675,11 @@ module Google
       # Represents a set of time periods when a location's operational hours differ
       # from its normal business hours.
       class SpecialHours
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of exceptions to the business's regular hours.
         # Corresponds to the JSON property `specialHourPeriods`
-        # @return [Array<Google::Apis::MybusinessV3::SpecialHourPeriod>]
+        # @return [Array<GoogleAPI::Apis::MybusinessV3::SpecialHourPeriod>]
         attr_accessor :special_hour_periods
       
         def initialize(**args)
@@ -711,7 +711,7 @@ module Google
       # start_date=2015-11-23, end_date=2015-11-25, open_time=08:00, close_time=18:
       # 00
       class SpecialHourPeriod
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Represents a whole calendar date, e.g. date of birth. The time of day and
         # time zone are either specified elsewhere or are not significant. The date
@@ -721,7 +721,7 @@ module Google
         # of year, e.g. anniversary date. Related types are google.type.TimeOfDay
         # and `google.protobuf.Timestamp`.
         # Corresponds to the JSON property `startDate`
-        # @return [Google::Apis::MybusinessV3::Date]
+        # @return [GoogleAPI::Apis::MybusinessV3::Date]
         attr_accessor :start_date
       
         # The wall time on `start_date` when a location opens, expressed in
@@ -740,7 +740,7 @@ module Google
         # of year, e.g. anniversary date. Related types are google.type.TimeOfDay
         # and `google.protobuf.Timestamp`.
         # Corresponds to the JSON property `endDate`
-        # @return [Google::Apis::MybusinessV3::Date]
+        # @return [GoogleAPI::Apis::MybusinessV3::Date]
         attr_accessor :end_date
       
         # The wall time on end_date when a location closes, expressed in
@@ -781,7 +781,7 @@ module Google
       # of year, e.g. anniversary date. Related types are google.type.TimeOfDay
       # and `google.protobuf.Timestamp`.
       class Date
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Year of date. Must be from 1 to 9999, or 0 if specifying a date without
         # a year.
@@ -815,7 +815,7 @@ module Google
       # Service area businesses provide their service at the customer's location (for
       # example a locksmith or plumber).
       class ServiceAreaBusiness
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Indicates the type of the service area
         # business.
@@ -825,12 +825,12 @@ module Google
       
         # A radius around a particular point (latitude/longitude).
         # Corresponds to the JSON property `radius`
-        # @return [Google::Apis::MybusinessV3::PointRadius]
+        # @return [GoogleAPI::Apis::MybusinessV3::PointRadius]
         attr_accessor :radius
       
         # Defines the union of areas represented by a set of places.
         # Corresponds to the JSON property `places`
-        # @return [Google::Apis::MybusinessV3::Places]
+        # @return [GoogleAPI::Apis::MybusinessV3::Places]
         attr_accessor :places
       
         def initialize(**args)
@@ -847,7 +847,7 @@ module Google
       
       # A radius around a particular point (latitude/longitude).
       class PointRadius
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An object representing a latitude/longitude pair. This is expressed as a pair
         # of doubles representing degrees latitude and degrees longitude. Unless
@@ -885,7 +885,7 @@ module Google
         # assert (-90.0, 10.0) == NormalizeLatLng(270.0, 10.0)
         # assert (90.0, 10.0) == NormalizeLatLng(-270.0, 10.0)
         # Corresponds to the JSON property `latlng`
-        # @return [Google::Apis::MybusinessV3::LatLng]
+        # @return [GoogleAPI::Apis::MybusinessV3::LatLng]
         attr_accessor :latlng
       
         # The distance in kilometers of the area around the point.
@@ -940,7 +940,7 @@ module Google
       # assert (-90.0, 10.0) == NormalizeLatLng(270.0, 10.0)
       # assert (90.0, 10.0) == NormalizeLatLng(-270.0, 10.0)
       class LatLng
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The latitude in degrees. It must be in the range [-90.0, +90.0].
         # Corresponds to the JSON property `latitude`
@@ -965,11 +965,11 @@ module Google
       
       # Defines the union of areas represented by a set of places.
       class Places
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The areas represented by place IDs.
         # Corresponds to the JSON property `placeInfos`
-        # @return [Array<Google::Apis::MybusinessV3::PlaceInfo>]
+        # @return [Array<GoogleAPI::Apis::MybusinessV3::PlaceInfo>]
         attr_accessor :place_infos
       
         def initialize(**args)
@@ -984,7 +984,7 @@ module Google
       
       # Defines an area that's represented by a place ID.
       class PlaceInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The localized name of the place. For example, `Scottsdale, AZ`.
         # Corresponds to the JSON property `name`
@@ -1009,7 +1009,7 @@ module Google
       
       # Alternate / surrogate key references for a location.
       class LocationKey
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If this location has a Google+ page associated with it, this is
         # populated with the Google+ page ID for this location.
@@ -1052,7 +1052,7 @@ module Google
       
       # Additional information that is surfaced in AdWords.
       class AdWordsLocationExtensions
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An alternate phone number to display on AdWords location extensions
         # instead of the location's primary phone number.
@@ -1082,7 +1082,7 @@ module Google
       # must measure a minimum of 250px on the short edge, with a file size of at
       # least 10240 bytes.
       class Photos
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The profile photo helps people recognize your business across Google.
         # Profile photos must be square, with a minimum size of 250px and a maximum
@@ -1191,7 +1191,7 @@ module Google
       # Indicates whether the location is currently open for business.
       # All locations are open by default, unless updated to be closed.
       class OpenInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Indicates the Location OpenForBusiness status.
         # Corresponds to the JSON property `status`
@@ -1210,7 +1210,7 @@ module Google
       
       # Contains a set of booleans that reflect the state of a Location.
       class LocationState
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Indicates whether the place ID associated with this location has updates.
         # @OutputOnly
@@ -1287,7 +1287,7 @@ module Google
       # the properties of that location (e.g. category). Available attributes are
       # determined by Google and may be added and removed without API changes.
       class Attribute
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The id of the attribute. Attribute ids are provided by Google.
         # Corresponds to the JSON property `attributeId`
@@ -1324,11 +1324,11 @@ module Google
       
       # Additional non-user-editable information about the location.
       class Metadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Information about the location that this location duplicates.
         # Corresponds to the JSON property `duplicate`
-        # @return [Google::Apis::MybusinessV3::Duplicate]
+        # @return [GoogleAPI::Apis::MybusinessV3::Duplicate]
         attr_accessor :duplicate
       
         def initialize(**args)
@@ -1343,7 +1343,7 @@ module Google
       
       # Information about the location that this location duplicates.
       class Duplicate
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The resource name of the location that this duplicates. Only populated
         # if the authenticated user has access rights to that location and that
@@ -1371,7 +1371,7 @@ module Google
       
       # 
       class BatchGetLocationsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A collection of locations to fetch, specified by their names.
         # Corresponds to the JSON property `locationNames`
@@ -1390,11 +1390,11 @@ module Google
       
       # 
       class BatchGetLocationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A collection of locations.
         # Corresponds to the JSON property `locations`
-        # @return [Array<Google::Apis::MybusinessV3::Location>]
+        # @return [Array<GoogleAPI::Apis::MybusinessV3::Location>]
         attr_accessor :locations
       
         def initialize(**args)
@@ -1409,7 +1409,7 @@ module Google
       
       # Represents a location that was modified by Google.
       class GoogleUpdatedLocation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A location.
         # See the [help center article]
@@ -1418,7 +1418,7 @@ module Google
         # list](/my-business/content/categories] for a list of valid business
         # categories.
         # Corresponds to the JSON property `location`
-        # @return [Google::Apis::MybusinessV3::Location]
+        # @return [GoogleAPI::Apis::MybusinessV3::Location]
         attr_accessor :location
       
         # The fields that Google updated.
@@ -1439,11 +1439,11 @@ module Google
       
       # 
       class ListLocationAdminsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A collection of Admin instances.
         # Corresponds to the JSON property `admins`
-        # @return [Array<Google::Apis::MybusinessV3::Admin>]
+        # @return [Array<GoogleAPI::Apis::MybusinessV3::Admin>]
         attr_accessor :admins
       
         def initialize(**args)
@@ -1458,7 +1458,7 @@ module Google
       
       # Request message for MyBusiness.FindMatchingLocations.
       class FindMatchingLocationsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The preferred language for the matching location.
         # Corresponds to the JSON property `languageCode`
@@ -1494,13 +1494,13 @@ module Google
       
       # Response message for MyBusiness.FindMatchingLocations
       class FindMatchingLocationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A collection of locations that are potential matches to the specified
         # location, listed in order from best to least match. If there is an exact
         # match, it will be in the first position.
         # Corresponds to the JSON property `matchedLocations`
-        # @return [Array<Google::Apis::MybusinessV3::MatchedLocation>]
+        # @return [Array<GoogleAPI::Apis::MybusinessV3::MatchedLocation>]
         attr_accessor :matched_locations
       
         # When the matching algorithm was last executed for this location.
@@ -1521,7 +1521,7 @@ module Google
       
       # Represents a possible match to a location.
       class MatchedLocation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A location.
         # See the [help center article]
@@ -1530,7 +1530,7 @@ module Google
         # list](/my-business/content/categories] for a list of valid business
         # categories.
         # Corresponds to the JSON property `location`
-        # @return [Google::Apis::MybusinessV3::Location]
+        # @return [GoogleAPI::Apis::MybusinessV3::Location]
         attr_accessor :location
       
         # Is this an exact match?
@@ -1553,7 +1553,7 @@ module Google
       # Request message for MyBusiness.AssociateLocationRequest to associate a
       # location to a place or indicate no match.
       class AssociateLocationRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The association to establish. If not set, it indicates no match.
         # Corresponds to the JSON property `placeId`
@@ -1573,7 +1573,7 @@ module Google
       # Request message for MyBusiness.ClearLocationAssociationRequest to clear
       # the association between a location to its place ID.
       class ClearLocationAssociationRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -1587,7 +1587,7 @@ module Google
       # Request message for MyBusiness.TransferLocation to transfer a location from
       # its current account to another.
       class TransferLocationRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Name of the account resource to transfer the location to (e.g.
         # "accounts/8675309")
@@ -1607,11 +1607,11 @@ module Google
       
       # Response message for MyBusiness.ListReviews.
       class ListReviewsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The reviews.
         # Corresponds to the JSON property `reviews`
-        # @return [Array<Google::Apis::MybusinessV3::Review>]
+        # @return [Array<GoogleAPI::Apis::MybusinessV3::Review>]
         attr_accessor :reviews
       
         # The average star rating of all reviews for this location
@@ -1649,7 +1649,7 @@ module Google
       # Represents a review for a location.
       # @OutputOnly
       class Review
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The encrypted unique identifier.
         # Corresponds to the JSON property `reviewId`
@@ -1658,7 +1658,7 @@ module Google
       
         # Represents the author of reviews.
         # Corresponds to the JSON property `reviewer`
-        # @return [Google::Apis::MybusinessV3::Reviewer]
+        # @return [GoogleAPI::Apis::MybusinessV3::Reviewer]
         attr_accessor :reviewer
       
         # Star rating of the review.
@@ -1683,7 +1683,7 @@ module Google
       
         # Represents the location owner/manager's reply to a review
         # Corresponds to the JSON property `reviewReply`
-        # @return [Google::Apis::MybusinessV3::ReviewReply]
+        # @return [GoogleAPI::Apis::MybusinessV3::ReviewReply]
         attr_accessor :review_reply
       
         def initialize(**args)
@@ -1704,7 +1704,7 @@ module Google
       
       # Represents the author of reviews.
       class Reviewer
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the reviewer.
         # Only populated with the reviewer's real name if is_anonymous is false.
@@ -1731,7 +1731,7 @@ module Google
       
       # Represents the location owner/manager's reply to a review
       class ReviewReply
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The body of the review as plain text with markups.
         # The maximum length is 4096 bytes.
@@ -1758,11 +1758,11 @@ module Google
       
       # 
       class ListLocationAttributeMetadataResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A collection of attribute metadata for the available attributes.
         # Corresponds to the JSON property `attributes`
-        # @return [Array<Google::Apis::MybusinessV3::AttributeMetadata>]
+        # @return [Array<GoogleAPI::Apis::MybusinessV3::AttributeMetadata>]
         attr_accessor :attributes
       
         def initialize(**args)
@@ -1779,7 +1779,7 @@ module Google
       # including a localised name and a heading for grouping related attributes
       # together.
       class AttributeMetadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The id of the attribute.
         # Corresponds to the JSON property `attributeId`
@@ -1816,7 +1816,7 @@ module Google
         # For some types of attributes (e.g. enums) a list of supported values and
         # corresponding display names for those values is provided.
         # Corresponds to the JSON property `valueMetadata`
-        # @return [Array<Google::Apis::MybusinessV3::AttributeValueMetadata>]
+        # @return [Array<GoogleAPI::Apis::MybusinessV3::AttributeValueMetadata>]
         attr_accessor :value_metadata
       
         def initialize(**args)
@@ -1836,7 +1836,7 @@ module Google
       
       # Metadata for supported attribute values
       class AttributeValueMetadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The attribute value
         # Corresponds to the JSON property `value`

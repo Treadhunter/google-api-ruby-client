@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module PubsubV1beta2
       # Google Cloud Pub/Sub API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/pubsub_v1beta2'
       #
-      #    Pubsub = Google::Apis::PubsubV1beta2 # Alias the module
+      #    Pubsub = GoogleAPI::Apis::PubsubV1beta2 # Alias the module
       #    service = Pubsub::PubsubService.new
       #
       # @see https://cloud.google.com/pubsub/docs
-      class PubsubService < Google::Apis::Core::BaseService
+      class PubsubService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -53,30 +53,30 @@ module Google
         #   usually specified as a path, such as, `projects/`project`/zones/`zone`/disks/`
         #   disk``. The format for the path specified in this value is resource specific
         #   and is specified in the documentation for the respective SetIamPolicy rpc.
-        # @param [Google::Apis::PubsubV1beta2::SetIamPolicyRequest] set_iam_policy_request_object
+        # @param [GoogleAPI::Apis::PubsubV1beta2::SetIamPolicyRequest] set_iam_policy_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::Policy] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::Policy] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::Policy]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::Policy]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_topic_policy(resource, set_iam_policy_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1beta2/{+resource}:setIamPolicy', options)
-          command.request_representation = Google::Apis::PubsubV1beta2::SetIamPolicyRequest::Representation
+          command.request_representation = GoogleAPI::Apis::PubsubV1beta2::SetIamPolicyRequest::Representation
           command.request_object = set_iam_policy_request_object
-          command.response_representation = Google::Apis::PubsubV1beta2::Policy::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::Policy
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::Policy::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::Policy
           command.params['resource'] = resource unless resource.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -95,22 +95,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::Policy] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::Policy] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::Policy]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::Policy]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_iam_policy_project_topic(resource, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1beta2/{+resource}:getIamPolicy', options)
-          command.response_representation = Google::Apis::PubsubV1beta2::Policy::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::Policy
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::Policy::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::Policy
           command.params['resource'] = resource unless resource.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -124,30 +124,30 @@ module Google
         #   disks/`disk``. The format for the path specified in this value is resource
         #   specific and is specified in the documentation for the respective
         #   TestIamPermissions rpc.
-        # @param [Google::Apis::PubsubV1beta2::TestIamPermissionsRequest] test_iam_permissions_request_object
+        # @param [GoogleAPI::Apis::PubsubV1beta2::TestIamPermissionsRequest] test_iam_permissions_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::TestIamPermissionsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::TestIamPermissionsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::TestIamPermissionsResponse]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::TestIamPermissionsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def test_topic_permissions(resource, test_iam_permissions_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1beta2/{+resource}:testIamPermissions', options)
-          command.request_representation = Google::Apis::PubsubV1beta2::TestIamPermissionsRequest::Representation
+          command.request_representation = GoogleAPI::Apis::PubsubV1beta2::TestIamPermissionsRequest::Representation
           command.request_object = test_iam_permissions_request_object
-          command.response_representation = Google::Apis::PubsubV1beta2::TestIamPermissionsResponse::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::TestIamPermissionsResponse
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::TestIamPermissionsResponse::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::TestIamPermissionsResponse
           command.params['resource'] = resource unless resource.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -161,30 +161,30 @@ module Google
         #   z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`),
         #   tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255
         #   characters in length, and it must not start with `"goog"`.
-        # @param [Google::Apis::PubsubV1beta2::Topic] topic_object
+        # @param [GoogleAPI::Apis::PubsubV1beta2::Topic] topic_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::Topic] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::Topic] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::Topic]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::Topic]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_topic(name, topic_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:put, 'v1beta2/{+name}', options)
-          command.request_representation = Google::Apis::PubsubV1beta2::Topic::Representation
+          command.request_representation = GoogleAPI::Apis::PubsubV1beta2::Topic::Representation
           command.request_object = topic_object
-          command.response_representation = Google::Apis::PubsubV1beta2::Topic::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::Topic
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::Topic::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::Topic
           command.params['name'] = name unless name.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -196,30 +196,30 @@ module Google
         # empty data field, or at least one attribute.
         # @param [String] topic
         #   The messages in the request will be published on this topic.
-        # @param [Google::Apis::PubsubV1beta2::PublishRequest] publish_request_object
+        # @param [GoogleAPI::Apis::PubsubV1beta2::PublishRequest] publish_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::PublishResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::PublishResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::PublishResponse]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::PublishResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def publish_topic(topic, publish_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1beta2/{+topic}:publish', options)
-          command.request_representation = Google::Apis::PubsubV1beta2::PublishRequest::Representation
+          command.request_representation = GoogleAPI::Apis::PubsubV1beta2::PublishRequest::Representation
           command.request_object = publish_request_object
-          command.response_representation = Google::Apis::PubsubV1beta2::PublishResponse::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::PublishResponse
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::PublishResponse::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::PublishResponse
           command.params['topic'] = topic unless topic.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -234,22 +234,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::Topic] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::Topic] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::Topic]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::Topic]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_topic(topic, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1beta2/{+topic}', options)
-          command.response_representation = Google::Apis::PubsubV1beta2::Topic::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::Topic
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::Topic::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::Topic
           command.params['topic'] = topic unless topic.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -270,22 +270,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::ListTopicsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::ListTopicsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::ListTopicsResponse]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::ListTopicsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_topics(project, page_size: nil, page_token: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1beta2/{+project}/topics', options)
-          command.response_representation = Google::Apis::PubsubV1beta2::ListTopicsResponse::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::ListTopicsResponse
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::ListTopicsResponse::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::ListTopicsResponse
           command.params['project'] = project unless project.nil?
           command.query['pageSize'] = page_size unless page_size.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -306,22 +306,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::Empty] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::Empty] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::Empty]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::Empty]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_topic(topic, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'v1beta2/{+topic}', options)
-          command.response_representation = Google::Apis::PubsubV1beta2::Empty::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::Empty
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::Empty::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::Empty
           command.params['topic'] = topic unless topic.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -342,22 +342,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::ListTopicSubscriptionsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::ListTopicSubscriptionsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::ListTopicSubscriptionsResponse]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::ListTopicSubscriptionsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_topic_subscriptions(topic, page_size: nil, page_token: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1beta2/{+topic}/subscriptions', options)
-          command.response_representation = Google::Apis::PubsubV1beta2::ListTopicSubscriptionsResponse::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::ListTopicSubscriptionsResponse
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::ListTopicSubscriptionsResponse::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::ListTopicSubscriptionsResponse
           command.params['topic'] = topic unless topic.nil?
           command.query['pageSize'] = page_size unless page_size.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -373,30 +373,30 @@ module Google
         #   usually specified as a path, such as, `projects/`project`/zones/`zone`/disks/`
         #   disk``. The format for the path specified in this value is resource specific
         #   and is specified in the documentation for the respective SetIamPolicy rpc.
-        # @param [Google::Apis::PubsubV1beta2::SetIamPolicyRequest] set_iam_policy_request_object
+        # @param [GoogleAPI::Apis::PubsubV1beta2::SetIamPolicyRequest] set_iam_policy_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::Policy] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::Policy] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::Policy]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::Policy]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_subscription_policy(resource, set_iam_policy_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1beta2/{+resource}:setIamPolicy', options)
-          command.request_representation = Google::Apis::PubsubV1beta2::SetIamPolicyRequest::Representation
+          command.request_representation = GoogleAPI::Apis::PubsubV1beta2::SetIamPolicyRequest::Representation
           command.request_object = set_iam_policy_request_object
-          command.response_representation = Google::Apis::PubsubV1beta2::Policy::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::Policy
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::Policy::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::Policy
           command.params['resource'] = resource unless resource.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -415,22 +415,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::Policy] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::Policy] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::Policy]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::Policy]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_iam_policy_project_subscription(resource, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1beta2/{+resource}:getIamPolicy', options)
-          command.response_representation = Google::Apis::PubsubV1beta2::Policy::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::Policy
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::Policy::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::Policy
           command.params['resource'] = resource unless resource.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -444,30 +444,30 @@ module Google
         #   disks/`disk``. The format for the path specified in this value is resource
         #   specific and is specified in the documentation for the respective
         #   TestIamPermissions rpc.
-        # @param [Google::Apis::PubsubV1beta2::TestIamPermissionsRequest] test_iam_permissions_request_object
+        # @param [GoogleAPI::Apis::PubsubV1beta2::TestIamPermissionsRequest] test_iam_permissions_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::TestIamPermissionsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::TestIamPermissionsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::TestIamPermissionsResponse]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::TestIamPermissionsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def test_subscription_permissions(resource, test_iam_permissions_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1beta2/{+resource}:testIamPermissions', options)
-          command.request_representation = Google::Apis::PubsubV1beta2::TestIamPermissionsRequest::Representation
+          command.request_representation = GoogleAPI::Apis::PubsubV1beta2::TestIamPermissionsRequest::Representation
           command.request_object = test_iam_permissions_request_object
-          command.response_representation = Google::Apis::PubsubV1beta2::TestIamPermissionsResponse::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::TestIamPermissionsResponse
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::TestIamPermissionsResponse::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::TestIamPermissionsResponse
           command.params['resource'] = resource unless resource.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -486,30 +486,30 @@ module Google
         #   underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%
         #   `). It must be between 3 and 255 characters in length, and it must not start
         #   with `"goog"`.
-        # @param [Google::Apis::PubsubV1beta2::Subscription] subscription_object
+        # @param [GoogleAPI::Apis::PubsubV1beta2::Subscription] subscription_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::Subscription] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::Subscription] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::Subscription]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::Subscription]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_subscription(name, subscription_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:put, 'v1beta2/{+name}', options)
-          command.request_representation = Google::Apis::PubsubV1beta2::Subscription::Representation
+          command.request_representation = GoogleAPI::Apis::PubsubV1beta2::Subscription::Representation
           command.request_object = subscription_object
-          command.response_representation = Google::Apis::PubsubV1beta2::Subscription::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::Subscription
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::Subscription::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::Subscription
           command.params['name'] = name unless name.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -524,22 +524,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::Subscription] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::Subscription] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::Subscription]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::Subscription]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_subscription(subscription, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1beta2/{+subscription}', options)
-          command.response_representation = Google::Apis::PubsubV1beta2::Subscription::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::Subscription
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::Subscription::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::Subscription
           command.params['subscription'] = subscription unless subscription.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -560,22 +560,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::ListSubscriptionsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::ListSubscriptionsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::ListSubscriptionsResponse]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::ListSubscriptionsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_subscriptions(project, page_size: nil, page_token: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1beta2/{+project}/subscriptions', options)
-          command.response_representation = Google::Apis::PubsubV1beta2::ListSubscriptionsResponse::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::ListSubscriptionsResponse
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::ListSubscriptionsResponse::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::ListSubscriptionsResponse
           command.params['project'] = project unless project.nil?
           command.query['pageSize'] = page_size unless page_size.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -596,22 +596,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::Empty] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::Empty] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::Empty]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::Empty]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_subscription(subscription, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'v1beta2/{+subscription}', options)
-          command.response_representation = Google::Apis::PubsubV1beta2::Empty::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::Empty
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::Empty::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::Empty
           command.params['subscription'] = subscription unless subscription.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -623,30 +623,30 @@ module Google
         # to make the message available for redelivery if the processing was interrupted.
         # @param [String] subscription
         #   The name of the subscription.
-        # @param [Google::Apis::PubsubV1beta2::ModifyAckDeadlineRequest] modify_ack_deadline_request_object
+        # @param [GoogleAPI::Apis::PubsubV1beta2::ModifyAckDeadlineRequest] modify_ack_deadline_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::Empty] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::Empty] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::Empty]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::Empty]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def modify_subscription_ack_deadline(subscription, modify_ack_deadline_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1beta2/{+subscription}:modifyAckDeadline', options)
-          command.request_representation = Google::Apis::PubsubV1beta2::ModifyAckDeadlineRequest::Representation
+          command.request_representation = GoogleAPI::Apis::PubsubV1beta2::ModifyAckDeadlineRequest::Representation
           command.request_object = modify_ack_deadline_request_object
-          command.response_representation = Google::Apis::PubsubV1beta2::Empty::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::Empty
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::Empty::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::Empty
           command.params['subscription'] = subscription unless subscription.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -660,30 +660,30 @@ module Google
         # more than once will not result in an error.
         # @param [String] subscription
         #   The subscription whose message is being acknowledged.
-        # @param [Google::Apis::PubsubV1beta2::AcknowledgeRequest] acknowledge_request_object
+        # @param [GoogleAPI::Apis::PubsubV1beta2::AcknowledgeRequest] acknowledge_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::Empty] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::Empty] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::Empty]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::Empty]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def acknowledge_subscription(subscription, acknowledge_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1beta2/{+subscription}:acknowledge', options)
-          command.request_representation = Google::Apis::PubsubV1beta2::AcknowledgeRequest::Representation
+          command.request_representation = GoogleAPI::Apis::PubsubV1beta2::AcknowledgeRequest::Representation
           command.request_object = acknowledge_request_object
-          command.response_representation = Google::Apis::PubsubV1beta2::Empty::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::Empty
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::Empty::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::Empty
           command.params['subscription'] = subscription unless subscription.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -695,30 +695,30 @@ module Google
         # many concurrent pull requests pending for the given subscription.
         # @param [String] subscription
         #   The subscription from which messages should be pulled.
-        # @param [Google::Apis::PubsubV1beta2::PullRequest] pull_request_object
+        # @param [GoogleAPI::Apis::PubsubV1beta2::PullRequest] pull_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::PullResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::PullResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::PullResponse]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::PullResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def pull_subscription(subscription, pull_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1beta2/{+subscription}:pull', options)
-          command.request_representation = Google::Apis::PubsubV1beta2::PullRequest::Representation
+          command.request_representation = GoogleAPI::Apis::PubsubV1beta2::PullRequest::Representation
           command.request_object = pull_request_object
-          command.response_representation = Google::Apis::PubsubV1beta2::PullResponse::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::PullResponse
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::PullResponse::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::PullResponse
           command.params['subscription'] = subscription unless subscription.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -732,30 +732,30 @@ module Google
         # call regardless of changes to the `PushConfig`.
         # @param [String] subscription
         #   The name of the subscription.
-        # @param [Google::Apis::PubsubV1beta2::ModifyPushConfigRequest] modify_push_config_request_object
+        # @param [GoogleAPI::Apis::PubsubV1beta2::ModifyPushConfigRequest] modify_push_config_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::PubsubV1beta2::Empty] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::PubsubV1beta2::Empty] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::PubsubV1beta2::Empty]
+        # @return [GoogleAPI::Apis::PubsubV1beta2::Empty]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def modify_subscription_push_config(subscription, modify_push_config_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1beta2/{+subscription}:modifyPushConfig', options)
-          command.request_representation = Google::Apis::PubsubV1beta2::ModifyPushConfigRequest::Representation
+          command.request_representation = GoogleAPI::Apis::PubsubV1beta2::ModifyPushConfigRequest::Representation
           command.request_object = modify_push_config_request_object
-          command.response_representation = Google::Apis::PubsubV1beta2::Empty::Representation
-          command.response_class = Google::Apis::PubsubV1beta2::Empty
+          command.response_representation = GoogleAPI::Apis::PubsubV1beta2::Empty::Representation
+          command.response_class = GoogleAPI::Apis::PubsubV1beta2::Empty
           command.params['subscription'] = subscription unless subscription.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?

@@ -16,14 +16,14 @@ require 'spec_helper'
 require 'google/apis/urlshortener_v1'
 require 'googleauth'
 
-Urlshortener = Google::Apis::UrlshortenerV1
+Urlshortener = GoogleAPI::Apis::UrlshortenerV1
 
-RSpec.describe Google::Apis::UrlshortenerV1, :if => run_integration_tests? do
+RSpec.describe GoogleAPI::Apis::UrlshortenerV1, :if => run_integration_tests? do
 
   before(:context) do
     WebMock.allow_net_connect!
     @shortener = Urlshortener::UrlshortenerService.new
-    @shortener.authorization = Google::Auth.get_application_default([Urlshortener::AUTH_URLSHORTENER])
+    @shortener.authorization = GoogleAPI::Auth.get_application_default([Urlshortener::AUTH_URLSHORTENER])
   end
 
   it 'should shorten URLs in a batch' do

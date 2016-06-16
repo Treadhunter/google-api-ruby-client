@@ -23,7 +23,7 @@ module Samples
   #
   #     $ ./google-api-samples androidpublisher upload --apk-path /path/to/com.spiffygame.apk --package-name com.spiffygame
   class Androidpublisher < BaseCli
-    Androidpublisher = Google::Apis::AndroidpublisherV2
+    Androidpublisher = GoogleAPI::Apis::AndroidpublisherV2
 
     desc 'upload', 'Upload an apk to Google Play'
     method_option :apk_path, type: :string

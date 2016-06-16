@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module GamesV1
       
       # This is a JSON template for an achievement definition object.
       class AchievementDefinition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of the achievement.
         # Possible values are:
@@ -127,11 +127,11 @@ module Google
       
       # This is a JSON template for a list of achievement definition objects.
       class ListAchievementDefinitionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The achievement definitions.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GamesV1::AchievementDefinition>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::AchievementDefinition>]
         attr_accessor :items
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -159,7 +159,7 @@ module Google
       
       # This is a JSON template for an achievement increment response
       class AchievementIncrementResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The current steps recorded for this incremental achievement.
         # Corresponds to the JSON property `currentSteps`
@@ -193,7 +193,7 @@ module Google
       
       # This is a JSON template for an achievement reveal response
       class AchievementRevealResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The current state of the achievement for which a reveal was attempted. This
         # might be UNLOCKED if the achievement was already unlocked.
@@ -223,7 +223,7 @@ module Google
       
       # This is a JSON template for an achievement set steps at least response.
       class AchievementSetStepsAtLeastResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The current steps recorded for this incremental achievement.
         # Corresponds to the JSON property `currentSteps`
@@ -257,7 +257,7 @@ module Google
       
       # This is a JSON template for an achievement unlock response
       class AchievementUnlockResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#achievementUnlockResponse.
@@ -285,7 +285,7 @@ module Google
       
       # This is a JSON template for a list of achievement update requests.
       class AchievementUpdateMultipleRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#achievementUpdateMultipleRequest.
@@ -295,7 +295,7 @@ module Google
       
         # The individual achievement update requests.
         # Corresponds to the JSON property `updates`
-        # @return [Array<Google::Apis::GamesV1::UpdateAchievementRequest>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::UpdateAchievementRequest>]
         attr_accessor :updates
       
         def initialize(**args)
@@ -311,7 +311,7 @@ module Google
       
       # This is a JSON template for an achievement unlock response.
       class AchievementUpdateMultipleResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#achievementUpdateListResponse.
@@ -321,7 +321,7 @@ module Google
       
         # The updated state of the achievements.
         # Corresponds to the JSON property `updatedAchievements`
-        # @return [Array<Google::Apis::GamesV1::UpdateAchievementResponse>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::UpdateAchievementResponse>]
         attr_accessor :updated_achievements
       
         def initialize(**args)
@@ -337,7 +337,7 @@ module Google
       
       # This is a JSON template for a request to update an achievement.
       class UpdateAchievementRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The achievement this update is being applied to.
         # Corresponds to the JSON property `achievementId`
@@ -346,7 +346,7 @@ module Google
       
         # This is a JSON template for the payload to request to increment an achievement.
         # Corresponds to the JSON property `incrementPayload`
-        # @return [Google::Apis::GamesV1::GamesAchievementIncrement]
+        # @return [GoogleAPI::Apis::GamesV1::GamesAchievementIncrement]
         attr_accessor :increment_payload
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -357,7 +357,7 @@ module Google
       
         # This is a JSON template for the payload to request to increment an achievement.
         # Corresponds to the JSON property `setStepsAtLeastPayload`
-        # @return [Google::Apis::GamesV1::GamesAchievementSetStepsAtLeast]
+        # @return [GoogleAPI::Apis::GamesV1::GamesAchievementSetStepsAtLeast]
         attr_accessor :set_steps_at_least_payload
       
         # The type of update being applied.
@@ -387,7 +387,7 @@ module Google
       
       # This is a JSON template for an achievement update response.
       class UpdateAchievementResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The achievement this update is was applied to.
         # Corresponds to the JSON property `achievementId`
@@ -444,7 +444,7 @@ module Google
       
       # This is a JSON template for aggregate stats.
       class AggregateStats
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of messages sent between a pair of peers.
         # Corresponds to the JSON property `count`
@@ -488,7 +488,7 @@ module Google
       
       # This is a JSON template for an anonymous player
       class AnonymousPlayer
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The base URL for the image to display for the anonymous player.
         # Corresponds to the JSON property `avatarImageUrl`
@@ -520,7 +520,7 @@ module Google
       
       # This is a JSON template for the Application resource.
       class Application
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of achievements visible to the currently authenticated player.
         # Corresponds to the JSON property `achievement_count`
@@ -529,7 +529,7 @@ module Google
       
         # The assets of the application.
         # Corresponds to the JSON property `assets`
-        # @return [Array<Google::Apis::GamesV1::ImageAsset>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::ImageAsset>]
         attr_accessor :assets
       
         # The author of the application.
@@ -539,7 +539,7 @@ module Google
       
         # This is a JSON template for an application category object.
         # Corresponds to the JSON property `category`
-        # @return [Google::Apis::GamesV1::ApplicationCategory]
+        # @return [GoogleAPI::Apis::GamesV1::ApplicationCategory]
         attr_accessor :category
       
         # The description of the application.
@@ -561,7 +561,7 @@ module Google
       
         # The instances of the application.
         # Corresponds to the JSON property `instances`
-        # @return [Array<Google::Apis::GamesV1::Instance>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::Instance>]
         attr_accessor :instances
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -615,7 +615,7 @@ module Google
       
       # This is a JSON template for an application category object.
       class ApplicationCategory
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#applicationCategory.
@@ -648,7 +648,7 @@ module Google
       # This is a JSON template for a third party application verification response
       # resource.
       class ApplicationVerifyResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An alternate ID that was once used for the player that was issued the auth
         # token used in this request. (This field is not normally populated.)
@@ -681,7 +681,7 @@ module Google
       
       # This is a JSON template for data related to individual game categories.
       class Category
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The category name.
         # Corresponds to the JSON property `category`
@@ -713,11 +713,11 @@ module Google
       
       # This is a JSON template for a list of category data objects.
       class ListCategoryResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of categories with usage data.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GamesV1::Category>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::Category>]
         attr_accessor :items
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -745,7 +745,7 @@ module Google
       
       # This is a JSON template for a batch update failure resource.
       class EventBatchRecordFailure
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The cause for the update failure.
         # Possible values are:
@@ -771,7 +771,7 @@ module Google
       
         # This is a JSON template for an event period time range.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::GamesV1::EventPeriodRange]
+        # @return [GoogleAPI::Apis::GamesV1::EventPeriodRange]
         attr_accessor :range
       
         def initialize(**args)
@@ -788,7 +788,7 @@ module Google
       
       # This is a JSON template for an event child relationship resource.
       class EventChild
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the child event.
         # Corresponds to the JSON property `childId`
@@ -814,11 +814,11 @@ module Google
       
       # This is a JSON template for an event definition resource.
       class EventDefinition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of events that are a child of this event.
         # Corresponds to the JSON property `childEvents`
-        # @return [Array<Google::Apis::GamesV1::EventChild>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::EventChild>]
         attr_accessor :child_events
       
         # Description of what this event represents.
@@ -882,11 +882,11 @@ module Google
       
       # This is a JSON template for a ListDefinitions response.
       class ListEventDefinitionResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The event definitions.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GamesV1::EventDefinition>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::EventDefinition>]
         attr_accessor :items
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -914,7 +914,7 @@ module Google
       
       # This is a JSON template for an event period time range.
       class EventPeriodRange
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#eventPeriodRange.
@@ -947,7 +947,7 @@ module Google
       
       # This is a JSON template for an event period update resource.
       class EventPeriodUpdate
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#eventPeriodUpdate.
@@ -957,12 +957,12 @@ module Google
       
         # This is a JSON template for an event period time range.
         # Corresponds to the JSON property `timePeriod`
-        # @return [Google::Apis::GamesV1::EventPeriodRange]
+        # @return [GoogleAPI::Apis::GamesV1::EventPeriodRange]
         attr_accessor :time_period
       
         # The updates being made for this time period.
         # Corresponds to the JSON property `updates`
-        # @return [Array<Google::Apis::GamesV1::UpdateEventRequest>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::UpdateEventRequest>]
         attr_accessor :updates
       
         def initialize(**args)
@@ -979,7 +979,7 @@ module Google
       
       # This is a JSON template for an event update failure resource.
       class EventRecordFailure
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the event that was not updated.
         # Corresponds to the JSON property `eventId`
@@ -1015,7 +1015,7 @@ module Google
       
       # This is a JSON template for an event period update resource.
       class EventRecordRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The current time when this update was sent, in milliseconds, since 1970 UTC (
         # Unix Epoch).
@@ -1036,7 +1036,7 @@ module Google
       
         # A list of the time period updates being made in this request.
         # Corresponds to the JSON property `timePeriods`
-        # @return [Array<Google::Apis::GamesV1::EventPeriodUpdate>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::EventPeriodUpdate>]
         attr_accessor :time_periods
       
         def initialize(**args)
@@ -1054,7 +1054,7 @@ module Google
       
       # This is a JSON template for an event period update resource.
       class UpdateEventRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the event being modified in this update.
         # Corresponds to the JSON property `definitionId`
@@ -1086,16 +1086,16 @@ module Google
       
       # This is a JSON template for an event period update resource.
       class UpdateEventResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Any batch-wide failures which occurred applying updates.
         # Corresponds to the JSON property `batchFailures`
-        # @return [Array<Google::Apis::GamesV1::EventBatchRecordFailure>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::EventBatchRecordFailure>]
         attr_accessor :batch_failures
       
         # Any failures updating a particular event.
         # Corresponds to the JSON property `eventFailures`
-        # @return [Array<Google::Apis::GamesV1::EventRecordFailure>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::EventRecordFailure>]
         attr_accessor :event_failures
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -1106,7 +1106,7 @@ module Google
       
         # The current status of any updated events
         # Corresponds to the JSON property `playerEvents`
-        # @return [Array<Google::Apis::GamesV1::PlayerEvent>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::PlayerEvent>]
         attr_accessor :player_events
       
         def initialize(**args)
@@ -1124,7 +1124,7 @@ module Google
       
       # This is a JSON template for the payload to request to increment an achievement.
       class GamesAchievementIncrement
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#GamesAchievementIncrement.
@@ -1156,7 +1156,7 @@ module Google
       
       # This is a JSON template for the payload to request to increment an achievement.
       class GamesAchievementSetStepsAtLeast
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#GamesAchievementSetStepsAtLeast.
@@ -1182,7 +1182,7 @@ module Google
       
       # This is a JSON template for an image asset object.
       class ImageAsset
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The height of the asset.
         # Corresponds to the JSON property `height`
@@ -1226,7 +1226,7 @@ module Google
       
       # This is a JSON template for the Instance resource.
       class Instance
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # URI which shows where a user can acquire this instance.
         # Corresponds to the JSON property `acquisitionUri`
@@ -1235,12 +1235,12 @@ module Google
       
         # This is a JSON template for the Android instance details resource.
         # Corresponds to the JSON property `androidInstance`
-        # @return [Google::Apis::GamesV1::InstanceAndroidDetails]
+        # @return [GoogleAPI::Apis::GamesV1::InstanceAndroidDetails]
         attr_accessor :android_instance
       
         # This is a JSON template for the iOS details resource.
         # Corresponds to the JSON property `iosInstance`
-        # @return [Google::Apis::GamesV1::InstanceIosDetails]
+        # @return [GoogleAPI::Apis::GamesV1::InstanceIosDetails]
         attr_accessor :ios_instance
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -1277,7 +1277,7 @@ module Google
       
         # This is a JSON template for the Web details resource.
         # Corresponds to the JSON property `webInstance`
-        # @return [Google::Apis::GamesV1::InstanceWebDetails]
+        # @return [GoogleAPI::Apis::GamesV1::InstanceWebDetails]
         attr_accessor :web_instance
       
         def initialize(**args)
@@ -1300,7 +1300,7 @@ module Google
       
       # This is a JSON template for the Android instance details resource.
       class InstanceAndroidDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Flag indicating whether the anti-piracy check is enabled.
         # Corresponds to the JSON property `enablePiracyCheck`
@@ -1340,7 +1340,7 @@ module Google
       
       # This is a JSON template for the iOS details resource.
       class InstanceIosDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Bundle identifier.
         # Corresponds to the JSON property `bundleIdentifier`
@@ -1402,7 +1402,7 @@ module Google
       
       # This is a JSON template for the Web details resource.
       class InstanceWebDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#instanceWebDetails.
@@ -1435,7 +1435,7 @@ module Google
       
       # This is a JSON template for the Leaderboard resource.
       class Leaderboard
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The icon for the leaderboard.
         # Corresponds to the JSON property `iconUrl`
@@ -1492,7 +1492,7 @@ module Google
       
       # This is a JSON template for the Leaderboard Entry resource.
       class LeaderboardEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The localized string for the numerical value of this score.
         # Corresponds to the JSON property `formattedScore`
@@ -1512,7 +1512,7 @@ module Google
       
         # This is a JSON template for a Player resource.
         # Corresponds to the JSON property `player`
-        # @return [Google::Apis::GamesV1::Player]
+        # @return [GoogleAPI::Apis::GamesV1::Player]
         attr_accessor :player
       
         # The rank of this score for this leaderboard.
@@ -1566,11 +1566,11 @@ module Google
       
       # This is a JSON template for a list of leaderboard objects.
       class ListLeaderboardResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The leaderboards.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GamesV1::Leaderboard>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::Leaderboard>]
         attr_accessor :items
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -1598,7 +1598,7 @@ module Google
       
       # This is a JSON template for a score rank in a leaderboard.
       class LeaderboardScoreRank
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of scores in the leaderboard as a string.
         # Corresponds to the JSON property `formattedNumScores`
@@ -1642,11 +1642,11 @@ module Google
       
       # This is a JSON template for a ListScores response.
       class LeaderboardScores
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The scores in the leaderboard.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GamesV1::LeaderboardEntry>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::LeaderboardEntry>]
         attr_accessor :items
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -1667,7 +1667,7 @@ module Google
       
         # This is a JSON template for the Leaderboard Entry resource.
         # Corresponds to the JSON property `playerScore`
-        # @return [Google::Apis::GamesV1::LeaderboardEntry]
+        # @return [GoogleAPI::Apis::GamesV1::LeaderboardEntry]
         attr_accessor :player_score
       
         # The pagination token for the previous page of results.
@@ -1692,7 +1692,7 @@ module Google
       
       # This is a JSON template for the metagame config resource
       class MetagameConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Current version of the metagame configuration data. When this data is updated,
         # the version number will be increased by one.
@@ -1708,7 +1708,7 @@ module Google
       
         # The list of player levels.
         # Corresponds to the JSON property `playerLevels`
-        # @return [Array<Google::Apis::GamesV1::PlayerLevel>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::PlayerLevel>]
         attr_accessor :player_levels
       
         def initialize(**args)
@@ -1725,7 +1725,7 @@ module Google
       
       # This is a JSON template for network diagnostics reported for a client.
       class NetworkDiagnostics
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The Android network subtype.
         # Corresponds to the JSON property `androidNetworkSubtype`
@@ -1789,7 +1789,7 @@ module Google
       
       # This is a JSON template for a result for a match participant.
       class ParticipantResult
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#participantResult.
@@ -1839,16 +1839,16 @@ module Google
       
       # This is a JSON template for peer channel diagnostics.
       class PeerChannelDiagnostics
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This is a JSON template for aggregate stats.
         # Corresponds to the JSON property `bytesReceived`
-        # @return [Google::Apis::GamesV1::AggregateStats]
+        # @return [GoogleAPI::Apis::GamesV1::AggregateStats]
         attr_accessor :bytes_received
       
         # This is a JSON template for aggregate stats.
         # Corresponds to the JSON property `bytesSent`
-        # @return [Google::Apis::GamesV1::AggregateStats]
+        # @return [GoogleAPI::Apis::GamesV1::AggregateStats]
         attr_accessor :bytes_sent
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -1879,7 +1879,7 @@ module Google
       
         # This is a JSON template for aggregate stats.
         # Corresponds to the JSON property `roundtripLatencyMillis`
-        # @return [Google::Apis::GamesV1::AggregateStats]
+        # @return [GoogleAPI::Apis::GamesV1::AggregateStats]
         attr_accessor :roundtrip_latency_millis
       
         def initialize(**args)
@@ -1901,7 +1901,7 @@ module Google
       
       # This is a JSON template for peer session diagnostics.
       class PeerSessionDiagnostics
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Connected time in milliseconds.
         # Corresponds to the JSON property `connectedTimestampMillis`
@@ -1921,12 +1921,12 @@ module Google
       
         # This is a JSON template for peer channel diagnostics.
         # Corresponds to the JSON property `reliableChannel`
-        # @return [Google::Apis::GamesV1::PeerChannelDiagnostics]
+        # @return [GoogleAPI::Apis::GamesV1::PeerChannelDiagnostics]
         attr_accessor :reliable_channel
       
         # This is a JSON template for peer channel diagnostics.
         # Corresponds to the JSON property `unreliableChannel`
-        # @return [Google::Apis::GamesV1::PeerChannelDiagnostics]
+        # @return [GoogleAPI::Apis::GamesV1::PeerChannelDiagnostics]
         attr_accessor :unreliable_channel
       
         def initialize(**args)
@@ -1946,7 +1946,7 @@ module Google
       # This is a JSON template for metadata about a player playing a game with the
       # currently authenticated user.
       class Played
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # True if the player was auto-matched with the currently authenticated user.
         # Corresponds to the JSON property `autoMatched`
@@ -1980,7 +1980,7 @@ module Google
       
       # This is a JSON template for a Player resource.
       class Player
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The base URL for the image that represents the player.
         # Corresponds to the JSON property `avatarImageUrl`
@@ -2004,7 +2004,7 @@ module Google
       
         # This is a JSON template for 1P/3P metadata about the player's experience.
         # Corresponds to the JSON property `experienceInfo`
-        # @return [Google::Apis::GamesV1::PlayerExperienceInfo]
+        # @return [GoogleAPI::Apis::GamesV1::PlayerExperienceInfo]
         attr_accessor :experience_info
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -2016,13 +2016,13 @@ module Google
         # This is a JSON template for metadata about a player playing a game with the
         # currently authenticated user.
         # Corresponds to the JSON property `lastPlayedWith`
-        # @return [Google::Apis::GamesV1::Played]
+        # @return [GoogleAPI::Apis::GamesV1::Played]
         attr_accessor :last_played_with
       
         # An object representation of the individual components of the player's name.
         # For some players, these fields may not be present.
         # Corresponds to the JSON property `name`
-        # @return [Google::Apis::GamesV1::Player::Name]
+        # @return [GoogleAPI::Apis::GamesV1::Player::Name]
         attr_accessor :name
       
         # The player ID that was used for this player the first time they signed into
@@ -2040,7 +2040,7 @@ module Google
       
         # This is a JSON template for profile settings
         # Corresponds to the JSON property `profileSettings`
-        # @return [Google::Apis::GamesV1::ProfileSettings]
+        # @return [GoogleAPI::Apis::GamesV1::ProfileSettings]
         attr_accessor :profile_settings
       
         # The player's title rewarded for their game activities.
@@ -2071,7 +2071,7 @@ module Google
         # An object representation of the individual components of the player's name.
         # For some players, these fields may not be present.
         class Name
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The family name of this player. In some places, this is known as the last name.
           # Corresponds to the JSON property `familyName`
@@ -2097,7 +2097,7 @@ module Google
       
       # This is a JSON template for an achievement object.
       class PlayerAchievement
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The state of the achievement.
         # Possible values are:
@@ -2159,11 +2159,11 @@ module Google
       
       # This is a JSON template for a list of achievement objects.
       class ListPlayerAchievementResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The achievements.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GamesV1::PlayerAchievement>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::PlayerAchievement>]
         attr_accessor :items
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -2191,7 +2191,7 @@ module Google
       
       # This is a JSON template for an event status resource.
       class PlayerEvent
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the event definition.
         # Corresponds to the JSON property `definitionId`
@@ -2237,11 +2237,11 @@ module Google
       
       # This is a JSON template for a ListByPlayer response.
       class ListPlayerEventResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The player events.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GamesV1::PlayerEvent>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::PlayerEvent>]
         attr_accessor :items
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -2269,7 +2269,7 @@ module Google
       
       # This is a JSON template for 1P/3P metadata about the player's experience.
       class PlayerExperienceInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The current number of experience points for the player.
         # Corresponds to the JSON property `currentExperiencePoints`
@@ -2278,7 +2278,7 @@ module Google
       
         # This is a JSON template for 1P/3P metadata about a user's level.
         # Corresponds to the JSON property `currentLevel`
-        # @return [Google::Apis::GamesV1::PlayerLevel]
+        # @return [GoogleAPI::Apis::GamesV1::PlayerLevel]
         attr_accessor :current_level
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -2294,7 +2294,7 @@ module Google
       
         # This is a JSON template for 1P/3P metadata about a user's level.
         # Corresponds to the JSON property `nextLevel`
-        # @return [Google::Apis::GamesV1::PlayerLevel]
+        # @return [GoogleAPI::Apis::GamesV1::PlayerLevel]
         attr_accessor :next_level
       
         def initialize(**args)
@@ -2313,7 +2313,7 @@ module Google
       
       # This is a JSON template for a player leaderboard score object.
       class PlayerLeaderboardScore
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#playerLeaderboardScore.
@@ -2328,7 +2328,7 @@ module Google
       
         # This is a JSON template for a score rank in a leaderboard.
         # Corresponds to the JSON property `publicRank`
-        # @return [Google::Apis::GamesV1::LeaderboardScoreRank]
+        # @return [GoogleAPI::Apis::GamesV1::LeaderboardScoreRank]
         attr_accessor :public_rank
       
         # The formatted value of this score.
@@ -2349,7 +2349,7 @@ module Google
       
         # This is a JSON template for a score rank in a leaderboard.
         # Corresponds to the JSON property `socialRank`
-        # @return [Google::Apis::GamesV1::LeaderboardScoreRank]
+        # @return [GoogleAPI::Apis::GamesV1::LeaderboardScoreRank]
         attr_accessor :social_rank
       
         # The time span of this score.
@@ -2387,11 +2387,11 @@ module Google
       
       # This is a JSON template for a list of player leaderboard scores.
       class ListPlayerLeaderboardScoreResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The leaderboard scores.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GamesV1::PlayerLeaderboardScore>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::PlayerLeaderboardScore>]
         attr_accessor :items
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -2407,7 +2407,7 @@ module Google
       
         # This is a JSON template for a Player resource.
         # Corresponds to the JSON property `player`
-        # @return [Google::Apis::GamesV1::Player]
+        # @return [GoogleAPI::Apis::GamesV1::Player]
         attr_accessor :player
       
         def initialize(**args)
@@ -2425,7 +2425,7 @@ module Google
       
       # This is a JSON template for 1P/3P metadata about a user's level.
       class PlayerLevel
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#playerLevel.
@@ -2463,11 +2463,11 @@ module Google
       
       # This is a JSON template for a third party player list response.
       class ListPlayerResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The players.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GamesV1::Player>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::Player>]
         attr_accessor :items
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -2495,7 +2495,7 @@ module Google
       
       # This is a JSON template for a player score.
       class PlayerScore
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The formatted score for this player score.
         # Corresponds to the JSON property `formattedScore`
@@ -2544,7 +2544,7 @@ module Google
       
       # This is a JSON template for a list of score submission statuses.
       class ListPlayerScoreResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#playerScoreListResponse.
@@ -2554,7 +2554,7 @@ module Google
       
         # The score submissions statuses.
         # Corresponds to the JSON property `submittedScores`
-        # @return [Array<Google::Apis::GamesV1::PlayerScoreResponse>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::PlayerScoreResponse>]
         attr_accessor :submitted_scores
       
         def initialize(**args)
@@ -2570,7 +2570,7 @@ module Google
       
       # This is a JSON template for a list of leaderboard entry resources.
       class PlayerScoreResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The time spans where the submitted score is better than the existing score for
         # that time span.
@@ -2608,7 +2608,7 @@ module Google
         # submitted score may be better than the player's DAILY score, but not better
         # than the player's scores for the WEEKLY or ALL_TIME time spans.
         # Corresponds to the JSON property `unbeatenScores`
-        # @return [Array<Google::Apis::GamesV1::PlayerScore>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::PlayerScore>]
         attr_accessor :unbeaten_scores
       
         def initialize(**args)
@@ -2628,7 +2628,7 @@ module Google
       
       # This is a JSON template for a list of score submission requests
       class PlayerScoreSubmissionList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#playerScoreSubmissionList.
@@ -2638,7 +2638,7 @@ module Google
       
         # The score submissions.
         # Corresponds to the JSON property `scores`
-        # @return [Array<Google::Apis::GamesV1::ScoreSubmission>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::ScoreSubmission>]
         attr_accessor :scores
       
         def initialize(**args)
@@ -2654,7 +2654,7 @@ module Google
       
       # This is a JSON template for profile settings
       class ProfileSettings
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#profileSettings.
@@ -2682,7 +2682,7 @@ module Google
       
       # This is a JSON template for a push token resource.
       class PushToken
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The revision of the client SDK used by your application, in the same format
         # that's used by revisions.check. Used to send backward compatible messages.
@@ -2695,7 +2695,7 @@ module Google
       
         # This is a JSON template for a push token ID resource.
         # Corresponds to the JSON property `id`
-        # @return [Google::Apis::GamesV1::PushTokenId]
+        # @return [GoogleAPI::Apis::GamesV1::PushTokenId]
         attr_accessor :id
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -2724,11 +2724,11 @@ module Google
       
       # This is a JSON template for a push token ID resource.
       class PushTokenId
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A push token ID for iOS devices.
         # Corresponds to the JSON property `ios`
-        # @return [Google::Apis::GamesV1::PushTokenId::Ios]
+        # @return [GoogleAPI::Apis::GamesV1::PushTokenId::Ios]
         attr_accessor :ios
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -2749,7 +2749,7 @@ module Google
         
         # A push token ID for iOS devices.
         class Ios
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Device token supplied by an iOS system call to register for remote
           # notifications. Encode this field as web-safe base64.
@@ -2777,7 +2777,7 @@ module Google
       
       # This is a JSON template for a Quest resource.
       class Quest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The timestamp at which the user accepted the quest in milliseconds since the
         # epoch in UTC. Only present if the player has accepted the quest.
@@ -2844,7 +2844,7 @@ module Google
       
         # The quest milestones.
         # Corresponds to the JSON property `milestones`
-        # @return [Array<Google::Apis::GamesV1::QuestMilestone>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::QuestMilestone>]
         attr_accessor :milestones
       
         # The name of the quest.
@@ -2906,7 +2906,7 @@ module Google
       
       # This is a JSON template for a Quest Criterion Contribution resource.
       class QuestContribution
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The formatted value of the contribution as a string. Format depends on the
         # configuration for the associated event definition in the Play Games Developer
@@ -2940,16 +2940,16 @@ module Google
       
       # This is a JSON template for a Quest Criterion resource.
       class QuestCriterion
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This is a JSON template for a Quest Criterion Contribution resource.
         # Corresponds to the JSON property `completionContribution`
-        # @return [Google::Apis::GamesV1::QuestContribution]
+        # @return [GoogleAPI::Apis::GamesV1::QuestContribution]
         attr_accessor :completion_contribution
       
         # This is a JSON template for a Quest Criterion Contribution resource.
         # Corresponds to the JSON property `currentContribution`
-        # @return [Google::Apis::GamesV1::QuestContribution]
+        # @return [GoogleAPI::Apis::GamesV1::QuestContribution]
         attr_accessor :current_contribution
       
         # The ID of the event the criterion corresponds to.
@@ -2959,7 +2959,7 @@ module Google
       
         # This is a JSON template for a Quest Criterion Contribution resource.
         # Corresponds to the JSON property `initialPlayerProgress`
-        # @return [Google::Apis::GamesV1::QuestContribution]
+        # @return [GoogleAPI::Apis::GamesV1::QuestContribution]
         attr_accessor :initial_player_progress
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -2984,11 +2984,11 @@ module Google
       
       # This is a JSON template for a list of quest objects.
       class ListQuestResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The quests.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GamesV1::Quest>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::Quest>]
         attr_accessor :items
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -3016,7 +3016,7 @@ module Google
       
       # This is a JSON template for a Quest Milestone resource.
       class QuestMilestone
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The completion reward data of the milestone, represented as a Base64-encoded
         # string. This is a developer-specified binary blob with size between 0 and 2 KB
@@ -3027,7 +3027,7 @@ module Google
       
         # The criteria of the milestone.
         # Corresponds to the JSON property `criteria`
-        # @return [Array<Google::Apis::GamesV1::QuestCriterion>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::QuestCriterion>]
         attr_accessor :criteria
       
         # The milestone ID.
@@ -3068,7 +3068,7 @@ module Google
       
       # This is a JSON template for the result of checking a revision.
       class CheckRevisionResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The version of the API this client revision should use when calling API
         # methods.
@@ -3106,7 +3106,7 @@ module Google
       
       # This is a JSON template for a room resource object.
       class Room
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the application being played.
         # Corresponds to the JSON property `applicationId`
@@ -3115,17 +3115,17 @@ module Google
       
         # This is a JSON template for a room auto-match criteria object.
         # Corresponds to the JSON property `autoMatchingCriteria`
-        # @return [Google::Apis::GamesV1::RoomAutoMatchingCriteria]
+        # @return [GoogleAPI::Apis::GamesV1::RoomAutoMatchingCriteria]
         attr_accessor :auto_matching_criteria
       
         # This is a JSON template for status of room automatching that is in progress.
         # Corresponds to the JSON property `autoMatchingStatus`
-        # @return [Google::Apis::GamesV1::RoomAutoMatchStatus]
+        # @return [GoogleAPI::Apis::GamesV1::RoomAutoMatchStatus]
         attr_accessor :auto_matching_status
       
         # This is a JSON template for room modification metadata.
         # Corresponds to the JSON property `creationDetails`
-        # @return [Google::Apis::GamesV1::RoomModification]
+        # @return [GoogleAPI::Apis::GamesV1::RoomModification]
         attr_accessor :creation_details
       
         # This short description is generated by our servers and worded relative to the
@@ -3149,13 +3149,13 @@ module Google
       
         # This is a JSON template for room modification metadata.
         # Corresponds to the JSON property `lastUpdateDetails`
-        # @return [Google::Apis::GamesV1::RoomModification]
+        # @return [GoogleAPI::Apis::GamesV1::RoomModification]
         attr_accessor :last_update_details
       
         # The participants involved in the room, along with their statuses. Includes
         # participants who have left or declined invitations.
         # Corresponds to the JSON property `participants`
-        # @return [Array<Google::Apis::GamesV1::RoomParticipant>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::RoomParticipant>]
         attr_accessor :participants
       
         # Globally unique ID for a room.
@@ -3213,7 +3213,7 @@ module Google
       
       # This is a JSON template for status of room automatching that is in progress.
       class RoomAutoMatchStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#roomAutoMatchStatus.
@@ -3240,7 +3240,7 @@ module Google
       
       # This is a JSON template for a room auto-match criteria object.
       class RoomAutoMatchingCriteria
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A bitmask indicating when auto-matches are valid. When ANDed with other
         # exclusive bitmasks, the result must be zero. Can be used to support exclusive
@@ -3282,7 +3282,7 @@ module Google
       
       # This is a JSON template for the client address when setting up a room.
       class RoomClientAddress
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#roomClientAddress.
@@ -3308,11 +3308,11 @@ module Google
       
       # This is a JSON template for a room creation request.
       class CreateRoomRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This is a JSON template for a room auto-match criteria object.
         # Corresponds to the JSON property `autoMatchingCriteria`
-        # @return [Google::Apis::GamesV1::RoomAutoMatchingCriteria]
+        # @return [GoogleAPI::Apis::GamesV1::RoomAutoMatchingCriteria]
         attr_accessor :auto_matching_criteria
       
         # The capabilities that this client supports for realtime communication.
@@ -3322,7 +3322,7 @@ module Google
       
         # This is a JSON template for the client address when setting up a room.
         # Corresponds to the JSON property `clientAddress`
-        # @return [Google::Apis::GamesV1::RoomClientAddress]
+        # @return [GoogleAPI::Apis::GamesV1::RoomClientAddress]
         attr_accessor :client_address
       
         # The player IDs to invite to the room.
@@ -3338,7 +3338,7 @@ module Google
       
         # This is a JSON template for network diagnostics reported for a client.
         # Corresponds to the JSON property `networkDiagnostics`
-        # @return [Google::Apis::GamesV1::NetworkDiagnostics]
+        # @return [GoogleAPI::Apis::GamesV1::NetworkDiagnostics]
         attr_accessor :network_diagnostics
       
         # A randomly generated numeric ID. This number is used at the server to ensure
@@ -3373,7 +3373,7 @@ module Google
       
       # This is a JSON template for a join room request.
       class JoinRoomRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The capabilities that this client supports for realtime communication.
         # Corresponds to the JSON property `capabilities`
@@ -3382,7 +3382,7 @@ module Google
       
         # This is a JSON template for the client address when setting up a room.
         # Corresponds to the JSON property `clientAddress`
-        # @return [Google::Apis::GamesV1::RoomClientAddress]
+        # @return [GoogleAPI::Apis::GamesV1::RoomClientAddress]
         attr_accessor :client_address
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -3393,7 +3393,7 @@ module Google
       
         # This is a JSON template for network diagnostics reported for a client.
         # Corresponds to the JSON property `networkDiagnostics`
-        # @return [Google::Apis::GamesV1::NetworkDiagnostics]
+        # @return [GoogleAPI::Apis::GamesV1::NetworkDiagnostics]
         attr_accessor :network_diagnostics
       
         def initialize(**args)
@@ -3411,7 +3411,7 @@ module Google
       
       # This is a JSON template for room leave diagnostics.
       class RoomLeaveDiagnostics
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Android network subtype. http://developer.android.com/reference/android/net/
         # NetworkInfo.html#getSubtype()
@@ -3455,7 +3455,7 @@ module Google
       
         # Diagnostics about all peer sessions.
         # Corresponds to the JSON property `peerSession`
-        # @return [Array<Google::Apis::GamesV1::PeerSessionDiagnostics>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::PeerSessionDiagnostics>]
         attr_accessor :peer_session
       
         # Whether or not sockets were used.
@@ -3483,7 +3483,7 @@ module Google
       
       # This is a JSON template for a leave room request.
       class LeaveRoomRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#roomLeaveRequest.
@@ -3493,7 +3493,7 @@ module Google
       
         # This is a JSON template for room leave diagnostics.
         # Corresponds to the JSON property `leaveDiagnostics`
-        # @return [Google::Apis::GamesV1::RoomLeaveDiagnostics]
+        # @return [GoogleAPI::Apis::GamesV1::RoomLeaveDiagnostics]
         attr_accessor :leave_diagnostics
       
         # Reason for leaving the match.
@@ -3536,11 +3536,11 @@ module Google
       
       # This is a JSON template for a list of rooms.
       class RoomList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The rooms.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GamesV1::Room>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::Room>]
         attr_accessor :items
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -3568,7 +3568,7 @@ module Google
       
       # This is a JSON template for room modification metadata.
       class RoomModification
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#roomModification.
@@ -3601,7 +3601,7 @@ module Google
       
       # This is a JSON template for an update on the status of a peer in a room.
       class RoomP2PStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The amount of time in milliseconds it took to establish connections with this
         # peer.
@@ -3671,7 +3671,7 @@ module Google
       
       # This is a JSON template for an update on the status of peers in a room.
       class RoomP2PStatuses
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#roomP2PStatuses.
@@ -3681,7 +3681,7 @@ module Google
       
         # The updates for the peers.
         # Corresponds to the JSON property `updates`
-        # @return [Array<Google::Apis::GamesV1::RoomP2PStatus>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::RoomP2PStatus>]
         attr_accessor :updates
       
         def initialize(**args)
@@ -3697,7 +3697,7 @@ module Google
       
       # This is a JSON template for a participant in a room.
       class RoomParticipant
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # True if this participant was auto-matched with the requesting player.
         # Corresponds to the JSON property `autoMatched`
@@ -3707,7 +3707,7 @@ module Google
       
         # This is a JSON template for an anonymous player
         # Corresponds to the JSON property `autoMatchedPlayer`
-        # @return [Google::Apis::GamesV1::AnonymousPlayer]
+        # @return [GoogleAPI::Apis::GamesV1::AnonymousPlayer]
         attr_accessor :auto_matched_player
       
         # The capabilities which can be used when communicating with this participant.
@@ -3717,7 +3717,7 @@ module Google
       
         # This is a JSON template for the client address when setting up a room.
         # Corresponds to the JSON property `clientAddress`
-        # @return [Google::Apis::GamesV1::RoomClientAddress]
+        # @return [GoogleAPI::Apis::GamesV1::RoomClientAddress]
         attr_accessor :client_address
       
         # True if this participant is in the fully connected set of peers in the room.
@@ -3758,7 +3758,7 @@ module Google
       
         # This is a JSON template for a Player resource.
         # Corresponds to the JSON property `player`
-        # @return [Google::Apis::GamesV1::Player]
+        # @return [GoogleAPI::Apis::GamesV1::Player]
         attr_accessor :player
       
         # The status of the participant with respect to the room.
@@ -3795,11 +3795,11 @@ module Google
       
       # This is a JSON template for the status of a room that the player has joined.
       class RoomStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This is a JSON template for status of room automatching that is in progress.
         # Corresponds to the JSON property `autoMatchingStatus`
-        # @return [Google::Apis::GamesV1::RoomAutoMatchStatus]
+        # @return [GoogleAPI::Apis::GamesV1::RoomAutoMatchStatus]
         attr_accessor :auto_matching_status
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -3811,7 +3811,7 @@ module Google
         # The participants involved in the room, along with their statuses. Includes
         # participants who have left or declined invitations.
         # Corresponds to the JSON property `participants`
-        # @return [Array<Google::Apis::GamesV1::RoomParticipant>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::RoomParticipant>]
         attr_accessor :participants
       
         # Globally unique ID for a room.
@@ -3854,7 +3854,7 @@ module Google
       
       # This is a JSON template for a request to submit a score to leaderboards.
       class ScoreSubmission
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#scoreSubmission.
@@ -3900,11 +3900,11 @@ module Google
       
       # This is a JSON template for an snapshot object.
       class Snapshot
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This is a JSON template for an image of a snapshot.
         # Corresponds to the JSON property `coverImage`
-        # @return [Google::Apis::GamesV1::SnapshotImage]
+        # @return [GoogleAPI::Apis::GamesV1::SnapshotImage]
         attr_accessor :cover_image
       
         # The description of this snapshot.
@@ -3985,7 +3985,7 @@ module Google
       
       # This is a JSON template for an image of a snapshot.
       class SnapshotImage
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The height of the image.
         # Corresponds to the JSON property `height`
@@ -4030,11 +4030,11 @@ module Google
       
       # This is a JSON template for a list of snapshot objects.
       class ListSnapshotResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The snapshots.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GamesV1::Snapshot>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::Snapshot>]
         attr_accessor :items
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -4063,7 +4063,7 @@ module Google
       
       # This is a JSON template for an turn-based auto-match criteria object.
       class TurnBasedAutoMatchingCriteria
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A bitmask indicating when auto-matches are valid. When ANDed with other
         # exclusive bitmasks, the result must be zero. Can be used to support exclusive
@@ -4105,7 +4105,7 @@ module Google
       
       # This is a JSON template for a turn-based match resource object.
       class TurnBasedMatch
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the application being played.
         # Corresponds to the JSON property `applicationId`
@@ -4114,17 +4114,17 @@ module Google
       
         # This is a JSON template for an turn-based auto-match criteria object.
         # Corresponds to the JSON property `autoMatchingCriteria`
-        # @return [Google::Apis::GamesV1::TurnBasedAutoMatchingCriteria]
+        # @return [GoogleAPI::Apis::GamesV1::TurnBasedAutoMatchingCriteria]
         attr_accessor :auto_matching_criteria
       
         # This is a JSON template for turn-based match modification metadata.
         # Corresponds to the JSON property `creationDetails`
-        # @return [Google::Apis::GamesV1::TurnBasedMatchModification]
+        # @return [GoogleAPI::Apis::GamesV1::TurnBasedMatchModification]
         attr_accessor :creation_details
       
         # This is a JSON template for a turn-based match data object.
         # Corresponds to the JSON property `data`
-        # @return [Google::Apis::GamesV1::TurnBasedMatchData]
+        # @return [GoogleAPI::Apis::GamesV1::TurnBasedMatchData]
         attr_accessor :data
       
         # This short description is generated by our servers based on turn state and is
@@ -4148,7 +4148,7 @@ module Google
       
         # This is a JSON template for turn-based match modification metadata.
         # Corresponds to the JSON property `lastUpdateDetails`
-        # @return [Google::Apis::GamesV1::TurnBasedMatchModification]
+        # @return [GoogleAPI::Apis::GamesV1::TurnBasedMatchModification]
         attr_accessor :last_update_details
       
         # Globally unique ID for a turn-based match.
@@ -4171,7 +4171,7 @@ module Google
         # The participants involved in the match, along with their statuses. Includes
         # participants who have left or declined invitations.
         # Corresponds to the JSON property `participants`
-        # @return [Array<Google::Apis::GamesV1::TurnBasedMatchParticipant>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::TurnBasedMatchParticipant>]
         attr_accessor :participants
       
         # The ID of the participant that is taking a turn.
@@ -4181,7 +4181,7 @@ module Google
       
         # This is a JSON template for a turn-based match data object.
         # Corresponds to the JSON property `previousMatchData`
-        # @return [Google::Apis::GamesV1::TurnBasedMatchData]
+        # @return [GoogleAPI::Apis::GamesV1::TurnBasedMatchData]
         attr_accessor :previous_match_data
       
         # The ID of a rematch of this match. Only set for completed matches that have
@@ -4192,7 +4192,7 @@ module Google
       
         # The results reported for this match.
         # Corresponds to the JSON property `results`
-        # @return [Array<Google::Apis::GamesV1::ParticipantResult>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::ParticipantResult>]
         attr_accessor :results
       
         # The status of the match.
@@ -4266,11 +4266,11 @@ module Google
       
       # This is a JSON template for a turn-based match creation request.
       class CreateTurnBasedMatchRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This is a JSON template for an turn-based auto-match criteria object.
         # Corresponds to the JSON property `autoMatchingCriteria`
-        # @return [Google::Apis::GamesV1::TurnBasedAutoMatchingCriteria]
+        # @return [GoogleAPI::Apis::GamesV1::TurnBasedAutoMatchingCriteria]
         attr_accessor :auto_matching_criteria
       
         # The player ids to invite to the match.
@@ -4313,7 +4313,7 @@ module Google
       
       # This is a JSON template for a turn-based match data object.
       class TurnBasedMatchData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The byte representation of the data (limited to 128 kB), as a Base64-encoded
         # string with the URL_SAFE encoding option.
@@ -4348,7 +4348,7 @@ module Google
       
       # This is a JSON template for sending a turn-based match data object.
       class TurnBasedMatchDataRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The byte representation of the data (limited to 128 kB), as a Base64-encoded
         # string with the URL_SAFE encoding option.
@@ -4375,11 +4375,11 @@ module Google
       
       # This is a JSON template for a list of turn-based matches.
       class TurnBasedMatchList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The matches.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GamesV1::TurnBasedMatch>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::TurnBasedMatch>]
         attr_accessor :items
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -4407,7 +4407,7 @@ module Google
       
       # This is a JSON template for turn-based match modification metadata.
       class TurnBasedMatchModification
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#turnBasedMatchModification.
@@ -4440,7 +4440,7 @@ module Google
       
       # This is a JSON template for a participant in a turn-based match.
       class TurnBasedMatchParticipant
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # True if this participant was auto-matched with the requesting player.
         # Corresponds to the JSON property `autoMatched`
@@ -4450,7 +4450,7 @@ module Google
       
         # This is a JSON template for an anonymous player
         # Corresponds to the JSON property `autoMatchedPlayer`
-        # @return [Google::Apis::GamesV1::AnonymousPlayer]
+        # @return [GoogleAPI::Apis::GamesV1::AnonymousPlayer]
         attr_accessor :auto_matched_player
       
         # An identifier for the participant in the scope of the match. Cannot be used to
@@ -4467,7 +4467,7 @@ module Google
       
         # This is a JSON template for a Player resource.
         # Corresponds to the JSON property `player`
-        # @return [Google::Apis::GamesV1::Player]
+        # @return [GoogleAPI::Apis::GamesV1::Player]
         attr_accessor :player
       
         # The status of the participant with respect to the match.
@@ -4506,7 +4506,7 @@ module Google
       
       # This is a JSON template for a rematch response.
       class TurnBasedMatchRematch
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Uniquely identifies the type of this resource. Value is always the fixed
         # string games#turnBasedMatchRematch.
@@ -4516,12 +4516,12 @@ module Google
       
         # This is a JSON template for a turn-based match resource object.
         # Corresponds to the JSON property `previousMatch`
-        # @return [Google::Apis::GamesV1::TurnBasedMatch]
+        # @return [GoogleAPI::Apis::GamesV1::TurnBasedMatch]
         attr_accessor :previous_match
       
         # This is a JSON template for a turn-based match resource object.
         # Corresponds to the JSON property `rematch`
-        # @return [Google::Apis::GamesV1::TurnBasedMatch]
+        # @return [GoogleAPI::Apis::GamesV1::TurnBasedMatch]
         attr_accessor :rematch
       
         def initialize(**args)
@@ -4538,11 +4538,11 @@ module Google
       
       # This is a JSON template for a turn-based match results object.
       class TurnBasedMatchResults
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This is a JSON template for sending a turn-based match data object.
         # Corresponds to the JSON property `data`
-        # @return [Google::Apis::GamesV1::TurnBasedMatchDataRequest]
+        # @return [GoogleAPI::Apis::GamesV1::TurnBasedMatchDataRequest]
         attr_accessor :data
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -4558,7 +4558,7 @@ module Google
       
         # The match results for the participants in the match.
         # Corresponds to the JSON property `results`
-        # @return [Array<Google::Apis::GamesV1::ParticipantResult>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::ParticipantResult>]
         attr_accessor :results
       
         def initialize(**args)
@@ -4576,11 +4576,11 @@ module Google
       
       # This is a JSON template for a list of turn-based matches returned from a sync.
       class TurnBasedMatchSync
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The matches.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::GamesV1::TurnBasedMatch>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::TurnBasedMatch>]
         attr_accessor :items
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -4616,11 +4616,11 @@ module Google
       
       # This is a JSON template for the object representing a turn.
       class TurnBasedMatchTurn
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This is a JSON template for sending a turn-based match data object.
         # Corresponds to the JSON property `data`
-        # @return [Google::Apis::GamesV1::TurnBasedMatchDataRequest]
+        # @return [GoogleAPI::Apis::GamesV1::TurnBasedMatchDataRequest]
         attr_accessor :data
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -4646,7 +4646,7 @@ module Google
       
         # The match results for the participants in the match.
         # Corresponds to the JSON property `results`
-        # @return [Array<Google::Apis::GamesV1::ParticipantResult>]
+        # @return [Array<GoogleAPI::Apis::GamesV1::ParticipantResult>]
         attr_accessor :results
       
         def initialize(**args)

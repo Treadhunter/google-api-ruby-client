@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module GroupssettingsV1
       # Groups Settings API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/groupssettings_v1'
       #
-      #    Groupssettings = Google::Apis::GroupssettingsV1 # Alias the module
+      #    Groupssettings = GoogleAPI::Apis::GroupssettingsV1 # Alias the module
       #    service = Groupssettings::GroupssettingsService.new
       #
       # @see https://developers.google.com/google-apps/groups-settings/get_started
-      class GroupssettingsService < Google::Apis::Core::BaseService
+      class GroupssettingsService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -64,23 +64,23 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::GroupssettingsV1::Groups] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::GroupssettingsV1::Groups] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::GroupssettingsV1::Groups]
+        # @return [GoogleAPI::Apis::GroupssettingsV1::Groups]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_group(group_unique_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{groupUniqueId}', options)
           command.query['alt'] = 'json'
-          command.response_representation = Google::Apis::GroupssettingsV1::Groups::Representation
-          command.response_class = Google::Apis::GroupssettingsV1::Groups
+          command.response_representation = GoogleAPI::Apis::GroupssettingsV1::Groups::Representation
+          command.response_class = GoogleAPI::Apis::GroupssettingsV1::Groups
           command.params['groupUniqueId'] = group_unique_id unless group_unique_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -91,7 +91,7 @@ module Google
         # Updates an existing resource. This method supports patch semantics.
         # @param [String] group_unique_id
         #   The resource ID
-        # @param [Google::Apis::GroupssettingsV1::Groups] groups_object
+        # @param [GoogleAPI::Apis::GroupssettingsV1::Groups] groups_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -101,25 +101,25 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::GroupssettingsV1::Groups] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::GroupssettingsV1::Groups] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::GroupssettingsV1::Groups]
+        # @return [GoogleAPI::Apis::GroupssettingsV1::Groups]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_group(group_unique_id, groups_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, '{groupUniqueId}', options)
-          command.request_representation = Google::Apis::GroupssettingsV1::Groups::Representation
+          command.request_representation = GoogleAPI::Apis::GroupssettingsV1::Groups::Representation
           command.request_object = groups_object
           command.query['alt'] = 'json'
-          command.response_representation = Google::Apis::GroupssettingsV1::Groups::Representation
-          command.response_class = Google::Apis::GroupssettingsV1::Groups
+          command.response_representation = GoogleAPI::Apis::GroupssettingsV1::Groups::Representation
+          command.response_class = GoogleAPI::Apis::GroupssettingsV1::Groups
           command.params['groupUniqueId'] = group_unique_id unless group_unique_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -130,7 +130,7 @@ module Google
         # Updates an existing resource.
         # @param [String] group_unique_id
         #   The resource ID
-        # @param [Google::Apis::GroupssettingsV1::Groups] groups_object
+        # @param [GoogleAPI::Apis::GroupssettingsV1::Groups] groups_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -140,25 +140,25 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::GroupssettingsV1::Groups] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::GroupssettingsV1::Groups] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::GroupssettingsV1::Groups]
+        # @return [GoogleAPI::Apis::GroupssettingsV1::Groups]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_group(group_unique_id, groups_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, '{groupUniqueId}', options)
-          command.request_representation = Google::Apis::GroupssettingsV1::Groups::Representation
+          command.request_representation = GoogleAPI::Apis::GroupssettingsV1::Groups::Representation
           command.request_object = groups_object
           command.query['alt'] = 'json'
-          command.response_representation = Google::Apis::GroupssettingsV1::Groups::Representation
-          command.response_class = Google::Apis::GroupssettingsV1::Groups
+          command.response_representation = GoogleAPI::Apis::GroupssettingsV1::Groups::Representation
+          command.response_class = GoogleAPI::Apis::GroupssettingsV1::Groups
           command.params['groupUniqueId'] = group_unique_id unless group_unique_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?

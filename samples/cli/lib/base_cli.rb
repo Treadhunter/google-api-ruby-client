@@ -56,7 +56,7 @@ class BaseCli < Thor
 
     # Returns application credentials for the given scope.
     def application_credentials_for(scope)
-      Google::Auth.get_application_default(scope)
+      GoogleAPI::Auth.get_application_default(scope)
     end
 
     # Returns user credentials for the given scope. Requests authorization
@@ -65,12 +65,12 @@ class BaseCli < Thor
       FileUtils.mkdir_p(File.dirname(token_store_path))
 
       if ENV['GOOGLE_CLIENT_ID']
-        client_id = Google::Auth::ClientId.new(ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'])
+        client_id = GoogleAPI::Auth::ClientId.new(ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'])
       else
-        client_id = Google::Auth::ClientId.from_file(client_secrets_path)
+        client_id = GoogleAPI::Auth::ClientId.from_file(client_secrets_path)
       end
-      token_store = Google::Auth::Stores::FileTokenStore.new(:file => token_store_path)
-      authorizer = Google::Auth::UserAuthorizer.new(client_id, scope, token_store)
+      token_store = GoogleAPI::Auth::Stores::FileTokenStore.new(:file => token_store_path)
+      authorizer = GoogleAPI::Auth::UserAuthorizer.new(client_id, scope, token_store)
 
       user_id = options[:user] || 'default'
 

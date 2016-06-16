@@ -18,44 +18,44 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module Oauth2V2
       
       class Jwk
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Key
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Tokeninfo
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Userinfoplus
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Jwk
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :keys, as: 'keys', class: Google::Apis::Oauth2V2::Jwk::Key, decorator: Google::Apis::Oauth2V2::Jwk::Key::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :keys, as: 'keys', class: GoogleAPI::Apis::Oauth2V2::Jwk::Key, decorator: GoogleAPI::Apis::Oauth2V2::Jwk::Key::Representation
       
         end
         
         class Key
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :alg, as: 'alg'
             property :e, as: 'e'
             property :kid, as: 'kid'
@@ -68,7 +68,7 @@ module Google
       
       class Tokeninfo
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :access_type, as: 'access_type'
           property :audience, as: 'audience'
           property :email, as: 'email'
@@ -83,7 +83,7 @@ module Google
       
       class Userinfoplus
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :email, as: 'email'
           property :family_name, as: 'family_name'
           property :gender, as: 'gender'

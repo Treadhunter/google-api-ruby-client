@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CloudbillingV1
       # Google Cloud Billing API
@@ -28,11 +28,11 @@ module Google
       # @example
       #    require 'google/apis/cloudbilling_v1'
       #
-      #    Cloudbilling = Google::Apis::CloudbillingV1 # Alias the module
+      #    Cloudbilling = GoogleAPI::Apis::CloudbillingV1 # Alias the module
       #    service = Cloudbilling::CloudbillingService.new
       #
       # @see https://cloud.google.com/billing/
-      class CloudbillingService < Google::Apis::Core::BaseService
+      class CloudbillingService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -58,22 +58,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudbillingV1::BillingAccount] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudbillingV1::BillingAccount] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudbillingV1::BillingAccount]
+        # @return [GoogleAPI::Apis::CloudbillingV1::BillingAccount]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_billing_account(name, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/{+name}', options)
-          command.response_representation = Google::Apis::CloudbillingV1::BillingAccount::Representation
-          command.response_class = Google::Apis::CloudbillingV1::BillingAccount
+          command.response_representation = GoogleAPI::Apis::CloudbillingV1::BillingAccount::Representation
+          command.response_class = GoogleAPI::Apis::CloudbillingV1::BillingAccount
           command.params['name'] = name unless name.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -93,22 +93,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudbillingV1::ListBillingAccountsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudbillingV1::ListBillingAccountsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudbillingV1::ListBillingAccountsResponse]
+        # @return [GoogleAPI::Apis::CloudbillingV1::ListBillingAccountsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_billing_accounts(page_size: nil, page_token: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/billingAccounts', options)
-          command.response_representation = Google::Apis::CloudbillingV1::ListBillingAccountsResponse::Representation
-          command.response_class = Google::Apis::CloudbillingV1::ListBillingAccountsResponse
+          command.response_representation = GoogleAPI::Apis::CloudbillingV1::ListBillingAccountsResponse::Representation
+          command.response_class = GoogleAPI::Apis::CloudbillingV1::ListBillingAccountsResponse
           command.query['pageSize'] = page_size unless page_size.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -133,22 +133,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudbillingV1::ListProjectBillingInfoResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudbillingV1::ListProjectBillingInfoResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudbillingV1::ListProjectBillingInfoResponse]
+        # @return [GoogleAPI::Apis::CloudbillingV1::ListProjectBillingInfoResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_billing_account_projects(name, page_size: nil, page_token: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/{+name}/projects', options)
-          command.response_representation = Google::Apis::CloudbillingV1::ListProjectBillingInfoResponse::Representation
-          command.response_class = Google::Apis::CloudbillingV1::ListProjectBillingInfoResponse
+          command.response_representation = GoogleAPI::Apis::CloudbillingV1::ListProjectBillingInfoResponse::Representation
+          command.response_class = GoogleAPI::Apis::CloudbillingV1::ListProjectBillingInfoResponse
           command.params['name'] = name unless name.nil?
           command.query['pageSize'] = page_size unless page_size.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -168,22 +168,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudbillingV1::ProjectBillingInfo] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudbillingV1::ProjectBillingInfo] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudbillingV1::ProjectBillingInfo]
+        # @return [GoogleAPI::Apis::CloudbillingV1::ProjectBillingInfo]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_project_billing_info(name, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/{+name}/billingInfo', options)
-          command.response_representation = Google::Apis::CloudbillingV1::ProjectBillingInfo::Representation
-          command.response_class = Google::Apis::CloudbillingV1::ProjectBillingInfo
+          command.response_representation = GoogleAPI::Apis::CloudbillingV1::ProjectBillingInfo::Representation
+          command.response_class = GoogleAPI::Apis::CloudbillingV1::ProjectBillingInfo
           command.params['name'] = name unless name.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -216,30 +216,30 @@ module Google
         # @param [String] name
         #   The resource name of the project associated with the billing information that
         #   you want to update. For example, `projects/tokyo-rain-123`.
-        # @param [Google::Apis::CloudbillingV1::ProjectBillingInfo] project_billing_info_object
+        # @param [GoogleAPI::Apis::CloudbillingV1::ProjectBillingInfo] project_billing_info_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudbillingV1::ProjectBillingInfo] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudbillingV1::ProjectBillingInfo] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudbillingV1::ProjectBillingInfo]
+        # @return [GoogleAPI::Apis::CloudbillingV1::ProjectBillingInfo]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_project_billing_info(name, project_billing_info_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:put, 'v1/{+name}/billingInfo', options)
-          command.request_representation = Google::Apis::CloudbillingV1::ProjectBillingInfo::Representation
+          command.request_representation = GoogleAPI::Apis::CloudbillingV1::ProjectBillingInfo::Representation
           command.request_object = project_billing_info_object
-          command.response_representation = Google::Apis::CloudbillingV1::ProjectBillingInfo::Representation
-          command.response_class = Google::Apis::CloudbillingV1::ProjectBillingInfo
+          command.response_representation = GoogleAPI::Apis::CloudbillingV1::ProjectBillingInfo::Representation
+          command.response_class = GoogleAPI::Apis::CloudbillingV1::ProjectBillingInfo
           command.params['name'] = name unless name.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?

@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CoordinateV1
       
       # Custom field.
       class CustomField
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Custom field id.
         # Corresponds to the JSON property `customFieldId`
@@ -55,7 +55,7 @@ module Google
       
       # Custom field definition.
       class CustomFieldDef
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether the field is enabled.
         # Corresponds to the JSON property `enabled`
@@ -66,7 +66,7 @@ module Google
         # List of enum items for this custom field. Populated only if the field type is
         # enum. Enum fields appear as 'lists' in the Coordinate web and mobile UI.
         # Corresponds to the JSON property `enumitems`
-        # @return [Array<Google::Apis::CoordinateV1::EnumItemDef>]
+        # @return [Array<GoogleAPI::Apis::CoordinateV1::EnumItemDef>]
         attr_accessor :enumitems
       
         # Custom field id.
@@ -113,11 +113,11 @@ module Google
       
       # Collection of custom field definitions for a team.
       class ListCustomFieldDefResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Collection of custom field definitions in a team.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::CoordinateV1::CustomFieldDef>]
+        # @return [Array<GoogleAPI::Apis::CoordinateV1::CustomFieldDef>]
         attr_accessor :items
       
         # Identifies this object as a collection of custom field definitions in a team.
@@ -138,11 +138,11 @@ module Google
       
       # Collection of custom fields.
       class CustomFields
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Collection of custom fields.
         # Corresponds to the JSON property `customField`
-        # @return [Array<Google::Apis::CoordinateV1::CustomField>]
+        # @return [Array<GoogleAPI::Apis::CoordinateV1::CustomField>]
         attr_accessor :custom_field
       
         # Identifies this object as a collection of custom fields.
@@ -163,7 +163,7 @@ module Google
       
       # Enum Item definition.
       class EnumItemDef
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether the enum item is active. Jobs may contain inactive enum values;
         # however, setting an enum to an inactive value when creating or updating a job
@@ -197,7 +197,7 @@ module Google
       
       # A job.
       class Job
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Job id.
         # Corresponds to the JSON property `id`
@@ -207,7 +207,7 @@ module Google
         # List of job changes since it was created. The first change corresponds to the
         # state of the job when it was created.
         # Corresponds to the JSON property `jobChange`
-        # @return [Array<Google::Apis::CoordinateV1::JobChange>]
+        # @return [Array<GoogleAPI::Apis::CoordinateV1::JobChange>]
         attr_accessor :job_change
       
         # Identifies this object as a job.
@@ -217,7 +217,7 @@ module Google
       
         # Current state of a job.
         # Corresponds to the JSON property `state`
-        # @return [Google::Apis::CoordinateV1::JobState]
+        # @return [GoogleAPI::Apis::CoordinateV1::JobState]
         attr_accessor :state
       
         def initialize(**args)
@@ -235,7 +235,7 @@ module Google
       
       # Change to a job. For example assigning the job to a different worker.
       class JobChange
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies this object as a job change.
         # Corresponds to the JSON property `kind`
@@ -244,7 +244,7 @@ module Google
       
         # Current state of a job.
         # Corresponds to the JSON property `state`
-        # @return [Google::Apis::CoordinateV1::JobState]
+        # @return [GoogleAPI::Apis::CoordinateV1::JobState]
         attr_accessor :state
       
         # Time at which this change was applied.
@@ -266,11 +266,11 @@ module Google
       
       # Response from a List Jobs request.
       class ListJobResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Jobs in the collection.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::CoordinateV1::Job>]
+        # @return [Array<GoogleAPI::Apis::CoordinateV1::Job>]
         attr_accessor :items
       
         # Identifies this object as a list of jobs.
@@ -297,7 +297,7 @@ module Google
       
       # Current state of a job.
       class JobState
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Email address of the assignee, or the string "DELETED_USER" if the account is
         # no longer available.
@@ -307,7 +307,7 @@ module Google
       
         # Collection of custom fields.
         # Corresponds to the JSON property `customFields`
-        # @return [Google::Apis::CoordinateV1::CustomFields]
+        # @return [GoogleAPI::Apis::CoordinateV1::CustomFields]
         attr_accessor :custom_fields
       
         # Customer name.
@@ -327,7 +327,7 @@ module Google
       
         # Location of a job.
         # Corresponds to the JSON property `location`
-        # @return [Google::Apis::CoordinateV1::Location]
+        # @return [GoogleAPI::Apis::CoordinateV1::Location]
         attr_accessor :location
       
         # Note added to the job.
@@ -365,7 +365,7 @@ module Google
       
       # Location of a job.
       class Location
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Address.
         # Corresponds to the JSON property `addressLine`
@@ -402,11 +402,11 @@ module Google
       
       # Response from a List Locations request.
       class ListLocationResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Locations in the collection.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::CoordinateV1::LocationRecord>]
+        # @return [Array<GoogleAPI::Apis::CoordinateV1::LocationRecord>]
         attr_accessor :items
       
         # Identifies this object as a list of locations.
@@ -421,7 +421,7 @@ module Google
       
         # Pagination information.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::CoordinateV1::TokenPagination]
+        # @return [GoogleAPI::Apis::CoordinateV1::TokenPagination]
         attr_accessor :token_pagination
       
         def initialize(**args)
@@ -439,7 +439,7 @@ module Google
       
       # Recorded location of a worker.
       class LocationRecord
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The collection time in milliseconds since the epoch.
         # Corresponds to the JSON property `collectionTime`
@@ -483,7 +483,7 @@ module Google
       
       # Job schedule.
       class Schedule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether the job is scheduled for the whole day. Time of day in start/end times
         # is ignored if this is true.
@@ -528,7 +528,7 @@ module Google
       
       # A Coordinate team.
       class Team
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Team id, as found in a coordinate team url e.g. https://coordinate.google.com/
         # f/xyz where "xyz" is the team id.
@@ -560,11 +560,11 @@ module Google
       
       # Response from a List Teams request.
       class ListTeamResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Teams in the collection.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::CoordinateV1::Team>]
+        # @return [Array<GoogleAPI::Apis::CoordinateV1::Team>]
         attr_accessor :items
       
         # Identifies this object as a list of teams.
@@ -585,7 +585,7 @@ module Google
       
       # Pagination information.
       class TokenPagination
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies this object as pagination information.
         # Corresponds to the JSON property `kind`
@@ -616,7 +616,7 @@ module Google
       
       # A worker in a Coordinate team.
       class Worker
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Worker email address. If a worker has been deleted from your team, the email
         # address will appear as DELETED_USER.
@@ -642,11 +642,11 @@ module Google
       
       # Response from a List Workers request.
       class ListWorkerResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Workers in the collection.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::CoordinateV1::Worker>]
+        # @return [Array<GoogleAPI::Apis::CoordinateV1::Worker>]
         attr_accessor :items
       
         # Identifies this object as a list of workers.

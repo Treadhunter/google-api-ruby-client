@@ -16,7 +16,7 @@ require 'google/apis/dfareporting_v2_3/service.rb'
 require 'google/apis/dfareporting_v2_3/classes.rb'
 require 'google/apis/dfareporting_v2_3/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # DCM/DFA Reporting And Trafficking API
     #

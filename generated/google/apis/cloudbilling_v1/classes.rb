@@ -18,14 +18,14 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CloudbillingV1
       
       # A billing account in [Google Developers Console](https://console.developers.
       # google.com/). You can assign a billing account to one or more projects.
       class BillingAccount
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The resource name of the billing account. The resource name has the form `
         # billingAccounts/`billing_account_id``. For example, `billingAccounts/012345-
@@ -63,11 +63,11 @@ module Google
       
       # Response message for `ListBillingAccounts`.
       class ListBillingAccountsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of billing accounts.
         # Corresponds to the JSON property `billingAccounts`
-        # @return [Array<Google::Apis::CloudbillingV1::BillingAccount>]
+        # @return [Array<GoogleAPI::Apis::CloudbillingV1::BillingAccount>]
         attr_accessor :billing_accounts
       
         # A token to retrieve the next page of results. To retrieve the next page, call `
@@ -90,12 +90,12 @@ module Google
       
       # Request message for `ListProjectBillingInfoResponse`.
       class ListProjectBillingInfoResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of `ProjectBillingInfo` resources representing the projects associated
         # with the billing account.
         # Corresponds to the JSON property `projectBillingInfo`
-        # @return [Array<Google::Apis::CloudbillingV1::ProjectBillingInfo>]
+        # @return [Array<GoogleAPI::Apis::CloudbillingV1::ProjectBillingInfo>]
         attr_accessor :project_billing_info
       
         # A token to retrieve the next page of results. To retrieve the next page, call `
@@ -120,7 +120,7 @@ module Google
       # project has at most one associated billing account at a time (but a billing
       # account can be assigned to multiple projects).
       class ProjectBillingInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The resource name for the `ProjectBillingInfo`; has the form `projects/`
         # project_id`/billingInfo`. For example, the resource name for the billing

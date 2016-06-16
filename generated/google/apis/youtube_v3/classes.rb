@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module YoutubeV3
       
       # Rights management policy for YouTube resources.
       class AccessPolicy
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The value of allowed indicates whether the access to the policy is allowed or
         # denied by default.
@@ -58,12 +58,12 @@ module Google
       # resource(s) associated with the action, such as the video that was rated or
       # uploaded.
       class Activity
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Details about the content of an activity: the video that was shared, the
         # channel that was subscribed to, etc.
         # Corresponds to the JSON property `contentDetails`
-        # @return [Google::Apis::YoutubeV3::ActivityContentDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ActivityContentDetails]
         attr_accessor :content_details
       
         # Etag of this resource.
@@ -85,7 +85,7 @@ module Google
         # Basic details about an activity, including title, description, thumbnails,
         # activity type and group.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::ActivitySnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::ActivitySnippet]
         attr_accessor :snippet
       
         def initialize(**args)
@@ -105,61 +105,61 @@ module Google
       # Details about the content of an activity: the video that was shared, the
       # channel that was subscribed to, etc.
       class ActivityContentDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Details about a channel bulletin post.
         # Corresponds to the JSON property `bulletin`
-        # @return [Google::Apis::YoutubeV3::ActivityContentDetailsBulletin]
+        # @return [GoogleAPI::Apis::YoutubeV3::ActivityContentDetailsBulletin]
         attr_accessor :bulletin
       
         # Details about a resource which was added to a channel.
         # Corresponds to the JSON property `channelItem`
-        # @return [Google::Apis::YoutubeV3::ActivityContentDetailsChannelItem]
+        # @return [GoogleAPI::Apis::YoutubeV3::ActivityContentDetailsChannelItem]
         attr_accessor :channel_item
       
         # Information about a resource that received a comment.
         # Corresponds to the JSON property `comment`
-        # @return [Google::Apis::YoutubeV3::ActivityContentDetailsComment]
+        # @return [GoogleAPI::Apis::YoutubeV3::ActivityContentDetailsComment]
         attr_accessor :comment
       
         # Information about a video that was marked as a favorite video.
         # Corresponds to the JSON property `favorite`
-        # @return [Google::Apis::YoutubeV3::ActivityContentDetailsFavorite]
+        # @return [GoogleAPI::Apis::YoutubeV3::ActivityContentDetailsFavorite]
         attr_accessor :favorite
       
         # Information about a resource that received a positive (like) rating.
         # Corresponds to the JSON property `like`
-        # @return [Google::Apis::YoutubeV3::ActivityContentDetailsLike]
+        # @return [GoogleAPI::Apis::YoutubeV3::ActivityContentDetailsLike]
         attr_accessor :like
       
         # Information about a new playlist item.
         # Corresponds to the JSON property `playlistItem`
-        # @return [Google::Apis::YoutubeV3::ActivityContentDetailsPlaylistItem]
+        # @return [GoogleAPI::Apis::YoutubeV3::ActivityContentDetailsPlaylistItem]
         attr_accessor :playlist_item
       
         # Details about a resource which is being promoted.
         # Corresponds to the JSON property `promotedItem`
-        # @return [Google::Apis::YoutubeV3::ActivityContentDetailsPromotedItem]
+        # @return [GoogleAPI::Apis::YoutubeV3::ActivityContentDetailsPromotedItem]
         attr_accessor :promoted_item
       
         # Information that identifies the recommended resource.
         # Corresponds to the JSON property `recommendation`
-        # @return [Google::Apis::YoutubeV3::ActivityContentDetailsRecommendation]
+        # @return [GoogleAPI::Apis::YoutubeV3::ActivityContentDetailsRecommendation]
         attr_accessor :recommendation
       
         # Details about a social network post.
         # Corresponds to the JSON property `social`
-        # @return [Google::Apis::YoutubeV3::ActivityContentDetailsSocial]
+        # @return [GoogleAPI::Apis::YoutubeV3::ActivityContentDetailsSocial]
         attr_accessor :social
       
         # Information about a channel that a user subscribed to.
         # Corresponds to the JSON property `subscription`
-        # @return [Google::Apis::YoutubeV3::ActivityContentDetailsSubscription]
+        # @return [GoogleAPI::Apis::YoutubeV3::ActivityContentDetailsSubscription]
         attr_accessor :subscription
       
         # Information about the uploaded video.
         # Corresponds to the JSON property `upload`
-        # @return [Google::Apis::YoutubeV3::ActivityContentDetailsUpload]
+        # @return [GoogleAPI::Apis::YoutubeV3::ActivityContentDetailsUpload]
         attr_accessor :upload
       
         def initialize(**args)
@@ -184,11 +184,11 @@ module Google
       
       # Details about a channel bulletin post.
       class ActivityContentDetailsBulletin
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A resource id is a generic reference that points to another YouTube resource.
         # Corresponds to the JSON property `resourceId`
-        # @return [Google::Apis::YoutubeV3::ResourceId]
+        # @return [GoogleAPI::Apis::YoutubeV3::ResourceId]
         attr_accessor :resource_id
       
         def initialize(**args)
@@ -203,11 +203,11 @@ module Google
       
       # Details about a resource which was added to a channel.
       class ActivityContentDetailsChannelItem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A resource id is a generic reference that points to another YouTube resource.
         # Corresponds to the JSON property `resourceId`
-        # @return [Google::Apis::YoutubeV3::ResourceId]
+        # @return [GoogleAPI::Apis::YoutubeV3::ResourceId]
         attr_accessor :resource_id
       
         def initialize(**args)
@@ -222,11 +222,11 @@ module Google
       
       # Information about a resource that received a comment.
       class ActivityContentDetailsComment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A resource id is a generic reference that points to another YouTube resource.
         # Corresponds to the JSON property `resourceId`
-        # @return [Google::Apis::YoutubeV3::ResourceId]
+        # @return [GoogleAPI::Apis::YoutubeV3::ResourceId]
         attr_accessor :resource_id
       
         def initialize(**args)
@@ -241,11 +241,11 @@ module Google
       
       # Information about a video that was marked as a favorite video.
       class ActivityContentDetailsFavorite
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A resource id is a generic reference that points to another YouTube resource.
         # Corresponds to the JSON property `resourceId`
-        # @return [Google::Apis::YoutubeV3::ResourceId]
+        # @return [GoogleAPI::Apis::YoutubeV3::ResourceId]
         attr_accessor :resource_id
       
         def initialize(**args)
@@ -260,11 +260,11 @@ module Google
       
       # Information about a resource that received a positive (like) rating.
       class ActivityContentDetailsLike
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A resource id is a generic reference that points to another YouTube resource.
         # Corresponds to the JSON property `resourceId`
-        # @return [Google::Apis::YoutubeV3::ResourceId]
+        # @return [GoogleAPI::Apis::YoutubeV3::ResourceId]
         attr_accessor :resource_id
       
         def initialize(**args)
@@ -279,7 +279,7 @@ module Google
       
       # Information about a new playlist item.
       class ActivityContentDetailsPlaylistItem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The value that YouTube uses to uniquely identify the playlist.
         # Corresponds to the JSON property `playlistId`
@@ -293,7 +293,7 @@ module Google
       
         # A resource id is a generic reference that points to another YouTube resource.
         # Corresponds to the JSON property `resourceId`
-        # @return [Google::Apis::YoutubeV3::ResourceId]
+        # @return [GoogleAPI::Apis::YoutubeV3::ResourceId]
         attr_accessor :resource_id
       
         def initialize(**args)
@@ -310,7 +310,7 @@ module Google
       
       # Details about a resource which is being promoted.
       class ActivityContentDetailsPromotedItem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The URL the client should fetch to request a promoted item.
         # Corresponds to the JSON property `adTag`
@@ -391,7 +391,7 @@ module Google
       
       # Information that identifies the recommended resource.
       class ActivityContentDetailsRecommendation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The reason that the resource is recommended to the user.
         # Corresponds to the JSON property `reason`
@@ -400,12 +400,12 @@ module Google
       
         # A resource id is a generic reference that points to another YouTube resource.
         # Corresponds to the JSON property `resourceId`
-        # @return [Google::Apis::YoutubeV3::ResourceId]
+        # @return [GoogleAPI::Apis::YoutubeV3::ResourceId]
         attr_accessor :resource_id
       
         # A resource id is a generic reference that points to another YouTube resource.
         # Corresponds to the JSON property `seedResourceId`
-        # @return [Google::Apis::YoutubeV3::ResourceId]
+        # @return [GoogleAPI::Apis::YoutubeV3::ResourceId]
         attr_accessor :seed_resource_id
       
         def initialize(**args)
@@ -422,7 +422,7 @@ module Google
       
       # Details about a social network post.
       class ActivityContentDetailsSocial
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The author of the social network post.
         # Corresponds to the JSON property `author`
@@ -441,7 +441,7 @@ module Google
       
         # A resource id is a generic reference that points to another YouTube resource.
         # Corresponds to the JSON property `resourceId`
-        # @return [Google::Apis::YoutubeV3::ResourceId]
+        # @return [GoogleAPI::Apis::YoutubeV3::ResourceId]
         attr_accessor :resource_id
       
         # The name of the social network.
@@ -465,11 +465,11 @@ module Google
       
       # Information about a channel that a user subscribed to.
       class ActivityContentDetailsSubscription
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A resource id is a generic reference that points to another YouTube resource.
         # Corresponds to the JSON property `resourceId`
-        # @return [Google::Apis::YoutubeV3::ResourceId]
+        # @return [GoogleAPI::Apis::YoutubeV3::ResourceId]
         attr_accessor :resource_id
       
         def initialize(**args)
@@ -484,7 +484,7 @@ module Google
       
       # Information about the uploaded video.
       class ActivityContentDetailsUpload
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID that YouTube uses to uniquely identify the uploaded video.
         # Corresponds to the JSON property `videoId`
@@ -503,7 +503,7 @@ module Google
       
       # 
       class ListActivitiesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -517,7 +517,7 @@ module Google
       
         # A list of activities, or events, that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::Activity>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::Activity>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -535,7 +535,7 @@ module Google
         # Paging details for lists of resources, including total number of items
         # available and number of resources returned in a single page.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubeV3::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::PageInfo]
         attr_accessor :page_info
       
         # The token that can be used as the value of the pageToken parameter to retrieve
@@ -546,7 +546,7 @@ module Google
       
         # Stub token pagination template to suppress results.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::YoutubeV3::TokenPagination]
+        # @return [GoogleAPI::Apis::YoutubeV3::TokenPagination]
         attr_accessor :token_pagination
       
         # The visitorId identifies the visitor.
@@ -575,7 +575,7 @@ module Google
       # Basic details about an activity, including title, description, thumbnails,
       # activity type and group.
       class ActivitySnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID that YouTube uses to uniquely identify the channel associated with the
         # activity.
@@ -611,7 +611,7 @@ module Google
       
         # Internal representation of thumbnails for a YouTube resource.
         # Corresponds to the JSON property `thumbnails`
-        # @return [Google::Apis::YoutubeV3::ThumbnailDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ThumbnailDetails]
         attr_accessor :thumbnails
       
         # The title of the resource primarily associated with the activity.
@@ -644,7 +644,7 @@ module Google
       # A caption resource represents a YouTube caption track. A caption track is
       # associated with exactly one YouTube video.
       class Caption
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -664,7 +664,7 @@ module Google
       
         # Basic details about a caption track, such as its language and name.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::CaptionSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::CaptionSnippet]
         attr_accessor :snippet
       
         def initialize(**args)
@@ -682,7 +682,7 @@ module Google
       
       # 
       class ListCaptionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -696,7 +696,7 @@ module Google
       
         # A list of captions that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::Caption>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::Caption>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -726,7 +726,7 @@ module Google
       
       # Basic details about a caption track, such as its language and name.
       class CaptionSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of audio track associated with the caption track.
         # Corresponds to the JSON property `audioTrackType`
@@ -836,7 +836,7 @@ module Google
       
       # Brief description of the live stream cdn settings.
       class CdnSettings
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The format of the video stream that you are sending to Youtube.
         # Corresponds to the JSON property `format`
@@ -850,7 +850,7 @@ module Google
       
         # Describes information necessary for ingesting an RTMP or an HTTP stream.
         # Corresponds to the JSON property `ingestionInfo`
-        # @return [Google::Apis::YoutubeV3::IngestionInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::IngestionInfo]
         attr_accessor :ingestion_info
       
         # The method or protocol used to transmit the video stream.
@@ -879,34 +879,34 @@ module Google
       
       # A channel resource contains information about a YouTube channel.
       class Channel
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The auditDetails object encapsulates channel data that is relevant for YouTube
         # Partners during the audit process.
         # Corresponds to the JSON property `auditDetails`
-        # @return [Google::Apis::YoutubeV3::ChannelAuditDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelAuditDetails]
         attr_accessor :audit_details
       
         # Branding properties of a YouTube channel.
         # Corresponds to the JSON property `brandingSettings`
-        # @return [Google::Apis::YoutubeV3::ChannelBrandingSettings]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelBrandingSettings]
         attr_accessor :branding_settings
       
         # Details about the content of a channel.
         # Corresponds to the JSON property `contentDetails`
-        # @return [Google::Apis::YoutubeV3::ChannelContentDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelContentDetails]
         attr_accessor :content_details
       
         # The contentOwnerDetails object encapsulates channel data that is relevant for
         # YouTube Partners linked with the channel.
         # Corresponds to the JSON property `contentOwnerDetails`
-        # @return [Google::Apis::YoutubeV3::ChannelContentOwnerDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelContentOwnerDetails]
         attr_accessor :content_owner_details
       
         # The conversionPings object encapsulates information about conversion pings
         # that need to be respected by the channel.
         # Corresponds to the JSON property `conversionPings`
-        # @return [Google::Apis::YoutubeV3::ChannelConversionPings]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelConversionPings]
         attr_accessor :conversion_pings
       
         # Etag of this resource.
@@ -922,7 +922,7 @@ module Google
         # Describes an invideo promotion campaign consisting of multiple promoted items.
         # A campaign belongs to a single channel_id.
         # Corresponds to the JSON property `invideoPromotion`
-        # @return [Google::Apis::YoutubeV3::InvideoPromotion]
+        # @return [GoogleAPI::Apis::YoutubeV3::InvideoPromotion]
         attr_accessor :invideo_promotion
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -933,29 +933,29 @@ module Google
       
         # Localizations for different languages
         # Corresponds to the JSON property `localizations`
-        # @return [Hash<String,Google::Apis::YoutubeV3::ChannelLocalization>]
+        # @return [Hash<String,GoogleAPI::Apis::YoutubeV3::ChannelLocalization>]
         attr_accessor :localizations
       
         # Basic details about a channel, including title, description and thumbnails.
         # Next available id: 15.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::ChannelSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelSnippet]
         attr_accessor :snippet
       
         # Statistics about a channel: number of subscribers, number of videos in the
         # channel, etc.
         # Corresponds to the JSON property `statistics`
-        # @return [Google::Apis::YoutubeV3::ChannelStatistics]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelStatistics]
         attr_accessor :statistics
       
         # JSON template for the status part of a channel.
         # Corresponds to the JSON property `status`
-        # @return [Google::Apis::YoutubeV3::ChannelStatus]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelStatus]
         attr_accessor :status
       
         # Freebase topic information related to the channel.
         # Corresponds to the JSON property `topicDetails`
-        # @return [Google::Apis::YoutubeV3::ChannelTopicDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelTopicDetails]
         attr_accessor :topic_details
       
         def initialize(**args)
@@ -984,7 +984,7 @@ module Google
       # The auditDetails object encapsulates channel data that is relevant for YouTube
       # Partners during the audit process.
       class ChannelAuditDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether or not the channel respects the community guidelines.
         # Corresponds to the JSON property `communityGuidelinesGoodStanding`
@@ -1029,7 +1029,7 @@ module Google
       
       # A channel banner returned as the response to a channel_banner.insert call.
       class ChannelBannerResource
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -1061,26 +1061,26 @@ module Google
       
       # Branding properties of a YouTube channel.
       class ChannelBrandingSettings
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Branding properties for the channel view.
         # Corresponds to the JSON property `channel`
-        # @return [Google::Apis::YoutubeV3::ChannelSettings]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelSettings]
         attr_accessor :channel
       
         # Additional experimental branding properties.
         # Corresponds to the JSON property `hints`
-        # @return [Array<Google::Apis::YoutubeV3::PropertyValue>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::PropertyValue>]
         attr_accessor :hints
       
         # Branding properties for images associated with the channel.
         # Corresponds to the JSON property `image`
-        # @return [Google::Apis::YoutubeV3::ImageSettings]
+        # @return [GoogleAPI::Apis::YoutubeV3::ImageSettings]
         attr_accessor :image
       
         # Branding properties for the watch. All deprecated.
         # Corresponds to the JSON property `watch`
-        # @return [Google::Apis::YoutubeV3::WatchSettings]
+        # @return [GoogleAPI::Apis::YoutubeV3::WatchSettings]
         attr_accessor :watch
       
         def initialize(**args)
@@ -1098,7 +1098,7 @@ module Google
       
       # Details about the content of a channel.
       class ChannelContentDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The googlePlusUserId object identifies the Google+ profile ID associated with
         # this channel.
@@ -1108,7 +1108,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `relatedPlaylists`
-        # @return [Google::Apis::YoutubeV3::ChannelContentDetails::RelatedPlaylists]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelContentDetails::RelatedPlaylists]
         attr_accessor :related_playlists
       
         def initialize(**args)
@@ -1123,7 +1123,7 @@ module Google
         
         # 
         class RelatedPlaylists
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The ID of the playlist that contains the channel"s favorite videos. Use the
           # playlistItems.insert and  playlistItems.delete to add or remove items from
@@ -1178,7 +1178,7 @@ module Google
       # The contentOwnerDetails object encapsulates channel data that is relevant for
       # YouTube Partners linked with the channel.
       class ChannelContentOwnerDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the content owner linked to the channel.
         # Corresponds to the JSON property `contentOwner`
@@ -1206,7 +1206,7 @@ module Google
       # has a context, in which the app must fire the ping, and a url identifying the
       # ping.
       class ChannelConversionPing
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Defines the context of the ping.
         # Corresponds to the JSON property `context`
@@ -1237,13 +1237,13 @@ module Google
       # The conversionPings object encapsulates information about conversion pings
       # that need to be respected by the channel.
       class ChannelConversionPings
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Pings that the app shall fire (authenticated by biscotti cookie). Each ping
         # has a context, in which the app must fire the ping, and a url identifying the
         # ping.
         # Corresponds to the JSON property `pings`
-        # @return [Array<Google::Apis::YoutubeV3::ChannelConversionPing>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::ChannelConversionPing>]
         attr_accessor :pings
       
         def initialize(**args)
@@ -1258,7 +1258,7 @@ module Google
       
       # 
       class ListChannelsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -1272,7 +1272,7 @@ module Google
       
         # A list of channels that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::Channel>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::Channel>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -1290,7 +1290,7 @@ module Google
         # Paging details for lists of resources, including total number of items
         # available and number of resources returned in a single page.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubeV3::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::PageInfo]
         attr_accessor :page_info
       
         # The token that can be used as the value of the pageToken parameter to retrieve
@@ -1301,7 +1301,7 @@ module Google
       
         # Stub token pagination template to suppress results.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::YoutubeV3::TokenPagination]
+        # @return [GoogleAPI::Apis::YoutubeV3::TokenPagination]
         attr_accessor :token_pagination
       
         # The visitorId identifies the visitor.
@@ -1329,7 +1329,7 @@ module Google
       
       # Channel localization setting
       class ChannelLocalization
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The localized strings for channel's description.
         # Corresponds to the JSON property `description`
@@ -1354,7 +1354,7 @@ module Google
       
       # 
       class ChannelProfileDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The YouTube channel ID.
         # Corresponds to the JSON property `channelId`
@@ -1391,11 +1391,11 @@ module Google
       
       # 
       class ChannelSection
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Details about a channelsection, including playlists and channels.
         # Corresponds to the JSON property `contentDetails`
-        # @return [Google::Apis::YoutubeV3::ChannelSectionContentDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelSectionContentDetails]
         attr_accessor :content_details
       
         # Etag of this resource.
@@ -1416,17 +1416,17 @@ module Google
       
         # Localizations for different languages
         # Corresponds to the JSON property `localizations`
-        # @return [Hash<String,Google::Apis::YoutubeV3::ChannelSectionLocalization>]
+        # @return [Hash<String,GoogleAPI::Apis::YoutubeV3::ChannelSectionLocalization>]
         attr_accessor :localizations
       
         # Basic details about a channel section, including title, style and position.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::ChannelSectionSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelSectionSnippet]
         attr_accessor :snippet
       
         # ChannelSection targeting setting.
         # Corresponds to the JSON property `targeting`
-        # @return [Google::Apis::YoutubeV3::ChannelSectionTargeting]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelSectionTargeting]
         attr_accessor :targeting
       
         def initialize(**args)
@@ -1447,7 +1447,7 @@ module Google
       
       # Details about a channelsection, including playlists and channels.
       class ChannelSectionContentDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The channel ids for type multiple_channels.
         # Corresponds to the JSON property `channels`
@@ -1473,7 +1473,7 @@ module Google
       
       # 
       class ListChannelSectionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -1487,7 +1487,7 @@ module Google
       
         # A list of ChannelSections that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::ChannelSection>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::ChannelSection>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -1517,7 +1517,7 @@ module Google
       
       # ChannelSection localization setting
       class ChannelSectionLocalization
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The localized strings for channel section's title.
         # Corresponds to the JSON property `title`
@@ -1536,7 +1536,7 @@ module Google
       
       # Basic details about a channel section, including title, style and position.
       class ChannelSectionSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID that YouTube uses to uniquely identify the channel that published the
         # channel section.
@@ -1551,7 +1551,7 @@ module Google
       
         # ChannelSection localization setting
         # Corresponds to the JSON property `localized`
-        # @return [Google::Apis::YoutubeV3::ChannelSectionLocalization]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelSectionLocalization]
         attr_accessor :localized
       
         # The position of the channel section in the channel.
@@ -1592,7 +1592,7 @@ module Google
       
       # ChannelSection targeting setting.
       class ChannelSectionTargeting
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The country the channel section is targeting.
         # Corresponds to the JSON property `countries`
@@ -1623,7 +1623,7 @@ module Google
       
       # Branding properties for the channel view.
       class ChannelSettings
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The country of the channel.
         # Corresponds to the JSON property `country`
@@ -1726,7 +1726,7 @@ module Google
       # Basic details about a channel, including title, description and thumbnails.
       # Next available id: 15.
       class ChannelSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The country of the channel.
         # Corresponds to the JSON property `country`
@@ -1750,7 +1750,7 @@ module Google
       
         # Channel localization setting
         # Corresponds to the JSON property `localized`
-        # @return [Google::Apis::YoutubeV3::ChannelLocalization]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelLocalization]
         attr_accessor :localized
       
         # The date and time that the channel was created. The value is specified in ISO
@@ -1761,7 +1761,7 @@ module Google
       
         # Internal representation of thumbnails for a YouTube resource.
         # Corresponds to the JSON property `thumbnails`
-        # @return [Google::Apis::YoutubeV3::ThumbnailDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ThumbnailDetails]
         attr_accessor :thumbnails
       
         # The channel's title.
@@ -1789,7 +1789,7 @@ module Google
       # Statistics about a channel: number of subscribers, number of videos in the
       # channel, etc.
       class ChannelStatistics
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of comments for the channel.
         # Corresponds to the JSON property `commentCount`
@@ -1833,7 +1833,7 @@ module Google
       
       # JSON template for the status part of a channel.
       class ChannelStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If true, then the user is linked to either a YouTube username or G+ account.
         # Otherwise, the user doesn't have a public YouTube identity.
@@ -1866,7 +1866,7 @@ module Google
       
       # Freebase topic information related to the channel.
       class ChannelTopicDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of Freebase topic IDs associated with the channel. You can retrieve
         # information about each topic using the Freebase Topic API.
@@ -1886,7 +1886,7 @@ module Google
       
       # A comment represents a single YouTube comment.
       class Comment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -1906,7 +1906,7 @@ module Google
       
         # Basic details about a comment, such as its author and text.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::CommentSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::CommentSnippet]
         attr_accessor :snippet
       
         def initialize(**args)
@@ -1924,7 +1924,7 @@ module Google
       
       # 
       class ListCommentsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -1938,7 +1938,7 @@ module Google
       
         # A list of comments that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::Comment>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::Comment>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -1956,12 +1956,12 @@ module Google
         # Paging details for lists of resources, including total number of items
         # available and number of resources returned in a single page.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubeV3::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::PageInfo]
         attr_accessor :page_info
       
         # Stub token pagination template to suppress results.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::YoutubeV3::TokenPagination]
+        # @return [GoogleAPI::Apis::YoutubeV3::TokenPagination]
         attr_accessor :token_pagination
       
         # The visitorId identifies the visitor.
@@ -1988,7 +1988,7 @@ module Google
       
       # Basic details about a comment, such as its author and text.
       class CommentSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The id of the author's YouTube channel, if any.
         # Corresponds to the JSON property `authorChannelId`
@@ -2112,7 +2112,7 @@ module Google
       # and all its replies. It can also include the top level comment itself and some
       # of the replies.
       class CommentThread
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -2132,12 +2132,12 @@ module Google
       
         # Comments written in (direct or indirect) reply to the top level comment.
         # Corresponds to the JSON property `replies`
-        # @return [Google::Apis::YoutubeV3::CommentThreadReplies]
+        # @return [GoogleAPI::Apis::YoutubeV3::CommentThreadReplies]
         attr_accessor :replies
       
         # Basic details about a comment thread.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::CommentThreadSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::CommentThreadSnippet]
         attr_accessor :snippet
       
         def initialize(**args)
@@ -2156,7 +2156,7 @@ module Google
       
       # 
       class ListCommentThreadsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -2170,7 +2170,7 @@ module Google
       
         # A list of comment threads that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::CommentThread>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::CommentThread>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -2188,12 +2188,12 @@ module Google
         # Paging details for lists of resources, including total number of items
         # available and number of resources returned in a single page.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubeV3::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::PageInfo]
         attr_accessor :page_info
       
         # Stub token pagination template to suppress results.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::YoutubeV3::TokenPagination]
+        # @return [GoogleAPI::Apis::YoutubeV3::TokenPagination]
         attr_accessor :token_pagination
       
         # The visitorId identifies the visitor.
@@ -2220,13 +2220,13 @@ module Google
       
       # Comments written in (direct or indirect) reply to the top level comment.
       class CommentThreadReplies
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A limited number of replies. Unless the number of replies returned equals
         # total_reply_count in the snippet the returned replies are only a subset of the
         # total number of replies.
         # Corresponds to the JSON property `comments`
-        # @return [Array<Google::Apis::YoutubeV3::Comment>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::Comment>]
         attr_accessor :comments
       
         def initialize(**args)
@@ -2241,7 +2241,7 @@ module Google
       
       # Basic details about a comment thread.
       class CommentThreadSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether the current viewer of the thread can reply to it. This is viewer
         # specific - other viewers may see a different value for this field.
@@ -2266,7 +2266,7 @@ module Google
       
         # A comment represents a single YouTube comment.
         # Corresponds to the JSON property `topLevelComment`
-        # @return [Google::Apis::YoutubeV3::Comment]
+        # @return [GoogleAPI::Apis::YoutubeV3::Comment]
         attr_accessor :top_level_comment
       
         # The total number of replies (not including the top level comment).
@@ -2298,7 +2298,7 @@ module Google
       # Ratings schemes. The country-specific ratings are mostly for movies and shows.
       # NEXT_ID: 67
       class ContentRating
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The video's Australian Classification Board (ACB) or Australian Communications
         # and Media Authority (ACMA) rating. ACMA ratings are used to classify children'
@@ -2740,7 +2740,7 @@ module Google
       # Fan funding events occur when a user gives one-time monetary support to the
       # channel owner.
       class FanFundingEvent
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -2760,7 +2760,7 @@ module Google
       
         # The snippet object contains basic details about the fan funding event.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::FanFundingEventSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::FanFundingEventSnippet]
         attr_accessor :snippet
       
         def initialize(**args)
@@ -2778,7 +2778,7 @@ module Google
       
       # 
       class FanFundingEventListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -2792,7 +2792,7 @@ module Google
       
         # A list of fan funding events that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::FanFundingEvent>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::FanFundingEvent>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -2810,12 +2810,12 @@ module Google
         # Paging details for lists of resources, including total number of items
         # available and number of resources returned in a single page.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubeV3::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::PageInfo]
         attr_accessor :page_info
       
         # Stub token pagination template to suppress results.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::YoutubeV3::TokenPagination]
+        # @return [GoogleAPI::Apis::YoutubeV3::TokenPagination]
         attr_accessor :token_pagination
       
         # The visitorId identifies the visitor.
@@ -2842,7 +2842,7 @@ module Google
       
       # 
       class FanFundingEventSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The amount of funding in micros of fund_currency. e.g., 1 is represented
         # Corresponds to the JSON property `amountMicros`
@@ -2879,7 +2879,7 @@ module Google
         # Details about the supporter. Only filled if the event was made public by the
         # user.
         # Corresponds to the JSON property `supporterDetails`
-        # @return [Google::Apis::YoutubeV3::ChannelProfileDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelProfileDetails]
         attr_accessor :supporter_details
       
         def initialize(**args)
@@ -2900,7 +2900,7 @@ module Google
       
       # Geographical coordinates of a point, in WGS84.
       class GeoPoint
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Altitude above the reference ellipsoid, in meters.
         # Corresponds to the JSON property `altitude`
@@ -2935,7 +2935,7 @@ module Google
       # being that a video's uploader can assign a video category but only YouTube can
       # assign a channel category.
       class GuideCategory
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -2955,7 +2955,7 @@ module Google
       
         # Basic details about a guide category.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::GuideCategorySnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::GuideCategorySnippet]
         attr_accessor :snippet
       
         def initialize(**args)
@@ -2973,7 +2973,7 @@ module Google
       
       # 
       class ListGuideCategoriesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -2989,7 +2989,7 @@ module Google
         # the category ID is the map key, and its value is the corresponding
         # guideCategory resource.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::GuideCategory>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::GuideCategory>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -3007,7 +3007,7 @@ module Google
         # Paging details for lists of resources, including total number of items
         # available and number of resources returned in a single page.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubeV3::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::PageInfo]
         attr_accessor :page_info
       
         # The token that can be used as the value of the pageToken parameter to retrieve
@@ -3018,7 +3018,7 @@ module Google
       
         # Stub token pagination template to suppress results.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::YoutubeV3::TokenPagination]
+        # @return [GoogleAPI::Apis::YoutubeV3::TokenPagination]
         attr_accessor :token_pagination
       
         # The visitorId identifies the visitor.
@@ -3046,7 +3046,7 @@ module Google
       
       # Basic details about a guide category.
       class GuideCategorySnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `channelId`
@@ -3072,7 +3072,7 @@ module Google
       # An i18nLanguage resource identifies a UI language currently supported by
       # YouTube.
       class I18nLanguage
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -3093,7 +3093,7 @@ module Google
         # Basic details about an i18n language, such as language code and human-readable
         # name.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::I18nLanguageSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::I18nLanguageSnippet]
         attr_accessor :snippet
       
         def initialize(**args)
@@ -3111,7 +3111,7 @@ module Google
       
       # 
       class ListI18nLanguagesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -3126,7 +3126,7 @@ module Google
         # A list of supported i18n languages. In this map, the i18n language ID is the
         # map key, and its value is the corresponding i18nLanguage resource.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::I18nLanguage>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::I18nLanguage>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -3157,7 +3157,7 @@ module Google
       # Basic details about an i18n language, such as language code and human-readable
       # name.
       class I18nLanguageSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A short BCP-47 code that uniquely identifies a language.
         # Corresponds to the JSON property `hl`
@@ -3182,7 +3182,7 @@ module Google
       
       # A i18nRegion resource identifies a region where YouTube is available.
       class I18nRegion
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -3203,7 +3203,7 @@ module Google
         # Basic details about an i18n region, such as region code and human-readable
         # name.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::I18nRegionSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::I18nRegionSnippet]
         attr_accessor :snippet
       
         def initialize(**args)
@@ -3221,7 +3221,7 @@ module Google
       
       # 
       class ListI18nRegionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -3236,7 +3236,7 @@ module Google
         # A list of regions where YouTube is available. In this map, the i18n region ID
         # is the map key, and its value is the corresponding i18nRegion resource.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::I18nRegion>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::I18nRegion>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -3267,7 +3267,7 @@ module Google
       # Basic details about an i18n region, such as region code and human-readable
       # name.
       class I18nRegionSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The region code as a 2-letter ISO country code.
         # Corresponds to the JSON property `gl`
@@ -3292,12 +3292,12 @@ module Google
       
       # Branding properties for images associated with the channel.
       class ImageSettings
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The URL for the background image shown on the video watch page. The image
         # should be 1200px by 615px, with a maximum file size of 128k.
         # Corresponds to the JSON property `backgroundImageUrl`
-        # @return [Google::Apis::YoutubeV3::LocalizedProperty]
+        # @return [GoogleAPI::Apis::YoutubeV3::LocalizedProperty]
         attr_accessor :background_image_url
       
         # This is used only in update requests; if it's set, we use this URL to generate
@@ -3378,24 +3378,24 @@ module Google
       
         # The image map script for the large banner image.
         # Corresponds to the JSON property `largeBrandedBannerImageImapScript`
-        # @return [Google::Apis::YoutubeV3::LocalizedProperty]
+        # @return [GoogleAPI::Apis::YoutubeV3::LocalizedProperty]
         attr_accessor :large_branded_banner_image_imap_script
       
         # The URL for the 854px by 70px image that appears below the video player in the
         # expanded video view of the video watch page.
         # Corresponds to the JSON property `largeBrandedBannerImageUrl`
-        # @return [Google::Apis::YoutubeV3::LocalizedProperty]
+        # @return [GoogleAPI::Apis::YoutubeV3::LocalizedProperty]
         attr_accessor :large_branded_banner_image_url
       
         # The image map script for the small banner image.
         # Corresponds to the JSON property `smallBrandedBannerImageImapScript`
-        # @return [Google::Apis::YoutubeV3::LocalizedProperty]
+        # @return [GoogleAPI::Apis::YoutubeV3::LocalizedProperty]
         attr_accessor :small_branded_banner_image_imap_script
       
         # The URL for the 640px by 70px banner image that appears below the video player
         # in the default view of the video watch page.
         # Corresponds to the JSON property `smallBrandedBannerImageUrl`
-        # @return [Google::Apis::YoutubeV3::LocalizedProperty]
+        # @return [GoogleAPI::Apis::YoutubeV3::LocalizedProperty]
         attr_accessor :small_branded_banner_image_url
       
         # The URL for a 1px by 1px tracking pixel that can be used to collect statistics
@@ -3444,7 +3444,7 @@ module Google
       
       # Describes information necessary for ingesting an RTMP or an HTTP stream.
       class IngestionInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The backup ingestion URL that you should use to stream video to YouTube. You
         # have the option of simultaneously streaming the content that you are sending
@@ -3482,7 +3482,7 @@ module Google
       
       # 
       class InvideoBranding
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `imageBytes`
@@ -3497,7 +3497,7 @@ module Google
         # Describes the spatial position of a visual widget inside a video. It is a
         # union of various position types, out of which only will be set one.
         # Corresponds to the JSON property `position`
-        # @return [Google::Apis::YoutubeV3::InvideoPosition]
+        # @return [GoogleAPI::Apis::YoutubeV3::InvideoPosition]
         attr_accessor :position
       
         # 
@@ -3507,7 +3507,7 @@ module Google
       
         # Describes a temporal position of a visual widget inside a video.
         # Corresponds to the JSON property `timing`
-        # @return [Google::Apis::YoutubeV3::InvideoTiming]
+        # @return [GoogleAPI::Apis::YoutubeV3::InvideoTiming]
         attr_accessor :timing
       
         def initialize(**args)
@@ -3527,7 +3527,7 @@ module Google
       # Describes the spatial position of a visual widget inside a video. It is a
       # union of various position types, out of which only will be set one.
       class InvideoPosition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Describes in which corner of the video the visual widget will appear.
         # Corresponds to the JSON property `cornerPosition`
@@ -3553,22 +3553,22 @@ module Google
       # Describes an invideo promotion campaign consisting of multiple promoted items.
       # A campaign belongs to a single channel_id.
       class InvideoPromotion
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Describes a temporal position of a visual widget inside a video.
         # Corresponds to the JSON property `defaultTiming`
-        # @return [Google::Apis::YoutubeV3::InvideoTiming]
+        # @return [GoogleAPI::Apis::YoutubeV3::InvideoTiming]
         attr_accessor :default_timing
       
         # List of promoted items in decreasing priority.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::PromotedItem>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::PromotedItem>]
         attr_accessor :items
       
         # Describes the spatial position of a visual widget inside a video. It is a
         # union of various position types, out of which only will be set one.
         # Corresponds to the JSON property `position`
-        # @return [Google::Apis::YoutubeV3::InvideoPosition]
+        # @return [GoogleAPI::Apis::YoutubeV3::InvideoPosition]
         attr_accessor :position
       
         # Indicates whether the channel's promotional campaign uses "smart timing." This
@@ -3595,7 +3595,7 @@ module Google
       
       # Describes a temporal position of a visual widget inside a video.
       class InvideoTiming
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Defines the duration in milliseconds for which the promotion should be
         # displayed. If missing, the client should use the default.
@@ -3632,7 +3632,7 @@ module Google
       
       # 
       class LanguageTag
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `value`
@@ -3652,11 +3652,11 @@ module Google
       # A liveBroadcast resource represents an event that will be streamed, via live
       # video, on YouTube.
       class LiveBroadcast
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Detailed settings of a broadcast.
         # Corresponds to the JSON property `contentDetails`
-        # @return [Google::Apis::YoutubeV3::LiveBroadcastContentDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveBroadcastContentDetails]
         attr_accessor :content_details
       
         # Etag of this resource.
@@ -3678,23 +3678,23 @@ module Google
         # The snippet object contains basic details about the event, including its title,
         # description, start time, and end time.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::LiveBroadcastSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveBroadcastSnippet]
         attr_accessor :snippet
       
         # Statistics about the live broadcast. These represent a snapshot of the values
         # at the time of the request. Statistics are only returned for live broadcasts.
         # Corresponds to the JSON property `statistics`
-        # @return [Google::Apis::YoutubeV3::LiveBroadcastStatistics]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveBroadcastStatistics]
         attr_accessor :statistics
       
         # The status object contains information about the event's status.
         # Corresponds to the JSON property `status`
-        # @return [Google::Apis::YoutubeV3::LiveBroadcastStatus]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveBroadcastStatus]
         attr_accessor :status
       
         # 
         # Corresponds to the JSON property `topicDetails`
-        # @return [Google::Apis::YoutubeV3::LiveBroadcastTopicDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveBroadcastTopicDetails]
         attr_accessor :topic_details
       
         def initialize(**args)
@@ -3716,7 +3716,7 @@ module Google
       
       # Detailed settings of a broadcast.
       class LiveBroadcastContentDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This value uniquely identifies the live stream bound to the broadcast.
         # Corresponds to the JSON property `boundStreamId`
@@ -3779,7 +3779,7 @@ module Google
       
         # Settings and Info of the monitor stream
         # Corresponds to the JSON property `monitorStream`
-        # @return [Google::Apis::YoutubeV3::MonitorStreamInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::MonitorStreamInfo]
         attr_accessor :monitor_stream
       
         # The projection format of this broadcast. This defaults to rectangular.
@@ -3832,7 +3832,7 @@ module Google
       
       # 
       class ListLiveBroadcastsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -3846,7 +3846,7 @@ module Google
       
         # A list of broadcasts that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::LiveBroadcast>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::LiveBroadcast>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -3864,7 +3864,7 @@ module Google
         # Paging details for lists of resources, including total number of items
         # available and number of resources returned in a single page.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubeV3::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::PageInfo]
         attr_accessor :page_info
       
         # The token that can be used as the value of the pageToken parameter to retrieve
@@ -3875,7 +3875,7 @@ module Google
       
         # Stub token pagination template to suppress results.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::YoutubeV3::TokenPagination]
+        # @return [GoogleAPI::Apis::YoutubeV3::TokenPagination]
         attr_accessor :token_pagination
       
         # The visitorId identifies the visitor.
@@ -3903,7 +3903,7 @@ module Google
       
       # 
       class LiveBroadcastSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The date and time that the broadcast actually ended. This information is only
         # available once the broadcast's state is complete. The value is specified in
@@ -3963,7 +3963,7 @@ module Google
       
         # Internal representation of thumbnails for a YouTube resource.
         # Corresponds to the JSON property `thumbnails`
-        # @return [Google::Apis::YoutubeV3::ThumbnailDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ThumbnailDetails]
         attr_accessor :thumbnails
       
         # The broadcast's title. Note that the broadcast represents exactly one YouTube
@@ -3996,7 +3996,7 @@ module Google
       # Statistics about the live broadcast. These represent a snapshot of the values
       # at the time of the request. Statistics are only returned for live broadcasts.
       class LiveBroadcastStatistics
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of viewers currently watching the broadcast. The property and its
         # value will be present if the broadcast has current viewers and the broadcast
@@ -4031,7 +4031,7 @@ module Google
       
       # 
       class LiveBroadcastStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The broadcast's status. The status can be updated using the API's
         # liveBroadcasts.transition method.
@@ -4073,11 +4073,11 @@ module Google
       
       # 
       class LiveBroadcastTopic
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Information about the topic matched.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::LiveBroadcastTopicSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveBroadcastTopicSnippet]
         attr_accessor :snippet
       
         # The type of the topic.
@@ -4106,11 +4106,11 @@ module Google
       
       # 
       class LiveBroadcastTopicDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `topics`
-        # @return [Array<Google::Apis::YoutubeV3::LiveBroadcastTopic>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::LiveBroadcastTopic>]
         attr_accessor :topics
       
         def initialize(**args)
@@ -4125,7 +4125,7 @@ module Google
       
       # 
       class LiveBroadcastTopicSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the topic.
         # Corresponds to the JSON property `name`
@@ -4150,7 +4150,7 @@ module Google
       
       # A liveChatBan resource represents a ban for a YouTube live chat.
       class LiveChatBan
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -4170,7 +4170,7 @@ module Google
       
         # The snippet object contains basic details about the ban.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::LiveChatBanSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveChatBanSnippet]
         attr_accessor :snippet
       
         def initialize(**args)
@@ -4188,7 +4188,7 @@ module Google
       
       # 
       class LiveChatBanSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The duration of a ban, only filled if the ban has type TEMPORARY.
         # Corresponds to the JSON property `banDurationSeconds`
@@ -4197,7 +4197,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `bannedUserDetails`
-        # @return [Google::Apis::YoutubeV3::ChannelProfileDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelProfileDetails]
         attr_accessor :banned_user_details
       
         # The chat this ban is pertinent to.
@@ -4225,7 +4225,7 @@ module Google
       
       # 
       class LiveChatFanFundingEventDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A rendered string that displays the fund amount and currency to the user.
         # Corresponds to the JSON property `amountDisplayString`
@@ -4262,12 +4262,12 @@ module Google
       
       # A liveChatMessage resource represents a chat message in a YouTube Live Chat.
       class LiveChatMessage
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The authorDetails object contains basic details about the user that posted
         # this message.
         # Corresponds to the JSON property `authorDetails`
-        # @return [Google::Apis::YoutubeV3::LiveChatMessageAuthorDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveChatMessageAuthorDetails]
         attr_accessor :author_details
       
         # Etag of this resource.
@@ -4288,7 +4288,7 @@ module Google
       
         # The snippet object contains basic details about the message.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::LiveChatMessageSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveChatMessageSnippet]
         attr_accessor :snippet
       
         def initialize(**args)
@@ -4307,7 +4307,7 @@ module Google
       
       # 
       class LiveChatMessageAuthorDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The YouTube channel ID.
         # Corresponds to the JSON property `channelId`
@@ -4372,7 +4372,7 @@ module Google
       
       # 
       class LiveChatMessageDeletedDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `deletedMessageId`
@@ -4391,7 +4391,7 @@ module Google
       
       # 
       class LiveChatMessageListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -4405,7 +4405,7 @@ module Google
       
         # A list of live chat messages.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::LiveChatMessage>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::LiveChatMessage>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -4429,7 +4429,7 @@ module Google
         # Paging details for lists of resources, including total number of items
         # available and number of resources returned in a single page.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubeV3::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::PageInfo]
         attr_accessor :page_info
       
         # The amount of time the client should wait before polling again.
@@ -4439,7 +4439,7 @@ module Google
       
         # Stub token pagination template to suppress results.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::YoutubeV3::TokenPagination]
+        # @return [GoogleAPI::Apis::YoutubeV3::TokenPagination]
         attr_accessor :token_pagination
       
         # The visitorId identifies the visitor.
@@ -4468,7 +4468,7 @@ module Google
       
       # 
       class LiveChatMessageRetractedDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `retractedMessageId`
@@ -4487,7 +4487,7 @@ module Google
       
       # 
       class LiveChatMessageSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the user that authored this message, this field is not always filled.
         # textMessageEvent - the user that wrote the message fanFundingEvent - the user
@@ -4509,7 +4509,7 @@ module Google
         # Details about the funding event, this is only set if the type is '
         # fanFundingEvent'.
         # Corresponds to the JSON property `fanFundingEventDetails`
-        # @return [Google::Apis::YoutubeV3::LiveChatFanFundingEventDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveChatFanFundingEventDetails]
         attr_accessor :fan_funding_event_details
       
         # Whether the message has display content that should be displayed to users.
@@ -4525,32 +4525,32 @@ module Google
       
         # 
         # Corresponds to the JSON property `messageDeletedDetails`
-        # @return [Google::Apis::YoutubeV3::LiveChatMessageDeletedDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveChatMessageDeletedDetails]
         attr_accessor :message_deleted_details
       
         # 
         # Corresponds to the JSON property `messageRetractedDetails`
-        # @return [Google::Apis::YoutubeV3::LiveChatMessageRetractedDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveChatMessageRetractedDetails]
         attr_accessor :message_retracted_details
       
         # 
         # Corresponds to the JSON property `pollClosedDetails`
-        # @return [Google::Apis::YoutubeV3::LiveChatPollClosedDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveChatPollClosedDetails]
         attr_accessor :poll_closed_details
       
         # 
         # Corresponds to the JSON property `pollEditedDetails`
-        # @return [Google::Apis::YoutubeV3::LiveChatPollEditedDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveChatPollEditedDetails]
         attr_accessor :poll_edited_details
       
         # 
         # Corresponds to the JSON property `pollOpenedDetails`
-        # @return [Google::Apis::YoutubeV3::LiveChatPollOpenedDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveChatPollOpenedDetails]
         attr_accessor :poll_opened_details
       
         # 
         # Corresponds to the JSON property `pollVotedDetails`
-        # @return [Google::Apis::YoutubeV3::LiveChatPollVotedDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveChatPollVotedDetails]
         attr_accessor :poll_voted_details
       
         # The date and time when the message was orignally published. The value is
@@ -4562,7 +4562,7 @@ module Google
         # Details about the text message, this is only set if the type is '
         # textMessageEvent'.
         # Corresponds to the JSON property `textMessageDetails`
-        # @return [Google::Apis::YoutubeV3::LiveChatTextMessageDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveChatTextMessageDetails]
         attr_accessor :text_message_details
       
         # The type of message, this will always be present, it determines the contents
@@ -4573,7 +4573,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `userBannedDetails`
-        # @return [Google::Apis::YoutubeV3::LiveChatUserBannedMessageDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveChatUserBannedMessageDetails]
         attr_accessor :user_banned_details
       
         def initialize(**args)
@@ -4604,7 +4604,7 @@ module Google
       # chat moderator has the ability to ban/unban users from a chat, remove message,
       # etc.
       class LiveChatModerator
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -4624,7 +4624,7 @@ module Google
       
         # The snippet object contains basic details about the moderator.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::LiveChatModeratorSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveChatModeratorSnippet]
         attr_accessor :snippet
       
         def initialize(**args)
@@ -4642,7 +4642,7 @@ module Google
       
       # 
       class LiveChatModeratorListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -4656,7 +4656,7 @@ module Google
       
         # A list of moderators that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::LiveChatModerator>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::LiveChatModerator>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -4674,7 +4674,7 @@ module Google
         # Paging details for lists of resources, including total number of items
         # available and number of resources returned in a single page.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubeV3::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::PageInfo]
         attr_accessor :page_info
       
         # The token that can be used as the value of the pageToken parameter to retrieve
@@ -4685,7 +4685,7 @@ module Google
       
         # Stub token pagination template to suppress results.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::YoutubeV3::TokenPagination]
+        # @return [GoogleAPI::Apis::YoutubeV3::TokenPagination]
         attr_accessor :token_pagination
       
         # The visitorId identifies the visitor.
@@ -4713,7 +4713,7 @@ module Google
       
       # 
       class LiveChatModeratorSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the live chat this moderator can act on.
         # Corresponds to the JSON property `liveChatId`
@@ -4722,7 +4722,7 @@ module Google
       
         # Details about the moderator.
         # Corresponds to the JSON property `moderatorDetails`
-        # @return [Google::Apis::YoutubeV3::ChannelProfileDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelProfileDetails]
         attr_accessor :moderator_details
       
         def initialize(**args)
@@ -4738,7 +4738,7 @@ module Google
       
       # 
       class LiveChatPollClosedDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The id of the poll that was closed.
         # Corresponds to the JSON property `pollId`
@@ -4757,7 +4757,7 @@ module Google
       
       # 
       class LiveChatPollEditedDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `id`
@@ -4766,7 +4766,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::LiveChatPollItem>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::LiveChatPollItem>]
         attr_accessor :items
       
         # 
@@ -4788,7 +4788,7 @@ module Google
       
       # 
       class LiveChatPollItem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Plain text description of the item.
         # Corresponds to the JSON property `description`
@@ -4813,7 +4813,7 @@ module Google
       
       # 
       class LiveChatPollOpenedDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `id`
@@ -4822,7 +4822,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::LiveChatPollItem>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::LiveChatPollItem>]
         attr_accessor :items
       
         # 
@@ -4844,7 +4844,7 @@ module Google
       
       # 
       class LiveChatPollVotedDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The poll item the user chose.
         # Corresponds to the JSON property `itemId`
@@ -4869,7 +4869,7 @@ module Google
       
       # 
       class LiveChatTextMessageDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The user's message.
         # Corresponds to the JSON property `messageText`
@@ -4888,7 +4888,7 @@ module Google
       
       # 
       class LiveChatUserBannedMessageDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The duration of the ban. This property is only present if the banType is
         # temporary.
@@ -4903,7 +4903,7 @@ module Google
       
         # The details of the user that was banned.
         # Corresponds to the JSON property `bannedUserDetails`
-        # @return [Google::Apis::YoutubeV3::ChannelProfileDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelProfileDetails]
         attr_accessor :banned_user_details
       
         def initialize(**args)
@@ -4920,16 +4920,16 @@ module Google
       
       # A live stream describes a live ingestion point.
       class LiveStream
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Brief description of the live stream cdn settings.
         # Corresponds to the JSON property `cdn`
-        # @return [Google::Apis::YoutubeV3::CdnSettings]
+        # @return [GoogleAPI::Apis::YoutubeV3::CdnSettings]
         attr_accessor :cdn
       
         # Detailed settings of a stream.
         # Corresponds to the JSON property `contentDetails`
-        # @return [Google::Apis::YoutubeV3::LiveStreamContentDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveStreamContentDetails]
         attr_accessor :content_details
       
         # Etag of this resource.
@@ -4951,12 +4951,12 @@ module Google
         # The snippet object contains basic details about the stream, including its
         # channel, title, and description.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::LiveStreamSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveStreamSnippet]
         attr_accessor :snippet
       
         # Brief description of the live stream status.
         # Corresponds to the JSON property `status`
-        # @return [Google::Apis::YoutubeV3::LiveStreamStatus]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveStreamStatus]
         attr_accessor :status
       
         def initialize(**args)
@@ -4977,7 +4977,7 @@ module Google
       
       # 
       class LiveStreamConfigurationIssue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The long-form description of the issue and how to resolve it.
         # Corresponds to the JSON property `description`
@@ -5014,7 +5014,7 @@ module Google
       
       # Detailed settings of a stream.
       class LiveStreamContentDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ingestion URL where the closed captions of this stream are sent.
         # Corresponds to the JSON property `closedCaptionsIngestionUrl`
@@ -5052,11 +5052,11 @@ module Google
       
       # 
       class LiveStreamHealthStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The configurations issues on this stream
         # Corresponds to the JSON property `configurationIssues`
-        # @return [Array<Google::Apis::YoutubeV3::LiveStreamConfigurationIssue>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::LiveStreamConfigurationIssue>]
         attr_accessor :configuration_issues
       
         # The last time this status was updated (in seconds)
@@ -5083,7 +5083,7 @@ module Google
       
       # 
       class ListLiveStreamsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -5097,7 +5097,7 @@ module Google
       
         # A list of live streams that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::LiveStream>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::LiveStream>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -5115,7 +5115,7 @@ module Google
         # Paging details for lists of resources, including total number of items
         # available and number of resources returned in a single page.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubeV3::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::PageInfo]
         attr_accessor :page_info
       
         # The token that can be used as the value of the pageToken parameter to retrieve
@@ -5126,7 +5126,7 @@ module Google
       
         # Stub token pagination template to suppress results.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::YoutubeV3::TokenPagination]
+        # @return [GoogleAPI::Apis::YoutubeV3::TokenPagination]
         attr_accessor :token_pagination
       
         # The visitorId identifies the visitor.
@@ -5154,7 +5154,7 @@ module Google
       
       # 
       class LiveStreamSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID that YouTube uses to uniquely identify the channel that is transmitting
         # the stream.
@@ -5200,11 +5200,11 @@ module Google
       
       # Brief description of the live stream status.
       class LiveStreamStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The health status of the stream.
         # Corresponds to the JSON property `healthStatus`
-        # @return [Google::Apis::YoutubeV3::LiveStreamHealthStatus]
+        # @return [GoogleAPI::Apis::YoutubeV3::LiveStreamHealthStatus]
         attr_accessor :health_status
       
         # 
@@ -5225,7 +5225,7 @@ module Google
       
       # 
       class LocalizedProperty
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `default`
@@ -5234,12 +5234,12 @@ module Google
       
         # The language of the default property.
         # Corresponds to the JSON property `defaultLanguage`
-        # @return [Google::Apis::YoutubeV3::LanguageTag]
+        # @return [GoogleAPI::Apis::YoutubeV3::LanguageTag]
         attr_accessor :default_language
       
         # 
         # Corresponds to the JSON property `localized`
-        # @return [Array<Google::Apis::YoutubeV3::LocalizedString>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::LocalizedString>]
         attr_accessor :localized
       
         def initialize(**args)
@@ -5256,7 +5256,7 @@ module Google
       
       # 
       class LocalizedString
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `language`
@@ -5281,7 +5281,7 @@ module Google
       
       # Settings and Info of the monitor stream
       class MonitorStreamInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If you have set the enableMonitorStream property to true, then this property
         # determines the length of the live broadcast delay.
@@ -5323,7 +5323,7 @@ module Google
       # Paging details for lists of resources, including total number of items
       # available and number of resources returned in a single page.
       class PageInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of results included in the API response.
         # Corresponds to the JSON property `resultsPerPage`
@@ -5365,11 +5365,11 @@ module Google
       # lists. You can also add or remove items from those lists by calling the
       # playlistItems.insert and   playlistItems.delete methods.
       class Playlist
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The contentDetails object contains information like video count.
         # Corresponds to the JSON property `contentDetails`
-        # @return [Google::Apis::YoutubeV3::PlaylistContentDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::PlaylistContentDetails]
         attr_accessor :content_details
       
         # Etag of this resource.
@@ -5390,23 +5390,23 @@ module Google
       
         # Localizations for different languages
         # Corresponds to the JSON property `localizations`
-        # @return [Hash<String,Google::Apis::YoutubeV3::PlaylistLocalization>]
+        # @return [Hash<String,GoogleAPI::Apis::YoutubeV3::PlaylistLocalization>]
         attr_accessor :localizations
       
         # The player object contains information that you would use to play the playlist
         # in an embedded player.
         # Corresponds to the JSON property `player`
-        # @return [Google::Apis::YoutubeV3::PlaylistPlayer]
+        # @return [GoogleAPI::Apis::YoutubeV3::PlaylistPlayer]
         attr_accessor :player
       
         # Basic details about a playlist, including title, description and thumbnails.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::PlaylistSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::PlaylistSnippet]
         attr_accessor :snippet
       
         # The status object contains status information for the playlist.
         # Corresponds to the JSON property `status`
-        # @return [Google::Apis::YoutubeV3::PlaylistStatus]
+        # @return [GoogleAPI::Apis::YoutubeV3::PlaylistStatus]
         attr_accessor :status
       
         def initialize(**args)
@@ -5428,7 +5428,7 @@ module Google
       
       # 
       class PlaylistContentDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of videos in the playlist.
         # Corresponds to the JSON property `itemCount`
@@ -5465,12 +5465,12 @@ module Google
       # methods. For example, if a user gives a positive rating to a video, you would
       # insert that video into the liked videos playlist for that user's channel.
       class PlaylistItem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The contentDetails object is included in the resource if the included item is
         # a YouTube video. The object contains additional information about the video.
         # Corresponds to the JSON property `contentDetails`
-        # @return [Google::Apis::YoutubeV3::PlaylistItemContentDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::PlaylistItemContentDetails]
         attr_accessor :content_details
       
         # Etag of this resource.
@@ -5491,12 +5491,12 @@ module Google
       
         # Basic details about a playlist, including title, description and thumbnails.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::PlaylistItemSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::PlaylistItemSnippet]
         attr_accessor :snippet
       
         # Information about the playlist item's privacy status.
         # Corresponds to the JSON property `status`
-        # @return [Google::Apis::YoutubeV3::PlaylistItemStatus]
+        # @return [GoogleAPI::Apis::YoutubeV3::PlaylistItemStatus]
         attr_accessor :status
       
         def initialize(**args)
@@ -5516,7 +5516,7 @@ module Google
       
       # 
       class PlaylistItemContentDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The time, measured in seconds from the start of the video, when the video
         # should stop playing. (The playlist owner can specify the times when the video
@@ -5560,7 +5560,7 @@ module Google
       
       # 
       class ListPlaylistItemsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -5574,7 +5574,7 @@ module Google
       
         # A list of playlist items that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::PlaylistItem>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::PlaylistItem>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -5592,7 +5592,7 @@ module Google
         # Paging details for lists of resources, including total number of items
         # available and number of resources returned in a single page.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubeV3::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::PageInfo]
         attr_accessor :page_info
       
         # The token that can be used as the value of the pageToken parameter to retrieve
@@ -5603,7 +5603,7 @@ module Google
       
         # Stub token pagination template to suppress results.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::YoutubeV3::TokenPagination]
+        # @return [GoogleAPI::Apis::YoutubeV3::TokenPagination]
         attr_accessor :token_pagination
       
         # The visitorId identifies the visitor.
@@ -5631,7 +5631,7 @@ module Google
       
       # Basic details about a playlist, including title, description and thumbnails.
       class PlaylistItemSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID that YouTube uses to uniquely identify the user that added the item to
         # the playlist.
@@ -5670,12 +5670,12 @@ module Google
       
         # A resource id is a generic reference that points to another YouTube resource.
         # Corresponds to the JSON property `resourceId`
-        # @return [Google::Apis::YoutubeV3::ResourceId]
+        # @return [GoogleAPI::Apis::YoutubeV3::ResourceId]
         attr_accessor :resource_id
       
         # Internal representation of thumbnails for a YouTube resource.
         # Corresponds to the JSON property `thumbnails`
-        # @return [Google::Apis::YoutubeV3::ThumbnailDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ThumbnailDetails]
         attr_accessor :thumbnails
       
         # The item's title.
@@ -5703,7 +5703,7 @@ module Google
       
       # Information about the playlist item's privacy status.
       class PlaylistItemStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This resource's privacy status.
         # Corresponds to the JSON property `privacyStatus`
@@ -5722,7 +5722,7 @@ module Google
       
       # 
       class ListPlaylistResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -5736,7 +5736,7 @@ module Google
       
         # A list of playlists that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::Playlist>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::Playlist>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -5754,7 +5754,7 @@ module Google
         # Paging details for lists of resources, including total number of items
         # available and number of resources returned in a single page.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubeV3::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::PageInfo]
         attr_accessor :page_info
       
         # The token that can be used as the value of the pageToken parameter to retrieve
@@ -5765,7 +5765,7 @@ module Google
       
         # Stub token pagination template to suppress results.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::YoutubeV3::TokenPagination]
+        # @return [GoogleAPI::Apis::YoutubeV3::TokenPagination]
         attr_accessor :token_pagination
       
         # The visitorId identifies the visitor.
@@ -5793,7 +5793,7 @@ module Google
       
       # Playlist localization setting
       class PlaylistLocalization
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The localized strings for playlist's description.
         # Corresponds to the JSON property `description`
@@ -5818,7 +5818,7 @@ module Google
       
       # 
       class PlaylistPlayer
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An <iframe> tag that embeds a player that will play the playlist.
         # Corresponds to the JSON property `embedHtml`
@@ -5837,7 +5837,7 @@ module Google
       
       # Basic details about a playlist, including title, description and thumbnails.
       class PlaylistSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID that YouTube uses to uniquely identify the channel that published the
         # playlist.
@@ -5862,7 +5862,7 @@ module Google
       
         # Playlist localization setting
         # Corresponds to the JSON property `localized`
-        # @return [Google::Apis::YoutubeV3::PlaylistLocalization]
+        # @return [GoogleAPI::Apis::YoutubeV3::PlaylistLocalization]
         attr_accessor :localized
       
         # The date and time that the playlist was created. The value is specified in ISO
@@ -5878,7 +5878,7 @@ module Google
       
         # Internal representation of thumbnails for a YouTube resource.
         # Corresponds to the JSON property `thumbnails`
-        # @return [Google::Apis::YoutubeV3::ThumbnailDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ThumbnailDetails]
         attr_accessor :thumbnails
       
         # The playlist's title.
@@ -5906,7 +5906,7 @@ module Google
       
       # 
       class PlaylistStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The playlist's privacy status.
         # Corresponds to the JSON property `privacyStatus`
@@ -5925,7 +5925,7 @@ module Google
       
       # Describes a single promoted item.
       class PromotedItem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A custom message to display for this promotion. This field is currently
         # ignored unless the promoted item is a website.
@@ -5935,7 +5935,7 @@ module Google
       
         # Describes a single promoted item id. It is a union of various possible types.
         # Corresponds to the JSON property `id`
-        # @return [Google::Apis::YoutubeV3::PromotedItemId]
+        # @return [GoogleAPI::Apis::YoutubeV3::PromotedItemId]
         attr_accessor :id
       
         # If true, the content owner's name will be used when displaying the promotion.
@@ -5948,7 +5948,7 @@ module Google
       
         # Describes a temporal position of a visual widget inside a video.
         # Corresponds to the JSON property `timing`
-        # @return [Google::Apis::YoutubeV3::InvideoTiming]
+        # @return [GoogleAPI::Apis::YoutubeV3::InvideoTiming]
         attr_accessor :timing
       
         def initialize(**args)
@@ -5966,7 +5966,7 @@ module Google
       
       # Describes a single promoted item id. It is a union of various possible types.
       class PromotedItemId
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If type is recentUpload, this field identifies the channel from which to take
         # the recent upload. If missing, the channel is assumed to be the same channel
@@ -6009,7 +6009,7 @@ module Google
       
       # A pair Property / Value.
       class PropertyValue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A property.
         # Corresponds to the JSON property `property`
@@ -6034,7 +6034,7 @@ module Google
       
       # A resource id is a generic reference that points to another YouTube resource.
       class ResourceId
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID that YouTube uses to uniquely identify the referred resource, if that
         # resource is a channel. This property is only present if the resourceId.kind
@@ -6077,7 +6077,7 @@ module Google
       
       # 
       class SearchListsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -6091,7 +6091,7 @@ module Google
       
         # A list of results that match the search criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::SearchResult>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::SearchResult>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -6109,7 +6109,7 @@ module Google
         # Paging details for lists of resources, including total number of items
         # available and number of resources returned in a single page.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubeV3::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::PageInfo]
         attr_accessor :page_info
       
         # The token that can be used as the value of the pageToken parameter to retrieve
@@ -6125,7 +6125,7 @@ module Google
       
         # Stub token pagination template to suppress results.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::YoutubeV3::TokenPagination]
+        # @return [GoogleAPI::Apis::YoutubeV3::TokenPagination]
         attr_accessor :token_pagination
       
         # The visitorId identifies the visitor.
@@ -6157,7 +6157,7 @@ module Google
       # a search result points to a uniquely identifiable resource, like a video, it
       # does not have its own persistent data.
       class SearchResult
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -6166,7 +6166,7 @@ module Google
       
         # A resource id is a generic reference that points to another YouTube resource.
         # Corresponds to the JSON property `id`
-        # @return [Google::Apis::YoutubeV3::ResourceId]
+        # @return [GoogleAPI::Apis::YoutubeV3::ResourceId]
         attr_accessor :id
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -6178,7 +6178,7 @@ module Google
         # Basic details about a search result, including title, description and
         # thumbnails of the item referenced by the search result.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::SearchResultSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::SearchResultSnippet]
         attr_accessor :snippet
       
         def initialize(**args)
@@ -6197,7 +6197,7 @@ module Google
       # Basic details about a search result, including title, description and
       # thumbnails of the item referenced by the search result.
       class SearchResultSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The value that YouTube uses to uniquely identify the channel that published
         # the resource that the search result identifies.
@@ -6231,7 +6231,7 @@ module Google
       
         # Internal representation of thumbnails for a YouTube resource.
         # Corresponds to the JSON property `thumbnails`
-        # @return [Google::Apis::YoutubeV3::ThumbnailDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ThumbnailDetails]
         attr_accessor :thumbnails
       
         # The title of the search result.
@@ -6258,7 +6258,7 @@ module Google
       # A sponsor resource represents a sponsor for a YouTube channel. A sponsor
       # provides recurring monetary support to a creator and receives special benefits.
       class Sponsor
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -6278,7 +6278,7 @@ module Google
       
         # The snippet object contains basic details about the sponsor.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::SponsorSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::SponsorSnippet]
         attr_accessor :snippet
       
         def initialize(**args)
@@ -6296,7 +6296,7 @@ module Google
       
       # 
       class SponsorListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -6310,7 +6310,7 @@ module Google
       
         # A list of sponsors that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::Sponsor>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::Sponsor>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -6328,12 +6328,12 @@ module Google
         # Paging details for lists of resources, including total number of items
         # available and number of resources returned in a single page.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubeV3::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::PageInfo]
         attr_accessor :page_info
       
         # Stub token pagination template to suppress results.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::YoutubeV3::TokenPagination]
+        # @return [GoogleAPI::Apis::YoutubeV3::TokenPagination]
         attr_accessor :token_pagination
       
         # The visitorId identifies the visitor.
@@ -6360,7 +6360,7 @@ module Google
       
       # 
       class SponsorSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The id of the channel being sponsored.
         # Corresponds to the JSON property `channelId`
@@ -6369,7 +6369,7 @@ module Google
       
         # Details about the sponsor.
         # Corresponds to the JSON property `sponsorDetails`
-        # @return [Google::Apis::YoutubeV3::ChannelProfileDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ChannelProfileDetails]
         attr_accessor :sponsor_details
       
         # The date and time when the user became a sponsor. The value is specified in
@@ -6395,11 +6395,11 @@ module Google
       # another user takes one of several actions on YouTube, such as uploading a
       # video, rating a video, or commenting on a video.
       class Subscription
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Details about the content to witch a subscription refers.
         # Corresponds to the JSON property `contentDetails`
-        # @return [Google::Apis::YoutubeV3::SubscriptionContentDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::SubscriptionContentDetails]
         attr_accessor :content_details
       
         # Etag of this resource.
@@ -6421,13 +6421,13 @@ module Google
         # Basic details about a subscription, including title, description and
         # thumbnails of the subscribed item.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::SubscriptionSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::SubscriptionSnippet]
         attr_accessor :snippet
       
         # Basic details about a subscription's subscriber including title, description,
         # channel ID and thumbnails.
         # Corresponds to the JSON property `subscriberSnippet`
-        # @return [Google::Apis::YoutubeV3::SubscriptionSubscriberSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::SubscriptionSubscriberSnippet]
         attr_accessor :subscriber_snippet
       
         def initialize(**args)
@@ -6447,7 +6447,7 @@ module Google
       
       # Details about the content to witch a subscription refers.
       class SubscriptionContentDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of activity this subscription is for (only uploads, everything).
         # Corresponds to the JSON property `activityType`
@@ -6478,7 +6478,7 @@ module Google
       
       # 
       class ListSubscriptionResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -6492,7 +6492,7 @@ module Google
       
         # A list of subscriptions that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::Subscription>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::Subscription>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -6510,7 +6510,7 @@ module Google
         # Paging details for lists of resources, including total number of items
         # available and number of resources returned in a single page.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubeV3::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::PageInfo]
         attr_accessor :page_info
       
         # The token that can be used as the value of the pageToken parameter to retrieve
@@ -6521,7 +6521,7 @@ module Google
       
         # Stub token pagination template to suppress results.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::YoutubeV3::TokenPagination]
+        # @return [GoogleAPI::Apis::YoutubeV3::TokenPagination]
         attr_accessor :token_pagination
       
         # The visitorId identifies the visitor.
@@ -6550,7 +6550,7 @@ module Google
       # Basic details about a subscription, including title, description and
       # thumbnails of the subscribed item.
       class SubscriptionSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID that YouTube uses to uniquely identify the subscriber's channel.
         # Corresponds to the JSON property `channelId`
@@ -6575,12 +6575,12 @@ module Google
       
         # A resource id is a generic reference that points to another YouTube resource.
         # Corresponds to the JSON property `resourceId`
-        # @return [Google::Apis::YoutubeV3::ResourceId]
+        # @return [GoogleAPI::Apis::YoutubeV3::ResourceId]
         attr_accessor :resource_id
       
         # Internal representation of thumbnails for a YouTube resource.
         # Corresponds to the JSON property `thumbnails`
-        # @return [Google::Apis::YoutubeV3::ThumbnailDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ThumbnailDetails]
         attr_accessor :thumbnails
       
         # The subscription's title.
@@ -6607,7 +6607,7 @@ module Google
       # Basic details about a subscription's subscriber including title, description,
       # channel ID and thumbnails.
       class SubscriptionSubscriberSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The channel ID of the subscriber.
         # Corresponds to the JSON property `channelId`
@@ -6621,7 +6621,7 @@ module Google
       
         # Internal representation of thumbnails for a YouTube resource.
         # Corresponds to the JSON property `thumbnails`
-        # @return [Google::Apis::YoutubeV3::ThumbnailDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ThumbnailDetails]
         attr_accessor :thumbnails
       
         # The title of the subscriber.
@@ -6644,7 +6644,7 @@ module Google
       
       # A thumbnail is an image representing a YouTube resource.
       class Thumbnail
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # (Optional) Height of the thumbnail image.
         # Corresponds to the JSON property `height`
@@ -6675,31 +6675,31 @@ module Google
       
       # Internal representation of thumbnails for a YouTube resource.
       class ThumbnailDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A thumbnail is an image representing a YouTube resource.
         # Corresponds to the JSON property `default`
-        # @return [Google::Apis::YoutubeV3::Thumbnail]
+        # @return [GoogleAPI::Apis::YoutubeV3::Thumbnail]
         attr_accessor :default
       
         # A thumbnail is an image representing a YouTube resource.
         # Corresponds to the JSON property `high`
-        # @return [Google::Apis::YoutubeV3::Thumbnail]
+        # @return [GoogleAPI::Apis::YoutubeV3::Thumbnail]
         attr_accessor :high
       
         # A thumbnail is an image representing a YouTube resource.
         # Corresponds to the JSON property `maxres`
-        # @return [Google::Apis::YoutubeV3::Thumbnail]
+        # @return [GoogleAPI::Apis::YoutubeV3::Thumbnail]
         attr_accessor :maxres
       
         # A thumbnail is an image representing a YouTube resource.
         # Corresponds to the JSON property `medium`
-        # @return [Google::Apis::YoutubeV3::Thumbnail]
+        # @return [GoogleAPI::Apis::YoutubeV3::Thumbnail]
         attr_accessor :medium
       
         # A thumbnail is an image representing a YouTube resource.
         # Corresponds to the JSON property `standard`
-        # @return [Google::Apis::YoutubeV3::Thumbnail]
+        # @return [GoogleAPI::Apis::YoutubeV3::Thumbnail]
         attr_accessor :standard
       
         def initialize(**args)
@@ -6718,7 +6718,7 @@ module Google
       
       # 
       class SetThumbnailResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -6732,7 +6732,7 @@ module Google
       
         # A list of thumbnails.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::ThumbnailDetails>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::ThumbnailDetails>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -6762,7 +6762,7 @@ module Google
       
       # Stub token pagination template to suppress results.
       class TokenPagination
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -6775,17 +6775,17 @@ module Google
       
       # A video resource represents a YouTube video.
       class Video
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Age restriction details related to a video. This data can only be retrieved by
         # the video owner.
         # Corresponds to the JSON property `ageGating`
-        # @return [Google::Apis::YoutubeV3::VideoAgeGating]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoAgeGating]
         attr_accessor :age_gating
       
         # Details about the content of a YouTube Video.
         # Corresponds to the JSON property `contentDetails`
-        # @return [Google::Apis::YoutubeV3::VideoContentDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoContentDetails]
         attr_accessor :content_details
       
         # Etag of this resource.
@@ -6797,7 +6797,7 @@ module Google
         # audio and video streams, but also metadata information like content length,
         # digitization time, or geotagging information.
         # Corresponds to the JSON property `fileDetails`
-        # @return [Google::Apis::YoutubeV3::VideoFileDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoFileDetails]
         attr_accessor :file_details
       
         # The ID that YouTube uses to uniquely identify the video.
@@ -6813,66 +6813,66 @@ module Google
       
         # Details about the live streaming metadata.
         # Corresponds to the JSON property `liveStreamingDetails`
-        # @return [Google::Apis::YoutubeV3::VideoLiveStreamingDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoLiveStreamingDetails]
         attr_accessor :live_streaming_details
       
         # List with all localizations.
         # Corresponds to the JSON property `localizations`
-        # @return [Hash<String,Google::Apis::YoutubeV3::VideoLocalization>]
+        # @return [Hash<String,GoogleAPI::Apis::YoutubeV3::VideoLocalization>]
         attr_accessor :localizations
       
         # Details about monetization of a YouTube Video.
         # Corresponds to the JSON property `monetizationDetails`
-        # @return [Google::Apis::YoutubeV3::VideoMonetizationDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoMonetizationDetails]
         attr_accessor :monetization_details
       
         # Player to be used for a video playback.
         # Corresponds to the JSON property `player`
-        # @return [Google::Apis::YoutubeV3::VideoPlayer]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoPlayer]
         attr_accessor :player
       
         # Describes processing status and progress and availability of some other Video
         # resource parts.
         # Corresponds to the JSON property `processingDetails`
-        # @return [Google::Apis::YoutubeV3::VideoProcessingDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoProcessingDetails]
         attr_accessor :processing_details
       
         # Project specific details about the content of a YouTube Video.
         # Corresponds to the JSON property `projectDetails`
-        # @return [Google::Apis::YoutubeV3::VideoProjectDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoProjectDetails]
         attr_accessor :project_details
       
         # Recording information associated with the video.
         # Corresponds to the JSON property `recordingDetails`
-        # @return [Google::Apis::YoutubeV3::VideoRecordingDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoRecordingDetails]
         attr_accessor :recording_details
       
         # Basic details about a video, including title, description, uploader,
         # thumbnails and category.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::VideoSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoSnippet]
         attr_accessor :snippet
       
         # Statistics about the video, such as the number of times the video was viewed
         # or liked.
         # Corresponds to the JSON property `statistics`
-        # @return [Google::Apis::YoutubeV3::VideoStatistics]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoStatistics]
         attr_accessor :statistics
       
         # Basic details about a video category, such as its localized title.
         # Corresponds to the JSON property `status`
-        # @return [Google::Apis::YoutubeV3::VideoStatus]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoStatus]
         attr_accessor :status
       
         # Specifies suggestions on how to improve video content, including encoding
         # hints, tag suggestions, and editor suggestions.
         # Corresponds to the JSON property `suggestions`
-        # @return [Google::Apis::YoutubeV3::VideoSuggestions]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoSuggestions]
         attr_accessor :suggestions
       
         # Freebase topic information related to the video.
         # Corresponds to the JSON property `topicDetails`
-        # @return [Google::Apis::YoutubeV3::VideoTopicDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoTopicDetails]
         attr_accessor :topic_details
       
         def initialize(**args)
@@ -6904,7 +6904,7 @@ module Google
       
       # 
       class VideoAbuseReport
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Additional comments regarding the abuse report.
         # Corresponds to the JSON property `comments`
@@ -6952,7 +6952,7 @@ module Google
       # reported as abusive. Video abuse report reasons are used with video.
       # ReportAbuse.
       class VideoAbuseReportReason
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -6972,7 +6972,7 @@ module Google
       
         # Basic details about a video category, such as its localized title.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::VideoAbuseReportReasonSnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoAbuseReportReasonSnippet]
         attr_accessor :snippet
       
         def initialize(**args)
@@ -6990,7 +6990,7 @@ module Google
       
       # 
       class ListVideoAbuseReportReasonResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -7004,7 +7004,7 @@ module Google
       
         # A list of valid abuse reasons that are used with video.ReportAbuse.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::VideoAbuseReportReason>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::VideoAbuseReportReason>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -7034,7 +7034,7 @@ module Google
       
       # Basic details about a video category, such as its localized title.
       class VideoAbuseReportReasonSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The localized label belonging to this abuse report reason.
         # Corresponds to the JSON property `label`
@@ -7044,7 +7044,7 @@ module Google
         # The secondary reasons associated with this reason, if any are available. (
         # There might be 0 or more.)
         # Corresponds to the JSON property `secondaryReasons`
-        # @return [Array<Google::Apis::YoutubeV3::VideoAbuseReportSecondaryReason>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::VideoAbuseReportSecondaryReason>]
         attr_accessor :secondary_reasons
       
         def initialize(**args)
@@ -7060,7 +7060,7 @@ module Google
       
       # 
       class VideoAbuseReportSecondaryReason
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of this abuse report secondary reason.
         # Corresponds to the JSON property `id`
@@ -7085,7 +7085,7 @@ module Google
       
       # 
       class VideoAgeGating
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Indicates whether or not the video has alcoholic beverage content. Only users
         # of legal purchasing age in a particular country, as identified by ICAP, can
@@ -7123,7 +7123,7 @@ module Google
       # A videoCategory resource identifies a category that has been or could be
       # associated with uploaded videos.
       class VideoCategory
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -7143,7 +7143,7 @@ module Google
       
         # Basic details about a video category, such as its localized title.
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeV3::VideoCategorySnippet]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoCategorySnippet]
         attr_accessor :snippet
       
         def initialize(**args)
@@ -7161,7 +7161,7 @@ module Google
       
       # 
       class ListVideoCategoryResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -7177,7 +7177,7 @@ module Google
         # map, the video category ID is the map key, and its value is the corresponding
         # videoCategory resource.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::VideoCategory>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::VideoCategory>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -7195,7 +7195,7 @@ module Google
         # Paging details for lists of resources, including total number of items
         # available and number of resources returned in a single page.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubeV3::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::PageInfo]
         attr_accessor :page_info
       
         # The token that can be used as the value of the pageToken parameter to retrieve
@@ -7206,7 +7206,7 @@ module Google
       
         # Stub token pagination template to suppress results.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::YoutubeV3::TokenPagination]
+        # @return [GoogleAPI::Apis::YoutubeV3::TokenPagination]
         attr_accessor :token_pagination
       
         # The visitorId identifies the visitor.
@@ -7234,7 +7234,7 @@ module Google
       
       # Basic details about a video category, such as its localized title.
       class VideoCategorySnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `assignable`
@@ -7266,7 +7266,7 @@ module Google
       
       # Details about the content of a YouTube Video.
       class VideoContentDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The value of captions indicates whether the video has captions or not.
         # Corresponds to the JSON property `caption`
@@ -7276,12 +7276,12 @@ module Google
         # Ratings schemes. The country-specific ratings are mostly for movies and shows.
         # NEXT_ID: 67
         # Corresponds to the JSON property `contentRating`
-        # @return [Google::Apis::YoutubeV3::ContentRating]
+        # @return [GoogleAPI::Apis::YoutubeV3::ContentRating]
         attr_accessor :content_rating
       
         # Rights management policy for YouTube resources.
         # Corresponds to the JSON property `countryRestriction`
-        # @return [Google::Apis::YoutubeV3::AccessPolicy]
+        # @return [GoogleAPI::Apis::YoutubeV3::AccessPolicy]
         attr_accessor :country_restriction
       
         # The value of definition indicates whether the video is available in high
@@ -7319,7 +7319,7 @@ module Google
       
         # DEPRECATED Region restriction of the video.
         # Corresponds to the JSON property `regionRestriction`
-        # @return [Google::Apis::YoutubeV3::VideoContentDetailsRegionRestriction]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoContentDetailsRegionRestriction]
         attr_accessor :region_restriction
       
         def initialize(**args)
@@ -7342,7 +7342,7 @@ module Google
       
       # DEPRECATED Region restriction of the video.
       class VideoContentDetailsRegionRestriction
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of region codes that identify countries where the video is viewable. If
         # this property is present and a country is not listed in its value, then the
@@ -7375,12 +7375,12 @@ module Google
       # audio and video streams, but also metadata information like content length,
       # digitization time, or geotagging information.
       class VideoFileDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of audio streams contained in the uploaded video file. Each item in the
         # list contains detailed metadata about an audio stream.
         # Corresponds to the JSON property `audioStreams`
-        # @return [Array<Google::Apis::YoutubeV3::VideoFileDetailsAudioStream>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::VideoFileDetailsAudioStream>]
         attr_accessor :audio_streams
       
         # The uploaded video file's combined (video and audio) bitrate in bits per
@@ -7430,13 +7430,13 @@ module Google
       
         # Geographical coordinates of a point, in WGS84.
         # Corresponds to the JSON property `recordingLocation`
-        # @return [Google::Apis::YoutubeV3::GeoPoint]
+        # @return [GoogleAPI::Apis::YoutubeV3::GeoPoint]
         attr_accessor :recording_location
       
         # A list of video streams contained in the uploaded video file. Each item in the
         # list contains detailed metadata about a video stream.
         # Corresponds to the JSON property `videoStreams`
-        # @return [Array<Google::Apis::YoutubeV3::VideoFileDetailsVideoStream>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::VideoFileDetailsVideoStream>]
         attr_accessor :video_streams
       
         def initialize(**args)
@@ -7460,7 +7460,7 @@ module Google
       
       # Information about an audio stream.
       class VideoFileDetailsAudioStream
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The audio stream's bitrate, in bits per second.
         # Corresponds to the JSON property `bitrateBps`
@@ -7498,7 +7498,7 @@ module Google
       
       # Information about a video stream.
       class VideoFileDetailsVideoStream
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The video content's display aspect ratio, which specifies the aspect ratio in
         # which the video should be displayed.
@@ -7563,7 +7563,7 @@ module Google
       
       # 
       class GetVideoRatingResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -7577,7 +7577,7 @@ module Google
       
         # A list of ratings that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::VideoRating>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::VideoRating>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -7607,7 +7607,7 @@ module Google
       
       # 
       class ListVideosResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of this resource.
         # Corresponds to the JSON property `etag`
@@ -7621,7 +7621,7 @@ module Google
       
         # A list of videos that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeV3::Video>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::Video>]
         attr_accessor :items
       
         # Identifies what kind of resource this is. Value: the fixed string "youtube#
@@ -7639,7 +7639,7 @@ module Google
         # Paging details for lists of resources, including total number of items
         # available and number of resources returned in a single page.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::YoutubeV3::PageInfo]
+        # @return [GoogleAPI::Apis::YoutubeV3::PageInfo]
         attr_accessor :page_info
       
         # The token that can be used as the value of the pageToken parameter to retrieve
@@ -7650,7 +7650,7 @@ module Google
       
         # Stub token pagination template to suppress results.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::YoutubeV3::TokenPagination]
+        # @return [GoogleAPI::Apis::YoutubeV3::TokenPagination]
         attr_accessor :token_pagination
       
         # The visitorId identifies the visitor.
@@ -7678,7 +7678,7 @@ module Google
       
       # Details about the live streaming metadata.
       class VideoLiveStreamingDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the currently active live chat attached to this video. This field is
         # filled only if the video is a currently live broadcast that has live chat.
@@ -7744,7 +7744,7 @@ module Google
       
       # Localized versions of certain video properties (e.g. title).
       class VideoLocalization
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Localized version of the video's description.
         # Corresponds to the JSON property `description`
@@ -7769,11 +7769,11 @@ module Google
       
       # Details about monetization of a YouTube Video.
       class VideoMonetizationDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Rights management policy for YouTube resources.
         # Corresponds to the JSON property `access`
-        # @return [Google::Apis::YoutubeV3::AccessPolicy]
+        # @return [GoogleAPI::Apis::YoutubeV3::AccessPolicy]
         attr_accessor :access
       
         def initialize(**args)
@@ -7788,7 +7788,7 @@ module Google
       
       # Player to be used for a video playback.
       class VideoPlayer
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An <iframe> tag that embeds a player that will play the video.
         # Corresponds to the JSON property `embedHtml`
@@ -7808,7 +7808,7 @@ module Google
       # Describes processing status and progress and availability of some other Video
       # resource parts.
       class VideoProcessingDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This value indicates whether video editing suggestions, which might improve
         # video quality or the playback experience, are available for the video. You can
@@ -7842,7 +7842,7 @@ module Google
       
         # Video processing progress and completion time estimate.
         # Corresponds to the JSON property `processingProgress`
-        # @return [Google::Apis::YoutubeV3::VideoProcessingDetailsProcessingProgress]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoProcessingDetailsProcessingProgress]
         attr_accessor :processing_progress
       
         # The video's processing status. This value indicates whether YouTube was able
@@ -7884,7 +7884,7 @@ module Google
       
       # Video processing progress and completion time estimate.
       class VideoProcessingDetailsProcessingProgress
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of parts of the video that YouTube has already processed. You can
         # estimate the percentage of the video that YouTube has already processed by
@@ -7925,7 +7925,7 @@ module Google
       
       # Project specific details about the content of a YouTube Video.
       class VideoProjectDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of project tags associated with the video during the upload.
         # Corresponds to the JSON property `tags`
@@ -7944,7 +7944,7 @@ module Google
       
       # 
       class VideoRating
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `rating`
@@ -7969,11 +7969,11 @@ module Google
       
       # Recording information associated with the video.
       class VideoRecordingDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Geographical coordinates of a point, in WGS84.
         # Corresponds to the JSON property `location`
-        # @return [Google::Apis::YoutubeV3::GeoPoint]
+        # @return [GoogleAPI::Apis::YoutubeV3::GeoPoint]
         attr_accessor :location
       
         # The text description of the location where the video was recorded.
@@ -8002,7 +8002,7 @@ module Google
       # Basic details about a video, including title, description, uploader,
       # thumbnails and category.
       class VideoSnippet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The YouTube video category associated with the video.
         # Corresponds to the JSON property `categoryId`
@@ -8044,7 +8044,7 @@ module Google
       
         # Localized versions of certain video properties (e.g. title).
         # Corresponds to the JSON property `localized`
-        # @return [Google::Apis::YoutubeV3::VideoLocalization]
+        # @return [GoogleAPI::Apis::YoutubeV3::VideoLocalization]
         attr_accessor :localized
       
         # The date and time that the video was uploaded. The value is specified in ISO
@@ -8060,7 +8060,7 @@ module Google
       
         # Internal representation of thumbnails for a YouTube resource.
         # Corresponds to the JSON property `thumbnails`
-        # @return [Google::Apis::YoutubeV3::ThumbnailDetails]
+        # @return [GoogleAPI::Apis::YoutubeV3::ThumbnailDetails]
         attr_accessor :thumbnails
       
         # The video's title.
@@ -8092,7 +8092,7 @@ module Google
       # Statistics about the video, such as the number of times the video was viewed
       # or liked.
       class VideoStatistics
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of comments for the video.
         # Corresponds to the JSON property `commentCount`
@@ -8137,7 +8137,7 @@ module Google
       
       # Basic details about a video category, such as its localized title.
       class VideoStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This value indicates if the video can be embedded on another website.
         # Corresponds to the JSON property `embeddable`
@@ -8208,7 +8208,7 @@ module Google
       # Specifies suggestions on how to improve video content, including encoding
       # hints, tag suggestions, and editor suggestions.
       class VideoSuggestions
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of video editing operations that might improve the video quality or
         # playback experience of the uploaded video.
@@ -8243,7 +8243,7 @@ module Google
         # the likelihood that users will locate your video when searching or browsing on
         # YouTube.
         # Corresponds to the JSON property `tagSuggestions`
-        # @return [Array<Google::Apis::YoutubeV3::VideoSuggestionsTagSuggestion>]
+        # @return [Array<GoogleAPI::Apis::YoutubeV3::VideoSuggestionsTagSuggestion>]
         attr_accessor :tag_suggestions
       
         def initialize(**args)
@@ -8262,7 +8262,7 @@ module Google
       
       # A single tag suggestion with it's relevance information.
       class VideoSuggestionsTagSuggestion
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A set of video categories for which the tag is relevant. You can use this
         # information to display appropriate tag suggestions based on the video category
@@ -8291,7 +8291,7 @@ module Google
       
       # Freebase topic information related to the video.
       class VideoTopicDetails
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Similar to topic_id, except that these topics are merely relevant to the video.
         # These are topics that may be mentioned in, or appear in the video. You can
@@ -8321,7 +8321,7 @@ module Google
       
       # Branding properties for the watch. All deprecated.
       class WatchSettings
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The text color for the video watch page's branded area.
         # Corresponds to the JSON property `backgroundColor`

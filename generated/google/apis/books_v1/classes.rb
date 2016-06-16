@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module BooksV1
       
       # 
       class Annotation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Anchor text after excerpt. For requests, if the user bookmarked a screen that
         # has no flowing text on it, then this field should be empty.
@@ -40,7 +40,7 @@ module Google
       
         # Selection ranges sent from the client.
         # Corresponds to the JSON property `clientVersionRanges`
-        # @return [Google::Apis::BooksV1::Annotation::ClientVersionRanges]
+        # @return [GoogleAPI::Apis::BooksV1::Annotation::ClientVersionRanges]
         attr_accessor :client_version_ranges
       
         # Timestamp for the created time of this annotation.
@@ -50,7 +50,7 @@ module Google
       
         # Selection ranges for the most recent content version.
         # Corresponds to the JSON property `currentVersionRanges`
-        # @return [Google::Apis::BooksV1::Annotation::CurrentVersionRanges]
+        # @return [GoogleAPI::Apis::BooksV1::Annotation::CurrentVersionRanges]
         attr_accessor :current_version_ranges
       
         # User-created data for this annotation.
@@ -86,7 +86,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `layerSummary`
-        # @return [Google::Apis::BooksV1::Annotation::LayerSummary]
+        # @return [GoogleAPI::Apis::BooksV1::Annotation::LayerSummary]
         attr_accessor :layer_summary
       
         # Pages that this annotation spans.
@@ -141,11 +141,11 @@ module Google
         
         # Selection ranges sent from the client.
         class ClientVersionRanges
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Range in CFI format for this annotation sent by client.
           # Corresponds to the JSON property `cfiRange`
-          # @return [Google::Apis::BooksV1::AnnotatinsRange]
+          # @return [GoogleAPI::Apis::BooksV1::AnnotatinsRange]
           attr_accessor :cfi_range
         
           # Content version the client sent in.
@@ -155,17 +155,17 @@ module Google
         
           # Range in GB image format for this annotation sent by client.
           # Corresponds to the JSON property `gbImageRange`
-          # @return [Google::Apis::BooksV1::AnnotatinsRange]
+          # @return [GoogleAPI::Apis::BooksV1::AnnotatinsRange]
           attr_accessor :gb_image_range
         
           # Range in GB text format for this annotation sent by client.
           # Corresponds to the JSON property `gbTextRange`
-          # @return [Google::Apis::BooksV1::AnnotatinsRange]
+          # @return [GoogleAPI::Apis::BooksV1::AnnotatinsRange]
           attr_accessor :gb_text_range
         
           # Range in image CFI format for this annotation sent by client.
           # Corresponds to the JSON property `imageCfiRange`
-          # @return [Google::Apis::BooksV1::AnnotatinsRange]
+          # @return [GoogleAPI::Apis::BooksV1::AnnotatinsRange]
           attr_accessor :image_cfi_range
         
           def initialize(**args)
@@ -184,11 +184,11 @@ module Google
         
         # Selection ranges for the most recent content version.
         class CurrentVersionRanges
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Range in CFI format for this annotation for version above.
           # Corresponds to the JSON property `cfiRange`
-          # @return [Google::Apis::BooksV1::AnnotatinsRange]
+          # @return [GoogleAPI::Apis::BooksV1::AnnotatinsRange]
           attr_accessor :cfi_range
         
           # Content version applicable to ranges below.
@@ -198,17 +198,17 @@ module Google
         
           # Range in GB image format for this annotation for version above.
           # Corresponds to the JSON property `gbImageRange`
-          # @return [Google::Apis::BooksV1::AnnotatinsRange]
+          # @return [GoogleAPI::Apis::BooksV1::AnnotatinsRange]
           attr_accessor :gb_image_range
         
           # Range in GB text format for this annotation for version above.
           # Corresponds to the JSON property `gbTextRange`
-          # @return [Google::Apis::BooksV1::AnnotatinsRange]
+          # @return [GoogleAPI::Apis::BooksV1::AnnotatinsRange]
           attr_accessor :gb_text_range
         
           # Range in image CFI format for this annotation for version above.
           # Corresponds to the JSON property `imageCfiRange`
-          # @return [Google::Apis::BooksV1::AnnotatinsRange]
+          # @return [GoogleAPI::Apis::BooksV1::AnnotatinsRange]
           attr_accessor :image_cfi_range
         
           def initialize(**args)
@@ -227,7 +227,7 @@ module Google
         
         # 
         class LayerSummary
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Maximum allowed characters on this layer, especially for the "copy" layer.
           # Corresponds to the JSON property `allowedCharacterCount`
@@ -260,7 +260,7 @@ module Google
       
       # 
       class AnnotationData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of annotation this data is for.
         # Corresponds to the JSON property `annotationType`
@@ -328,11 +328,11 @@ module Google
       
       # 
       class Annotations
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of annotations.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::BooksV1::Annotation>]
+        # @return [Array<GoogleAPI::Apis::BooksV1::Annotation>]
         attr_accessor :items
       
         # Resource type.
@@ -367,7 +367,7 @@ module Google
       
       # 
       class AnnotationsSummary
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `kind`
@@ -376,7 +376,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `layers`
-        # @return [Array<Google::Apis::BooksV1::AnnotationsSummary::Layer>]
+        # @return [Array<GoogleAPI::Apis::BooksV1::AnnotationsSummary::Layer>]
         attr_accessor :layers
       
         def initialize(**args)
@@ -391,7 +391,7 @@ module Google
         
         # 
         class Layer
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `allowedCharacterCount`
@@ -435,11 +435,11 @@ module Google
       
       # 
       class AnnotationsData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of Annotation Data.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::BooksV1::AnnotationData>]
+        # @return [Array<GoogleAPI::Apis::BooksV1::AnnotationData>]
         attr_accessor :items
       
         # Resource type
@@ -473,7 +473,7 @@ module Google
       
       # 
       class AnnotatinsRange
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The offset from the ending position.
         # Corresponds to the JSON property `endOffset`
@@ -510,7 +510,7 @@ module Google
       
       # 
       class LoadingResource
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `author`
@@ -547,7 +547,7 @@ module Google
       
       # 
       class RateRecommendedVolumeResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `consistency_token`
@@ -566,7 +566,7 @@ module Google
       
       # 
       class Bookshelf
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether this bookshelf is PUBLIC or PRIVATE.
         # Corresponds to the JSON property `access`
@@ -642,11 +642,11 @@ module Google
       
       # 
       class Bookshelves
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of bookshelves.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::BooksV1::Bookshelf>]
+        # @return [Array<GoogleAPI::Apis::BooksV1::Bookshelf>]
         attr_accessor :items
       
         # Resource type.
@@ -667,11 +667,11 @@ module Google
       
       # 
       class Category
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of onboarding categories.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::BooksV1::Category::Item>]
+        # @return [Array<GoogleAPI::Apis::BooksV1::Category::Item>]
         attr_accessor :items
       
         # Resource type.
@@ -691,7 +691,7 @@ module Google
         
         # 
         class Item
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `badgeUrl`
@@ -723,7 +723,7 @@ module Google
       
       # 
       class ConcurrentAccessRestriction
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether access is granted for this (user, device, volume).
         # Corresponds to the JSON property `deviceAllowed`
@@ -805,16 +805,16 @@ module Google
       
       # 
       class DictLayerData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `common`
-        # @return [Google::Apis::BooksV1::DictLayerData::Common]
+        # @return [GoogleAPI::Apis::BooksV1::DictLayerData::Common]
         attr_accessor :common
       
         # 
         # Corresponds to the JSON property `dict`
-        # @return [Google::Apis::BooksV1::DictLayerData::Dict]
+        # @return [GoogleAPI::Apis::BooksV1::DictLayerData::Dict]
         attr_accessor :dict
       
         # 
@@ -835,7 +835,7 @@ module Google
         
         # 
         class Common
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The display title and localized canonical name to use when searching for this
           # entity on Google search.
@@ -855,16 +855,16 @@ module Google
         
         # 
         class Dict
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The source, url and attribution for this dictionary data.
           # Corresponds to the JSON property `source`
-          # @return [Google::Apis::BooksV1::DictLayerData::Dict::Source]
+          # @return [GoogleAPI::Apis::BooksV1::DictLayerData::Dict::Source]
           attr_accessor :source
         
           # 
           # Corresponds to the JSON property `words`
-          # @return [Array<Google::Apis::BooksV1::DictLayerData::Dict::Word>]
+          # @return [Array<GoogleAPI::Apis::BooksV1::DictLayerData::Dict::Word>]
           attr_accessor :words
         
           def initialize(**args)
@@ -879,7 +879,7 @@ module Google
           
           # The source, url and attribution for this dictionary data.
           class Source
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `attribution`
@@ -904,27 +904,27 @@ module Google
           
           # 
           class Word
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `derivatives`
-            # @return [Array<Google::Apis::BooksV1::DictLayerData::Dict::Word::Derivative>]
+            # @return [Array<GoogleAPI::Apis::BooksV1::DictLayerData::Dict::Word::Derivative>]
             attr_accessor :derivatives
           
             # 
             # Corresponds to the JSON property `examples`
-            # @return [Array<Google::Apis::BooksV1::DictLayerData::Dict::Word::Example>]
+            # @return [Array<GoogleAPI::Apis::BooksV1::DictLayerData::Dict::Word::Example>]
             attr_accessor :examples
           
             # 
             # Corresponds to the JSON property `senses`
-            # @return [Array<Google::Apis::BooksV1::DictLayerData::Dict::Word::Sense>]
+            # @return [Array<GoogleAPI::Apis::BooksV1::DictLayerData::Dict::Word::Sense>]
             attr_accessor :senses
           
             # The words with different meanings but not related words, e.g. "go" (game) and "
             # go" (verb).
             # Corresponds to the JSON property `source`
-            # @return [Google::Apis::BooksV1::DictLayerData::Dict::Word::Source]
+            # @return [GoogleAPI::Apis::BooksV1::DictLayerData::Dict::Word::Source]
             attr_accessor :source
           
             def initialize(**args)
@@ -941,11 +941,11 @@ module Google
             
             # 
             class Derivative
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # 
               # Corresponds to the JSON property `source`
-              # @return [Google::Apis::BooksV1::DictLayerData::Dict::Word::Derivative::Source]
+              # @return [GoogleAPI::Apis::BooksV1::DictLayerData::Dict::Word::Derivative::Source]
               attr_accessor :source
             
               # 
@@ -965,7 +965,7 @@ module Google
               
               # 
               class Source
-                include Google::Apis::Core::Hashable
+                include GoogleAPI::Apis::Core::Hashable
               
                 # 
                 # Corresponds to the JSON property `attribution`
@@ -991,11 +991,11 @@ module Google
             
             # 
             class Example
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # 
               # Corresponds to the JSON property `source`
-              # @return [Google::Apis::BooksV1::DictLayerData::Dict::Word::Example::Source]
+              # @return [GoogleAPI::Apis::BooksV1::DictLayerData::Dict::Word::Example::Source]
               attr_accessor :source
             
               # 
@@ -1015,7 +1015,7 @@ module Google
               
               # 
               class Source
-                include Google::Apis::Core::Hashable
+                include GoogleAPI::Apis::Core::Hashable
               
                 # 
                 # Corresponds to the JSON property `attribution`
@@ -1041,16 +1041,16 @@ module Google
             
             # 
             class Sense
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # 
               # Corresponds to the JSON property `conjugations`
-              # @return [Array<Google::Apis::BooksV1::DictLayerData::Dict::Word::Sense::Conjugation>]
+              # @return [Array<GoogleAPI::Apis::BooksV1::DictLayerData::Dict::Word::Sense::Conjugation>]
               attr_accessor :conjugations
             
               # 
               # Corresponds to the JSON property `definitions`
-              # @return [Array<Google::Apis::BooksV1::DictLayerData::Dict::Word::Sense::Definition>]
+              # @return [Array<GoogleAPI::Apis::BooksV1::DictLayerData::Dict::Word::Sense::Definition>]
               attr_accessor :definitions
             
               # 
@@ -1070,7 +1070,7 @@ module Google
             
               # 
               # Corresponds to the JSON property `source`
-              # @return [Google::Apis::BooksV1::DictLayerData::Dict::Word::Sense::Source]
+              # @return [GoogleAPI::Apis::BooksV1::DictLayerData::Dict::Word::Sense::Source]
               attr_accessor :source
             
               # 
@@ -1080,7 +1080,7 @@ module Google
             
               # 
               # Corresponds to the JSON property `synonyms`
-              # @return [Array<Google::Apis::BooksV1::DictLayerData::Dict::Word::Sense::Synonym>]
+              # @return [Array<GoogleAPI::Apis::BooksV1::DictLayerData::Dict::Word::Sense::Synonym>]
               attr_accessor :synonyms
             
               def initialize(**args)
@@ -1101,7 +1101,7 @@ module Google
               
               # 
               class Conjugation
-                include Google::Apis::Core::Hashable
+                include GoogleAPI::Apis::Core::Hashable
               
                 # 
                 # Corresponds to the JSON property `type`
@@ -1126,7 +1126,7 @@ module Google
               
               # 
               class Definition
-                include Google::Apis::Core::Hashable
+                include GoogleAPI::Apis::Core::Hashable
               
                 # 
                 # Corresponds to the JSON property `definition`
@@ -1135,7 +1135,7 @@ module Google
               
                 # 
                 # Corresponds to the JSON property `examples`
-                # @return [Array<Google::Apis::BooksV1::DictLayerData::Dict::Word::Sense::Definition::Example>]
+                # @return [Array<GoogleAPI::Apis::BooksV1::DictLayerData::Dict::Word::Sense::Definition::Example>]
                 attr_accessor :examples
               
                 def initialize(**args)
@@ -1150,11 +1150,11 @@ module Google
                 
                 # 
                 class Example
-                  include Google::Apis::Core::Hashable
+                  include GoogleAPI::Apis::Core::Hashable
                 
                   # 
                   # Corresponds to the JSON property `source`
-                  # @return [Google::Apis::BooksV1::DictLayerData::Dict::Word::Sense::Definition::Example::Source]
+                  # @return [GoogleAPI::Apis::BooksV1::DictLayerData::Dict::Word::Sense::Definition::Example::Source]
                   attr_accessor :source
                 
                   # 
@@ -1174,7 +1174,7 @@ module Google
                   
                   # 
                   class Source
-                    include Google::Apis::Core::Hashable
+                    include GoogleAPI::Apis::Core::Hashable
                   
                     # 
                     # Corresponds to the JSON property `attribution`
@@ -1201,7 +1201,7 @@ module Google
               
               # 
               class Source
-                include Google::Apis::Core::Hashable
+                include GoogleAPI::Apis::Core::Hashable
               
                 # 
                 # Corresponds to the JSON property `attribution`
@@ -1226,11 +1226,11 @@ module Google
               
               # 
               class Synonym
-                include Google::Apis::Core::Hashable
+                include GoogleAPI::Apis::Core::Hashable
               
                 # 
                 # Corresponds to the JSON property `source`
-                # @return [Google::Apis::BooksV1::DictLayerData::Dict::Word::Sense::Synonym::Source]
+                # @return [GoogleAPI::Apis::BooksV1::DictLayerData::Dict::Word::Sense::Synonym::Source]
                 attr_accessor :source
               
                 # 
@@ -1250,7 +1250,7 @@ module Google
                 
                 # 
                 class Source
-                  include Google::Apis::Core::Hashable
+                  include GoogleAPI::Apis::Core::Hashable
                 
                   # 
                   # Corresponds to the JSON property `attribution`
@@ -1278,7 +1278,7 @@ module Google
             # The words with different meanings but not related words, e.g. "go" (game) and "
             # go" (verb).
             class Source
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # 
               # Corresponds to the JSON property `attribution`
@@ -1306,11 +1306,11 @@ module Google
       
       # 
       class Discoveryclusters
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `clusters`
-        # @return [Array<Google::Apis::BooksV1::Discoveryclusters::Cluster>]
+        # @return [Array<GoogleAPI::Apis::BooksV1::Discoveryclusters::Cluster>]
         attr_accessor :clusters
       
         # Resorce type.
@@ -1336,11 +1336,11 @@ module Google
         
         # 
         class Cluster
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `banner_with_content_container`
-          # @return [Google::Apis::BooksV1::Discoveryclusters::Cluster::BannerWithContentContainer]
+          # @return [GoogleAPI::Apis::BooksV1::Discoveryclusters::Cluster::BannerWithContentContainer]
           attr_accessor :banner_with_content_container
         
           # 
@@ -1365,7 +1365,7 @@ module Google
         
           # 
           # Corresponds to the JSON property `volumes`
-          # @return [Array<Google::Apis::BooksV1::Volume>]
+          # @return [Array<GoogleAPI::Apis::BooksV1::Volume>]
           attr_accessor :volumes
         
           def initialize(**args)
@@ -1384,7 +1384,7 @@ module Google
           
           # 
           class BannerWithContentContainer
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `fillColorArgb`
@@ -1435,7 +1435,7 @@ module Google
       
       # 
       class DownloadAccessRestriction
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If restricted, whether access is granted for this (user, device, volume).
         # Corresponds to the JSON property `deviceAllowed`
@@ -1527,11 +1527,11 @@ module Google
       
       # 
       class DownloadAccesses
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of download access responses.
         # Corresponds to the JSON property `downloadAccessList`
-        # @return [Array<Google::Apis::BooksV1::DownloadAccessRestriction>]
+        # @return [Array<GoogleAPI::Apis::BooksV1::DownloadAccessRestriction>]
         attr_accessor :download_access_list
       
         # Resource type.
@@ -1552,16 +1552,16 @@ module Google
       
       # 
       class GeoLayerData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `common`
-        # @return [Google::Apis::BooksV1::GeoLayerData::Common]
+        # @return [GoogleAPI::Apis::BooksV1::GeoLayerData::Common]
         attr_accessor :common
       
         # 
         # Corresponds to the JSON property `geo`
-        # @return [Google::Apis::BooksV1::GeoLayerData::Geo]
+        # @return [GoogleAPI::Apis::BooksV1::GeoLayerData::Geo]
         attr_accessor :geo
       
         # 
@@ -1582,7 +1582,7 @@ module Google
         
         # 
         class Common
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The language of the information url and description.
           # Corresponds to the JSON property `lang`
@@ -1626,12 +1626,12 @@ module Google
         
         # 
         class Geo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The boundary of the location as a set of loops containing pairs of latitude,
           # longitude coordinates.
           # Corresponds to the JSON property `boundary`
-          # @return [Array<Array<Google::Apis::BooksV1::GeoLayerData::Geo::Boundary>>]
+          # @return [Array<Array<GoogleAPI::Apis::BooksV1::GeoLayerData::Geo::Boundary>>]
           attr_accessor :boundary
         
           # The cache policy active for this data. EX: UNRESTRICTED, RESTRICTED, NEVER
@@ -1663,7 +1663,7 @@ module Google
           # The viewport for showing this location. This is a latitude, longitude
           # rectangle.
           # Corresponds to the JSON property `viewport`
-          # @return [Google::Apis::BooksV1::GeoLayerData::Geo::Viewport]
+          # @return [GoogleAPI::Apis::BooksV1::GeoLayerData::Geo::Viewport]
           attr_accessor :viewport
         
           # The Zoom level to use for the map. Zoom levels between 0 (the lowest zoom
@@ -1692,7 +1692,7 @@ module Google
           
           # 
           class Boundary
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `latitude`
@@ -1718,16 +1718,16 @@ module Google
           # The viewport for showing this location. This is a latitude, longitude
           # rectangle.
           class Viewport
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `hi`
-            # @return [Google::Apis::BooksV1::GeoLayerData::Geo::Viewport::Hi]
+            # @return [GoogleAPI::Apis::BooksV1::GeoLayerData::Geo::Viewport::Hi]
             attr_accessor :hi
           
             # 
             # Corresponds to the JSON property `lo`
-            # @return [Google::Apis::BooksV1::GeoLayerData::Geo::Viewport::Lo]
+            # @return [GoogleAPI::Apis::BooksV1::GeoLayerData::Geo::Viewport::Lo]
             attr_accessor :lo
           
             def initialize(**args)
@@ -1742,7 +1742,7 @@ module Google
             
             # 
             class Hi
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # 
               # Corresponds to the JSON property `latitude`
@@ -1767,7 +1767,7 @@ module Google
             
             # 
             class Lo
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # 
               # Corresponds to the JSON property `latitude`
@@ -1795,11 +1795,11 @@ module Google
       
       # 
       class LayerSummaries
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of layer summary items.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::BooksV1::LayerSummary>]
+        # @return [Array<GoogleAPI::Apis::BooksV1::LayerSummary>]
         attr_accessor :items
       
         # Resource type.
@@ -1826,7 +1826,7 @@ module Google
       
       # 
       class LayerSummary
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of annotations for this layer.
         # Corresponds to the JSON property `annotationCount`
@@ -1920,11 +1920,11 @@ module Google
       
       # 
       class Metadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of offline dictionary metadata.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::BooksV1::Metadata::Item>]
+        # @return [Array<GoogleAPI::Apis::BooksV1::Metadata::Item>]
         attr_accessor :items
       
         # Resource type.
@@ -1944,7 +1944,7 @@ module Google
         
         # 
         class Item
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `download_url`
@@ -1988,7 +1988,7 @@ module Google
       
       # 
       class Notification
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `body`
@@ -2081,11 +2081,11 @@ module Google
       
       # 
       class Offers
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of offers.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::BooksV1::Offers::Item>]
+        # @return [Array<GoogleAPI::Apis::BooksV1::Offers::Item>]
         attr_accessor :items
       
         # Resource type.
@@ -2105,7 +2105,7 @@ module Google
         
         # 
         class Item
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `artUrl`
@@ -2124,7 +2124,7 @@ module Google
         
           # 
           # Corresponds to the JSON property `items`
-          # @return [Array<Google::Apis::BooksV1::Offers::Item::Item>]
+          # @return [Array<GoogleAPI::Apis::BooksV1::Offers::Item::Item>]
           attr_accessor :items
         
           def initialize(**args)
@@ -2141,7 +2141,7 @@ module Google
           
           # 
           class Item
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `author`
@@ -2192,7 +2192,7 @@ module Google
       
       # 
       class ReadingPosition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Position in an EPUB as a CFI.
         # Corresponds to the JSON property `epubCfiPosition`
@@ -2248,16 +2248,16 @@ module Google
       
       # 
       class RequestAccess
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A concurrent access response.
         # Corresponds to the JSON property `concurrentAccess`
-        # @return [Google::Apis::BooksV1::ConcurrentAccessRestriction]
+        # @return [GoogleAPI::Apis::BooksV1::ConcurrentAccessRestriction]
         attr_accessor :concurrent_access
       
         # A download access response.
         # Corresponds to the JSON property `downloadAccess`
-        # @return [Google::Apis::BooksV1::DownloadAccessRestriction]
+        # @return [GoogleAPI::Apis::BooksV1::DownloadAccessRestriction]
         attr_accessor :download_access
       
         # Resource type.
@@ -2279,11 +2279,11 @@ module Google
       
       # 
       class Review
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Author of this review.
         # Corresponds to the JSON property `author`
-        # @return [Google::Apis::BooksV1::Review::Author]
+        # @return [GoogleAPI::Apis::BooksV1::Review::Author]
         attr_accessor :author
       
         # Review text.
@@ -2315,7 +2315,7 @@ module Google
         # Information regarding the source of this review, when the review is not from a
         # Google Books user.
         # Corresponds to the JSON property `source`
-        # @return [Google::Apis::BooksV1::Review::Source]
+        # @return [GoogleAPI::Apis::BooksV1::Review::Source]
         attr_accessor :source
       
         # Title for this review.
@@ -2354,7 +2354,7 @@ module Google
         
         # Author of this review.
         class Author
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Name of this person.
           # Corresponds to the JSON property `displayName`
@@ -2374,7 +2374,7 @@ module Google
         # Information regarding the source of this review, when the review is not from a
         # Google Books user.
         class Source
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Name of the source.
           # Corresponds to the JSON property `description`
@@ -2406,7 +2406,7 @@ module Google
       
       # 
       class Series
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Resource type.
         # Corresponds to the JSON property `kind`
@@ -2415,7 +2415,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `series`
-        # @return [Array<Google::Apis::BooksV1::Series::Series>]
+        # @return [Array<GoogleAPI::Apis::BooksV1::Series::Series>]
         attr_accessor :series
       
         def initialize(**args)
@@ -2430,7 +2430,7 @@ module Google
         
         # 
         class Series
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `bannerImageUrl`
@@ -2474,7 +2474,7 @@ module Google
       
       # 
       class SeriesMembership
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Resorce type.
         # Corresponds to the JSON property `kind`
@@ -2483,7 +2483,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `member`
-        # @return [Array<Google::Apis::BooksV1::Volume>]
+        # @return [Array<GoogleAPI::Apis::BooksV1::Volume>]
         attr_accessor :member
       
         # 
@@ -2505,7 +2505,7 @@ module Google
       
       # 
       class UserSettings
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Resource type.
         # Corresponds to the JSON property `kind`
@@ -2514,12 +2514,12 @@ module Google
       
         # User settings in sub-objects, each for different purposes.
         # Corresponds to the JSON property `notesExport`
-        # @return [Google::Apis::BooksV1::UserSettings::NotesExport]
+        # @return [GoogleAPI::Apis::BooksV1::UserSettings::NotesExport]
         attr_accessor :notes_export
       
         # 
         # Corresponds to the JSON property `notification`
-        # @return [Google::Apis::BooksV1::UserSettings::Notification]
+        # @return [GoogleAPI::Apis::BooksV1::UserSettings::Notification]
         attr_accessor :notification
       
         def initialize(**args)
@@ -2535,7 +2535,7 @@ module Google
         
         # User settings in sub-objects, each for different purposes.
         class NotesExport
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `folderName`
@@ -2561,11 +2561,11 @@ module Google
         
         # 
         class Notification
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `moreFromAuthors`
-          # @return [Google::Apis::BooksV1::UserSettings::Notification::MoreFromAuthors]
+          # @return [GoogleAPI::Apis::BooksV1::UserSettings::Notification::MoreFromAuthors]
           attr_accessor :more_from_authors
         
           def initialize(**args)
@@ -2579,7 +2579,7 @@ module Google
           
           # 
           class MoreFromAuthors
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `opted_state`
@@ -2600,13 +2600,13 @@ module Google
       
       # 
       class Volume
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Any information about a volume related to reading or obtaining that volume
         # text. This information can depend on country (books may be public domain in
         # one country but not in another, e.g.).
         # Corresponds to the JSON property `accessInfo`
-        # @return [Google::Apis::BooksV1::Volume::AccessInfo]
+        # @return [GoogleAPI::Apis::BooksV1::Volume::AccessInfo]
         attr_accessor :access_info
       
         # Opaque identifier for a specific version of a volume resource. (In LITE
@@ -2627,24 +2627,24 @@ module Google
       
         # What layers exist in this volume and high level information about them.
         # Corresponds to the JSON property `layerInfo`
-        # @return [Google::Apis::BooksV1::Volume::LayerInfo]
+        # @return [GoogleAPI::Apis::BooksV1::Volume::LayerInfo]
         attr_accessor :layer_info
       
         # Recommendation related information for this volume.
         # Corresponds to the JSON property `recommendedInfo`
-        # @return [Google::Apis::BooksV1::Volume::RecommendedInfo]
+        # @return [GoogleAPI::Apis::BooksV1::Volume::RecommendedInfo]
         attr_accessor :recommended_info
       
         # Any information about a volume related to the eBookstore and/or
         # purchaseability. This information can depend on the country where the request
         # originates from (i.e. books may not be for sale in certain countries).
         # Corresponds to the JSON property `saleInfo`
-        # @return [Google::Apis::BooksV1::Volume::SaleInfo]
+        # @return [GoogleAPI::Apis::BooksV1::Volume::SaleInfo]
         attr_accessor :sale_info
       
         # Search result information related to this volume.
         # Corresponds to the JSON property `searchInfo`
-        # @return [Google::Apis::BooksV1::Volume::SearchInfo]
+        # @return [GoogleAPI::Apis::BooksV1::Volume::SearchInfo]
         attr_accessor :search_info
       
         # URL to this resource. (In LITE projection.)
@@ -2655,12 +2655,12 @@ module Google
         # User specific information related to this volume. (e.g. page this user last
         # read or whether they purchased this book)
         # Corresponds to the JSON property `userInfo`
-        # @return [Google::Apis::BooksV1::Volume::UserInfo]
+        # @return [GoogleAPI::Apis::BooksV1::Volume::UserInfo]
         attr_accessor :user_info
       
         # General volume information.
         # Corresponds to the JSON property `volumeInfo`
-        # @return [Google::Apis::BooksV1::Volume::VolumeInfo]
+        # @return [GoogleAPI::Apis::BooksV1::Volume::VolumeInfo]
         attr_accessor :volume_info
       
         def initialize(**args)
@@ -2686,7 +2686,7 @@ module Google
         # text. This information can depend on country (books may be public domain in
         # one country but not in another, e.g.).
         class AccessInfo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Combines the access and viewability of this volume into a single status field
           # for this user. Values can be FULL_PURCHASED, FULL_PUBLIC_DOMAIN, SAMPLE or
@@ -2703,7 +2703,7 @@ module Google
         
           # Information about a volume's download license access restrictions.
           # Corresponds to the JSON property `downloadAccess`
-          # @return [Google::Apis::BooksV1::DownloadAccessRestriction]
+          # @return [GoogleAPI::Apis::BooksV1::DownloadAccessRestriction]
           attr_accessor :download_access
         
           # URL to the Google Drive viewer if this volume is uploaded by the user by
@@ -2721,7 +2721,7 @@ module Google
         
           # Information about epub content. (In LITE projection.)
           # Corresponds to the JSON property `epub`
-          # @return [Google::Apis::BooksV1::Volume::AccessInfo::Epub]
+          # @return [GoogleAPI::Apis::BooksV1::Volume::AccessInfo::Epub]
           attr_accessor :epub
         
           # Whether this volume requires that the client explicitly request offline
@@ -2734,7 +2734,7 @@ module Google
         
           # Information about pdf content. (In LITE projection.)
           # Corresponds to the JSON property `pdf`
-          # @return [Google::Apis::BooksV1::Volume::AccessInfo::Pdf]
+          # @return [GoogleAPI::Apis::BooksV1::Volume::AccessInfo::Pdf]
           attr_accessor :pdf
         
           # Whether or not this book is public domain in the country listed above.
@@ -2800,7 +2800,7 @@ module Google
           
           # Information about epub content. (In LITE projection.)
           class Epub
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # URL to retrieve ACS token for epub download. (In LITE projection.)
             # Corresponds to the JSON property `acsTokenLink`
@@ -2833,7 +2833,7 @@ module Google
           
           # Information about pdf content. (In LITE projection.)
           class Pdf
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # URL to retrieve ACS token for pdf download. (In LITE projection.)
             # Corresponds to the JSON property `acsTokenLink`
@@ -2867,11 +2867,11 @@ module Google
         
         # What layers exist in this volume and high level information about them.
         class LayerInfo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # A layer should appear here if and only if the layer exists for this book.
           # Corresponds to the JSON property `layers`
-          # @return [Array<Google::Apis::BooksV1::Volume::LayerInfo::Layer>]
+          # @return [Array<GoogleAPI::Apis::BooksV1::Volume::LayerInfo::Layer>]
           attr_accessor :layers
         
           def initialize(**args)
@@ -2885,7 +2885,7 @@ module Google
           
           # 
           class Layer
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The layer id of this layer (e.g. "geo").
             # Corresponds to the JSON property `layerId`
@@ -2913,7 +2913,7 @@ module Google
         
         # Recommendation related information for this volume.
         class RecommendedInfo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # A text explaining why this volume is recommended.
           # Corresponds to the JSON property `explanation`
@@ -2934,7 +2934,7 @@ module Google
         # purchaseability. This information can depend on the country where the request
         # originates from (i.e. books may not be for sale in certain countries).
         class SaleInfo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # URL to purchase this volume on the Google Books site. (In LITE projection)
           # Corresponds to the JSON property `buyLink`
@@ -2955,12 +2955,12 @@ module Google
         
           # Suggested retail price. (In LITE projection.)
           # Corresponds to the JSON property `listPrice`
-          # @return [Google::Apis::BooksV1::Volume::SaleInfo::ListPrice]
+          # @return [GoogleAPI::Apis::BooksV1::Volume::SaleInfo::ListPrice]
           attr_accessor :list_price
         
           # Offers available for this volume (sales and rentals).
           # Corresponds to the JSON property `offers`
-          # @return [Array<Google::Apis::BooksV1::Volume::SaleInfo::Offer>]
+          # @return [Array<GoogleAPI::Apis::BooksV1::Volume::SaleInfo::Offer>]
           attr_accessor :offers
         
           # The date on which this book is available for sale.
@@ -2972,7 +2972,7 @@ module Google
           # or list price unless there are offers or discounts on this volume. (In LITE
           # projection.)
           # Corresponds to the JSON property `retailPrice`
-          # @return [Google::Apis::BooksV1::Volume::SaleInfo::RetailPrice]
+          # @return [GoogleAPI::Apis::BooksV1::Volume::SaleInfo::RetailPrice]
           attr_accessor :retail_price
         
           # Whether or not this book is available for sale or offered for free in the
@@ -3000,7 +3000,7 @@ module Google
           
           # Suggested retail price. (In LITE projection.)
           class ListPrice
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Amount in the currency listed below. (In LITE projection.)
             # Corresponds to the JSON property `amount`
@@ -3025,7 +3025,7 @@ module Google
           
           # 
           class Offer
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The finsky offer type (e.g., PURCHASE=0 RENTAL=3)
             # Corresponds to the JSON property `finskyOfferType`
@@ -3034,17 +3034,17 @@ module Google
           
             # Offer list (=undiscounted) price in Micros.
             # Corresponds to the JSON property `listPrice`
-            # @return [Google::Apis::BooksV1::Volume::SaleInfo::Offer::ListPrice]
+            # @return [GoogleAPI::Apis::BooksV1::Volume::SaleInfo::Offer::ListPrice]
             attr_accessor :list_price
           
             # The rental duration (for rental offers only).
             # Corresponds to the JSON property `rentalDuration`
-            # @return [Google::Apis::BooksV1::Volume::SaleInfo::Offer::RentalDuration]
+            # @return [GoogleAPI::Apis::BooksV1::Volume::SaleInfo::Offer::RentalDuration]
             attr_accessor :rental_duration
           
             # Offer retail (=discounted) price in Micros
             # Corresponds to the JSON property `retailPrice`
-            # @return [Google::Apis::BooksV1::Volume::SaleInfo::Offer::RetailPrice]
+            # @return [GoogleAPI::Apis::BooksV1::Volume::SaleInfo::Offer::RetailPrice]
             attr_accessor :retail_price
           
             def initialize(**args)
@@ -3061,7 +3061,7 @@ module Google
             
             # Offer list (=undiscounted) price in Micros.
             class ListPrice
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # 
               # Corresponds to the JSON property `amountInMicros`
@@ -3086,7 +3086,7 @@ module Google
             
             # The rental duration (for rental offers only).
             class RentalDuration
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # 
               # Corresponds to the JSON property `count`
@@ -3111,7 +3111,7 @@ module Google
             
             # Offer retail (=discounted) price in Micros
             class RetailPrice
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # 
               # Corresponds to the JSON property `amountInMicros`
@@ -3139,7 +3139,7 @@ module Google
           # or list price unless there are offers or discounts on this volume. (In LITE
           # projection.)
           class RetailPrice
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Amount in the currency listed below. (In LITE projection.)
             # Corresponds to the JSON property `amount`
@@ -3165,7 +3165,7 @@ module Google
         
         # Search result information related to this volume.
         class SearchInfo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # A text snippet containing the search query.
           # Corresponds to the JSON property `textSnippet`
@@ -3185,7 +3185,7 @@ module Google
         # User specific information related to this volume. (e.g. page this user last
         # read or whether they purchased this book)
         class UserInfo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Timestamp when this volume was acquired by the user. (RFC 3339 UTC date-time
           # format) Acquiring includes purchase, user upload, receiving family sharing,
@@ -3201,7 +3201,7 @@ module Google
         
           # Copy/Paste accounting information.
           # Corresponds to the JSON property `copy`
-          # @return [Google::Apis::BooksV1::Volume::UserInfo::Copy]
+          # @return [GoogleAPI::Apis::BooksV1::Volume::UserInfo::Copy]
           attr_accessor :copy
         
           # Whether this volume is purchased, sample, pd download etc.
@@ -3211,7 +3211,7 @@ module Google
         
           # Information on the ability to share with the family.
           # Corresponds to the JSON property `familySharing`
-          # @return [Google::Apis::BooksV1::Volume::UserInfo::FamilySharing]
+          # @return [GoogleAPI::Apis::BooksV1::Volume::UserInfo::FamilySharing]
           attr_accessor :family_sharing
         
           # Whether or not the user shared this volume with the family.
@@ -3267,12 +3267,12 @@ module Google
           # The user's current reading position in the volume, if one is available. (In
           # LITE projection.)
           # Corresponds to the JSON property `readingPosition`
-          # @return [Google::Apis::BooksV1::ReadingPosition]
+          # @return [GoogleAPI::Apis::BooksV1::ReadingPosition]
           attr_accessor :reading_position
         
           # Period during this book is/was a valid rental.
           # Corresponds to the JSON property `rentalPeriod`
-          # @return [Google::Apis::BooksV1::Volume::UserInfo::RentalPeriod]
+          # @return [GoogleAPI::Apis::BooksV1::Volume::UserInfo::RentalPeriod]
           attr_accessor :rental_period
         
           # Whether this book is an active or an expired rental.
@@ -3282,7 +3282,7 @@ module Google
         
           # This user's review of this volume, if one exists.
           # Corresponds to the JSON property `review`
-          # @return [Google::Apis::BooksV1::Review]
+          # @return [GoogleAPI::Apis::BooksV1::Review]
           attr_accessor :review
         
           # Timestamp when this volume was last modified by a user action, such as a
@@ -3294,7 +3294,7 @@ module Google
         
           # 
           # Corresponds to the JSON property `userUploadedVolumeInfo`
-          # @return [Google::Apis::BooksV1::Volume::UserInfo::UserUploadedVolumeInfo]
+          # @return [GoogleAPI::Apis::BooksV1::Volume::UserInfo::UserUploadedVolumeInfo]
           attr_accessor :user_uploaded_volume_info
         
           def initialize(**args)
@@ -3326,7 +3326,7 @@ module Google
           
           # Copy/Paste accounting information.
           class Copy
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `allowedCharacterCount`
@@ -3363,7 +3363,7 @@ module Google
           
           # Information on the ability to share with the family.
           class FamilySharing
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The role of the user in the family.
             # Corresponds to the JSON property `familyRole`
@@ -3399,7 +3399,7 @@ module Google
           
           # Period during this book is/was a valid rental.
           class RentalPeriod
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `endUtcSec`
@@ -3424,7 +3424,7 @@ module Google
           
           # 
           class UserUploadedVolumeInfo
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `processingState`
@@ -3444,7 +3444,7 @@ module Google
         
         # General volume information.
         class VolumeInfo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Whether anonymous logging should be allowed.
           # Corresponds to the JSON property `allowAnonLogging`
@@ -3487,18 +3487,18 @@ module Google
         
           # Physical dimensions of this volume.
           # Corresponds to the JSON property `dimensions`
-          # @return [Google::Apis::BooksV1::Volume::VolumeInfo::Dimensions]
+          # @return [GoogleAPI::Apis::BooksV1::Volume::VolumeInfo::Dimensions]
           attr_accessor :dimensions
         
           # A list of image links for all the sizes that are available. (In LITE
           # projection.)
           # Corresponds to the JSON property `imageLinks`
-          # @return [Google::Apis::BooksV1::Volume::VolumeInfo::ImageLinks]
+          # @return [GoogleAPI::Apis::BooksV1::Volume::VolumeInfo::ImageLinks]
           attr_accessor :image_links
         
           # Industry standard identifiers for this volume.
           # Corresponds to the JSON property `industryIdentifiers`
-          # @return [Array<Google::Apis::BooksV1::Volume::VolumeInfo::IndustryIdentifier>]
+          # @return [Array<GoogleAPI::Apis::BooksV1::Volume::VolumeInfo::IndustryIdentifier>]
           attr_accessor :industry_identifiers
         
           # URL to view information about this volume on the Google Books site. (In LITE
@@ -3571,7 +3571,7 @@ module Google
         
           # 
           # Corresponds to the JSON property `seriesInfo`
-          # @return [Google::Apis::BooksV1::Volumeseriesinfo]
+          # @return [GoogleAPI::Apis::BooksV1::Volumeseriesinfo]
           attr_accessor :series_info
         
           # Volume subtitle. (In LITE projection.)
@@ -3620,7 +3620,7 @@ module Google
           
           # Physical dimensions of this volume.
           class Dimensions
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Height or length of this volume (in cm).
             # Corresponds to the JSON property `height`
@@ -3652,7 +3652,7 @@ module Google
           # A list of image links for all the sizes that are available. (In LITE
           # projection.)
           class ImageLinks
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Image link for extra large size (width of ~1280 pixels). (In LITE projection)
             # Corresponds to the JSON property `extraLarge`
@@ -3701,7 +3701,7 @@ module Google
           
           # 
           class IndustryIdentifier
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Industry specific volume identifier.
             # Corresponds to the JSON property `identifier`
@@ -3728,11 +3728,11 @@ module Google
       
       # 
       class Volume2
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of volumes.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::BooksV1::Volume>]
+        # @return [Array<GoogleAPI::Apis::BooksV1::Volume>]
         attr_accessor :items
       
         # Resource type.
@@ -3759,7 +3759,7 @@ module Google
       
       # 
       class VolumeAnnotation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The annotation data id for this volume annotation.
         # Corresponds to the JSON property `annotationDataId`
@@ -3778,7 +3778,7 @@ module Google
       
         # The content ranges to identify the selected text.
         # Corresponds to the JSON property `contentRanges`
-        # @return [Google::Apis::BooksV1::VolumeAnnotation::ContentRanges]
+        # @return [GoogleAPI::Apis::BooksV1::VolumeAnnotation::ContentRanges]
         attr_accessor :content_ranges
       
         # Data for this annotation.
@@ -3857,11 +3857,11 @@ module Google
         
         # The content ranges to identify the selected text.
         class ContentRanges
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Range in CFI format for this annotation for version above.
           # Corresponds to the JSON property `cfiRange`
-          # @return [Google::Apis::BooksV1::AnnotatinsRange]
+          # @return [GoogleAPI::Apis::BooksV1::AnnotatinsRange]
           attr_accessor :cfi_range
         
           # Content version applicable to ranges below.
@@ -3871,12 +3871,12 @@ module Google
         
           # Range in GB image format for this annotation for version above.
           # Corresponds to the JSON property `gbImageRange`
-          # @return [Google::Apis::BooksV1::AnnotatinsRange]
+          # @return [GoogleAPI::Apis::BooksV1::AnnotatinsRange]
           attr_accessor :gb_image_range
         
           # Range in GB text format for this annotation for version above.
           # Corresponds to the JSON property `gbTextRange`
-          # @return [Google::Apis::BooksV1::AnnotatinsRange]
+          # @return [GoogleAPI::Apis::BooksV1::AnnotatinsRange]
           attr_accessor :gb_text_range
         
           def initialize(**args)
@@ -3895,11 +3895,11 @@ module Google
       
       # 
       class Volumeannotations
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of volume annotations.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::BooksV1::VolumeAnnotation>]
+        # @return [Array<GoogleAPI::Apis::BooksV1::VolumeAnnotation>]
         attr_accessor :items
       
         # Resource type
@@ -3942,11 +3942,11 @@ module Google
       
       # 
       class Volumes
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of volumes.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::BooksV1::Volume>]
+        # @return [Array<GoogleAPI::Apis::BooksV1::Volume>]
         attr_accessor :items
       
         # Resource type.
@@ -3974,7 +3974,7 @@ module Google
       
       # 
       class Volumeseriesinfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The display number string. This should be used only for display purposes and
         # the actual sequence should be inferred from the below orderNumber.
@@ -3994,7 +3994,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `volumeSeries`
-        # @return [Array<Google::Apis::BooksV1::Volumeseriesinfo::VolumeSeries>]
+        # @return [Array<GoogleAPI::Apis::BooksV1::Volumeseriesinfo::VolumeSeries>]
         attr_accessor :volume_series
       
         def initialize(**args)
@@ -4011,11 +4011,11 @@ module Google
         
         # 
         class VolumeSeries
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # List of issues. Applicable only for Collection Edition and Omnibus.
           # Corresponds to the JSON property `issue`
-          # @return [Array<Google::Apis::BooksV1::Volumeseriesinfo::VolumeSeries::Issue>]
+          # @return [Array<GoogleAPI::Apis::BooksV1::Volumeseriesinfo::VolumeSeries::Issue>]
           attr_accessor :issue
         
           # The book order number in the series.
@@ -4048,7 +4048,7 @@ module Google
           
           # 
           class Issue
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `issueDisplayNumber`

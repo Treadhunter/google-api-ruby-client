@@ -16,7 +16,7 @@ require 'google/apis/oauth2_v2/service.rb'
 require 'google/apis/oauth2_v2/classes.rb'
 require 'google/apis/oauth2_v2/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Google OAuth2 API
     #

@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AppstateV1
       # Google App State API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/appstate_v1'
       #
-      #    Appstate = Google::Apis::AppstateV1 # Alias the module
+      #    Appstate = GoogleAPI::Apis::AppstateV1 # Alias the module
       #    service = Appstate::AppStateService.new
       #
       # @see https://developers.google.com/games/services/web/api/states
-      class AppStateService < Google::Apis::Core::BaseService
+      class AppStateService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -69,22 +69,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AppstateV1::WriteResult] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AppstateV1::WriteResult] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AppstateV1::WriteResult]
+        # @return [GoogleAPI::Apis::AppstateV1::WriteResult]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def clear_state(state_key, current_data_version: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'states/{stateKey}/clear', options)
-          command.response_representation = Google::Apis::AppstateV1::WriteResult::Representation
-          command.response_class = Google::Apis::AppstateV1::WriteResult
+          command.response_representation = GoogleAPI::Apis::AppstateV1::WriteResult::Representation
+          command.response_class = GoogleAPI::Apis::AppstateV1::WriteResult
           command.params['stateKey'] = state_key unless state_key.nil?
           command.query['currentDataVersion'] = current_data_version unless current_data_version.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -109,7 +109,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -118,9 +118,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_state(state_key, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'states/{stateKey}', options)
           command.params['stateKey'] = state_key unless state_key.nil?
@@ -143,22 +143,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AppstateV1::GetResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AppstateV1::GetResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AppstateV1::GetResponse]
+        # @return [GoogleAPI::Apis::AppstateV1::GetResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_state(state_key, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'states/{stateKey}', options)
-          command.response_representation = Google::Apis::AppstateV1::GetResponse::Representation
-          command.response_class = Google::Apis::AppstateV1::GetResponse
+          command.response_representation = GoogleAPI::Apis::AppstateV1::GetResponse::Representation
+          command.response_class = GoogleAPI::Apis::AppstateV1::GetResponse
           command.params['stateKey'] = state_key unless state_key.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -178,22 +178,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AppstateV1::ListResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AppstateV1::ListResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AppstateV1::ListResponse]
+        # @return [GoogleAPI::Apis::AppstateV1::ListResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_states(include_data: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'states', options)
-          command.response_representation = Google::Apis::AppstateV1::ListResponse::Representation
-          command.response_class = Google::Apis::AppstateV1::ListResponse
+          command.response_representation = GoogleAPI::Apis::AppstateV1::ListResponse::Representation
+          command.response_class = GoogleAPI::Apis::AppstateV1::ListResponse
           command.query['includeData'] = include_data unless include_data.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -206,7 +206,7 @@ module Google
         # of concurrent writes. Maximum per-key size is 128KB.
         # @param [Fixnum] state_key
         #   The key for the data to be retrieved.
-        # @param [Google::Apis::AppstateV1::UpdateRequest] update_request_object
+        # @param [GoogleAPI::Apis::AppstateV1::UpdateRequest] update_request_object
         # @param [String] current_state_version
         #   The version of the app state your application is attempting to update. If this
         #   does not match the current version, this method will return a conflict error.
@@ -221,24 +221,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AppstateV1::WriteResult] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AppstateV1::WriteResult] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AppstateV1::WriteResult]
+        # @return [GoogleAPI::Apis::AppstateV1::WriteResult]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_state(state_key, update_request_object = nil, current_state_version: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'states/{stateKey}', options)
-          command.request_representation = Google::Apis::AppstateV1::UpdateRequest::Representation
+          command.request_representation = GoogleAPI::Apis::AppstateV1::UpdateRequest::Representation
           command.request_object = update_request_object
-          command.response_representation = Google::Apis::AppstateV1::WriteResult::Representation
-          command.response_class = Google::Apis::AppstateV1::WriteResult
+          command.response_representation = GoogleAPI::Apis::AppstateV1::WriteResult::Representation
+          command.response_class = GoogleAPI::Apis::AppstateV1::WriteResult
           command.params['stateKey'] = state_key unless state_key.nil?
           command.query['currentStateVersion'] = current_state_version unless current_state_version.nil?
           command.query['fields'] = fields unless fields.nil?

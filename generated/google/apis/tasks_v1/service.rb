@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module TasksV1
       # Tasks API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/tasks_v1'
       #
-      #    Tasks = Google::Apis::TasksV1 # Alias the module
+      #    Tasks = GoogleAPI::Apis::TasksV1 # Alias the module
       #    service = Tasks::TasksService.new
       #
       # @see https://developers.google.com/google-apps/tasks/firstapp
-      class TasksService < Google::Apis::Core::BaseService
+      class TasksService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -64,7 +64,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -73,9 +73,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_tasklist(tasklist, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'users/@me/lists/{tasklist}', options)
           command.params['tasklist'] = tasklist unless tasklist.nil?
@@ -97,22 +97,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TasksV1::TaskList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TasksV1::TaskList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TasksV1::TaskList]
+        # @return [GoogleAPI::Apis::TasksV1::TaskList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_tasklist(tasklist, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'users/@me/lists/{tasklist}', options)
-          command.response_representation = Google::Apis::TasksV1::TaskList::Representation
-          command.response_class = Google::Apis::TasksV1::TaskList
+          command.response_representation = GoogleAPI::Apis::TasksV1::TaskList::Representation
+          command.response_class = GoogleAPI::Apis::TasksV1::TaskList
           command.params['tasklist'] = tasklist unless tasklist.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -121,7 +121,7 @@ module Google
         end
         
         # Creates a new task list and adds it to the authenticated user's task lists.
-        # @param [Google::Apis::TasksV1::TaskList] task_list_object
+        # @param [GoogleAPI::Apis::TasksV1::TaskList] task_list_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -131,24 +131,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TasksV1::TaskList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TasksV1::TaskList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TasksV1::TaskList]
+        # @return [GoogleAPI::Apis::TasksV1::TaskList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_tasklist(task_list_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'users/@me/lists', options)
-          command.request_representation = Google::Apis::TasksV1::TaskList::Representation
+          command.request_representation = GoogleAPI::Apis::TasksV1::TaskList::Representation
           command.request_object = task_list_object
-          command.response_representation = Google::Apis::TasksV1::TaskList::Representation
-          command.response_class = Google::Apis::TasksV1::TaskList
+          command.response_representation = GoogleAPI::Apis::TasksV1::TaskList::Representation
+          command.response_class = GoogleAPI::Apis::TasksV1::TaskList
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['userIp'] = user_ip unless user_ip.nil?
@@ -170,22 +170,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TasksV1::TaskLists] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TasksV1::TaskLists] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TasksV1::TaskLists]
+        # @return [GoogleAPI::Apis::TasksV1::TaskLists]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_tasklists(max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'users/@me/lists', options)
-          command.response_representation = Google::Apis::TasksV1::TaskLists::Representation
-          command.response_class = Google::Apis::TasksV1::TaskLists
+          command.response_representation = GoogleAPI::Apis::TasksV1::TaskLists::Representation
+          command.response_class = GoogleAPI::Apis::TasksV1::TaskLists
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -198,7 +198,7 @@ module Google
         # patch semantics.
         # @param [String] tasklist
         #   Task list identifier.
-        # @param [Google::Apis::TasksV1::TaskList] task_list_object
+        # @param [GoogleAPI::Apis::TasksV1::TaskList] task_list_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -208,24 +208,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TasksV1::TaskList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TasksV1::TaskList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TasksV1::TaskList]
+        # @return [GoogleAPI::Apis::TasksV1::TaskList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_tasklist(tasklist, task_list_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'users/@me/lists/{tasklist}', options)
-          command.request_representation = Google::Apis::TasksV1::TaskList::Representation
+          command.request_representation = GoogleAPI::Apis::TasksV1::TaskList::Representation
           command.request_object = task_list_object
-          command.response_representation = Google::Apis::TasksV1::TaskList::Representation
-          command.response_class = Google::Apis::TasksV1::TaskList
+          command.response_representation = GoogleAPI::Apis::TasksV1::TaskList::Representation
+          command.response_class = GoogleAPI::Apis::TasksV1::TaskList
           command.params['tasklist'] = tasklist unless tasklist.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -236,7 +236,7 @@ module Google
         # Updates the authenticated user's specified task list.
         # @param [String] tasklist
         #   Task list identifier.
-        # @param [Google::Apis::TasksV1::TaskList] task_list_object
+        # @param [GoogleAPI::Apis::TasksV1::TaskList] task_list_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -246,24 +246,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TasksV1::TaskList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TasksV1::TaskList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TasksV1::TaskList]
+        # @return [GoogleAPI::Apis::TasksV1::TaskList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_tasklist(tasklist, task_list_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'users/@me/lists/{tasklist}', options)
-          command.request_representation = Google::Apis::TasksV1::TaskList::Representation
+          command.request_representation = GoogleAPI::Apis::TasksV1::TaskList::Representation
           command.request_object = task_list_object
-          command.response_representation = Google::Apis::TasksV1::TaskList::Representation
-          command.response_class = Google::Apis::TasksV1::TaskList
+          command.response_representation = GoogleAPI::Apis::TasksV1::TaskList::Representation
+          command.response_class = GoogleAPI::Apis::TasksV1::TaskList
           command.params['tasklist'] = tasklist unless tasklist.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -285,7 +285,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -294,9 +294,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def clear_task(tasklist, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'lists/{tasklist}/clear', options)
           command.params['tasklist'] = tasklist unless tasklist.nil?
@@ -320,7 +320,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -329,9 +329,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_task(tasklist, task, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'lists/{tasklist}/tasks/{task}', options)
           command.params['tasklist'] = tasklist unless tasklist.nil?
@@ -356,22 +356,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TasksV1::Task] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TasksV1::Task] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TasksV1::Task]
+        # @return [GoogleAPI::Apis::TasksV1::Task]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_task(tasklist, task, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'lists/{tasklist}/tasks/{task}', options)
-          command.response_representation = Google::Apis::TasksV1::Task::Representation
-          command.response_class = Google::Apis::TasksV1::Task
+          command.response_representation = GoogleAPI::Apis::TasksV1::Task::Representation
+          command.response_class = GoogleAPI::Apis::TasksV1::Task
           command.params['tasklist'] = tasklist unless tasklist.nil?
           command.params['task'] = task unless task.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -383,7 +383,7 @@ module Google
         # Creates a new task on the specified task list.
         # @param [String] tasklist
         #   Task list identifier.
-        # @param [Google::Apis::TasksV1::Task] task_object
+        # @param [GoogleAPI::Apis::TasksV1::Task] task_object
         # @param [String] parent
         #   Parent task identifier. If the task is created at the top level, this
         #   parameter is omitted. Optional.
@@ -399,24 +399,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TasksV1::Task] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TasksV1::Task] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TasksV1::Task]
+        # @return [GoogleAPI::Apis::TasksV1::Task]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_task(tasklist, task_object = nil, parent: nil, previous: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'lists/{tasklist}/tasks', options)
-          command.request_representation = Google::Apis::TasksV1::Task::Representation
+          command.request_representation = GoogleAPI::Apis::TasksV1::Task::Representation
           command.request_object = task_object
-          command.response_representation = Google::Apis::TasksV1::Task::Representation
-          command.response_class = Google::Apis::TasksV1::Task
+          command.response_representation = GoogleAPI::Apis::TasksV1::Task::Representation
+          command.response_class = GoogleAPI::Apis::TasksV1::Task
           command.params['tasklist'] = tasklist unless tasklist.nil?
           command.query['parent'] = parent unless parent.nil?
           command.query['previous'] = previous unless previous.nil?
@@ -467,22 +467,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TasksV1::Tasks] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TasksV1::Tasks] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TasksV1::Tasks]
+        # @return [GoogleAPI::Apis::TasksV1::Tasks]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_tasks(tasklist, completed_max: nil, completed_min: nil, due_max: nil, due_min: nil, max_results: nil, page_token: nil, show_completed: nil, show_deleted: nil, show_hidden: nil, updated_min: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'lists/{tasklist}/tasks', options)
-          command.response_representation = Google::Apis::TasksV1::Tasks::Representation
-          command.response_class = Google::Apis::TasksV1::Tasks
+          command.response_representation = GoogleAPI::Apis::TasksV1::Tasks::Representation
+          command.response_class = GoogleAPI::Apis::TasksV1::Tasks
           command.params['tasklist'] = tasklist unless tasklist.nil?
           command.query['completedMax'] = completed_max unless completed_max.nil?
           command.query['completedMin'] = completed_min unless completed_min.nil?
@@ -522,22 +522,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TasksV1::Task] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TasksV1::Task] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TasksV1::Task]
+        # @return [GoogleAPI::Apis::TasksV1::Task]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def move_task(tasklist, task, parent: nil, previous: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'lists/{tasklist}/tasks/{task}/move', options)
-          command.response_representation = Google::Apis::TasksV1::Task::Representation
-          command.response_class = Google::Apis::TasksV1::Task
+          command.response_representation = GoogleAPI::Apis::TasksV1::Task::Representation
+          command.response_class = GoogleAPI::Apis::TasksV1::Task
           command.params['tasklist'] = tasklist unless tasklist.nil?
           command.params['task'] = task unless task.nil?
           command.query['parent'] = parent unless parent.nil?
@@ -553,7 +553,7 @@ module Google
         #   Task list identifier.
         # @param [String] task
         #   Task identifier.
-        # @param [Google::Apis::TasksV1::Task] task_object
+        # @param [GoogleAPI::Apis::TasksV1::Task] task_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -563,24 +563,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TasksV1::Task] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TasksV1::Task] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TasksV1::Task]
+        # @return [GoogleAPI::Apis::TasksV1::Task]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_task(tasklist, task, task_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'lists/{tasklist}/tasks/{task}', options)
-          command.request_representation = Google::Apis::TasksV1::Task::Representation
+          command.request_representation = GoogleAPI::Apis::TasksV1::Task::Representation
           command.request_object = task_object
-          command.response_representation = Google::Apis::TasksV1::Task::Representation
-          command.response_class = Google::Apis::TasksV1::Task
+          command.response_representation = GoogleAPI::Apis::TasksV1::Task::Representation
+          command.response_class = GoogleAPI::Apis::TasksV1::Task
           command.params['tasklist'] = tasklist unless tasklist.nil?
           command.params['task'] = task unless task.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -594,7 +594,7 @@ module Google
         #   Task list identifier.
         # @param [String] task
         #   Task identifier.
-        # @param [Google::Apis::TasksV1::Task] task_object
+        # @param [GoogleAPI::Apis::TasksV1::Task] task_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -604,24 +604,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::TasksV1::Task] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::TasksV1::Task] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::TasksV1::Task]
+        # @return [GoogleAPI::Apis::TasksV1::Task]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_task(tasklist, task, task_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'lists/{tasklist}/tasks/{task}', options)
-          command.request_representation = Google::Apis::TasksV1::Task::Representation
+          command.request_representation = GoogleAPI::Apis::TasksV1::Task::Representation
           command.request_object = task_object
-          command.response_representation = Google::Apis::TasksV1::Task::Representation
-          command.response_class = Google::Apis::TasksV1::Task
+          command.response_representation = GoogleAPI::Apis::TasksV1::Task::Representation
+          command.response_class = GoogleAPI::Apis::TasksV1::Task
           command.params['tasklist'] = tasklist unless tasklist.nil?
           command.params['task'] = task unless task.nil?
           command.query['fields'] = fields unless fields.nil?

@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module SheetsV4
       
       # The result of adding a named range.
       class AddNamedRangeResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A named range.
         # Corresponds to the JSON property `namedRange`
-        # @return [Google::Apis::SheetsV4::NamedRange]
+        # @return [GoogleAPI::Apis::SheetsV4::NamedRange]
         attr_accessor :named_range
       
         def initialize(**args)
@@ -44,11 +44,11 @@ module Google
       # Updates an existing protected range with the specified
       # protectedRangeId.
       class UpdateProtectedRangeRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A protected range.
         # Corresponds to the JSON property `protectedRange`
-        # @return [Google::Apis::SheetsV4::ProtectedRange]
+        # @return [GoogleAPI::Apis::SheetsV4::ProtectedRange]
         attr_accessor :protected_range
       
         # The fields that should be updated.  At least one field must be specified.
@@ -72,7 +72,7 @@ module Google
       # The amount of padding around the cell, in pixels.
       # When updating padding, every field must be specified.
       class Padding
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The right padding of the cell.
         # Corresponds to the JSON property `right`
@@ -109,7 +109,7 @@ module Google
       
       # Merges all cells in the range.
       class MergeCellsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # How the cells should be merged.
         # Corresponds to the JSON property `mergeType`
@@ -139,7 +139,7 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :range
       
         def initialize(**args)
@@ -155,11 +155,11 @@ module Google
       
       # The result of adding a sheet.
       class AddSheetResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Properties of a sheet.
         # Corresponds to the JSON property `properties`
-        # @return [Google::Apis::SheetsV4::SheetProperties]
+        # @return [GoogleAPI::Apis::SheetsV4::SheetProperties]
         attr_accessor :properties
       
         def initialize(**args)
@@ -174,11 +174,11 @@ module Google
       
       # Metadata about a value in a pivot grouping.
       class PivotGroupValueMetadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The kinds of value that a cell in a spreadsheet can have.
         # Corresponds to the JSON property `value`
-        # @return [Google::Apis::SheetsV4::ExtendedValue]
+        # @return [GoogleAPI::Apis::SheetsV4::ExtendedValue]
         attr_accessor :value
       
         # True if the data corresponding to the value is collapsed.
@@ -200,11 +200,11 @@ module Google
       
       # The result of updating an embedded object's position.
       class UpdateEmbeddedObjectPositionResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The position of an embedded object such as a chart.
         # Corresponds to the JSON property `position`
-        # @return [Google::Apis::SheetsV4::EmbeddedObjectPosition]
+        # @return [GoogleAPI::Apis::SheetsV4::EmbeddedObjectPosition]
         attr_accessor :position
       
         def initialize(**args)
@@ -220,7 +220,7 @@ module Google
       # Updates a conditional format rule at the given index,
       # or moves a conditional format rule to another index.
       class UpdateConditionalFormatRuleRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The sheet of the rule to move.  Required if new_index is set,
         # unused otherwise.
@@ -230,7 +230,7 @@ module Google
       
         # A rule describing a conditional format.
         # Corresponds to the JSON property `rule`
-        # @return [Google::Apis::SheetsV4::ConditionalFormatRule]
+        # @return [GoogleAPI::Apis::SheetsV4::ConditionalFormatRule]
         attr_accessor :rule
       
         # The zero-based index of the rule that should be replaced or moved.
@@ -259,7 +259,7 @@ module Google
       # The format of a run of text in a cell.
       # Absent values indicate that the field isn't specified.
       class TextFormat
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # True if the text is bold.
         # Corresponds to the JSON property `bold`
@@ -373,7 +373,7 @@ module Google
         # `;
         # // ...
         # Corresponds to the JSON property `foregroundColor`
-        # @return [Google::Apis::SheetsV4::Color]
+        # @return [GoogleAPI::Apis::SheetsV4::Color]
         attr_accessor :foreground_color
       
         # The font family.
@@ -418,7 +418,7 @@ module Google
       # (This does not move or resize a chart. To move or resize a chart, use
       # UpdateEmbeddedObjectPositionRequest.)
       class UpdateChartSpecRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the chart to update.
         # Corresponds to the JSON property `chartId`
@@ -427,7 +427,7 @@ module Google
       
         # The specifications of a chart.
         # Corresponds to the JSON property `spec`
-        # @return [Google::Apis::SheetsV4::ChartSpec]
+        # @return [GoogleAPI::Apis::SheetsV4::ChartSpec]
         attr_accessor :spec
       
         def initialize(**args)
@@ -444,7 +444,7 @@ module Google
       # A coordinate in a sheet.
       # All indexes are zero-based.
       class GridCoordinate
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The sheet this coordinate is on.
         # Corresponds to the JSON property `sheetId`
@@ -475,7 +475,7 @@ module Google
       
       # Deletes a particular filter view.
       class DeleteFilterViewRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the filter to delete.
         # Corresponds to the JSON property `filterId`
@@ -494,7 +494,7 @@ module Google
       
       # The response when updating a range of values in a spreadsheet.
       class BatchUpdateValuesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The total number of sheets where at least one cell in the sheet was
         # updated.
@@ -511,7 +511,7 @@ module Google
         # One UpdateValuesResponse per requested range, in the same order as
         # the requests appeared.
         # Corresponds to the JSON property `responses`
-        # @return [Array<Google::Apis::SheetsV4::UpdateValuesResponse>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::UpdateValuesResponse>]
         attr_accessor :responses
       
         # The total number of cells updated.
@@ -547,7 +547,7 @@ module Google
       # Updates properties of the named range with the specified
       # namedRangeId.
       class UpdateNamedRangeRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The fields that should be updated.  At least one field must be specified.
         # The root `namedRange` is implied and should not be specified.
@@ -558,7 +558,7 @@ module Google
       
         # A named range.
         # Corresponds to the JSON property `namedRange`
-        # @return [Google::Apis::SheetsV4::NamedRange]
+        # @return [GoogleAPI::Apis::SheetsV4::NamedRange]
         attr_accessor :named_range
       
         def initialize(**args)
@@ -574,7 +574,7 @@ module Google
       
       # The response when updating a range of values in a spreadsheet.
       class UpdateValuesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The range (in A1 notation) that updates were applied to.
         # Corresponds to the JSON property `updatedRange`
@@ -617,7 +617,7 @@ module Google
       
       # Properties of a spreadsheet.
       class SpreadsheetProperties
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The time zone of the spreadsheet, in CLDR format such as
         # `America/New_York`. If the time zone isn't recognized, this may
@@ -647,7 +647,7 @@ module Google
       
         # The format of a cell.
         # Corresponds to the JSON property `defaultFormat`
-        # @return [Google::Apis::SheetsV4::CellFormat]
+        # @return [GoogleAPI::Apis::SheetsV4::CellFormat]
         attr_accessor :default_format
       
         def initialize(**args)
@@ -666,7 +666,7 @@ module Google
       
       # Data about a specific cell.
       class CellData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A hyperlink this cell points to, if any.
         # This field is read-only.  (To set it, use a `=HYPERLINK` formula.)
@@ -676,7 +676,7 @@ module Google
       
         # The format of a cell.
         # Corresponds to the JSON property `effectiveFormat`
-        # @return [Google::Apis::SheetsV4::CellFormat]
+        # @return [GoogleAPI::Apis::SheetsV4::CellFormat]
         attr_accessor :effective_format
       
         # Any note on the cell.
@@ -693,22 +693,22 @@ module Google
       
         # The kinds of value that a cell in a spreadsheet can have.
         # Corresponds to the JSON property `userEnteredValue`
-        # @return [Google::Apis::SheetsV4::ExtendedValue]
+        # @return [GoogleAPI::Apis::SheetsV4::ExtendedValue]
         attr_accessor :user_entered_value
       
         # A data validation rule.
         # Corresponds to the JSON property `dataValidation`
-        # @return [Google::Apis::SheetsV4::DataValidationRule]
+        # @return [GoogleAPI::Apis::SheetsV4::DataValidationRule]
         attr_accessor :data_validation
       
         # The format of a cell.
         # Corresponds to the JSON property `userEnteredFormat`
-        # @return [Google::Apis::SheetsV4::CellFormat]
+        # @return [GoogleAPI::Apis::SheetsV4::CellFormat]
         attr_accessor :user_entered_format
       
         # A pivot table.
         # Corresponds to the JSON property `pivotTable`
-        # @return [Google::Apis::SheetsV4::PivotTable]
+        # @return [GoogleAPI::Apis::SheetsV4::PivotTable]
         attr_accessor :pivot_table
       
         # Runs of rich text applied to subsections of the cell.  Runs are only valid
@@ -720,12 +720,12 @@ module Google
         # When writing, the new runs will overwrite any prior runs.  When writing a
         # new user_entered_value, previous runs will be erased.
         # Corresponds to the JSON property `textFormatRuns`
-        # @return [Array<Google::Apis::SheetsV4::TextFormatRun>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::TextFormatRun>]
         attr_accessor :text_format_runs
       
         # The kinds of value that a cell in a spreadsheet can have.
         # Corresponds to the JSON property `effectiveValue`
-        # @return [Google::Apis::SheetsV4::ExtendedValue]
+        # @return [GoogleAPI::Apis::SheetsV4::ExtendedValue]
         attr_accessor :effective_value
       
         def initialize(**args)
@@ -749,7 +749,7 @@ module Google
       
       # Unmerges cells in the given range.
       class UnmergeCellsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A range on a sheet.
         # All indexes are zero-based.
@@ -774,7 +774,7 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :range
       
         def initialize(**args)
@@ -790,7 +790,7 @@ module Google
       # Splits a column of text into multiple columns,
       # based on a delimiter in each cell.
       class TextToColumnsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A range on a sheet.
         # All indexes are zero-based.
@@ -815,7 +815,7 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `source`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :source
       
         # The delimiter to use. Used only if delimiterType is
@@ -843,11 +843,11 @@ module Google
       
       # The result of adding a new protected range.
       class AddProtectedRangeResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A protected range.
         # Corresponds to the JSON property `protectedRange`
-        # @return [Google::Apis::SheetsV4::ProtectedRange]
+        # @return [GoogleAPI::Apis::SheetsV4::ProtectedRange]
         attr_accessor :protected_range
       
         def initialize(**args)
@@ -864,14 +864,14 @@ module Google
       # BooleanConditions are used by conditional formatting,
       # data validation, and the criteria in filters.
       class BooleanCondition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The values of the condition. The number of supported values depends
         # on the condition type.  Some support zero values,
         # others one or two values,
         # and ConditionType.ONE_OF_LIST supports an arbitrary number of values.
         # Corresponds to the JSON property `values`
-        # @return [Array<Google::Apis::SheetsV4::ConditionValue>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::ConditionValue>]
         attr_accessor :values
       
         # The type of condition.
@@ -892,7 +892,7 @@ module Google
       
       # Deletes the protected range with the given ID.
       class DeleteProtectedRangeRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the protected range to delete.
         # Corresponds to the JSON property `protectedRangeId`
@@ -912,11 +912,11 @@ module Google
       # The domain of a chart.
       # For example, if charting stock prices over time, this would be the date.
       class BasicChartDomain
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The data included in a domain or series.
         # Corresponds to the JSON property `domain`
-        # @return [Google::Apis::SheetsV4::ChartData]
+        # @return [GoogleAPI::Apis::SheetsV4::ChartData]
         attr_accessor :domain
       
         def initialize(**args)
@@ -935,7 +935,7 @@ module Google
       # and the end index is exclusive.
       # Missing indexes indicate the range is unbounded on that side.
       class DimensionRange
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The sheet this span is on.
         # Corresponds to the JSON property `sheetId`
@@ -972,61 +972,61 @@ module Google
       
       # A single response from an update.
       class Response
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The result of updating an embedded object's position.
         # Corresponds to the JSON property `updateEmbeddedObjectPosition`
-        # @return [Google::Apis::SheetsV4::UpdateEmbeddedObjectPositionResponse]
+        # @return [GoogleAPI::Apis::SheetsV4::UpdateEmbeddedObjectPositionResponse]
         attr_accessor :update_embedded_object_position
       
         # The result of adding a filter view.
         # Corresponds to the JSON property `addFilterView`
-        # @return [Google::Apis::SheetsV4::AddFilterViewResponse]
+        # @return [GoogleAPI::Apis::SheetsV4::AddFilterViewResponse]
         attr_accessor :add_filter_view
       
         # The result of adding a sheet.
         # Corresponds to the JSON property `addSheet`
-        # @return [Google::Apis::SheetsV4::AddSheetResponse]
+        # @return [GoogleAPI::Apis::SheetsV4::AddSheetResponse]
         attr_accessor :add_sheet
       
         # The result of the find/replace.
         # Corresponds to the JSON property `findReplace`
-        # @return [Google::Apis::SheetsV4::FindReplaceResponse]
+        # @return [GoogleAPI::Apis::SheetsV4::FindReplaceResponse]
         attr_accessor :find_replace
       
         # The result of adding a new protected range.
         # Corresponds to the JSON property `addProtectedRange`
-        # @return [Google::Apis::SheetsV4::AddProtectedRangeResponse]
+        # @return [GoogleAPI::Apis::SheetsV4::AddProtectedRangeResponse]
         attr_accessor :add_protected_range
       
         # The result of updating a conditional format rule.
         # Corresponds to the JSON property `updateConditionalFormatRule`
-        # @return [Google::Apis::SheetsV4::UpdateConditionalFormatRuleResponse]
+        # @return [GoogleAPI::Apis::SheetsV4::UpdateConditionalFormatRuleResponse]
         attr_accessor :update_conditional_format_rule
       
         # The result of adding a chart to a spreadsheet.
         # Corresponds to the JSON property `addChart`
-        # @return [Google::Apis::SheetsV4::AddChartResponse]
+        # @return [GoogleAPI::Apis::SheetsV4::AddChartResponse]
         attr_accessor :add_chart
       
         # The result of deleting a conditional format rule.
         # Corresponds to the JSON property `deleteConditionalFormatRule`
-        # @return [Google::Apis::SheetsV4::DeleteConditionalFormatRuleResponse]
+        # @return [GoogleAPI::Apis::SheetsV4::DeleteConditionalFormatRuleResponse]
         attr_accessor :delete_conditional_format_rule
       
         # The result of duplicating a sheet.
         # Corresponds to the JSON property `duplicateSheet`
-        # @return [Google::Apis::SheetsV4::DuplicateSheetResponse]
+        # @return [GoogleAPI::Apis::SheetsV4::DuplicateSheetResponse]
         attr_accessor :duplicate_sheet
       
         # The result of a filter view being duplicated.
         # Corresponds to the JSON property `duplicateFilterView`
-        # @return [Google::Apis::SheetsV4::DuplicateFilterViewResponse]
+        # @return [GoogleAPI::Apis::SheetsV4::DuplicateFilterViewResponse]
         attr_accessor :duplicate_filter_view
       
         # The result of adding a named range.
         # Corresponds to the JSON property `addNamedRange`
-        # @return [Google::Apis::SheetsV4::AddNamedRangeResponse]
+        # @return [GoogleAPI::Apis::SheetsV4::AddNamedRangeResponse]
         attr_accessor :add_named_range
       
         def initialize(**args)
@@ -1052,11 +1052,11 @@ module Google
       # Adds a new conditional format rule at the given index.
       # All subsequent rules' indexes are incremented.
       class AddConditionalFormatRuleRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A rule describing a conditional format.
         # Corresponds to the JSON property `rule`
-        # @return [Google::Apis::SheetsV4::ConditionalFormatRule]
+        # @return [GoogleAPI::Apis::SheetsV4::ConditionalFormatRule]
         attr_accessor :rule
       
         # The zero-based index where the rule should be inserted.
@@ -1077,7 +1077,7 @@ module Google
       
       # A filter view.
       class FilterView
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the filter view.
         # Corresponds to the JSON property `title`
@@ -1094,7 +1094,7 @@ module Google
         # The sort order per column. Later specifications are used when values
         # are equal in the earlier specifications.
         # Corresponds to the JSON property `sortSpecs`
-        # @return [Array<Google::Apis::SheetsV4::SortSpec>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::SortSpec>]
         attr_accessor :sort_specs
       
         # A range on a sheet.
@@ -1120,14 +1120,14 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :range
       
         # The criteria for showing/hiding values per column.
         # The map's key is the column index, and the value is the criteria for
         # that column.
         # Corresponds to the JSON property `criteria`
-        # @return [Hash<String,Google::Apis::SheetsV4::FilterCriteria>]
+        # @return [Hash<String,GoogleAPI::Apis::SheetsV4::FilterCriteria>]
         attr_accessor :criteria
       
         # The ID of the filter view.
@@ -1152,7 +1152,7 @@ module Google
       
       # Sorts data in rows based on a sort order per column.
       class SortRangeRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A range on a sheet.
         # All indexes are zero-based.
@@ -1177,13 +1177,13 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :range
       
         # The sort order per column. Later specifications are used when values
         # are equal in the earlier specifications.
         # Corresponds to the JSON property `sortSpecs`
-        # @return [Array<Google::Apis::SheetsV4::SortSpec>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::SortSpec>]
         attr_accessor :sort_specs
       
         def initialize(**args)
@@ -1201,7 +1201,7 @@ module Google
       # index of the next run.
       # When updating, all fields must be set.
       class TextFormatRun
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The character index where this run starts.
         # Corresponds to the JSON property `startIndex`
@@ -1211,7 +1211,7 @@ module Google
         # The format of a run of text in a cell.
         # Absent values indicate that the field isn't specified.
         # Corresponds to the JSON property `format`
-        # @return [Google::Apis::SheetsV4::TextFormat]
+        # @return [GoogleAPI::Apis::SheetsV4::TextFormat]
         attr_accessor :format
       
         def initialize(**args)
@@ -1227,11 +1227,11 @@ module Google
       
       # Updates properties of the filter view.
       class UpdateFilterViewRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A filter view.
         # Corresponds to the JSON property `filter`
-        # @return [Google::Apis::SheetsV4::FilterView]
+        # @return [GoogleAPI::Apis::SheetsV4::FilterView]
         attr_accessor :filter
       
         # The fields that should be updated.  At least one field must be specified.
@@ -1254,7 +1254,7 @@ module Google
       
       # The result of updating a conditional format rule.
       class UpdateConditionalFormatRuleResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The old index of the rule. Not set if a rule was replaced
         # (because it is the same as new_index).
@@ -1264,12 +1264,12 @@ module Google
       
         # A rule describing a conditional format.
         # Corresponds to the JSON property `newRule`
-        # @return [Google::Apis::SheetsV4::ConditionalFormatRule]
+        # @return [GoogleAPI::Apis::SheetsV4::ConditionalFormatRule]
         attr_accessor :new_rule
       
         # A rule describing a conditional format.
         # Corresponds to the JSON property `oldRule`
-        # @return [Google::Apis::SheetsV4::ConditionalFormatRule]
+        # @return [GoogleAPI::Apis::SheetsV4::ConditionalFormatRule]
         attr_accessor :old_rule
       
         # The index of the new rule.
@@ -1292,13 +1292,13 @@ module Google
       
       # Criteria for showing/hiding rows in a filter or filter view.
       class FilterCriteria
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A condition that can evaluate to true or false.
         # BooleanConditions are used by conditional formatting,
         # data validation, and the criteria in filters.
         # Corresponds to the JSON property `condition`
-        # @return [Google::Apis::SheetsV4::BooleanCondition]
+        # @return [GoogleAPI::Apis::SheetsV4::BooleanCondition]
         attr_accessor :condition
       
         # Values that should be hidden.
@@ -1319,7 +1319,7 @@ module Google
       
       # Deletes the dimensions from the sheet.
       class DeleteDimensionRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A range along a single dimension on a sheet.
         # All indexes are zero-based.
@@ -1327,7 +1327,7 @@ module Google
         # and the end index is exclusive.
         # Missing indexes indicate the range is unbounded on that side.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::SheetsV4::DimensionRange]
+        # @return [GoogleAPI::Apis::SheetsV4::DimensionRange]
         attr_accessor :range
       
         def initialize(**args)
@@ -1342,7 +1342,7 @@ module Google
       
       # A pivot table.
       class PivotTable
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether values should be listed horizontally (as columns)
         # or vertically (as rows).
@@ -1352,7 +1352,7 @@ module Google
       
         # Each column grouping in the pivot table.
         # Corresponds to the JSON property `columns`
-        # @return [Array<Google::Apis::SheetsV4::PivotGroup>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::PivotGroup>]
         attr_accessor :columns
       
         # A range on a sheet.
@@ -1378,17 +1378,17 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `source`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :source
       
         # Each row grouping in the pivot table.
         # Corresponds to the JSON property `rows`
-        # @return [Array<Google::Apis::SheetsV4::PivotGroup>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::PivotGroup>]
         attr_accessor :rows
       
         # A list of values to include in the pivot table.
         # Corresponds to the JSON property `values`
-        # @return [Array<Google::Apis::SheetsV4::PivotValue>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::PivotValue>]
         attr_accessor :values
       
         # An optional mapping of filters per source column offset.
@@ -1398,7 +1398,7 @@ module Google
         # For example, if the source was `C10:E15`, a key of `0` will have the filter
         # for column `C`, whereas the key `1` is for column `D`.
         # Corresponds to the JSON property `criteria`
-        # @return [Hash<String,Google::Apis::SheetsV4::PivotFilterCriteria>]
+        # @return [Hash<String,GoogleAPI::Apis::SheetsV4::PivotFilterCriteria>]
         attr_accessor :criteria
       
         def initialize(**args)
@@ -1418,13 +1418,13 @@ module Google
       
       # A data validation rule.
       class DataValidationRule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A condition that can evaluate to true or false.
         # BooleanConditions are used by conditional formatting,
         # data validation, and the criteria in filters.
         # Corresponds to the JSON property `condition`
-        # @return [Google::Apis::SheetsV4::BooleanCondition]
+        # @return [GoogleAPI::Apis::SheetsV4::BooleanCondition]
         attr_accessor :condition
       
         # A message to show the user when adding data to the cell.
@@ -1460,7 +1460,7 @@ module Google
       
       # Updates properties of a spreadsheet.
       class UpdateSpreadsheetPropertiesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The fields that should be updated.  At least one field must be specified.
         # The root 'properties' is implied and should not be specified.
@@ -1471,7 +1471,7 @@ module Google
       
         # Properties of a spreadsheet.
         # Corresponds to the JSON property `properties`
-        # @return [Google::Apis::SheetsV4::SpreadsheetProperties]
+        # @return [GoogleAPI::Apis::SheetsV4::SpreadsheetProperties]
         attr_accessor :properties
       
         def initialize(**args)
@@ -1487,7 +1487,7 @@ module Google
       
       # Source ranges for a chart.
       class ChartSourceRange
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ranges of data for a series or domain.
         # Exactly one dimension must have a length of 1,
@@ -1504,7 +1504,7 @@ module Google
         # series1 sources: B1:B5, D10:D12
         # series2 sources: C1:C5, E10:E12
         # Corresponds to the JSON property `sources`
-        # @return [Array<Google::Apis::SheetsV4::GridRange>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::GridRange>]
         attr_accessor :sources
       
         def initialize(**args)
@@ -1519,7 +1519,7 @@ module Google
       
       # The request for updating more than one range of values in a spreadsheet.
       class BatchUpdateValuesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # How the input data should be interpreted.
         # Corresponds to the JSON property `valueInputOption`
@@ -1528,7 +1528,7 @@ module Google
       
         # The new values to apply to the spreadsheet.
         # Corresponds to the JSON property `data`
-        # @return [Array<Google::Apis::SheetsV4::ValueRange>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::ValueRange>]
         attr_accessor :data
       
         def initialize(**args)
@@ -1544,7 +1544,7 @@ module Google
       
       # Clears the basic filter, if any exists on the sheet.
       class ClearBasicFilterRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The sheet ID on which the basic filter should be cleared.
         # Corresponds to the JSON property `sheetId`
@@ -1563,25 +1563,25 @@ module Google
       
       # A rule describing a conditional format.
       class ConditionalFormatRule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A rule that applies a gradient color scale format, based on
         # the interpolation points listed. The format of a cell will vary
         # based on its contents as compared to the values of the interpolation
         # points.
         # Corresponds to the JSON property `gradientRule`
-        # @return [Google::Apis::SheetsV4::GradientRule]
+        # @return [GoogleAPI::Apis::SheetsV4::GradientRule]
         attr_accessor :gradient_rule
       
         # A rule that may or may not match, depending on the condition.
         # Corresponds to the JSON property `booleanRule`
-        # @return [Google::Apis::SheetsV4::BooleanRule]
+        # @return [GoogleAPI::Apis::SheetsV4::BooleanRule]
         attr_accessor :boolean_rule
       
         # The ranges that will be formatted if the condition is true.
         # All the ranges must be on the same grid.
         # Corresponds to the JSON property `ranges`
-        # @return [Array<Google::Apis::SheetsV4::GridRange>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::GridRange>]
         attr_accessor :ranges
       
         def initialize(**args)
@@ -1606,26 +1606,26 @@ module Google
       # If you want to clear a border, explicitly set the style to
       # NONE.
       class UpdateBordersRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A border along a cell.
         # Corresponds to the JSON property `right`
-        # @return [Google::Apis::SheetsV4::Border]
+        # @return [GoogleAPI::Apis::SheetsV4::Border]
         attr_accessor :right
       
         # A border along a cell.
         # Corresponds to the JSON property `innerVertical`
-        # @return [Google::Apis::SheetsV4::Border]
+        # @return [GoogleAPI::Apis::SheetsV4::Border]
         attr_accessor :inner_vertical
       
         # A border along a cell.
         # Corresponds to the JSON property `top`
-        # @return [Google::Apis::SheetsV4::Border]
+        # @return [GoogleAPI::Apis::SheetsV4::Border]
         attr_accessor :top
       
         # A border along a cell.
         # Corresponds to the JSON property `innerHorizontal`
-        # @return [Google::Apis::SheetsV4::Border]
+        # @return [GoogleAPI::Apis::SheetsV4::Border]
         attr_accessor :inner_horizontal
       
         # A range on a sheet.
@@ -1651,17 +1651,17 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :range
       
         # A border along a cell.
         # Corresponds to the JSON property `bottom`
-        # @return [Google::Apis::SheetsV4::Border]
+        # @return [GoogleAPI::Apis::SheetsV4::Border]
         attr_accessor :bottom
       
         # A border along a cell.
         # Corresponds to the JSON property `left`
-        # @return [Google::Apis::SheetsV4::Border]
+        # @return [GoogleAPI::Apis::SheetsV4::Border]
         attr_accessor :left
       
         def initialize(**args)
@@ -1682,7 +1682,7 @@ module Google
       
       # Criteria for showing/hiding rows in a pivot table.
       class PivotFilterCriteria
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Values that should be included.  Values not listed here are excluded.
         # Corresponds to the JSON property `visibleValues`
@@ -1701,26 +1701,26 @@ module Google
       
       # The borders of the cell.
       class Borders
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A border along a cell.
         # Corresponds to the JSON property `left`
-        # @return [Google::Apis::SheetsV4::Border]
+        # @return [GoogleAPI::Apis::SheetsV4::Border]
         attr_accessor :left
       
         # A border along a cell.
         # Corresponds to the JSON property `right`
-        # @return [Google::Apis::SheetsV4::Border]
+        # @return [GoogleAPI::Apis::SheetsV4::Border]
         attr_accessor :right
       
         # A border along a cell.
         # Corresponds to the JSON property `top`
-        # @return [Google::Apis::SheetsV4::Border]
+        # @return [GoogleAPI::Apis::SheetsV4::Border]
         attr_accessor :top
       
         # A border along a cell.
         # Corresponds to the JSON property `bottom`
-        # @return [Google::Apis::SheetsV4::Border]
+        # @return [GoogleAPI::Apis::SheetsV4::Border]
         attr_accessor :bottom
       
         def initialize(**args)
@@ -1738,7 +1738,7 @@ module Google
       
       # A chart embedded in a sheet.
       class EmbeddedChart
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the chart.
         # Corresponds to the JSON property `chartId`
@@ -1747,12 +1747,12 @@ module Google
       
         # The position of an embedded object such as a chart.
         # Corresponds to the JSON property `position`
-        # @return [Google::Apis::SheetsV4::EmbeddedObjectPosition]
+        # @return [GoogleAPI::Apis::SheetsV4::EmbeddedObjectPosition]
         attr_accessor :position
       
         # The specifications of a chart.
         # Corresponds to the JSON property `spec`
-        # @return [Google::Apis::SheetsV4::ChartSpec]
+        # @return [GoogleAPI::Apis::SheetsV4::ChartSpec]
         attr_accessor :spec
       
         def initialize(**args)
@@ -1867,7 +1867,7 @@ module Google
       # `;
       # // ...
       class Color
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The amount of green in the color as a value in the interval [0, 1].
         # Corresponds to the JSON property `green`
@@ -1917,11 +1917,11 @@ module Google
       # EmbeddedObjectPosition.sheetId or
       # EmbeddedObjectPosition.newSheet.
       class AddSheetRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Properties of a sheet.
         # Corresponds to the JSON property `properties`
-        # @return [Google::Apis::SheetsV4::SheetProperties]
+        # @return [GoogleAPI::Apis::SheetsV4::SheetProperties]
         attr_accessor :properties
       
         def initialize(**args)
@@ -1936,11 +1936,11 @@ module Google
       
       # Adds a new protected range.
       class AddProtectedRangeRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A protected range.
         # Corresponds to the JSON property `protectedRange`
-        # @return [Google::Apis::SheetsV4::ProtectedRange]
+        # @return [GoogleAPI::Apis::SheetsV4::ProtectedRange]
         attr_accessor :protected_range
       
         def initialize(**args)
@@ -1955,7 +1955,7 @@ module Google
       
       # Data within a range of the spreadsheet.
       class ValueRange
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The data that was read or to be written.  This is an array of arrays,
         # the outer array representing all the data and each inner array
@@ -2004,7 +2004,7 @@ module Google
       
       # The result of the find/replace.
       class FindReplaceResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of non-formula cells changed.
         # Corresponds to the JSON property `valuesChanged`
@@ -2049,7 +2049,7 @@ module Google
       
       # The format of a cell.
       class CellFormat
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The horizontal alignment of the value in the cell.
         # Corresponds to the JSON property `horizontalAlignment`
@@ -2063,7 +2063,7 @@ module Google
       
         # The borders of the cell.
         # Corresponds to the JSON property `borders`
-        # @return [Google::Apis::SheetsV4::Borders]
+        # @return [GoogleAPI::Apis::SheetsV4::Borders]
         attr_accessor :borders
       
         # The direction of the text in the cell.
@@ -2074,18 +2074,18 @@ module Google
         # The format of a run of text in a cell.
         # Absent values indicate that the field isn't specified.
         # Corresponds to the JSON property `textFormat`
-        # @return [Google::Apis::SheetsV4::TextFormat]
+        # @return [GoogleAPI::Apis::SheetsV4::TextFormat]
         attr_accessor :text_format
       
         # The amount of padding around the cell, in pixels.
         # When updating padding, every field must be specified.
         # Corresponds to the JSON property `padding`
-        # @return [Google::Apis::SheetsV4::Padding]
+        # @return [GoogleAPI::Apis::SheetsV4::Padding]
         attr_accessor :padding
       
         # The number format of a cell.
         # Corresponds to the JSON property `numberFormat`
-        # @return [Google::Apis::SheetsV4::NumberFormat]
+        # @return [GoogleAPI::Apis::SheetsV4::NumberFormat]
         attr_accessor :number_format
       
         # The wrap strategy for the value in the cell.
@@ -2193,7 +2193,7 @@ module Google
         # `;
         # // ...
         # Corresponds to the JSON property `backgroundColor`
-        # @return [Google::Apis::SheetsV4::Color]
+        # @return [GoogleAPI::Apis::SheetsV4::Color]
         attr_accessor :background_color
       
         # The vertical alignment of the value in the cell.
@@ -2222,7 +2222,7 @@ module Google
       
       # Moves one or more rows or columns.
       class MoveDimensionRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A range along a single dimension on a sheet.
         # All indexes are zero-based.
@@ -2230,7 +2230,7 @@ module Google
         # and the end index is exclusive.
         # Missing indexes indicate the range is unbounded on that side.
         # Corresponds to the JSON property `source`
-        # @return [Google::Apis::SheetsV4::DimensionRange]
+        # @return [GoogleAPI::Apis::SheetsV4::DimensionRange]
         attr_accessor :source
       
         # The zero-based start index of where to move the source data to,
@@ -2263,7 +2263,7 @@ module Google
       # A chart may not have more than one axis per
       # axis position.
       class BasicChartAxis
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The position of this axis.
         # Corresponds to the JSON property `position`
@@ -2279,7 +2279,7 @@ module Google
         # The format of a run of text in a cell.
         # Absent values indicate that the field isn't specified.
         # Corresponds to the JSON property `format`
-        # @return [Google::Apis::SheetsV4::TextFormat]
+        # @return [GoogleAPI::Apis::SheetsV4::TextFormat]
         attr_accessor :format
       
         def initialize(**args)
@@ -2296,7 +2296,7 @@ module Google
       
       # Information about which values in a pivot group should be used for sorting.
       class PivotGroupSortValueBucket
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Determines the bucket from which values are chosen to sort.
         # For example, in a pivot table with one row group & two column groups,
@@ -2307,7 +2307,7 @@ module Google
         # to the "Grand Total" over the column groups. If a single value is listed,
         # this would correspond to using the "Total" of that bucket.
         # Corresponds to the JSON property `buckets`
-        # @return [Array<Google::Apis::SheetsV4::ExtendedValue>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::ExtendedValue>]
         attr_accessor :buckets
       
         # The offset in the PivotTable.values list which the values in this
@@ -2329,7 +2329,7 @@ module Google
       
       # Properties about a dimension.
       class DimensionProperties
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # True if this dimension is explicitly hidden.
         # Corresponds to the JSON property `hiddenByUser`
@@ -2363,7 +2363,7 @@ module Google
       
       # The position of an embedded object such as a chart.
       class EmbeddedObjectPosition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The sheet this is on. Set only if the embedded object
         # is on its own sheet. Must be non-negative.
@@ -2373,7 +2373,7 @@ module Google
       
         # The location an object is overlaid on top of a grid.
         # Corresponds to the JSON property `overlayPosition`
-        # @return [Google::Apis::SheetsV4::OverlayPosition]
+        # @return [GoogleAPI::Apis::SheetsV4::OverlayPosition]
         attr_accessor :overlay_position
       
         # If true, the embedded object will be put on a new sheet whose ID
@@ -2399,7 +2399,7 @@ module Google
       # These pin the gradient color scale according to the color,
       # type and value chosen.
       class InterpolationPoint
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The value this interpolation point uses.  May be a formula.
         # Unused if type is MIN or
@@ -2508,7 +2508,7 @@ module Google
         # `;
         # // ...
         # Corresponds to the JSON property `color`
-        # @return [Google::Apis::SheetsV4::Color]
+        # @return [GoogleAPI::Apis::SheetsV4::Color]
         attr_accessor :color
       
         # How the value should be interpreted.
@@ -2530,7 +2530,7 @@ module Google
       
       # An error in a cell.
       class ErrorValue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of error.
         # Corresponds to the JSON property `type`
@@ -2556,7 +2556,7 @@ module Google
       
       # Duplicates a particular filter view.
       class DuplicateFilterViewRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the filter being duplicated.
         # Corresponds to the JSON property `filterId`
@@ -2575,11 +2575,11 @@ module Google
       
       # The request for updating any aspect of a spreadsheet.
       class BatchUpdateSpreadsheetRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of updates to apply to the spreadsheet.
         # Corresponds to the JSON property `requests`
-        # @return [Array<Google::Apis::SheetsV4::Request>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::Request>]
         attr_accessor :requests
       
         def initialize(**args)
@@ -2594,7 +2594,7 @@ module Google
       
       # Properties of a sheet.
       class SheetProperties
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the sheet.
         # Corresponds to the JSON property `title`
@@ -2617,7 +2617,7 @@ module Google
       
         # Properties of a grid.
         # Corresponds to the JSON property `gridProperties`
-        # @return [Google::Apis::SheetsV4::GridProperties]
+        # @return [GoogleAPI::Apis::SheetsV4::GridProperties]
         attr_accessor :grid_properties
       
         # The ID of the sheet. Must be non-negative.
@@ -2732,7 +2732,7 @@ module Google
         # `;
         # // ...
         # Corresponds to the JSON property `tabColor`
-        # @return [Google::Apis::SheetsV4::Color]
+        # @return [GoogleAPI::Apis::SheetsV4::Color]
         attr_accessor :tab_color
       
         # The type of sheet. Defaults to GRID.
@@ -2760,12 +2760,12 @@ module Google
       
       # A protected range.
       class ProtectedRange
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of unprotected ranges within a protected sheet.
         # Unprotected ranges are only supported on protected sheets.
         # Corresponds to the JSON property `unprotectedRanges`
-        # @return [Array<Google::Apis::SheetsV4::GridRange>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::GridRange>]
         attr_accessor :unprotected_ranges
       
         # The description of this protected range.
@@ -2790,7 +2790,7 @@ module Google
       
         # The editors of a protected range.
         # Corresponds to the JSON property `editors`
-        # @return [Google::Apis::SheetsV4::Editors]
+        # @return [GoogleAPI::Apis::SheetsV4::Editors]
         attr_accessor :editors
       
         # The ID of the protected range.
@@ -2835,7 +2835,7 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :range
       
         def initialize(**args)
@@ -2858,7 +2858,7 @@ module Google
       # Deletes a conditional format rule at the given index.
       # All subsequent rules' indexes are decremented.
       class DeleteConditionalFormatRuleRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The sheet the rule is being deleted from.
         # Corresponds to the JSON property `sheetId`
@@ -2883,7 +2883,7 @@ module Google
       
       # The specifications of a chart.
       class ChartSpec
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Determines how the charts will use hidden rows or columns.
         # Corresponds to the JSON property `hiddenDimensionStrategy`
@@ -2893,7 +2893,7 @@ module Google
         # The specification for a basic chart.  See BasicChartType for the list
         # of charts this supports.
         # Corresponds to the JSON property `basicChart`
-        # @return [Google::Apis::SheetsV4::BasicChartSpec]
+        # @return [GoogleAPI::Apis::SheetsV4::BasicChartSpec]
         attr_accessor :basic_chart
       
         # The title of the chart.
@@ -2903,7 +2903,7 @@ module Google
       
         # A <a href="/chart/interactive/docs/gallery/piechart">pie chart</a>.
         # Corresponds to the JSON property `pieChart`
-        # @return [Google::Apis::SheetsV4::PieChartSpec]
+        # @return [GoogleAPI::Apis::SheetsV4::PieChartSpec]
         attr_accessor :pie_chart
       
         def initialize(**args)
@@ -2921,7 +2921,7 @@ module Google
       
       # A combination of a source range and how to extend that source.
       class SourceAndDestination
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A range on a sheet.
         # All indexes are zero-based.
@@ -2946,7 +2946,7 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `source`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :source
       
         # The number of rows or columns that data should be filled into.
@@ -2976,7 +2976,7 @@ module Google
       
       # The value of the condition.
       class ConditionValue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A relative date (based on the current date).
         # Valid only if the type is
@@ -3011,7 +3011,7 @@ module Google
       
       # Inserts data into the spreadsheet starting at the specified coordinate.
       class PasteDataRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The data to insert.
         # Corresponds to the JSON property `data`
@@ -3021,7 +3021,7 @@ module Google
         # A coordinate in a sheet.
         # All indexes are zero-based.
         # Corresponds to the JSON property `coordinate`
-        # @return [Google::Apis::SheetsV4::GridCoordinate]
+        # @return [GoogleAPI::Apis::SheetsV4::GridCoordinate]
         attr_accessor :coordinate
       
         # The delimiter in the data.
@@ -3056,7 +3056,7 @@ module Google
       
       # Finds and replaces data in cells over a range, sheet, or all sheets.
       class FindReplaceRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The value to search.
         # Corresponds to the JSON property `find`
@@ -3128,7 +3128,7 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :range
       
         # True if the find value should match the entire cell.
@@ -3157,7 +3157,7 @@ module Google
       
       # A sort order associated with a specific column or row.
       class SortSpec
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The order data should be sorted.
         # Corresponds to the JSON property `sortOrder`
@@ -3182,7 +3182,7 @@ module Google
       
       # The request to copy a sheet across spreadsheets.
       class CopySheetToAnotherSpreadsheetRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the spreadsheet to copy the sheet to.
         # Corresponds to the JSON property `destinationSpreadsheetId`
@@ -3201,7 +3201,7 @@ module Google
       
       # The number format of a cell.
       class NumberFormat
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Pattern string used for formatting.  If not set, a default pattern based on
         # the user's locale will be used if necessary for the given type.
@@ -3228,7 +3228,7 @@ module Google
       
       # Updates properties of dimensions within the specified range.
       class UpdateDimensionPropertiesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The fields that should be updated.  At least one field must be specified.
         # The root `properties` is implied and should not be specified.
@@ -3243,12 +3243,12 @@ module Google
         # and the end index is exclusive.
         # Missing indexes indicate the range is unbounded on that side.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::SheetsV4::DimensionRange]
+        # @return [GoogleAPI::Apis::SheetsV4::DimensionRange]
         attr_accessor :range
       
         # Properties about a dimension.
         # Corresponds to the JSON property `properties`
-        # @return [Google::Apis::SheetsV4::DimensionProperties]
+        # @return [GoogleAPI::Apis::SheetsV4::DimensionProperties]
         attr_accessor :properties
       
         def initialize(**args)
@@ -3265,7 +3265,7 @@ module Google
       
       # The editors of a protected range.
       class Editors
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The email addresses of users with edit access to the protected range.
         # Corresponds to the JSON property `users`
@@ -3298,7 +3298,7 @@ module Google
       
       # Resource that represents a spreadsheet.
       class Spreadsheet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the spreadsheet.
         # This field is read-only.
@@ -3308,17 +3308,17 @@ module Google
       
         # Properties of a spreadsheet.
         # Corresponds to the JSON property `properties`
-        # @return [Google::Apis::SheetsV4::SpreadsheetProperties]
+        # @return [GoogleAPI::Apis::SheetsV4::SpreadsheetProperties]
         attr_accessor :properties
       
         # The sheets that are part of a spreadsheet.
         # Corresponds to the JSON property `sheets`
-        # @return [Array<Google::Apis::SheetsV4::Sheet>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::Sheet>]
         attr_accessor :sheets
       
         # The named ranges defined in a spreadsheet.
         # Corresponds to the JSON property `namedRanges`
-        # @return [Array<Google::Apis::SheetsV4::NamedRange>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::NamedRange>]
         attr_accessor :named_ranges
       
         def initialize(**args)
@@ -3336,12 +3336,12 @@ module Google
       
       # Data in the grid, as well as metadata about the dimensions.
       class GridData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Metadata about the requested columns in the grid, starting with the column
         # in start_column.
         # Corresponds to the JSON property `columnMetadata`
-        # @return [Array<Google::Apis::SheetsV4::DimensionProperties>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::DimensionProperties>]
         attr_accessor :column_metadata
       
         # The data in the grid, one entry per row,
@@ -3349,7 +3349,7 @@ module Google
         # The values in RowData will correspond to columns starting
         # at start_column.
         # Corresponds to the JSON property `rowData`
-        # @return [Array<Google::Apis::SheetsV4::RowData>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::RowData>]
         attr_accessor :row_data
       
         # The first row this GridData refers to, zero-based.
@@ -3360,7 +3360,7 @@ module Google
         # Metadata about the requested rows in the grid, starting with the row
         # in start_row.
         # Corresponds to the JSON property `rowMetadata`
-        # @return [Array<Google::Apis::SheetsV4::DimensionProperties>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::DimensionProperties>]
         attr_accessor :row_metadata
       
         # The first column this GridData refers to, zero-based.
@@ -3384,7 +3384,7 @@ module Google
       
       # The definition of how a value in a pivot table should be calculated.
       class PivotValue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A custom formula to calculate the value.  The formula must start
         # with an `=` character.
@@ -3431,13 +3431,13 @@ module Google
       
       # The default filter associated with a sheet.
       class BasicFilter
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The criteria for showing/hiding values per column.
         # The map's key is the column index, and the value is the criteria for
         # that column.
         # Corresponds to the JSON property `criteria`
-        # @return [Hash<String,Google::Apis::SheetsV4::FilterCriteria>]
+        # @return [Hash<String,GoogleAPI::Apis::SheetsV4::FilterCriteria>]
         attr_accessor :criteria
       
         # A range on a sheet.
@@ -3463,13 +3463,13 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :range
       
         # The sort order per column. Later specifications are used when values
         # are equal in the earlier specifications.
         # Corresponds to the JSON property `sortSpecs`
-        # @return [Array<Google::Apis::SheetsV4::SortSpec>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::SortSpec>]
         attr_accessor :sort_specs
       
         def initialize(**args)
@@ -3486,7 +3486,7 @@ module Google
       
       # Duplicates the contents of a sheet.
       class DuplicateSheetRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The sheet to duplicate.
         # Corresponds to the JSON property `sourceSheetId`
@@ -3526,11 +3526,11 @@ module Google
       
       # The result of adding a filter view.
       class AddFilterViewResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A filter view.
         # Corresponds to the JSON property `filter`
-        # @return [Google::Apis::SheetsV4::FilterView]
+        # @return [GoogleAPI::Apis::SheetsV4::FilterView]
         attr_accessor :filter
       
         def initialize(**args)
@@ -3545,11 +3545,11 @@ module Google
       
       # The result of duplicating a sheet.
       class DuplicateSheetResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Properties of a sheet.
         # Corresponds to the JSON property `properties`
-        # @return [Google::Apis::SheetsV4::SheetProperties]
+        # @return [GoogleAPI::Apis::SheetsV4::SheetProperties]
         attr_accessor :properties
       
         def initialize(**args)
@@ -3564,7 +3564,7 @@ module Google
       
       # A border along a cell.
       class Border
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The style of the border.
         # Corresponds to the JSON property `style`
@@ -3677,7 +3677,7 @@ module Google
         # `;
         # // ...
         # Corresponds to the JSON property `color`
-        # @return [Google::Apis::SheetsV4::Color]
+        # @return [GoogleAPI::Apis::SheetsV4::Color]
         attr_accessor :color
       
         def initialize(**args)
@@ -3694,11 +3694,11 @@ module Google
       
       # Adds a named range to the spreadsheet.
       class AddNamedRangeRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A named range.
         # Corresponds to the JSON property `namedRange`
-        # @return [Google::Apis::SheetsV4::NamedRange]
+        # @return [GoogleAPI::Apis::SheetsV4::NamedRange]
         attr_accessor :named_range
       
         def initialize(**args)
@@ -3713,11 +3713,11 @@ module Google
       
       # The result of adding a chart to a spreadsheet.
       class AddChartResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A chart embedded in a sheet.
         # Corresponds to the JSON property `chart`
-        # @return [Google::Apis::SheetsV4::EmbeddedChart]
+        # @return [GoogleAPI::Apis::SheetsV4::EmbeddedChart]
         attr_accessor :chart
       
         def initialize(**args)
@@ -3733,7 +3733,7 @@ module Google
       # Adds new cells after the last row with data in a sheet,
       # inserting new rows into the sheet if necessary.
       class AppendCellsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The sheet ID to append the data to.
         # Corresponds to the JSON property `sheetId`
@@ -3742,7 +3742,7 @@ module Google
       
         # The data to append.
         # Corresponds to the JSON property `rows`
-        # @return [Array<Google::Apis::SheetsV4::RowData>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::RowData>]
         attr_accessor :rows
       
         # The fields of CellData that should be updated.
@@ -3767,11 +3767,11 @@ module Google
       
       # Data about each cell in a row.
       class RowData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The values in the row, one per column.
         # Corresponds to the JSON property `values`
-        # @return [Array<Google::Apis::SheetsV4::CellData>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::CellData>]
         attr_accessor :values
       
         def initialize(**args)
@@ -3788,11 +3788,11 @@ module Google
       # For example, if charting stock prices over time, multiple series may exist,
       # one for the "Open Price", "High Price", "Low Price" and "Close Price".
       class BasicChartSeries
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The data included in a domain or series.
         # Corresponds to the JSON property `series`
-        # @return [Google::Apis::SheetsV4::ChartData]
+        # @return [GoogleAPI::Apis::SheetsV4::ChartData]
         attr_accessor :series
       
         # The minor axis that will specify the range of values for this series.
@@ -3840,11 +3840,11 @@ module Google
       # For example, use the formula `=$A$1` to prevent both the row and the
       # column from incrementing.
       class RepeatCellRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Data about a specific cell.
         # Corresponds to the JSON property `cell`
-        # @return [Google::Apis::SheetsV4::CellData]
+        # @return [GoogleAPI::Apis::SheetsV4::CellData]
         attr_accessor :cell
       
         # The fields that should be updated.  At least one field must be specified.
@@ -3877,7 +3877,7 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :range
       
         def initialize(**args)
@@ -3895,7 +3895,7 @@ module Google
       # The specification for a basic chart.  See BasicChartType for the list
       # of charts this supports.
       class BasicChartSpec
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of the chart.
         # Corresponds to the JSON property `chartType`
@@ -3905,7 +3905,7 @@ module Google
         # The domain of data this is charting.
         # Only a single domain is currently supported.
         # Corresponds to the JSON property `domains`
-        # @return [Array<Google::Apis::SheetsV4::BasicChartDomain>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::BasicChartDomain>]
         attr_accessor :domains
       
         # The number of rows or columns in the data that are "headers".
@@ -3919,7 +3919,7 @@ module Google
       
         # The data this chart is visualizing.
         # Corresponds to the JSON property `series`
-        # @return [Array<Google::Apis::SheetsV4::BasicChartSeries>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::BasicChartSeries>]
         attr_accessor :series
       
         # The position of the chart legend.
@@ -3929,7 +3929,7 @@ module Google
       
         # The axis on the chart.
         # Corresponds to the JSON property `axis`
-        # @return [Array<Google::Apis::SheetsV4::BasicChartAxis>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::BasicChartAxis>]
         attr_accessor :axis
       
         def initialize(**args)
@@ -3949,7 +3949,7 @@ module Google
       
       # A named range.
       class NamedRange
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the named range.
         # Corresponds to the JSON property `namedRangeId`
@@ -3979,7 +3979,7 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :range
       
         # The name of the named range.
@@ -4001,11 +4001,11 @@ module Google
       
       # Sets the basic filter associated with a sheet.
       class SetBasicFilterRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The default filter associated with a sheet.
         # Corresponds to the JSON property `filter`
-        # @return [Google::Apis::SheetsV4::BasicFilter]
+        # @return [GoogleAPI::Apis::SheetsV4::BasicFilter]
         attr_accessor :filter
       
         def initialize(**args)
@@ -4021,11 +4021,11 @@ module Google
       # Update an embedded object's position (such as a moving or resizing a
       # chart or image).
       class UpdateEmbeddedObjectPositionRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The position of an embedded object such as a chart.
         # Corresponds to the JSON property `newPosition`
-        # @return [Google::Apis::SheetsV4::EmbeddedObjectPosition]
+        # @return [GoogleAPI::Apis::SheetsV4::EmbeddedObjectPosition]
         attr_accessor :new_position
       
         # The ID of the object to moved.
@@ -4059,7 +4059,7 @@ module Google
       # Automatically resizes one or more dimensions based on the contents
       # of the cells in that dimension.
       class AutoResizeDimensionsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A range along a single dimension on a sheet.
         # All indexes are zero-based.
@@ -4067,7 +4067,7 @@ module Google
         # and the end index is exclusive.
         # Missing indexes indicate the range is unbounded on that side.
         # Corresponds to the JSON property `dimensions`
-        # @return [Google::Apis::SheetsV4::DimensionRange]
+        # @return [GoogleAPI::Apis::SheetsV4::DimensionRange]
         attr_accessor :dimensions
       
         def initialize(**args)
@@ -4082,11 +4082,11 @@ module Google
       
       # The result of a filter view being duplicated.
       class DuplicateFilterViewResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A filter view.
         # Corresponds to the JSON property `filter`
-        # @return [Google::Apis::SheetsV4::FilterView]
+        # @return [GoogleAPI::Apis::SheetsV4::FilterView]
         attr_accessor :filter
       
         def initialize(**args)
@@ -4101,7 +4101,7 @@ module Google
       
       # A single grouping (either row or column) in a pivot table.
       class PivotGroup
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The order the values in this group should be sorted.
         # Corresponds to the JSON property `sortOrder`
@@ -4124,12 +4124,12 @@ module Google
       
         # Information about which values in a pivot group should be used for sorting.
         # Corresponds to the JSON property `valueBucket`
-        # @return [Google::Apis::SheetsV4::PivotGroupSortValueBucket]
+        # @return [GoogleAPI::Apis::SheetsV4::PivotGroupSortValueBucket]
         attr_accessor :value_bucket
       
         # Metadata about values in the grouping.
         # Corresponds to the JSON property `valueMetadata`
-        # @return [Array<Google::Apis::SheetsV4::PivotGroupValueMetadata>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::PivotGroupValueMetadata>]
         attr_accessor :value_metadata
       
         def initialize(**args)
@@ -4169,7 +4169,7 @@ module Google
       # Empty ranges are typically not meaningful and are usually rendered in the
       # UI as `#REF!`.
       class GridRange
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The sheet this range is on.
         # Corresponds to the JSON property `sheetId`
@@ -4212,7 +4212,7 @@ module Google
       
       # Deletes the requested sheet.
       class DeleteSheetRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the sheet to delete.
         # Corresponds to the JSON property `sheetId`
@@ -4231,11 +4231,11 @@ module Google
       
       # The data included in a domain or series.
       class ChartData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Source ranges for a chart.
         # Corresponds to the JSON property `sourceRange`
-        # @return [Google::Apis::SheetsV4::ChartSourceRange]
+        # @return [GoogleAPI::Apis::SheetsV4::ChartSourceRange]
         attr_accessor :source_range
       
         def initialize(**args)
@@ -4250,41 +4250,41 @@ module Google
       
       # A sheet in a spreadsheet.
       class Sheet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Properties of a sheet.
         # Corresponds to the JSON property `properties`
-        # @return [Google::Apis::SheetsV4::SheetProperties]
+        # @return [GoogleAPI::Apis::SheetsV4::SheetProperties]
         attr_accessor :properties
       
         # The specifications of every chart on this sheet.
         # Corresponds to the JSON property `charts`
-        # @return [Array<Google::Apis::SheetsV4::EmbeddedChart>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::EmbeddedChart>]
         attr_accessor :charts
       
         # The filter views in this sheet.
         # Corresponds to the JSON property `filterViews`
-        # @return [Array<Google::Apis::SheetsV4::FilterView>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::FilterView>]
         attr_accessor :filter_views
       
         # The conditional format rules in this sheet.
         # Corresponds to the JSON property `conditionalFormats`
-        # @return [Array<Google::Apis::SheetsV4::ConditionalFormatRule>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::ConditionalFormatRule>]
         attr_accessor :conditional_formats
       
         # The protected ranges in this sheet.
         # Corresponds to the JSON property `protectedRanges`
-        # @return [Array<Google::Apis::SheetsV4::ProtectedRange>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::ProtectedRange>]
         attr_accessor :protected_ranges
       
         # The default filter associated with a sheet.
         # Corresponds to the JSON property `basicFilter`
-        # @return [Google::Apis::SheetsV4::BasicFilter]
+        # @return [GoogleAPI::Apis::SheetsV4::BasicFilter]
         attr_accessor :basic_filter
       
         # The ranges that are merged together.
         # Corresponds to the JSON property `merges`
-        # @return [Array<Google::Apis::SheetsV4::GridRange>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::GridRange>]
         attr_accessor :merges
       
         # Data in the grid, if this is a grid sheet.
@@ -4296,7 +4296,7 @@ module Google
         # while the second one will have `startRow 14` (zero-based row 15),
         # and `startColumn 3` (zero-based column D).
         # Corresponds to the JSON property `data`
-        # @return [Array<Google::Apis::SheetsV4::GridData>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::GridData>]
         attr_accessor :data
       
         def initialize(**args)
@@ -4318,7 +4318,7 @@ module Google
       
       # Copies data from the source to the destination.
       class CopyPasteRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # What kind of data to paste.
         # Corresponds to the JSON property `pasteType`
@@ -4353,7 +4353,7 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `source`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :source
       
         # A range on a sheet.
@@ -4379,7 +4379,7 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `destination`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :destination
       
         def initialize(**args)
@@ -4397,11 +4397,11 @@ module Google
       
       # Updates all cells in a range with new data.
       class UpdateCellsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The data to write.
         # Corresponds to the JSON property `rows`
-        # @return [Array<Google::Apis::SheetsV4::RowData>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::RowData>]
         attr_accessor :rows
       
         # The fields of CellData that should be updated.
@@ -4415,7 +4415,7 @@ module Google
         # A coordinate in a sheet.
         # All indexes are zero-based.
         # Corresponds to the JSON property `start`
-        # @return [Google::Apis::SheetsV4::GridCoordinate]
+        # @return [GoogleAPI::Apis::SheetsV4::GridCoordinate]
         attr_accessor :start
       
         # A range on a sheet.
@@ -4441,7 +4441,7 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :range
       
         def initialize(**args)
@@ -4459,7 +4459,7 @@ module Google
       
       # The kinds of value that a cell in a spreadsheet can have.
       class ExtendedValue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Represents a formula.
         # Corresponds to the JSON property `formulaValue`
@@ -4468,7 +4468,7 @@ module Google
       
         # An error in a cell.
         # Corresponds to the JSON property `errorValue`
-        # @return [Google::Apis::SheetsV4::ErrorValue]
+        # @return [GoogleAPI::Apis::SheetsV4::ErrorValue]
         attr_accessor :error_value
       
         # Represents a boolean value.
@@ -4508,7 +4508,7 @@ module Google
       
       # The reply for batch updating a spreadsheet.
       class BatchUpdateSpreadsheetResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The spreadsheet the updates were applied to.
         # Corresponds to the JSON property `spreadsheetId`
@@ -4518,7 +4518,7 @@ module Google
         # The reply of the updates.  This maps 1:1 with the updates, although
         # replies to some requests may be empty.
         # Corresponds to the JSON property `replies`
-        # @return [Array<Google::Apis::SheetsV4::Response>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::Response>]
         attr_accessor :replies
       
         def initialize(**args)
@@ -4537,27 +4537,27 @@ module Google
       # based on its contents as compared to the values of the interpolation
       # points.
       class GradientRule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A single interpolation point on a gradient conditional format.
         # These pin the gradient color scale according to the color,
         # type and value chosen.
         # Corresponds to the JSON property `maxpoint`
-        # @return [Google::Apis::SheetsV4::InterpolationPoint]
+        # @return [GoogleAPI::Apis::SheetsV4::InterpolationPoint]
         attr_accessor :maxpoint
       
         # A single interpolation point on a gradient conditional format.
         # These pin the gradient color scale according to the color,
         # type and value chosen.
         # Corresponds to the JSON property `midpoint`
-        # @return [Google::Apis::SheetsV4::InterpolationPoint]
+        # @return [GoogleAPI::Apis::SheetsV4::InterpolationPoint]
         attr_accessor :midpoint
       
         # A single interpolation point on a gradient conditional format.
         # These pin the gradient color scale according to the color,
         # type and value chosen.
         # Corresponds to the JSON property `minpoint`
-        # @return [Google::Apis::SheetsV4::InterpolationPoint]
+        # @return [GoogleAPI::Apis::SheetsV4::InterpolationPoint]
         attr_accessor :minpoint
       
         def initialize(**args)
@@ -4574,7 +4574,7 @@ module Google
       
       # Moves data from the source to the destination.
       class CutPasteRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # What kind of data to paste.  All the source data will be cut, regardless
         # of what is pasted.
@@ -4605,13 +4605,13 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `source`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :source
       
         # A coordinate in a sheet.
         # All indexes are zero-based.
         # Corresponds to the JSON property `destination`
-        # @return [Google::Apis::SheetsV4::GridCoordinate]
+        # @return [GoogleAPI::Apis::SheetsV4::GridCoordinate]
         attr_accessor :destination
       
         def initialize(**args)
@@ -4628,7 +4628,7 @@ module Google
       
       # The location an object is overlaid on top of a grid.
       class OverlayPosition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The width of the object, in pixels. Defaults to 600.
         # Corresponds to the JSON property `widthPixels`
@@ -4638,7 +4638,7 @@ module Google
         # A coordinate in a sheet.
         # All indexes are zero-based.
         # Corresponds to the JSON property `anchorCell`
-        # @return [Google::Apis::SheetsV4::GridCoordinate]
+        # @return [GoogleAPI::Apis::SheetsV4::GridCoordinate]
         attr_accessor :anchor_cell
       
         # The horizontal offset, in pixels, that the object is offset
@@ -4674,7 +4674,7 @@ module Google
       
       # Fills in more data based on existing data.
       class AutoFillRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # True if we should generate data with the "alternate" series.
         # This differs based on the type and amount of source data.
@@ -4706,12 +4706,12 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :range
       
         # A combination of a source range and how to extend that source.
         # Corresponds to the JSON property `sourceAndDestination`
-        # @return [Google::Apis::SheetsV4::SourceAndDestination]
+        # @return [GoogleAPI::Apis::SheetsV4::SourceAndDestination]
         attr_accessor :source_and_destination
       
         def initialize(**args)
@@ -4728,7 +4728,7 @@ module Google
       
       # A <a href="/chart/interactive/docs/gallery/piechart">pie chart</a>.
       class PieChartSpec
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Where the legend of the pie chart should be drawn.
         # Corresponds to the JSON property `legendPosition`
@@ -4737,7 +4737,7 @@ module Google
       
         # The data included in a domain or series.
         # Corresponds to the JSON property `series`
-        # @return [Google::Apis::SheetsV4::ChartData]
+        # @return [GoogleAPI::Apis::SheetsV4::ChartData]
         attr_accessor :series
       
         # The size of the hole in the pie chart.
@@ -4753,7 +4753,7 @@ module Google
       
         # The data included in a domain or series.
         # Corresponds to the JSON property `domain`
-        # @return [Google::Apis::SheetsV4::ChartData]
+        # @return [GoogleAPI::Apis::SheetsV4::ChartData]
         attr_accessor :domain
       
         def initialize(**args)
@@ -4773,7 +4773,7 @@ module Google
       # Updates properties of the sheet with the specified
       # sheetId.
       class UpdateSheetPropertiesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The fields that should be updated.  At least one field must be specified.
         # The root `properties` is implied and should not be specified.
@@ -4784,7 +4784,7 @@ module Google
       
         # Properties of a sheet.
         # Corresponds to the JSON property `properties`
-        # @return [Google::Apis::SheetsV4::SheetProperties]
+        # @return [GoogleAPI::Apis::SheetsV4::SheetProperties]
         attr_accessor :properties
       
         def initialize(**args)
@@ -4800,18 +4800,18 @@ module Google
       
       # A rule that may or may not match, depending on the condition.
       class BooleanRule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A condition that can evaluate to true or false.
         # BooleanConditions are used by conditional formatting,
         # data validation, and the criteria in filters.
         # Corresponds to the JSON property `condition`
-        # @return [Google::Apis::SheetsV4::BooleanCondition]
+        # @return [GoogleAPI::Apis::SheetsV4::BooleanCondition]
         attr_accessor :condition
       
         # The format of a cell.
         # Corresponds to the JSON property `format`
-        # @return [Google::Apis::SheetsV4::CellFormat]
+        # @return [GoogleAPI::Apis::SheetsV4::CellFormat]
         attr_accessor :format
       
         def initialize(**args)
@@ -4827,7 +4827,7 @@ module Google
       
       # Appends rows or columns to the end of a sheet.
       class AppendDimensionRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The sheet to append rows or columns to.
         # Corresponds to the JSON property `sheetId`
@@ -4858,11 +4858,11 @@ module Google
       
       # Adds a filter view.
       class AddFilterViewRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A filter view.
         # Corresponds to the JSON property `filter`
-        # @return [Google::Apis::SheetsV4::FilterView]
+        # @return [GoogleAPI::Apis::SheetsV4::FilterView]
         attr_accessor :filter
       
         def initialize(**args)
@@ -4877,7 +4877,7 @@ module Google
       
       # Properties of a grid.
       class GridProperties
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of rows in the grid.
         # Corresponds to the JSON property `rowCount`
@@ -4921,7 +4921,7 @@ module Google
       
       # Removes the named range with the given ID from the spreadsheet.
       class DeleteNamedRangeRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the named range to delete.
         # Corresponds to the JSON property `namedRangeId`
@@ -4940,11 +4940,11 @@ module Google
       
       # Adds a chart to a sheet in the spreadsheet.
       class AddChartRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A chart embedded in a sheet.
         # Corresponds to the JSON property `chart`
-        # @return [Google::Apis::SheetsV4::EmbeddedChart]
+        # @return [GoogleAPI::Apis::SheetsV4::EmbeddedChart]
         attr_accessor :chart
       
         def initialize(**args)
@@ -4960,11 +4960,11 @@ module Google
       # Sets a data validation rule to every cell in the range.
       # To clear validation in a range, call this with no rule specified.
       class SetDataValidationRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A data validation rule.
         # Corresponds to the JSON property `rule`
-        # @return [Google::Apis::SheetsV4::DataValidationRule]
+        # @return [GoogleAPI::Apis::SheetsV4::DataValidationRule]
         attr_accessor :rule
       
         # A range on a sheet.
@@ -4990,7 +4990,7 @@ module Google
         # Empty ranges are typically not meaningful and are usually rendered in the
         # UI as `#REF!`.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::SheetsV4::GridRange]
+        # @return [GoogleAPI::Apis::SheetsV4::GridRange]
         attr_accessor :range
       
         def initialize(**args)
@@ -5006,64 +5006,64 @@ module Google
       
       # A single kind of update to apply to a spreadsheet.
       class Request
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Update an embedded object's position (such as a moving or resizing a
         # chart or image).
         # Corresponds to the JSON property `updateEmbeddedObjectPosition`
-        # @return [Google::Apis::SheetsV4::UpdateEmbeddedObjectPositionRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::UpdateEmbeddedObjectPositionRequest]
         attr_accessor :update_embedded_object_position
       
         # Removes the named range with the given ID from the spreadsheet.
         # Corresponds to the JSON property `deleteNamedRange`
-        # @return [Google::Apis::SheetsV4::DeleteNamedRangeRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::DeleteNamedRangeRequest]
         attr_accessor :delete_named_range
       
         # Updates properties of the named range with the specified
         # namedRangeId.
         # Corresponds to the JSON property `updateNamedRange`
-        # @return [Google::Apis::SheetsV4::UpdateNamedRangeRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::UpdateNamedRangeRequest]
         attr_accessor :update_named_range
       
         # Adds a filter view.
         # Corresponds to the JSON property `addFilterView`
-        # @return [Google::Apis::SheetsV4::AddFilterViewRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::AddFilterViewRequest]
         attr_accessor :add_filter_view
       
         # Updates properties of a spreadsheet.
         # Corresponds to the JSON property `updateSpreadsheetProperties`
-        # @return [Google::Apis::SheetsV4::UpdateSpreadsheetPropertiesRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::UpdateSpreadsheetPropertiesRequest]
         attr_accessor :update_spreadsheet_properties
       
         # Appends rows or columns to the end of a sheet.
         # Corresponds to the JSON property `appendDimension`
-        # @return [Google::Apis::SheetsV4::AppendDimensionRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::AppendDimensionRequest]
         attr_accessor :append_dimension
       
         # Unmerges cells in the given range.
         # Corresponds to the JSON property `unmergeCells`
-        # @return [Google::Apis::SheetsV4::UnmergeCellsRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::UnmergeCellsRequest]
         attr_accessor :unmerge_cells
       
         # Updates an existing protected range with the specified
         # protectedRangeId.
         # Corresponds to the JSON property `updateProtectedRange`
-        # @return [Google::Apis::SheetsV4::UpdateProtectedRangeRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::UpdateProtectedRangeRequest]
         attr_accessor :update_protected_range
       
         # Deletes a particular filter view.
         # Corresponds to the JSON property `deleteFilterView`
-        # @return [Google::Apis::SheetsV4::DeleteFilterViewRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::DeleteFilterViewRequest]
         attr_accessor :delete_filter_view
       
         # Clears the basic filter, if any exists on the sheet.
         # Corresponds to the JSON property `clearBasicFilter`
-        # @return [Google::Apis::SheetsV4::ClearBasicFilterRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::ClearBasicFilterRequest]
         attr_accessor :clear_basic_filter
       
         # Sorts data in rows based on a sort order per column.
         # Corresponds to the JSON property `sortRange`
-        # @return [Google::Apis::SheetsV4::SortRangeRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::SortRangeRequest]
         attr_accessor :sort_range
       
         # Updates all cells in the range to the values in the given Cell object.
@@ -5078,18 +5078,18 @@ module Google
         # For example, use the formula `=$A$1` to prevent both the row and the
         # column from incrementing.
         # Corresponds to the JSON property `repeatCell`
-        # @return [Google::Apis::SheetsV4::RepeatCellRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::RepeatCellRequest]
         attr_accessor :repeat_cell
       
         # Sets a data validation rule to every cell in the range.
         # To clear validation in a range, call this with no rule specified.
         # Corresponds to the JSON property `setDataValidation`
-        # @return [Google::Apis::SheetsV4::SetDataValidationRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::SetDataValidationRequest]
         attr_accessor :set_data_validation
       
         # Updates all cells in a range with new data.
         # Corresponds to the JSON property `updateCells`
-        # @return [Google::Apis::SheetsV4::UpdateCellsRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::UpdateCellsRequest]
         attr_accessor :update_cells
       
         # Adds a new sheet.
@@ -5099,98 +5099,98 @@ module Google
         # EmbeddedObjectPosition.sheetId or
         # EmbeddedObjectPosition.newSheet.
         # Corresponds to the JSON property `addSheet`
-        # @return [Google::Apis::SheetsV4::AddSheetRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::AddSheetRequest]
         attr_accessor :add_sheet
       
         # Updates properties of the filter view.
         # Corresponds to the JSON property `updateFilterView`
-        # @return [Google::Apis::SheetsV4::UpdateFilterViewRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::UpdateFilterViewRequest]
         attr_accessor :update_filter_view
       
         # Updates properties of the sheet with the specified
         # sheetId.
         # Corresponds to the JSON property `updateSheetProperties`
-        # @return [Google::Apis::SheetsV4::UpdateSheetPropertiesRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::UpdateSheetPropertiesRequest]
         attr_accessor :update_sheet_properties
       
         # Updates properties of dimensions within the specified range.
         # Corresponds to the JSON property `updateDimensionProperties`
-        # @return [Google::Apis::SheetsV4::UpdateDimensionPropertiesRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::UpdateDimensionPropertiesRequest]
         attr_accessor :update_dimension_properties
       
         # Deletes the requested sheet.
         # Corresponds to the JSON property `deleteSheet`
-        # @return [Google::Apis::SheetsV4::DeleteSheetRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::DeleteSheetRequest]
         attr_accessor :delete_sheet
       
         # Finds and replaces data in cells over a range, sheet, or all sheets.
         # Corresponds to the JSON property `findReplace`
-        # @return [Google::Apis::SheetsV4::FindReplaceRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::FindReplaceRequest]
         attr_accessor :find_replace
       
         # Adds a new protected range.
         # Corresponds to the JSON property `addProtectedRange`
-        # @return [Google::Apis::SheetsV4::AddProtectedRangeRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::AddProtectedRangeRequest]
         attr_accessor :add_protected_range
       
         # Deletes the protected range with the given ID.
         # Corresponds to the JSON property `deleteProtectedRange`
-        # @return [Google::Apis::SheetsV4::DeleteProtectedRangeRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::DeleteProtectedRangeRequest]
         attr_accessor :delete_protected_range
       
         # Updates a conditional format rule at the given index,
         # or moves a conditional format rule to another index.
         # Corresponds to the JSON property `updateConditionalFormatRule`
-        # @return [Google::Apis::SheetsV4::UpdateConditionalFormatRuleRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::UpdateConditionalFormatRuleRequest]
         attr_accessor :update_conditional_format_rule
       
         # Sets the basic filter associated with a sheet.
         # Corresponds to the JSON property `setBasicFilter`
-        # @return [Google::Apis::SheetsV4::SetBasicFilterRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::SetBasicFilterRequest]
         attr_accessor :set_basic_filter
       
         # Merges all cells in the range.
         # Corresponds to the JSON property `mergeCells`
-        # @return [Google::Apis::SheetsV4::MergeCellsRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::MergeCellsRequest]
         attr_accessor :merge_cells
       
         # Adds a chart to a sheet in the spreadsheet.
         # Corresponds to the JSON property `addChart`
-        # @return [Google::Apis::SheetsV4::AddChartRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::AddChartRequest]
         attr_accessor :add_chart
       
         # Deletes a conditional format rule at the given index.
         # All subsequent rules' indexes are decremented.
         # Corresponds to the JSON property `deleteConditionalFormatRule`
-        # @return [Google::Apis::SheetsV4::DeleteConditionalFormatRuleRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::DeleteConditionalFormatRuleRequest]
         attr_accessor :delete_conditional_format_rule
       
         # Updates a chart's specifications.
         # (This does not move or resize a chart. To move or resize a chart, use
         # UpdateEmbeddedObjectPositionRequest.)
         # Corresponds to the JSON property `updateChartSpec`
-        # @return [Google::Apis::SheetsV4::UpdateChartSpecRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::UpdateChartSpecRequest]
         attr_accessor :update_chart_spec
       
         # Deletes the dimensions from the sheet.
         # Corresponds to the JSON property `deleteDimension`
-        # @return [Google::Apis::SheetsV4::DeleteDimensionRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::DeleteDimensionRequest]
         attr_accessor :delete_dimension
       
         # Deletes the embedded object with the given ID.
         # Corresponds to the JSON property `deleteEmbeddedObject`
-        # @return [Google::Apis::SheetsV4::DeleteEmbeddedObjectRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::DeleteEmbeddedObjectRequest]
         attr_accessor :delete_embedded_object
       
         # Inserts data into the spreadsheet starting at the specified coordinate.
         # Corresponds to the JSON property `pasteData`
-        # @return [Google::Apis::SheetsV4::PasteDataRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::PasteDataRequest]
         attr_accessor :paste_data
       
         # Adds a new conditional format rule at the given index.
         # All subsequent rules' indexes are incremented.
         # Corresponds to the JSON property `addConditionalFormatRule`
-        # @return [Google::Apis::SheetsV4::AddConditionalFormatRuleRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::AddConditionalFormatRuleRequest]
         attr_accessor :add_conditional_format_rule
       
         # Updates the borders of a range.
@@ -5203,65 +5203,65 @@ module Google
         # If you want to clear a border, explicitly set the style to
         # NONE.
         # Corresponds to the JSON property `updateBorders`
-        # @return [Google::Apis::SheetsV4::UpdateBordersRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::UpdateBordersRequest]
         attr_accessor :update_borders
       
         # Automatically resizes one or more dimensions based on the contents
         # of the cells in that dimension.
         # Corresponds to the JSON property `autoResizeDimensions`
-        # @return [Google::Apis::SheetsV4::AutoResizeDimensionsRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::AutoResizeDimensionsRequest]
         attr_accessor :auto_resize_dimensions
       
         # Duplicates the contents of a sheet.
         # Corresponds to the JSON property `duplicateSheet`
-        # @return [Google::Apis::SheetsV4::DuplicateSheetRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::DuplicateSheetRequest]
         attr_accessor :duplicate_sheet
       
         # Duplicates a particular filter view.
         # Corresponds to the JSON property `duplicateFilterView`
-        # @return [Google::Apis::SheetsV4::DuplicateFilterViewRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::DuplicateFilterViewRequest]
         attr_accessor :duplicate_filter_view
       
         # Moves data from the source to the destination.
         # Corresponds to the JSON property `cutPaste`
-        # @return [Google::Apis::SheetsV4::CutPasteRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::CutPasteRequest]
         attr_accessor :cut_paste
       
         # Adds new cells after the last row with data in a sheet,
         # inserting new rows into the sheet if necessary.
         # Corresponds to the JSON property `appendCells`
-        # @return [Google::Apis::SheetsV4::AppendCellsRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::AppendCellsRequest]
         attr_accessor :append_cells
       
         # Adds a named range to the spreadsheet.
         # Corresponds to the JSON property `addNamedRange`
-        # @return [Google::Apis::SheetsV4::AddNamedRangeRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::AddNamedRangeRequest]
         attr_accessor :add_named_range
       
         # Fills in more data based on existing data.
         # Corresponds to the JSON property `autoFill`
-        # @return [Google::Apis::SheetsV4::AutoFillRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::AutoFillRequest]
         attr_accessor :auto_fill
       
         # Moves one or more rows or columns.
         # Corresponds to the JSON property `moveDimension`
-        # @return [Google::Apis::SheetsV4::MoveDimensionRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::MoveDimensionRequest]
         attr_accessor :move_dimension
       
         # Splits a column of text into multiple columns,
         # based on a delimiter in each cell.
         # Corresponds to the JSON property `textToColumns`
-        # @return [Google::Apis::SheetsV4::TextToColumnsRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::TextToColumnsRequest]
         attr_accessor :text_to_columns
       
         # Inserts rows or columns in a sheet at a particular index.
         # Corresponds to the JSON property `insertDimension`
-        # @return [Google::Apis::SheetsV4::InsertDimensionRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::InsertDimensionRequest]
         attr_accessor :insert_dimension
       
         # Copies data from the source to the destination.
         # Corresponds to the JSON property `copyPaste`
-        # @return [Google::Apis::SheetsV4::CopyPasteRequest]
+        # @return [GoogleAPI::Apis::SheetsV4::CopyPasteRequest]
         attr_accessor :copy_paste
       
         def initialize(**args)
@@ -5319,12 +5319,12 @@ module Google
       
       # The response when retrieving more than one range of values in a spreadsheet.
       class BatchGetValuesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The requested values. The order of the ValueRanges is the same as the
         # order of the requested ranges.
         # Corresponds to the JSON property `valueRanges`
-        # @return [Array<Google::Apis::SheetsV4::ValueRange>]
+        # @return [Array<GoogleAPI::Apis::SheetsV4::ValueRange>]
         attr_accessor :value_ranges
       
         # The ID of the spreadsheet the data was retrieved from.
@@ -5345,7 +5345,7 @@ module Google
       
       # Inserts rows or columns in a sheet at a particular index.
       class InsertDimensionRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether dimension properties should be extended from the dimensions
         # before or after the newly inserted dimensions.
@@ -5369,7 +5369,7 @@ module Google
         # and the end index is exclusive.
         # Missing indexes indicate the range is unbounded on that side.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::SheetsV4::DimensionRange]
+        # @return [GoogleAPI::Apis::SheetsV4::DimensionRange]
         attr_accessor :range
       
         def initialize(**args)
@@ -5385,7 +5385,7 @@ module Google
       
       # Deletes the embedded object with the given ID.
       class DeleteEmbeddedObjectRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the embedded object to delete.
         # Corresponds to the JSON property `objectId`
@@ -5404,11 +5404,11 @@ module Google
       
       # The result of deleting a conditional format rule.
       class DeleteConditionalFormatRuleResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A rule describing a conditional format.
         # Corresponds to the JSON property `rule`
-        # @return [Google::Apis::SheetsV4::ConditionalFormatRule]
+        # @return [GoogleAPI::Apis::SheetsV4::ConditionalFormatRule]
         attr_accessor :rule
       
         def initialize(**args)

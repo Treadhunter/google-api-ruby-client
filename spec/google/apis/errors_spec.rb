@@ -14,7 +14,7 @@
 
 require 'spec_helper'
 
-RSpec.describe Google::Apis::Error do
+RSpec.describe GoogleAPI::Apis::Error do
   describe 'constructor' do
     subject { described_class.new(error) }
 

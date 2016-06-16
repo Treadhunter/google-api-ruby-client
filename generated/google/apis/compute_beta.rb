@@ -16,7 +16,7 @@ require 'google/apis/compute_beta/service.rb'
 require 'google/apis/compute_beta/classes.rb'
 require 'google/apis/compute_beta/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Compute Engine API
     #

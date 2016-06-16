@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ContainerV1beta1
       
       # 
       class Cluster
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The API version of the Kubernetes master and kubelets running in this cluster.
         # Leave blank to pick up the latest stable release, or specify a version of the
@@ -84,7 +84,7 @@ module Google
         # The authentication information for accessing the master. Authentication is
         # either done using HTTP basic authentication or using a bearer token.
         # Corresponds to the JSON property `masterAuth`
-        # @return [Google::Apis::ContainerV1beta1::MasterAuth]
+        # @return [GoogleAPI::Apis::ContainerV1beta1::MasterAuth]
         attr_accessor :master_auth
       
         # The name of this cluster. The name must be unique within this project and zone,
@@ -105,7 +105,7 @@ module Google
         # The machine type and image to use for all nodes in this cluster. See the
         # descriptions of the child properties of nodeConfig.
         # Corresponds to the JSON property `nodeConfig`
-        # @return [Google::Apis::ContainerV1beta1::NodeConfig]
+        # @return [GoogleAPI::Apis::ContainerV1beta1::NodeConfig]
         attr_accessor :node_config
       
         # [Output only] The size of the address space on each node for hosting
@@ -181,11 +181,11 @@ module Google
       
       # 
       class CreateClusterRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A cluster resource.
         # Corresponds to the JSON property `cluster`
-        # @return [Google::Apis::ContainerV1beta1::Cluster]
+        # @return [GoogleAPI::Apis::ContainerV1beta1::Cluster]
         attr_accessor :cluster
       
         def initialize(**args)
@@ -200,11 +200,11 @@ module Google
       
       # 
       class ListAggregatedClustersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of clusters in the project, across all zones.
         # Corresponds to the JSON property `clusters`
-        # @return [Array<Google::Apis::ContainerV1beta1::Cluster>]
+        # @return [Array<GoogleAPI::Apis::ContainerV1beta1::Cluster>]
         attr_accessor :clusters
       
         def initialize(**args)
@@ -219,11 +219,11 @@ module Google
       
       # 
       class ListAggregatedOperationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of operations in the project, across all zones.
         # Corresponds to the JSON property `operations`
-        # @return [Array<Google::Apis::ContainerV1beta1::Operation>]
+        # @return [Array<GoogleAPI::Apis::ContainerV1beta1::Operation>]
         attr_accessor :operations
       
         def initialize(**args)
@@ -238,11 +238,11 @@ module Google
       
       # 
       class ListClustersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of clusters in the project in the specified zone.
         # Corresponds to the JSON property `clusters`
-        # @return [Array<Google::Apis::ContainerV1beta1::Cluster>]
+        # @return [Array<GoogleAPI::Apis::ContainerV1beta1::Cluster>]
         attr_accessor :clusters
       
         def initialize(**args)
@@ -257,11 +257,11 @@ module Google
       
       # 
       class ListOperationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of operations in the project in the specified zone.
         # Corresponds to the JSON property `operations`
-        # @return [Array<Google::Apis::ContainerV1beta1::Operation>]
+        # @return [Array<GoogleAPI::Apis::ContainerV1beta1::Operation>]
         attr_accessor :operations
       
         def initialize(**args)
@@ -277,7 +277,7 @@ module Google
       # The authentication information for accessing the master. Authentication is
       # either done using HTTP basic authentication or using a bearer token.
       class MasterAuth
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The token used to authenticate API requests to the master. The token is to be
         # included in an HTTP Authorization Header in all requests to the master
@@ -334,7 +334,7 @@ module Google
       
       # 
       class NodeConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of a Google Compute Engine machine type (e.g. n1-standard-1).
         # If unspecified, the default machine type is n1-standard-1.
@@ -349,7 +349,7 @@ module Google
         # - https://www.googleapis.com/auth/compute,
         # - https://www.googleapis.com/auth/devstorage.read_only
         # Corresponds to the JSON property `serviceAccounts`
-        # @return [Array<Google::Apis::ContainerV1beta1::ServiceAccount>]
+        # @return [Array<GoogleAPI::Apis::ContainerV1beta1::ServiceAccount>]
         attr_accessor :service_accounts
       
         # The fully-specified name of a Google Compute Engine image. For example: https:/
@@ -376,7 +376,7 @@ module Google
       
       # Defines the operation resource. All fields are output only.
       class Operation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If an error has occurred, a textual description of the error.
         # Corresponds to the JSON property `errorMessage`
@@ -439,7 +439,7 @@ module Google
       
       # A Compute Engine service account.
       class ServiceAccount
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Email address of the service account.
         # Corresponds to the JSON property `email`

@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CustomsearchV1
       # CustomSearch API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/customsearch_v1'
       #
-      #    Customsearch = Google::Apis::CustomsearchV1 # Alias the module
+      #    Customsearch = GoogleAPI::Apis::CustomsearchV1 # Alias the module
       #    service = Customsearch::CustomsearchService.new
       #
       # @see https://developers.google.com/custom-search/v1/using_rest
-      class CustomsearchService < Google::Apis::Core::BaseService
+      class CustomsearchService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -140,22 +140,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CustomsearchV1::Search] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CustomsearchV1::Search] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CustomsearchV1::Search]
+        # @return [GoogleAPI::Apis::CustomsearchV1::Search]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_cses(q, c2coff: nil, cr: nil, cref: nil, cx: nil, date_restrict: nil, exact_terms: nil, exclude_terms: nil, file_type: nil, filter: nil, gl: nil, googlehost: nil, high_range: nil, hl: nil, hq: nil, img_color_type: nil, img_dominant_color: nil, img_size: nil, img_type: nil, link_site: nil, low_range: nil, lr: nil, num: nil, or_terms: nil, related_site: nil, rights: nil, safe: nil, search_type: nil, site_search: nil, site_search_filter: nil, sort: nil, start: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1', options)
-          command.response_representation = Google::Apis::CustomsearchV1::Search::Representation
-          command.response_class = Google::Apis::CustomsearchV1::Search
+          command.response_representation = GoogleAPI::Apis::CustomsearchV1::Search::Representation
+          command.response_class = GoogleAPI::Apis::CustomsearchV1::Search
           command.query['c2coff'] = c2coff unless c2coff.nil?
           command.query['cr'] = cr unless cr.nil?
           command.query['cref'] = cref unless cref.nil?

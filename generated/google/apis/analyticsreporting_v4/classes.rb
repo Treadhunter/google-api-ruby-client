@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AnalyticsreportingV4
       
       # The headers for each of the pivot sections defined in the request.
       class PivotHeader
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The total number of groups for this pivot.
         # Corresponds to the JSON property `totalPivotGroupsCount`
@@ -33,7 +33,7 @@ module Google
       
         # A single pivot section header.
         # Corresponds to the JSON property `pivotHeaderEntries`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::PivotHeaderEntry>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::PivotHeaderEntry>]
         attr_accessor :pivot_header_entries
       
         def initialize(**args)
@@ -49,7 +49,7 @@ module Google
       
       # A metric in the request.
       class Metric
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An alias for the metric expression is an alternate name for the
         # expression. The alias can be used for filtering and sorting. This field
@@ -92,7 +92,7 @@ module Google
       
       # Column headers.
       class ColumnHeader
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The dimension names in the response.
         # Corresponds to the JSON property `dimensions`
@@ -101,7 +101,7 @@ module Google
       
         # The headers for the metrics.
         # Corresponds to the JSON property `metricHeader`
-        # @return [Google::Apis::AnalyticsreportingV4::MetricHeader]
+        # @return [GoogleAPI::Apis::AnalyticsreportingV4::MetricHeader]
         attr_accessor :metric_header
       
         def initialize(**args)
@@ -118,12 +118,12 @@ module Google
       # Dynamic segment definition for defining the segment within the request.
       # A segment can select users, sessions or both.
       class DynamicSegment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # SegmentDefinition defines the segment to be a set of SegmentFilters which
         # are combined together with a logical `AND` operation.
         # Corresponds to the JSON property `sessionSegment`
-        # @return [Google::Apis::AnalyticsreportingV4::SegmentDefinition]
+        # @return [GoogleAPI::Apis::AnalyticsreportingV4::SegmentDefinition]
         attr_accessor :session_segment
       
         # The name of the dynamic segment.
@@ -134,7 +134,7 @@ module Google
         # SegmentDefinition defines the segment to be a set of SegmentFilters which
         # are combined together with a logical `AND` operation.
         # Corresponds to the JSON property `userSegment`
-        # @return [Google::Apis::AnalyticsreportingV4::SegmentDefinition]
+        # @return [GoogleAPI::Apis::AnalyticsreportingV4::SegmentDefinition]
         attr_accessor :user_segment
       
         def initialize(**args)
@@ -151,16 +151,16 @@ module Google
       
       # The headers for the metrics.
       class MetricHeader
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Headers for the metrics in the response.
         # Corresponds to the JSON property `metricHeaderEntries`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::MetricHeaderEntry>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::MetricHeaderEntry>]
         attr_accessor :metric_header_entries
       
         # Headers for the pivots in the response.
         # Corresponds to the JSON property `pivotHeaders`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::PivotHeader>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::PivotHeader>]
         attr_accessor :pivot_headers
       
         def initialize(**args)
@@ -176,16 +176,16 @@ module Google
       
       # The data response corresponding to the request.
       class Report
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Column headers.
         # Corresponds to the JSON property `columnHeader`
-        # @return [Google::Apis::AnalyticsreportingV4::ColumnHeader]
+        # @return [GoogleAPI::Apis::AnalyticsreportingV4::ColumnHeader]
         attr_accessor :column_header
       
         # The data part of the report.
         # Corresponds to the JSON property `data`
-        # @return [Google::Apis::AnalyticsreportingV4::ReportData]
+        # @return [GoogleAPI::Apis::AnalyticsreportingV4::ReportData]
         attr_accessor :data
       
         # Page token to retrieve the next page of results in the list.
@@ -208,16 +208,16 @@ module Google
       # Filter Clause to be used in a segment definition, can be wither a metric or
       # a dimension filter.
       class SegmentFilterClause
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Dimension filter specifies the filtering options on a dimension.
         # Corresponds to the JSON property `dimensionFilter`
-        # @return [Google::Apis::AnalyticsreportingV4::SegmentDimensionFilter]
+        # @return [GoogleAPI::Apis::AnalyticsreportingV4::SegmentDimensionFilter]
         attr_accessor :dimension_filter
       
         # Metric filter to be used in a segment filter clause.
         # Corresponds to the JSON property `metricFilter`
-        # @return [Google::Apis::AnalyticsreportingV4::SegmentMetricFilter]
+        # @return [GoogleAPI::Apis::AnalyticsreportingV4::SegmentMetricFilter]
         attr_accessor :metric_filter
       
         # Matches the complement (`!`) of the filter.
@@ -240,7 +240,7 @@ module Google
       
       # Dimension filter specifies the filtering options on a dimension.
       class DimensionFilter
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The dimension to filter on. A DimensionFilter must contain a dimension.
         # Corresponds to the JSON property `dimensionName`
@@ -289,7 +289,7 @@ module Google
       
       # Dimension filter specifies the filtering options on a dimension.
       class SegmentDimensionFilter
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Maximum comparison values for `BETWEEN` match type.
         # Corresponds to the JSON property `maxComparisonValue`
@@ -339,7 +339,7 @@ module Google
       
       # The main request class which specifies the Reporting API request.
       class ReportRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Defines a cohort group.
         # For example:
@@ -355,12 +355,12 @@ module Google
         # `]
         # `
         # Corresponds to the JSON property `cohortGroup`
-        # @return [Google::Apis::AnalyticsreportingV4::CohortGroup]
+        # @return [GoogleAPI::Apis::AnalyticsreportingV4::CohortGroup]
         attr_accessor :cohort_group
       
         # Dimensions requested in the request.
         # Corresponds to the JSON property `dimensions`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::Dimension>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::Dimension>]
         attr_accessor :dimensions
       
         # The metric filter clauses. They are logically combined with the `AND`
@@ -368,7 +368,7 @@ module Google
         # comparing date range. Note that filtering on metrics occurs after the
         # metrics are aggregated.
         # Corresponds to the JSON property `metricFilterClauses`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::MetricFilterClause>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::MetricFilterClause>]
         attr_accessor :metric_filter_clauses
       
         # If set to true, hides the total of all metrics for all the matching rows,
@@ -391,12 +391,12 @@ module Google
         # before any dimensions are aggregated, so that the returned metrics
         # represent the total for only the relevant dimensions.
         # Corresponds to the JSON property `dimensionFilterClauses`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::DimensionFilterClause>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::DimensionFilterClause>]
         attr_accessor :dimension_filter_clauses
       
         # The pivot definitions.
         # Corresponds to the JSON property `pivots`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::Pivot>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::Pivot>]
         attr_accessor :pivots
       
         # Date ranges in the request. The request can have a maximum of 2 date
@@ -411,7 +411,7 @@ module Google
         # [ReportRequest](#ReportRequest) within a `batchGet` method must
         # contain the same `dateRanges` definition.
         # Corresponds to the JSON property `dateRanges`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::DateRange>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::DateRange>]
         attr_accessor :date_ranges
       
         # Segment the data returned for the request. A segment definition helps look
@@ -420,7 +420,7 @@ module Google
         # `batchGet` method must contain the same `segments` definition. Requests
         # with segments must have the `ga:segment` dimension.
         # Corresponds to the JSON property `segments`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::Segment>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::Segment>]
         attr_accessor :segments
       
         # The desired report
@@ -437,7 +437,7 @@ module Google
         # Metrics, the quantitative measurements, requested in the request.
         # Requests must specify at least one metric.
         # Corresponds to the JSON property `metrics`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::Metric>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::Metric>]
         attr_accessor :metrics
       
         # Page size is for paging and specifies the maximum number of returned rows.
@@ -456,7 +456,7 @@ module Google
         # following are applied in order until a difference is found.  All date
         # ranges in the output get the same row order.
         # Corresponds to the JSON property `orderBys`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::OrderBy>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::OrderBy>]
         attr_accessor :order_bys
       
         # Dimension or metric filters that restrict the data returned for your
@@ -523,12 +523,12 @@ module Google
       # A Simple segment conditions consist of one or more dimension/metric
       # conditions that can be combined.
       class SimpleSegment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of segment filters groups which are combined with logical `AND`
         # operator.
         # Corresponds to the JSON property `orFiltersForSegment`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::OrFiltersForSegment>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::OrFiltersForSegment>]
         attr_accessor :or_filters_for_segment
       
         def initialize(**args)
@@ -544,12 +544,12 @@ module Google
       # SegmentDefinition defines the segment to be a set of SegmentFilters which
       # are combined together with a logical `AND` operation.
       class SegmentDefinition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A segment is defined by a set of segment filters which are combined
         # together with a logical `AND` operation.
         # Corresponds to the JSON property `segmentFilters`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::SegmentFilter>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::SegmentFilter>]
         attr_accessor :segment_filters
       
         def initialize(**args)
@@ -564,7 +564,7 @@ module Google
       
       # Metric filter to be used in a segment filter clause.
       class SegmentMetricFilter
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The metric that will be filtered on. A `metricFilter` must contain a
         # metric name.
@@ -613,7 +613,7 @@ module Google
       
       # The data part of the report.
       class ReportData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Total number of matching rows for this query.
         # Corresponds to the JSON property `rowCount`
@@ -635,7 +635,7 @@ module Google
         # empty when `hideValueRanges` in the request is false, or when
         # rowCount is zero.
         # Corresponds to the JSON property `maximums`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::DateRangeValues>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::DateRangeValues>]
         attr_accessor :maximums
       
         # If the results are
@@ -652,12 +652,12 @@ module Google
         # empty when `hideValueRanges` in the request is false, or when
         # rowCount is zero.
         # Corresponds to the JSON property `minimums`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::DateRangeValues>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::DateRangeValues>]
         attr_accessor :minimums
       
         # There's one ReportRow for every unique combination of dimensions.
         # Corresponds to the JSON property `rows`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::ReportRow>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::ReportRow>]
         attr_accessor :rows
       
         # For each requested date range, for the set of all rows that match
@@ -669,7 +669,7 @@ module Google
         # `3 / ((sum of all relevant ga:sessions) + 2)`.
         # Totals are computed before pagination.
         # Corresponds to the JSON property `totals`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::DateRangeValues>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::DateRangeValues>]
         attr_accessor :totals
       
         # Indicates if response to this request is golden or not. Data is
@@ -699,13 +699,13 @@ module Google
       
       # The batch request containing multiple report request.
       class GetReportsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Requests, each request will have a separate response.
         # There can be a maximum of 5 requests. All requests should have the same
         # `dateRanges`, `viewId`, `segments`, `samplingLevel`, and `cohortGroup`.
         # Corresponds to the JSON property `reportRequests`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::ReportRequest>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::ReportRequest>]
         attr_accessor :report_requests
       
         def initialize(**args)
@@ -720,7 +720,7 @@ module Google
       
       # Specifies the sorting options.
       class OrderBy
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The sorting order for the field.
         # Corresponds to the JSON property `sortOrder`
@@ -756,7 +756,7 @@ module Google
       # characteristic. For example, all users with the same acquisition date
       # belong to the same cohort.
       class Cohort
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Type of the cohort. The only supported type as of now is
         # `FIRST_VISIT_DATE`. If this field is unspecified the cohort is treated
@@ -769,7 +769,7 @@ module Google
         # The start and end dates are specified in
         # [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) date format `YYYY-MM-DD`.
         # Corresponds to the JSON property `dateRange`
-        # @return [Google::Apis::AnalyticsreportingV4::DateRange]
+        # @return [GoogleAPI::Apis::AnalyticsreportingV4::DateRange]
         attr_accessor :date_range
       
         # A unique name for the cohort. If not defined name will be auto-generated
@@ -793,11 +793,11 @@ module Google
       # A list of segment filters in the `OR` group are combined with the logical OR
       # operator.
       class OrFiltersForSegment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of segment filters to be combined with a `OR` operator.
         # Corresponds to the JSON property `segmentFilterClauses`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::SegmentFilterClause>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::SegmentFilterClause>]
         attr_accessor :segment_filter_clauses
       
         def initialize(**args)
@@ -814,7 +814,7 @@ module Google
       # by one or more dimension/metric conditions. Multiple steps can be combined
       # with special sequence operators.
       class SequenceSegment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If set, first step condition must match the first hit of the visitor (in
         # the date range).
@@ -825,7 +825,7 @@ module Google
       
         # The list of steps in the sequence.
         # Corresponds to the JSON property `segmentSequenceSteps`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::SegmentSequenceStep>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::SegmentSequenceStep>]
         attr_accessor :segment_sequence_steps
       
         def initialize(**args)
@@ -844,13 +844,13 @@ module Google
       # to select the sessions or users. A sequence segment condition can be used to
       # select users or sessions based on sequential conditions.
       class SegmentFilter
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Sequence conditions consist of one or more steps, where each step is defined
         # by one or more dimension/metric conditions. Multiple steps can be combined
         # with special sequence operators.
         # Corresponds to the JSON property `sequenceSegment`
-        # @return [Google::Apis::AnalyticsreportingV4::SequenceSegment]
+        # @return [GoogleAPI::Apis::AnalyticsreportingV4::SequenceSegment]
         attr_accessor :sequence_segment
       
         # If true, match the complement of simple or sequence segment.
@@ -879,7 +879,7 @@ module Google
         # A Simple segment conditions consist of one or more dimension/metric
         # conditions that can be combined.
         # Corresponds to the JSON property `simpleSegment`
-        # @return [Google::Apis::AnalyticsreportingV4::SimpleSegment]
+        # @return [GoogleAPI::Apis::AnalyticsreportingV4::SimpleSegment]
         attr_accessor :simple_segment
       
         def initialize(**args)
@@ -897,7 +897,7 @@ module Google
       # The headers for the each of the metric column corresponding to the metrics
       # requested in the pivots section of the response.
       class PivotHeaderEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the dimensions in the pivot response.
         # Corresponds to the JSON property `dimensionNames`
@@ -911,7 +911,7 @@ module Google
       
         # Header for the metrics.
         # Corresponds to the JSON property `metric`
-        # @return [Google::Apis::AnalyticsreportingV4::MetricHeaderEntry]
+        # @return [GoogleAPI::Apis::AnalyticsreportingV4::MetricHeaderEntry]
         attr_accessor :metric
       
         def initialize(**args)
@@ -929,7 +929,7 @@ module Google
       # A group of dimension filters. Set the operator value to specify how
       # the filters are logically combined.
       class DimensionFilterClause
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The operator for combining multiple dimension filters. If unspecified, it
         # is treated as an `OR`.
@@ -940,7 +940,7 @@ module Google
         # The repeated set of filters. They are logically combined based on the
         # operator specified.
         # Corresponds to the JSON property `filters`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::DimensionFilter>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::DimensionFilter>]
         attr_accessor :filters
       
         def initialize(**args)
@@ -956,7 +956,7 @@ module Google
       
       # A segment sequence definition.
       class SegmentSequenceStep
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Specifies if the step immediately precedes or can be any time before the
         # next step.
@@ -967,7 +967,7 @@ module Google
         # A sequence is specified with a list of Or grouped filters which are
         # combined with `AND` operator.
         # Corresponds to the JSON property `orFiltersForSegment`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::OrFiltersForSegment>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::OrFiltersForSegment>]
         attr_accessor :or_filters_for_segment
       
         def initialize(**args)
@@ -985,16 +985,16 @@ module Google
       # The Pivot helps rearrange the information in the table for certain reports
       # by pivoting your data on a second dimension.
       class Pivot
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of dimensions to show as pivot columns.
         # Corresponds to the JSON property `dimensions`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::Dimension>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::Dimension>]
         attr_accessor :dimensions
       
         # Metrics to aggregate and return.
         # Corresponds to the JSON property `metrics`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::Metric>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::Metric>]
         attr_accessor :metrics
       
         # Specifies the maximum number of groups to return.
@@ -1011,7 +1011,7 @@ module Google
         # specify key filters to restrict `ga:browser` to only "IE" or "Firefox",
         # then only those two browsers would show up as columns.
         # Corresponds to the JSON property `dimensionFilterClauses`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::DimensionFilterClause>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::DimensionFilterClause>]
         attr_accessor :dimension_filter_clauses
       
         # If k metrics were requested, then the response will contain some
@@ -1047,7 +1047,7 @@ module Google
       # Used to return a list of metrics for a single DateRange / dimension
       # combination
       class DateRangeValues
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Each value corresponds to each Metric in the request.
         # Corresponds to the JSON property `values`
@@ -1056,7 +1056,7 @@ module Google
       
         # The values of each pivot region.
         # Corresponds to the JSON property `pivotValueRegions`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::PivotValueRegion>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::PivotValueRegion>]
         attr_accessor :pivot_value_regions
       
         def initialize(**args)
@@ -1073,7 +1073,7 @@ module Google
       # Represents a group of metric filters.
       # Set the operator value to specify how the filters are logically combined.
       class MetricFilterClause
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The operator for combining multiple metric filters. If unspecified, it is
         # treated as an `OR`.
@@ -1084,7 +1084,7 @@ module Google
         # The repeated set of filters. They are logically combined based on the
         # operator specified.
         # Corresponds to the JSON property `filters`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::MetricFilter>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::MetricFilter>]
         attr_accessor :filters
       
         def initialize(**args)
@@ -1102,12 +1102,12 @@ module Google
       # A Segment is a subset of the Analytics data. For example, of the entire
       # set of users, one Segment might be users from a particular country or city.
       class Segment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Dynamic segment definition for defining the segment within the request.
         # A segment can select users, sessions or both.
         # Corresponds to the JSON property `dynamicSegment`
-        # @return [Google::Apis::AnalyticsreportingV4::DynamicSegment]
+        # @return [GoogleAPI::Apis::AnalyticsreportingV4::DynamicSegment]
         attr_accessor :dynamic_segment
       
         # The segment ID of a built-in or custom segment, for example `gaid::-3`.
@@ -1130,7 +1130,7 @@ module Google
       # The start and end dates are specified in
       # [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) date format `YYYY-MM-DD`.
       class DateRange
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The start date for the query in the format `YYYY-MM-DD`.
         # Corresponds to the JSON property `startDate`
@@ -1155,7 +1155,7 @@ module Google
       
       # A row in the report.
       class ReportRow
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of requested dimensions.
         # Corresponds to the JSON property `dimensions`
@@ -1164,7 +1164,7 @@ module Google
       
         # List of metrics for each requested DateRange.
         # Corresponds to the JSON property `metrics`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::DateRangeValues>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::DateRangeValues>]
         attr_accessor :metrics
       
         def initialize(**args)
@@ -1192,7 +1192,7 @@ module Google
       # `]
       # `
       class CohortGroup
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Enable Life Time Value (LTV).  LTV measures lifetime value for users
         # acquired through different channels.
@@ -1228,7 +1228,7 @@ module Google
       
         # The definition for the cohort.
         # Corresponds to the JSON property `cohorts`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::Cohort>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::Cohort>]
         attr_accessor :cohorts
       
         def initialize(**args)
@@ -1245,11 +1245,11 @@ module Google
       # The main response class which holds the reports from the Reporting API
       # `batchGet` call.
       class GetReportsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Responses corresponding to each of the request.
         # Corresponds to the JSON property `reports`
-        # @return [Array<Google::Apis::AnalyticsreportingV4::Report>]
+        # @return [Array<GoogleAPI::Apis::AnalyticsreportingV4::Report>]
         attr_accessor :reports
       
         def initialize(**args)
@@ -1264,7 +1264,7 @@ module Google
       
       # Header for the metrics.
       class MetricHeaderEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of the metric, for example `INTEGER`.
         # Corresponds to the JSON property `type`
@@ -1289,7 +1289,7 @@ module Google
       
       # MetricFilter specifies the filter on a metric.
       class MetricFilter
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The metric that will be filtered on. A metricFilter must contain a metric
         # name. A metric name can be an alias earlier defined as a metric or it can
@@ -1333,7 +1333,7 @@ module Google
       
       # A dimension in the request.
       class Dimension
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If non-empty, we place dimension values into buckets after string to
         # int64. Dimension values that are not the string representation of an
@@ -1382,7 +1382,7 @@ module Google
       
       # The metric values in the pivot region.
       class PivotValueRegion
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The values of the metrics in each of the pivot regions.
         # Corresponds to the JSON property `values`

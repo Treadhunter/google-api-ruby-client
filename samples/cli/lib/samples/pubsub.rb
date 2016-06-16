@@ -30,13 +30,13 @@ module Samples
   #     $ ./google-api-samples pubsub delete_topic mytopic --project=623040240964
   #
   class PubSub < BaseCli
-    Pubsub = Google::Apis::PubsubV1
+    Pubsub = GoogleAPI::Apis::PubsubV1
 
     desc 'create_topic TOPIC_NAME', 'Create a topic'
     method_option :project, type: :string, required: true
     def create_topic(name)
       pubsub = Pubsub::PubsubService.new
-      pubsub.authorization = Google::Auth.get_application_default([Pubsub::AUTH_PUBSUB])
+      pubsub.authorization = GoogleAPI::Auth.get_application_default([Pubsub::AUTH_PUBSUB])
       topic = "projects/#{options[:project]}/topics/#{name}"
 
       pubsub.create_topic(topic)
@@ -46,7 +46,7 @@ module Samples
     method_option :project, type: :string, required: true
     def delete_topic(name)
       pubsub = Pubsub::PubsubService.new
-      pubsub.authorization = Google::Auth.get_application_default([Pubsub::AUTH_PUBSUB])
+      pubsub.authorization = GoogleAPI::Auth.get_application_default([Pubsub::AUTH_PUBSUB])
 
       topic = "projects/#{options[:project]}/topics/#{name}"
 
@@ -58,7 +58,7 @@ module Samples
     method_option :topic, type: :string, required: true
     def subscribe(name)
       pubsub = Pubsub::PubsubService.new
-      pubsub.authorization = Google::Auth.get_application_default([Pubsub::AUTH_PUBSUB])
+      pubsub.authorization = GoogleAPI::Auth.get_application_default([Pubsub::AUTH_PUBSUB])
 
       topic = "projects/#{options[:project]}/topics/#{options[:topic]}"
       subscription = "projects/#{options[:project]}/subscriptions/#{name}"
@@ -69,7 +69,7 @@ module Samples
     method_option :project, type: :string, required: true
     def unsubscribe(name)
       pubsub = Pubsub::PubsubService.new
-      pubsub.authorization = Google::Auth.get_application_default([Pubsub::AUTH_PUBSUB])
+      pubsub.authorization = GoogleAPI::Auth.get_application_default([Pubsub::AUTH_PUBSUB])
 
       subscription = "projects/#{options[:project]}/subscriptions/#{name}"
       pubsub.delete_subscription(subscription)
@@ -81,7 +81,7 @@ module Samples
     method_option :topic, type: :string, required: true
     def publish(message)
       pubsub = Pubsub::PubsubService.new
-      pubsub.authorization = Google::Auth.get_application_default([Pubsub::AUTH_PUBSUB])
+      pubsub.authorization = GoogleAPI::Auth.get_application_default([Pubsub::AUTH_PUBSUB])
       topic = "projects/#{options[:project]}/topics/#{options[:topic]}"
 
       request = Pubsub::PublishRequest.new(messages: [])
@@ -95,7 +95,7 @@ module Samples
     method_option :max, type: :numeric, default: 5
     def pull(name)
       pubsub = Pubsub::PubsubService.new
-      pubsub.authorization = Google::Auth.get_application_default([Pubsub::AUTH_PUBSUB])
+      pubsub.authorization = GoogleAPI::Auth.get_application_default([Pubsub::AUTH_PUBSUB])
 
       subscription = "projects/#{options[:project]}/subscriptions/#{name}"
 

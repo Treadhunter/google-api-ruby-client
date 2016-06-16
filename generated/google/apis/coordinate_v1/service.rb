@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CoordinateV1
       # Google Maps Coordinate API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/coordinate_v1'
       #
-      #    Coordinate = Google::Apis::CoordinateV1 # Alias the module
+      #    Coordinate = GoogleAPI::Apis::CoordinateV1 # Alias the module
       #    service = Coordinate::CoordinateService.new
       #
       # @see https://developers.google.com/coordinate/
-      class CoordinateService < Google::Apis::Core::BaseService
+      class CoordinateService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -64,22 +64,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CoordinateV1::ListCustomFieldDefResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CoordinateV1::ListCustomFieldDefResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CoordinateV1::ListCustomFieldDefResponse]
+        # @return [GoogleAPI::Apis::CoordinateV1::ListCustomFieldDefResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_custom_field_defs(team_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'teams/{teamId}/custom_fields', options)
-          command.response_representation = Google::Apis::CoordinateV1::ListCustomFieldDefResponse::Representation
-          command.response_class = Google::Apis::CoordinateV1::ListCustomFieldDefResponse
+          command.response_representation = GoogleAPI::Apis::CoordinateV1::ListCustomFieldDefResponse::Representation
+          command.response_class = GoogleAPI::Apis::CoordinateV1::ListCustomFieldDefResponse
           command.params['teamId'] = team_id unless team_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -101,22 +101,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CoordinateV1::Job] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CoordinateV1::Job] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CoordinateV1::Job]
+        # @return [GoogleAPI::Apis::CoordinateV1::Job]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_job(team_id, job_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'teams/{teamId}/jobs/{jobId}', options)
-          command.response_representation = Google::Apis::CoordinateV1::Job::Representation
-          command.response_class = Google::Apis::CoordinateV1::Job
+          command.response_representation = GoogleAPI::Apis::CoordinateV1::Job::Representation
+          command.response_class = GoogleAPI::Apis::CoordinateV1::Job
           command.params['teamId'] = team_id unless team_id.nil?
           command.params['jobId'] = job_id unless job_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -136,7 +136,7 @@ module Google
         #   The longitude coordinate of this job's location.
         # @param [String] title
         #   Job title
-        # @param [Google::Apis::CoordinateV1::Job] job_object
+        # @param [GoogleAPI::Apis::CoordinateV1::Job] job_object
         # @param [String] assignee
         #   Assignee email address, or empty string to unassign.
         # @param [Array<String>, String] custom_field
@@ -161,24 +161,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CoordinateV1::Job] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CoordinateV1::Job] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CoordinateV1::Job]
+        # @return [GoogleAPI::Apis::CoordinateV1::Job]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_job(team_id, address, lat, lng, title, job_object = nil, assignee: nil, custom_field: nil, customer_name: nil, customer_phone_number: nil, note: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'teams/{teamId}/jobs', options)
-          command.request_representation = Google::Apis::CoordinateV1::Job::Representation
+          command.request_representation = GoogleAPI::Apis::CoordinateV1::Job::Representation
           command.request_object = job_object
-          command.response_representation = Google::Apis::CoordinateV1::Job::Representation
-          command.response_class = Google::Apis::CoordinateV1::Job
+          command.response_representation = GoogleAPI::Apis::CoordinateV1::Job::Representation
+          command.response_class = GoogleAPI::Apis::CoordinateV1::Job
           command.params['teamId'] = team_id unless team_id.nil?
           command.query['address'] = address unless address.nil?
           command.query['assignee'] = assignee unless assignee.nil?
@@ -215,22 +215,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CoordinateV1::ListJobResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CoordinateV1::ListJobResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CoordinateV1::ListJobResponse]
+        # @return [GoogleAPI::Apis::CoordinateV1::ListJobResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_jobs(team_id, max_results: nil, min_modified_timestamp_ms: nil, omit_job_changes: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'teams/{teamId}/jobs', options)
-          command.response_representation = Google::Apis::CoordinateV1::ListJobResponse::Representation
-          command.response_class = Google::Apis::CoordinateV1::ListJobResponse
+          command.response_representation = GoogleAPI::Apis::CoordinateV1::ListJobResponse::Representation
+          command.response_class = GoogleAPI::Apis::CoordinateV1::ListJobResponse
           command.params['teamId'] = team_id unless team_id.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['minModifiedTimestampMs'] = min_modified_timestamp_ms unless min_modified_timestamp_ms.nil?
@@ -248,7 +248,7 @@ module Google
         #   Team ID
         # @param [String] job_id
         #   Job number
-        # @param [Google::Apis::CoordinateV1::Job] job_object
+        # @param [GoogleAPI::Apis::CoordinateV1::Job] job_object
         # @param [String] address
         #   Job address as newline (Unix) separated string
         # @param [String] assignee
@@ -283,24 +283,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CoordinateV1::Job] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CoordinateV1::Job] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CoordinateV1::Job]
+        # @return [GoogleAPI::Apis::CoordinateV1::Job]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_job(team_id, job_id, job_object = nil, address: nil, assignee: nil, custom_field: nil, customer_name: nil, customer_phone_number: nil, lat: nil, lng: nil, note: nil, progress: nil, title: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'teams/{teamId}/jobs/{jobId}', options)
-          command.request_representation = Google::Apis::CoordinateV1::Job::Representation
+          command.request_representation = GoogleAPI::Apis::CoordinateV1::Job::Representation
           command.request_object = job_object
-          command.response_representation = Google::Apis::CoordinateV1::Job::Representation
-          command.response_class = Google::Apis::CoordinateV1::Job
+          command.response_representation = GoogleAPI::Apis::CoordinateV1::Job::Representation
+          command.response_class = GoogleAPI::Apis::CoordinateV1::Job
           command.params['teamId'] = team_id unless team_id.nil?
           command.params['jobId'] = job_id unless job_id.nil?
           command.query['address'] = address unless address.nil?
@@ -324,7 +324,7 @@ module Google
         #   Team ID
         # @param [String] job_id
         #   Job number
-        # @param [Google::Apis::CoordinateV1::Job] job_object
+        # @param [GoogleAPI::Apis::CoordinateV1::Job] job_object
         # @param [String] address
         #   Job address as newline (Unix) separated string
         # @param [String] assignee
@@ -359,24 +359,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CoordinateV1::Job] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CoordinateV1::Job] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CoordinateV1::Job]
+        # @return [GoogleAPI::Apis::CoordinateV1::Job]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_job(team_id, job_id, job_object = nil, address: nil, assignee: nil, custom_field: nil, customer_name: nil, customer_phone_number: nil, lat: nil, lng: nil, note: nil, progress: nil, title: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'teams/{teamId}/jobs/{jobId}', options)
-          command.request_representation = Google::Apis::CoordinateV1::Job::Representation
+          command.request_representation = GoogleAPI::Apis::CoordinateV1::Job::Representation
           command.request_object = job_object
-          command.response_representation = Google::Apis::CoordinateV1::Job::Representation
-          command.response_class = Google::Apis::CoordinateV1::Job
+          command.response_representation = GoogleAPI::Apis::CoordinateV1::Job::Representation
+          command.response_class = GoogleAPI::Apis::CoordinateV1::Job
           command.params['teamId'] = team_id unless team_id.nil?
           command.params['jobId'] = job_id unless job_id.nil?
           command.query['address'] = address unless address.nil?
@@ -415,22 +415,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CoordinateV1::ListLocationResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CoordinateV1::ListLocationResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CoordinateV1::ListLocationResponse]
+        # @return [GoogleAPI::Apis::CoordinateV1::ListLocationResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_locations(team_id, worker_email, start_timestamp_ms, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'teams/{teamId}/workers/{workerEmail}/locations', options)
-          command.response_representation = Google::Apis::CoordinateV1::ListLocationResponse::Representation
-          command.response_class = Google::Apis::CoordinateV1::ListLocationResponse
+          command.response_representation = GoogleAPI::Apis::CoordinateV1::ListLocationResponse::Representation
+          command.response_class = GoogleAPI::Apis::CoordinateV1::ListLocationResponse
           command.params['teamId'] = team_id unless team_id.nil?
           command.params['workerEmail'] = worker_email unless worker_email.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -456,22 +456,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CoordinateV1::Schedule] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CoordinateV1::Schedule] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CoordinateV1::Schedule]
+        # @return [GoogleAPI::Apis::CoordinateV1::Schedule]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_schedule(team_id, job_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'teams/{teamId}/jobs/{jobId}/schedule', options)
-          command.response_representation = Google::Apis::CoordinateV1::Schedule::Representation
-          command.response_class = Google::Apis::CoordinateV1::Schedule
+          command.response_representation = GoogleAPI::Apis::CoordinateV1::Schedule::Representation
+          command.response_class = GoogleAPI::Apis::CoordinateV1::Schedule
           command.params['teamId'] = team_id unless team_id.nil?
           command.params['jobId'] = job_id unless job_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -486,7 +486,7 @@ module Google
         #   Team ID
         # @param [String] job_id
         #   Job number
-        # @param [Google::Apis::CoordinateV1::Schedule] schedule_object
+        # @param [GoogleAPI::Apis::CoordinateV1::Schedule] schedule_object
         # @param [Boolean] all_day
         #   Whether the job is scheduled for the whole day. Time of day in start/end times
         #   is ignored if this is true.
@@ -505,24 +505,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CoordinateV1::Schedule] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CoordinateV1::Schedule] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CoordinateV1::Schedule]
+        # @return [GoogleAPI::Apis::CoordinateV1::Schedule]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_schedule(team_id, job_id, schedule_object = nil, all_day: nil, duration: nil, end_time: nil, start_time: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'teams/{teamId}/jobs/{jobId}/schedule', options)
-          command.request_representation = Google::Apis::CoordinateV1::Schedule::Representation
+          command.request_representation = GoogleAPI::Apis::CoordinateV1::Schedule::Representation
           command.request_object = schedule_object
-          command.response_representation = Google::Apis::CoordinateV1::Schedule::Representation
-          command.response_class = Google::Apis::CoordinateV1::Schedule
+          command.response_representation = GoogleAPI::Apis::CoordinateV1::Schedule::Representation
+          command.response_class = GoogleAPI::Apis::CoordinateV1::Schedule
           command.params['teamId'] = team_id unless team_id.nil?
           command.params['jobId'] = job_id unless job_id.nil?
           command.query['allDay'] = all_day unless all_day.nil?
@@ -540,7 +540,7 @@ module Google
         #   Team ID
         # @param [String] job_id
         #   Job number
-        # @param [Google::Apis::CoordinateV1::Schedule] schedule_object
+        # @param [GoogleAPI::Apis::CoordinateV1::Schedule] schedule_object
         # @param [Boolean] all_day
         #   Whether the job is scheduled for the whole day. Time of day in start/end times
         #   is ignored if this is true.
@@ -559,24 +559,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CoordinateV1::Schedule] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CoordinateV1::Schedule] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CoordinateV1::Schedule]
+        # @return [GoogleAPI::Apis::CoordinateV1::Schedule]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_schedule(team_id, job_id, schedule_object = nil, all_day: nil, duration: nil, end_time: nil, start_time: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'teams/{teamId}/jobs/{jobId}/schedule', options)
-          command.request_representation = Google::Apis::CoordinateV1::Schedule::Representation
+          command.request_representation = GoogleAPI::Apis::CoordinateV1::Schedule::Representation
           command.request_object = schedule_object
-          command.response_representation = Google::Apis::CoordinateV1::Schedule::Representation
-          command.response_class = Google::Apis::CoordinateV1::Schedule
+          command.response_representation = GoogleAPI::Apis::CoordinateV1::Schedule::Representation
+          command.response_class = GoogleAPI::Apis::CoordinateV1::Schedule
           command.params['teamId'] = team_id unless team_id.nil?
           command.params['jobId'] = job_id unless job_id.nil?
           command.query['allDay'] = all_day unless all_day.nil?
@@ -605,22 +605,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CoordinateV1::ListTeamResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CoordinateV1::ListTeamResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CoordinateV1::ListTeamResponse]
+        # @return [GoogleAPI::Apis::CoordinateV1::ListTeamResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_teams(admin: nil, dispatcher: nil, worker: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'teams', options)
-          command.response_representation = Google::Apis::CoordinateV1::ListTeamResponse::Representation
-          command.response_class = Google::Apis::CoordinateV1::ListTeamResponse
+          command.response_representation = GoogleAPI::Apis::CoordinateV1::ListTeamResponse::Representation
+          command.response_class = GoogleAPI::Apis::CoordinateV1::ListTeamResponse
           command.query['admin'] = admin unless admin.nil?
           command.query['dispatcher'] = dispatcher unless dispatcher.nil?
           command.query['worker'] = worker unless worker.nil?
@@ -642,22 +642,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CoordinateV1::ListWorkerResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CoordinateV1::ListWorkerResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CoordinateV1::ListWorkerResponse]
+        # @return [GoogleAPI::Apis::CoordinateV1::ListWorkerResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_workers(team_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'teams/{teamId}/workers', options)
-          command.response_representation = Google::Apis::CoordinateV1::ListWorkerResponse::Representation
-          command.response_class = Google::Apis::CoordinateV1::ListWorkerResponse
+          command.response_representation = GoogleAPI::Apis::CoordinateV1::ListWorkerResponse::Representation
+          command.response_class = GoogleAPI::Apis::CoordinateV1::ListWorkerResponse
           command.params['teamId'] = team_id unless team_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?

@@ -5,7 +5,7 @@ require 'open-uri'
 require 'google/apis/discovery_v1'
 require 'logger'
 
-module Google
+module GoogleAPI
   class ApiGenerator < Thor
 
     def self.exit_on_failure?
@@ -14,10 +14,10 @@ module Google
 
     include Thor::Actions
 
-    Google::Apis::ClientOptions.default.application_name = "generate-api"
-    Google::Apis::ClientOptions.default.application_version = Google::Apis::VERSION
+    GoogleAPI::Apis::ClientOptions.default.application_name = "generate-api"
+    GoogleAPI::Apis::ClientOptions.default.application_version = GoogleAPI::Apis::VERSION
 
-    Discovery = Google::Apis::DiscoveryV1
+    Discovery = GoogleAPI::Apis::DiscoveryV1
 
     desc 'gen OUTDIR', 'Generate ruby API from an API description'
     method_options url: :array, file: :array, from_discovery: :boolean, id: :array,
@@ -29,7 +29,7 @@ module Google
       require 'google/apis/generator'
 
       self.destination_root = dir
-      Google::Apis.logger.level = Logger::DEBUG if options[:verbose]
+      GoogleAPI::Apis.logger.level = Logger::DEBUG if options[:verbose]
       generate_from_url(options[:url]) if options[:url]
       generate_from_file(options[:file]) if options[:file]
       generate_from_discovery(preferred_only: options[:preferred_only], id: options[:id] ) if options[:id] || options[:from_discovery]
@@ -39,7 +39,7 @@ module Google
     desc 'list', 'List public APIs'
     method_options verbose: :boolean, preferred_only: :boolean
     def list
-      Google::Apis.logger.level = Logger::DEBUG if options[:verbose]
+      GoogleAPI::Apis.logger.level = Logger::DEBUG if options[:verbose]
       discovery = Discovery::DiscoveryService.new
       apis = discovery.list_apis
       apis.items.each do |api|
@@ -89,7 +89,7 @@ module Google
       end
 
       def generator
-        @generator ||= Google::Apis::Generator.new(api_names: options[:names])
+        @generator ||= GoogleAPI::Apis::Generator.new(api_names: options[:names])
       end
 
       def ensure_active_support
@@ -106,4 +106,4 @@ module Google
 
 end
 
-Google::ApiGenerator.start(ARGV)
+GoogleAPI::ApiGenerator.start(ARGV)

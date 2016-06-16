@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AnalyticsreportingV4
       # Google Analytics Reporting API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/analyticsreporting_v4'
       #
-      #    Analyticsreporting = Google::Apis::AnalyticsreportingV4 # Alias the module
+      #    Analyticsreporting = GoogleAPI::Apis::AnalyticsreportingV4 # Alias the module
       #    service = Analyticsreporting::AnalyticsReportingService.new
       #
       # @see https://developers.google.com/analytics/devguides/reporting/core/v4/
-      class AnalyticsReportingService < Google::Apis::Core::BaseService
+      class AnalyticsReportingService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -47,30 +47,30 @@ module Google
         end
         
         # Returns the Analytics data.
-        # @param [Google::Apis::AnalyticsreportingV4::GetReportsRequest] get_reports_request_object
+        # @param [GoogleAPI::Apis::AnalyticsreportingV4::GetReportsRequest] get_reports_request_object
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AnalyticsreportingV4::GetReportsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AnalyticsreportingV4::GetReportsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AnalyticsreportingV4::GetReportsResponse]
+        # @return [GoogleAPI::Apis::AnalyticsreportingV4::GetReportsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def batch_get_reports(get_reports_request_object = nil, quota_user: nil, fields: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v4/reports:batchGet', options)
-          command.request_representation = Google::Apis::AnalyticsreportingV4::GetReportsRequest::Representation
+          command.request_representation = GoogleAPI::Apis::AnalyticsreportingV4::GetReportsRequest::Representation
           command.request_object = get_reports_request_object
-          command.response_representation = Google::Apis::AnalyticsreportingV4::GetReportsResponse::Representation
-          command.response_class = Google::Apis::AnalyticsreportingV4::GetReportsResponse
+          command.response_representation = GoogleAPI::Apis::AnalyticsreportingV4::GetReportsResponse::Representation
+          command.response_class = GoogleAPI::Apis::AnalyticsreportingV4::GetReportsResponse
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['fields'] = fields unless fields.nil?
           execute_or_queue_command(command, &block)

@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module BooksV1
       # Books API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/books_v1'
       #
-      #    Books = Google::Apis::BooksV1 # Alias the module
+      #    Books = GoogleAPI::Apis::BooksV1 # Alias the module
       #    service = Books::BooksService.new
       #
       # @see https://developers.google.com/books/docs/v1/getting_started
-      class BooksService < Google::Apis::Core::BaseService
+      class BooksService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -68,22 +68,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Bookshelf] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Bookshelf] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Bookshelf]
+        # @return [GoogleAPI::Apis::BooksV1::Bookshelf]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_bookshelf(user_id, shelf, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'users/{userId}/bookshelves/{shelf}', options)
-          command.response_representation = Google::Apis::BooksV1::Bookshelf::Representation
-          command.response_class = Google::Apis::BooksV1::Bookshelf
+          command.response_representation = GoogleAPI::Apis::BooksV1::Bookshelf::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Bookshelf
           command.params['userId'] = user_id unless user_id.nil?
           command.params['shelf'] = shelf unless shelf.nil?
           command.query['source'] = source unless source.nil?
@@ -107,22 +107,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Bookshelves] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Bookshelves] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Bookshelves]
+        # @return [GoogleAPI::Apis::BooksV1::Bookshelves]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_bookshelves(user_id, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'users/{userId}/bookshelves', options)
-          command.response_representation = Google::Apis::BooksV1::Bookshelves::Representation
-          command.response_class = Google::Apis::BooksV1::Bookshelves
+          command.response_representation = GoogleAPI::Apis::BooksV1::Bookshelves::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Bookshelves
           command.params['userId'] = user_id unless user_id.nil?
           command.query['source'] = source unless source.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -153,22 +153,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Volumes] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Volumes] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Volumes]
+        # @return [GoogleAPI::Apis::BooksV1::Volumes]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_bookshelf_volumes(user_id, shelf, max_results: nil, show_preorders: nil, source: nil, start_index: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'users/{userId}/bookshelves/{shelf}/volumes', options)
-          command.response_representation = Google::Apis::BooksV1::Volumes::Representation
-          command.response_class = Google::Apis::BooksV1::Volumes
+          command.response_representation = GoogleAPI::Apis::BooksV1::Volumes::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Volumes
           command.params['userId'] = user_id unless user_id.nil?
           command.params['shelf'] = shelf unless shelf.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -198,22 +198,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::LoadingResource] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::LoadingResource] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::LoadingResource]
+        # @return [GoogleAPI::Apis::BooksV1::LoadingResource]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def add_book(drive_document_id: nil, mime_type: nil, name: nil, upload_client_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'cloudloading/addBook', options)
-          command.response_representation = Google::Apis::BooksV1::LoadingResource::Representation
-          command.response_class = Google::Apis::BooksV1::LoadingResource
+          command.response_representation = GoogleAPI::Apis::BooksV1::LoadingResource::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::LoadingResource
           command.query['drive_document_id'] = drive_document_id unless drive_document_id.nil?
           command.query['mime_type'] = mime_type unless mime_type.nil?
           command.query['name'] = name unless name.nil?
@@ -236,7 +236,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -245,9 +245,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_book(volume_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'cloudloading/deleteBook', options)
           command.query['volumeId'] = volume_id unless volume_id.nil?
@@ -258,7 +258,7 @@ module Google
         end
         
         # 
-        # @param [Google::Apis::BooksV1::LoadingResource] loading_resource_object
+        # @param [GoogleAPI::Apis::BooksV1::LoadingResource] loading_resource_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -268,24 +268,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::LoadingResource] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::LoadingResource] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::LoadingResource]
+        # @return [GoogleAPI::Apis::BooksV1::LoadingResource]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_book(loading_resource_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'cloudloading/updateBook', options)
-          command.request_representation = Google::Apis::BooksV1::LoadingResource::Representation
+          command.request_representation = GoogleAPI::Apis::BooksV1::LoadingResource::Representation
           command.request_object = loading_resource_object
-          command.response_representation = Google::Apis::BooksV1::LoadingResource::Representation
-          command.response_class = Google::Apis::BooksV1::LoadingResource
+          command.response_representation = GoogleAPI::Apis::BooksV1::LoadingResource::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::LoadingResource
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['userIp'] = user_ip unless user_ip.nil?
@@ -304,22 +304,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Metadata] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Metadata] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Metadata]
+        # @return [GoogleAPI::Apis::BooksV1::Metadata]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_offline_metadata_dictionary(cpksver, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'dictionary/listOfflineMetadata', options)
-          command.response_representation = Google::Apis::BooksV1::Metadata::Representation
-          command.response_class = Google::Apis::BooksV1::Metadata
+          command.response_representation = GoogleAPI::Apis::BooksV1::Metadata::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Metadata
           command.query['cpksver'] = cpksver unless cpksver.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -345,22 +345,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::LayerSummary] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::LayerSummary] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::LayerSummary]
+        # @return [GoogleAPI::Apis::BooksV1::LayerSummary]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_layer(volume_id, summary_id, content_version: nil, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'volumes/{volumeId}/layersummary/{summaryId}', options)
-          command.response_representation = Google::Apis::BooksV1::LayerSummary::Representation
-          command.response_class = Google::Apis::BooksV1::LayerSummary
+          command.response_representation = GoogleAPI::Apis::BooksV1::LayerSummary::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::LayerSummary
           command.params['volumeId'] = volume_id unless volume_id.nil?
           command.params['summaryId'] = summary_id unless summary_id.nil?
           command.query['contentVersion'] = content_version unless content_version.nil?
@@ -391,22 +391,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::LayerSummaries] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::LayerSummaries] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::LayerSummaries]
+        # @return [GoogleAPI::Apis::BooksV1::LayerSummaries]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_layers(volume_id, content_version: nil, max_results: nil, page_token: nil, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'volumes/{volumeId}/layersummary', options)
-          command.response_representation = Google::Apis::BooksV1::LayerSummaries::Representation
-          command.response_class = Google::Apis::BooksV1::LayerSummaries
+          command.response_representation = GoogleAPI::Apis::BooksV1::LayerSummaries::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::LayerSummaries
           command.params['volumeId'] = volume_id unless volume_id.nil?
           command.query['contentVersion'] = content_version unless content_version.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -451,22 +451,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::AnnotationData] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::AnnotationData] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::AnnotationData]
+        # @return [GoogleAPI::Apis::BooksV1::AnnotationData]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_layer_annotation_data(volume_id, layer_id, annotation_data_id, content_version, allow_web_definitions: nil, h: nil, locale: nil, scale: nil, source: nil, w: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'volumes/{volumeId}/layers/{layerId}/data/{annotationDataId}', options)
-          command.response_representation = Google::Apis::BooksV1::AnnotationData::Representation
-          command.response_class = Google::Apis::BooksV1::AnnotationData
+          command.response_representation = GoogleAPI::Apis::BooksV1::AnnotationData::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::AnnotationData
           command.params['volumeId'] = volume_id unless volume_id.nil?
           command.params['layerId'] = layer_id unless layer_id.nil?
           command.params['annotationDataId'] = annotation_data_id unless annotation_data_id.nil?
@@ -525,22 +525,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::AnnotationsData] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::AnnotationsData] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::AnnotationsData]
+        # @return [GoogleAPI::Apis::BooksV1::AnnotationsData]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_layer_annotation_data(volume_id, layer_id, content_version, annotation_data_id: nil, h: nil, locale: nil, max_results: nil, page_token: nil, scale: nil, source: nil, updated_max: nil, updated_min: nil, w: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'volumes/{volumeId}/layers/{layerId}/data', options)
-          command.response_representation = Google::Apis::BooksV1::AnnotationsData::Representation
-          command.response_class = Google::Apis::BooksV1::AnnotationsData
+          command.response_representation = GoogleAPI::Apis::BooksV1::AnnotationsData::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::AnnotationsData
           command.params['volumeId'] = volume_id unless volume_id.nil?
           command.params['layerId'] = layer_id unless layer_id.nil?
           command.query['annotationDataId'] = annotation_data_id unless annotation_data_id.nil?
@@ -581,22 +581,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::VolumeAnnotation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::VolumeAnnotation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::VolumeAnnotation]
+        # @return [GoogleAPI::Apis::BooksV1::VolumeAnnotation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_layer_volume_annotation(volume_id, layer_id, annotation_id, locale: nil, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'volumes/{volumeId}/layers/{layerId}/annotations/{annotationId}', options)
-          command.response_representation = Google::Apis::BooksV1::VolumeAnnotation::Representation
-          command.response_class = Google::Apis::BooksV1::VolumeAnnotation
+          command.response_representation = GoogleAPI::Apis::BooksV1::VolumeAnnotation::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::VolumeAnnotation
           command.params['volumeId'] = volume_id unless volume_id.nil?
           command.params['layerId'] = layer_id unless layer_id.nil?
           command.params['annotationId'] = annotation_id unless annotation_id.nil?
@@ -652,22 +652,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Volumeannotations] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Volumeannotations] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Volumeannotations]
+        # @return [GoogleAPI::Apis::BooksV1::Volumeannotations]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_layer_volume_annotations(volume_id, layer_id, content_version, end_offset: nil, end_position: nil, locale: nil, max_results: nil, page_token: nil, show_deleted: nil, source: nil, start_offset: nil, start_position: nil, updated_max: nil, updated_min: nil, volume_annotations_version: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'volumes/{volumeId}/layers/{layerId}', options)
-          command.response_representation = Google::Apis::BooksV1::Volumeannotations::Representation
-          command.response_class = Google::Apis::BooksV1::Volumeannotations
+          command.response_representation = GoogleAPI::Apis::BooksV1::Volumeannotations::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Volumeannotations
           command.params['volumeId'] = volume_id unless volume_id.nil?
           command.params['layerId'] = layer_id unless layer_id.nil?
           command.query['contentVersion'] = content_version unless content_version.nil?
@@ -699,22 +699,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::UserSettings] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::UserSettings] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::UserSettings]
+        # @return [GoogleAPI::Apis::BooksV1::UserSettings]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_user_settings(fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'myconfig/getUserSettings', options)
-          command.response_representation = Google::Apis::BooksV1::UserSettings::Representation
-          command.response_class = Google::Apis::BooksV1::UserSettings
+          command.response_representation = GoogleAPI::Apis::BooksV1::UserSettings::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::UserSettings
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['userIp'] = user_ip unless user_ip.nil?
@@ -739,22 +739,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::DownloadAccesses] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::DownloadAccesses] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::DownloadAccesses]
+        # @return [GoogleAPI::Apis::BooksV1::DownloadAccesses]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def release_download_access(volume_ids, cpksver, locale: nil, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'myconfig/releaseDownloadAccess', options)
-          command.response_representation = Google::Apis::BooksV1::DownloadAccesses::Representation
-          command.response_class = Google::Apis::BooksV1::DownloadAccesses
+          command.response_representation = GoogleAPI::Apis::BooksV1::DownloadAccesses::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::DownloadAccesses
           command.query['cpksver'] = cpksver unless cpksver.nil?
           command.query['locale'] = locale unless locale.nil?
           command.query['source'] = source unless source.nil?
@@ -787,22 +787,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::RequestAccess] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::RequestAccess] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::RequestAccess]
+        # @return [GoogleAPI::Apis::BooksV1::RequestAccess]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def request_access(source, volume_id, nonce, cpksver, license_types: nil, locale: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'myconfig/requestAccess', options)
-          command.response_representation = Google::Apis::BooksV1::RequestAccess::Representation
-          command.response_class = Google::Apis::BooksV1::RequestAccess
+          command.response_representation = GoogleAPI::Apis::BooksV1::RequestAccess::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::RequestAccess
           command.query['cpksver'] = cpksver unless cpksver.nil?
           command.query['licenseTypes'] = license_types unless license_types.nil?
           command.query['locale'] = locale unless locale.nil?
@@ -841,22 +841,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Volumes] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Volumes] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Volumes]
+        # @return [GoogleAPI::Apis::BooksV1::Volumes]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def sync_volume_licenses(source, nonce, cpksver, features: nil, include_non_comics_series: nil, locale: nil, show_preorders: nil, volume_ids: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'myconfig/syncVolumeLicenses', options)
-          command.response_representation = Google::Apis::BooksV1::Volumes::Representation
-          command.response_class = Google::Apis::BooksV1::Volumes
+          command.response_representation = GoogleAPI::Apis::BooksV1::Volumes::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Volumes
           command.query['cpksver'] = cpksver unless cpksver.nil?
           command.query['features'] = features unless features.nil?
           command.query['includeNonComicsSeries'] = include_non_comics_series unless include_non_comics_series.nil?
@@ -874,7 +874,7 @@ module Google
         # Sets the settings for the user. If a sub-object is specified, it will
         # overwrite the existing sub-object stored in the server. Unspecified sub-
         # objects will retain the existing value.
-        # @param [Google::Apis::BooksV1::UserSettings] user_settings_object
+        # @param [GoogleAPI::Apis::BooksV1::UserSettings] user_settings_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -884,24 +884,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::UserSettings] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::UserSettings] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::UserSettings]
+        # @return [GoogleAPI::Apis::BooksV1::UserSettings]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_user_settings(user_settings_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'myconfig/updateUserSettings', options)
-          command.request_representation = Google::Apis::BooksV1::UserSettings::Representation
+          command.request_representation = GoogleAPI::Apis::BooksV1::UserSettings::Representation
           command.request_object = user_settings_object
-          command.response_representation = Google::Apis::BooksV1::UserSettings::Representation
-          command.response_class = Google::Apis::BooksV1::UserSettings
+          command.response_representation = GoogleAPI::Apis::BooksV1::UserSettings::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::UserSettings
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['userIp'] = user_ip unless user_ip.nil?
@@ -922,7 +922,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -931,9 +931,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_my_library_annotation(annotation_id, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'mylibrary/annotations/{annotationId}', options)
           command.params['annotationId'] = annotation_id unless annotation_id.nil?
@@ -945,7 +945,7 @@ module Google
         end
         
         # Inserts a new annotation.
-        # @param [Google::Apis::BooksV1::Annotation] annotation_object
+        # @param [GoogleAPI::Apis::BooksV1::Annotation] annotation_object
         # @param [String] country
         #   ISO-3166-1 code to override the IP-based location.
         # @param [Boolean] show_only_summary_in_response
@@ -962,24 +962,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Annotation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Annotation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Annotation]
+        # @return [GoogleAPI::Apis::BooksV1::Annotation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_my_library_annotation(annotation_object = nil, country: nil, show_only_summary_in_response: nil, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'mylibrary/annotations', options)
-          command.request_representation = Google::Apis::BooksV1::Annotation::Representation
+          command.request_representation = GoogleAPI::Apis::BooksV1::Annotation::Representation
           command.request_object = annotation_object
-          command.response_representation = Google::Apis::BooksV1::Annotation::Representation
-          command.response_class = Google::Apis::BooksV1::Annotation
+          command.response_representation = GoogleAPI::Apis::BooksV1::Annotation::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Annotation
           command.query['country'] = country unless country.nil?
           command.query['showOnlySummaryInResponse'] = show_only_summary_in_response unless show_only_summary_in_response.nil?
           command.query['source'] = source unless source.nil?
@@ -1022,22 +1022,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Annotations] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Annotations] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Annotations]
+        # @return [GoogleAPI::Apis::BooksV1::Annotations]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_my_library_annotations(content_version: nil, layer_id: nil, layer_ids: nil, max_results: nil, page_token: nil, show_deleted: nil, source: nil, updated_max: nil, updated_min: nil, volume_id: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'mylibrary/annotations', options)
-          command.response_representation = Google::Apis::BooksV1::Annotations::Representation
-          command.response_class = Google::Apis::BooksV1::Annotations
+          command.response_representation = GoogleAPI::Apis::BooksV1::Annotations::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Annotations
           command.query['contentVersion'] = content_version unless content_version.nil?
           command.query['layerId'] = layer_id unless layer_id.nil?
           command.query['layerIds'] = layer_ids unless layer_ids.nil?
@@ -1068,22 +1068,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::AnnotationsSummary] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::AnnotationsSummary] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::AnnotationsSummary]
+        # @return [GoogleAPI::Apis::BooksV1::AnnotationsSummary]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def summarize_my_library_annotation(layer_ids, volume_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'mylibrary/annotations/summary', options)
-          command.response_representation = Google::Apis::BooksV1::AnnotationsSummary::Representation
-          command.response_class = Google::Apis::BooksV1::AnnotationsSummary
+          command.response_representation = GoogleAPI::Apis::BooksV1::AnnotationsSummary::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::AnnotationsSummary
           command.query['layerIds'] = layer_ids unless layer_ids.nil?
           command.query['volumeId'] = volume_id unless volume_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1095,7 +1095,7 @@ module Google
         # Updates an existing annotation.
         # @param [String] annotation_id
         #   The ID for the annotation to update.
-        # @param [Google::Apis::BooksV1::Annotation] annotation_object
+        # @param [GoogleAPI::Apis::BooksV1::Annotation] annotation_object
         # @param [String] source
         #   String to identify the originator of this request.
         # @param [String] fields
@@ -1107,24 +1107,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Annotation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Annotation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Annotation]
+        # @return [GoogleAPI::Apis::BooksV1::Annotation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_my_library_annotation(annotation_id, annotation_object = nil, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, 'mylibrary/annotations/{annotationId}', options)
-          command.request_representation = Google::Apis::BooksV1::Annotation::Representation
+          command.request_representation = GoogleAPI::Apis::BooksV1::Annotation::Representation
           command.request_object = annotation_object
-          command.response_representation = Google::Apis::BooksV1::Annotation::Representation
-          command.response_class = Google::Apis::BooksV1::Annotation
+          command.response_representation = GoogleAPI::Apis::BooksV1::Annotation::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Annotation
           command.params['annotationId'] = annotation_id unless annotation_id.nil?
           command.query['source'] = source unless source.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1151,7 +1151,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -1160,9 +1160,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def add_my_library_volume(shelf, volume_id, reason: nil, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'mylibrary/bookshelves/{shelf}/addVolume', options)
           command.params['shelf'] = shelf unless shelf.nil?
@@ -1189,7 +1189,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -1198,9 +1198,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def clear_my_library_volumes(shelf, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'mylibrary/bookshelves/{shelf}/clearVolumes', options)
           command.params['shelf'] = shelf unless shelf.nil?
@@ -1226,22 +1226,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Bookshelf] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Bookshelf] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Bookshelf]
+        # @return [GoogleAPI::Apis::BooksV1::Bookshelf]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_my_library_bookshelf(shelf, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'mylibrary/bookshelves/{shelf}', options)
-          command.response_representation = Google::Apis::BooksV1::Bookshelf::Representation
-          command.response_class = Google::Apis::BooksV1::Bookshelf
+          command.response_representation = GoogleAPI::Apis::BooksV1::Bookshelf::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Bookshelf
           command.params['shelf'] = shelf unless shelf.nil?
           command.query['source'] = source unless source.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1262,22 +1262,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Bookshelves] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Bookshelves] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Bookshelves]
+        # @return [GoogleAPI::Apis::BooksV1::Bookshelves]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_my_library_bookshelves(source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'mylibrary/bookshelves', options)
-          command.response_representation = Google::Apis::BooksV1::Bookshelves::Representation
-          command.response_class = Google::Apis::BooksV1::Bookshelves
+          command.response_representation = GoogleAPI::Apis::BooksV1::Bookshelves::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Bookshelves
           command.query['source'] = source unless source.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -1304,7 +1304,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -1313,9 +1313,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def move_my_library_volume(shelf, volume_id, volume_position, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'mylibrary/bookshelves/{shelf}/moveVolume', options)
           command.params['shelf'] = shelf unless shelf.nil?
@@ -1346,7 +1346,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -1355,9 +1355,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def remove_my_library_volume(shelf, volume_id, reason: nil, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'mylibrary/bookshelves/{shelf}/removeVolume', options)
           command.params['shelf'] = shelf unless shelf.nil?
@@ -1396,22 +1396,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Volumes] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Volumes] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Volumes]
+        # @return [GoogleAPI::Apis::BooksV1::Volumes]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_my_library_volumes(shelf, country: nil, max_results: nil, projection: nil, q: nil, show_preorders: nil, source: nil, start_index: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'mylibrary/bookshelves/{shelf}/volumes', options)
-          command.response_representation = Google::Apis::BooksV1::Volumes::Representation
-          command.response_class = Google::Apis::BooksV1::Volumes
+          command.response_representation = GoogleAPI::Apis::BooksV1::Volumes::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Volumes
           command.params['shelf'] = shelf unless shelf.nil?
           command.query['country'] = country unless country.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -1442,22 +1442,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::ReadingPosition] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::ReadingPosition] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::ReadingPosition]
+        # @return [GoogleAPI::Apis::BooksV1::ReadingPosition]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_my_library_reading_position(volume_id, content_version: nil, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'mylibrary/readingpositions/{volumeId}', options)
-          command.response_representation = Google::Apis::BooksV1::ReadingPosition::Representation
-          command.response_class = Google::Apis::BooksV1::ReadingPosition
+          command.response_representation = GoogleAPI::Apis::BooksV1::ReadingPosition::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::ReadingPosition
           command.params['volumeId'] = volume_id unless volume_id.nil?
           command.query['contentVersion'] = content_version unless content_version.nil?
           command.query['source'] = source unless source.nil?
@@ -1491,7 +1491,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -1500,9 +1500,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_my_library_reading_position(volume_id, timestamp, position, action: nil, content_version: nil, device_cookie: nil, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'mylibrary/readingpositions/{volumeId}/setPosition', options)
           command.params['volumeId'] = volume_id unless volume_id.nil?
@@ -1535,22 +1535,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Notification] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Notification] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Notification]
+        # @return [GoogleAPI::Apis::BooksV1::Notification]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_notification(notification_id, locale: nil, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'notification/get', options)
-          command.response_representation = Google::Apis::BooksV1::Notification::Representation
-          command.response_class = Google::Apis::BooksV1::Notification
+          command.response_representation = GoogleAPI::Apis::BooksV1::Notification::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Notification
           command.query['locale'] = locale unless locale.nil?
           command.query['notification_id'] = notification_id unless notification_id.nil?
           command.query['source'] = source unless source.nil?
@@ -1572,22 +1572,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Category] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Category] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Category]
+        # @return [GoogleAPI::Apis::BooksV1::Category]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_onboarding_categories(locale: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'onboarding/listCategories', options)
-          command.response_representation = Google::Apis::BooksV1::Category::Representation
-          command.response_class = Google::Apis::BooksV1::Category
+          command.response_representation = GoogleAPI::Apis::BooksV1::Category::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Category
           command.query['locale'] = locale unless locale.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -1616,22 +1616,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Volume2] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Volume2] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Volume2]
+        # @return [GoogleAPI::Apis::BooksV1::Volume2]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_onboarding_category_volumes(category_id: nil, locale: nil, max_allowed_maturity_rating: nil, page_size: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'onboarding/listCategoryVolumes', options)
-          command.response_representation = Google::Apis::BooksV1::Volume2::Representation
-          command.response_class = Google::Apis::BooksV1::Volume2
+          command.response_representation = GoogleAPI::Apis::BooksV1::Volume2::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Volume2
           command.query['categoryId'] = category_id unless category_id.nil?
           command.query['locale'] = locale unless locale.nil?
           command.query['maxAllowedMaturityRating'] = max_allowed_maturity_rating unless max_allowed_maturity_rating.nil?
@@ -1661,22 +1661,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Discoveryclusters] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Discoveryclusters] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Discoveryclusters]
+        # @return [GoogleAPI::Apis::BooksV1::Discoveryclusters]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_personalizedstream(locale: nil, max_allowed_maturity_rating: nil, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'personalizedstream/get', options)
-          command.response_representation = Google::Apis::BooksV1::Discoveryclusters::Representation
-          command.response_class = Google::Apis::BooksV1::Discoveryclusters
+          command.response_representation = GoogleAPI::Apis::BooksV1::Discoveryclusters::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Discoveryclusters
           command.query['locale'] = locale unless locale.nil?
           command.query['maxAllowedMaturityRating'] = max_allowed_maturity_rating unless max_allowed_maturity_rating.nil?
           command.query['source'] = source unless source.nil?
@@ -1711,7 +1711,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -1720,9 +1720,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def accept_promo_offer(android_id: nil, device: nil, manufacturer: nil, model: nil, offer_id: nil, product: nil, serial: nil, volume_id: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'promooffer/accept', options)
           command.query['androidId'] = android_id unless android_id.nil?
@@ -1763,7 +1763,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -1772,9 +1772,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def dismiss_promo_offer(android_id: nil, device: nil, manufacturer: nil, model: nil, offer_id: nil, product: nil, serial: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'promooffer/dismiss', options)
           command.query['androidId'] = android_id unless android_id.nil?
@@ -1812,22 +1812,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Offers] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Offers] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Offers]
+        # @return [GoogleAPI::Apis::BooksV1::Offers]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_promo_offer(android_id: nil, device: nil, manufacturer: nil, model: nil, product: nil, serial: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'promooffer/get', options)
-          command.response_representation = Google::Apis::BooksV1::Offers::Representation
-          command.response_class = Google::Apis::BooksV1::Offers
+          command.response_representation = GoogleAPI::Apis::BooksV1::Offers::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Offers
           command.query['androidId'] = android_id unless android_id.nil?
           command.query['device'] = device unless device.nil?
           command.query['manufacturer'] = manufacturer unless manufacturer.nil?
@@ -1852,22 +1852,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Series] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Series] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Series]
+        # @return [GoogleAPI::Apis::BooksV1::Series]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_series(series_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'series/get', options)
-          command.response_representation = Google::Apis::BooksV1::Series::Representation
-          command.response_class = Google::Apis::BooksV1::Series
+          command.response_representation = GoogleAPI::Apis::BooksV1::Series::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Series
           command.query['series_id'] = series_id unless series_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -1891,22 +1891,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::SeriesMembership] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::SeriesMembership] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::SeriesMembership]
+        # @return [GoogleAPI::Apis::BooksV1::SeriesMembership]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_series_membership(series_id, page_size: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'series/membership/get', options)
-          command.response_representation = Google::Apis::BooksV1::SeriesMembership::Representation
-          command.response_class = Google::Apis::BooksV1::SeriesMembership
+          command.response_representation = GoogleAPI::Apis::BooksV1::SeriesMembership::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::SeriesMembership
           command.query['page_size'] = page_size unless page_size.nil?
           command.query['page_token'] = page_token unless page_token.nil?
           command.query['series_id'] = series_id unless series_id.nil?
@@ -1939,22 +1939,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Volume] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Volume] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Volume]
+        # @return [GoogleAPI::Apis::BooksV1::Volume]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_volume(volume_id, country: nil, include_non_comics_series: nil, partner: nil, projection: nil, source: nil, user_library_consistent_read: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'volumes/{volumeId}', options)
-          command.response_representation = Google::Apis::BooksV1::Volume::Representation
-          command.response_class = Google::Apis::BooksV1::Volume
+          command.response_representation = GoogleAPI::Apis::BooksV1::Volume::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Volume
           command.params['volumeId'] = volume_id unless volume_id.nil?
           command.query['country'] = country unless country.nil?
           command.query['includeNonComicsSeries'] = include_non_comics_series unless include_non_comics_series.nil?
@@ -2004,22 +2004,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Volumes] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Volumes] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Volumes]
+        # @return [GoogleAPI::Apis::BooksV1::Volumes]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_volumes(q, download: nil, filter: nil, lang_restrict: nil, library_restrict: nil, max_results: nil, order_by: nil, partner: nil, print_type: nil, projection: nil, show_preorders: nil, source: nil, start_index: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'volumes', options)
-          command.response_representation = Google::Apis::BooksV1::Volumes::Representation
-          command.response_class = Google::Apis::BooksV1::Volumes
+          command.response_representation = GoogleAPI::Apis::BooksV1::Volumes::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Volumes
           command.query['download'] = download unless download.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['langRestrict'] = lang_restrict unless lang_restrict.nil?
@@ -2061,22 +2061,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Volumes] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Volumes] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Volumes]
+        # @return [GoogleAPI::Apis::BooksV1::Volumes]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_associated_volumes(volume_id, association: nil, locale: nil, max_allowed_maturity_rating: nil, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'volumes/{volumeId}/associated', options)
-          command.response_representation = Google::Apis::BooksV1::Volumes::Representation
-          command.response_class = Google::Apis::BooksV1::Volumes
+          command.response_representation = GoogleAPI::Apis::BooksV1::Volumes::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Volumes
           command.params['volumeId'] = volume_id unless volume_id.nil?
           command.query['association'] = association unless association.nil?
           command.query['locale'] = locale unless locale.nil?
@@ -2114,22 +2114,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Volumes] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Volumes] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Volumes]
+        # @return [GoogleAPI::Apis::BooksV1::Volumes]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_my_books(acquire_method: nil, country: nil, locale: nil, max_results: nil, processing_state: nil, source: nil, start_index: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'volumes/mybooks', options)
-          command.response_representation = Google::Apis::BooksV1::Volumes::Representation
-          command.response_class = Google::Apis::BooksV1::Volumes
+          command.response_representation = GoogleAPI::Apis::BooksV1::Volumes::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Volumes
           command.query['acquireMethod'] = acquire_method unless acquire_method.nil?
           command.query['country'] = country unless country.nil?
           command.query['locale'] = locale unless locale.nil?
@@ -2161,22 +2161,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Volumes] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Volumes] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Volumes]
+        # @return [GoogleAPI::Apis::BooksV1::Volumes]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_recommended_volumes(locale: nil, max_allowed_maturity_rating: nil, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'volumes/recommended', options)
-          command.response_representation = Google::Apis::BooksV1::Volumes::Representation
-          command.response_class = Google::Apis::BooksV1::Volumes
+          command.response_representation = GoogleAPI::Apis::BooksV1::Volumes::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Volumes
           command.query['locale'] = locale unless locale.nil?
           command.query['maxAllowedMaturityRating'] = max_allowed_maturity_rating unless max_allowed_maturity_rating.nil?
           command.query['source'] = source unless source.nil?
@@ -2205,22 +2205,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::RateRecommendedVolumeResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::RateRecommendedVolumeResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::RateRecommendedVolumeResponse]
+        # @return [GoogleAPI::Apis::BooksV1::RateRecommendedVolumeResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def rate_recommended_volume(rating, volume_id, locale: nil, source: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'volumes/recommended/rate', options)
-          command.response_representation = Google::Apis::BooksV1::RateRecommendedVolumeResponse::Representation
-          command.response_class = Google::Apis::BooksV1::RateRecommendedVolumeResponse
+          command.response_representation = GoogleAPI::Apis::BooksV1::RateRecommendedVolumeResponse::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::RateRecommendedVolumeResponse
           command.query['locale'] = locale unless locale.nil?
           command.query['rating'] = rating unless rating.nil?
           command.query['source'] = source unless source.nil?
@@ -2255,22 +2255,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::BooksV1::Volumes] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::BooksV1::Volumes] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::BooksV1::Volumes]
+        # @return [GoogleAPI::Apis::BooksV1::Volumes]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_user_uploaded_volumes(locale: nil, max_results: nil, processing_state: nil, source: nil, start_index: nil, volume_id: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'volumes/useruploaded', options)
-          command.response_representation = Google::Apis::BooksV1::Volumes::Representation
-          command.response_class = Google::Apis::BooksV1::Volumes
+          command.response_representation = GoogleAPI::Apis::BooksV1::Volumes::Representation
+          command.response_class = GoogleAPI::Apis::BooksV1::Volumes
           command.query['locale'] = locale unless locale.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['processingState'] = processing_state unless processing_state.nil?

@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CloudlatencytestV2
       
       # 
       class AggregatedStats
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `stats`
-        # @return [Array<Google::Apis::CloudlatencytestV2::Stats>]
+        # @return [Array<GoogleAPI::Apis::CloudlatencytestV2::Stats>]
         attr_accessor :stats
       
         def initialize(**args)
@@ -43,7 +43,7 @@ module Google
       
       # 
       class AggregatedStatsReply
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `testValue`
@@ -62,7 +62,7 @@ module Google
       
       # 
       class DoubleValue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `label`
@@ -87,7 +87,7 @@ module Google
       
       # 
       class IntValue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `label`
@@ -112,21 +112,21 @@ module Google
       
       # 
       class Stats
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `doubleValues`
-        # @return [Array<Google::Apis::CloudlatencytestV2::DoubleValue>]
+        # @return [Array<GoogleAPI::Apis::CloudlatencytestV2::DoubleValue>]
         attr_accessor :double_values
       
         # 
         # Corresponds to the JSON property `intValues`
-        # @return [Array<Google::Apis::CloudlatencytestV2::IntValue>]
+        # @return [Array<GoogleAPI::Apis::CloudlatencytestV2::IntValue>]
         attr_accessor :int_values
       
         # 
         # Corresponds to the JSON property `stringValues`
-        # @return [Array<Google::Apis::CloudlatencytestV2::StringValue>]
+        # @return [Array<GoogleAPI::Apis::CloudlatencytestV2::StringValue>]
         attr_accessor :string_values
       
         # 
@@ -149,7 +149,7 @@ module Google
       
       # 
       class StatsReply
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `testValue`
@@ -168,7 +168,7 @@ module Google
       
       # 
       class StringValue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `label`

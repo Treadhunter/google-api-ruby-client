@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AutoscalerV1beta2
       
       # Cloud Autoscaler resource.
       class Autoscaler
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Cloud Autoscaler policy.
         # Corresponds to the JSON property `autoscalingPolicy`
-        # @return [Google::Apis::AutoscalerV1beta2::AutoscalingPolicy]
+        # @return [GoogleAPI::Apis::AutoscalerV1beta2::AutoscalingPolicy]
         attr_accessor :autoscaling_policy
       
         # [Output Only] Creation timestamp in RFC3339 text format.
@@ -87,11 +87,11 @@ module Google
       
       # 
       class ListAutoscalerResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Autoscaler resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AutoscalerV1beta2::Autoscaler>]
+        # @return [Array<GoogleAPI::Apis::AutoscalerV1beta2::Autoscaler>]
         attr_accessor :items
       
         # Type of resource.
@@ -118,7 +118,7 @@ module Google
       
       # Cloud Autoscaler policy.
       class AutoscalingPolicy
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of seconds that the Autoscaler should wait between two succeeding
         # changes to the number of virtual machines. You should define an interval that
@@ -131,17 +131,17 @@ module Google
       
         # CPU utilization policy.
         # Corresponds to the JSON property `cpuUtilization`
-        # @return [Google::Apis::AutoscalerV1beta2::AutoscalingPolicyCpuUtilization]
+        # @return [GoogleAPI::Apis::AutoscalerV1beta2::AutoscalingPolicyCpuUtilization]
         attr_accessor :cpu_utilization
       
         # Configuration parameters of autoscaling based on custom metric.
         # Corresponds to the JSON property `customMetricUtilizations`
-        # @return [Array<Google::Apis::AutoscalerV1beta2::AutoscalingPolicyCustomMetricUtilization>]
+        # @return [Array<GoogleAPI::Apis::AutoscalerV1beta2::AutoscalingPolicyCustomMetricUtilization>]
         attr_accessor :custom_metric_utilizations
       
         # Load balancing utilization policy.
         # Corresponds to the JSON property `loadBalancingUtilization`
-        # @return [Google::Apis::AutoscalerV1beta2::AutoscalingPolicyLoadBalancingUtilization]
+        # @return [GoogleAPI::Apis::AutoscalerV1beta2::AutoscalingPolicyLoadBalancingUtilization]
         attr_accessor :load_balancing_utilization
       
         # The maximum number of replicas that the Autoscaler can scale up to.
@@ -171,7 +171,7 @@ module Google
       
       # CPU utilization policy.
       class AutoscalingPolicyCpuUtilization
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The target utilization that the Autoscaler should maintain. It is represented
         # as a fraction of used cores. For example: 6 cores used in 8-core VM are
@@ -193,7 +193,7 @@ module Google
       
       # Custom utilization metric policy.
       class AutoscalingPolicyCustomMetricUtilization
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifier of the metric. It should be a Cloud Monitoring metric. The metric
         # can not have negative values. The metric should be an utilization metric (
@@ -229,7 +229,7 @@ module Google
       
       # Load balancing utilization policy.
       class AutoscalingPolicyLoadBalancingUtilization
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Fraction of backend capacity utilization (set in HTTP load balancing
         # configuration) that Autoscaler should maintain. Must be a positive float value.
@@ -253,7 +253,7 @@ module Google
       
       # 
       class DeprecationStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `deleted`
@@ -296,7 +296,7 @@ module Google
       
       # 
       class Operation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `clientOperationId`
@@ -320,7 +320,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `error`
-        # @return [Google::Apis::AutoscalerV1beta2::Operation::Error]
+        # @return [GoogleAPI::Apis::AutoscalerV1beta2::Operation::Error]
         attr_accessor :error
       
         # 
@@ -406,7 +406,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `warnings`
-        # @return [Array<Google::Apis::AutoscalerV1beta2::Operation::Warning>]
+        # @return [Array<GoogleAPI::Apis::AutoscalerV1beta2::Operation::Warning>]
         attr_accessor :warnings
       
         # 
@@ -447,11 +447,11 @@ module Google
         
         # 
         class Error
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `errors`
-          # @return [Array<Google::Apis::AutoscalerV1beta2::Operation::Error::Error>]
+          # @return [Array<GoogleAPI::Apis::AutoscalerV1beta2::Operation::Error::Error>]
           attr_accessor :errors
         
           def initialize(**args)
@@ -465,7 +465,7 @@ module Google
           
           # 
           class Error
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `code`
@@ -497,7 +497,7 @@ module Google
         
         # 
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `code`
@@ -506,7 +506,7 @@ module Google
         
           # 
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::AutoscalerV1beta2::Operation::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::AutoscalerV1beta2::Operation::Warning::Datum>]
           attr_accessor :data
         
           # 
@@ -527,7 +527,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # 
             # Corresponds to the JSON property `key`
@@ -554,7 +554,7 @@ module Google
       
       # 
       class OperationList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `id`
@@ -563,7 +563,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AutoscalerV1beta2::Operation>]
+        # @return [Array<GoogleAPI::Apis::AutoscalerV1beta2::Operation>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#operations for Operations
@@ -598,7 +598,7 @@ module Google
       
       # 
       class Zone
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `creationTimestamp`
@@ -607,7 +607,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `deprecated`
-        # @return [Google::Apis::AutoscalerV1beta2::DeprecationStatus]
+        # @return [GoogleAPI::Apis::AutoscalerV1beta2::DeprecationStatus]
         attr_accessor :deprecated
       
         # 
@@ -665,7 +665,7 @@ module Google
       
       # 
       class ZoneList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `id`
@@ -674,7 +674,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AutoscalerV1beta2::Zone>]
+        # @return [Array<GoogleAPI::Apis::AutoscalerV1beta2::Zone>]
         attr_accessor :items
       
         # Type of resource.

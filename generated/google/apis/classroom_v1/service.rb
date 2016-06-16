@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ClassroomV1
       # Google Classroom API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/classroom_v1'
       #
-      #    Classroom = Google::Apis::ClassroomV1 # Alias the module
+      #    Classroom = GoogleAPI::Apis::ClassroomV1 # Alias the module
       #    service = Classroom::ClassroomService.new
       #
       # @see https://developers.google.com/classroom/
-      class ClassroomService < Google::Apis::Core::BaseService
+      class ClassroomService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -53,30 +53,30 @@ module Google
         # * `FAILED_PRECONDITION` if the course owner's account is disabled or for the
         # following request errors: * UserGroupsMembershipLimitReached * `ALREADY_EXISTS`
         # if an alias was specified in the `id` and already exists.
-        # @param [Google::Apis::ClassroomV1::Course] course_object
+        # @param [GoogleAPI::Apis::ClassroomV1::Course] course_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Course] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Course] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Course]
+        # @return [GoogleAPI::Apis::ClassroomV1::Course]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_course(course_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/courses', options)
-          command.request_representation = Google::Apis::ClassroomV1::Course::Representation
+          command.request_representation = GoogleAPI::Apis::ClassroomV1::Course::Representation
           command.request_object = course_object
-          command.response_representation = Google::Apis::ClassroomV1::Course::Representation
-          command.response_class = Google::Apis::ClassroomV1::Course
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Course::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Course
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           execute_or_queue_command(command, &block)
@@ -94,22 +94,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Course] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Course] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Course]
+        # @return [GoogleAPI::Apis::ClassroomV1::Course]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_course(id, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/courses/{id}', options)
-          command.response_representation = Google::Apis::ClassroomV1::Course::Representation
-          command.response_class = Google::Apis::ClassroomV1::Course
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Course::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Course
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -124,30 +124,30 @@ module Google
         # @param [String] id
         #   Identifier of the course to update. This identifier can be either the
         #   Classroom-assigned identifier or an alias.
-        # @param [Google::Apis::ClassroomV1::Course] course_object
+        # @param [GoogleAPI::Apis::ClassroomV1::Course] course_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Course] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Course] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Course]
+        # @return [GoogleAPI::Apis::ClassroomV1::Course]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_course(id, course_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:put, 'v1/courses/{id}', options)
-          command.request_representation = Google::Apis::ClassroomV1::Course::Representation
+          command.request_representation = GoogleAPI::Apis::ClassroomV1::Course::Representation
           command.request_object = course_object
-          command.response_representation = Google::Apis::ClassroomV1::Course::Representation
-          command.response_class = Google::Apis::ClassroomV1::Course
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Course::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Course
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -163,7 +163,7 @@ module Google
         # @param [String] id
         #   Identifier of the course to update. This identifier can be either the
         #   Classroom-assigned identifier or an alias.
-        # @param [Google::Apis::ClassroomV1::Course] course_object
+        # @param [GoogleAPI::Apis::ClassroomV1::Course] course_object
         # @param [String] update_mask
         #   Mask that identifies which fields on the course to update. This field is
         #   required to do an update. The update will fail if invalid fields are specified.
@@ -175,24 +175,24 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Course] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Course] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Course]
+        # @return [GoogleAPI::Apis::ClassroomV1::Course]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_course(id, course_object = nil, update_mask: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'v1/courses/{id}', options)
-          command.request_representation = Google::Apis::ClassroomV1::Course::Representation
+          command.request_representation = GoogleAPI::Apis::ClassroomV1::Course::Representation
           command.request_object = course_object
-          command.response_representation = Google::Apis::ClassroomV1::Course::Representation
-          command.response_class = Google::Apis::ClassroomV1::Course
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Course::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Course
           command.params['id'] = id unless id.nil?
           command.query['updateMask'] = update_mask unless update_mask.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -212,22 +212,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Empty] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Empty] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Empty]
+        # @return [GoogleAPI::Apis::ClassroomV1::Empty]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_course(id, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'v1/courses/{id}', options)
-          command.response_representation = Google::Apis::ClassroomV1::Empty::Representation
-          command.response_class = Google::Apis::ClassroomV1::Empty
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Empty::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Empty
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -262,22 +262,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::ListCoursesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::ListCoursesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::ListCoursesResponse]
+        # @return [GoogleAPI::Apis::ClassroomV1::ListCoursesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_courses(student_id: nil, teacher_id: nil, page_size: nil, page_token: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/courses', options)
-          command.response_representation = Google::Apis::ClassroomV1::ListCoursesResponse::Representation
-          command.response_class = Google::Apis::ClassroomV1::ListCoursesResponse
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::ListCoursesResponse::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::ListCoursesResponse
           command.query['studentId'] = student_id unless student_id.nil?
           command.query['teacherId'] = teacher_id unless teacher_id.nil?
           command.query['pageSize'] = page_size unless page_size.nil?
@@ -294,30 +294,30 @@ module Google
         # @param [String] course_id
         #   Identifier of the course to alias. This identifier can be either the Classroom-
         #   assigned identifier or an alias.
-        # @param [Google::Apis::ClassroomV1::CourseAlias] course_alias_object
+        # @param [GoogleAPI::Apis::ClassroomV1::CourseAlias] course_alias_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::CourseAlias] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::CourseAlias] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::CourseAlias]
+        # @return [GoogleAPI::Apis::ClassroomV1::CourseAlias]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_course_alias(course_id, course_alias_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/courses/{courseId}/aliases', options)
-          command.request_representation = Google::Apis::ClassroomV1::CourseAlias::Representation
+          command.request_representation = GoogleAPI::Apis::ClassroomV1::CourseAlias::Representation
           command.request_object = course_alias_object
-          command.response_representation = Google::Apis::ClassroomV1::CourseAlias::Representation
-          command.response_class = Google::Apis::ClassroomV1::CourseAlias
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::CourseAlias::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::CourseAlias
           command.params['courseId'] = course_id unless course_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -337,22 +337,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Empty] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Empty] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Empty]
+        # @return [GoogleAPI::Apis::ClassroomV1::Empty]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_course_alias(course_id, alias_, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'v1/courses/{courseId}/aliases/{alias}', options)
-          command.response_representation = Google::Apis::ClassroomV1::Empty::Representation
-          command.response_class = Google::Apis::ClassroomV1::Empty
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Empty::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Empty
           command.params['courseId'] = course_id unless course_id.nil?
           command.params['alias'] = alias_ unless alias_.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -380,22 +380,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::ListCourseAliasesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::ListCourseAliasesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::ListCourseAliasesResponse]
+        # @return [GoogleAPI::Apis::ClassroomV1::ListCourseAliasesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_course_aliases(course_id, page_size: nil, page_token: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/courses/{courseId}/aliases', options)
-          command.response_representation = Google::Apis::ClassroomV1::ListCourseAliasesResponse::Representation
-          command.response_class = Google::Apis::ClassroomV1::ListCourseAliasesResponse
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::ListCourseAliasesResponse::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::ListCourseAliasesResponse
           command.params['courseId'] = course_id unless course_id.nil?
           command.query['pageSize'] = page_size unless page_size.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -415,30 +415,30 @@ module Google
         # @param [String] course_id
         #   Identifier of the course. This identifier can be either the Classroom-assigned
         #   identifier or an alias.
-        # @param [Google::Apis::ClassroomV1::Teacher] teacher_object
+        # @param [GoogleAPI::Apis::ClassroomV1::Teacher] teacher_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Teacher] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Teacher] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Teacher]
+        # @return [GoogleAPI::Apis::ClassroomV1::Teacher]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_course_teacher(course_id, teacher_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/courses/{courseId}/teachers', options)
-          command.request_representation = Google::Apis::ClassroomV1::Teacher::Representation
+          command.request_representation = GoogleAPI::Apis::ClassroomV1::Teacher::Representation
           command.request_object = teacher_object
-          command.response_representation = Google::Apis::ClassroomV1::Teacher::Representation
-          command.response_class = Google::Apis::ClassroomV1::Teacher
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Teacher::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Teacher
           command.params['courseId'] = course_id unless course_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -461,22 +461,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Teacher] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Teacher] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Teacher]
+        # @return [GoogleAPI::Apis::ClassroomV1::Teacher]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_course_teacher(course_id, user_id, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/courses/{courseId}/teachers/{userId}', options)
-          command.response_representation = Google::Apis::ClassroomV1::Teacher::Representation
-          command.response_class = Google::Apis::ClassroomV1::Teacher
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Teacher::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Teacher
           command.params['courseId'] = course_id unless course_id.nil?
           command.params['userId'] = user_id unless user_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -502,22 +502,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Empty] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Empty] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Empty]
+        # @return [GoogleAPI::Apis::ClassroomV1::Empty]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_course_teacher(course_id, user_id, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'v1/courses/{courseId}/teachers/{userId}', options)
-          command.response_representation = Google::Apis::ClassroomV1::Empty::Representation
-          command.response_class = Google::Apis::ClassroomV1::Empty
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Empty::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Empty
           command.params['courseId'] = course_id unless course_id.nil?
           command.params['userId'] = user_id unless user_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -543,22 +543,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::ListTeachersResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::ListTeachersResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::ListTeachersResponse]
+        # @return [GoogleAPI::Apis::ClassroomV1::ListTeachersResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_course_teachers(course_id, page_size: nil, page_token: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/courses/{courseId}/teachers', options)
-          command.response_representation = Google::Apis::ClassroomV1::ListTeachersResponse::Representation
-          command.response_class = Google::Apis::ClassroomV1::ListTeachersResponse
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::ListTeachersResponse::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::ListTeachersResponse
           command.params['courseId'] = course_id unless course_id.nil?
           command.query['pageSize'] = page_size unless page_size.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -578,7 +578,7 @@ module Google
         # @param [String] course_id
         #   Identifier of the course to create the student in. This identifier can be
         #   either the Classroom-assigned identifier or an alias.
-        # @param [Google::Apis::ClassroomV1::Student] student_object
+        # @param [GoogleAPI::Apis::ClassroomV1::Student] student_object
         # @param [String] enrollment_code
         #   Enrollment code of the course to create the student in. This code is required
         #   if userId corresponds to the requesting user; it may be omitted if the
@@ -588,24 +588,24 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Student] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Student] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Student]
+        # @return [GoogleAPI::Apis::ClassroomV1::Student]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_course_student(course_id, student_object = nil, enrollment_code: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/courses/{courseId}/students', options)
-          command.request_representation = Google::Apis::ClassroomV1::Student::Representation
+          command.request_representation = GoogleAPI::Apis::ClassroomV1::Student::Representation
           command.request_object = student_object
-          command.response_representation = Google::Apis::ClassroomV1::Student::Representation
-          command.response_class = Google::Apis::ClassroomV1::Student
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Student::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Student
           command.params['courseId'] = course_id unless course_id.nil?
           command.query['enrollmentCode'] = enrollment_code unless enrollment_code.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -629,22 +629,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Student] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Student] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Student]
+        # @return [GoogleAPI::Apis::ClassroomV1::Student]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_course_student(course_id, user_id, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/courses/{courseId}/students/{userId}', options)
-          command.response_representation = Google::Apis::ClassroomV1::Student::Representation
-          command.response_class = Google::Apis::ClassroomV1::Student
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Student::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Student
           command.params['courseId'] = course_id unless course_id.nil?
           command.params['userId'] = user_id unless user_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -668,22 +668,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Empty] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Empty] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Empty]
+        # @return [GoogleAPI::Apis::ClassroomV1::Empty]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_course_student(course_id, user_id, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'v1/courses/{courseId}/students/{userId}', options)
-          command.response_representation = Google::Apis::ClassroomV1::Empty::Representation
-          command.response_class = Google::Apis::ClassroomV1::Empty
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Empty::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Empty
           command.params['courseId'] = course_id unless course_id.nil?
           command.params['userId'] = user_id unless user_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -709,22 +709,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::ListStudentsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::ListStudentsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::ListStudentsResponse]
+        # @return [GoogleAPI::Apis::ClassroomV1::ListStudentsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_course_students(course_id, page_size: nil, page_token: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/courses/{courseId}/students', options)
-          command.response_representation = Google::Apis::ClassroomV1::ListStudentsResponse::Representation
-          command.response_class = Google::Apis::ClassroomV1::ListStudentsResponse
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::ListStudentsResponse::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::ListStudentsResponse
           command.params['courseId'] = course_id unless course_id.nil?
           command.query['pageSize'] = page_size unless page_size.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -746,30 +746,30 @@ module Google
         # @param [String] course_id
         #   Identifier of the course. This identifier can be either the Classroom-assigned
         #   identifier or an alias.
-        # @param [Google::Apis::ClassroomV1::CourseWork] course_work_object
+        # @param [GoogleAPI::Apis::ClassroomV1::CourseWork] course_work_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::CourseWork] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::CourseWork] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::CourseWork]
+        # @return [GoogleAPI::Apis::ClassroomV1::CourseWork]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_course_work(course_id, course_work_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/courses/{courseId}/courseWork', options)
-          command.request_representation = Google::Apis::ClassroomV1::CourseWork::Representation
+          command.request_representation = GoogleAPI::Apis::ClassroomV1::CourseWork::Representation
           command.request_object = course_work_object
-          command.response_representation = Google::Apis::ClassroomV1::CourseWork::Representation
-          command.response_class = Google::Apis::ClassroomV1::CourseWork
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::CourseWork::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::CourseWork
           command.params['courseId'] = course_id unless course_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -791,22 +791,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::CourseWork] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::CourseWork] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::CourseWork]
+        # @return [GoogleAPI::Apis::ClassroomV1::CourseWork]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_course_work(course_id, id, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/courses/{courseId}/courseWork/{id}', options)
-          command.response_representation = Google::Apis::ClassroomV1::CourseWork::Representation
-          command.response_class = Google::Apis::ClassroomV1::CourseWork
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::CourseWork::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::CourseWork
           command.params['courseId'] = course_id unless course_id.nil?
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -845,22 +845,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::ListCourseWorkResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::ListCourseWorkResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::ListCourseWorkResponse]
+        # @return [GoogleAPI::Apis::ClassroomV1::ListCourseWorkResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_course_works(course_id, course_work_states: nil, order_by: nil, page_size: nil, page_token: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/courses/{courseId}/courseWork', options)
-          command.response_representation = Google::Apis::ClassroomV1::ListCourseWorkResponse::Representation
-          command.response_class = Google::Apis::ClassroomV1::ListCourseWorkResponse
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::ListCourseWorkResponse::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::ListCourseWorkResponse
           command.params['courseId'] = course_id unless course_id.nil?
           command.query['courseWorkStates'] = course_work_states unless course_work_states.nil?
           command.query['orderBy'] = order_by unless order_by.nil?
@@ -888,22 +888,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::StudentSubmission] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::StudentSubmission] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::StudentSubmission]
+        # @return [GoogleAPI::Apis::ClassroomV1::StudentSubmission]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_student_submission(course_id, course_work_id, id, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/courses/{courseId}/courseWork/{courseWorkId}/studentSubmissions/{id}', options)
-          command.response_representation = Google::Apis::ClassroomV1::StudentSubmission::Representation
-          command.response_class = Google::Apis::ClassroomV1::StudentSubmission
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::StudentSubmission::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::StudentSubmission
           command.params['courseId'] = course_id unless course_id.nil?
           command.params['courseWorkId'] = course_work_id unless course_work_id.nil?
           command.params['id'] = id unless id.nil?
@@ -929,7 +929,7 @@ module Google
         #   Identifier of the course work.
         # @param [String] id
         #   Identifier of the student submission.
-        # @param [Google::Apis::ClassroomV1::StudentSubmission] student_submission_object
+        # @param [GoogleAPI::Apis::ClassroomV1::StudentSubmission] student_submission_object
         # @param [String] update_mask
         #   Mask that identifies which fields on the student submission to update. This
         #   field is required to do an update. The update fails if invalid fields are
@@ -940,24 +940,24 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::StudentSubmission] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::StudentSubmission] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::StudentSubmission]
+        # @return [GoogleAPI::Apis::ClassroomV1::StudentSubmission]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_student_submission(course_id, course_work_id, id, student_submission_object = nil, update_mask: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:patch, 'v1/courses/{courseId}/courseWork/{courseWorkId}/studentSubmissions/{id}', options)
-          command.request_representation = Google::Apis::ClassroomV1::StudentSubmission::Representation
+          command.request_representation = GoogleAPI::Apis::ClassroomV1::StudentSubmission::Representation
           command.request_object = student_submission_object
-          command.response_representation = Google::Apis::ClassroomV1::StudentSubmission::Representation
-          command.response_class = Google::Apis::ClassroomV1::StudentSubmission
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::StudentSubmission::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::StudentSubmission
           command.params['courseId'] = course_id unless course_id.nil?
           command.params['courseWorkId'] = course_work_id unless course_work_id.nil?
           command.params['id'] = id unless id.nil?
@@ -1008,22 +1008,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::ListStudentSubmissionsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::ListStudentSubmissionsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::ListStudentSubmissionsResponse]
+        # @return [GoogleAPI::Apis::ClassroomV1::ListStudentSubmissionsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_student_submissions(course_id, course_work_id, user_id: nil, states: nil, late: nil, page_size: nil, page_token: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/courses/{courseId}/courseWork/{courseWorkId}/studentSubmissions', options)
-          command.response_representation = Google::Apis::ClassroomV1::ListStudentSubmissionsResponse::Representation
-          command.response_class = Google::Apis::ClassroomV1::ListStudentSubmissionsResponse
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::ListStudentSubmissionsResponse::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::ListStudentSubmissionsResponse
           command.params['courseId'] = course_id unless course_id.nil?
           command.params['courseWorkId'] = course_work_id unless course_work_id.nil?
           command.query['userId'] = user_id unless user_id.nil?
@@ -1054,30 +1054,30 @@ module Google
         #   Identifier of the course work.
         # @param [String] id
         #   Identifier of the student submission.
-        # @param [Google::Apis::ClassroomV1::TurnInStudentSubmissionRequest] turn_in_student_submission_request_object
+        # @param [GoogleAPI::Apis::ClassroomV1::TurnInStudentSubmissionRequest] turn_in_student_submission_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Empty] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Empty] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Empty]
+        # @return [GoogleAPI::Apis::ClassroomV1::Empty]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def turn_in_student_submission(course_id, course_work_id, id, turn_in_student_submission_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/courses/{courseId}/courseWork/{courseWorkId}/studentSubmissions/{id}:turnIn', options)
-          command.request_representation = Google::Apis::ClassroomV1::TurnInStudentSubmissionRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ClassroomV1::TurnInStudentSubmissionRequest::Representation
           command.request_object = turn_in_student_submission_request_object
-          command.response_representation = Google::Apis::ClassroomV1::Empty::Representation
-          command.response_class = Google::Apis::ClassroomV1::Empty
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Empty::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Empty
           command.params['courseId'] = course_id unless course_id.nil?
           command.params['courseWorkId'] = course_work_id unless course_work_id.nil?
           command.params['id'] = id unless id.nil?
@@ -1106,30 +1106,30 @@ module Google
         #   Identifier of the course work.
         # @param [String] id
         #   Identifier of the student submission.
-        # @param [Google::Apis::ClassroomV1::ReclaimStudentSubmissionRequest] reclaim_student_submission_request_object
+        # @param [GoogleAPI::Apis::ClassroomV1::ReclaimStudentSubmissionRequest] reclaim_student_submission_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Empty] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Empty] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Empty]
+        # @return [GoogleAPI::Apis::ClassroomV1::Empty]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def reclaim_student_submission(course_id, course_work_id, id, reclaim_student_submission_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/courses/{courseId}/courseWork/{courseWorkId}/studentSubmissions/{id}:reclaim', options)
-          command.request_representation = Google::Apis::ClassroomV1::ReclaimStudentSubmissionRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ClassroomV1::ReclaimStudentSubmissionRequest::Representation
           command.request_object = reclaim_student_submission_request_object
-          command.response_representation = Google::Apis::ClassroomV1::Empty::Representation
-          command.response_class = Google::Apis::ClassroomV1::Empty
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Empty::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Empty
           command.params['courseId'] = course_id unless course_id.nil?
           command.params['courseWorkId'] = course_work_id unless course_work_id.nil?
           command.params['id'] = id unless id.nil?
@@ -1158,30 +1158,30 @@ module Google
         #   Identifier of the course work.
         # @param [String] id
         #   Identifier of the student submission.
-        # @param [Google::Apis::ClassroomV1::ReturnStudentSubmissionRequest] return_student_submission_request_object
+        # @param [GoogleAPI::Apis::ClassroomV1::ReturnStudentSubmissionRequest] return_student_submission_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Empty] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Empty] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Empty]
+        # @return [GoogleAPI::Apis::ClassroomV1::Empty]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def return_student_submission(course_id, course_work_id, id, return_student_submission_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/courses/{courseId}/courseWork/{courseWorkId}/studentSubmissions/{id}:return', options)
-          command.request_representation = Google::Apis::ClassroomV1::ReturnStudentSubmissionRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ClassroomV1::ReturnStudentSubmissionRequest::Representation
           command.request_object = return_student_submission_request_object
-          command.response_representation = Google::Apis::ClassroomV1::Empty::Representation
-          command.response_class = Google::Apis::ClassroomV1::Empty
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Empty::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Empty
           command.params['courseId'] = course_id unless course_id.nil?
           command.params['courseWorkId'] = course_work_id unless course_work_id.nil?
           command.params['id'] = id unless id.nil?
@@ -1207,30 +1207,30 @@ module Google
         #   Identifier of the course work.
         # @param [String] id
         #   Identifier of the student submission.
-        # @param [Google::Apis::ClassroomV1::ModifyAttachmentsRequest] modify_attachments_request_object
+        # @param [GoogleAPI::Apis::ClassroomV1::ModifyAttachmentsRequest] modify_attachments_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::StudentSubmission] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::StudentSubmission] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::StudentSubmission]
+        # @return [GoogleAPI::Apis::ClassroomV1::StudentSubmission]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def modify_student_submission_attachments(course_id, course_work_id, id, modify_attachments_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/courses/{courseId}/courseWork/{courseWorkId}/studentSubmissions/{id}:modifyAttachments', options)
-          command.request_representation = Google::Apis::ClassroomV1::ModifyAttachmentsRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ClassroomV1::ModifyAttachmentsRequest::Representation
           command.request_object = modify_attachments_request_object
-          command.response_representation = Google::Apis::ClassroomV1::StudentSubmission::Representation
-          command.response_class = Google::Apis::ClassroomV1::StudentSubmission
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::StudentSubmission::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::StudentSubmission
           command.params['courseId'] = course_id unless course_id.nil?
           command.params['courseWorkId'] = course_work_id unless course_work_id.nil?
           command.params['id'] = id unless id.nil?
@@ -1248,30 +1248,30 @@ module Google
         # user already has this role or a role with greater permissions. * `
         # ALREADY_EXISTS` if an invitation for the specified user and course already
         # exists.
-        # @param [Google::Apis::ClassroomV1::Invitation] invitation_object
+        # @param [GoogleAPI::Apis::ClassroomV1::Invitation] invitation_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Invitation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Invitation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Invitation]
+        # @return [GoogleAPI::Apis::ClassroomV1::Invitation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_invitation(invitation_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/invitations', options)
-          command.request_representation = Google::Apis::ClassroomV1::Invitation::Representation
+          command.request_representation = GoogleAPI::Apis::ClassroomV1::Invitation::Representation
           command.request_object = invitation_object
-          command.response_representation = Google::Apis::ClassroomV1::Invitation::Representation
-          command.response_class = Google::Apis::ClassroomV1::Invitation
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Invitation::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Invitation
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           execute_or_queue_command(command, &block)
@@ -1288,22 +1288,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Invitation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Invitation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Invitation]
+        # @return [GoogleAPI::Apis::ClassroomV1::Invitation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_invitation(id, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/invitations/{id}', options)
-          command.response_representation = Google::Apis::ClassroomV1::Invitation::Representation
-          command.response_class = Google::Apis::ClassroomV1::Invitation
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Invitation::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Invitation
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -1321,22 +1321,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Empty] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Empty] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Empty]
+        # @return [GoogleAPI::Apis::ClassroomV1::Empty]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_invitation(id, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'v1/invitations/{id}', options)
-          command.response_representation = Google::Apis::ClassroomV1::Empty::Representation
-          command.response_class = Google::Apis::ClassroomV1::Empty
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Empty::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Empty
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -1368,22 +1368,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::ListInvitationsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::ListInvitationsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::ListInvitationsResponse]
+        # @return [GoogleAPI::Apis::ClassroomV1::ListInvitationsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_invitations(user_id: nil, course_id: nil, page_size: nil, page_token: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/invitations', options)
-          command.response_representation = Google::Apis::ClassroomV1::ListInvitationsResponse::Representation
-          command.response_class = Google::Apis::ClassroomV1::ListInvitationsResponse
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::ListInvitationsResponse::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::ListInvitationsResponse
           command.query['userId'] = user_id unless user_id.nil?
           command.query['courseId'] = course_id unless course_id.nil?
           command.query['pageSize'] = page_size unless page_size.nil?
@@ -1408,22 +1408,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::Empty] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::Empty] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::Empty]
+        # @return [GoogleAPI::Apis::ClassroomV1::Empty]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def accept_invitation(id, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/invitations/{id}:accept', options)
-          command.response_representation = Google::Apis::ClassroomV1::Empty::Representation
-          command.response_class = Google::Apis::ClassroomV1::Empty
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::Empty::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::Empty
           command.params['id'] = id unless id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -1442,22 +1442,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ClassroomV1::UserProfile] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ClassroomV1::UserProfile] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ClassroomV1::UserProfile]
+        # @return [GoogleAPI::Apis::ClassroomV1::UserProfile]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_user_profile(user_id, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/userProfiles/{userId}', options)
-          command.response_representation = Google::Apis::ClassroomV1::UserProfile::Representation
-          command.response_class = Google::Apis::ClassroomV1::UserProfile
+          command.response_representation = GoogleAPI::Apis::ClassroomV1::UserProfile::Representation
+          command.response_class = GoogleAPI::Apis::ClassroomV1::UserProfile
           command.params['userId'] = user_id unless user_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?

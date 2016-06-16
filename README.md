@@ -36,7 +36,7 @@ To use an API, include the corresponding generated file and instantiate the serv
 ```ruby
 require 'google/apis/drive_v2'
 
-Drive = Google::Apis::DriveV2 # Alias the module
+Drive = GoogleAPI::Apis::DriveV2 # Alias the module
 drive = Drive::DriveService.new
 drive.authorization = ... # See Googleauth or Signet libraries
 
@@ -69,12 +69,12 @@ retried from the last received byte.
 ### Errors & Retries
 
 Retries are disabled by default, but enabling retries is strongly encouraged. The number of retries can be configured
-via `Google::Apis::RequestOptions`. Any number greater than 0 will enable retries.
+via `GoogleAPI::Apis::RequestOptions`. Any number greater than 0 will enable retries.
 
 To enable retries for all services:
 
 ```ruby
-Google::Apis::RequestOptions.default.retries = 5
+GoogleAPI::Apis::RequestOptions.default.retries = 5
 ```
 
 With retries enabled globally, retries can be disabled for specific calls by including a retry value of 0 in the
@@ -207,14 +207,14 @@ Authorization can be specified for the entire client, for an individual service 
 Set authorization for all service:
 
 ```ruby
-Google::Apis::RequestOptions.default.authorization = authorization
+GoogleAPI::Apis::RequestOptions.default.authorization = authorization
 # Services instantiated after this will inherit the authorization
 ```
 
 On a per-service level:
 
 ```ruby
-drive = Google::Apis::DriveV2::DriveService.new
+drive = GoogleAPI::Apis::DriveV2::DriveService.new
 drive.authorization = authorization
 
 # All requests made with this service will use the same authorization
@@ -234,7 +234,7 @@ the `key` attribute of the service instance. For example:
 ```ruby
 require 'google/apis/translate_v2'
 
-translate = Google::Apis::TranslateV2::TranslateService.new
+translate = GoogleAPI::Apis::TranslateV2::TranslateService.new
 translate.key = 'YOUR_API_KEY_HERE'
 result = translate.list_translations('Hello world!', 'es', source: 'en')
 puts result.translations.first.translated_text
@@ -259,7 +259,7 @@ The client includes a `Logger` instance that can be used to capture debugging in
 To set the logging level for the client:
 
 ```ruby
-Google::Apis.logger.level = Logger::DEBUG
+GoogleAPI::Apis.logger.level = Logger::DEBUG
 ```
 
 When running in a Rails environment, the client will default to using `::Rails.logger`. If you
@@ -268,7 +268,7 @@ prefer to use a separate logger instance for API calls, this can be changed via 
 The first is to provide a new logger instance:
 
 ```ruby
-Google::Apis.logger = Logger.new(STDERR)
+GoogleAPI::Apis.logger = Logger.new(STDERR)
 ```
 
 The second is to set the environment variable `GOOGLE_API_USE_RAILS_LOGGER` to any value other than `'true'`

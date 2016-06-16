@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module MirrorV1
       
       # Represents an account passed into the Account Manager on Glass.
       class Account
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `authTokens`
-        # @return [Array<Google::Apis::MirrorV1::AuthToken>]
+        # @return [Array<GoogleAPI::Apis::MirrorV1::AuthToken>]
         attr_accessor :auth_tokens
       
         # 
@@ -43,7 +43,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `userData`
-        # @return [Array<Google::Apis::MirrorV1::UserData>]
+        # @return [Array<GoogleAPI::Apis::MirrorV1::UserData>]
         attr_accessor :user_data
       
         def initialize(**args)
@@ -62,7 +62,7 @@ module Google
       # Represents media content, such as a photo, that can be attached to a timeline
       # item.
       class Attachment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The MIME type of the attachment.
         # Corresponds to the JSON property `contentType`
@@ -103,11 +103,11 @@ module Google
       # A list of Attachments. This is the response from the server to GET requests on
       # the attachments collection.
       class ListAttachmentsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of attachments.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::MirrorV1::Attachment>]
+        # @return [Array<GoogleAPI::Apis::MirrorV1::Attachment>]
         attr_accessor :items
       
         # The type of resource. This is always mirror#attachmentsList.
@@ -128,7 +128,7 @@ module Google
       
       # 
       class AuthToken
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `authToken`
@@ -153,7 +153,7 @@ module Google
       
       # A single menu command that is part of a Contact.
       class Command
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of operation this command corresponds to. Allowed values are:
         # - TAKE_A_NOTE - Shares a timeline item with the transcription of user speech
@@ -176,13 +176,13 @@ module Google
       
       # A person or group that can be used as a creator or a contact.
       class Contact
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of voice menu commands that a contact can handle. Glass shows up to
         # three contacts for each voice menu command. If there are more than that, the
         # three contacts with the highest priority are shown for that particular command.
         # Corresponds to the JSON property `acceptCommands`
-        # @return [Array<Google::Apis::MirrorV1::Command>]
+        # @return [Array<GoogleAPI::Apis::MirrorV1::Command>]
         attr_accessor :accept_commands
       
         # A list of MIME types that a contact supports. The contact will be shown to the
@@ -279,11 +279,11 @@ module Google
       # A list of Contacts representing contacts. This is the response from the server
       # to GET requests on the contacts collection.
       class ListContactsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Contact list.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::MirrorV1::Contact>]
+        # @return [Array<GoogleAPI::Apis::MirrorV1::Contact>]
         attr_accessor :items
       
         # The type of resource. This is always mirror#contacts.
@@ -304,7 +304,7 @@ module Google
       
       # A geographic location that can be associated with a timeline item.
       class Location
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The accuracy of the location fix in meters.
         # Corresponds to the JSON property `accuracy`
@@ -367,11 +367,11 @@ module Google
       # A list of Locations. This is the response from the server to GET requests on
       # the locations collection.
       class ListLocationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of locations.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::MirrorV1::Location>]
+        # @return [Array<GoogleAPI::Apis::MirrorV1::Location>]
         attr_accessor :items
       
         # The type of resource. This is always mirror#locationsList.
@@ -392,7 +392,7 @@ module Google
       
       # A custom menu item that can be presented to the user by a timeline item.
       class MenuItem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Controls the behavior when the user picks the menu option. Allowed values are:
         # 
@@ -465,7 +465,7 @@ module Google
         # in each of its states. A value for the DEFAULT state must be provided. If the
         # PENDING or CONFIRMED states are missing, they will not be shown.
         # Corresponds to the JSON property `values`
-        # @return [Array<Google::Apis::MirrorV1::MenuValue>]
+        # @return [Array<GoogleAPI::Apis::MirrorV1::MenuValue>]
         attr_accessor :values
       
         def initialize(**args)
@@ -485,7 +485,7 @@ module Google
       
       # A single value that is part of a MenuItem.
       class MenuValue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name to display for the menu item. If you specify this property for a
         # built-in menu item, the default contextual voice command for that menu item is
@@ -523,7 +523,7 @@ module Google
       
       # A notification delivered by the API.
       class Notification
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The collection that generated the notification.
         # Corresponds to the JSON property `collection`
@@ -542,7 +542,7 @@ module Google
       
         # A list of actions taken by the user that triggered the notification.
         # Corresponds to the JSON property `userActions`
-        # @return [Array<Google::Apis::MirrorV1::UserAction>]
+        # @return [Array<GoogleAPI::Apis::MirrorV1::UserAction>]
         attr_accessor :user_actions
       
         # The user token provided by the service when it subscribed for notifications.
@@ -573,7 +573,7 @@ module Google
       
       # Controls how notifications for a timeline item are presented to the user.
       class NotificationConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The time at which the notification should be delivered.
         # Corresponds to the JSON property `deliveryTime`
@@ -600,7 +600,7 @@ module Google
       
       # A setting for Glass.
       class Setting
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The setting's ID. The following IDs are valid:
         # - locale - The key to the user’s language/locale (BCP 47 identifier) that
@@ -635,7 +635,7 @@ module Google
       
       # A subscription to events on a collection.
       class Subscription
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The URL where notifications should be delivered (must start with https://).
         # Corresponds to the JSON property `callbackUrl`
@@ -663,7 +663,7 @@ module Google
       
         # A notification delivered by the API.
         # Corresponds to the JSON property `notification`
-        # @return [Google::Apis::MirrorV1::Notification]
+        # @return [GoogleAPI::Apis::MirrorV1::Notification]
         attr_accessor :notification
       
         # A list of operations that should be subscribed to. An empty list indicates
@@ -716,11 +716,11 @@ module Google
       # A list of Subscriptions. This is the response from the server to GET requests
       # on the subscription collection.
       class ListSubscriptionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of subscriptions.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::MirrorV1::Subscription>]
+        # @return [Array<GoogleAPI::Apis::MirrorV1::Subscription>]
         attr_accessor :items
       
         # The type of resource. This is always mirror#subscriptionsList.
@@ -742,7 +742,7 @@ module Google
       # Each item in the user's timeline is represented as a TimelineItem JSON
       # structure, described below.
       class TimelineItem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of media attachments associated with this item. As a convenience, you
         # can refer to attachments in your HTML payloads with the attachment or cid
@@ -752,7 +752,7 @@ module Google
         # - cid: <img src="cid:attachment_id"> where attachment_id is the ID of the
         # attachment.
         # Corresponds to the JSON property `attachments`
-        # @return [Array<Google::Apis::MirrorV1::Attachment>]
+        # @return [Array<GoogleAPI::Apis::MirrorV1::Attachment>]
         attr_accessor :attachments
       
         # The bundle ID for this item. Services can specify a bundleId to group many
@@ -774,7 +774,7 @@ module Google
       
         # A person or group that can be used as a creator or a contact.
         # Corresponds to the JSON property `creator`
-        # @return [Google::Apis::MirrorV1::Contact]
+        # @return [GoogleAPI::Apis::MirrorV1::Contact]
         attr_accessor :creator
       
         # The time that should be displayed when this item is viewed in the timeline,
@@ -864,18 +864,18 @@ module Google
       
         # A geographic location that can be associated with a timeline item.
         # Corresponds to the JSON property `location`
-        # @return [Google::Apis::MirrorV1::Location]
+        # @return [GoogleAPI::Apis::MirrorV1::Location]
         attr_accessor :location
       
         # A list of menu items that will be presented to the user when this item is
         # selected in the timeline.
         # Corresponds to the JSON property `menuItems`
-        # @return [Array<Google::Apis::MirrorV1::MenuItem>]
+        # @return [Array<GoogleAPI::Apis::MirrorV1::MenuItem>]
         attr_accessor :menu_items
       
         # Controls how notifications for a timeline item are presented to the user.
         # Corresponds to the JSON property `notification`
-        # @return [Google::Apis::MirrorV1::NotificationConfig]
+        # @return [GoogleAPI::Apis::MirrorV1::NotificationConfig]
         attr_accessor :notification
       
         # For pinned items, this determines the order in which the item is displayed in
@@ -887,7 +887,7 @@ module Google
       
         # A list of users or groups that this item has been shared with.
         # Corresponds to the JSON property `recipients`
-        # @return [Array<Google::Apis::MirrorV1::Contact>]
+        # @return [Array<GoogleAPI::Apis::MirrorV1::Contact>]
         attr_accessor :recipients
       
         # A URL that can be used to retrieve this item.
@@ -977,11 +977,11 @@ module Google
       # A list of timeline items. This is the response from the server to GET requests
       # on the timeline collection.
       class ListTimelineResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Items in the timeline.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::MirrorV1::TimelineItem>]
+        # @return [Array<GoogleAPI::Apis::MirrorV1::TimelineItem>]
         attr_accessor :items
       
         # The type of resource. This is always mirror#timeline.
@@ -1009,7 +1009,7 @@ module Google
       
       # Represents an action taken by the user that triggered a notification.
       class UserAction
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An optional payload for the action.
         # For actions of type CUSTOM, this is the ID of the custom menu item that was
@@ -1045,7 +1045,7 @@ module Google
       
       # 
       class UserData
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `key`

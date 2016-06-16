@@ -18,155 +18,155 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CloudmonitoringV2beta2
       
       class DeleteMetricDescriptorResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListMetricDescriptorsRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListMetricDescriptorsResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListTimeseriesDescriptorsRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListTimeseriesDescriptorsResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListTimeseriesRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListTimeseriesResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class MetricDescriptor
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class MetricDescriptorLabelDescriptor
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class MetricDescriptorTypeDescriptor
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Point
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class PointDistribution
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class PointDistributionBucket
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class PointDistributionOverflowBucket
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class PointDistributionUnderflowBucket
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Timeseries
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TimeseriesDescriptor
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TimeseriesDescriptorLabel
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TimeseriesPoint
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class WriteTimeseriesRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class WriteTimeseriesResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DeleteMetricDescriptorResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
         end
       end
       
       class ListMetricDescriptorsRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
         end
       end
       
       class ListMetricDescriptorsResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
-          collection :metrics, as: 'metrics', class: Google::Apis::CloudmonitoringV2beta2::MetricDescriptor, decorator: Google::Apis::CloudmonitoringV2beta2::MetricDescriptor::Representation
+          collection :metrics, as: 'metrics', class: GoogleAPI::Apis::CloudmonitoringV2beta2::MetricDescriptor, decorator: GoogleAPI::Apis::CloudmonitoringV2beta2::MetricDescriptor::Representation
       
           property :next_page_token, as: 'nextPageToken'
         end
@@ -174,19 +174,19 @@ module Google
       
       class ListTimeseriesDescriptorsRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
         end
       end
       
       class ListTimeseriesDescriptorsResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
           property :oldest, as: 'oldest', type: DateTime
       
-          collection :timeseries, as: 'timeseries', class: Google::Apis::CloudmonitoringV2beta2::TimeseriesDescriptor, decorator: Google::Apis::CloudmonitoringV2beta2::TimeseriesDescriptor::Representation
+          collection :timeseries, as: 'timeseries', class: GoogleAPI::Apis::CloudmonitoringV2beta2::TimeseriesDescriptor, decorator: GoogleAPI::Apis::CloudmonitoringV2beta2::TimeseriesDescriptor::Representation
       
           property :youngest, as: 'youngest', type: DateTime
       
@@ -195,19 +195,19 @@ module Google
       
       class ListTimeseriesRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
         end
       end
       
       class ListTimeseriesResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
           property :oldest, as: 'oldest', type: DateTime
       
-          collection :timeseries, as: 'timeseries', class: Google::Apis::CloudmonitoringV2beta2::Timeseries, decorator: Google::Apis::CloudmonitoringV2beta2::Timeseries::Representation
+          collection :timeseries, as: 'timeseries', class: GoogleAPI::Apis::CloudmonitoringV2beta2::Timeseries, decorator: GoogleAPI::Apis::CloudmonitoringV2beta2::Timeseries::Representation
       
           property :youngest, as: 'youngest', type: DateTime
       
@@ -216,20 +216,20 @@ module Google
       
       class MetricDescriptor
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :description, as: 'description'
-          collection :labels, as: 'labels', class: Google::Apis::CloudmonitoringV2beta2::MetricDescriptorLabelDescriptor, decorator: Google::Apis::CloudmonitoringV2beta2::MetricDescriptorLabelDescriptor::Representation
+          collection :labels, as: 'labels', class: GoogleAPI::Apis::CloudmonitoringV2beta2::MetricDescriptorLabelDescriptor, decorator: GoogleAPI::Apis::CloudmonitoringV2beta2::MetricDescriptorLabelDescriptor::Representation
       
           property :name, as: 'name'
           property :project, as: 'project'
-          property :type_descriptor, as: 'typeDescriptor', class: Google::Apis::CloudmonitoringV2beta2::MetricDescriptorTypeDescriptor, decorator: Google::Apis::CloudmonitoringV2beta2::MetricDescriptorTypeDescriptor::Representation
+          property :type_descriptor, as: 'typeDescriptor', class: GoogleAPI::Apis::CloudmonitoringV2beta2::MetricDescriptorTypeDescriptor, decorator: GoogleAPI::Apis::CloudmonitoringV2beta2::MetricDescriptorTypeDescriptor::Representation
       
         end
       end
       
       class MetricDescriptorLabelDescriptor
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :description, as: 'description'
           property :key, as: 'key'
         end
@@ -237,7 +237,7 @@ module Google
       
       class MetricDescriptorTypeDescriptor
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :metric_type, as: 'metricType'
           property :value_type, as: 'valueType'
         end
@@ -245,9 +245,9 @@ module Google
       
       class Point
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :bool_value, as: 'boolValue'
-          property :distribution_value, as: 'distributionValue', class: Google::Apis::CloudmonitoringV2beta2::PointDistribution, decorator: Google::Apis::CloudmonitoringV2beta2::PointDistribution::Representation
+          property :distribution_value, as: 'distributionValue', class: GoogleAPI::Apis::CloudmonitoringV2beta2::PointDistribution, decorator: GoogleAPI::Apis::CloudmonitoringV2beta2::PointDistribution::Representation
       
           property :double_value, as: 'doubleValue'
           property :end, as: 'end', type: DateTime
@@ -261,19 +261,19 @@ module Google
       
       class PointDistribution
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :buckets, as: 'buckets', class: Google::Apis::CloudmonitoringV2beta2::PointDistributionBucket, decorator: Google::Apis::CloudmonitoringV2beta2::PointDistributionBucket::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :buckets, as: 'buckets', class: GoogleAPI::Apis::CloudmonitoringV2beta2::PointDistributionBucket, decorator: GoogleAPI::Apis::CloudmonitoringV2beta2::PointDistributionBucket::Representation
       
-          property :overflow_bucket, as: 'overflowBucket', class: Google::Apis::CloudmonitoringV2beta2::PointDistributionOverflowBucket, decorator: Google::Apis::CloudmonitoringV2beta2::PointDistributionOverflowBucket::Representation
+          property :overflow_bucket, as: 'overflowBucket', class: GoogleAPI::Apis::CloudmonitoringV2beta2::PointDistributionOverflowBucket, decorator: GoogleAPI::Apis::CloudmonitoringV2beta2::PointDistributionOverflowBucket::Representation
       
-          property :underflow_bucket, as: 'underflowBucket', class: Google::Apis::CloudmonitoringV2beta2::PointDistributionUnderflowBucket, decorator: Google::Apis::CloudmonitoringV2beta2::PointDistributionUnderflowBucket::Representation
+          property :underflow_bucket, as: 'underflowBucket', class: GoogleAPI::Apis::CloudmonitoringV2beta2::PointDistributionUnderflowBucket, decorator: GoogleAPI::Apis::CloudmonitoringV2beta2::PointDistributionUnderflowBucket::Representation
       
         end
       end
       
       class PointDistributionBucket
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :count, as: 'count'
           property :lower_bound, as: 'lowerBound'
           property :upper_bound, as: 'upperBound'
@@ -282,7 +282,7 @@ module Google
       
       class PointDistributionOverflowBucket
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :count, as: 'count'
           property :lower_bound, as: 'lowerBound'
         end
@@ -290,7 +290,7 @@ module Google
       
       class PointDistributionUnderflowBucket
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :count, as: 'count'
           property :upper_bound, as: 'upperBound'
         end
@@ -298,17 +298,17 @@ module Google
       
       class Timeseries
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :points, as: 'points', class: Google::Apis::CloudmonitoringV2beta2::Point, decorator: Google::Apis::CloudmonitoringV2beta2::Point::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :points, as: 'points', class: GoogleAPI::Apis::CloudmonitoringV2beta2::Point, decorator: GoogleAPI::Apis::CloudmonitoringV2beta2::Point::Representation
       
-          property :timeseries_desc, as: 'timeseriesDesc', class: Google::Apis::CloudmonitoringV2beta2::TimeseriesDescriptor, decorator: Google::Apis::CloudmonitoringV2beta2::TimeseriesDescriptor::Representation
+          property :timeseries_desc, as: 'timeseriesDesc', class: GoogleAPI::Apis::CloudmonitoringV2beta2::TimeseriesDescriptor, decorator: GoogleAPI::Apis::CloudmonitoringV2beta2::TimeseriesDescriptor::Representation
       
         end
       end
       
       class TimeseriesDescriptor
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           hash :labels, as: 'labels'
           property :metric, as: 'metric'
           property :project, as: 'project'
@@ -317,7 +317,7 @@ module Google
       
       class TimeseriesDescriptorLabel
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :key, as: 'key'
           property :value, as: 'value'
         end
@@ -325,26 +325,26 @@ module Google
       
       class TimeseriesPoint
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :point, as: 'point', class: Google::Apis::CloudmonitoringV2beta2::Point, decorator: Google::Apis::CloudmonitoringV2beta2::Point::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :point, as: 'point', class: GoogleAPI::Apis::CloudmonitoringV2beta2::Point, decorator: GoogleAPI::Apis::CloudmonitoringV2beta2::Point::Representation
       
-          property :timeseries_desc, as: 'timeseriesDesc', class: Google::Apis::CloudmonitoringV2beta2::TimeseriesDescriptor, decorator: Google::Apis::CloudmonitoringV2beta2::TimeseriesDescriptor::Representation
+          property :timeseries_desc, as: 'timeseriesDesc', class: GoogleAPI::Apis::CloudmonitoringV2beta2::TimeseriesDescriptor, decorator: GoogleAPI::Apis::CloudmonitoringV2beta2::TimeseriesDescriptor::Representation
       
         end
       end
       
       class WriteTimeseriesRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           hash :common_labels, as: 'commonLabels'
-          collection :timeseries, as: 'timeseries', class: Google::Apis::CloudmonitoringV2beta2::TimeseriesPoint, decorator: Google::Apis::CloudmonitoringV2beta2::TimeseriesPoint::Representation
+          collection :timeseries, as: 'timeseries', class: GoogleAPI::Apis::CloudmonitoringV2beta2::TimeseriesPoint, decorator: GoogleAPI::Apis::CloudmonitoringV2beta2::TimeseriesPoint::Representation
       
         end
       end
       
       class WriteTimeseriesResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
         end
       end

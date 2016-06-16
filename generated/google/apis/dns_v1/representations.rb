@@ -18,64 +18,64 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module DnsV1
       
       class Change
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListChangesResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ManagedZone
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListManagedZonesResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Project
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Quota
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ResourceRecordSet
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListResourceRecordSetsResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Change
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :additions, as: 'additions', class: Google::Apis::DnsV1::ResourceRecordSet, decorator: Google::Apis::DnsV1::ResourceRecordSet::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :additions, as: 'additions', class: GoogleAPI::Apis::DnsV1::ResourceRecordSet, decorator: GoogleAPI::Apis::DnsV1::ResourceRecordSet::Representation
       
-          collection :deletions, as: 'deletions', class: Google::Apis::DnsV1::ResourceRecordSet, decorator: Google::Apis::DnsV1::ResourceRecordSet::Representation
+          collection :deletions, as: 'deletions', class: GoogleAPI::Apis::DnsV1::ResourceRecordSet, decorator: GoogleAPI::Apis::DnsV1::ResourceRecordSet::Representation
       
           property :id, as: 'id'
           property :kind, as: 'kind'
@@ -86,8 +86,8 @@ module Google
       
       class ListChangesResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :changes, as: 'changes', class: Google::Apis::DnsV1::Change, decorator: Google::Apis::DnsV1::Change::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :changes, as: 'changes', class: GoogleAPI::Apis::DnsV1::Change, decorator: GoogleAPI::Apis::DnsV1::Change::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -96,7 +96,7 @@ module Google
       
       class ManagedZone
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :creation_time, as: 'creationTime'
           property :description, as: 'description'
           property :dns_name, as: 'dnsName'
@@ -110,9 +110,9 @@ module Google
       
       class ListManagedZonesResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
-          collection :managed_zones, as: 'managedZones', class: Google::Apis::DnsV1::ManagedZone, decorator: Google::Apis::DnsV1::ManagedZone::Representation
+          collection :managed_zones, as: 'managedZones', class: GoogleAPI::Apis::DnsV1::ManagedZone, decorator: GoogleAPI::Apis::DnsV1::ManagedZone::Representation
       
           property :next_page_token, as: 'nextPageToken'
         end
@@ -120,18 +120,18 @@ module Google
       
       class Project
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
           property :kind, as: 'kind'
           property :number, as: 'number'
-          property :quota, as: 'quota', class: Google::Apis::DnsV1::Quota, decorator: Google::Apis::DnsV1::Quota::Representation
+          property :quota, as: 'quota', class: GoogleAPI::Apis::DnsV1::Quota, decorator: GoogleAPI::Apis::DnsV1::Quota::Representation
       
         end
       end
       
       class Quota
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
           property :managed_zones, as: 'managedZones'
           property :resource_records_per_rrset, as: 'resourceRecordsPerRrset'
@@ -144,7 +144,7 @@ module Google
       
       class ResourceRecordSet
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
           property :name, as: 'name'
           collection :rrdatas, as: 'rrdatas'
@@ -155,10 +155,10 @@ module Google
       
       class ListResourceRecordSetsResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
-          collection :rrsets, as: 'rrsets', class: Google::Apis::DnsV1::ResourceRecordSet, decorator: Google::Apis::DnsV1::ResourceRecordSet::Representation
+          collection :rrsets, as: 'rrsets', class: GoogleAPI::Apis::DnsV1::ResourceRecordSet, decorator: GoogleAPI::Apis::DnsV1::ResourceRecordSet::Representation
       
         end
       end

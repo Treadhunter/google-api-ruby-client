@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module TranslateV2
       
       # 
       class ListDetectionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A detections contains detection results of several text
         # Corresponds to the JSON property `detections`
-        # @return [Array<Array<Google::Apis::TranslateV2::DetectionsResource>>]
+        # @return [Array<Array<GoogleAPI::Apis::TranslateV2::DetectionsResource>>]
         attr_accessor :detections
       
         def initialize(**args)
@@ -43,7 +43,7 @@ module Google
       
       # 
       class DetectionsResource
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The confidence of the detection resul of this language.
         # Corresponds to the JSON property `confidence`
@@ -75,14 +75,14 @@ module Google
       
       # 
       class ListLanguagesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of source/target languages supported by the translation API. If target
         # parameter is unspecified, the list is sorted by the ASCII code point order of
         # the language code. If target parameter is specified, the list is sorted by the
         # collation order of the language name in the target language.
         # Corresponds to the JSON property `languages`
-        # @return [Array<Google::Apis::TranslateV2::LanguagesResource>]
+        # @return [Array<GoogleAPI::Apis::TranslateV2::LanguagesResource>]
         attr_accessor :languages
       
         def initialize(**args)
@@ -97,7 +97,7 @@ module Google
       
       # 
       class LanguagesResource
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The language code.
         # Corresponds to the JSON property `language`
@@ -122,11 +122,11 @@ module Google
       
       # 
       class ListTranslationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Translations contains list of translation results of given text
         # Corresponds to the JSON property `translations`
-        # @return [Array<Google::Apis::TranslateV2::TranslationsResource>]
+        # @return [Array<GoogleAPI::Apis::TranslateV2::TranslationsResource>]
         attr_accessor :translations
       
         def initialize(**args)
@@ -141,7 +141,7 @@ module Google
       
       # 
       class TranslationsResource
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Detected source language if source parameter is unspecified.
         # Corresponds to the JSON property `detectedSourceLanguage`

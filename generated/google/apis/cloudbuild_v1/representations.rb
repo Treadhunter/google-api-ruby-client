@@ -18,85 +18,85 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CloudbuildV1
       
       class Status
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class BuildOperationMetadata
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Source
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Operation
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class BuiltImage
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class StorageSource
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Results
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Build
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class CancelBuildRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListOperationsResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class BuildStep
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListBuildsResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Status
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :code, as: 'code'
           collection :details, as: 'details'
           property :message, as: 'message'
@@ -105,24 +105,24 @@ module Google
       
       class BuildOperationMetadata
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :build, as: 'build', class: Google::Apis::CloudbuildV1::Build, decorator: Google::Apis::CloudbuildV1::Build::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :build, as: 'build', class: GoogleAPI::Apis::CloudbuildV1::Build, decorator: GoogleAPI::Apis::CloudbuildV1::Build::Representation
       
         end
       end
       
       class Source
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :storage_source, as: 'storageSource', class: Google::Apis::CloudbuildV1::StorageSource, decorator: Google::Apis::CloudbuildV1::StorageSource::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :storage_source, as: 'storageSource', class: GoogleAPI::Apis::CloudbuildV1::StorageSource, decorator: GoogleAPI::Apis::CloudbuildV1::StorageSource::Representation
       
         end
       end
       
       class Operation
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :error, as: 'error', class: Google::Apis::CloudbuildV1::Status, decorator: Google::Apis::CloudbuildV1::Status::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :error, as: 'error', class: GoogleAPI::Apis::CloudbuildV1::Status, decorator: GoogleAPI::Apis::CloudbuildV1::Status::Representation
       
           property :done, as: 'done'
           hash :metadata, as: 'metadata'
@@ -133,7 +133,7 @@ module Google
       
       class BuiltImage
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :digest, as: 'digest'
           property :name, as: 'name'
         end
@@ -141,7 +141,7 @@ module Google
       
       class StorageSource
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :bucket, as: 'bucket'
           property :generation, as: 'generation'
           property :object, as: 'object'
@@ -150,24 +150,24 @@ module Google
       
       class Results
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :images, as: 'images', class: Google::Apis::CloudbuildV1::BuiltImage, decorator: Google::Apis::CloudbuildV1::BuiltImage::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :images, as: 'images', class: GoogleAPI::Apis::CloudbuildV1::BuiltImage, decorator: GoogleAPI::Apis::CloudbuildV1::BuiltImage::Representation
       
         end
       end
       
       class Build
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          property :results, as: 'results', class: Google::Apis::CloudbuildV1::Results, decorator: Google::Apis::CloudbuildV1::Results::Representation
+          property :results, as: 'results', class: GoogleAPI::Apis::CloudbuildV1::Results, decorator: GoogleAPI::Apis::CloudbuildV1::Results::Representation
       
           property :status, as: 'status'
           property :finish_time, as: 'finishTime'
           property :timeout, as: 'timeout'
-          collection :steps, as: 'steps', class: Google::Apis::CloudbuildV1::BuildStep, decorator: Google::Apis::CloudbuildV1::BuildStep::Representation
+          collection :steps, as: 'steps', class: GoogleAPI::Apis::CloudbuildV1::BuildStep, decorator: GoogleAPI::Apis::CloudbuildV1::BuildStep::Representation
       
-          property :source, as: 'source', class: Google::Apis::CloudbuildV1::Source, decorator: Google::Apis::CloudbuildV1::Source::Representation
+          property :source, as: 'source', class: GoogleAPI::Apis::CloudbuildV1::Source, decorator: GoogleAPI::Apis::CloudbuildV1::Source::Representation
       
           property :create_time, as: 'createTime'
           property :status_detail, as: 'statusDetail'
@@ -180,22 +180,22 @@ module Google
       
       class CancelBuildRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
         end
       end
       
       class ListOperationsResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :next_page_token, as: 'nextPageToken'
-          collection :operations, as: 'operations', class: Google::Apis::CloudbuildV1::Operation, decorator: Google::Apis::CloudbuildV1::Operation::Representation
+          collection :operations, as: 'operations', class: GoogleAPI::Apis::CloudbuildV1::Operation, decorator: GoogleAPI::Apis::CloudbuildV1::Operation::Representation
       
         end
       end
       
       class BuildStep
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :args, as: 'args'
           property :dir, as: 'dir'
           property :name, as: 'name'
@@ -205,9 +205,9 @@ module Google
       
       class ListBuildsResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :next_page_token, as: 'nextPageToken'
-          collection :builds, as: 'builds', class: Google::Apis::CloudbuildV1::Build, decorator: Google::Apis::CloudbuildV1::Build::Representation
+          collection :builds, as: 'builds', class: GoogleAPI::Apis::CloudbuildV1::Build, decorator: GoogleAPI::Apis::CloudbuildV1::Build::Representation
       
         end
       end

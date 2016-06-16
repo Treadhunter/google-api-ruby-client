@@ -18,1309 +18,1309 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ComputeBeta
       
       class AccessConfig
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Address
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AddressAggregatedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AddressList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AddressesScopedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AttachedDisk
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AttachedDiskInitializeParams
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Autoscaler
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AutoscalerAggregatedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AutoscalerList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AutoscalersScopedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AutoscalingPolicy
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AutoscalingPolicyCpuUtilization
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AutoscalingPolicyCustomMetricUtilization
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AutoscalingPolicyLoadBalancingUtilization
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Backend
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class BackendService
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class BackendServiceGroupHealth
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class BackendServiceList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class CacheInvalidationRule
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class CustomerEncryptionKey
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class CustomerEncryptionKeyProtectedDisk
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DeprecationStatus
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Disk
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DiskAggregatedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DiskList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DiskMoveRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DiskType
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DiskTypeAggregatedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DiskTypeList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DiskTypesScopedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DisksResizeRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class DisksScopedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Firewall
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Allowed
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class FirewallList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ForwardingRule
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ForwardingRuleAggregatedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ForwardingRuleList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ForwardingRulesScopedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class GlobalSetLabelsRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class HealthCheckReference
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class HealthStatus
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class HostRule
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class HttpHealthCheck
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class HttpHealthCheckList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class HttpsHealthCheck
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class HttpsHealthCheckList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Image
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class RawDisk
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ImageList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Instance
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceAggregatedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroup
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupAggregatedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupManager
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupManagerActionsSummary
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupManagerAggregatedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupManagerAutoHealingPolicy
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupManagerList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupManagersAbandonInstancesRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupManagersDeleteInstancesRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupManagersListManagedInstancesResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupManagersRecreateInstancesRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupManagersResizeAdvancedRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupManagersScopedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupManagersSetAutoHealingRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupManagersSetInstanceTemplateRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupManagersSetTargetPoolsRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupsAddInstancesRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupsListInstances
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupsListInstancesRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupsRemoveInstancesRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupsScopedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceGroupsSetNamedPortsRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class MoveInstanceRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceProperties
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceReference
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceTemplate
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceTemplateList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstanceWithNamedPorts
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstancesScopedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstancesSetLabelsRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstancesSetMachineTypeRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class InstancesStartWithEncryptionKeyRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class License
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class MachineType
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class MachineTypeAggregatedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class MachineTypeList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class MachineTypesScopedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ManagedInstance
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ManagedInstanceLastAttempt
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Errors
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Error
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Metadata
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Item
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class NamedPort
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Network
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class NetworkInterface
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class NetworkList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Operation
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Error
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Error
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class OperationAggregatedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class OperationList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class OperationsScopedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class PathMatcher
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class PathRule
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Project
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Quota
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Region
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class RegionList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ResourceGroupReference
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Route
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class RouteList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Router
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class RouterAggregatedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class RouterBgp
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class RouterBgpPeer
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class RouterInterface
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class RouterList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class RouterStatus
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class RouterStatusBgpPeerStatus
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class RouterStatusResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class RoutersScopedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Scheduling
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SerialPortOutput
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ServiceAccount
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Snapshot
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SnapshotList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SslCertificate
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SslCertificateList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Subnetwork
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SubnetworkAggregatedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SubnetworkList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SubnetworksScopedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Tags
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetHttpProxy
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetHttpProxyList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetHttpsProxiesSetSslCertificatesRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetHttpsProxy
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetHttpsProxyList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetInstance
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetInstanceAggregatedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetInstanceList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetInstancesScopedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetPool
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetPoolAggregatedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetPoolInstanceHealth
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetPoolList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AddTargetPoolsHealthCheckRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AddTargetPoolsInstanceRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class RemoveTargetPoolsHealthCheckRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class RemoveTargetPoolsInstanceRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetPoolsScopedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetReference
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetVpnGateway
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetVpnGatewayAggregatedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetVpnGatewayList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TargetVpnGatewaysScopedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TestFailure
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TestPermissionsRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TestPermissionsResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UrlMap
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UrlMapList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UrlMapReference
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UrlMapTest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UrlMapValidationResult
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ValidateUrlMapsRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ValidateUrlMapsResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UsageExportLocation
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class VpnTunnel
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class VpnTunnelAggregatedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class VpnTunnelList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class VpnTunnelsScopedList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Warning
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
           class Datum
-            class Representation < Google::Apis::Core::JsonRepresentation; end
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
           
-            include Google::Apis::Core::JsonObjectSupport
+            include GoogleAPI::Apis::Core::JsonObjectSupport
           end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Zone
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ZoneList
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ZoneSetLabelsRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class AccessConfig
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
           property :name, as: 'name'
           property :nat_ip, as: 'natIP'
@@ -1330,7 +1330,7 @@ module Google
       
       class Address
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :address, as: 'address'
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
@@ -1346,9 +1346,9 @@ module Google
       
       class AddressAggregatedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          hash :items, as: 'items', class: Google::Apis::ComputeBeta::AddressesScopedList, decorator: Google::Apis::ComputeBeta::AddressesScopedList::Representation
+          hash :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::AddressesScopedList, decorator: GoogleAPI::Apis::ComputeBeta::AddressesScopedList::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -1358,9 +1358,9 @@ module Google
       
       class AddressList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::Address, decorator: Google::Apis::ComputeBeta::Address::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::Address, decorator: GoogleAPI::Apis::ComputeBeta::Address::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -1370,25 +1370,25 @@ module Google
       
       class AddressesScopedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :addresses, as: 'addresses', class: Google::Apis::ComputeBeta::Address, decorator: Google::Apis::ComputeBeta::Address::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :addresses, as: 'addresses', class: GoogleAPI::Apis::ComputeBeta::Address, decorator: GoogleAPI::Apis::ComputeBeta::Address::Representation
       
-          property :warning, as: 'warning', class: Google::Apis::ComputeBeta::AddressesScopedList::Warning, decorator: Google::Apis::ComputeBeta::AddressesScopedList::Warning::Representation
+          property :warning, as: 'warning', class: GoogleAPI::Apis::ComputeBeta::AddressesScopedList::Warning, decorator: GoogleAPI::Apis::ComputeBeta::AddressesScopedList::Warning::Representation
       
         end
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::ComputeBeta::AddressesScopedList::Warning::Datum, decorator: Google::Apis::ComputeBeta::AddressesScopedList::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::ComputeBeta::AddressesScopedList::Warning::Datum, decorator: GoogleAPI::Apis::ComputeBeta::AddressesScopedList::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -1398,14 +1398,14 @@ module Google
       
       class AttachedDisk
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :auto_delete, as: 'autoDelete'
           property :boot, as: 'boot'
           property :device_name, as: 'deviceName'
-          property :disk_encryption_key, as: 'diskEncryptionKey', class: Google::Apis::ComputeBeta::CustomerEncryptionKey, decorator: Google::Apis::ComputeBeta::CustomerEncryptionKey::Representation
+          property :disk_encryption_key, as: 'diskEncryptionKey', class: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey, decorator: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey::Representation
       
           property :index, as: 'index'
-          property :initialize_params, as: 'initializeParams', class: Google::Apis::ComputeBeta::AttachedDiskInitializeParams, decorator: Google::Apis::ComputeBeta::AttachedDiskInitializeParams::Representation
+          property :initialize_params, as: 'initializeParams', class: GoogleAPI::Apis::ComputeBeta::AttachedDiskInitializeParams, decorator: GoogleAPI::Apis::ComputeBeta::AttachedDiskInitializeParams::Representation
       
           property :interface, as: 'interface'
           property :kind, as: 'kind'
@@ -1418,21 +1418,21 @@ module Google
       
       class AttachedDiskInitializeParams
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :disk_name, as: 'diskName'
           property :disk_size_gb, as: 'diskSizeGb'
           property :disk_storage_type, as: 'diskStorageType'
           property :disk_type, as: 'diskType'
           property :source_image, as: 'sourceImage'
-          property :source_image_encryption_key, as: 'sourceImageEncryptionKey', class: Google::Apis::ComputeBeta::CustomerEncryptionKey, decorator: Google::Apis::ComputeBeta::CustomerEncryptionKey::Representation
+          property :source_image_encryption_key, as: 'sourceImageEncryptionKey', class: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey, decorator: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey::Representation
       
         end
       end
       
       class Autoscaler
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :autoscaling_policy, as: 'autoscalingPolicy', class: Google::Apis::ComputeBeta::AutoscalingPolicy, decorator: Google::Apis::ComputeBeta::AutoscalingPolicy::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :autoscaling_policy, as: 'autoscalingPolicy', class: GoogleAPI::Apis::ComputeBeta::AutoscalingPolicy, decorator: GoogleAPI::Apis::ComputeBeta::AutoscalingPolicy::Representation
       
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
@@ -1447,9 +1447,9 @@ module Google
       
       class AutoscalerAggregatedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          hash :items, as: 'items', class: Google::Apis::ComputeBeta::AutoscalersScopedList, decorator: Google::Apis::ComputeBeta::AutoscalersScopedList::Representation
+          hash :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::AutoscalersScopedList, decorator: GoogleAPI::Apis::ComputeBeta::AutoscalersScopedList::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -1459,9 +1459,9 @@ module Google
       
       class AutoscalerList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::Autoscaler, decorator: Google::Apis::ComputeBeta::Autoscaler::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::Autoscaler, decorator: GoogleAPI::Apis::ComputeBeta::Autoscaler::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -1471,25 +1471,25 @@ module Google
       
       class AutoscalersScopedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :autoscalers, as: 'autoscalers', class: Google::Apis::ComputeBeta::Autoscaler, decorator: Google::Apis::ComputeBeta::Autoscaler::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :autoscalers, as: 'autoscalers', class: GoogleAPI::Apis::ComputeBeta::Autoscaler, decorator: GoogleAPI::Apis::ComputeBeta::Autoscaler::Representation
       
-          property :warning, as: 'warning', class: Google::Apis::ComputeBeta::AutoscalersScopedList::Warning, decorator: Google::Apis::ComputeBeta::AutoscalersScopedList::Warning::Representation
+          property :warning, as: 'warning', class: GoogleAPI::Apis::ComputeBeta::AutoscalersScopedList::Warning, decorator: GoogleAPI::Apis::ComputeBeta::AutoscalersScopedList::Warning::Representation
       
         end
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::ComputeBeta::AutoscalersScopedList::Warning::Datum, decorator: Google::Apis::ComputeBeta::AutoscalersScopedList::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::ComputeBeta::AutoscalersScopedList::Warning::Datum, decorator: GoogleAPI::Apis::ComputeBeta::AutoscalersScopedList::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -1499,13 +1499,13 @@ module Google
       
       class AutoscalingPolicy
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :cool_down_period_sec, as: 'coolDownPeriodSec'
-          property :cpu_utilization, as: 'cpuUtilization', class: Google::Apis::ComputeBeta::AutoscalingPolicyCpuUtilization, decorator: Google::Apis::ComputeBeta::AutoscalingPolicyCpuUtilization::Representation
+          property :cpu_utilization, as: 'cpuUtilization', class: GoogleAPI::Apis::ComputeBeta::AutoscalingPolicyCpuUtilization, decorator: GoogleAPI::Apis::ComputeBeta::AutoscalingPolicyCpuUtilization::Representation
       
-          collection :custom_metric_utilizations, as: 'customMetricUtilizations', class: Google::Apis::ComputeBeta::AutoscalingPolicyCustomMetricUtilization, decorator: Google::Apis::ComputeBeta::AutoscalingPolicyCustomMetricUtilization::Representation
+          collection :custom_metric_utilizations, as: 'customMetricUtilizations', class: GoogleAPI::Apis::ComputeBeta::AutoscalingPolicyCustomMetricUtilization, decorator: GoogleAPI::Apis::ComputeBeta::AutoscalingPolicyCustomMetricUtilization::Representation
       
-          property :load_balancing_utilization, as: 'loadBalancingUtilization', class: Google::Apis::ComputeBeta::AutoscalingPolicyLoadBalancingUtilization, decorator: Google::Apis::ComputeBeta::AutoscalingPolicyLoadBalancingUtilization::Representation
+          property :load_balancing_utilization, as: 'loadBalancingUtilization', class: GoogleAPI::Apis::ComputeBeta::AutoscalingPolicyLoadBalancingUtilization, decorator: GoogleAPI::Apis::ComputeBeta::AutoscalingPolicyLoadBalancingUtilization::Representation
       
           property :max_num_replicas, as: 'maxNumReplicas'
           property :min_num_replicas, as: 'minNumReplicas'
@@ -1514,14 +1514,14 @@ module Google
       
       class AutoscalingPolicyCpuUtilization
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :utilization_target, as: 'utilizationTarget'
         end
       end
       
       class AutoscalingPolicyCustomMetricUtilization
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :metric, as: 'metric'
           property :utilization_target, as: 'utilizationTarget'
           property :utilization_target_type, as: 'utilizationTargetType'
@@ -1530,14 +1530,14 @@ module Google
       
       class AutoscalingPolicyLoadBalancingUtilization
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :utilization_target, as: 'utilizationTarget'
         end
       end
       
       class Backend
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :balancing_mode, as: 'balancingMode'
           property :capacity_scaler, as: 'capacityScaler'
           property :description, as: 'description'
@@ -1550,9 +1550,9 @@ module Google
       
       class BackendService
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :affinity_cookie_ttl_sec, as: 'affinityCookieTtlSec'
-          collection :backends, as: 'backends', class: Google::Apis::ComputeBeta::Backend, decorator: Google::Apis::ComputeBeta::Backend::Representation
+          collection :backends, as: 'backends', class: GoogleAPI::Apis::ComputeBeta::Backend, decorator: GoogleAPI::Apis::ComputeBeta::Backend::Representation
       
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
@@ -1574,8 +1574,8 @@ module Google
       
       class BackendServiceGroupHealth
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :health_status, as: 'healthStatus', class: Google::Apis::ComputeBeta::HealthStatus, decorator: Google::Apis::ComputeBeta::HealthStatus::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :health_status, as: 'healthStatus', class: GoogleAPI::Apis::ComputeBeta::HealthStatus, decorator: GoogleAPI::Apis::ComputeBeta::HealthStatus::Representation
       
           property :kind, as: 'kind'
         end
@@ -1583,9 +1583,9 @@ module Google
       
       class BackendServiceList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::BackendService, decorator: Google::Apis::ComputeBeta::BackendService::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::BackendService, decorator: GoogleAPI::Apis::ComputeBeta::BackendService::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -1595,14 +1595,14 @@ module Google
       
       class CacheInvalidationRule
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :path, as: 'path'
         end
       end
       
       class CustomerEncryptionKey
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :raw_key, as: 'rawKey'
           property :rsa_encrypted_key, as: 'rsaEncryptedKey'
           property :sha256, as: 'sha256'
@@ -1611,8 +1611,8 @@ module Google
       
       class CustomerEncryptionKeyProtectedDisk
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :disk_encryption_key, as: 'diskEncryptionKey', class: Google::Apis::ComputeBeta::CustomerEncryptionKey, decorator: Google::Apis::ComputeBeta::CustomerEncryptionKey::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :disk_encryption_key, as: 'diskEncryptionKey', class: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey, decorator: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey::Representation
       
           property :source, as: 'source'
         end
@@ -1620,7 +1620,7 @@ module Google
       
       class DeprecationStatus
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :deleted, as: 'deleted'
           property :deprecated, as: 'deprecated'
           property :obsolete, as: 'obsolete'
@@ -1631,10 +1631,10 @@ module Google
       
       class Disk
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
-          property :disk_encryption_key, as: 'diskEncryptionKey', class: Google::Apis::ComputeBeta::CustomerEncryptionKey, decorator: Google::Apis::ComputeBeta::CustomerEncryptionKey::Representation
+          property :disk_encryption_key, as: 'diskEncryptionKey', class: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey, decorator: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey::Representation
       
           property :id, as: 'id'
           property :kind, as: 'kind'
@@ -1648,11 +1648,11 @@ module Google
           property :self_link, as: 'selfLink'
           property :size_gb, as: 'sizeGb'
           property :source_image, as: 'sourceImage'
-          property :source_image_encryption_key, as: 'sourceImageEncryptionKey', class: Google::Apis::ComputeBeta::CustomerEncryptionKey, decorator: Google::Apis::ComputeBeta::CustomerEncryptionKey::Representation
+          property :source_image_encryption_key, as: 'sourceImageEncryptionKey', class: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey, decorator: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey::Representation
       
           property :source_image_id, as: 'sourceImageId'
           property :source_snapshot, as: 'sourceSnapshot'
-          property :source_snapshot_encryption_key, as: 'sourceSnapshotEncryptionKey', class: Google::Apis::ComputeBeta::CustomerEncryptionKey, decorator: Google::Apis::ComputeBeta::CustomerEncryptionKey::Representation
+          property :source_snapshot_encryption_key, as: 'sourceSnapshotEncryptionKey', class: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey, decorator: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey::Representation
       
           property :source_snapshot_id, as: 'sourceSnapshotId'
           property :status, as: 'status'
@@ -1665,9 +1665,9 @@ module Google
       
       class DiskAggregatedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          hash :items, as: 'items', class: Google::Apis::ComputeBeta::DisksScopedList, decorator: Google::Apis::ComputeBeta::DisksScopedList::Representation
+          hash :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::DisksScopedList, decorator: GoogleAPI::Apis::ComputeBeta::DisksScopedList::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -1677,9 +1677,9 @@ module Google
       
       class DiskList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::Disk, decorator: Google::Apis::ComputeBeta::Disk::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::Disk, decorator: GoogleAPI::Apis::ComputeBeta::Disk::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -1689,7 +1689,7 @@ module Google
       
       class DiskMoveRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :destination_zone, as: 'destinationZone'
           property :target_disk, as: 'targetDisk'
         end
@@ -1697,10 +1697,10 @@ module Google
       
       class DiskType
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :creation_timestamp, as: 'creationTimestamp'
           property :default_disk_size_gb, as: 'defaultDiskSizeGb'
-          property :deprecated, as: 'deprecated', class: Google::Apis::ComputeBeta::DeprecationStatus, decorator: Google::Apis::ComputeBeta::DeprecationStatus::Representation
+          property :deprecated, as: 'deprecated', class: GoogleAPI::Apis::ComputeBeta::DeprecationStatus, decorator: GoogleAPI::Apis::ComputeBeta::DeprecationStatus::Representation
       
           property :description, as: 'description'
           property :id, as: 'id'
@@ -1714,9 +1714,9 @@ module Google
       
       class DiskTypeAggregatedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          hash :items, as: 'items', class: Google::Apis::ComputeBeta::DiskTypesScopedList, decorator: Google::Apis::ComputeBeta::DiskTypesScopedList::Representation
+          hash :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::DiskTypesScopedList, decorator: GoogleAPI::Apis::ComputeBeta::DiskTypesScopedList::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -1726,9 +1726,9 @@ module Google
       
       class DiskTypeList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::DiskType, decorator: Google::Apis::ComputeBeta::DiskType::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::DiskType, decorator: GoogleAPI::Apis::ComputeBeta::DiskType::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -1738,25 +1738,25 @@ module Google
       
       class DiskTypesScopedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :disk_types, as: 'diskTypes', class: Google::Apis::ComputeBeta::DiskType, decorator: Google::Apis::ComputeBeta::DiskType::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :disk_types, as: 'diskTypes', class: GoogleAPI::Apis::ComputeBeta::DiskType, decorator: GoogleAPI::Apis::ComputeBeta::DiskType::Representation
       
-          property :warning, as: 'warning', class: Google::Apis::ComputeBeta::DiskTypesScopedList::Warning, decorator: Google::Apis::ComputeBeta::DiskTypesScopedList::Warning::Representation
+          property :warning, as: 'warning', class: GoogleAPI::Apis::ComputeBeta::DiskTypesScopedList::Warning, decorator: GoogleAPI::Apis::ComputeBeta::DiskTypesScopedList::Warning::Representation
       
         end
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::ComputeBeta::DiskTypesScopedList::Warning::Datum, decorator: Google::Apis::ComputeBeta::DiskTypesScopedList::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::ComputeBeta::DiskTypesScopedList::Warning::Datum, decorator: GoogleAPI::Apis::ComputeBeta::DiskTypesScopedList::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -1766,32 +1766,32 @@ module Google
       
       class DisksResizeRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :size_gb, as: 'sizeGb'
         end
       end
       
       class DisksScopedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :disks, as: 'disks', class: Google::Apis::ComputeBeta::Disk, decorator: Google::Apis::ComputeBeta::Disk::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :disks, as: 'disks', class: GoogleAPI::Apis::ComputeBeta::Disk, decorator: GoogleAPI::Apis::ComputeBeta::Disk::Representation
       
-          property :warning, as: 'warning', class: Google::Apis::ComputeBeta::DisksScopedList::Warning, decorator: Google::Apis::ComputeBeta::DisksScopedList::Warning::Representation
+          property :warning, as: 'warning', class: GoogleAPI::Apis::ComputeBeta::DisksScopedList::Warning, decorator: GoogleAPI::Apis::ComputeBeta::DisksScopedList::Warning::Representation
       
         end
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::ComputeBeta::DisksScopedList::Warning::Datum, decorator: Google::Apis::ComputeBeta::DisksScopedList::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::ComputeBeta::DisksScopedList::Warning::Datum, decorator: GoogleAPI::Apis::ComputeBeta::DisksScopedList::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -1801,8 +1801,8 @@ module Google
       
       class Firewall
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :allowed, as: 'allowed', class: Google::Apis::ComputeBeta::Firewall::Allowed, decorator: Google::Apis::ComputeBeta::Firewall::Allowed::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :allowed, as: 'allowed', class: GoogleAPI::Apis::ComputeBeta::Firewall::Allowed, decorator: GoogleAPI::Apis::ComputeBeta::Firewall::Allowed::Representation
       
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
@@ -1818,7 +1818,7 @@ module Google
         
         class Allowed
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :ip_protocol, as: 'IPProtocol'
             collection :ports, as: 'ports'
           end
@@ -1827,9 +1827,9 @@ module Google
       
       class FirewallList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::Firewall, decorator: Google::Apis::ComputeBeta::Firewall::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::Firewall, decorator: GoogleAPI::Apis::ComputeBeta::Firewall::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -1839,7 +1839,7 @@ module Google
       
       class ForwardingRule
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :ip_address, as: 'IPAddress'
           property :ip_protocol, as: 'IPProtocol'
           property :creation_timestamp, as: 'creationTimestamp'
@@ -1856,9 +1856,9 @@ module Google
       
       class ForwardingRuleAggregatedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          hash :items, as: 'items', class: Google::Apis::ComputeBeta::ForwardingRulesScopedList, decorator: Google::Apis::ComputeBeta::ForwardingRulesScopedList::Representation
+          hash :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::ForwardingRulesScopedList, decorator: GoogleAPI::Apis::ComputeBeta::ForwardingRulesScopedList::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -1868,9 +1868,9 @@ module Google
       
       class ForwardingRuleList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::ForwardingRule, decorator: Google::Apis::ComputeBeta::ForwardingRule::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::ForwardingRule, decorator: GoogleAPI::Apis::ComputeBeta::ForwardingRule::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -1880,25 +1880,25 @@ module Google
       
       class ForwardingRulesScopedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :forwarding_rules, as: 'forwardingRules', class: Google::Apis::ComputeBeta::ForwardingRule, decorator: Google::Apis::ComputeBeta::ForwardingRule::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :forwarding_rules, as: 'forwardingRules', class: GoogleAPI::Apis::ComputeBeta::ForwardingRule, decorator: GoogleAPI::Apis::ComputeBeta::ForwardingRule::Representation
       
-          property :warning, as: 'warning', class: Google::Apis::ComputeBeta::ForwardingRulesScopedList::Warning, decorator: Google::Apis::ComputeBeta::ForwardingRulesScopedList::Warning::Representation
+          property :warning, as: 'warning', class: GoogleAPI::Apis::ComputeBeta::ForwardingRulesScopedList::Warning, decorator: GoogleAPI::Apis::ComputeBeta::ForwardingRulesScopedList::Warning::Representation
       
         end
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::ComputeBeta::ForwardingRulesScopedList::Warning::Datum, decorator: Google::Apis::ComputeBeta::ForwardingRulesScopedList::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::ComputeBeta::ForwardingRulesScopedList::Warning::Datum, decorator: GoogleAPI::Apis::ComputeBeta::ForwardingRulesScopedList::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -1908,7 +1908,7 @@ module Google
       
       class GlobalSetLabelsRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :label_fingerprint, :base64 => true, as: 'labelFingerprint'
           hash :labels, as: 'labels'
         end
@@ -1916,14 +1916,14 @@ module Google
       
       class HealthCheckReference
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :health_check, as: 'healthCheck'
         end
       end
       
       class HealthStatus
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :health_state, as: 'healthState'
           property :instance, as: 'instance'
           property :ip_address, as: 'ipAddress'
@@ -1933,7 +1933,7 @@ module Google
       
       class HostRule
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :description, as: 'description'
           collection :hosts, as: 'hosts'
           property :path_matcher, as: 'pathMatcher'
@@ -1942,7 +1942,7 @@ module Google
       
       class HttpHealthCheck
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :check_interval_sec, as: 'checkIntervalSec'
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
@@ -1961,9 +1961,9 @@ module Google
       
       class HttpHealthCheckList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::HttpHealthCheck, decorator: Google::Apis::ComputeBeta::HttpHealthCheck::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::HttpHealthCheck, decorator: GoogleAPI::Apis::ComputeBeta::HttpHealthCheck::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -1973,7 +1973,7 @@ module Google
       
       class HttpsHealthCheck
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :check_interval_sec, as: 'checkIntervalSec'
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
@@ -1992,9 +1992,9 @@ module Google
       
       class HttpsHealthCheckList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::HttpsHealthCheck, decorator: Google::Apis::ComputeBeta::HttpsHealthCheck::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::HttpsHealthCheck, decorator: GoogleAPI::Apis::ComputeBeta::HttpsHealthCheck::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -2004,27 +2004,27 @@ module Google
       
       class Image
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :archive_size_bytes, as: 'archiveSizeBytes'
           property :creation_timestamp, as: 'creationTimestamp'
-          property :deprecated, as: 'deprecated', class: Google::Apis::ComputeBeta::DeprecationStatus, decorator: Google::Apis::ComputeBeta::DeprecationStatus::Representation
+          property :deprecated, as: 'deprecated', class: GoogleAPI::Apis::ComputeBeta::DeprecationStatus, decorator: GoogleAPI::Apis::ComputeBeta::DeprecationStatus::Representation
       
           property :description, as: 'description'
           property :disk_size_gb, as: 'diskSizeGb'
           property :family, as: 'family'
           property :id, as: 'id'
-          property :image_encryption_key, as: 'imageEncryptionKey', class: Google::Apis::ComputeBeta::CustomerEncryptionKey, decorator: Google::Apis::ComputeBeta::CustomerEncryptionKey::Representation
+          property :image_encryption_key, as: 'imageEncryptionKey', class: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey, decorator: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey::Representation
       
           property :kind, as: 'kind'
           property :label_fingerprint, :base64 => true, as: 'labelFingerprint'
           hash :labels, as: 'labels'
           collection :licenses, as: 'licenses'
           property :name, as: 'name'
-          property :raw_disk, as: 'rawDisk', class: Google::Apis::ComputeBeta::Image::RawDisk, decorator: Google::Apis::ComputeBeta::Image::RawDisk::Representation
+          property :raw_disk, as: 'rawDisk', class: GoogleAPI::Apis::ComputeBeta::Image::RawDisk, decorator: GoogleAPI::Apis::ComputeBeta::Image::RawDisk::Representation
       
           property :self_link, as: 'selfLink'
           property :source_disk, as: 'sourceDisk'
-          property :source_disk_encryption_key, as: 'sourceDiskEncryptionKey', class: Google::Apis::ComputeBeta::CustomerEncryptionKey, decorator: Google::Apis::ComputeBeta::CustomerEncryptionKey::Representation
+          property :source_disk_encryption_key, as: 'sourceDiskEncryptionKey', class: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey, decorator: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey::Representation
       
           property :source_disk_id, as: 'sourceDiskId'
           property :source_type, as: 'sourceType'
@@ -2033,7 +2033,7 @@ module Google
         
         class RawDisk
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :container_type, as: 'containerType'
             property :sha1_checksum, as: 'sha1Checksum'
             property :source, as: 'source'
@@ -2043,9 +2043,9 @@ module Google
       
       class ImageList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::Image, decorator: Google::Apis::ComputeBeta::Image::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::Image, decorator: GoogleAPI::Apis::ComputeBeta::Image::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -2055,31 +2055,31 @@ module Google
       
       class Instance
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :can_ip_forward, as: 'canIpForward'
           property :cpu_platform, as: 'cpuPlatform'
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
-          collection :disks, as: 'disks', class: Google::Apis::ComputeBeta::AttachedDisk, decorator: Google::Apis::ComputeBeta::AttachedDisk::Representation
+          collection :disks, as: 'disks', class: GoogleAPI::Apis::ComputeBeta::AttachedDisk, decorator: GoogleAPI::Apis::ComputeBeta::AttachedDisk::Representation
       
           property :id, as: 'id'
           property :kind, as: 'kind'
           property :label_fingerprint, :base64 => true, as: 'labelFingerprint'
           hash :labels, as: 'labels'
           property :machine_type, as: 'machineType'
-          property :metadata, as: 'metadata', class: Google::Apis::ComputeBeta::Metadata, decorator: Google::Apis::ComputeBeta::Metadata::Representation
+          property :metadata, as: 'metadata', class: GoogleAPI::Apis::ComputeBeta::Metadata, decorator: GoogleAPI::Apis::ComputeBeta::Metadata::Representation
       
           property :name, as: 'name'
-          collection :network_interfaces, as: 'networkInterfaces', class: Google::Apis::ComputeBeta::NetworkInterface, decorator: Google::Apis::ComputeBeta::NetworkInterface::Representation
+          collection :network_interfaces, as: 'networkInterfaces', class: GoogleAPI::Apis::ComputeBeta::NetworkInterface, decorator: GoogleAPI::Apis::ComputeBeta::NetworkInterface::Representation
       
-          property :scheduling, as: 'scheduling', class: Google::Apis::ComputeBeta::Scheduling, decorator: Google::Apis::ComputeBeta::Scheduling::Representation
+          property :scheduling, as: 'scheduling', class: GoogleAPI::Apis::ComputeBeta::Scheduling, decorator: GoogleAPI::Apis::ComputeBeta::Scheduling::Representation
       
           property :self_link, as: 'selfLink'
-          collection :service_accounts, as: 'serviceAccounts', class: Google::Apis::ComputeBeta::ServiceAccount, decorator: Google::Apis::ComputeBeta::ServiceAccount::Representation
+          collection :service_accounts, as: 'serviceAccounts', class: GoogleAPI::Apis::ComputeBeta::ServiceAccount, decorator: GoogleAPI::Apis::ComputeBeta::ServiceAccount::Representation
       
           property :status, as: 'status'
           property :status_message, as: 'statusMessage'
-          property :tags, as: 'tags', class: Google::Apis::ComputeBeta::Tags, decorator: Google::Apis::ComputeBeta::Tags::Representation
+          property :tags, as: 'tags', class: GoogleAPI::Apis::ComputeBeta::Tags, decorator: GoogleAPI::Apis::ComputeBeta::Tags::Representation
       
           property :zone, as: 'zone'
         end
@@ -2087,9 +2087,9 @@ module Google
       
       class InstanceAggregatedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          hash :items, as: 'items', class: Google::Apis::ComputeBeta::InstancesScopedList, decorator: Google::Apis::ComputeBeta::InstancesScopedList::Representation
+          hash :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::InstancesScopedList, decorator: GoogleAPI::Apis::ComputeBeta::InstancesScopedList::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -2099,14 +2099,14 @@ module Google
       
       class InstanceGroup
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
           property :fingerprint, :base64 => true, as: 'fingerprint'
           property :id, as: 'id'
           property :kind, as: 'kind'
           property :name, as: 'name'
-          collection :named_ports, as: 'namedPorts', class: Google::Apis::ComputeBeta::NamedPort, decorator: Google::Apis::ComputeBeta::NamedPort::Representation
+          collection :named_ports, as: 'namedPorts', class: GoogleAPI::Apis::ComputeBeta::NamedPort, decorator: GoogleAPI::Apis::ComputeBeta::NamedPort::Representation
       
           property :network, as: 'network'
           property :self_link, as: 'selfLink'
@@ -2118,9 +2118,9 @@ module Google
       
       class InstanceGroupAggregatedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          hash :items, as: 'items', class: Google::Apis::ComputeBeta::InstanceGroupsScopedList, decorator: Google::Apis::ComputeBeta::InstanceGroupsScopedList::Representation
+          hash :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::InstanceGroupsScopedList, decorator: GoogleAPI::Apis::ComputeBeta::InstanceGroupsScopedList::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -2130,9 +2130,9 @@ module Google
       
       class InstanceGroupList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::InstanceGroup, decorator: Google::Apis::ComputeBeta::InstanceGroup::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::InstanceGroup, decorator: GoogleAPI::Apis::ComputeBeta::InstanceGroup::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -2142,12 +2142,12 @@ module Google
       
       class InstanceGroupManager
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :auto_healing_policies, as: 'autoHealingPolicies', class: Google::Apis::ComputeBeta::InstanceGroupManagerAutoHealingPolicy, decorator: Google::Apis::ComputeBeta::InstanceGroupManagerAutoHealingPolicy::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :auto_healing_policies, as: 'autoHealingPolicies', class: GoogleAPI::Apis::ComputeBeta::InstanceGroupManagerAutoHealingPolicy, decorator: GoogleAPI::Apis::ComputeBeta::InstanceGroupManagerAutoHealingPolicy::Representation
       
           property :base_instance_name, as: 'baseInstanceName'
           property :creation_timestamp, as: 'creationTimestamp'
-          property :current_actions, as: 'currentActions', class: Google::Apis::ComputeBeta::InstanceGroupManagerActionsSummary, decorator: Google::Apis::ComputeBeta::InstanceGroupManagerActionsSummary::Representation
+          property :current_actions, as: 'currentActions', class: GoogleAPI::Apis::ComputeBeta::InstanceGroupManagerActionsSummary, decorator: GoogleAPI::Apis::ComputeBeta::InstanceGroupManagerActionsSummary::Representation
       
           property :description, as: 'description'
           property :fingerprint, :base64 => true, as: 'fingerprint'
@@ -2156,7 +2156,7 @@ module Google
           property :instance_template, as: 'instanceTemplate'
           property :kind, as: 'kind'
           property :name, as: 'name'
-          collection :named_ports, as: 'namedPorts', class: Google::Apis::ComputeBeta::NamedPort, decorator: Google::Apis::ComputeBeta::NamedPort::Representation
+          collection :named_ports, as: 'namedPorts', class: GoogleAPI::Apis::ComputeBeta::NamedPort, decorator: GoogleAPI::Apis::ComputeBeta::NamedPort::Representation
       
           property :self_link, as: 'selfLink'
           collection :target_pools, as: 'targetPools'
@@ -2167,7 +2167,7 @@ module Google
       
       class InstanceGroupManagerActionsSummary
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :abandoning, as: 'abandoning'
           property :creating, as: 'creating'
           property :creating_without_retries, as: 'creatingWithoutRetries'
@@ -2181,9 +2181,9 @@ module Google
       
       class InstanceGroupManagerAggregatedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          hash :items, as: 'items', class: Google::Apis::ComputeBeta::InstanceGroupManagersScopedList, decorator: Google::Apis::ComputeBeta::InstanceGroupManagersScopedList::Representation
+          hash :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::InstanceGroupManagersScopedList, decorator: GoogleAPI::Apis::ComputeBeta::InstanceGroupManagersScopedList::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -2193,7 +2193,7 @@ module Google
       
       class InstanceGroupManagerAutoHealingPolicy
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :health_check, as: 'healthCheck'
           property :initial_delay_sec, as: 'initialDelaySec'
         end
@@ -2201,9 +2201,9 @@ module Google
       
       class InstanceGroupManagerList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::InstanceGroupManager, decorator: Google::Apis::ComputeBeta::InstanceGroupManager::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::InstanceGroupManager, decorator: GoogleAPI::Apis::ComputeBeta::InstanceGroupManager::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -2213,36 +2213,36 @@ module Google
       
       class InstanceGroupManagersAbandonInstancesRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :instances, as: 'instances'
         end
       end
       
       class InstanceGroupManagersDeleteInstancesRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :instances, as: 'instances'
         end
       end
       
       class InstanceGroupManagersListManagedInstancesResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :managed_instances, as: 'managedInstances', class: Google::Apis::ComputeBeta::ManagedInstance, decorator: Google::Apis::ComputeBeta::ManagedInstance::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :managed_instances, as: 'managedInstances', class: GoogleAPI::Apis::ComputeBeta::ManagedInstance, decorator: GoogleAPI::Apis::ComputeBeta::ManagedInstance::Representation
       
         end
       end
       
       class InstanceGroupManagersRecreateInstancesRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :instances, as: 'instances'
         end
       end
       
       class InstanceGroupManagersResizeAdvancedRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :no_creation_retries, as: 'noCreationRetries'
           property :target_size, as: 'targetSize'
         end
@@ -2250,25 +2250,25 @@ module Google
       
       class InstanceGroupManagersScopedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :instance_group_managers, as: 'instanceGroupManagers', class: Google::Apis::ComputeBeta::InstanceGroupManager, decorator: Google::Apis::ComputeBeta::InstanceGroupManager::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :instance_group_managers, as: 'instanceGroupManagers', class: GoogleAPI::Apis::ComputeBeta::InstanceGroupManager, decorator: GoogleAPI::Apis::ComputeBeta::InstanceGroupManager::Representation
       
-          property :warning, as: 'warning', class: Google::Apis::ComputeBeta::InstanceGroupManagersScopedList::Warning, decorator: Google::Apis::ComputeBeta::InstanceGroupManagersScopedList::Warning::Representation
+          property :warning, as: 'warning', class: GoogleAPI::Apis::ComputeBeta::InstanceGroupManagersScopedList::Warning, decorator: GoogleAPI::Apis::ComputeBeta::InstanceGroupManagersScopedList::Warning::Representation
       
         end
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::ComputeBeta::InstanceGroupManagersScopedList::Warning::Datum, decorator: Google::Apis::ComputeBeta::InstanceGroupManagersScopedList::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::ComputeBeta::InstanceGroupManagersScopedList::Warning::Datum, decorator: GoogleAPI::Apis::ComputeBeta::InstanceGroupManagersScopedList::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -2278,22 +2278,22 @@ module Google
       
       class InstanceGroupManagersSetAutoHealingRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :auto_healing_policies, as: 'autoHealingPolicies', class: Google::Apis::ComputeBeta::InstanceGroupManagerAutoHealingPolicy, decorator: Google::Apis::ComputeBeta::InstanceGroupManagerAutoHealingPolicy::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :auto_healing_policies, as: 'autoHealingPolicies', class: GoogleAPI::Apis::ComputeBeta::InstanceGroupManagerAutoHealingPolicy, decorator: GoogleAPI::Apis::ComputeBeta::InstanceGroupManagerAutoHealingPolicy::Representation
       
         end
       end
       
       class InstanceGroupManagersSetInstanceTemplateRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :instance_template, as: 'instanceTemplate'
         end
       end
       
       class InstanceGroupManagersSetTargetPoolsRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :fingerprint, :base64 => true, as: 'fingerprint'
           collection :target_pools, as: 'targetPools'
         end
@@ -2301,17 +2301,17 @@ module Google
       
       class InstanceGroupsAddInstancesRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :instances, as: 'instances', class: Google::Apis::ComputeBeta::InstanceReference, decorator: Google::Apis::ComputeBeta::InstanceReference::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :instances, as: 'instances', class: GoogleAPI::Apis::ComputeBeta::InstanceReference, decorator: GoogleAPI::Apis::ComputeBeta::InstanceReference::Representation
       
         end
       end
       
       class InstanceGroupsListInstances
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::InstanceWithNamedPorts, decorator: Google::Apis::ComputeBeta::InstanceWithNamedPorts::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::InstanceWithNamedPorts, decorator: GoogleAPI::Apis::ComputeBeta::InstanceWithNamedPorts::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -2321,40 +2321,40 @@ module Google
       
       class InstanceGroupsListInstancesRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :instance_state, as: 'instanceState'
         end
       end
       
       class InstanceGroupsRemoveInstancesRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :instances, as: 'instances', class: Google::Apis::ComputeBeta::InstanceReference, decorator: Google::Apis::ComputeBeta::InstanceReference::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :instances, as: 'instances', class: GoogleAPI::Apis::ComputeBeta::InstanceReference, decorator: GoogleAPI::Apis::ComputeBeta::InstanceReference::Representation
       
         end
       end
       
       class InstanceGroupsScopedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :instance_groups, as: 'instanceGroups', class: Google::Apis::ComputeBeta::InstanceGroup, decorator: Google::Apis::ComputeBeta::InstanceGroup::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :instance_groups, as: 'instanceGroups', class: GoogleAPI::Apis::ComputeBeta::InstanceGroup, decorator: GoogleAPI::Apis::ComputeBeta::InstanceGroup::Representation
       
-          property :warning, as: 'warning', class: Google::Apis::ComputeBeta::InstanceGroupsScopedList::Warning, decorator: Google::Apis::ComputeBeta::InstanceGroupsScopedList::Warning::Representation
+          property :warning, as: 'warning', class: GoogleAPI::Apis::ComputeBeta::InstanceGroupsScopedList::Warning, decorator: GoogleAPI::Apis::ComputeBeta::InstanceGroupsScopedList::Warning::Representation
       
         end
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::ComputeBeta::InstanceGroupsScopedList::Warning::Datum, decorator: Google::Apis::ComputeBeta::InstanceGroupsScopedList::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::ComputeBeta::InstanceGroupsScopedList::Warning::Datum, decorator: GoogleAPI::Apis::ComputeBeta::InstanceGroupsScopedList::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -2364,18 +2364,18 @@ module Google
       
       class InstanceGroupsSetNamedPortsRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :fingerprint, :base64 => true, as: 'fingerprint'
-          collection :named_ports, as: 'namedPorts', class: Google::Apis::ComputeBeta::NamedPort, decorator: Google::Apis::ComputeBeta::NamedPort::Representation
+          collection :named_ports, as: 'namedPorts', class: GoogleAPI::Apis::ComputeBeta::NamedPort, decorator: GoogleAPI::Apis::ComputeBeta::NamedPort::Representation
       
         end
       end
       
       class InstanceList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::Instance, decorator: Google::Apis::ComputeBeta::Instance::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::Instance, decorator: GoogleAPI::Apis::ComputeBeta::Instance::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -2385,7 +2385,7 @@ module Google
       
       class MoveInstanceRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :destination_zone, as: 'destinationZone'
           property :target_instance, as: 'targetInstance'
         end
@@ -2393,41 +2393,41 @@ module Google
       
       class InstanceProperties
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :can_ip_forward, as: 'canIpForward'
           property :description, as: 'description'
-          collection :disks, as: 'disks', class: Google::Apis::ComputeBeta::AttachedDisk, decorator: Google::Apis::ComputeBeta::AttachedDisk::Representation
+          collection :disks, as: 'disks', class: GoogleAPI::Apis::ComputeBeta::AttachedDisk, decorator: GoogleAPI::Apis::ComputeBeta::AttachedDisk::Representation
       
           property :machine_type, as: 'machineType'
-          property :metadata, as: 'metadata', class: Google::Apis::ComputeBeta::Metadata, decorator: Google::Apis::ComputeBeta::Metadata::Representation
+          property :metadata, as: 'metadata', class: GoogleAPI::Apis::ComputeBeta::Metadata, decorator: GoogleAPI::Apis::ComputeBeta::Metadata::Representation
       
-          collection :network_interfaces, as: 'networkInterfaces', class: Google::Apis::ComputeBeta::NetworkInterface, decorator: Google::Apis::ComputeBeta::NetworkInterface::Representation
+          collection :network_interfaces, as: 'networkInterfaces', class: GoogleAPI::Apis::ComputeBeta::NetworkInterface, decorator: GoogleAPI::Apis::ComputeBeta::NetworkInterface::Representation
       
-          property :scheduling, as: 'scheduling', class: Google::Apis::ComputeBeta::Scheduling, decorator: Google::Apis::ComputeBeta::Scheduling::Representation
+          property :scheduling, as: 'scheduling', class: GoogleAPI::Apis::ComputeBeta::Scheduling, decorator: GoogleAPI::Apis::ComputeBeta::Scheduling::Representation
       
-          collection :service_accounts, as: 'serviceAccounts', class: Google::Apis::ComputeBeta::ServiceAccount, decorator: Google::Apis::ComputeBeta::ServiceAccount::Representation
+          collection :service_accounts, as: 'serviceAccounts', class: GoogleAPI::Apis::ComputeBeta::ServiceAccount, decorator: GoogleAPI::Apis::ComputeBeta::ServiceAccount::Representation
       
-          property :tags, as: 'tags', class: Google::Apis::ComputeBeta::Tags, decorator: Google::Apis::ComputeBeta::Tags::Representation
+          property :tags, as: 'tags', class: GoogleAPI::Apis::ComputeBeta::Tags, decorator: GoogleAPI::Apis::ComputeBeta::Tags::Representation
       
         end
       end
       
       class InstanceReference
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :instance, as: 'instance'
         end
       end
       
       class InstanceTemplate
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
           property :id, as: 'id'
           property :kind, as: 'kind'
           property :name, as: 'name'
-          property :properties, as: 'properties', class: Google::Apis::ComputeBeta::InstanceProperties, decorator: Google::Apis::ComputeBeta::InstanceProperties::Representation
+          property :properties, as: 'properties', class: GoogleAPI::Apis::ComputeBeta::InstanceProperties, decorator: GoogleAPI::Apis::ComputeBeta::InstanceProperties::Representation
       
           property :self_link, as: 'selfLink'
         end
@@ -2435,9 +2435,9 @@ module Google
       
       class InstanceTemplateList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::InstanceTemplate, decorator: Google::Apis::ComputeBeta::InstanceTemplate::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::InstanceTemplate, decorator: GoogleAPI::Apis::ComputeBeta::InstanceTemplate::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -2447,9 +2447,9 @@ module Google
       
       class InstanceWithNamedPorts
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :instance, as: 'instance'
-          collection :named_ports, as: 'namedPorts', class: Google::Apis::ComputeBeta::NamedPort, decorator: Google::Apis::ComputeBeta::NamedPort::Representation
+          collection :named_ports, as: 'namedPorts', class: GoogleAPI::Apis::ComputeBeta::NamedPort, decorator: GoogleAPI::Apis::ComputeBeta::NamedPort::Representation
       
           property :status, as: 'status'
         end
@@ -2457,25 +2457,25 @@ module Google
       
       class InstancesScopedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :instances, as: 'instances', class: Google::Apis::ComputeBeta::Instance, decorator: Google::Apis::ComputeBeta::Instance::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :instances, as: 'instances', class: GoogleAPI::Apis::ComputeBeta::Instance, decorator: GoogleAPI::Apis::ComputeBeta::Instance::Representation
       
-          property :warning, as: 'warning', class: Google::Apis::ComputeBeta::InstancesScopedList::Warning, decorator: Google::Apis::ComputeBeta::InstancesScopedList::Warning::Representation
+          property :warning, as: 'warning', class: GoogleAPI::Apis::ComputeBeta::InstancesScopedList::Warning, decorator: GoogleAPI::Apis::ComputeBeta::InstancesScopedList::Warning::Representation
       
         end
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::ComputeBeta::InstancesScopedList::Warning::Datum, decorator: Google::Apis::ComputeBeta::InstancesScopedList::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::ComputeBeta::InstancesScopedList::Warning::Datum, decorator: GoogleAPI::Apis::ComputeBeta::InstancesScopedList::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -2485,7 +2485,7 @@ module Google
       
       class InstancesSetLabelsRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :label_fingerprint, :base64 => true, as: 'labelFingerprint'
           hash :labels, as: 'labels'
         end
@@ -2493,22 +2493,22 @@ module Google
       
       class InstancesSetMachineTypeRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :machine_type, as: 'machineType'
         end
       end
       
       class InstancesStartWithEncryptionKeyRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :disks, as: 'disks', class: Google::Apis::ComputeBeta::CustomerEncryptionKeyProtectedDisk, decorator: Google::Apis::ComputeBeta::CustomerEncryptionKeyProtectedDisk::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :disks, as: 'disks', class: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKeyProtectedDisk, decorator: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKeyProtectedDisk::Representation
       
         end
       end
       
       class License
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :charges_use_fee, as: 'chargesUseFee'
           property :kind, as: 'kind'
           property :name, as: 'name'
@@ -2518,9 +2518,9 @@ module Google
       
       class MachineType
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :creation_timestamp, as: 'creationTimestamp'
-          property :deprecated, as: 'deprecated', class: Google::Apis::ComputeBeta::DeprecationStatus, decorator: Google::Apis::ComputeBeta::DeprecationStatus::Representation
+          property :deprecated, as: 'deprecated', class: GoogleAPI::Apis::ComputeBeta::DeprecationStatus, decorator: GoogleAPI::Apis::ComputeBeta::DeprecationStatus::Representation
       
           property :description, as: 'description'
           property :guest_cpus, as: 'guestCpus'
@@ -2538,9 +2538,9 @@ module Google
       
       class MachineTypeAggregatedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          hash :items, as: 'items', class: Google::Apis::ComputeBeta::MachineTypesScopedList, decorator: Google::Apis::ComputeBeta::MachineTypesScopedList::Representation
+          hash :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::MachineTypesScopedList, decorator: GoogleAPI::Apis::ComputeBeta::MachineTypesScopedList::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -2550,9 +2550,9 @@ module Google
       
       class MachineTypeList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::MachineType, decorator: Google::Apis::ComputeBeta::MachineType::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::MachineType, decorator: GoogleAPI::Apis::ComputeBeta::MachineType::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -2562,25 +2562,25 @@ module Google
       
       class MachineTypesScopedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :machine_types, as: 'machineTypes', class: Google::Apis::ComputeBeta::MachineType, decorator: Google::Apis::ComputeBeta::MachineType::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :machine_types, as: 'machineTypes', class: GoogleAPI::Apis::ComputeBeta::MachineType, decorator: GoogleAPI::Apis::ComputeBeta::MachineType::Representation
       
-          property :warning, as: 'warning', class: Google::Apis::ComputeBeta::MachineTypesScopedList::Warning, decorator: Google::Apis::ComputeBeta::MachineTypesScopedList::Warning::Representation
+          property :warning, as: 'warning', class: GoogleAPI::Apis::ComputeBeta::MachineTypesScopedList::Warning, decorator: GoogleAPI::Apis::ComputeBeta::MachineTypesScopedList::Warning::Representation
       
         end
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::ComputeBeta::MachineTypesScopedList::Warning::Datum, decorator: Google::Apis::ComputeBeta::MachineTypesScopedList::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::ComputeBeta::MachineTypesScopedList::Warning::Datum, decorator: GoogleAPI::Apis::ComputeBeta::MachineTypesScopedList::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -2590,33 +2590,33 @@ module Google
       
       class ManagedInstance
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :current_action, as: 'currentAction'
           property :id, as: 'id'
           property :instance, as: 'instance'
           property :instance_status, as: 'instanceStatus'
-          property :last_attempt, as: 'lastAttempt', class: Google::Apis::ComputeBeta::ManagedInstanceLastAttempt, decorator: Google::Apis::ComputeBeta::ManagedInstanceLastAttempt::Representation
+          property :last_attempt, as: 'lastAttempt', class: GoogleAPI::Apis::ComputeBeta::ManagedInstanceLastAttempt, decorator: GoogleAPI::Apis::ComputeBeta::ManagedInstanceLastAttempt::Representation
       
         end
       end
       
       class ManagedInstanceLastAttempt
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :errors, as: 'errors', class: Google::Apis::ComputeBeta::ManagedInstanceLastAttempt::Errors, decorator: Google::Apis::ComputeBeta::ManagedInstanceLastAttempt::Errors::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :errors, as: 'errors', class: GoogleAPI::Apis::ComputeBeta::ManagedInstanceLastAttempt::Errors, decorator: GoogleAPI::Apis::ComputeBeta::ManagedInstanceLastAttempt::Errors::Representation
       
         end
         
         class Errors
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
-            collection :errors, as: 'errors', class: Google::Apis::ComputeBeta::ManagedInstanceLastAttempt::Errors::Error, decorator: Google::Apis::ComputeBeta::ManagedInstanceLastAttempt::Errors::Error::Representation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+            collection :errors, as: 'errors', class: GoogleAPI::Apis::ComputeBeta::ManagedInstanceLastAttempt::Errors::Error, decorator: GoogleAPI::Apis::ComputeBeta::ManagedInstanceLastAttempt::Errors::Error::Representation
         
           end
           
           class Error
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :code, as: 'code'
               property :location, as: 'location'
               property :message, as: 'message'
@@ -2627,16 +2627,16 @@ module Google
       
       class Metadata
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :fingerprint, :base64 => true, as: 'fingerprint'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::Metadata::Item, decorator: Google::Apis::ComputeBeta::Metadata::Item::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::Metadata::Item, decorator: GoogleAPI::Apis::ComputeBeta::Metadata::Item::Representation
       
           property :kind, as: 'kind'
         end
         
         class Item
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :key, as: 'key'
             property :value, as: 'value'
           end
@@ -2645,7 +2645,7 @@ module Google
       
       class NamedPort
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :name, as: 'name'
           property :port, as: 'port'
         end
@@ -2653,7 +2653,7 @@ module Google
       
       class Network
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :i_pv4_range, as: 'IPv4Range'
           property :auto_create_subnetworks, as: 'autoCreateSubnetworks'
           property :creation_timestamp, as: 'creationTimestamp'
@@ -2669,8 +2669,8 @@ module Google
       
       class NetworkInterface
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :access_configs, as: 'accessConfigs', class: Google::Apis::ComputeBeta::AccessConfig, decorator: Google::Apis::ComputeBeta::AccessConfig::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :access_configs, as: 'accessConfigs', class: GoogleAPI::Apis::ComputeBeta::AccessConfig, decorator: GoogleAPI::Apis::ComputeBeta::AccessConfig::Representation
       
           property :name, as: 'name'
           property :network, as: 'network'
@@ -2681,9 +2681,9 @@ module Google
       
       class NetworkList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::Network, decorator: Google::Apis::ComputeBeta::Network::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::Network, decorator: GoogleAPI::Apis::ComputeBeta::Network::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -2693,12 +2693,12 @@ module Google
       
       class Operation
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :client_operation_id, as: 'clientOperationId'
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
           property :end_time, as: 'endTime'
-          property :error, as: 'error', class: Google::Apis::ComputeBeta::Operation::Error, decorator: Google::Apis::ComputeBeta::Operation::Error::Representation
+          property :error, as: 'error', class: GoogleAPI::Apis::ComputeBeta::Operation::Error, decorator: GoogleAPI::Apis::ComputeBeta::Operation::Error::Representation
       
           property :http_error_message, as: 'httpErrorMessage'
           property :http_error_status_code, as: 'httpErrorStatusCode'
@@ -2716,21 +2716,21 @@ module Google
           property :target_id, as: 'targetId'
           property :target_link, as: 'targetLink'
           property :user, as: 'user'
-          collection :warnings, as: 'warnings', class: Google::Apis::ComputeBeta::Operation::Warning, decorator: Google::Apis::ComputeBeta::Operation::Warning::Representation
+          collection :warnings, as: 'warnings', class: GoogleAPI::Apis::ComputeBeta::Operation::Warning, decorator: GoogleAPI::Apis::ComputeBeta::Operation::Warning::Representation
       
           property :zone, as: 'zone'
         end
         
         class Error
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
-            collection :errors, as: 'errors', class: Google::Apis::ComputeBeta::Operation::Error::Error, decorator: Google::Apis::ComputeBeta::Operation::Error::Error::Representation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+            collection :errors, as: 'errors', class: GoogleAPI::Apis::ComputeBeta::Operation::Error::Error, decorator: GoogleAPI::Apis::ComputeBeta::Operation::Error::Error::Representation
         
           end
           
           class Error
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :code, as: 'code'
               property :location, as: 'location'
               property :message, as: 'message'
@@ -2740,16 +2740,16 @@ module Google
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::ComputeBeta::Operation::Warning::Datum, decorator: Google::Apis::ComputeBeta::Operation::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::ComputeBeta::Operation::Warning::Datum, decorator: GoogleAPI::Apis::ComputeBeta::Operation::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -2759,9 +2759,9 @@ module Google
       
       class OperationAggregatedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          hash :items, as: 'items', class: Google::Apis::ComputeBeta::OperationsScopedList, decorator: Google::Apis::ComputeBeta::OperationsScopedList::Representation
+          hash :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::OperationsScopedList, decorator: GoogleAPI::Apis::ComputeBeta::OperationsScopedList::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -2771,9 +2771,9 @@ module Google
       
       class OperationList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::Operation, decorator: Google::Apis::ComputeBeta::Operation::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::Operation, decorator: GoogleAPI::Apis::ComputeBeta::Operation::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -2783,25 +2783,25 @@ module Google
       
       class OperationsScopedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :operations, as: 'operations', class: Google::Apis::ComputeBeta::Operation, decorator: Google::Apis::ComputeBeta::Operation::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :operations, as: 'operations', class: GoogleAPI::Apis::ComputeBeta::Operation, decorator: GoogleAPI::Apis::ComputeBeta::Operation::Representation
       
-          property :warning, as: 'warning', class: Google::Apis::ComputeBeta::OperationsScopedList::Warning, decorator: Google::Apis::ComputeBeta::OperationsScopedList::Warning::Representation
+          property :warning, as: 'warning', class: GoogleAPI::Apis::ComputeBeta::OperationsScopedList::Warning, decorator: GoogleAPI::Apis::ComputeBeta::OperationsScopedList::Warning::Representation
       
         end
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::ComputeBeta::OperationsScopedList::Warning::Datum, decorator: Google::Apis::ComputeBeta::OperationsScopedList::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::ComputeBeta::OperationsScopedList::Warning::Datum, decorator: GoogleAPI::Apis::ComputeBeta::OperationsScopedList::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -2811,18 +2811,18 @@ module Google
       
       class PathMatcher
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :default_service, as: 'defaultService'
           property :description, as: 'description'
           property :name, as: 'name'
-          collection :path_rules, as: 'pathRules', class: Google::Apis::ComputeBeta::PathRule, decorator: Google::Apis::ComputeBeta::PathRule::Representation
+          collection :path_rules, as: 'pathRules', class: GoogleAPI::Apis::ComputeBeta::PathRule, decorator: GoogleAPI::Apis::ComputeBeta::PathRule::Representation
       
         end
       end
       
       class PathRule
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :paths, as: 'paths'
           property :service, as: 'service'
         end
@@ -2830,8 +2830,8 @@ module Google
       
       class Project
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :common_instance_metadata, as: 'commonInstanceMetadata', class: Google::Apis::ComputeBeta::Metadata, decorator: Google::Apis::ComputeBeta::Metadata::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :common_instance_metadata, as: 'commonInstanceMetadata', class: GoogleAPI::Apis::ComputeBeta::Metadata, decorator: GoogleAPI::Apis::ComputeBeta::Metadata::Representation
       
           property :creation_timestamp, as: 'creationTimestamp'
           property :default_service_account, as: 'defaultServiceAccount'
@@ -2840,17 +2840,17 @@ module Google
           property :id, as: 'id'
           property :kind, as: 'kind'
           property :name, as: 'name'
-          collection :quotas, as: 'quotas', class: Google::Apis::ComputeBeta::Quota, decorator: Google::Apis::ComputeBeta::Quota::Representation
+          collection :quotas, as: 'quotas', class: GoogleAPI::Apis::ComputeBeta::Quota, decorator: GoogleAPI::Apis::ComputeBeta::Quota::Representation
       
           property :self_link, as: 'selfLink'
-          property :usage_export_location, as: 'usageExportLocation', class: Google::Apis::ComputeBeta::UsageExportLocation, decorator: Google::Apis::ComputeBeta::UsageExportLocation::Representation
+          property :usage_export_location, as: 'usageExportLocation', class: GoogleAPI::Apis::ComputeBeta::UsageExportLocation, decorator: GoogleAPI::Apis::ComputeBeta::UsageExportLocation::Representation
       
         end
       end
       
       class Quota
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :limit, as: 'limit'
           property :metric, as: 'metric'
           property :usage, as: 'usage'
@@ -2859,15 +2859,15 @@ module Google
       
       class Region
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :creation_timestamp, as: 'creationTimestamp'
-          property :deprecated, as: 'deprecated', class: Google::Apis::ComputeBeta::DeprecationStatus, decorator: Google::Apis::ComputeBeta::DeprecationStatus::Representation
+          property :deprecated, as: 'deprecated', class: GoogleAPI::Apis::ComputeBeta::DeprecationStatus, decorator: GoogleAPI::Apis::ComputeBeta::DeprecationStatus::Representation
       
           property :description, as: 'description'
           property :id, as: 'id'
           property :kind, as: 'kind'
           property :name, as: 'name'
-          collection :quotas, as: 'quotas', class: Google::Apis::ComputeBeta::Quota, decorator: Google::Apis::ComputeBeta::Quota::Representation
+          collection :quotas, as: 'quotas', class: GoogleAPI::Apis::ComputeBeta::Quota, decorator: GoogleAPI::Apis::ComputeBeta::Quota::Representation
       
           property :self_link, as: 'selfLink'
           property :status, as: 'status'
@@ -2877,9 +2877,9 @@ module Google
       
       class RegionList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::Region, decorator: Google::Apis::ComputeBeta::Region::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::Region, decorator: GoogleAPI::Apis::ComputeBeta::Region::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -2889,14 +2889,14 @@ module Google
       
       class ResourceGroupReference
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :group, as: 'group'
         end
       end
       
       class Route
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
           property :dest_range, as: 'destRange'
@@ -2912,22 +2912,22 @@ module Google
           property :priority, as: 'priority'
           property :self_link, as: 'selfLink'
           collection :tags, as: 'tags'
-          collection :warnings, as: 'warnings', class: Google::Apis::ComputeBeta::Route::Warning, decorator: Google::Apis::ComputeBeta::Route::Warning::Representation
+          collection :warnings, as: 'warnings', class: GoogleAPI::Apis::ComputeBeta::Route::Warning, decorator: GoogleAPI::Apis::ComputeBeta::Route::Warning::Representation
       
         end
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::ComputeBeta::Route::Warning::Datum, decorator: Google::Apis::ComputeBeta::Route::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::ComputeBeta::Route::Warning::Datum, decorator: GoogleAPI::Apis::ComputeBeta::Route::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -2937,9 +2937,9 @@ module Google
       
       class RouteList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::Route, decorator: Google::Apis::ComputeBeta::Route::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::Route, decorator: GoogleAPI::Apis::ComputeBeta::Route::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -2949,15 +2949,15 @@ module Google
       
       class Router
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :bgp, as: 'bgp', class: Google::Apis::ComputeBeta::RouterBgp, decorator: Google::Apis::ComputeBeta::RouterBgp::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :bgp, as: 'bgp', class: GoogleAPI::Apis::ComputeBeta::RouterBgp, decorator: GoogleAPI::Apis::ComputeBeta::RouterBgp::Representation
       
-          collection :bgp_peers, as: 'bgpPeers', class: Google::Apis::ComputeBeta::RouterBgpPeer, decorator: Google::Apis::ComputeBeta::RouterBgpPeer::Representation
+          collection :bgp_peers, as: 'bgpPeers', class: GoogleAPI::Apis::ComputeBeta::RouterBgpPeer, decorator: GoogleAPI::Apis::ComputeBeta::RouterBgpPeer::Representation
       
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
           property :id, as: 'id'
-          collection :interfaces, as: 'interfaces', class: Google::Apis::ComputeBeta::RouterInterface, decorator: Google::Apis::ComputeBeta::RouterInterface::Representation
+          collection :interfaces, as: 'interfaces', class: GoogleAPI::Apis::ComputeBeta::RouterInterface, decorator: GoogleAPI::Apis::ComputeBeta::RouterInterface::Representation
       
           property :kind, as: 'kind'
           property :name, as: 'name'
@@ -2969,9 +2969,9 @@ module Google
       
       class RouterAggregatedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          hash :items, as: 'items', class: Google::Apis::ComputeBeta::RoutersScopedList, decorator: Google::Apis::ComputeBeta::RoutersScopedList::Representation
+          hash :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::RoutersScopedList, decorator: GoogleAPI::Apis::ComputeBeta::RoutersScopedList::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -2981,14 +2981,14 @@ module Google
       
       class RouterBgp
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :asn, as: 'asn'
         end
       end
       
       class RouterBgpPeer
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :advertised_route_priority, as: 'advertisedRoutePriority'
           property :interface_name, as: 'interfaceName'
           property :ip_address, as: 'ipAddress'
@@ -3000,7 +3000,7 @@ module Google
       
       class RouterInterface
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :ip_range, as: 'ipRange'
           property :linked_vpn_tunnel, as: 'linkedVpnTunnel'
           property :name, as: 'name'
@@ -3009,9 +3009,9 @@ module Google
       
       class RouterList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::Router, decorator: Google::Apis::ComputeBeta::Router::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::Router, decorator: GoogleAPI::Apis::ComputeBeta::Router::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -3021,10 +3021,10 @@ module Google
       
       class RouterStatus
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :best_routes, as: 'bestRoutes', class: Google::Apis::ComputeBeta::Route, decorator: Google::Apis::ComputeBeta::Route::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :best_routes, as: 'bestRoutes', class: GoogleAPI::Apis::ComputeBeta::Route, decorator: GoogleAPI::Apis::ComputeBeta::Route::Representation
       
-          collection :bgp_peer_status, as: 'bgpPeerStatus', class: Google::Apis::ComputeBeta::RouterStatusBgpPeerStatus, decorator: Google::Apis::ComputeBeta::RouterStatusBgpPeerStatus::Representation
+          collection :bgp_peer_status, as: 'bgpPeerStatus', class: GoogleAPI::Apis::ComputeBeta::RouterStatusBgpPeerStatus, decorator: GoogleAPI::Apis::ComputeBeta::RouterStatusBgpPeerStatus::Representation
       
           property :network, as: 'network'
         end
@@ -3032,8 +3032,8 @@ module Google
       
       class RouterStatusBgpPeerStatus
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :advertised_routes, as: 'advertisedRoutes', class: Google::Apis::ComputeBeta::Route, decorator: Google::Apis::ComputeBeta::Route::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :advertised_routes, as: 'advertisedRoutes', class: GoogleAPI::Apis::ComputeBeta::Route, decorator: GoogleAPI::Apis::ComputeBeta::Route::Representation
       
           property :ip_address, as: 'ipAddress'
           property :linked_vpn_tunnel, as: 'linkedVpnTunnel'
@@ -3049,34 +3049,34 @@ module Google
       
       class RouterStatusResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :kind, as: 'kind'
-          property :result, as: 'result', class: Google::Apis::ComputeBeta::RouterStatus, decorator: Google::Apis::ComputeBeta::RouterStatus::Representation
+          property :result, as: 'result', class: GoogleAPI::Apis::ComputeBeta::RouterStatus, decorator: GoogleAPI::Apis::ComputeBeta::RouterStatus::Representation
       
         end
       end
       
       class RoutersScopedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :routers, as: 'routers', class: Google::Apis::ComputeBeta::Router, decorator: Google::Apis::ComputeBeta::Router::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :routers, as: 'routers', class: GoogleAPI::Apis::ComputeBeta::Router, decorator: GoogleAPI::Apis::ComputeBeta::Router::Representation
       
-          property :warning, as: 'warning', class: Google::Apis::ComputeBeta::RoutersScopedList::Warning, decorator: Google::Apis::ComputeBeta::RoutersScopedList::Warning::Representation
+          property :warning, as: 'warning', class: GoogleAPI::Apis::ComputeBeta::RoutersScopedList::Warning, decorator: GoogleAPI::Apis::ComputeBeta::RoutersScopedList::Warning::Representation
       
         end
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::ComputeBeta::RoutersScopedList::Warning::Datum, decorator: Google::Apis::ComputeBeta::RoutersScopedList::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::ComputeBeta::RoutersScopedList::Warning::Datum, decorator: GoogleAPI::Apis::ComputeBeta::RoutersScopedList::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -3086,7 +3086,7 @@ module Google
       
       class Scheduling
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :automatic_restart, as: 'automaticRestart'
           property :on_host_maintenance, as: 'onHostMaintenance'
           property :preemptible, as: 'preemptible'
@@ -3095,7 +3095,7 @@ module Google
       
       class SerialPortOutput
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :contents, as: 'contents'
           property :kind, as: 'kind'
           property :next, as: 'next'
@@ -3106,7 +3106,7 @@ module Google
       
       class ServiceAccount
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :email, as: 'email'
           collection :scopes, as: 'scopes'
         end
@@ -3114,7 +3114,7 @@ module Google
       
       class Snapshot
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
           property :disk_size_gb, as: 'diskSizeGb'
@@ -3125,10 +3125,10 @@ module Google
           collection :licenses, as: 'licenses'
           property :name, as: 'name'
           property :self_link, as: 'selfLink'
-          property :snapshot_encryption_key, as: 'snapshotEncryptionKey', class: Google::Apis::ComputeBeta::CustomerEncryptionKey, decorator: Google::Apis::ComputeBeta::CustomerEncryptionKey::Representation
+          property :snapshot_encryption_key, as: 'snapshotEncryptionKey', class: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey, decorator: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey::Representation
       
           property :source_disk, as: 'sourceDisk'
-          property :source_disk_encryption_key, as: 'sourceDiskEncryptionKey', class: Google::Apis::ComputeBeta::CustomerEncryptionKey, decorator: Google::Apis::ComputeBeta::CustomerEncryptionKey::Representation
+          property :source_disk_encryption_key, as: 'sourceDiskEncryptionKey', class: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey, decorator: GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey::Representation
       
           property :source_disk_id, as: 'sourceDiskId'
           property :status, as: 'status'
@@ -3139,9 +3139,9 @@ module Google
       
       class SnapshotList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::Snapshot, decorator: Google::Apis::ComputeBeta::Snapshot::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::Snapshot, decorator: GoogleAPI::Apis::ComputeBeta::Snapshot::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -3151,7 +3151,7 @@ module Google
       
       class SslCertificate
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :certificate, as: 'certificate'
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
@@ -3165,9 +3165,9 @@ module Google
       
       class SslCertificateList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::SslCertificate, decorator: Google::Apis::ComputeBeta::SslCertificate::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::SslCertificate, decorator: GoogleAPI::Apis::ComputeBeta::SslCertificate::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -3177,7 +3177,7 @@ module Google
       
       class Subnetwork
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
           property :gateway_address, as: 'gatewayAddress'
@@ -3193,9 +3193,9 @@ module Google
       
       class SubnetworkAggregatedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          hash :items, as: 'items', class: Google::Apis::ComputeBeta::SubnetworksScopedList, decorator: Google::Apis::ComputeBeta::SubnetworksScopedList::Representation
+          hash :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::SubnetworksScopedList, decorator: GoogleAPI::Apis::ComputeBeta::SubnetworksScopedList::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -3205,9 +3205,9 @@ module Google
       
       class SubnetworkList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::Subnetwork, decorator: Google::Apis::ComputeBeta::Subnetwork::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::Subnetwork, decorator: GoogleAPI::Apis::ComputeBeta::Subnetwork::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -3217,25 +3217,25 @@ module Google
       
       class SubnetworksScopedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :subnetworks, as: 'subnetworks', class: Google::Apis::ComputeBeta::Subnetwork, decorator: Google::Apis::ComputeBeta::Subnetwork::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :subnetworks, as: 'subnetworks', class: GoogleAPI::Apis::ComputeBeta::Subnetwork, decorator: GoogleAPI::Apis::ComputeBeta::Subnetwork::Representation
       
-          property :warning, as: 'warning', class: Google::Apis::ComputeBeta::SubnetworksScopedList::Warning, decorator: Google::Apis::ComputeBeta::SubnetworksScopedList::Warning::Representation
+          property :warning, as: 'warning', class: GoogleAPI::Apis::ComputeBeta::SubnetworksScopedList::Warning, decorator: GoogleAPI::Apis::ComputeBeta::SubnetworksScopedList::Warning::Representation
       
         end
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::ComputeBeta::SubnetworksScopedList::Warning::Datum, decorator: Google::Apis::ComputeBeta::SubnetworksScopedList::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::ComputeBeta::SubnetworksScopedList::Warning::Datum, decorator: GoogleAPI::Apis::ComputeBeta::SubnetworksScopedList::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -3245,7 +3245,7 @@ module Google
       
       class Tags
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :fingerprint, :base64 => true, as: 'fingerprint'
           collection :items, as: 'items'
         end
@@ -3253,7 +3253,7 @@ module Google
       
       class TargetHttpProxy
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
           property :id, as: 'id'
@@ -3266,9 +3266,9 @@ module Google
       
       class TargetHttpProxyList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::TargetHttpProxy, decorator: Google::Apis::ComputeBeta::TargetHttpProxy::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::TargetHttpProxy, decorator: GoogleAPI::Apis::ComputeBeta::TargetHttpProxy::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -3278,14 +3278,14 @@ module Google
       
       class TargetHttpsProxiesSetSslCertificatesRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :ssl_certificates, as: 'sslCertificates'
         end
       end
       
       class TargetHttpsProxy
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
           property :id, as: 'id'
@@ -3299,9 +3299,9 @@ module Google
       
       class TargetHttpsProxyList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::TargetHttpsProxy, decorator: Google::Apis::ComputeBeta::TargetHttpsProxy::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::TargetHttpsProxy, decorator: GoogleAPI::Apis::ComputeBeta::TargetHttpsProxy::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -3311,7 +3311,7 @@ module Google
       
       class TargetInstance
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
           property :id, as: 'id'
@@ -3326,9 +3326,9 @@ module Google
       
       class TargetInstanceAggregatedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          hash :items, as: 'items', class: Google::Apis::ComputeBeta::TargetInstancesScopedList, decorator: Google::Apis::ComputeBeta::TargetInstancesScopedList::Representation
+          hash :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::TargetInstancesScopedList, decorator: GoogleAPI::Apis::ComputeBeta::TargetInstancesScopedList::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -3338,9 +3338,9 @@ module Google
       
       class TargetInstanceList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::TargetInstance, decorator: Google::Apis::ComputeBeta::TargetInstance::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::TargetInstance, decorator: GoogleAPI::Apis::ComputeBeta::TargetInstance::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -3350,25 +3350,25 @@ module Google
       
       class TargetInstancesScopedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :target_instances, as: 'targetInstances', class: Google::Apis::ComputeBeta::TargetInstance, decorator: Google::Apis::ComputeBeta::TargetInstance::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :target_instances, as: 'targetInstances', class: GoogleAPI::Apis::ComputeBeta::TargetInstance, decorator: GoogleAPI::Apis::ComputeBeta::TargetInstance::Representation
       
-          property :warning, as: 'warning', class: Google::Apis::ComputeBeta::TargetInstancesScopedList::Warning, decorator: Google::Apis::ComputeBeta::TargetInstancesScopedList::Warning::Representation
+          property :warning, as: 'warning', class: GoogleAPI::Apis::ComputeBeta::TargetInstancesScopedList::Warning, decorator: GoogleAPI::Apis::ComputeBeta::TargetInstancesScopedList::Warning::Representation
       
         end
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::ComputeBeta::TargetInstancesScopedList::Warning::Datum, decorator: Google::Apis::ComputeBeta::TargetInstancesScopedList::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::ComputeBeta::TargetInstancesScopedList::Warning::Datum, decorator: GoogleAPI::Apis::ComputeBeta::TargetInstancesScopedList::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -3378,7 +3378,7 @@ module Google
       
       class TargetPool
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :backup_pool, as: 'backupPool'
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
@@ -3396,9 +3396,9 @@ module Google
       
       class TargetPoolAggregatedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          hash :items, as: 'items', class: Google::Apis::ComputeBeta::TargetPoolsScopedList, decorator: Google::Apis::ComputeBeta::TargetPoolsScopedList::Representation
+          hash :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::TargetPoolsScopedList, decorator: GoogleAPI::Apis::ComputeBeta::TargetPoolsScopedList::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -3408,8 +3408,8 @@ module Google
       
       class TargetPoolInstanceHealth
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :health_status, as: 'healthStatus', class: Google::Apis::ComputeBeta::HealthStatus, decorator: Google::Apis::ComputeBeta::HealthStatus::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :health_status, as: 'healthStatus', class: GoogleAPI::Apis::ComputeBeta::HealthStatus, decorator: GoogleAPI::Apis::ComputeBeta::HealthStatus::Representation
       
           property :kind, as: 'kind'
         end
@@ -3417,9 +3417,9 @@ module Google
       
       class TargetPoolList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::TargetPool, decorator: Google::Apis::ComputeBeta::TargetPool::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::TargetPool, decorator: GoogleAPI::Apis::ComputeBeta::TargetPool::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -3429,57 +3429,57 @@ module Google
       
       class AddTargetPoolsHealthCheckRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :health_checks, as: 'healthChecks', class: Google::Apis::ComputeBeta::HealthCheckReference, decorator: Google::Apis::ComputeBeta::HealthCheckReference::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :health_checks, as: 'healthChecks', class: GoogleAPI::Apis::ComputeBeta::HealthCheckReference, decorator: GoogleAPI::Apis::ComputeBeta::HealthCheckReference::Representation
       
         end
       end
       
       class AddTargetPoolsInstanceRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :instances, as: 'instances', class: Google::Apis::ComputeBeta::InstanceReference, decorator: Google::Apis::ComputeBeta::InstanceReference::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :instances, as: 'instances', class: GoogleAPI::Apis::ComputeBeta::InstanceReference, decorator: GoogleAPI::Apis::ComputeBeta::InstanceReference::Representation
       
         end
       end
       
       class RemoveTargetPoolsHealthCheckRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :health_checks, as: 'healthChecks', class: Google::Apis::ComputeBeta::HealthCheckReference, decorator: Google::Apis::ComputeBeta::HealthCheckReference::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :health_checks, as: 'healthChecks', class: GoogleAPI::Apis::ComputeBeta::HealthCheckReference, decorator: GoogleAPI::Apis::ComputeBeta::HealthCheckReference::Representation
       
         end
       end
       
       class RemoveTargetPoolsInstanceRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :instances, as: 'instances', class: Google::Apis::ComputeBeta::InstanceReference, decorator: Google::Apis::ComputeBeta::InstanceReference::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :instances, as: 'instances', class: GoogleAPI::Apis::ComputeBeta::InstanceReference, decorator: GoogleAPI::Apis::ComputeBeta::InstanceReference::Representation
       
         end
       end
       
       class TargetPoolsScopedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :target_pools, as: 'targetPools', class: Google::Apis::ComputeBeta::TargetPool, decorator: Google::Apis::ComputeBeta::TargetPool::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :target_pools, as: 'targetPools', class: GoogleAPI::Apis::ComputeBeta::TargetPool, decorator: GoogleAPI::Apis::ComputeBeta::TargetPool::Representation
       
-          property :warning, as: 'warning', class: Google::Apis::ComputeBeta::TargetPoolsScopedList::Warning, decorator: Google::Apis::ComputeBeta::TargetPoolsScopedList::Warning::Representation
+          property :warning, as: 'warning', class: GoogleAPI::Apis::ComputeBeta::TargetPoolsScopedList::Warning, decorator: GoogleAPI::Apis::ComputeBeta::TargetPoolsScopedList::Warning::Representation
       
         end
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::ComputeBeta::TargetPoolsScopedList::Warning::Datum, decorator: Google::Apis::ComputeBeta::TargetPoolsScopedList::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::ComputeBeta::TargetPoolsScopedList::Warning::Datum, decorator: GoogleAPI::Apis::ComputeBeta::TargetPoolsScopedList::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -3489,14 +3489,14 @@ module Google
       
       class TargetReference
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :target, as: 'target'
         end
       end
       
       class TargetVpnGateway
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
           collection :forwarding_rules, as: 'forwardingRules'
@@ -3513,9 +3513,9 @@ module Google
       
       class TargetVpnGatewayAggregatedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          hash :items, as: 'items', class: Google::Apis::ComputeBeta::TargetVpnGatewaysScopedList, decorator: Google::Apis::ComputeBeta::TargetVpnGatewaysScopedList::Representation
+          hash :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::TargetVpnGatewaysScopedList, decorator: GoogleAPI::Apis::ComputeBeta::TargetVpnGatewaysScopedList::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -3525,9 +3525,9 @@ module Google
       
       class TargetVpnGatewayList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::TargetVpnGateway, decorator: Google::Apis::ComputeBeta::TargetVpnGateway::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::TargetVpnGateway, decorator: GoogleAPI::Apis::ComputeBeta::TargetVpnGateway::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -3537,25 +3537,25 @@ module Google
       
       class TargetVpnGatewaysScopedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :target_vpn_gateways, as: 'targetVpnGateways', class: Google::Apis::ComputeBeta::TargetVpnGateway, decorator: Google::Apis::ComputeBeta::TargetVpnGateway::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :target_vpn_gateways, as: 'targetVpnGateways', class: GoogleAPI::Apis::ComputeBeta::TargetVpnGateway, decorator: GoogleAPI::Apis::ComputeBeta::TargetVpnGateway::Representation
       
-          property :warning, as: 'warning', class: Google::Apis::ComputeBeta::TargetVpnGatewaysScopedList::Warning, decorator: Google::Apis::ComputeBeta::TargetVpnGatewaysScopedList::Warning::Representation
+          property :warning, as: 'warning', class: GoogleAPI::Apis::ComputeBeta::TargetVpnGatewaysScopedList::Warning, decorator: GoogleAPI::Apis::ComputeBeta::TargetVpnGatewaysScopedList::Warning::Representation
       
         end
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::ComputeBeta::TargetVpnGatewaysScopedList::Warning::Datum, decorator: Google::Apis::ComputeBeta::TargetVpnGatewaysScopedList::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::ComputeBeta::TargetVpnGatewaysScopedList::Warning::Datum, decorator: GoogleAPI::Apis::ComputeBeta::TargetVpnGatewaysScopedList::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -3565,7 +3565,7 @@ module Google
       
       class TestFailure
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :actual_service, as: 'actualService'
           property :expected_service, as: 'expectedService'
           property :host, as: 'host'
@@ -3575,43 +3575,43 @@ module Google
       
       class TestPermissionsRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :permissions, as: 'permissions'
         end
       end
       
       class TestPermissionsResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :permissions, as: 'permissions'
         end
       end
       
       class UrlMap
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :creation_timestamp, as: 'creationTimestamp'
           property :default_service, as: 'defaultService'
           property :description, as: 'description'
           property :fingerprint, :base64 => true, as: 'fingerprint'
-          collection :host_rules, as: 'hostRules', class: Google::Apis::ComputeBeta::HostRule, decorator: Google::Apis::ComputeBeta::HostRule::Representation
+          collection :host_rules, as: 'hostRules', class: GoogleAPI::Apis::ComputeBeta::HostRule, decorator: GoogleAPI::Apis::ComputeBeta::HostRule::Representation
       
           property :id, as: 'id'
           property :kind, as: 'kind'
           property :name, as: 'name'
-          collection :path_matchers, as: 'pathMatchers', class: Google::Apis::ComputeBeta::PathMatcher, decorator: Google::Apis::ComputeBeta::PathMatcher::Representation
+          collection :path_matchers, as: 'pathMatchers', class: GoogleAPI::Apis::ComputeBeta::PathMatcher, decorator: GoogleAPI::Apis::ComputeBeta::PathMatcher::Representation
       
           property :self_link, as: 'selfLink'
-          collection :tests, as: 'tests', class: Google::Apis::ComputeBeta::UrlMapTest, decorator: Google::Apis::ComputeBeta::UrlMapTest::Representation
+          collection :tests, as: 'tests', class: GoogleAPI::Apis::ComputeBeta::UrlMapTest, decorator: GoogleAPI::Apis::ComputeBeta::UrlMapTest::Representation
       
         end
       end
       
       class UrlMapList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::UrlMap, decorator: Google::Apis::ComputeBeta::UrlMap::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::UrlMap, decorator: GoogleAPI::Apis::ComputeBeta::UrlMap::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -3621,14 +3621,14 @@ module Google
       
       class UrlMapReference
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :url_map, as: 'urlMap'
         end
       end
       
       class UrlMapTest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :description, as: 'description'
           property :host, as: 'host'
           property :path, as: 'path'
@@ -3638,10 +3638,10 @@ module Google
       
       class UrlMapValidationResult
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :load_errors, as: 'loadErrors'
           property :load_succeeded, as: 'loadSucceeded'
-          collection :test_failures, as: 'testFailures', class: Google::Apis::ComputeBeta::TestFailure, decorator: Google::Apis::ComputeBeta::TestFailure::Representation
+          collection :test_failures, as: 'testFailures', class: GoogleAPI::Apis::ComputeBeta::TestFailure, decorator: GoogleAPI::Apis::ComputeBeta::TestFailure::Representation
       
           property :test_passed, as: 'testPassed'
         end
@@ -3649,23 +3649,23 @@ module Google
       
       class ValidateUrlMapsRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :resource, as: 'resource', class: Google::Apis::ComputeBeta::UrlMap, decorator: Google::Apis::ComputeBeta::UrlMap::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :resource, as: 'resource', class: GoogleAPI::Apis::ComputeBeta::UrlMap, decorator: GoogleAPI::Apis::ComputeBeta::UrlMap::Representation
       
         end
       end
       
       class ValidateUrlMapsResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :result, as: 'result', class: Google::Apis::ComputeBeta::UrlMapValidationResult, decorator: Google::Apis::ComputeBeta::UrlMapValidationResult::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :result, as: 'result', class: GoogleAPI::Apis::ComputeBeta::UrlMapValidationResult, decorator: GoogleAPI::Apis::ComputeBeta::UrlMapValidationResult::Representation
       
         end
       end
       
       class UsageExportLocation
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :bucket_name, as: 'bucketName'
           property :report_name_prefix, as: 'reportNamePrefix'
         end
@@ -3673,7 +3673,7 @@ module Google
       
       class VpnTunnel
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :creation_timestamp, as: 'creationTimestamp'
           property :description, as: 'description'
           property :detailed_status, as: 'detailedStatus'
@@ -3696,9 +3696,9 @@ module Google
       
       class VpnTunnelAggregatedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          hash :items, as: 'items', class: Google::Apis::ComputeBeta::VpnTunnelsScopedList, decorator: Google::Apis::ComputeBeta::VpnTunnelsScopedList::Representation
+          hash :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::VpnTunnelsScopedList, decorator: GoogleAPI::Apis::ComputeBeta::VpnTunnelsScopedList::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -3708,9 +3708,9 @@ module Google
       
       class VpnTunnelList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::VpnTunnel, decorator: Google::Apis::ComputeBeta::VpnTunnel::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::VpnTunnel, decorator: GoogleAPI::Apis::ComputeBeta::VpnTunnel::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -3720,25 +3720,25 @@ module Google
       
       class VpnTunnelsScopedList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :vpn_tunnels, as: 'vpnTunnels', class: Google::Apis::ComputeBeta::VpnTunnel, decorator: Google::Apis::ComputeBeta::VpnTunnel::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :vpn_tunnels, as: 'vpnTunnels', class: GoogleAPI::Apis::ComputeBeta::VpnTunnel, decorator: GoogleAPI::Apis::ComputeBeta::VpnTunnel::Representation
       
-          property :warning, as: 'warning', class: Google::Apis::ComputeBeta::VpnTunnelsScopedList::Warning, decorator: Google::Apis::ComputeBeta::VpnTunnelsScopedList::Warning::Representation
+          property :warning, as: 'warning', class: GoogleAPI::Apis::ComputeBeta::VpnTunnelsScopedList::Warning, decorator: GoogleAPI::Apis::ComputeBeta::VpnTunnelsScopedList::Warning::Representation
       
         end
         
         class Warning
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :code, as: 'code'
-            collection :data, as: 'data', class: Google::Apis::ComputeBeta::VpnTunnelsScopedList::Warning::Datum, decorator: Google::Apis::ComputeBeta::VpnTunnelsScopedList::Warning::Datum::Representation
+            collection :data, as: 'data', class: GoogleAPI::Apis::ComputeBeta::VpnTunnelsScopedList::Warning::Datum, decorator: GoogleAPI::Apis::ComputeBeta::VpnTunnelsScopedList::Warning::Datum::Representation
         
             property :message, as: 'message'
           end
           
           class Datum
             # @private
-            class Representation < Google::Apis::Core::JsonRepresentation
+            class Representation < GoogleAPI::Apis::Core::JsonRepresentation
               property :key, as: 'key'
               property :value, as: 'value'
             end
@@ -3748,9 +3748,9 @@ module Google
       
       class Zone
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :creation_timestamp, as: 'creationTimestamp'
-          property :deprecated, as: 'deprecated', class: Google::Apis::ComputeBeta::DeprecationStatus, decorator: Google::Apis::ComputeBeta::DeprecationStatus::Representation
+          property :deprecated, as: 'deprecated', class: GoogleAPI::Apis::ComputeBeta::DeprecationStatus, decorator: GoogleAPI::Apis::ComputeBeta::DeprecationStatus::Representation
       
           property :description, as: 'description'
           property :id, as: 'id'
@@ -3764,9 +3764,9 @@ module Google
       
       class ZoneList
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
-          collection :items, as: 'items', class: Google::Apis::ComputeBeta::Zone, decorator: Google::Apis::ComputeBeta::Zone::Representation
+          collection :items, as: 'items', class: GoogleAPI::Apis::ComputeBeta::Zone, decorator: GoogleAPI::Apis::ComputeBeta::Zone::Representation
       
           property :kind, as: 'kind'
           property :next_page_token, as: 'nextPageToken'
@@ -3776,7 +3776,7 @@ module Google
       
       class ZoneSetLabelsRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :label_fingerprint, :base64 => true, as: 'labelFingerprint'
           hash :labels, as: 'labels'
         end

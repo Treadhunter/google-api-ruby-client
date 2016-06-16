@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ContainerV1beta1
       # Google Container Engine API
@@ -28,11 +28,11 @@ module Google
       # @example
       #    require 'google/apis/container_v1beta1'
       #
-      #    Container = Google::Apis::ContainerV1beta1 # Alias the module
+      #    Container = GoogleAPI::Apis::ContainerV1beta1 # Alias the module
       #    service = Container::ContainerService.new
       #
       # @see https://cloud.google.com/container-engine/docs/v1beta1/
-      class ContainerService < Google::Apis::Core::BaseService
+      class ContainerService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -65,23 +65,23 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ContainerV1beta1::ListAggregatedClustersResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ContainerV1beta1::ListAggregatedClustersResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ContainerV1beta1::ListAggregatedClustersResponse]
+        # @return [GoogleAPI::Apis::ContainerV1beta1::ListAggregatedClustersResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_clusters(project_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           path = '{projectId}/clusters'
           command =  make_simple_command(:get, path, options)
-          command.response_representation = Google::Apis::ContainerV1beta1::ListAggregatedClustersResponse::Representation
-          command.response_class = Google::Apis::ContainerV1beta1::ListAggregatedClustersResponse
+          command.response_representation = GoogleAPI::Apis::ContainerV1beta1::ListAggregatedClustersResponse::Representation
+          command.response_class = GoogleAPI::Apis::ContainerV1beta1::ListAggregatedClustersResponse
           command.params['projectId'] = project_id unless project_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -101,23 +101,23 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ContainerV1beta1::ListAggregatedOperationsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ContainerV1beta1::ListAggregatedOperationsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ContainerV1beta1::ListAggregatedOperationsResponse]
+        # @return [GoogleAPI::Apis::ContainerV1beta1::ListAggregatedOperationsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_operations(project_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           path = '{projectId}/operations'
           command =  make_simple_command(:get, path, options)
-          command.response_representation = Google::Apis::ContainerV1beta1::ListAggregatedOperationsResponse::Representation
-          command.response_class = Google::Apis::ContainerV1beta1::ListAggregatedOperationsResponse
+          command.response_representation = GoogleAPI::Apis::ContainerV1beta1::ListAggregatedOperationsResponse::Representation
+          command.response_class = GoogleAPI::Apis::ContainerV1beta1::ListAggregatedOperationsResponse
           command.params['projectId'] = project_id unless project_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -137,7 +137,7 @@ module Google
         #   The Google Developers Console project ID or  project number.
         # @param [String] zone_id
         #   The name of the Google Compute Engine zone in which the cluster resides.
-        # @param [Google::Apis::ContainerV1beta1::CreateClusterRequest] create_cluster_request_object
+        # @param [GoogleAPI::Apis::ContainerV1beta1::CreateClusterRequest] create_cluster_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -147,25 +147,25 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ContainerV1beta1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ContainerV1beta1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ContainerV1beta1::Operation]
+        # @return [GoogleAPI::Apis::ContainerV1beta1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_cluster(project_id, zone_id, create_cluster_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           path = '{projectId}/zones/{zoneId}/clusters'
           command =  make_simple_command(:post, path, options)
-          command.request_representation = Google::Apis::ContainerV1beta1::CreateClusterRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ContainerV1beta1::CreateClusterRequest::Representation
           command.request_object = create_cluster_request_object
-          command.response_representation = Google::Apis::ContainerV1beta1::Operation::Representation
-          command.response_class = Google::Apis::ContainerV1beta1::Operation
+          command.response_representation = GoogleAPI::Apis::ContainerV1beta1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ContainerV1beta1::Operation
           command.params['projectId'] = project_id unless project_id.nil?
           command.params['zoneId'] = zone_id unless zone_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -191,23 +191,23 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ContainerV1beta1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ContainerV1beta1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ContainerV1beta1::Operation]
+        # @return [GoogleAPI::Apis::ContainerV1beta1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_zone_cluster(project_id, zone_id, cluster_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           path = '{projectId}/zones/{zoneId}/clusters/{clusterId}'
           command =  make_simple_command(:delete, path, options)
-          command.response_representation = Google::Apis::ContainerV1beta1::Operation::Representation
-          command.response_class = Google::Apis::ContainerV1beta1::Operation
+          command.response_representation = GoogleAPI::Apis::ContainerV1beta1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ContainerV1beta1::Operation
           command.params['projectId'] = project_id unless project_id.nil?
           command.params['zoneId'] = zone_id unless zone_id.nil?
           command.params['clusterId'] = cluster_id unless cluster_id.nil?
@@ -233,23 +233,23 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ContainerV1beta1::Cluster] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ContainerV1beta1::Cluster] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ContainerV1beta1::Cluster]
+        # @return [GoogleAPI::Apis::ContainerV1beta1::Cluster]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_zone_cluster(project_id, zone_id, cluster_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           path = '{projectId}/zones/{zoneId}/clusters/{clusterId}'
           command =  make_simple_command(:get, path, options)
-          command.response_representation = Google::Apis::ContainerV1beta1::Cluster::Representation
-          command.response_class = Google::Apis::ContainerV1beta1::Cluster
+          command.response_representation = GoogleAPI::Apis::ContainerV1beta1::Cluster::Representation
+          command.response_class = GoogleAPI::Apis::ContainerV1beta1::Cluster
           command.params['projectId'] = project_id unless project_id.nil?
           command.params['zoneId'] = zone_id unless zone_id.nil?
           command.params['clusterId'] = cluster_id unless cluster_id.nil?
@@ -273,23 +273,23 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ContainerV1beta1::ListClustersResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ContainerV1beta1::ListClustersResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ContainerV1beta1::ListClustersResponse]
+        # @return [GoogleAPI::Apis::ContainerV1beta1::ListClustersResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_zone_clusters(project_id, zone_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           path = '{projectId}/zones/{zoneId}/clusters'
           command =  make_simple_command(:get, path, options)
-          command.response_representation = Google::Apis::ContainerV1beta1::ListClustersResponse::Representation
-          command.response_class = Google::Apis::ContainerV1beta1::ListClustersResponse
+          command.response_representation = GoogleAPI::Apis::ContainerV1beta1::ListClustersResponse::Representation
+          command.response_class = GoogleAPI::Apis::ContainerV1beta1::ListClustersResponse
           command.params['projectId'] = project_id unless project_id.nil?
           command.params['zoneId'] = zone_id unless zone_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -316,23 +316,23 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ContainerV1beta1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ContainerV1beta1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ContainerV1beta1::Operation]
+        # @return [GoogleAPI::Apis::ContainerV1beta1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_zone_operation(project_id, zone_id, operation_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           path = '{projectId}/zones/{zoneId}/operations/{operationId}'
           command =  make_simple_command(:get, path, options)
-          command.response_representation = Google::Apis::ContainerV1beta1::Operation::Representation
-          command.response_class = Google::Apis::ContainerV1beta1::Operation
+          command.response_representation = GoogleAPI::Apis::ContainerV1beta1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ContainerV1beta1::Operation
           command.params['projectId'] = project_id unless project_id.nil?
           command.params['zoneId'] = zone_id unless zone_id.nil?
           command.params['operationId'] = operation_id unless operation_id.nil?
@@ -356,23 +356,23 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ContainerV1beta1::ListOperationsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ContainerV1beta1::ListOperationsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ContainerV1beta1::ListOperationsResponse]
+        # @return [GoogleAPI::Apis::ContainerV1beta1::ListOperationsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_zone_operations(project_id, zone_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           path = '{projectId}/zones/{zoneId}/operations'
           command =  make_simple_command(:get, path, options)
-          command.response_representation = Google::Apis::ContainerV1beta1::ListOperationsResponse::Representation
-          command.response_class = Google::Apis::ContainerV1beta1::ListOperationsResponse
+          command.response_representation = GoogleAPI::Apis::ContainerV1beta1::ListOperationsResponse::Representation
+          command.response_class = GoogleAPI::Apis::ContainerV1beta1::ListOperationsResponse
           command.params['projectId'] = project_id unless project_id.nil?
           command.params['zoneId'] = zone_id unless zone_id.nil?
           command.query['fields'] = fields unless fields.nil?

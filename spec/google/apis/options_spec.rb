@@ -15,8 +15,8 @@
 require 'spec_helper'
 require 'google/apis/options'
 
-RSpec.describe Google::Apis::RequestOptions do
-  let(:options) { Google::Apis::RequestOptions.new }
+RSpec.describe GoogleAPI::Apis::RequestOptions do
+  let(:options) { GoogleAPI::Apis::RequestOptions.new }
 
   it 'should not merge nil values' do
     options.retries = 1
@@ -29,12 +29,12 @@ RSpec.describe Google::Apis::RequestOptions do
   end
 
   it 'should merge from options' do
-    opts = Google::Apis::RequestOptions.new
+    opts = GoogleAPI::Apis::RequestOptions.new
     opts.authorization = 'foo'
     expect(options.merge(opts).authorization).to eql 'foo'
   end
 
   it 'should allow nil in merge' do
-    expect(options.merge(nil)).to be_an_instance_of(Google::Apis::RequestOptions)
+    expect(options.merge(nil)).to be_an_instance_of(GoogleAPI::Apis::RequestOptions)
   end
 end

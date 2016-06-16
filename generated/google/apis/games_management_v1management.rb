@@ -16,7 +16,7 @@ require 'google/apis/games_management_v1management/service.rb'
 require 'google/apis/games_management_v1management/classes.rb'
 require 'google/apis/games_management_v1management/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Google Play Game Services Management API
     #

@@ -18,49 +18,49 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module TaskqueueV1beta2
       
       class Task
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class TaskQueue
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
         class Acl
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
         
         class Stats
-          class Representation < Google::Apis::Core::JsonRepresentation; end
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
         
-          include Google::Apis::Core::JsonObjectSupport
+          include GoogleAPI::Apis::Core::JsonObjectSupport
         end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Tasks
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Tasks2
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Task
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :enqueue_timestamp, as: 'enqueueTimestamp'
           property :id, as: 'id'
           property :kind, as: 'kind'
@@ -74,19 +74,19 @@ module Google
       
       class TaskQueue
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :acl, as: 'acl', class: Google::Apis::TaskqueueV1beta2::TaskQueue::Acl, decorator: Google::Apis::TaskqueueV1beta2::TaskQueue::Acl::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          property :acl, as: 'acl', class: GoogleAPI::Apis::TaskqueueV1beta2::TaskQueue::Acl, decorator: GoogleAPI::Apis::TaskqueueV1beta2::TaskQueue::Acl::Representation
       
           property :id, as: 'id'
           property :kind, as: 'kind'
           property :max_leases, as: 'maxLeases'
-          property :stats, as: 'stats', class: Google::Apis::TaskqueueV1beta2::TaskQueue::Stats, decorator: Google::Apis::TaskqueueV1beta2::TaskQueue::Stats::Representation
+          property :stats, as: 'stats', class: GoogleAPI::Apis::TaskqueueV1beta2::TaskQueue::Stats, decorator: GoogleAPI::Apis::TaskqueueV1beta2::TaskQueue::Stats::Representation
       
         end
         
         class Acl
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             collection :admin_emails, as: 'adminEmails'
             collection :consumer_emails, as: 'consumerEmails'
             collection :producer_emails, as: 'producerEmails'
@@ -95,7 +95,7 @@ module Google
         
         class Stats
           # @private
-          class Representation < Google::Apis::Core::JsonRepresentation
+          class Representation < GoogleAPI::Apis::Core::JsonRepresentation
             property :leased_last_hour, as: 'leasedLastHour'
             property :leased_last_minute, as: 'leasedLastMinute'
             property :oldest_task, as: 'oldestTask'
@@ -106,8 +106,8 @@ module Google
       
       class Tasks
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :items, as: 'items', class: Google::Apis::TaskqueueV1beta2::Task, decorator: Google::Apis::TaskqueueV1beta2::Task::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :items, as: 'items', class: GoogleAPI::Apis::TaskqueueV1beta2::Task, decorator: GoogleAPI::Apis::TaskqueueV1beta2::Task::Representation
       
           property :kind, as: 'kind'
         end
@@ -115,8 +115,8 @@ module Google
       
       class Tasks2
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :items, as: 'items', class: Google::Apis::TaskqueueV1beta2::Task, decorator: Google::Apis::TaskqueueV1beta2::Task::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :items, as: 'items', class: GoogleAPI::Apis::TaskqueueV1beta2::Task, decorator: GoogleAPI::Apis::TaskqueueV1beta2::Task::Representation
       
           property :kind, as: 'kind'
         end

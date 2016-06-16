@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ClassroomV1beta1
       
       # A Course in Classroom.
       class Course
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Unique identifier for this course assigned by Classroom. You may optionally
         # set this to an [alias string][google.classroom.v1beta1.CourseAlias] as part of
@@ -134,7 +134,7 @@ module Google
       # protobuf.Empty) returns (google.protobuf.Empty); ` The JSON representation for
       # `Empty` is empty JSON object ````.
       class Empty
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -147,11 +147,11 @@ module Google
       
       # Response when listing courses.
       class ListCoursesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Courses that match the request.
         # Corresponds to the JSON property `courses`
-        # @return [Array<Google::Apis::ClassroomV1beta1::Course>]
+        # @return [Array<GoogleAPI::Apis::ClassroomV1beta1::Course>]
         attr_accessor :courses
       
         # Token identifying the next page of results to return. If empty, no further
@@ -183,7 +183,7 @@ module Google
       # event of transmission failures, as retrying a request will return
       # ALREADY_EXISTS if a previous one has succeeded.
       class CourseAlias
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Alias string. The format of the string indicated the desired alias scoping. * "
         # d:" indicates a domain-scoped alias. Example: d:math_101 * "p:" indicates a
@@ -205,11 +205,11 @@ module Google
       
       # Response when listing course aliases.
       class ListCourseAliasesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The course aliases.
         # Corresponds to the JSON property `aliases`
-        # @return [Array<Google::Apis::ClassroomV1beta1::CourseAlias>]
+        # @return [Array<GoogleAPI::Apis::ClassroomV1beta1::CourseAlias>]
         attr_accessor :aliases
       
         # Token identifying the next page of results to return. If empty, no further
@@ -231,7 +231,7 @@ module Google
       
       # Global information for a user.
       class UserProfile
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Unique identifier of the user. Read-only
         # Corresponds to the JSON property `id`
@@ -240,7 +240,7 @@ module Google
       
         # Details of the user's name.
         # Corresponds to the JSON property `name`
-        # @return [Google::Apis::ClassroomV1beta1::Name]
+        # @return [GoogleAPI::Apis::ClassroomV1beta1::Name]
         attr_accessor :name
       
         # E-mail address of the user. Read-only
@@ -255,7 +255,7 @@ module Google
       
         # Global permissions of the user. Read-only
         # Corresponds to the JSON property `permissions`
-        # @return [Array<Google::Apis::ClassroomV1beta1::GlobalPermission>]
+        # @return [Array<GoogleAPI::Apis::ClassroomV1beta1::GlobalPermission>]
         attr_accessor :permissions
       
         def initialize(**args)
@@ -274,7 +274,7 @@ module Google
       
       # Details of the user's name.
       class Name
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The user's first name. Read-only
         # Corresponds to the JSON property `givenName`
@@ -306,7 +306,7 @@ module Google
       
       # Global user permission description.
       class GlobalPermission
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Permission value.
         # Corresponds to the JSON property `permission`
@@ -325,7 +325,7 @@ module Google
       
       # Teacher of a course.
       class Teacher
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Unique identifier of the course. Read-only
         # Corresponds to the JSON property `courseId`
@@ -342,7 +342,7 @@ module Google
       
         # Global information for a user.
         # Corresponds to the JSON property `profile`
-        # @return [Google::Apis::ClassroomV1beta1::UserProfile]
+        # @return [GoogleAPI::Apis::ClassroomV1beta1::UserProfile]
         attr_accessor :profile
       
         def initialize(**args)
@@ -359,11 +359,11 @@ module Google
       
       # Response when listing teachers.
       class ListTeachersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The teachers who match the list request.
         # Corresponds to the JSON property `teachers`
-        # @return [Array<Google::Apis::ClassroomV1beta1::Teacher>]
+        # @return [Array<GoogleAPI::Apis::ClassroomV1beta1::Teacher>]
         attr_accessor :teachers
       
         # Token identifying the next page of results to return. If empty, no further
@@ -385,7 +385,7 @@ module Google
       
       # Student in a course.
       class Student
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Unique identifier of the course. Read-only
         # Corresponds to the JSON property `courseId`
@@ -402,7 +402,7 @@ module Google
       
         # Global information for a user.
         # Corresponds to the JSON property `profile`
-        # @return [Google::Apis::ClassroomV1beta1::UserProfile]
+        # @return [GoogleAPI::Apis::ClassroomV1beta1::UserProfile]
         attr_accessor :profile
       
         def initialize(**args)
@@ -419,11 +419,11 @@ module Google
       
       # Response when listing students.
       class ListStudentsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The students who match the list request.
         # Corresponds to the JSON property `students`
-        # @return [Array<Google::Apis::ClassroomV1beta1::Student>]
+        # @return [Array<GoogleAPI::Apis::ClassroomV1beta1::Student>]
         attr_accessor :students
       
         # Token identifying the next page of results to return. If empty, no further

@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module VisionV1
       
       # External image source (Google Cloud Storage image location).
       class ImageSource
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Google Cloud Storage image URI. It must be in the following form:
         # `gs://bucket_name/object_name`. For more
@@ -47,21 +47,21 @@ module Google
       # Request for performing Google Cloud Vision API tasks over a user-provided
       # image, with user-requested features.
       class AnnotateImageRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Client image to perform Google Cloud Vision API tasks over.
         # Corresponds to the JSON property `image`
-        # @return [Google::Apis::VisionV1::Image]
+        # @return [GoogleAPI::Apis::VisionV1::Image]
         attr_accessor :image
       
         # Image context.
         # Corresponds to the JSON property `imageContext`
-        # @return [Google::Apis::VisionV1::ImageContext]
+        # @return [GoogleAPI::Apis::VisionV1::ImageContext]
         attr_accessor :image_context
       
         # Requested features.
         # Corresponds to the JSON property `features`
-        # @return [Array<Google::Apis::VisionV1::Feature>]
+        # @return [Array<GoogleAPI::Apis::VisionV1::Feature>]
         attr_accessor :features
       
         def initialize(**args)
@@ -78,43 +78,43 @@ module Google
       
       # Response to an image annotation request.
       class AnnotateImageResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If present, label detection completed successfully.
         # Corresponds to the JSON property `labelAnnotations`
-        # @return [Array<Google::Apis::VisionV1::EntityAnnotation>]
+        # @return [Array<GoogleAPI::Apis::VisionV1::EntityAnnotation>]
         attr_accessor :label_annotations
       
         # If present, landmark detection completed successfully.
         # Corresponds to the JSON property `landmarkAnnotations`
-        # @return [Array<Google::Apis::VisionV1::EntityAnnotation>]
+        # @return [Array<GoogleAPI::Apis::VisionV1::EntityAnnotation>]
         attr_accessor :landmark_annotations
       
         # Set of features pertaining to the image, computed by various computer vision
         # methods over safe-search verticals (for example, adult, spoof, medical,
         # violence).
         # Corresponds to the JSON property `safeSearchAnnotation`
-        # @return [Google::Apis::VisionV1::SafeSearchAnnotation]
+        # @return [GoogleAPI::Apis::VisionV1::SafeSearchAnnotation]
         attr_accessor :safe_search_annotation
       
         # Stores image properties (e.g. dominant colors).
         # Corresponds to the JSON property `imagePropertiesAnnotation`
-        # @return [Google::Apis::VisionV1::ImageProperties]
+        # @return [GoogleAPI::Apis::VisionV1::ImageProperties]
         attr_accessor :image_properties_annotation
       
         # If present, text (OCR) detection completed successfully.
         # Corresponds to the JSON property `textAnnotations`
-        # @return [Array<Google::Apis::VisionV1::EntityAnnotation>]
+        # @return [Array<GoogleAPI::Apis::VisionV1::EntityAnnotation>]
         attr_accessor :text_annotations
       
         # If present, logo detection completed successfully.
         # Corresponds to the JSON property `logoAnnotations`
-        # @return [Array<Google::Apis::VisionV1::EntityAnnotation>]
+        # @return [Array<GoogleAPI::Apis::VisionV1::EntityAnnotation>]
         attr_accessor :logo_annotations
       
         # If present, face detection completed successfully.
         # Corresponds to the JSON property `faceAnnotations`
-        # @return [Array<Google::Apis::VisionV1::FaceAnnotation>]
+        # @return [Array<GoogleAPI::Apis::VisionV1::FaceAnnotation>]
         attr_accessor :face_annotations
       
         # The `Status` type defines a logical error model that is suitable for different
@@ -157,7 +157,7 @@ module Google
         # - Logging. If some API errors are stored in logs, the message `Status` could
         # be used directly after any stripping needed for security/privacy reasons.
         # Corresponds to the JSON property `error`
-        # @return [Google::Apis::VisionV1::Status]
+        # @return [GoogleAPI::Apis::VisionV1::Status]
         attr_accessor :error
       
         def initialize(**args)
@@ -179,7 +179,7 @@ module Google
       
       # Rectangle determined by min and max LatLng pairs.
       class LatLongRect
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An object representing a latitude/longitude pair. This is expressed as a pair
         # of doubles representing degrees latitude and degrees longitude. Unless
@@ -217,7 +217,7 @@ module Google
         # assert (-90.0, 10.0) == NormalizeLatLng(270.0, 10.0)
         # assert (90.0, 10.0) == NormalizeLatLng(-270.0, 10.0)
         # Corresponds to the JSON property `maxLatLng`
-        # @return [Google::Apis::VisionV1::LatLng]
+        # @return [GoogleAPI::Apis::VisionV1::LatLng]
         attr_accessor :max_lat_lng
       
         # An object representing a latitude/longitude pair. This is expressed as a pair
@@ -256,7 +256,7 @@ module Google
         # assert (-90.0, 10.0) == NormalizeLatLng(270.0, 10.0)
         # assert (90.0, 10.0) == NormalizeLatLng(-270.0, 10.0)
         # Corresponds to the JSON property `minLatLng`
-        # @return [Google::Apis::VisionV1::LatLng]
+        # @return [GoogleAPI::Apis::VisionV1::LatLng]
         attr_accessor :min_lat_lng
       
         def initialize(**args)
@@ -310,7 +310,7 @@ module Google
       # - Logging. If some API errors are stored in logs, the message `Status` could
       # be used directly after any stripping needed for security/privacy reasons.
       class Status
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The status code, which should be an enum value of google.rpc.Code.
         # Corresponds to the JSON property `code`
@@ -344,7 +344,7 @@ module Google
       
       # A face annotation object contains the results of face detection.
       class FaceAnnotation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Pitch angle. Indicates the upwards/downwards angle that the face is
         # pointing
@@ -360,7 +360,7 @@ module Google
       
         # A bounding polygon for the detected image annotation.
         # Corresponds to the JSON property `fdBoundingPoly`
-        # @return [Google::Apis::VisionV1::BoundingPoly]
+        # @return [GoogleAPI::Apis::VisionV1::BoundingPoly]
         attr_accessor :fd_bounding_poly
       
         # Face landmarking confidence. Range [0, 1].
@@ -402,12 +402,12 @@ module Google
       
         # A bounding polygon for the detected image annotation.
         # Corresponds to the JSON property `boundingPoly`
-        # @return [Google::Apis::VisionV1::BoundingPoly]
+        # @return [GoogleAPI::Apis::VisionV1::BoundingPoly]
         attr_accessor :bounding_poly
       
         # Detected face landmarks.
         # Corresponds to the JSON property `landmarks`
-        # @return [Array<Google::Apis::VisionV1::Landmark>]
+        # @return [Array<GoogleAPI::Apis::VisionV1::Landmark>]
         attr_accessor :landmarks
       
         # Blurred likelihood.
@@ -455,7 +455,7 @@ module Google
       # A vertex represents a 2D point in the image.
       # NOTE: the vertex coordinates are in the same scale as the original image.
       class Vertex
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Y coordinate.
         # Corresponds to the JSON property `y`
@@ -481,7 +481,7 @@ module Google
       # Color information consists of RGB channels, score and fraction of
       # image the color occupies in the image.
       class ColorInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Stores the fraction of pixels the color occupies in the image.
         # Value in range [0, 1].
@@ -589,7 +589,7 @@ module Google
         # `;
         # // ...
         # Corresponds to the JSON property `color`
-        # @return [Google::Apis::VisionV1::Color]
+        # @return [GoogleAPI::Apis::VisionV1::Color]
         attr_accessor :color
       
         # Image-specific score for this color. Value in range [0, 1].
@@ -611,11 +611,11 @@ module Google
       
       # A bounding polygon for the detected image annotation.
       class BoundingPoly
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The bounding polygon vertices.
         # Corresponds to the JSON property `vertices`
-        # @return [Array<Google::Apis::VisionV1::Vertex>]
+        # @return [Array<GoogleAPI::Apis::VisionV1::Vertex>]
         attr_accessor :vertices
       
         def initialize(**args)
@@ -633,13 +633,13 @@ module Google
       # when the face is near one or more edges of the image.
       # Therefore it is NOT guaranteed that 0 <= x < width or 0 <= y < height.
       class Landmark
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A 3D position in the image, used primarily for Face detection landmarks.
         # A valid Position must have both x and y coordinates.
         # The position coordinates are in the same scale as the original image.
         # Corresponds to the JSON property `position`
-        # @return [Google::Apis::VisionV1::Position]
+        # @return [GoogleAPI::Apis::VisionV1::Position]
         attr_accessor :position
       
         # Face landmark type.
@@ -660,11 +660,11 @@ module Google
       
       # Image context.
       class ImageContext
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Rectangle determined by min and max LatLng pairs.
         # Corresponds to the JSON property `latLongRect`
-        # @return [Google::Apis::VisionV1::LatLongRect]
+        # @return [GoogleAPI::Apis::VisionV1::LatLongRect]
         attr_accessor :lat_long_rect
       
         # List of languages to use for TEXT_DETECTION. In most cases, an empty value
@@ -693,11 +693,11 @@ module Google
       
       # Multiple image annotation requests are batched into a single service call.
       class BatchAnnotateImagesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Individual image annotation requests for this batch.
         # Corresponds to the JSON property `requests`
-        # @return [Array<Google::Apis::VisionV1::AnnotateImageRequest>]
+        # @return [Array<GoogleAPI::Apis::VisionV1::AnnotateImageRequest>]
         attr_accessor :requests
       
         def initialize(**args)
@@ -712,7 +712,7 @@ module Google
       
       # Set of detected entity features.
       class EntityAnnotation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Opaque entity ID. Some IDs might be available in Knowledge Graph(KG).
         # For more details on KG please see:
@@ -744,7 +744,7 @@ module Google
         # Some entities can have additional optional <code>Property</code> fields.
         # For example a different kind of score or string that qualifies the entity.
         # Corresponds to the JSON property `properties`
-        # @return [Array<Google::Apis::VisionV1::Property>]
+        # @return [Array<GoogleAPI::Apis::VisionV1::Property>]
         attr_accessor :properties
       
         # Overall score of the result. Range [0, 1].
@@ -754,7 +754,7 @@ module Google
       
         # A bounding polygon for the detected image annotation.
         # Corresponds to the JSON property `boundingPoly`
-        # @return [Google::Apis::VisionV1::BoundingPoly]
+        # @return [GoogleAPI::Apis::VisionV1::BoundingPoly]
         attr_accessor :bounding_poly
       
         # The location information for the detected entity. Multiple
@@ -763,7 +763,7 @@ module Google
         # location of the place where the query image was taken. Location information
         # is usually present for landmarks.
         # Corresponds to the JSON property `locations`
-        # @return [Array<Google::Apis::VisionV1::LocationInfo>]
+        # @return [Array<GoogleAPI::Apis::VisionV1::LocationInfo>]
         attr_accessor :locations
       
         # The accuracy of the entity detection in an image.
@@ -793,7 +793,7 @@ module Google
       
       # Arbitrary name/value pair.
       class Property
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Value of the property.
         # Corresponds to the JSON property `value`
@@ -916,7 +916,7 @@ module Google
       # `;
       # // ...
       class Color
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The amount of green in the color as a value in the interval [0, 1].
         # Corresponds to the JSON property `green`
@@ -961,7 +961,7 @@ module Google
       
       # Detected entity location information.
       class LocationInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An object representing a latitude/longitude pair. This is expressed as a pair
         # of doubles representing degrees latitude and degrees longitude. Unless
@@ -999,7 +999,7 @@ module Google
         # assert (-90.0, 10.0) == NormalizeLatLng(270.0, 10.0)
         # assert (90.0, 10.0) == NormalizeLatLng(-270.0, 10.0)
         # Corresponds to the JSON property `latLng`
-        # @return [Google::Apis::VisionV1::LatLng]
+        # @return [GoogleAPI::Apis::VisionV1::LatLng]
         attr_accessor :lat_lng
       
         def initialize(**args)
@@ -1016,7 +1016,7 @@ module Google
       # methods over safe-search verticals (for example, adult, spoof, medical,
       # violence).
       class SafeSearchAnnotation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Likelihood this is a medical image.
         # Corresponds to the JSON property `medical`
@@ -1055,11 +1055,11 @@ module Google
       
       # Client image to perform Google Cloud Vision API tasks over.
       class Image
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # External image source (Google Cloud Storage image location).
         # Corresponds to the JSON property `source`
-        # @return [Google::Apis::VisionV1::ImageSource]
+        # @return [GoogleAPI::Apis::VisionV1::ImageSource]
         attr_accessor :source
       
         # Image content, represented as a stream of bytes.
@@ -1082,11 +1082,11 @@ module Google
       
       # Set of dominant colors and their corresponding scores.
       class DominantColorsAnnotation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # RGB color values, with their score and pixel fraction.
         # Corresponds to the JSON property `colors`
-        # @return [Array<Google::Apis::VisionV1::ColorInfo>]
+        # @return [Array<GoogleAPI::Apis::VisionV1::ColorInfo>]
         attr_accessor :colors
       
         def initialize(**args)
@@ -1104,7 +1104,7 @@ module Google
       # images by using <em>Feature</em>s. Features encode the Cloud Vision API
       # vertical to operate on and the number of top-scoring results to return.
       class Feature
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The feature type.
         # Corresponds to the JSON property `type`
@@ -1129,11 +1129,11 @@ module Google
       
       # Response to a batch image annotation request.
       class BatchAnnotateImagesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Individual responses to image annotation requests within the batch.
         # Corresponds to the JSON property `responses`
-        # @return [Array<Google::Apis::VisionV1::AnnotateImageResponse>]
+        # @return [Array<GoogleAPI::Apis::VisionV1::AnnotateImageResponse>]
         attr_accessor :responses
       
         def initialize(**args)
@@ -1148,11 +1148,11 @@ module Google
       
       # Stores image properties (e.g. dominant colors).
       class ImageProperties
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Set of dominant colors and their corresponding scores.
         # Corresponds to the JSON property `dominantColors`
-        # @return [Google::Apis::VisionV1::DominantColorsAnnotation]
+        # @return [GoogleAPI::Apis::VisionV1::DominantColorsAnnotation]
         attr_accessor :dominant_colors
       
         def initialize(**args)
@@ -1201,7 +1201,7 @@ module Google
       # assert (-90.0, 10.0) == NormalizeLatLng(270.0, 10.0)
       # assert (90.0, 10.0) == NormalizeLatLng(-270.0, 10.0)
       class LatLng
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The latitude in degrees. It must be in the range [-90.0, +90.0].
         # Corresponds to the JSON property `latitude`
@@ -1228,7 +1228,7 @@ module Google
       # A valid Position must have both x and y coordinates.
       # The position coordinates are in the same scale as the original image.
       class Position
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Y coordinate.
         # Corresponds to the JSON property `y`

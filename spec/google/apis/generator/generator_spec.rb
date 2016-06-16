@@ -19,12 +19,12 @@ require 'fileutils'
 
 # TODO - Naked arrays in method requests/responses
 
-RSpec.describe Google::Apis::Generator do
+RSpec.describe GoogleAPI::Apis::Generator do
   include TestHelpers
 
   context 'with test API' do
     before(:context) do
-      generator = Google::Apis::Generator.new(api_names: File.join(FIXTURES_DIR, 'files', 'api_names.yaml'))
+      generator = GoogleAPI::Apis::Generator.new(api_names: File.join(FIXTURES_DIR, 'files', 'api_names.yaml'))
       discovery = File.read(File.join(FIXTURES_DIR, 'files', 'test_api.json'))
       generated_files = generator.render(discovery)
       puts generator.dump_api_names
@@ -40,7 +40,7 @@ RSpec.describe Google::Apis::Generator do
       require 'google/apis/test_v1'
     end
 
-    let(:service) { Google::Apis::TestV1::TestService.new }
+    let(:service) { GoogleAPI::Apis::TestV1::TestService.new }
 
     context 'with the generated service' do
       it 'should set the base URL' do
@@ -72,20 +72,20 @@ RSpec.describe Google::Apis::Generator do
       end
 
       it 'should define AUTH_TEST scope' do
-        expect(Google::Apis::TestV1::AUTH_TEST).to eql ('https://www.googleapis.com/auth/test')
+        expect(GoogleAPI::Apis::TestV1::AUTH_TEST).to eql ('https://www.googleapis.com/auth/test')
       end
 
       it 'should define AUTH_TEST_READONLY scope' do
-        expect(Google::Apis::TestV1::AUTH_TEST_READONLY).to eql ('https://www.googleapis.com/auth/test.readonly')
+        expect(GoogleAPI::Apis::TestV1::AUTH_TEST_READONLY).to eql ('https://www.googleapis.com/auth/test.readonly')
       end
 
       context 'when simplifying class names' do
         it 'should simplify the TestAnotherThing name' do
-          expect { Google::Apis::TestV1::AnotherThing.new }.not_to raise_error
+          expect { GoogleAPI::Apis::TestV1::AnotherThing.new }.not_to raise_error
         end
 
         it 'should not simplify the TestThing name' do
-          expect { Google::Apis::TestV1::TestThing.new }.not_to raise_error
+          expect { GoogleAPI::Apis::TestV1::TestThing.new }.not_to raise_error
         end
       end
 
@@ -140,10 +140,10 @@ RSpec.describe Google::Apis::Generator do
 EOF
           end
 
-          let(:thing) { Google::Apis::TestV1::Thing.from_json(json) }
+          let(:thing) { GoogleAPI::Apis::TestV1::Thing.from_json(json) }
 
           it 'should return a thing' do
-            expect(thing).to be_instance_of(Google::Apis::TestV1::Thing)
+            expect(thing).to be_instance_of(GoogleAPI::Apis::TestV1::Thing)
           end
 
           it 'should parse properties' do
@@ -157,7 +157,7 @@ EOF
 
         context 'With the to_json method' do
           let(:thing) do
-            Google::Apis::TestV1::Thing.new(
+            GoogleAPI::Apis::TestV1::Thing.new(
                 name: "A thing",
                 properties: {
                     prop_a: "value_a"
@@ -201,7 +201,7 @@ EOF
         let(:thing) { service.get_thing('123') }
 
         it 'should return a Thing' do
-          expect(thing).to be_instance_of(Google::Apis::TestV1::Thing)
+          expect(thing).to be_instance_of(GoogleAPI::Apis::TestV1::Thing)
         end
 
         it 'should set attributes' do
@@ -221,7 +221,7 @@ EOF
         end
 
         it 'should return the correct variant type for hat' do
-          expect(thing.hat).to be_instance_of(Google::Apis::TestV1::BaseballHat)
+          expect(thing.hat).to be_instance_of(GoogleAPI::Apis::TestV1::BaseballHat)
         end
 
         it 'should return the correct variant properties for hat' do
@@ -229,7 +229,7 @@ EOF
         end
 
         it 'should return a photo' do
-          expect(thing.photo).to be_instance_of(Google::Apis::TestV1::Thing::Photo)
+          expect(thing.photo).to be_instance_of(GoogleAPI::Apis::TestV1::Thing::Photo)
         end
 
         it 'should return photo properties' do
@@ -260,9 +260,9 @@ EOF
         end
 
         let(:thing) do
-          thing = Google::Apis::TestV1::Thing.new(name: 'A thing', properties: { 'prop_a' => 'value_a' })
-          thing.photo = Google::Apis::TestV1::Thing::Photo.new(filename: 'image.jpg')
-          thing.hat = Google::Apis::TestV1::TopHat.new(type: 'topHat', height: 100)
+          thing = GoogleAPI::Apis::TestV1::Thing.new(name: 'A thing', properties: { 'prop_a' => 'value_a' })
+          thing.photo = GoogleAPI::Apis::TestV1::Thing::Photo.new(filename: 'image.jpg')
+          thing.hat = GoogleAPI::Apis::TestV1::TopHat.new(type: 'topHat', height: 100)
           service.create_thing(thing)
         end
 
@@ -282,7 +282,7 @@ EOF
   }
 }
 EOF
-          expect(thing).to be_instance_of(Google::Apis::TestV1::Thing)
+          expect(thing).to be_instance_of(GoogleAPI::Apis::TestV1::Thing)
           expect(a_request(:post, 'https://www.googleapis.com/test/v1/things')
             .with { |req| expect(req.body).to be_json_eql(expected_body) }).to have_been_made
         end
@@ -301,7 +301,7 @@ EOF
 
         it 'should return query results' do
           results = service.query
-          expect(results).to be_instance_of(Google::Apis::TestV1::QueryResults)
+          expect(results).to be_instance_of(GoogleAPI::Apis::TestV1::QueryResults)
         end
 
         it 'should return an array for items' do
@@ -311,7 +311,7 @@ EOF
 
         it 'should return items of type Row' do
           results = service.query
-          expect(results.rows.first).to be_instance_of(Google::Apis::TestV1::Row)
+          expect(results.rows.first).to be_instance_of(GoogleAPI::Apis::TestV1::Row)
         end
 
         it 'should return values for rows' do

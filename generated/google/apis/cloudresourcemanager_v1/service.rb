@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CloudresourcemanagerV1
       # Google Cloud Resource Manager API
@@ -28,11 +28,11 @@ module Google
       # @example
       #    require 'google/apis/cloudresourcemanager_v1'
       #
-      #    Cloudresourcemanager = Google::Apis::CloudresourcemanagerV1 # Alias the module
+      #    Cloudresourcemanager = GoogleAPI::Apis::CloudresourcemanagerV1 # Alias the module
       #    service = Cloudresourcemanager::CloudResourceManagerService.new
       #
       # @see https://cloud.google.com/resource-manager
-      class CloudResourceManagerService < Google::Apis::Core::BaseService
+      class CloudResourceManagerService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -56,22 +56,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudresourcemanagerV1::Project] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudresourcemanagerV1::Project] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudresourcemanagerV1::Project]
+        # @return [GoogleAPI::Apis::CloudresourcemanagerV1::Project]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_project(project_id, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/projects/{projectId}', options)
-          command.response_representation = Google::Apis::CloudresourcemanagerV1::Project::Representation
-          command.response_class = Google::Apis::CloudresourcemanagerV1::Project
+          command.response_representation = GoogleAPI::Apis::CloudresourcemanagerV1::Project::Representation
+          command.response_class = GoogleAPI::Apis::CloudresourcemanagerV1::Project
           command.params['projectId'] = project_id unless project_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -103,22 +103,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudresourcemanagerV1::ListProjectsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudresourcemanagerV1::ListProjectsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudresourcemanagerV1::ListProjectsResponse]
+        # @return [GoogleAPI::Apis::CloudresourcemanagerV1::ListProjectsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_projects(page_token: nil, page_size: nil, filter: nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v1/projects', options)
-          command.response_representation = Google::Apis::CloudresourcemanagerV1::ListProjectsResponse::Representation
-          command.response_class = Google::Apis::CloudresourcemanagerV1::ListProjectsResponse
+          command.response_representation = GoogleAPI::Apis::CloudresourcemanagerV1::ListProjectsResponse::Representation
+          command.response_class = GoogleAPI::Apis::CloudresourcemanagerV1::ListProjectsResponse
           command.query['pageToken'] = page_token unless page_token.nil?
           command.query['pageSize'] = page_size unless page_size.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -132,30 +132,30 @@ module Google
         # this Project.
         # @param [String] project_id
         #   The project ID (for example, `my-project-123`). Required.
-        # @param [Google::Apis::CloudresourcemanagerV1::Project] project_object
+        # @param [GoogleAPI::Apis::CloudresourcemanagerV1::Project] project_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudresourcemanagerV1::Project] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudresourcemanagerV1::Project] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudresourcemanagerV1::Project]
+        # @return [GoogleAPI::Apis::CloudresourcemanagerV1::Project]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_project(project_id, project_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:put, 'v1/projects/{projectId}', options)
-          command.request_representation = Google::Apis::CloudresourcemanagerV1::Project::Representation
+          command.request_representation = GoogleAPI::Apis::CloudresourcemanagerV1::Project::Representation
           command.request_object = project_object
-          command.response_representation = Google::Apis::CloudresourcemanagerV1::Project::Representation
-          command.response_class = Google::Apis::CloudresourcemanagerV1::Project
+          command.response_representation = GoogleAPI::Apis::CloudresourcemanagerV1::Project::Representation
+          command.response_class = GoogleAPI::Apis::CloudresourcemanagerV1::Project
           command.params['projectId'] = project_id unless project_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -181,22 +181,22 @@ module Google
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudresourcemanagerV1::Empty] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudresourcemanagerV1::Empty] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudresourcemanagerV1::Empty]
+        # @return [GoogleAPI::Apis::CloudresourcemanagerV1::Empty]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_project(project_id, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:delete, 'v1/projects/{projectId}', options)
-          command.response_representation = Google::Apis::CloudresourcemanagerV1::Empty::Representation
-          command.response_class = Google::Apis::CloudresourcemanagerV1::Empty
+          command.response_representation = GoogleAPI::Apis::CloudresourcemanagerV1::Empty::Representation
+          command.response_class = GoogleAPI::Apis::CloudresourcemanagerV1::Empty
           command.params['projectId'] = project_id unless project_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -210,30 +210,30 @@ module Google
         # caller must have modify permissions for this Project.
         # @param [String] project_id
         #   The project ID (for example, `foo-bar-123`). Required.
-        # @param [Google::Apis::CloudresourcemanagerV1::UndeleteProjectRequest] undelete_project_request_object
+        # @param [GoogleAPI::Apis::CloudresourcemanagerV1::UndeleteProjectRequest] undelete_project_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudresourcemanagerV1::Empty] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudresourcemanagerV1::Empty] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudresourcemanagerV1::Empty]
+        # @return [GoogleAPI::Apis::CloudresourcemanagerV1::Empty]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def undelete_project(project_id, undelete_project_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/projects/{projectId}:undelete', options)
-          command.request_representation = Google::Apis::CloudresourcemanagerV1::UndeleteProjectRequest::Representation
+          command.request_representation = GoogleAPI::Apis::CloudresourcemanagerV1::UndeleteProjectRequest::Representation
           command.request_object = undelete_project_request_object
-          command.response_representation = Google::Apis::CloudresourcemanagerV1::Empty::Representation
-          command.response_class = Google::Apis::CloudresourcemanagerV1::Empty
+          command.response_representation = GoogleAPI::Apis::CloudresourcemanagerV1::Empty::Representation
+          command.response_class = GoogleAPI::Apis::CloudresourcemanagerV1::Empty
           command.params['projectId'] = project_id unless project_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -247,30 +247,30 @@ module Google
         #   usually specified as a path, such as `projects/*project*/zones/*zone*/disks/*
         #   disk*`. The format for the path specified in this value is resource specific
         #   and is specified in the `getIamPolicy` documentation.
-        # @param [Google::Apis::CloudresourcemanagerV1::GetIamPolicyRequest] get_iam_policy_request_object
+        # @param [GoogleAPI::Apis::CloudresourcemanagerV1::GetIamPolicyRequest] get_iam_policy_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudresourcemanagerV1::Policy] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudresourcemanagerV1::Policy] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudresourcemanagerV1::Policy]
+        # @return [GoogleAPI::Apis::CloudresourcemanagerV1::Policy]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_project_iam_policy(resource, get_iam_policy_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/projects/{resource}:getIamPolicy', options)
-          command.request_representation = Google::Apis::CloudresourcemanagerV1::GetIamPolicyRequest::Representation
+          command.request_representation = GoogleAPI::Apis::CloudresourcemanagerV1::GetIamPolicyRequest::Representation
           command.request_object = get_iam_policy_request_object
-          command.response_representation = Google::Apis::CloudresourcemanagerV1::Policy::Representation
-          command.response_class = Google::Apis::CloudresourcemanagerV1::Policy
+          command.response_representation = GoogleAPI::Apis::CloudresourcemanagerV1::Policy::Representation
+          command.response_class = GoogleAPI::Apis::CloudresourcemanagerV1::Policy
           command.params['resource'] = resource unless resource.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -295,30 +295,30 @@ module Google
         #   usually specified as a path, such as `projects/*project*/zones/*zone*/disks/*
         #   disk*`. The format for the path specified in this value is resource specific
         #   and is specified in the `setIamPolicy` documentation.
-        # @param [Google::Apis::CloudresourcemanagerV1::SetIamPolicyRequest] set_iam_policy_request_object
+        # @param [GoogleAPI::Apis::CloudresourcemanagerV1::SetIamPolicyRequest] set_iam_policy_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudresourcemanagerV1::Policy] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudresourcemanagerV1::Policy] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudresourcemanagerV1::Policy]
+        # @return [GoogleAPI::Apis::CloudresourcemanagerV1::Policy]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def set_project_iam_policy(resource, set_iam_policy_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/projects/{resource}:setIamPolicy', options)
-          command.request_representation = Google::Apis::CloudresourcemanagerV1::SetIamPolicyRequest::Representation
+          command.request_representation = GoogleAPI::Apis::CloudresourcemanagerV1::SetIamPolicyRequest::Representation
           command.request_object = set_iam_policy_request_object
-          command.response_representation = Google::Apis::CloudresourcemanagerV1::Policy::Representation
-          command.response_class = Google::Apis::CloudresourcemanagerV1::Policy
+          command.response_representation = GoogleAPI::Apis::CloudresourcemanagerV1::Policy::Representation
+          command.response_class = GoogleAPI::Apis::CloudresourcemanagerV1::Policy
           command.params['resource'] = resource unless resource.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -331,30 +331,30 @@ module Google
         #   resource` is usually specified as a path, such as `projects/*project*/zones/*
         #   zone*/disks/*disk*`. The format for the path specified in this value is
         #   resource specific and is specified in the `testIamPermissions` documentation.
-        # @param [Google::Apis::CloudresourcemanagerV1::TestIamPermissionsRequest] test_iam_permissions_request_object
+        # @param [GoogleAPI::Apis::CloudresourcemanagerV1::TestIamPermissionsRequest] test_iam_permissions_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::CloudresourcemanagerV1::TestIamPermissionsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::CloudresourcemanagerV1::TestIamPermissionsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::CloudresourcemanagerV1::TestIamPermissionsResponse]
+        # @return [GoogleAPI::Apis::CloudresourcemanagerV1::TestIamPermissionsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def test_project_iam_permissions(resource, test_iam_permissions_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/projects/{resource}:testIamPermissions', options)
-          command.request_representation = Google::Apis::CloudresourcemanagerV1::TestIamPermissionsRequest::Representation
+          command.request_representation = GoogleAPI::Apis::CloudresourcemanagerV1::TestIamPermissionsRequest::Representation
           command.request_object = test_iam_permissions_request_object
-          command.response_representation = Google::Apis::CloudresourcemanagerV1::TestIamPermissionsResponse::Representation
-          command.response_class = Google::Apis::CloudresourcemanagerV1::TestIamPermissionsResponse
+          command.response_representation = GoogleAPI::Apis::CloudresourcemanagerV1::TestIamPermissionsResponse::Representation
+          command.response_class = GoogleAPI::Apis::CloudresourcemanagerV1::TestIamPermissionsResponse
           command.params['resource'] = resource unless resource.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?

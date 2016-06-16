@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ClouduseraccountsBeta
       
       # A list of authorized public keys for a user account.
       class AuthorizedKeysView
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The list of authorized public keys in SSH format.
         # Corresponds to the JSON property `keys`
@@ -51,7 +51,7 @@ module Google
       
       # A Group resource.
       class Group
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Creation timestamp in RFC3339 text format.
         # Corresponds to the JSON property `creationTimestamp`
@@ -108,7 +108,7 @@ module Google
       
       # 
       class GroupList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Unique identifier for the resource; defined by the server.
         # Corresponds to the JSON property `id`
@@ -117,7 +117,7 @@ module Google
       
         # [Output Only] A list of Group resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ClouduseraccountsBeta::Group>]
+        # @return [Array<GoogleAPI::Apis::ClouduseraccountsBeta::Group>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always clouduseraccounts#groupList for lists
@@ -152,7 +152,7 @@ module Google
       
       # 
       class GroupsAddMemberRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Fully-qualified URLs of the User resources to add.
         # Corresponds to the JSON property `users`
@@ -171,7 +171,7 @@ module Google
       
       # 
       class GroupsRemoveMemberRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Fully-qualified URLs of the User resources to remove.
         # Corresponds to the JSON property `users`
@@ -193,11 +193,11 @@ module Google
       # project or instance. Linux resources are read-only views into users and groups
       # managed by the Compute Engine Accounts API.
       class LinuxAccountViews
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] A list of all groups within a project.
         # Corresponds to the JSON property `groupViews`
-        # @return [Array<Google::Apis::ClouduseraccountsBeta::LinuxGroupView>]
+        # @return [Array<GoogleAPI::Apis::ClouduseraccountsBeta::LinuxGroupView>]
         attr_accessor :group_views
       
         # [Output Only] Type of the resource. Always clouduseraccounts#linuxAccountViews
@@ -208,7 +208,7 @@ module Google
       
         # [Output Only] A list of all users within a project.
         # Corresponds to the JSON property `userViews`
-        # @return [Array<Google::Apis::ClouduseraccountsBeta::LinuxUserView>]
+        # @return [Array<GoogleAPI::Apis::ClouduseraccountsBeta::LinuxUserView>]
         attr_accessor :user_views
       
         def initialize(**args)
@@ -225,11 +225,11 @@ module Google
       
       # 
       class LinuxGetAuthorizedKeysViewResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of authorized public keys for a user account.
         # Corresponds to the JSON property `resource`
-        # @return [Google::Apis::ClouduseraccountsBeta::AuthorizedKeysView]
+        # @return [GoogleAPI::Apis::ClouduseraccountsBeta::AuthorizedKeysView]
         attr_accessor :resource
       
         def initialize(**args)
@@ -244,14 +244,14 @@ module Google
       
       # 
       class LinuxGetLinuxAccountViewsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of all Linux accounts for this project. This API is only used by
         # Compute Engine virtual machines to get information about user accounts for a
         # project or instance. Linux resources are read-only views into users and groups
         # managed by the Compute Engine Accounts API.
         # Corresponds to the JSON property `resource`
-        # @return [Google::Apis::ClouduseraccountsBeta::LinuxAccountViews]
+        # @return [GoogleAPI::Apis::ClouduseraccountsBeta::LinuxAccountViews]
         attr_accessor :resource
       
         def initialize(**args)
@@ -266,7 +266,7 @@ module Google
       
       # A detailed view of a Linux group.
       class LinuxGroupView
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The Group ID.
         # Corresponds to the JSON property `gid`
@@ -297,7 +297,7 @@ module Google
       
       # A detailed view of a Linux user account.
       class LinuxUserView
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The GECOS (user information) entry for this account.
         # Corresponds to the JSON property `gecos`
@@ -346,7 +346,7 @@ module Google
       
       # An Operation resource, used to manage asynchronous API requests.
       class Operation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Reserved for future use.
         # Corresponds to the JSON property `clientOperationId`
@@ -373,7 +373,7 @@ module Google
         # [Output Only] If errors are generated during processing of the operation, this
         # field will be populated.
         # Corresponds to the JSON property `error`
-        # @return [Google::Apis::ClouduseraccountsBeta::Operation::Error]
+        # @return [GoogleAPI::Apis::ClouduseraccountsBeta::Operation::Error]
         attr_accessor :error
       
         # [Output Only] If the operation fails, this field contains the HTTP error
@@ -474,7 +474,7 @@ module Google
         # [Output Only] If warning messages are generated during processing of the
         # operation, this field will be populated.
         # Corresponds to the JSON property `warnings`
-        # @return [Array<Google::Apis::ClouduseraccountsBeta::Operation::Warning>]
+        # @return [Array<GoogleAPI::Apis::ClouduseraccountsBeta::Operation::Warning>]
         attr_accessor :warnings
       
         # [Output Only] The URL of the zone where the operation resides. Only available
@@ -517,11 +517,11 @@ module Google
         # [Output Only] If errors are generated during processing of the operation, this
         # field will be populated.
         class Error
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] The array of errors encountered while processing this operation.
           # Corresponds to the JSON property `errors`
-          # @return [Array<Google::Apis::ClouduseraccountsBeta::Operation::Error::Error>]
+          # @return [Array<GoogleAPI::Apis::ClouduseraccountsBeta::Operation::Error::Error>]
           attr_accessor :errors
         
           def initialize(**args)
@@ -535,7 +535,7 @@ module Google
           
           # 
           class Error
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] The error type identifier for this error.
             # Corresponds to the JSON property `code`
@@ -568,7 +568,7 @@ module Google
         
         # 
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -579,7 +579,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ClouduseraccountsBeta::Operation::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ClouduseraccountsBeta::Operation::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -600,7 +600,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -633,7 +633,7 @@ module Google
       
       # Contains a list of Operation resources.
       class OperationList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -643,7 +643,7 @@ module Google
       
         # [Output Only] A list of Operation resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ClouduseraccountsBeta::Operation>]
+        # @return [Array<GoogleAPI::Apis::ClouduseraccountsBeta::Operation>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#operations for Operations
@@ -682,7 +682,7 @@ module Google
       
       # A public key for authenticating to guests.
       class PublicKey
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Creation timestamp in RFC3339 text format.
         # Corresponds to the JSON property `creationTimestamp`
@@ -728,7 +728,7 @@ module Google
       
       # A User resource.
       class User
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Creation timestamp in RFC3339 text format.
         # Corresponds to the JSON property `creationTimestamp`
@@ -771,7 +771,7 @@ module Google
       
         # [Output Only] Public keys that this user may use to login.
         # Corresponds to the JSON property `publicKeys`
-        # @return [Array<Google::Apis::ClouduseraccountsBeta::PublicKey>]
+        # @return [Array<GoogleAPI::Apis::ClouduseraccountsBeta::PublicKey>]
         attr_accessor :public_keys
       
         # [Output Only] Server defined URL for the resource.
@@ -799,7 +799,7 @@ module Google
       
       # 
       class UserList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Unique identifier for the resource; defined by the server.
         # Corresponds to the JSON property `id`
@@ -808,7 +808,7 @@ module Google
       
         # [Output Only] A list of User resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ClouduseraccountsBeta::User>]
+        # @return [Array<GoogleAPI::Apis::ClouduseraccountsBeta::User>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always clouduseraccounts#userList for lists of

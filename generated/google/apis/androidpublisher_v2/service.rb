@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AndroidpublisherV2
       # Google Play Developer API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/androidpublisher_v2'
       #
-      #    Androidpublisher = Google::Apis::AndroidpublisherV2 # Alias the module
+      #    Androidpublisher = GoogleAPI::Apis::AndroidpublisherV2 # Alias the module
       #    service = Androidpublisher::AndroidPublisherService.new
       #
       # @see https://developers.google.com/android-publisher
-      class AndroidPublisherService < Google::Apis::Core::BaseService
+      class AndroidPublisherService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -67,22 +67,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::AppEdit] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::AppEdit] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::AppEdit]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::AppEdit]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def commit_edit(package_name, edit_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{packageName}/edits/{editId}:commit', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::AppEdit::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::AppEdit
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::AppEdit::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::AppEdit
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -108,7 +108,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -117,9 +117,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_edit(package_name, edit_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{packageName}/edits/{editId}', options)
           command.params['packageName'] = package_name unless package_name.nil?
@@ -146,22 +146,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::AppEdit] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::AppEdit] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::AppEdit]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::AppEdit]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_edit(package_name, edit_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/edits/{editId}', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::AppEdit::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::AppEdit
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::AppEdit::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::AppEdit
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -174,7 +174,7 @@ module Google
         # @param [String] package_name
         #   Unique identifier for the Android app that is being updated; for example, "com.
         #   spiffygame".
-        # @param [Google::Apis::AndroidpublisherV2::AppEdit] app_edit_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::AppEdit] app_edit_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -184,24 +184,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::AppEdit] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::AppEdit] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::AppEdit]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::AppEdit]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_edit(package_name, app_edit_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{packageName}/edits', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::AppEdit::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::AppEdit::Representation
           command.request_object = app_edit_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::AppEdit::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::AppEdit
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::AppEdit::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::AppEdit
           command.params['packageName'] = package_name unless package_name.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -225,22 +225,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::AppEdit] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::AppEdit] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::AppEdit]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::AppEdit]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def validate_edit(package_name, edit_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{packageName}/edits/{editId}:validate', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::AppEdit::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::AppEdit
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::AppEdit::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::AppEdit
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -271,7 +271,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -280,9 +280,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_apk_listing(package_name, edit_id, apk_version_code, language, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}', options)
           command.params['packageName'] = package_name unless package_name.nil?
@@ -312,7 +312,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -321,9 +321,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_all_apk_listings(package_name, edit_id, apk_version_code, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{packageName}/edits/{editId}/apks/{apkVersionCode}/listings', options)
           command.params['packageName'] = package_name unless package_name.nil?
@@ -357,22 +357,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::ApkListing] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::ApkListing] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::ApkListing]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ApkListing]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_apk_listing(package_name, edit_id, apk_version_code, language, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::ApkListing::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::ApkListing
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::ApkListing::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::ApkListing
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['apkVersionCode'] = apk_version_code unless apk_version_code.nil?
@@ -400,22 +400,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::ListApkListingsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::ListApkListingsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::ListApkListingsResponse]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ListApkListingsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_apk_listings(package_name, edit_id, apk_version_code, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/edits/{editId}/apks/{apkVersionCode}/listings', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::ListApkListingsResponse::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::ListApkListingsResponse
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::ListApkListingsResponse::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::ListApkListingsResponse
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['apkVersionCode'] = apk_version_code unless apk_version_code.nil?
@@ -438,7 +438,7 @@ module Google
         #   The language code (a BCP-47 language tag) of the APK-specific localized
         #   listing to read or modify. For example, to select Austrian German, pass "de-AT"
         #   .
-        # @param [Google::Apis::AndroidpublisherV2::ApkListing] apk_listing_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::ApkListing] apk_listing_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -448,24 +448,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::ApkListing] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::ApkListing] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::ApkListing]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ApkListing]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_apk_listing(package_name, edit_id, apk_version_code, language, apk_listing_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, '{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::ApkListing::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::ApkListing::Representation
           command.request_object = apk_listing_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::ApkListing::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::ApkListing
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::ApkListing::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::ApkListing
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['apkVersionCode'] = apk_version_code unless apk_version_code.nil?
@@ -489,7 +489,7 @@ module Google
         #   The language code (a BCP-47 language tag) of the APK-specific localized
         #   listing to read or modify. For example, to select Austrian German, pass "de-AT"
         #   .
-        # @param [Google::Apis::AndroidpublisherV2::ApkListing] apk_listing_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::ApkListing] apk_listing_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -499,24 +499,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::ApkListing] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::ApkListing] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::ApkListing]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ApkListing]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_apk_listing(package_name, edit_id, apk_version_code, language, apk_listing_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, '{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::ApkListing::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::ApkListing::Representation
           command.request_object = apk_listing_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::ApkListing::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::ApkListing
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::ApkListing::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::ApkListing
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['apkVersionCode'] = apk_version_code unless apk_version_code.nil?
@@ -536,7 +536,7 @@ module Google
         #   spiffygame".
         # @param [String] edit_id
         #   Unique identifier for this edit.
-        # @param [Google::Apis::AndroidpublisherV2::ApksAddExternallyHostedRequest] apks_add_externally_hosted_request_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::ApksAddExternallyHostedRequest] apks_add_externally_hosted_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -546,24 +546,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::ApksAddExternallyHostedResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::ApksAddExternallyHostedResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::ApksAddExternallyHostedResponse]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ApksAddExternallyHostedResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def add_externally_hosted_apk(package_name, edit_id, apks_add_externally_hosted_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{packageName}/edits/{editId}/apks/externallyHosted', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::ApksAddExternallyHostedRequest::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::ApksAddExternallyHostedRequest::Representation
           command.request_object = apks_add_externally_hosted_request_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::ApksAddExternallyHostedResponse::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::ApksAddExternallyHostedResponse
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::ApksAddExternallyHostedResponse::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::ApksAddExternallyHostedResponse
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -587,22 +587,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::ListApksResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::ListApksResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::ListApksResponse]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ListApksResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_apks(package_name, edit_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/edits/{editId}/apks', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::ListApksResponse::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::ListApksResponse
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::ListApksResponse::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::ListApksResponse
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -630,18 +630,18 @@ module Google
         #   IO stream or filename containing content to upload
         # @param [String] content_type
         #   Content type of the uploaded content.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::Apk] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::Apk] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::Apk]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::Apk]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def upload_apk(package_name, edit_id, fields: nil, quota_user: nil, user_ip: nil, upload_source: nil, content_type: nil, options: nil, &block)
           if upload_source.nil?
             command =  make_simple_command(:post, '{packageName}/edits/{editId}/apks', options)
@@ -650,8 +650,8 @@ module Google
             command.upload_source = upload_source
             command.upload_content_type = content_type
           end
-          command.response_representation = Google::Apis::AndroidpublisherV2::Apk::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::Apk
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::Apk::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::Apk
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -676,22 +676,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::AppDetails] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::AppDetails] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::AppDetails]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::AppDetails]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_detail(package_name, edit_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/edits/{editId}/details', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::AppDetails::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::AppDetails
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::AppDetails::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::AppDetails
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -706,7 +706,7 @@ module Google
         #   spiffygame".
         # @param [String] edit_id
         #   Unique identifier for this edit.
-        # @param [Google::Apis::AndroidpublisherV2::AppDetails] app_details_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::AppDetails] app_details_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -716,24 +716,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::AppDetails] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::AppDetails] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::AppDetails]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::AppDetails]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_detail(package_name, edit_id, app_details_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, '{packageName}/edits/{editId}/details', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::AppDetails::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::AppDetails::Representation
           command.request_object = app_details_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::AppDetails::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::AppDetails
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::AppDetails::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::AppDetails
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -748,7 +748,7 @@ module Google
         #   spiffygame".
         # @param [String] edit_id
         #   Unique identifier for this edit.
-        # @param [Google::Apis::AndroidpublisherV2::AppDetails] app_details_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::AppDetails] app_details_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -758,24 +758,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::AppDetails] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::AppDetails] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::AppDetails]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::AppDetails]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_detail(package_name, edit_id, app_details_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, '{packageName}/edits/{editId}/details', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::AppDetails::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::AppDetails::Representation
           command.request_object = app_details_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::AppDetails::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::AppDetails
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::AppDetails::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::AppDetails
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -803,22 +803,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::ExpansionFile] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::ExpansionFile] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::ExpansionFile]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ExpansionFile]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_expansion_file(package_name, edit_id, apk_version_code, expansion_file_type, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::ExpansionFile::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::ExpansionFile
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::ExpansionFile::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::ExpansionFile
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['apkVersionCode'] = apk_version_code unless apk_version_code.nil?
@@ -841,7 +841,7 @@ module Google
         #   The version code of the APK whose Expansion File configuration is being read
         #   or modified.
         # @param [String] expansion_file_type
-        # @param [Google::Apis::AndroidpublisherV2::ExpansionFile] expansion_file_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::ExpansionFile] expansion_file_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -851,24 +851,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::ExpansionFile] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::ExpansionFile] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::ExpansionFile]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ExpansionFile]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_expansion_file(package_name, edit_id, apk_version_code, expansion_file_type, expansion_file_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, '{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::ExpansionFile::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::ExpansionFile::Representation
           command.request_object = expansion_file_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::ExpansionFile::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::ExpansionFile
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::ExpansionFile::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::ExpansionFile
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['apkVersionCode'] = apk_version_code unless apk_version_code.nil?
@@ -890,7 +890,7 @@ module Google
         #   The version code of the APK whose Expansion File configuration is being read
         #   or modified.
         # @param [String] expansion_file_type
-        # @param [Google::Apis::AndroidpublisherV2::ExpansionFile] expansion_file_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::ExpansionFile] expansion_file_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -900,24 +900,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::ExpansionFile] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::ExpansionFile] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::ExpansionFile]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ExpansionFile]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_expansion_file(package_name, edit_id, apk_version_code, expansion_file_type, expansion_file_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, '{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::ExpansionFile::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::ExpansionFile::Representation
           command.request_object = expansion_file_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::ExpansionFile::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::ExpansionFile
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::ExpansionFile::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::ExpansionFile
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['apkVersionCode'] = apk_version_code unless apk_version_code.nil?
@@ -951,18 +951,18 @@ module Google
         #   IO stream or filename containing content to upload
         # @param [String] content_type
         #   Content type of the uploaded content.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::UploadExpansionFilesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::UploadExpansionFilesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::UploadExpansionFilesResponse]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::UploadExpansionFilesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def upload_expansion_file(package_name, edit_id, apk_version_code, expansion_file_type, fields: nil, quota_user: nil, user_ip: nil, upload_source: nil, content_type: nil, options: nil, &block)
           if upload_source.nil?
             command =  make_simple_command(:post, '{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}', options)
@@ -971,8 +971,8 @@ module Google
             command.upload_source = upload_source
             command.upload_content_type = content_type
           end
-          command.response_representation = Google::Apis::AndroidpublisherV2::UploadExpansionFilesResponse::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::UploadExpansionFilesResponse
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::UploadExpansionFilesResponse::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::UploadExpansionFilesResponse
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['apkVersionCode'] = apk_version_code unless apk_version_code.nil?
@@ -1005,7 +1005,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -1014,9 +1014,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_image(package_name, edit_id, language, image_type, image_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{packageName}/edits/{editId}/listings/{language}/{imageType}/{imageId}', options)
           command.params['packageName'] = package_name unless package_name.nil?
@@ -1050,22 +1050,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::DeleteAllImagesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::DeleteAllImagesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::DeleteAllImagesResponse]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::DeleteAllImagesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_all_images(package_name, edit_id, language, image_type, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{packageName}/edits/{editId}/listings/{language}/{imageType}', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::DeleteAllImagesResponse::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::DeleteAllImagesResponse
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::DeleteAllImagesResponse::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::DeleteAllImagesResponse
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['language'] = language unless language.nil?
@@ -1096,22 +1096,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::ListImagesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::ListImagesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::ListImagesResponse]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ListImagesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_images(package_name, edit_id, language, image_type, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/edits/{editId}/listings/{language}/{imageType}', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::ListImagesResponse::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::ListImagesResponse
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::ListImagesResponse::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::ListImagesResponse
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['language'] = language unless language.nil?
@@ -1147,18 +1147,18 @@ module Google
         #   IO stream or filename containing content to upload
         # @param [String] content_type
         #   Content type of the uploaded content.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::UploadImagesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::UploadImagesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::UploadImagesResponse]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::UploadImagesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def upload_image(package_name, edit_id, language, image_type, fields: nil, quota_user: nil, user_ip: nil, upload_source: nil, content_type: nil, options: nil, &block)
           if upload_source.nil?
             command =  make_simple_command(:post, '{packageName}/edits/{editId}/listings/{language}/{imageType}', options)
@@ -1167,8 +1167,8 @@ module Google
             command.upload_source = upload_source
             command.upload_content_type = content_type
           end
-          command.response_representation = Google::Apis::AndroidpublisherV2::UploadImagesResponse::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::UploadImagesResponse
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::UploadImagesResponse::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::UploadImagesResponse
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['language'] = language unless language.nil?
@@ -1197,7 +1197,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -1206,9 +1206,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_listing(package_name, edit_id, language, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{packageName}/edits/{editId}/listings/{language}', options)
           command.params['packageName'] = package_name unless package_name.nil?
@@ -1235,7 +1235,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -1244,9 +1244,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_all_listings(package_name, edit_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{packageName}/edits/{editId}/listings', options)
           command.params['packageName'] = package_name unless package_name.nil?
@@ -1275,22 +1275,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::Listing] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::Listing] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::Listing]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::Listing]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_listing(package_name, edit_id, language, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/edits/{editId}/listings/{language}', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::Listing::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::Listing
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::Listing::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::Listing
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['language'] = language unless language.nil?
@@ -1315,22 +1315,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::ListListingsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::ListListingsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::ListListingsResponse]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ListListingsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_listings(package_name, edit_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/edits/{editId}/listings', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::ListListingsResponse::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::ListListingsResponse
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::ListListingsResponse::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::ListListingsResponse
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1349,7 +1349,7 @@ module Google
         # @param [String] language
         #   The language code (a BCP-47 language tag) of the localized listing to read or
         #   modify. For example, to select Austrian German, pass "de-AT".
-        # @param [Google::Apis::AndroidpublisherV2::Listing] listing_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::Listing] listing_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1359,24 +1359,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::Listing] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::Listing] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::Listing]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::Listing]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_listing(package_name, edit_id, language, listing_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, '{packageName}/edits/{editId}/listings/{language}', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::Listing::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::Listing::Representation
           command.request_object = listing_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::Listing::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::Listing
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::Listing::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::Listing
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['language'] = language unless language.nil?
@@ -1395,7 +1395,7 @@ module Google
         # @param [String] language
         #   The language code (a BCP-47 language tag) of the localized listing to read or
         #   modify. For example, to select Austrian German, pass "de-AT".
-        # @param [Google::Apis::AndroidpublisherV2::Listing] listing_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::Listing] listing_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1405,24 +1405,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::Listing] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::Listing] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::Listing]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::Listing]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_listing(package_name, edit_id, language, listing_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, '{packageName}/edits/{editId}/listings/{language}', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::Listing::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::Listing::Representation
           command.request_object = listing_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::Listing::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::Listing
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::Listing::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::Listing
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['language'] = language unless language.nil?
@@ -1448,22 +1448,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::Testers] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::Testers] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::Testers]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::Testers]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_tester(package_name, edit_id, track, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/edits/{editId}/testers/{track}', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::Testers::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::Testers
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::Testers::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::Testers
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['track'] = track unless track.nil?
@@ -1480,7 +1480,7 @@ module Google
         # @param [String] edit_id
         #   Unique identifier for this edit.
         # @param [String] track
-        # @param [Google::Apis::AndroidpublisherV2::Testers] testers_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::Testers] testers_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1490,24 +1490,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::Testers] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::Testers] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::Testers]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::Testers]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_tester(package_name, edit_id, track, testers_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, '{packageName}/edits/{editId}/testers/{track}', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::Testers::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::Testers::Representation
           command.request_object = testers_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::Testers::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::Testers
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::Testers::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::Testers
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['track'] = track unless track.nil?
@@ -1524,7 +1524,7 @@ module Google
         # @param [String] edit_id
         #   Unique identifier for this edit.
         # @param [String] track
-        # @param [Google::Apis::AndroidpublisherV2::Testers] testers_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::Testers] testers_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1534,24 +1534,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::Testers] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::Testers] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::Testers]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::Testers]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_tester(package_name, edit_id, track, testers_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, '{packageName}/edits/{editId}/testers/{track}', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::Testers::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::Testers::Representation
           command.request_object = testers_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::Testers::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::Testers
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::Testers::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::Testers
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['track'] = track unless track.nil?
@@ -1579,22 +1579,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::Track] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::Track] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::Track]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::Track]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_track(package_name, edit_id, track, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/edits/{editId}/tracks/{track}', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::Track::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::Track
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::Track::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::Track
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['track'] = track unless track.nil?
@@ -1619,22 +1619,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::ListTracksResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::ListTracksResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::ListTracksResponse]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ListTracksResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_tracks(package_name, edit_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/edits/{editId}/tracks', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::ListTracksResponse::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::ListTracksResponse
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::ListTracksResponse::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::ListTracksResponse
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1653,7 +1653,7 @@ module Google
         #   Unique identifier for this edit.
         # @param [String] track
         #   The track type to read or modify.
-        # @param [Google::Apis::AndroidpublisherV2::Track] track_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::Track] track_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1663,24 +1663,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::Track] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::Track] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::Track]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::Track]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_track(package_name, edit_id, track, track_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, '{packageName}/edits/{editId}/tracks/{track}', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::Track::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::Track::Representation
           command.request_object = track_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::Track::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::Track
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::Track::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::Track
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['track'] = track unless track.nil?
@@ -1700,7 +1700,7 @@ module Google
         #   Unique identifier for this edit.
         # @param [String] track
         #   The track type to read or modify.
-        # @param [Google::Apis::AndroidpublisherV2::Track] track_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::Track] track_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1710,24 +1710,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::Track] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::Track] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::Track]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::Track]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_track(package_name, edit_id, track, track_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, '{packageName}/edits/{editId}/tracks/{track}', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::Track::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::Track::Representation
           command.request_object = track_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::Track::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::Track
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::Track::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::Track
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['editId'] = edit_id unless edit_id.nil?
           command.params['track'] = track unless track.nil?
@@ -1756,22 +1756,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::ListEntitlementsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::ListEntitlementsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::ListEntitlementsResponse]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ListEntitlementsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_entitlements(package_name, max_results: nil, product_id: nil, start_index: nil, token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/entitlements', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::ListEntitlementsResponse::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::ListEntitlementsResponse
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::ListEntitlementsResponse::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::ListEntitlementsResponse
           command.params['packageName'] = package_name unless package_name.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['productId'] = product_id unless product_id.nil?
@@ -1784,7 +1784,7 @@ module Google
         end
         
         # 
-        # @param [Google::Apis::AndroidpublisherV2::InAppProductsBatchRequest] in_app_products_batch_request_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::InAppProductsBatchRequest] in_app_products_batch_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -1794,24 +1794,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::InAppProductsBatchResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::InAppProductsBatchResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::InAppProductsBatchResponse]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::InAppProductsBatchResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def batch_update_in_app_products(in_app_products_batch_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'inappproducts/batch', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::InAppProductsBatchRequest::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::InAppProductsBatchRequest::Representation
           command.request_object = in_app_products_batch_request_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::InAppProductsBatchResponse::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::InAppProductsBatchResponse
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::InAppProductsBatchResponse::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::InAppProductsBatchResponse
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['userIp'] = user_ip unless user_ip.nil?
@@ -1833,7 +1833,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -1842,9 +1842,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_in_app_product(package_name, sku, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{packageName}/inappproducts/{sku}', options)
           command.params['packageName'] = package_name unless package_name.nil?
@@ -1868,22 +1868,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::InAppProduct] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::InAppProduct] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::InAppProduct]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::InAppProduct]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_in_app_product(package_name, sku, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/inappproducts/{sku}', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::InAppProduct::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::InAppProduct
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::InAppProduct::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::InAppProduct
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['sku'] = sku unless sku.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1895,7 +1895,7 @@ module Google
         # Creates a new in-app product for an app.
         # @param [String] package_name
         #   Unique identifier for the Android app; for example, "com.spiffygame".
-        # @param [Google::Apis::AndroidpublisherV2::InAppProduct] in_app_product_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::InAppProduct] in_app_product_object
         # @param [Boolean] auto_convert_missing_prices
         #   If true the prices for all regions targeted by the parent app that don't have
         #   a price specified for this in-app product will be auto converted to the target
@@ -1909,24 +1909,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::InAppProduct] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::InAppProduct] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::InAppProduct]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::InAppProduct]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_in_app_product(package_name, in_app_product_object = nil, auto_convert_missing_prices: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{packageName}/inappproducts', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::InAppProduct::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::InAppProduct::Representation
           command.request_object = in_app_product_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::InAppProduct::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::InAppProduct
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::InAppProduct::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::InAppProduct
           command.params['packageName'] = package_name unless package_name.nil?
           command.query['autoConvertMissingPrices'] = auto_convert_missing_prices unless auto_convert_missing_prices.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -1952,22 +1952,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::ListInAppProductsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::ListInAppProductsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::ListInAppProductsResponse]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ListInAppProductsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_in_app_products(package_name, max_results: nil, start_index: nil, token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/inappproducts', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::ListInAppProductsResponse::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::ListInAppProductsResponse
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::ListInAppProductsResponse::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::ListInAppProductsResponse
           command.params['packageName'] = package_name unless package_name.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['startIndex'] = start_index unless start_index.nil?
@@ -1984,7 +1984,7 @@ module Google
         #   com.spiffygame".
         # @param [String] sku
         #   Unique identifier for the in-app product.
-        # @param [Google::Apis::AndroidpublisherV2::InAppProduct] in_app_product_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::InAppProduct] in_app_product_object
         # @param [Boolean] auto_convert_missing_prices
         #   If true the prices for all regions targeted by the parent app that don't have
         #   a price specified for this in-app product will be auto converted to the target
@@ -1998,24 +1998,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::InAppProduct] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::InAppProduct] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::InAppProduct]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::InAppProduct]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_in_app_product(package_name, sku, in_app_product_object = nil, auto_convert_missing_prices: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, '{packageName}/inappproducts/{sku}', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::InAppProduct::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::InAppProduct::Representation
           command.request_object = in_app_product_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::InAppProduct::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::InAppProduct
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::InAppProduct::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::InAppProduct
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['sku'] = sku unless sku.nil?
           command.query['autoConvertMissingPrices'] = auto_convert_missing_prices unless auto_convert_missing_prices.nil?
@@ -2031,7 +2031,7 @@ module Google
         #   com.spiffygame".
         # @param [String] sku
         #   Unique identifier for the in-app product.
-        # @param [Google::Apis::AndroidpublisherV2::InAppProduct] in_app_product_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::InAppProduct] in_app_product_object
         # @param [Boolean] auto_convert_missing_prices
         #   If true the prices for all regions targeted by the parent app that don't have
         #   a price specified for this in-app product will be auto converted to the target
@@ -2045,24 +2045,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::InAppProduct] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::InAppProduct] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::InAppProduct]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::InAppProduct]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_in_app_product(package_name, sku, in_app_product_object = nil, auto_convert_missing_prices: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, '{packageName}/inappproducts/{sku}', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::InAppProduct::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::InAppProduct::Representation
           command.request_object = in_app_product_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::InAppProduct::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::InAppProduct
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::InAppProduct::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::InAppProduct
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['sku'] = sku unless sku.nil?
           command.query['autoConvertMissingPrices'] = auto_convert_missing_prices unless auto_convert_missing_prices.nil?
@@ -2089,22 +2089,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::ProductPurchase] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::ProductPurchase] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::ProductPurchase]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ProductPurchase]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_purchase_product(package_name, product_id, token, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/purchases/products/{productId}/tokens/{token}', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::ProductPurchase::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::ProductPurchase
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::ProductPurchase::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::ProductPurchase
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['productId'] = product_id unless product_id.nil?
           command.params['token'] = token unless token.nil?
@@ -2132,7 +2132,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -2141,9 +2141,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def cancel_purchase_subscription(package_name, subscription_id, token, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:cancel', options)
           command.params['packageName'] = package_name unless package_name.nil?
@@ -2163,7 +2163,7 @@ module Google
         #   The purchased subscription ID (for example, 'monthly001').
         # @param [String] token
         #   The token provided to the user's device when the subscription was purchased.
-        # @param [Google::Apis::AndroidpublisherV2::DeferSubscriptionPurchasesRequest] defer_subscription_purchases_request_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::DeferSubscriptionPurchasesRequest] defer_subscription_purchases_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2173,24 +2173,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::DeferSubscriptionPurchasesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::DeferSubscriptionPurchasesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::DeferSubscriptionPurchasesResponse]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::DeferSubscriptionPurchasesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def defer_purchase_subscription(package_name, subscription_id, token, defer_subscription_purchases_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:defer', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::DeferSubscriptionPurchasesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::DeferSubscriptionPurchasesRequest::Representation
           command.request_object = defer_subscription_purchases_request_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::DeferSubscriptionPurchasesResponse::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::DeferSubscriptionPurchasesResponse
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::DeferSubscriptionPurchasesResponse::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::DeferSubscriptionPurchasesResponse
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['subscriptionId'] = subscription_id unless subscription_id.nil?
           command.params['token'] = token unless token.nil?
@@ -2218,22 +2218,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::SubscriptionPurchase] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::SubscriptionPurchase] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::SubscriptionPurchase]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::SubscriptionPurchase]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_purchase_subscription(package_name, subscription_id, token, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::SubscriptionPurchase::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::SubscriptionPurchase
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::SubscriptionPurchase::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::SubscriptionPurchase
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['subscriptionId'] = subscription_id unless subscription_id.nil?
           command.params['token'] = token unless token.nil?
@@ -2261,7 +2261,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -2270,9 +2270,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def refund_purchase_subscription(package_name, subscription_id, token, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:refund', options)
           command.params['packageName'] = package_name unless package_name.nil?
@@ -2302,7 +2302,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -2311,9 +2311,9 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def revoke_purchase_subscription(package_name, subscription_id, token, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:revoke', options)
           command.params['packageName'] = package_name unless package_name.nil?
@@ -2339,22 +2339,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::Review] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::Review] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::Review]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::Review]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_review(package_name, review_id, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/reviews/{reviewId}', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::Review::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::Review
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::Review::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::Review
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['reviewId'] = review_id unless review_id.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -2379,22 +2379,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::ReviewsListResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::ReviewsListResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::ReviewsListResponse]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ReviewsListResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_reviews(package_name, max_results: nil, start_index: nil, token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{packageName}/reviews', options)
-          command.response_representation = Google::Apis::AndroidpublisherV2::ReviewsListResponse::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::ReviewsListResponse
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::ReviewsListResponse::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::ReviewsListResponse
           command.params['packageName'] = package_name unless package_name.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
           command.query['startIndex'] = start_index unless start_index.nil?
@@ -2410,7 +2410,7 @@ module Google
         #   Unique identifier for the Android app for which we want reviews; for example, "
         #   com.spiffygame".
         # @param [String] review_id
-        # @param [Google::Apis::AndroidpublisherV2::ReviewsReplyRequest] reviews_reply_request_object
+        # @param [GoogleAPI::Apis::AndroidpublisherV2::ReviewsReplyRequest] reviews_reply_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -2420,24 +2420,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AndroidpublisherV2::ReviewsReplyResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AndroidpublisherV2::ReviewsReplyResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AndroidpublisherV2::ReviewsReplyResponse]
+        # @return [GoogleAPI::Apis::AndroidpublisherV2::ReviewsReplyResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def reply_review(package_name, review_id, reviews_reply_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{packageName}/reviews/{reviewId}:reply', options)
-          command.request_representation = Google::Apis::AndroidpublisherV2::ReviewsReplyRequest::Representation
+          command.request_representation = GoogleAPI::Apis::AndroidpublisherV2::ReviewsReplyRequest::Representation
           command.request_object = reviews_reply_request_object
-          command.response_representation = Google::Apis::AndroidpublisherV2::ReviewsReplyResponse::Representation
-          command.response_class = Google::Apis::AndroidpublisherV2::ReviewsReplyResponse
+          command.response_representation = GoogleAPI::Apis::AndroidpublisherV2::ReviewsReplyResponse::Representation
+          command.response_class = GoogleAPI::Apis::AndroidpublisherV2::ReviewsReplyResponse
           command.params['packageName'] = package_name unless package_name.nil?
           command.params['reviewId'] = review_id unless review_id.nil?
           command.query['fields'] = fields unless fields.nil?

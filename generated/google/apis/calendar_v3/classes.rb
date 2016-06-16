@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module CalendarV3
       
       # 
       class Acl
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the collection.
         # Corresponds to the JSON property `etag`
@@ -33,7 +33,7 @@ module Google
       
         # List of rules on the access control list.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::CalendarV3::AclRule>]
+        # @return [Array<GoogleAPI::Apis::CalendarV3::AclRule>]
         attr_accessor :items
       
         # Type of the collection ("calendar#acl").
@@ -70,7 +70,7 @@ module Google
       
       # 
       class AclRule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -103,7 +103,7 @@ module Google
       
         # The scope of the rule.
         # Corresponds to the JSON property `scope`
-        # @return [Google::Apis::CalendarV3::AclRule::Scope]
+        # @return [GoogleAPI::Apis::CalendarV3::AclRule::Scope]
         attr_accessor :scope
       
         def initialize(**args)
@@ -121,7 +121,7 @@ module Google
         
         # The scope of the rule.
         class Scope
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The type of the scope. Possible values are:
           # - "default" - The public scope. This is the default value.
@@ -153,7 +153,7 @@ module Google
       
       # 
       class Calendar
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Description of the calendar. Optional.
         # Corresponds to the JSON property `description`
@@ -210,7 +210,7 @@ module Google
       
       # 
       class CalendarList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the collection.
         # Corresponds to the JSON property `etag`
@@ -219,7 +219,7 @@ module Google
       
         # Calendars that are present on the user's calendar list.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::CalendarV3::CalendarListEntry>]
+        # @return [Array<GoogleAPI::Apis::CalendarV3::CalendarListEntry>]
         attr_accessor :items
       
         # Type of the collection ("calendar#calendarList").
@@ -256,7 +256,7 @@ module Google
       
       # 
       class CalendarListEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The effective access role that the authenticated user has on the calendar.
         # Read-only. Possible values are:
@@ -290,7 +290,7 @@ module Google
       
         # The default reminders that the authenticated user has for this calendar.
         # Corresponds to the JSON property `defaultReminders`
-        # @return [Array<Google::Apis::CalendarV3::EventReminder>]
+        # @return [Array<GoogleAPI::Apis::CalendarV3::EventReminder>]
         attr_accessor :default_reminders
       
         # Whether this calendar list entry has been deleted from the calendar list. Read-
@@ -342,7 +342,7 @@ module Google
       
         # The notifications that the authenticated user is receiving for this calendar.
         # Corresponds to the JSON property `notificationSettings`
-        # @return [Google::Apis::CalendarV3::CalendarListEntry::NotificationSettings]
+        # @return [GoogleAPI::Apis::CalendarV3::CalendarListEntry::NotificationSettings]
         attr_accessor :notification_settings
       
         # Whether the calendar is the primary calendar of the authenticated user. Read-
@@ -402,11 +402,11 @@ module Google
         
         # The notifications that the authenticated user is receiving for this calendar.
         class NotificationSettings
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The list of notifications set for this calendar.
           # Corresponds to the JSON property `notifications`
-          # @return [Array<Google::Apis::CalendarV3::CalendarNotification>]
+          # @return [Array<GoogleAPI::Apis::CalendarV3::CalendarNotification>]
           attr_accessor :notifications
         
           def initialize(**args)
@@ -422,7 +422,7 @@ module Google
       
       # 
       class CalendarNotification
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The method used to deliver the notification. Possible values are:
         # - "email" - Reminders are sent via email.
@@ -456,7 +456,7 @@ module Google
       
       # 
       class Channel
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The address where notifications are delivered for this channel.
         # Corresponds to the JSON property `address`
@@ -534,7 +534,7 @@ module Google
       
       # 
       class ColorDefinition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The background color associated with this color definition.
         # Corresponds to the JSON property `background`
@@ -560,20 +560,20 @@ module Google
       
       # 
       class Colors
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A global palette of calendar colors, mapping from the color ID to its
         # definition. A calendarListEntry resource refers to one of these color IDs in
         # its color field. Read-only.
         # Corresponds to the JSON property `calendar`
-        # @return [Hash<String,Google::Apis::CalendarV3::ColorDefinition>]
+        # @return [Hash<String,GoogleAPI::Apis::CalendarV3::ColorDefinition>]
         attr_accessor :calendar
       
         # A global palette of event colors, mapping from the color ID to its definition.
         # An event resource may refer to one of these color IDs in its color field. Read-
         # only.
         # Corresponds to the JSON property `event`
-        # @return [Hash<String,Google::Apis::CalendarV3::ColorDefinition>]
+        # @return [Hash<String,GoogleAPI::Apis::CalendarV3::ColorDefinition>]
         attr_accessor :event
       
         # Type of the resource ("calendar#colors").
@@ -602,7 +602,7 @@ module Google
       
       # 
       class Error
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Domain, or broad category, of the error.
         # Corresponds to the JSON property `domain`
@@ -635,7 +635,7 @@ module Google
       
       # 
       class Event
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether anyone can invite themselves to the event (currently works for Google+
         # events only). Optional. The default is False.
@@ -650,13 +650,13 @@ module Google
         # should be set to true.
         # There can be at most 25 attachments per event,
         # Corresponds to the JSON property `attachments`
-        # @return [Array<Google::Apis::CalendarV3::EventAttachment>]
+        # @return [Array<GoogleAPI::Apis::CalendarV3::EventAttachment>]
         attr_accessor :attachments
       
         # The attendees of the event. See the Events with attendees guide for more
         # information on scheduling events with other calendar users.
         # Corresponds to the JSON property `attendees`
-        # @return [Array<Google::Apis::CalendarV3::EventAttendee>]
+        # @return [Array<GoogleAPI::Apis::CalendarV3::EventAttendee>]
         attr_accessor :attendees
       
         # Whether attendees may have been omitted from the event's representation. When
@@ -681,7 +681,7 @@ module Google
       
         # The creator of the event. Read-only.
         # Corresponds to the JSON property `creator`
-        # @return [Google::Apis::CalendarV3::Event::Creator]
+        # @return [GoogleAPI::Apis::CalendarV3::Event::Creator]
         attr_accessor :creator
       
         # Description of the event. Optional.
@@ -692,7 +692,7 @@ module Google
         # The (exclusive) end time of the event. For a recurring event, this is the end
         # time of the first instance.
         # Corresponds to the JSON property `end`
-        # @return [Google::Apis::CalendarV3::EventDateTime]
+        # @return [GoogleAPI::Apis::CalendarV3::EventDateTime]
         attr_accessor :end
       
         # Whether the end time is actually unspecified. An end time is still provided
@@ -710,12 +710,12 @@ module Google
       
         # Extended properties of the event.
         # Corresponds to the JSON property `extendedProperties`
-        # @return [Google::Apis::CalendarV3::Event::ExtendedProperties]
+        # @return [GoogleAPI::Apis::CalendarV3::Event::ExtendedProperties]
         attr_accessor :extended_properties
       
         # A gadget that extends this event.
         # Corresponds to the JSON property `gadget`
-        # @return [Google::Apis::CalendarV3::Event::Gadget]
+        # @return [GoogleAPI::Apis::CalendarV3::Event::Gadget]
         attr_accessor :gadget
       
         # Whether attendees other than the organizer can invite others to the event.
@@ -801,14 +801,14 @@ module Google
         # True. To change the organizer, use the move operation. Read-only, except when
         # importing an event.
         # Corresponds to the JSON property `organizer`
-        # @return [Google::Apis::CalendarV3::Event::Organizer]
+        # @return [GoogleAPI::Apis::CalendarV3::Event::Organizer]
         attr_accessor :organizer
       
         # For an instance of a recurring event, this is the time at which this event
         # would start according to the recurrence data in the recurring event identified
         # by recurringEventId. Immutable.
         # Corresponds to the JSON property `originalStartTime`
-        # @return [Google::Apis::CalendarV3::EventDateTime]
+        # @return [GoogleAPI::Apis::CalendarV3::EventDateTime]
         attr_accessor :original_start_time
       
         # Whether this is a private event copy where changes are not shared with other
@@ -835,7 +835,7 @@ module Google
       
         # Information about the event's reminders for the authenticated user.
         # Corresponds to the JSON property `reminders`
-        # @return [Google::Apis::CalendarV3::Event::Reminders]
+        # @return [GoogleAPI::Apis::CalendarV3::Event::Reminders]
         attr_accessor :reminders
       
         # Sequence number as per iCalendar.
@@ -847,13 +847,13 @@ module Google
         # message or any document identifiable by an URL with HTTP or HTTPS scheme. Can
         # only be seen or modified by the creator of the event.
         # Corresponds to the JSON property `source`
-        # @return [Google::Apis::CalendarV3::Event::Source]
+        # @return [GoogleAPI::Apis::CalendarV3::Event::Source]
         attr_accessor :source
       
         # The (inclusive) start time of the event. For a recurring event, this is the
         # start time of the first instance.
         # Corresponds to the JSON property `start`
-        # @return [Google::Apis::CalendarV3::EventDateTime]
+        # @return [GoogleAPI::Apis::CalendarV3::EventDateTime]
         attr_accessor :start
       
         # Status of the event. Optional. Possible values are:
@@ -941,7 +941,7 @@ module Google
         
         # The creator of the event. Read-only.
         class Creator
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The creator's name, if available.
           # Corresponds to the JSON property `displayName`
@@ -981,7 +981,7 @@ module Google
         
         # Extended properties of the event.
         class ExtendedProperties
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Properties that are private to the copy of the event that appears on this
           # calendar.
@@ -1008,7 +1008,7 @@ module Google
         
         # A gadget that extends this event.
         class Gadget
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The gadget's display mode. Optional. Possible values are:
           # - "icon" - The gadget displays next to the event's title in the calendar view.
@@ -1076,7 +1076,7 @@ module Google
         # True. To change the organizer, use the move operation. Read-only, except when
         # importing an event.
         class Organizer
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The organizer's name, if available.
           # Corresponds to the JSON property `displayName`
@@ -1117,13 +1117,13 @@ module Google
         
         # Information about the event's reminders for the authenticated user.
         class Reminders
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # If the event doesn't use the default reminders, this lists the reminders
           # specific to the event, or, if not set, indicates that no reminders are set for
           # this event. The maximum number of override reminders is 5.
           # Corresponds to the JSON property `overrides`
-          # @return [Array<Google::Apis::CalendarV3::EventReminder>]
+          # @return [Array<GoogleAPI::Apis::CalendarV3::EventReminder>]
           attr_accessor :overrides
         
           # Whether the default reminders of the calendar apply to the event.
@@ -1147,7 +1147,7 @@ module Google
         # message or any document identifiable by an URL with HTTP or HTTPS scheme. Can
         # only be seen or modified by the creator of the event.
         class Source
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Title of the source; for example a title of a web page or an email subject.
           # Corresponds to the JSON property `title`
@@ -1173,7 +1173,7 @@ module Google
       
       # 
       class EventAttachment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ID of the attached file. Read-only.
         # For Google Drive files, this is the ID of the corresponding Files resource
@@ -1220,7 +1220,7 @@ module Google
       
       # 
       class EventAttendee
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Number of additional guests. Optional. The default is 0.
         # Corresponds to the JSON property `additionalGuests`
@@ -1305,7 +1305,7 @@ module Google
       
       # 
       class EventDateTime
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The date, in the format "yyyy-mm-dd", if this is an all-day event.
         # Corresponds to the JSON property `date`
@@ -1342,7 +1342,7 @@ module Google
       
       # 
       class EventReminder
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The method used by this reminder. Possible values are:
         # - "email" - Reminders are sent via email.
@@ -1373,7 +1373,7 @@ module Google
       
       # 
       class Events
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The user's access role for this calendar. Read-only. Possible values are:
         # - "none" - The user has no access.
@@ -1394,7 +1394,7 @@ module Google
         # reminders apply to all events on this calendar that do not explicitly override
         # them (i.e. do not have reminders.useDefault set to True).
         # Corresponds to the JSON property `defaultReminders`
-        # @return [Array<Google::Apis::CalendarV3::EventReminder>]
+        # @return [Array<GoogleAPI::Apis::CalendarV3::EventReminder>]
         attr_accessor :default_reminders
       
         # Description of the calendar. Read-only.
@@ -1409,7 +1409,7 @@ module Google
       
         # List of events on the calendar.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::CalendarV3::Event>]
+        # @return [Array<GoogleAPI::Apis::CalendarV3::Event>]
         attr_accessor :items
       
         # Type of the collection ("calendar#events").
@@ -1467,16 +1467,16 @@ module Google
       
       # 
       class FreeBusyCalendar
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of time ranges during which this calendar should be regarded as busy.
         # Corresponds to the JSON property `busy`
-        # @return [Array<Google::Apis::CalendarV3::TimePeriod>]
+        # @return [Array<GoogleAPI::Apis::CalendarV3::TimePeriod>]
         attr_accessor :busy
       
         # Optional error(s) (if computation for the calendar failed).
         # Corresponds to the JSON property `errors`
-        # @return [Array<Google::Apis::CalendarV3::Error>]
+        # @return [Array<GoogleAPI::Apis::CalendarV3::Error>]
         attr_accessor :errors
       
         def initialize(**args)
@@ -1492,7 +1492,7 @@ module Google
       
       # 
       class FreeBusyGroup
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of calendars' identifiers within a group.
         # Corresponds to the JSON property `calendars`
@@ -1501,7 +1501,7 @@ module Google
       
         # Optional error(s) (if computation for the group failed).
         # Corresponds to the JSON property `errors`
-        # @return [Array<Google::Apis::CalendarV3::Error>]
+        # @return [Array<GoogleAPI::Apis::CalendarV3::Error>]
         attr_accessor :errors
       
         def initialize(**args)
@@ -1517,7 +1517,7 @@ module Google
       
       # 
       class FreeBusyRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Maximal number of calendars for which FreeBusy information is to be provided.
         # Optional.
@@ -1534,7 +1534,7 @@ module Google
       
         # List of calendars and/or groups to query.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::CalendarV3::FreeBusyRequestItem>]
+        # @return [Array<GoogleAPI::Apis::CalendarV3::FreeBusyRequestItem>]
         attr_accessor :items
       
         # The end of the interval for the query.
@@ -1569,7 +1569,7 @@ module Google
       
       # 
       class FreeBusyRequestItem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The identifier of a calendar or a group.
         # Corresponds to the JSON property `id`
@@ -1588,16 +1588,16 @@ module Google
       
       # 
       class FreeBusyResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of free/busy information for calendars.
         # Corresponds to the JSON property `calendars`
-        # @return [Hash<String,Google::Apis::CalendarV3::FreeBusyCalendar>]
+        # @return [Hash<String,GoogleAPI::Apis::CalendarV3::FreeBusyCalendar>]
         attr_accessor :calendars
       
         # Expansion of groups.
         # Corresponds to the JSON property `groups`
-        # @return [Hash<String,Google::Apis::CalendarV3::FreeBusyGroup>]
+        # @return [Hash<String,GoogleAPI::Apis::CalendarV3::FreeBusyGroup>]
         attr_accessor :groups
       
         # Type of the resource ("calendar#freeBusy").
@@ -1631,7 +1631,7 @@ module Google
       
       # 
       class Setting
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ETag of the resource.
         # Corresponds to the JSON property `etag`
@@ -1669,7 +1669,7 @@ module Google
       
       # 
       class Settings
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Etag of the collection.
         # Corresponds to the JSON property `etag`
@@ -1678,7 +1678,7 @@ module Google
       
         # List of user settings.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::CalendarV3::Setting>]
+        # @return [Array<GoogleAPI::Apis::CalendarV3::Setting>]
         attr_accessor :items
       
         # Type of the collection ("calendar#settings").
@@ -1715,7 +1715,7 @@ module Google
       
       # 
       class TimePeriod
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The (exclusive) end of the time period.
         # Corresponds to the JSON property `end`

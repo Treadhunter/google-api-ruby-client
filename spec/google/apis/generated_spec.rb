@@ -14,7 +14,7 @@
 
 require 'spec_helper'
 
-RSpec.describe Google::Apis do
+RSpec.describe GoogleAPI::Apis do
   # Minimal test just to ensure no syntax errors in generated code
   it 'should load all APIs' do
     expect do

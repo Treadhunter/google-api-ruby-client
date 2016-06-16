@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module SiteVerificationV1
       
       # 
       class GetWebResourceTokenRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The site for which a verification token will be generated.
         # Corresponds to the JSON property `site`
-        # @return [Google::Apis::SiteVerificationV1::GetWebResourceTokenRequest::Site]
+        # @return [GoogleAPI::Apis::SiteVerificationV1::GetWebResourceTokenRequest::Site]
         attr_accessor :site
       
         # The verification method that will be used to verify this site. For sites, '
@@ -49,7 +49,7 @@ module Google
         
         # The site for which a verification token will be generated.
         class Site
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The site identifier. If the type is set to SITE, the identifier is a URL. If
           # the type is set to INET_DOMAIN, the site identifier is a domain name.
@@ -76,7 +76,7 @@ module Google
       
       # 
       class GetWebResourceTokenResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The verification method to use in conjunction with this token. For FILE, the
         # token should be placed in the top-level directory of the site, stored inside a
@@ -106,11 +106,11 @@ module Google
       
       # 
       class ListWebResourceResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of sites that are owned by the authenticated user.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::SiteVerificationV1::SiteVerificationWebResourceResource>]
+        # @return [Array<GoogleAPI::Apis::SiteVerificationV1::SiteVerificationWebResourceResource>]
         attr_accessor :items
       
         def initialize(**args)
@@ -125,7 +125,7 @@ module Google
       
       # 
       class SiteVerificationWebResourceResource
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The string used to identify this site. This value should be used in the "id"
         # portion of the REST URL for the Get, Update, and Delete operations.
@@ -140,7 +140,7 @@ module Google
       
         # The address and type of a site that is verified or will be verified.
         # Corresponds to the JSON property `site`
-        # @return [Google::Apis::SiteVerificationV1::SiteVerificationWebResourceResource::Site]
+        # @return [GoogleAPI::Apis::SiteVerificationV1::SiteVerificationWebResourceResource::Site]
         attr_accessor :site
       
         def initialize(**args)
@@ -156,7 +156,7 @@ module Google
         
         # The address and type of a site that is verified or will be verified.
         class Site
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The site identifier. If the type is set to SITE, the identifier is a URL. If
           # the type is set to INET_DOMAIN, the site identifier is a domain name.

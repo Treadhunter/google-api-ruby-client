@@ -14,7 +14,7 @@
 
 require 'google/apis'
 
-module Google
+module GoogleAPI
   module Apis
     module Core
       # Logging support
@@ -22,7 +22,7 @@ module Google
         # Get the logger instance
         # @return [Logger]
         def logger
-          Google::Apis.logger
+          GoogleAPI::Apis.logger
         end
       end
     end

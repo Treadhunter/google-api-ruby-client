@@ -39,7 +39,7 @@ module Samples
   #     John          Male    3. Junior     CA          Physics  Basketball
   #     Jonathan      Male    2. Sophomore  SC          Math     Debate
   class Sheets < BaseCli
-    Sheets = Google::Apis::SheetsV4
+    Sheets = GoogleAPI::Apis::SheetsV4
 
     desc 'get_values', 'Get values from Google Spreadseets '
     method_option :spreadsheet_key, type: :string, required: true

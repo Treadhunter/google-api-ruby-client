@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AppsactivityV1
       # Google Apps Activity API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/appsactivity_v1'
       #
-      #    Appsactivity = Google::Apis::AppsactivityV1 # Alias the module
+      #    Appsactivity = GoogleAPI::Apis::AppsactivityV1 # Alias the module
       #    service = Appsactivity::AppsactivityService.new
       #
       # @see https://developers.google.com/google-apps/activity/
-      class AppsactivityService < Google::Apis::Core::BaseService
+      class AppsactivityService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -86,22 +86,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AppsactivityV1::ListActivitiesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AppsactivityV1::ListActivitiesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AppsactivityV1::ListActivitiesResponse]
+        # @return [GoogleAPI::Apis::AppsactivityV1::ListActivitiesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_activities(drive_ancestor_id: nil, drive_file_id: nil, grouping_strategy: nil, page_size: nil, page_token: nil, source: nil, user_id: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'activities', options)
-          command.response_representation = Google::Apis::AppsactivityV1::ListActivitiesResponse::Representation
-          command.response_class = Google::Apis::AppsactivityV1::ListActivitiesResponse
+          command.response_representation = GoogleAPI::Apis::AppsactivityV1::ListActivitiesResponse::Representation
+          command.response_class = GoogleAPI::Apis::AppsactivityV1::ListActivitiesResponse
           command.query['drive.ancestorId'] = drive_ancestor_id unless drive_ancestor_id.nil?
           command.query['drive.fileId'] = drive_file_id unless drive_file_id.nil?
           command.query['groupingStrategy'] = grouping_strategy unless grouping_strategy.nil?

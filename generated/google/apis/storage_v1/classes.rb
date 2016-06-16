@@ -18,27 +18,27 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module StorageV1
       
       # A bucket.
       class Bucket
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Access controls on the bucket.
         # Corresponds to the JSON property `acl`
-        # @return [Array<Google::Apis::StorageV1::BucketAccessControl>]
+        # @return [Array<GoogleAPI::Apis::StorageV1::BucketAccessControl>]
         attr_accessor :acl
       
         # The bucket's Cross-Origin Resource Sharing (CORS) configuration.
         # Corresponds to the JSON property `cors`
-        # @return [Array<Google::Apis::StorageV1::Bucket::CorsConfiguration>]
+        # @return [Array<GoogleAPI::Apis::StorageV1::Bucket::CorsConfiguration>]
         attr_accessor :cors_configurations
       
         # Default access controls to apply to new objects when no ACL is provided.
         # Corresponds to the JSON property `defaultObjectAcl`
-        # @return [Array<Google::Apis::StorageV1::ObjectAccessControl>]
+        # @return [Array<GoogleAPI::Apis::StorageV1::ObjectAccessControl>]
         attr_accessor :default_object_acl
       
         # HTTP 1.1 Entity tag for the bucket.
@@ -59,7 +59,7 @@ module Google
         # The bucket's lifecycle configuration. See lifecycle management for more
         # information.
         # Corresponds to the JSON property `lifecycle`
-        # @return [Google::Apis::StorageV1::Bucket::Lifecycle]
+        # @return [GoogleAPI::Apis::StorageV1::Bucket::Lifecycle]
         attr_accessor :lifecycle
       
         # The location of the bucket. Object data for objects in the bucket resides in
@@ -72,7 +72,7 @@ module Google
         # The bucket's logging configuration, which defines the destination bucket and
         # optional name prefix for the current bucket's logs.
         # Corresponds to the JSON property `logging`
-        # @return [Google::Apis::StorageV1::Bucket::Logging]
+        # @return [GoogleAPI::Apis::StorageV1::Bucket::Logging]
         attr_accessor :logging
       
         # The metadata generation of this bucket.
@@ -87,7 +87,7 @@ module Google
       
         # The owner of the bucket. This is always the project team's owner group.
         # Corresponds to the JSON property `owner`
-        # @return [Google::Apis::StorageV1::Bucket::Owner]
+        # @return [GoogleAPI::Apis::StorageV1::Bucket::Owner]
         attr_accessor :owner
       
         # The project number of the project the bucket belongs to.
@@ -120,12 +120,12 @@ module Google
       
         # The bucket's versioning configuration.
         # Corresponds to the JSON property `versioning`
-        # @return [Google::Apis::StorageV1::Bucket::Versioning]
+        # @return [GoogleAPI::Apis::StorageV1::Bucket::Versioning]
         attr_accessor :versioning
       
         # The bucket's website configuration.
         # Corresponds to the JSON property `website`
-        # @return [Google::Apis::StorageV1::Bucket::Website]
+        # @return [GoogleAPI::Apis::StorageV1::Bucket::Website]
         attr_accessor :website
       
         def initialize(**args)
@@ -157,7 +157,7 @@ module Google
         
         # 
         class CorsConfiguration
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The value, in seconds, to return in the  Access-Control-Max-Age header used in
           # preflight responses.
@@ -200,12 +200,12 @@ module Google
         # The bucket's lifecycle configuration. See lifecycle management for more
         # information.
         class Lifecycle
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # A lifecycle management rule, which is made of an action to take and the
           # condition(s) under which the action will be taken.
           # Corresponds to the JSON property `rule`
-          # @return [Array<Google::Apis::StorageV1::Bucket::Lifecycle::Rule>]
+          # @return [Array<GoogleAPI::Apis::StorageV1::Bucket::Lifecycle::Rule>]
           attr_accessor :rule
         
           def initialize(**args)
@@ -219,16 +219,16 @@ module Google
           
           # 
           class Rule
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # The action to take.
             # Corresponds to the JSON property `action`
-            # @return [Google::Apis::StorageV1::Bucket::Lifecycle::Rule::Action]
+            # @return [GoogleAPI::Apis::StorageV1::Bucket::Lifecycle::Rule::Action]
             attr_accessor :action
           
             # The condition(s) under which the action will be taken.
             # Corresponds to the JSON property `condition`
-            # @return [Google::Apis::StorageV1::Bucket::Lifecycle::Rule::Condition]
+            # @return [GoogleAPI::Apis::StorageV1::Bucket::Lifecycle::Rule::Condition]
             attr_accessor :condition
           
             def initialize(**args)
@@ -243,7 +243,7 @@ module Google
             
             # The action to take.
             class Action
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # Type of the action. Currently, only Delete is supported.
               # Corresponds to the JSON property `type`
@@ -262,7 +262,7 @@ module Google
             
             # The condition(s) under which the action will be taken.
             class Condition
-              include Google::Apis::Core::Hashable
+              include GoogleAPI::Apis::Core::Hashable
             
               # Age of an object (in days). This condition is satisfied when an object reaches
               # the specified age.
@@ -309,7 +309,7 @@ module Google
         # The bucket's logging configuration, which defines the destination bucket and
         # optional name prefix for the current bucket's logs.
         class Logging
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The destination bucket where the current bucket's logs should be placed.
           # Corresponds to the JSON property `logBucket`
@@ -334,7 +334,7 @@ module Google
         
         # The owner of the bucket. This is always the project team's owner group.
         class Owner
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The entity, in the form project-owner-projectId.
           # Corresponds to the JSON property `entity`
@@ -359,7 +359,7 @@ module Google
         
         # The bucket's versioning configuration.
         class Versioning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # While set to true, versioning is fully enabled for this bucket.
           # Corresponds to the JSON property `enabled`
@@ -379,7 +379,7 @@ module Google
         
         # The bucket's website configuration.
         class Website
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Behaves as the bucket's directory index where missing objects are treated as
           # potential directories.
@@ -406,7 +406,7 @@ module Google
       
       # An access-control entry.
       class BucketAccessControl
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the bucket.
         # Corresponds to the JSON property `bucket`
@@ -463,7 +463,7 @@ module Google
       
         # The project team associated with the entity, if any.
         # Corresponds to the JSON property `projectTeam`
-        # @return [Google::Apis::StorageV1::BucketAccessControl::ProjectTeam]
+        # @return [GoogleAPI::Apis::StorageV1::BucketAccessControl::ProjectTeam]
         attr_accessor :project_team
       
         # The access permission for the entity. Can be READER, WRITER, or OWNER.
@@ -497,7 +497,7 @@ module Google
         
         # The project team associated with the entity, if any.
         class ProjectTeam
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The project number.
           # Corresponds to the JSON property `projectNumber`
@@ -523,11 +523,11 @@ module Google
       
       # An access-control list.
       class BucketAccessControls
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of items.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::StorageV1::BucketAccessControl>]
+        # @return [Array<GoogleAPI::Apis::StorageV1::BucketAccessControl>]
         attr_accessor :items
       
         # The kind of item this is. For lists of bucket access control entries, this is
@@ -549,11 +549,11 @@ module Google
       
       # A list of buckets.
       class Buckets
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of items.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::StorageV1::Bucket>]
+        # @return [Array<GoogleAPI::Apis::StorageV1::Bucket>]
         attr_accessor :items
       
         # The kind of item this is. For lists of buckets, this is always storage#buckets.
@@ -581,7 +581,7 @@ module Google
       
       # An notification channel used to watch for resource changes.
       class Channel
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The address where notifications are delivered for this channel.
         # Corresponds to the JSON property `address`
@@ -659,11 +659,11 @@ module Google
       
       # A Compose request.
       class ComposeRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An object.
         # Corresponds to the JSON property `destination`
-        # @return [Google::Apis::StorageV1::Object]
+        # @return [GoogleAPI::Apis::StorageV1::Object]
         attr_accessor :destination
       
         # The kind of item this is.
@@ -673,7 +673,7 @@ module Google
       
         # The list of source objects that will be concatenated into a single object.
         # Corresponds to the JSON property `sourceObjects`
-        # @return [Array<Google::Apis::StorageV1::ComposeRequest::SourceObject>]
+        # @return [Array<GoogleAPI::Apis::StorageV1::ComposeRequest::SourceObject>]
         attr_accessor :source_objects
       
         def initialize(**args)
@@ -689,7 +689,7 @@ module Google
         
         # 
         class SourceObject
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The generation of this object to use as the source.
           # Corresponds to the JSON property `generation`
@@ -704,7 +704,7 @@ module Google
         
           # Conditions that must be met for this operation to execute.
           # Corresponds to the JSON property `objectPreconditions`
-          # @return [Google::Apis::StorageV1::ComposeRequest::SourceObject::ObjectPreconditions]
+          # @return [GoogleAPI::Apis::StorageV1::ComposeRequest::SourceObject::ObjectPreconditions]
           attr_accessor :object_preconditions
         
           def initialize(**args)
@@ -720,7 +720,7 @@ module Google
           
           # Conditions that must be met for this operation to execute.
           class ObjectPreconditions
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # Only perform the composition if the generation of the source object that would
             # be used matches this value. If this value and a generation are both specified,
@@ -743,11 +743,11 @@ module Google
       
       # An object.
       class Object
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Access controls on the object.
         # Corresponds to the JSON property `acl`
-        # @return [Array<Google::Apis::StorageV1::ObjectAccessControl>]
+        # @return [Array<GoogleAPI::Apis::StorageV1::ObjectAccessControl>]
         attr_accessor :acl
       
         # The name of the bucket containing this object.
@@ -797,7 +797,7 @@ module Google
         # Metadata of customer-supplied encryption key, if the object is encrypted by
         # such a key.
         # Corresponds to the JSON property `customerEncryption`
-        # @return [Google::Apis::StorageV1::Object::CustomerEncryption]
+        # @return [GoogleAPI::Apis::StorageV1::Object::CustomerEncryption]
         attr_accessor :customer_encryption
       
         # HTTP 1.1 Entity tag for the object.
@@ -851,7 +851,7 @@ module Google
       
         # The owner of the object. This will always be the uploader of the object.
         # Corresponds to the JSON property `owner`
-        # @return [Google::Apis::StorageV1::Object::Owner]
+        # @return [GoogleAPI::Apis::StorageV1::Object::Owner]
         attr_accessor :owner
       
         # The link to this object.
@@ -922,7 +922,7 @@ module Google
         # Metadata of customer-supplied encryption key, if the object is encrypted by
         # such a key.
         class CustomerEncryption
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The encryption algorithm.
           # Corresponds to the JSON property `encryptionAlgorithm`
@@ -947,7 +947,7 @@ module Google
         
         # The owner of the object. This will always be the uploader of the object.
         class Owner
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The entity, in the form user-userId.
           # Corresponds to the JSON property `entity`
@@ -973,7 +973,7 @@ module Google
       
       # An access-control entry.
       class ObjectAccessControl
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the bucket.
         # Corresponds to the JSON property `bucket`
@@ -1040,7 +1040,7 @@ module Google
       
         # The project team associated with the entity, if any.
         # Corresponds to the JSON property `projectTeam`
-        # @return [Google::Apis::StorageV1::ObjectAccessControl::ProjectTeam]
+        # @return [GoogleAPI::Apis::StorageV1::ObjectAccessControl::ProjectTeam]
         attr_accessor :project_team
       
         # The access permission for the entity. Can be READER or OWNER.
@@ -1076,7 +1076,7 @@ module Google
         
         # The project team associated with the entity, if any.
         class ProjectTeam
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The project number.
           # Corresponds to the JSON property `projectNumber`
@@ -1102,7 +1102,7 @@ module Google
       
       # An access-control list.
       class ObjectAccessControls
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of items.
         # Corresponds to the JSON property `items`
@@ -1128,11 +1128,11 @@ module Google
       
       # A list of objects.
       class Objects
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of items.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::StorageV1::Object>]
+        # @return [Array<GoogleAPI::Apis::StorageV1::Object>]
         attr_accessor :items
       
         # The kind of item this is. For lists of objects, this is always storage#objects.
@@ -1167,7 +1167,7 @@ module Google
       
       # A rewrite response.
       class RewriteResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # true if the copy is finished; otherwise, false if the copy is in progress.
         # This property is always present in the response.
@@ -1189,7 +1189,7 @@ module Google
       
         # An object.
         # Corresponds to the JSON property `resource`
-        # @return [Google::Apis::StorageV1::Object]
+        # @return [GoogleAPI::Apis::StorageV1::Object]
         attr_accessor :resource
       
         # A token to use in subsequent requests to continue copying data. This token is

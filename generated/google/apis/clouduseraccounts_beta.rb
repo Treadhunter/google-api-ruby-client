@@ -16,7 +16,7 @@ require 'google/apis/clouduseraccounts_beta/service.rb'
 require 'google/apis/clouduseraccounts_beta/classes.rb'
 require 'google/apis/clouduseraccounts_beta/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Cloud User Accounts API
     #

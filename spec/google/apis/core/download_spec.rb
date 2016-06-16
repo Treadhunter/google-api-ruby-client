@@ -19,12 +19,12 @@ require 'hurley/test'
 require 'tempfile'
 require 'tmpdir'
 
-RSpec.describe Google::Apis::Core::DownloadCommand do
+RSpec.describe GoogleAPI::Apis::Core::DownloadCommand do
   include TestHelpers
   include_context 'HTTP client'
 
   let(:command) do
-    command = Google::Apis::Core::DownloadCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
+    command = GoogleAPI::Apis::Core::DownloadCommand.new(:get, 'https://www.googleapis.com/zoo/animals')
     command.download_dest = dest
     command
   end

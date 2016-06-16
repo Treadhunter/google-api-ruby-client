@@ -25,22 +25,22 @@ LOGIN_URL = '/'
 configure do
   Dotenv.load
 
-  Google::Apis::ClientOptions.default.application_name = 'Ruby client samples'
-  Google::Apis::ClientOptions.default.application_version = '0.9'
-  Google::Apis::RequestOptions.default.retries = 3
+  GoogleAPI::Apis::ClientOptions.default.application_name = 'Ruby client samples'
+  GoogleAPI::Apis::ClientOptions.default.application_version = '0.9'
+  GoogleAPI::Apis::RequestOptions.default.retries = 3
 
   enable :sessions
   set :show_exceptions, false
-  set :client_id, Google::Auth::ClientId.new(ENV['GOOGLE_CLIENT_ID'],
+  set :client_id, GoogleAPI::Auth::ClientId.new(ENV['GOOGLE_CLIENT_ID'],
                                              ENV['GOOGLE_CLIENT_SECRET'])
-  set :token_store, Google::Auth::Stores::RedisTokenStore.new(redis: Redis.new)
+  set :token_store, GoogleAPI::Auth::Stores::RedisTokenStore.new(redis: Redis.new)
 end
 
 helpers do
   # Returns credentials authorized for the requested scopes. If no credentials are available,
   # redirects the user to authorize access.
   def credentials_for(scope)
-    authorizer = Google::Auth::WebUserAuthorizer.new(settings.client_id, scope, settings.token_store)
+    authorizer = GoogleAPI::Auth::WebUserAuthorizer.new(settings.client_id, scope, settings.token_store)
     user_id = session[:user_id]
     redirect LOGIN_URL if user_id.nil?
     credentials = authorizer.get_credentials(user_id, request)
@@ -82,8 +82,8 @@ end
 
 # Retrieve the 10 most recently modified files in Google Drive
 get('/drive') do
-  drive = Google::Apis::DriveV3::DriveService.new
-  drive.authorization = credentials_for(Google::Apis::DriveV3::AUTH_DRIVE)
+  drive = GoogleAPI::Apis::DriveV3::DriveService.new
+  drive.authorization = credentials_for(GoogleAPI::Apis::DriveV3::AUTH_DRIVE)
   @result = drive.list_files(page_size: 10,
                              fields: 'files(name,modified_time,web_view_link),next_page_token')
   erb :drive
@@ -91,8 +91,8 @@ end
 
 # Retrieve the next 10 upcoming events from Google Calendar
 get('/calendar') do
-  calendar = Google::Apis::CalendarV3::CalendarService.new
-  calendar.authorization = credentials_for(Google::Apis::CalendarV3::AUTH_CALENDAR)
+  calendar = GoogleAPI::Apis::CalendarV3::CalendarService.new
+  calendar.authorization = credentials_for(GoogleAPI::Apis::CalendarV3::AUTH_CALENDAR)
   calendar_id = 'primary'
   @result = calendar.list_events(calendar_id,
                                  max_results: 10,
@@ -115,6 +115,6 @@ end
 # Disabling show_exceptions or using a different session provider (E.g. Rack::Session::Memcache)
 # avoids the issue.
 get('/oauth2callback') do
-  target_url = Google::Auth::WebUserAuthorizer.handle_auth_callback_deferred(request)
+  target_url = GoogleAPI::Auth::WebUserAuthorizer.handle_auth_callback_deferred(request)
   redirect target_url
 end

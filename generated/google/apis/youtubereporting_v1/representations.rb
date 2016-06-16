@@ -18,69 +18,69 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module YoutubereportingV1
       
       class Media
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListReportTypesResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ReportType
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Job
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListJobsResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Empty
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListReportsResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Report
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class Media
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :resource_name, as: 'resourceName'
         end
       end
       
       class ListReportTypesResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :report_types, as: 'reportTypes', class: Google::Apis::YoutubereportingV1::ReportType, decorator: Google::Apis::YoutubereportingV1::ReportType::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :report_types, as: 'reportTypes', class: GoogleAPI::Apis::YoutubereportingV1::ReportType, decorator: GoogleAPI::Apis::YoutubereportingV1::ReportType::Representation
       
           property :next_page_token, as: 'nextPageToken'
         end
@@ -88,7 +88,7 @@ module Google
       
       class ReportType
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
           property :name, as: 'name'
           property :deprecate_time, as: 'deprecateTime'
@@ -98,7 +98,7 @@ module Google
       
       class Job
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
           property :report_type_id, as: 'reportTypeId'
           property :name, as: 'name'
@@ -110,8 +110,8 @@ module Google
       
       class ListJobsResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :jobs, as: 'jobs', class: Google::Apis::YoutubereportingV1::Job, decorator: Google::Apis::YoutubereportingV1::Job::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :jobs, as: 'jobs', class: GoogleAPI::Apis::YoutubereportingV1::Job, decorator: GoogleAPI::Apis::YoutubereportingV1::Job::Representation
       
           property :next_page_token, as: 'nextPageToken'
         end
@@ -119,14 +119,14 @@ module Google
       
       class Empty
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
         end
       end
       
       class ListReportsResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :reports, as: 'reports', class: Google::Apis::YoutubereportingV1::Report, decorator: Google::Apis::YoutubereportingV1::Report::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :reports, as: 'reports', class: GoogleAPI::Apis::YoutubereportingV1::Report, decorator: GoogleAPI::Apis::YoutubereportingV1::Report::Representation
       
           property :next_page_token, as: 'nextPageToken'
         end
@@ -134,7 +134,7 @@ module Google
       
       class Report
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :id, as: 'id'
           property :job_id, as: 'jobId'
           property :job_expire_time, as: 'jobExpireTime'

@@ -17,25 +17,25 @@ require 'google/apis/core/batch'
 require 'google/apis/core/json_representation'
 require 'hurley/test'
 
-RSpec.describe Google::Apis::Core::BatchCommand do
+RSpec.describe GoogleAPI::Apis::Core::BatchCommand do
   include TestHelpers
   include_context 'HTTP client'
 
   let(:command) do
-    command = Google::Apis::Core::BatchCommand.new(:post, 'https://www.googleapis.com/batch')
+    command = GoogleAPI::Apis::Core::BatchCommand.new(:post, 'https://www.googleapis.com/batch')
   end
 
-  let(:get_command) { Google::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals/1') }
+  let(:get_command) { GoogleAPI::Apis::Core::HttpCommand.new(:get, 'https://www.googleapis.com/zoo/animals/1') }
 
   let(:post_with_string_command) do
-    command = Google::Apis::Core::HttpCommand.new(:post, 'https://www.googleapis.com/zoo/animals/2')
+    command = GoogleAPI::Apis::Core::HttpCommand.new(:post, 'https://www.googleapis.com/zoo/animals/2')
     command.body = 'Hello world'
     command.header[:content_type] = 'text/plain'
     command
   end
 
   let(:post_with_io_command) do
-    command = Google::Apis::Core::HttpCommand.new(:post, 'https://www.googleapis.com/zoo/animals/3')
+    command = GoogleAPI::Apis::Core::HttpCommand.new(:post, 'https://www.googleapis.com/zoo/animals/3')
     command.body = StringIO.new('Goodbye!')
     command.header[:content_type] = 'text/plain'
     command
@@ -133,10 +133,10 @@ EOF
         b.to_proc.call(3, res, err)
       end
       command.execute(client)
-    end.to yield_successive_args([1, 'Hello', nil], [3, nil, an_instance_of(Google::Apis::ServerError)], [2, 'world', nil],)
+    end.to yield_successive_args([1, 'Hello', nil], [3, nil, an_instance_of(GoogleAPI::Apis::ServerError)], [2, 'world', nil],)
   end
 
   it 'should raise error if batch is empty' do
-    expect { command.execute(client) }.to raise_error(Google::Apis::BatchError)
+    expect { command.execute(client) }.to raise_error(GoogleAPI::Apis::BatchError)
   end
 end

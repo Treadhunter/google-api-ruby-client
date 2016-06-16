@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ScriptV1
       # Google Apps Script Execution API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/script_v1'
       #
-      #    Script = Google::Apis::ScriptV1 # Alias the module
+      #    Script = GoogleAPI::Apis::ScriptV1 # Alias the module
       #    service = Script::ScriptService.new
       #
       # @see https://developers.google.com/apps-script/execution/rest/v1/scripts/run
-      class ScriptService < Google::Apis::Core::BaseService
+      class ScriptService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -56,30 +56,30 @@ module Google
         # @param [String] script_id
         #   The project key of the script to be executed. To find the project key, open
         #   the project in the script editor, then select **File > Project properties**.
-        # @param [Google::Apis::ScriptV1::ExecutionRequest] execution_request_object
+        # @param [GoogleAPI::Apis::ScriptV1::ExecutionRequest] execution_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::ScriptV1::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::ScriptV1::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::ScriptV1::Operation]
+        # @return [GoogleAPI::Apis::ScriptV1::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def run_script(script_id, execution_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/scripts/{scriptId}:run', options)
-          command.request_representation = Google::Apis::ScriptV1::ExecutionRequest::Representation
+          command.request_representation = GoogleAPI::Apis::ScriptV1::ExecutionRequest::Representation
           command.request_object = execution_request_object
-          command.response_representation = Google::Apis::ScriptV1::Operation::Representation
-          command.response_class = Google::Apis::ScriptV1::Operation
+          command.response_representation = GoogleAPI::Apis::ScriptV1::Operation::Representation
+          command.response_class = GoogleAPI::Apis::ScriptV1::Operation
           command.params['scriptId'] = script_id unless script_id.nil?
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?

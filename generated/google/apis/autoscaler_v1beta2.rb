@@ -16,7 +16,7 @@ require 'google/apis/autoscaler_v1beta2/service.rb'
 require 'google/apis/autoscaler_v1beta2/classes.rb'
 require 'google/apis/autoscaler_v1beta2/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Google Compute Engine Autoscaler API
     #

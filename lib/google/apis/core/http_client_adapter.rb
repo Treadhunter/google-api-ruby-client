@@ -2,7 +2,7 @@ require 'httpclient'
 require 'hurley'
 require 'hurley/client'
 
-module Google
+module GoogleAPI
   module Apis
     module Core
       # HTTPClient adapter for Hurley.

@@ -18,14 +18,14 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module MonitoringV3
       
       # A specific metric identified by specifying values for all of the
       # labels of a `MetricDescriptor`.
       class Metric
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The set of labels that uniquely identify a metric. To specify a
         # metric, all labels enumerated in the `MetricDescriptor` must be
@@ -53,11 +53,11 @@ module Google
       
       # The `ListGroupMembers` response.
       class ListGroupMembersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A set of monitored resources in the group.
         # Corresponds to the JSON property `members`
-        # @return [Array<Google::Apis::MonitoringV3::MonitoredResource>]
+        # @return [Array<GoogleAPI::Apis::MonitoringV3::MonitoredResource>]
         attr_accessor :members
       
         # If there are more results than have been returned, then this field is
@@ -87,7 +87,7 @@ module Google
       # A time interval extending from after `startTime` through `endTime`.  If
       # `startTime` is omitted, the interval is the single point in time, `endTime`.
       class TimeInterval
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Required. The end of the interval. The interval includes this
         # time.
@@ -138,7 +138,7 @@ module Google
       # depending on what resources exist and what filters are associated with the
       # group and its ancestors.
       class Group
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A user-assigned name for this group, used only for display purposes.
         # Corresponds to the JSON property `displayName`
@@ -191,11 +191,11 @@ module Google
       
       # The `ListTimeSeries` response.
       class ListTimeSeriesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # One or more time series that match the filter included in the request.
         # Corresponds to the JSON property `timeSeries`
-        # @return [Array<Google::Apis::MonitoringV3::TimeSeries>]
+        # @return [Array<GoogleAPI::Apis::MonitoringV3::TimeSeries>]
         attr_accessor :time_series
       
         # If there are more results than have been returned, then this field is set
@@ -218,17 +218,17 @@ module Google
       
       # A single data point in a time series.
       class Point
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A single strongly-typed value.
         # Corresponds to the JSON property `value`
-        # @return [Google::Apis::MonitoringV3::TypedValue]
+        # @return [GoogleAPI::Apis::MonitoringV3::TypedValue]
         attr_accessor :value
       
         # A time interval extending from after `startTime` through `endTime`.  If
         # `startTime` is omitted, the interval is the single point in time, `endTime`.
         # Corresponds to the JSON property `interval`
-        # @return [Google::Apis::MonitoringV3::TimeInterval]
+        # @return [GoogleAPI::Apis::MonitoringV3::TimeInterval]
         attr_accessor :interval
       
         def initialize(**args)
@@ -244,11 +244,11 @@ module Google
       
       # A single data point from a `collectd`-based plugin.
       class CollectdValue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A single strongly-typed value.
         # Corresponds to the JSON property `value`
-        # @return [Google::Apis::MonitoringV3::TypedValue]
+        # @return [GoogleAPI::Apis::MonitoringV3::TypedValue]
         attr_accessor :value
       
         # The data source for the `collectd` value. For example there are
@@ -278,19 +278,19 @@ module Google
       # of a metric. A time series is identified by a combination of a
       # fully-specified monitored resource and a fully-specified metric.
       class TimeSeries
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A specific metric identified by specifying values for all of the
         # labels of a `MetricDescriptor`.
         # Corresponds to the JSON property `metric`
-        # @return [Google::Apis::MonitoringV3::Metric]
+        # @return [GoogleAPI::Apis::MonitoringV3::Metric]
         attr_accessor :metric
       
         # The data points of this time series. When used as output, points will be
         # sorted by decreasing time order. When used as input, points could be
         # written in any orders.
         # Corresponds to the JSON property `points`
-        # @return [Array<Google::Apis::MonitoringV3::Point>]
+        # @return [Array<GoogleAPI::Apis::MonitoringV3::Point>]
         attr_accessor :points
       
         # The value type of the time series. This can be different than the value
@@ -315,7 +315,7 @@ module Google
         # "labels": ` "instance_id": "my-instance",
         # "zone": "us-central1-a" ``
         # Corresponds to the JSON property `resource`
-        # @return [Google::Apis::MonitoringV3::MonitoredResource]
+        # @return [GoogleAPI::Apis::MonitoringV3::MonitoredResource]
         attr_accessor :resource
       
         # The metric kind of the time series. This can be different than the metric
@@ -343,7 +343,7 @@ module Google
       
       # Defines a metric type and its schema.
       class MetricDescriptor
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A detailed description of the metric, which can be used in documentation.
         # Corresponds to the JSON property `description`
@@ -410,7 +410,7 @@ module Google
         # has a label, `loadbalanced`, that specifies whether the traffic was
         # received through a load balanced IP address.
         # Corresponds to the JSON property `labels`
-        # @return [Array<Google::Apis::MonitoringV3::LabelDescriptor>]
+        # @return [Array<GoogleAPI::Apis::MonitoringV3::LabelDescriptor>]
         attr_accessor :labels
       
         # Whether the metric records instantaneous values, changes to a value, etc.
@@ -476,7 +476,7 @@ module Google
       # Upper bound (0 <= i < N-1):     scale * (growth_factor ^ i).
       # Lower bound (1 <= i < N):       scale * (growth_factor ^ (i - 1)).
       class Exponential
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Must be greater than 1
         # Corresponds to the JSON property `growthFactor`
@@ -514,7 +514,7 @@ module Google
       # element, there are no finite buckets, and that single element is the
       # common boundary of the overflow and underflow buckets.
       class Explicit
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The values must be monotonically increasing.
         # Corresponds to the JSON property `bounds`
@@ -539,7 +539,7 @@ module Google
       # Upper bound (0 <= i < N-1):     offset + (width * i).
       # Lower bound (1 <= i < N):       offset + (width * (i - 1)).
       class Linear
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Must be greater than 0.
         # Corresponds to the JSON property `width`
@@ -571,7 +571,7 @@ module Google
       # A collection of data points sent from a `collectd`-based plugin.
       # See the `collectd` documentation for more information.
       class CollectdPayload
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The end time of the interval.
         # Corresponds to the JSON property `endTime`
@@ -580,13 +580,13 @@ module Google
       
         # The measurement metadata. Example: `"process_id" -> 12345`
         # Corresponds to the JSON property `metadata`
-        # @return [Hash<String,Google::Apis::MonitoringV3::TypedValue>]
+        # @return [Hash<String,GoogleAPI::Apis::MonitoringV3::TypedValue>]
         attr_accessor :metadata
       
         # The measured values during this time interval.
         # Each value must have a different `dataSourceName`.
         # Corresponds to the JSON property `values`
-        # @return [Array<Google::Apis::MonitoringV3::CollectdValue>]
+        # @return [Array<GoogleAPI::Apis::MonitoringV3::CollectdValue>]
         attr_accessor :values
       
         # The instance name of the plugin Example: `"hdcl"`.
@@ -633,12 +633,12 @@ module Google
       
       # The `ListMetricDescriptors` response.
       class ListMetricDescriptorsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The metric descriptors that are available to the project
         # and that match the value of `filter`, if present.
         # Corresponds to the JSON property `metricDescriptors`
-        # @return [Array<Google::Apis::MonitoringV3::MetricDescriptor>]
+        # @return [Array<GoogleAPI::Apis::MonitoringV3::MetricDescriptor>]
         attr_accessor :metric_descriptors
       
         # If there are more results than have been returned, then this field is set
@@ -672,7 +672,7 @@ module Google
       # non-finite values (infinities or NaNs) in the population of values, as this
       # will render the `mean` and `sum_of_squared_deviation` fields meaningless.
       class Distribution
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If `bucket_options` is given, then the sum of the values in `bucket_counts`
         # must equal the value in `count`.  If `bucket_options` is not given, no
@@ -707,7 +707,7 @@ module Google
         # boundaries and one gives the bucket boundaries explicitly.
         # If `bucket_boundaries` is not given, then no `bucket_counts` may be given.
         # Corresponds to the JSON property `bucketOptions`
-        # @return [Google::Apis::MonitoringV3::BucketOptions]
+        # @return [GoogleAPI::Apis::MonitoringV3::BucketOptions]
         attr_accessor :bucket_options
       
         # The number of values in the population. Must be non-negative.
@@ -733,14 +733,14 @@ module Google
       
         # The range of the population values.
         # Corresponds to the JSON property `range`
-        # @return [Google::Apis::MonitoringV3::Range]
+        # @return [GoogleAPI::Apis::MonitoringV3::Range]
         attr_accessor :range
       
         # Must be in increasing order of |value| field.  The current requirement
         # enforced by the backend is that at most one Exemplar will fall into any
         # bucket.
         # Corresponds to the JSON property `exemplars`
-        # @return [Array<Google::Apis::MonitoringV3::Exemplar>]
+        # @return [Array<GoogleAPI::Apis::MonitoringV3::Exemplar>]
         attr_accessor :exemplars
       
         def initialize(**args)
@@ -772,7 +772,7 @@ module Google
       # "labels": ` "instance_id": "my-instance",
       # "zone": "us-central1-a" ``
       class MonitoredResource
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Required. Values for all of the labels listed in the associated monitored
         # resource descriptor. For example, Cloud SQL databases use the labels
@@ -801,7 +801,7 @@ module Google
       
       # A description of a label.
       class LabelDescriptor
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A human-readable description for the label.
         # Corresponds to the JSON property `description`
@@ -839,7 +839,7 @@ module Google
       # provide a `list` method that returns the monitored resource descriptors used
       # by the API.
       class MonitoredResourceDescriptor
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Optional. A concise name for the monitored resource type that might be
         # displayed in user interfaces. For example, `"Google Cloud SQL Database"`.
@@ -857,7 +857,7 @@ module Google
         # resource type. For example, an individual Google Cloud SQL database is
         # identified by values for the labels `"database_id"` and `"zone"`.
         # Corresponds to the JSON property `labels`
-        # @return [Array<Google::Apis::MonitoringV3::LabelDescriptor>]
+        # @return [Array<GoogleAPI::Apis::MonitoringV3::LabelDescriptor>]
         attr_accessor :labels
       
         # Required. The monitored resource type. For example, the type
@@ -892,7 +892,7 @@ module Google
       
       # A single strongly-typed value.
       class TypedValue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A Boolean value: `true` or `false`.
         # Corresponds to the JSON property `boolValue`
@@ -930,7 +930,7 @@ module Google
         # non-finite values (infinities or NaNs) in the population of values, as this
         # will render the `mean` and `sum_of_squared_deviation` fields meaningless.
         # Corresponds to the JSON property `distributionValue`
-        # @return [Google::Apis::MonitoringV3::Distribution]
+        # @return [GoogleAPI::Apis::MonitoringV3::Distribution]
         attr_accessor :distribution_value
       
         def initialize(**args)
@@ -949,7 +949,7 @@ module Google
       
       # The `ListMonitoredResourcDescriptors` response.
       class ListMonitoredResourceDescriptorsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If there are more results than have been returned, then this field is set
         # to a non-empty value.  To see the additional results,
@@ -961,7 +961,7 @@ module Google
         # The monitored resource descriptors that are available to this project
         # and that match `filter`, if present.
         # Corresponds to the JSON property `resourceDescriptors`
-        # @return [Array<Google::Apis::MonitoringV3::MonitoredResourceDescriptor>]
+        # @return [Array<GoogleAPI::Apis::MonitoringV3::MonitoredResourceDescriptor>]
         attr_accessor :resource_descriptors
       
         def initialize(**args)
@@ -977,7 +977,7 @@ module Google
       
       # A single field of a message type.
       class Field
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The string value of the default value of this field. Proto2 syntax only.
         # Corresponds to the JSON property `defaultValue`
@@ -991,7 +991,7 @@ module Google
       
         # The protocol buffer options.
         # Corresponds to the JSON property `options`
-        # @return [Array<Google::Apis::MonitoringV3::Option>]
+        # @return [Array<GoogleAPI::Apis::MonitoringV3::Option>]
         attr_accessor :options
       
         # The index of the field type in `Type.oneofs`, for message or enumeration
@@ -1054,7 +1054,7 @@ module Google
       # A protocol buffer option, which can be attached to a message, field,
       # enumeration, etc.
       class Option
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The option's value. For example, `"com.google.protobuf"`.
         # Corresponds to the JSON property `value`
@@ -1085,7 +1085,7 @@ module Google
       # `
       # The JSON representation for `Empty` is empty JSON object ````.
       class Empty
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -1099,7 +1099,7 @@ module Google
       # `SourceContext` represents information about the source of a
       # protobuf element, like the file in which it is defined.
       class SourceContext
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The path-qualified name of the .proto file that contained the associated
         # protobuf element.  For example: `"google/protobuf/source.proto"`.
@@ -1119,7 +1119,7 @@ module Google
       
       # The range of the population values.
       class Range
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The maximum of the population values.
         # Corresponds to the JSON property `max`
@@ -1144,7 +1144,7 @@ module Google
       
       # The `CreateTimeSeries` request.
       class CreateTimeSeriesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The new data to be added to a list of time series.
         # Adds at most one data point to each of several time series.  The new data
@@ -1152,7 +1152,7 @@ module Google
         # `TimeSeries` value must fully specify a unique time series by supplying
         # all label values for the metric and the monitored resource.
         # Corresponds to the JSON property `timeSeries`
-        # @return [Array<Google::Apis::MonitoringV3::TimeSeries>]
+        # @return [Array<GoogleAPI::Apis::MonitoringV3::TimeSeries>]
         attr_accessor :time_series
       
         def initialize(**args)
@@ -1185,7 +1185,7 @@ module Google
       # boundaries and one gives the bucket boundaries explicitly.
       # If `bucket_boundaries` is not given, then no `bucket_counts` may be given.
       class BucketOptions
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A set of buckets with arbitrary widths.
         # Defines `size(bounds) + 1` (= N) buckets with these boundaries for
@@ -1196,7 +1196,7 @@ module Google
         # element, there are no finite buckets, and that single element is the
         # common boundary of the overflow and underflow buckets.
         # Corresponds to the JSON property `explicitBuckets`
-        # @return [Google::Apis::MonitoringV3::Explicit]
+        # @return [GoogleAPI::Apis::MonitoringV3::Explicit]
         attr_accessor :explicit_buckets
       
         # Specify a sequence of buckets that have a width that is proportional to
@@ -1207,7 +1207,7 @@ module Google
         # Upper bound (0 <= i < N-1):     scale * (growth_factor ^ i).
         # Lower bound (1 <= i < N):       scale * (growth_factor ^ (i - 1)).
         # Corresponds to the JSON property `exponentialBuckets`
-        # @return [Google::Apis::MonitoringV3::Exponential]
+        # @return [GoogleAPI::Apis::MonitoringV3::Exponential]
         attr_accessor :exponential_buckets
       
         # Specify a sequence of buckets that all have the same width (except
@@ -1218,7 +1218,7 @@ module Google
         # Upper bound (0 <= i < N-1):     offset + (width * i).
         # Lower bound (1 <= i < N):       offset + (width * (i - 1)).
         # Corresponds to the JSON property `linearBuckets`
-        # @return [Google::Apis::MonitoringV3::Linear]
+        # @return [GoogleAPI::Apis::MonitoringV3::Linear]
         attr_accessor :linear_buckets
       
         def initialize(**args)
@@ -1235,14 +1235,14 @@ module Google
       
       # The `CreateCollectdTimeSeries` request.
       class CreateCollectdTimeSeriesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The `collectd` payloads representing the time series data.
         # You must not include more than a single point for each
         # time series, so no two payloads can have the same values
         # for all of the fields `plugin`, `plugin_instance`, `type`, and `type_instance`.
         # Corresponds to the JSON property `collectdPayloads`
-        # @return [Array<Google::Apis::MonitoringV3::CollectdPayload>]
+        # @return [Array<GoogleAPI::Apis::MonitoringV3::CollectdPayload>]
         attr_accessor :collectd_payloads
       
         # The version of `collectd` that collected the data. Example: `"5.3.0-192.el6"`.
@@ -1263,7 +1263,7 @@ module Google
         # "labels": ` "instance_id": "my-instance",
         # "zone": "us-central1-a" ``
         # Corresponds to the JSON property `resource`
-        # @return [Google::Apis::MonitoringV3::MonitoredResource]
+        # @return [GoogleAPI::Apis::MonitoringV3::MonitoredResource]
         attr_accessor :resource
       
         def initialize(**args)
@@ -1280,7 +1280,7 @@ module Google
       
       # A protocol buffer message type.
       class Type
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of types appearing in `oneof` definitions in this type.
         # Corresponds to the JSON property `oneofs`
@@ -1289,18 +1289,18 @@ module Google
       
         # The protocol buffer options.
         # Corresponds to the JSON property `options`
-        # @return [Array<Google::Apis::MonitoringV3::Option>]
+        # @return [Array<GoogleAPI::Apis::MonitoringV3::Option>]
         attr_accessor :options
       
         # `SourceContext` represents information about the source of a
         # protobuf element, like the file in which it is defined.
         # Corresponds to the JSON property `sourceContext`
-        # @return [Google::Apis::MonitoringV3::SourceContext]
+        # @return [GoogleAPI::Apis::MonitoringV3::SourceContext]
         attr_accessor :source_context
       
         # The list of fields.
         # Corresponds to the JSON property `fields`
-        # @return [Array<Google::Apis::MonitoringV3::Field>]
+        # @return [Array<GoogleAPI::Apis::MonitoringV3::Field>]
         attr_accessor :fields
       
         # The fully qualified message name.
@@ -1337,7 +1337,7 @@ module Google
       # The purpose of including it here is to be able to construct demos and
       # prototypes for the purposes of eludicating use cases.
       class Exemplar
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Value of the exemplar point.  This value determines to which bucket the
         # exemplar belongs.
@@ -1375,11 +1375,11 @@ module Google
       
       # The `ListGroups` response.
       class ListGroupsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The groups that match the specified filters.
         # Corresponds to the JSON property `group`
-        # @return [Array<Google::Apis::MonitoringV3::Group>]
+        # @return [Array<GoogleAPI::Apis::MonitoringV3::Group>]
         attr_accessor :group
       
         # If there are more results than have been returned, then this field is set

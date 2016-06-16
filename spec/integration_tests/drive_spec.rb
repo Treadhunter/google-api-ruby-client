@@ -3,14 +3,14 @@ require 'google/apis/drive_v2'
 require 'googleauth'
 require 'fileutils'
 
-Drive = Google::Apis::DriveV2
+Drive = GoogleAPI::Apis::DriveV2
 
-RSpec.describe Google::Apis::DriveV2, :if => run_integration_tests? do
+RSpec.describe GoogleAPI::Apis::DriveV2, :if => run_integration_tests? do
 
   before(:context) do
     WebMock.allow_net_connect!
     @drive = Drive::DriveService.new
-    @drive.authorization = Google::Auth.get_application_default([Drive::AUTH_DRIVE])
+    @drive.authorization = GoogleAPI::Auth.get_application_default([Drive::AUTH_DRIVE])
   end
 
   it 'should upload and download files' do

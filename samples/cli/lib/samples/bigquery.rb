@@ -25,7 +25,7 @@ module Samples
   #     $ ./google-api-samples bigquery list_tables --project_id=publicdata --dataset_id=samples
   #     $ ./google-api-samples bigquery list_table_data --project_id=publicdata --dataset_id=samples --table_id=wikipedia --max_results=10
   class Bigquery < BaseCli
-    Bigquery = Google::Apis::BigqueryV2
+    Bigquery = GoogleAPI::Apis::BigqueryV2
 
     desc 'list datasets', 'List datasets'
     method_option :project_id, type: :string

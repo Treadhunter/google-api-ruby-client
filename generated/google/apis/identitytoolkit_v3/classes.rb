@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module IdentitytoolkitV3
       
       # Response of creating the IDP authentication URL.
       class CreateAuthUriResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # all providers the user has once used to do federated login
         # Corresponds to the JSON property `allProviders`
@@ -88,7 +88,7 @@ module Google
       
       # Respone of deleting account.
       class DeleteAccountResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The fixed string "identitytoolkit#DeleteAccountResponse".
         # Corresponds to the JSON property `kind`
@@ -107,7 +107,7 @@ module Google
       
       # Respone of downloading accounts in batch.
       class DownloadAccountResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The fixed string "identitytoolkit#DownloadAccountResponse".
         # Corresponds to the JSON property `kind`
@@ -122,7 +122,7 @@ module Google
       
         # The user accounts data.
         # Corresponds to the JSON property `users`
-        # @return [Array<Google::Apis::IdentitytoolkitV3::UserInfo>]
+        # @return [Array<GoogleAPI::Apis::IdentitytoolkitV3::UserInfo>]
         attr_accessor :users
       
         def initialize(**args)
@@ -139,7 +139,7 @@ module Google
       
       # Template for an email template.
       class EmailTemplate
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Email body.
         # Corresponds to the JSON property `body`
@@ -188,7 +188,7 @@ module Google
       
       # Response of getting account information.
       class GetAccountInfoResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The fixed string "identitytoolkit#GetAccountInfoResponse".
         # Corresponds to the JSON property `kind`
@@ -197,7 +197,7 @@ module Google
       
         # The info of the users.
         # Corresponds to the JSON property `users`
-        # @return [Array<Google::Apis::IdentitytoolkitV3::UserInfo>]
+        # @return [Array<GoogleAPI::Apis::IdentitytoolkitV3::UserInfo>]
         attr_accessor :users
       
         def initialize(**args)
@@ -214,7 +214,7 @@ module Google
       # Response of getting a code for user confirmation (reset password, change email
       # etc.).
       class GetOobConfirmationCodeResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The email address that the email is sent to.
         # Corresponds to the JSON property `email`
@@ -245,7 +245,7 @@ module Google
       
       # Response of getting recaptcha param.
       class GetRecaptchaParamResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The fixed string "identitytoolkit#GetRecaptchaParamResponse".
         # Corresponds to the JSON property `kind`
@@ -276,7 +276,7 @@ module Google
       
       # Request to get the IDP authentication URL.
       class CreateAuthUriRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The app ID of the mobile app, base64(CERT_SHA1):PACKAGE_NAME for Android,
         # BUNDLE_ID for iOS.
@@ -354,7 +354,7 @@ module Google
       
       # Request to delete account.
       class DeleteAccountRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # GCP project number of the requesting delegated app. Currently only intended
         # for Firebase V1 migration.
@@ -386,7 +386,7 @@ module Google
       
       # Request to download user account in batch.
       class DownloadAccountRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # GCP project number of the requesting delegated app. Currently only intended
         # for Firebase V1 migration.
@@ -418,7 +418,7 @@ module Google
       
       # Request to get the account information.
       class GetAccountInfoRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # GCP project number of the requesting delegated app. Currently only intended
         # for Firebase V1 migration.
@@ -456,7 +456,7 @@ module Google
       
       # Response of getting the project configuration.
       class GetProjectConfigResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether to allow password user sign in or sign up.
         # Corresponds to the JSON property `allowPasswordUser`
@@ -476,7 +476,7 @@ module Google
       
         # Template for an email template.
         # Corresponds to the JSON property `changeEmailTemplate`
-        # @return [Google::Apis::IdentitytoolkitV3::EmailTemplate]
+        # @return [GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate]
         attr_accessor :change_email_template
       
         # Whether anonymous user is enabled.
@@ -487,12 +487,12 @@ module Google
       
         # OAuth2 provider configuration.
         # Corresponds to the JSON property `idpConfig`
-        # @return [Array<Google::Apis::IdentitytoolkitV3::IdpConfig>]
+        # @return [Array<GoogleAPI::Apis::IdentitytoolkitV3::IdpConfig>]
         attr_accessor :idp_config
       
         # Template for an email template.
         # Corresponds to the JSON property `legacyResetPasswordTemplate`
-        # @return [Google::Apis::IdentitytoolkitV3::EmailTemplate]
+        # @return [GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate]
         attr_accessor :legacy_reset_password_template
       
         # Project ID of the relying party.
@@ -502,7 +502,7 @@ module Google
       
         # Template for an email template.
         # Corresponds to the JSON property `resetPasswordTemplate`
-        # @return [Google::Apis::IdentitytoolkitV3::EmailTemplate]
+        # @return [GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate]
         attr_accessor :reset_password_template
       
         # Whether to use email sending provided by Firebear.
@@ -513,7 +513,7 @@ module Google
       
         # Template for an email template.
         # Corresponds to the JSON property `verifyEmailTemplate`
-        # @return [Google::Apis::IdentitytoolkitV3::EmailTemplate]
+        # @return [GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate]
         attr_accessor :verify_email_template
       
         def initialize(**args)
@@ -538,7 +538,7 @@ module Google
       
       # Request to reset the password.
       class ResetPasswordRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The email address of the user.
         # Corresponds to the JSON property `email`
@@ -575,7 +575,7 @@ module Google
       
       # Request to set the account information.
       class SetAccountInfoRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The captcha challenge.
         # Corresponds to the JSON property `captchaChallenge`
@@ -719,7 +719,7 @@ module Google
       
       # Request to set the project configuration.
       class SetProjectConfigRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether to allow password user sign in or sign up.
         # Corresponds to the JSON property `allowPasswordUser`
@@ -739,7 +739,7 @@ module Google
       
         # Template for an email template.
         # Corresponds to the JSON property `changeEmailTemplate`
-        # @return [Google::Apis::IdentitytoolkitV3::EmailTemplate]
+        # @return [GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate]
         attr_accessor :change_email_template
       
         # GCP project number of the requesting delegated app. Currently only intended
@@ -756,17 +756,17 @@ module Google
       
         # Oauth2 provider configuration.
         # Corresponds to the JSON property `idpConfig`
-        # @return [Array<Google::Apis::IdentitytoolkitV3::IdpConfig>]
+        # @return [Array<GoogleAPI::Apis::IdentitytoolkitV3::IdpConfig>]
         attr_accessor :idp_config
       
         # Template for an email template.
         # Corresponds to the JSON property `legacyResetPasswordTemplate`
-        # @return [Google::Apis::IdentitytoolkitV3::EmailTemplate]
+        # @return [GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate]
         attr_accessor :legacy_reset_password_template
       
         # Template for an email template.
         # Corresponds to the JSON property `resetPasswordTemplate`
-        # @return [Google::Apis::IdentitytoolkitV3::EmailTemplate]
+        # @return [GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate]
         attr_accessor :reset_password_template
       
         # Whether to use email sending provided by Firebear.
@@ -777,7 +777,7 @@ module Google
       
         # Template for an email template.
         # Corresponds to the JSON property `verifyEmailTemplate`
-        # @return [Google::Apis::IdentitytoolkitV3::EmailTemplate]
+        # @return [GoogleAPI::Apis::IdentitytoolkitV3::EmailTemplate]
         attr_accessor :verify_email_template
       
         def initialize(**args)
@@ -802,7 +802,7 @@ module Google
       
       # Response of setting the project configuration.
       class IdentitytoolkitRelyingpartySetProjectConfigResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Project ID of the relying party.
         # Corresponds to the JSON property `projectId`
@@ -821,7 +821,7 @@ module Google
       
       # Request to sign out user.
       class SignOutUserRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Instance id token of the app.
         # Corresponds to the JSON property `instanceId`
@@ -846,7 +846,7 @@ module Google
       
       # Response of signing out user.
       class SignOutUserResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The local ID of the user.
         # Corresponds to the JSON property `localId`
@@ -865,7 +865,7 @@ module Google
       
       # Request to signup new user, create anonymous user or anonymous user reauth.
       class SignupNewUserRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The captcha challenge.
         # Corresponds to the JSON property `captchaChallenge`
@@ -920,7 +920,7 @@ module Google
       
       # Request to upload user account in batch.
       class UploadAccountRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # GCP project number of the requesting delegated app. Currently only intended
         # for Firebase V1 migration.
@@ -955,7 +955,7 @@ module Google
       
         # The account info to be stored.
         # Corresponds to the JSON property `users`
-        # @return [Array<Google::Apis::IdentitytoolkitV3::UserInfo>]
+        # @return [Array<GoogleAPI::Apis::IdentitytoolkitV3::UserInfo>]
         attr_accessor :users
       
         def initialize(**args)
@@ -976,7 +976,7 @@ module Google
       
       # Request to verify the IDP assertion.
       class VerifyAssertionRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # GCP project number of the requesting delegated app. Currently only intended
         # for Firebase V1 migration.
@@ -1047,7 +1047,7 @@ module Google
       
       # Request to verify a custom token
       class VerifyCustomTokenRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # GCP project number of the requesting delegated app. Currently only intended
         # for Firebase V1 migration.
@@ -1086,7 +1086,7 @@ module Google
       
       # Request to verify the password.
       class VerifyPasswordRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The captcha challenge.
         # Corresponds to the JSON property `captchaChallenge`
@@ -1155,7 +1155,7 @@ module Google
       
       # Template for a single idp configuration.
       class IdpConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # OAuth2 client ID.
         # Corresponds to the JSON property `clientId`
@@ -1206,7 +1206,7 @@ module Google
       # Request of getting a code for user confirmation (reset password, change email
       # etc.)
       class Relyingparty
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The recaptcha response from the user.
         # Corresponds to the JSON property `captchaResp`
@@ -1267,7 +1267,7 @@ module Google
       
       # Response of resetting the password.
       class ResetPasswordResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The user's email.
         # Corresponds to the JSON property `email`
@@ -1292,7 +1292,7 @@ module Google
       
       # Respone of setting the account information.
       class SetAccountInfoResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the user.
         # Corresponds to the JSON property `displayName`
@@ -1342,7 +1342,7 @@ module Google
       
         # The user's profiles at the associated IdPs.
         # Corresponds to the JSON property `providerUserInfo`
-        # @return [Array<Google::Apis::IdentitytoolkitV3::SetAccountInfoResponse::ProviderUserInfo>]
+        # @return [Array<GoogleAPI::Apis::IdentitytoolkitV3::SetAccountInfoResponse::ProviderUserInfo>]
         attr_accessor :provider_user_info
       
         # If idToken is STS id token, then this field will be refresh token.
@@ -1371,7 +1371,7 @@ module Google
         
         # 
         class ProviderUserInfo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The user's display name at the IDP.
           # Corresponds to the JSON property `displayName`
@@ -1411,7 +1411,7 @@ module Google
       # Response of signing up new user, creating anonymous user or anonymous user
       # reauth.
       class SignupNewUserResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the user.
         # Corresponds to the JSON property `displayName`
@@ -1467,11 +1467,11 @@ module Google
       
       # Respone of uploading accounts in batch.
       class UploadAccountResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The error encountered while processing the account info.
         # Corresponds to the JSON property `error`
-        # @return [Array<Google::Apis::IdentitytoolkitV3::UploadAccountResponse::Error>]
+        # @return [Array<GoogleAPI::Apis::IdentitytoolkitV3::UploadAccountResponse::Error>]
         attr_accessor :error
       
         # The fixed string "identitytoolkit#UploadAccountResponse".
@@ -1491,7 +1491,7 @@ module Google
         
         # 
         class Error
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The index of the malformed account, starting from 0.
           # Corresponds to the JSON property `index`
@@ -1517,7 +1517,7 @@ module Google
       
       # Template for an individual account info.
       class UserInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # User creation timestamp.
         # Corresponds to the JSON property `createdAt`
@@ -1573,7 +1573,7 @@ module Google
       
         # The IDP of the user.
         # Corresponds to the JSON property `providerUserInfo`
-        # @return [Array<Google::Apis::IdentitytoolkitV3::UserInfo::ProviderUserInfo>]
+        # @return [Array<GoogleAPI::Apis::IdentitytoolkitV3::UserInfo::ProviderUserInfo>]
         attr_accessor :provider_user_info
       
         # The user's password salt.
@@ -1615,7 +1615,7 @@ module Google
         
         # 
         class ProviderUserInfo
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The user's display name at the IDP.
           # Corresponds to the JSON property `displayName`
@@ -1666,7 +1666,7 @@ module Google
       
       # Response of verifying the IDP assertion.
       class VerifyAssertionResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The action code.
         # Corresponds to the JSON property `action`
@@ -1906,7 +1906,7 @@ module Google
       
       # Response from verifying a custom token
       class VerifyCustomTokenResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If idToken is STS id token, then this field will be expiration time of STS id
         # token in seconds.
@@ -1944,7 +1944,7 @@ module Google
       
       # Request of verifying the password.
       class VerifyPasswordResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the user.
         # Corresponds to the JSON property `displayName`

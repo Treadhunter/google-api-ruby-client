@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ClassroomV1
       
       # A Course in Classroom.
       class Course
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifier for this course assigned by Classroom. When creating a course, you
         # may optionally set this identifier to an alias string in the request to create
@@ -121,12 +121,12 @@ module Google
       
         # Representation of a Google Drive folder.
         # Corresponds to the JSON property `teacherFolder`
-        # @return [Google::Apis::ClassroomV1::DriveFolder]
+        # @return [GoogleAPI::Apis::ClassroomV1::DriveFolder]
         attr_accessor :teacher_folder
       
         # Sets of materials that appear on the "about" page of this course. Read-only.
         # Corresponds to the JSON property `courseMaterialSets`
-        # @return [Array<Google::Apis::ClassroomV1::CourseMaterialSet>]
+        # @return [Array<GoogleAPI::Apis::ClassroomV1::CourseMaterialSet>]
         attr_accessor :course_material_sets
       
         def initialize(**args)
@@ -156,7 +156,7 @@ module Google
       
       # Representation of a Google Drive folder.
       class DriveFolder
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Drive API resource ID.
         # Corresponds to the JSON property `id`
@@ -189,7 +189,7 @@ module Google
       # materials might include a syllabus, schedule, or other background information
       # relating to the course as a whole.
       class CourseMaterialSet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Title for this set.
         # Corresponds to the JSON property `title`
@@ -198,7 +198,7 @@ module Google
       
         # Materials attached to this set.
         # Corresponds to the JSON property `materials`
-        # @return [Array<Google::Apis::ClassroomV1::CourseMaterial>]
+        # @return [Array<GoogleAPI::Apis::ClassroomV1::CourseMaterial>]
         attr_accessor :materials
       
         def initialize(**args)
@@ -214,26 +214,26 @@ module Google
       
       # A material attached to a course as part of a material set.
       class CourseMaterial
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Representation of a Google Drive file.
         # Corresponds to the JSON property `driveFile`
-        # @return [Google::Apis::ClassroomV1::DriveFile]
+        # @return [GoogleAPI::Apis::ClassroomV1::DriveFile]
         attr_accessor :drive_file
       
         # YouTube video item.
         # Corresponds to the JSON property `youTubeVideo`
-        # @return [Google::Apis::ClassroomV1::YouTubeVideo]
+        # @return [GoogleAPI::Apis::ClassroomV1::YouTubeVideo]
         attr_accessor :you_tube_video
       
         # URL item.
         # Corresponds to the JSON property `link`
-        # @return [Google::Apis::ClassroomV1::Link]
+        # @return [GoogleAPI::Apis::ClassroomV1::Link]
         attr_accessor :link
       
         # Google Forms item.
         # Corresponds to the JSON property `form`
-        # @return [Google::Apis::ClassroomV1::Form]
+        # @return [GoogleAPI::Apis::ClassroomV1::Form]
         attr_accessor :form
       
         def initialize(**args)
@@ -251,7 +251,7 @@ module Google
       
       # Representation of a Google Drive file.
       class DriveFile
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Drive API resource ID.
         # Corresponds to the JSON property `id`
@@ -288,7 +288,7 @@ module Google
       
       # YouTube video item.
       class YouTubeVideo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # YouTube API resource ID.
         # Corresponds to the JSON property `id`
@@ -325,7 +325,7 @@ module Google
       
       # URL item.
       class Link
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # URL to link to. This must be a valid UTF-8 string containing between 1 and
         # 2024 characters.
@@ -357,7 +357,7 @@ module Google
       
       # Google Forms item.
       class Form
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # URL of the form.
         # Corresponds to the JSON property `formUrl`
@@ -399,7 +399,7 @@ module Google
       # protobuf.Empty) returns (google.protobuf.Empty); ` The JSON representation for
       # `Empty` is empty JSON object ````.
       class Empty
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -412,11 +412,11 @@ module Google
       
       # Response when listing courses.
       class ListCoursesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Courses that match the list request.
         # Corresponds to the JSON property `courses`
-        # @return [Array<Google::Apis::ClassroomV1::Course>]
+        # @return [Array<GoogleAPI::Apis::ClassroomV1::Course>]
         attr_accessor :courses
       
         # Token identifying the next page of results to return. If empty, no further
@@ -448,7 +448,7 @@ module Google
       # event of transmission failures, as retrying a request will return `
       # ALREADY_EXISTS` if a previous one has succeeded.
       class CourseAlias
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Alias string. The format of the string indicates the desired alias scoping. * `
         # d:` indicates a domain-scoped alias. Example: `d:math_101` * `p:` indicates a
@@ -470,11 +470,11 @@ module Google
       
       # Response when listing course aliases.
       class ListCourseAliasesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The course aliases.
         # Corresponds to the JSON property `aliases`
-        # @return [Array<Google::Apis::ClassroomV1::CourseAlias>]
+        # @return [Array<GoogleAPI::Apis::ClassroomV1::CourseAlias>]
         attr_accessor :aliases
       
         # Token identifying the next page of results to return. If empty, no further
@@ -496,7 +496,7 @@ module Google
       
       # An invitation to join a course.
       class Invitation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifier assigned by Classroom. Read-only.
         # Corresponds to the JSON property `id`
@@ -536,11 +536,11 @@ module Google
       
       # Response when listing invitations.
       class ListInvitationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Invitations that match the list request.
         # Corresponds to the JSON property `invitations`
-        # @return [Array<Google::Apis::ClassroomV1::Invitation>]
+        # @return [Array<GoogleAPI::Apis::ClassroomV1::Invitation>]
         attr_accessor :invitations
       
         # Token identifying the next page of results to return. If empty, no further
@@ -562,7 +562,7 @@ module Google
       
       # Global information for a user.
       class UserProfile
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifier of the user. Read-only.
         # Corresponds to the JSON property `id`
@@ -571,7 +571,7 @@ module Google
       
         # Details of the user's name.
         # Corresponds to the JSON property `name`
-        # @return [Google::Apis::ClassroomV1::Name]
+        # @return [GoogleAPI::Apis::ClassroomV1::Name]
         attr_accessor :name
       
         # Email address of the user. Read-only.
@@ -586,7 +586,7 @@ module Google
       
         # Global permissions of the user. Read-only.
         # Corresponds to the JSON property `permissions`
-        # @return [Array<Google::Apis::ClassroomV1::GlobalPermission>]
+        # @return [Array<GoogleAPI::Apis::ClassroomV1::GlobalPermission>]
         attr_accessor :permissions
       
         def initialize(**args)
@@ -605,7 +605,7 @@ module Google
       
       # Details of the user's name.
       class Name
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The user's first name. Read-only.
         # Corresponds to the JSON property `givenName`
@@ -637,7 +637,7 @@ module Google
       
       # Global user permission description.
       class GlobalPermission
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Permission value.
         # Corresponds to the JSON property `permission`
@@ -656,7 +656,7 @@ module Google
       
       # Teacher of a course.
       class Teacher
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifier of the course. Read-only.
         # Corresponds to the JSON property `courseId`
@@ -673,7 +673,7 @@ module Google
       
         # Global information for a user.
         # Corresponds to the JSON property `profile`
-        # @return [Google::Apis::ClassroomV1::UserProfile]
+        # @return [GoogleAPI::Apis::ClassroomV1::UserProfile]
         attr_accessor :profile
       
         def initialize(**args)
@@ -690,11 +690,11 @@ module Google
       
       # Response when listing teachers.
       class ListTeachersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Teachers who match the list request.
         # Corresponds to the JSON property `teachers`
-        # @return [Array<Google::Apis::ClassroomV1::Teacher>]
+        # @return [Array<GoogleAPI::Apis::ClassroomV1::Teacher>]
         attr_accessor :teachers
       
         # Token identifying the next page of results to return. If empty, no further
@@ -716,7 +716,7 @@ module Google
       
       # Student in a course.
       class Student
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifier of the course. Read-only.
         # Corresponds to the JSON property `courseId`
@@ -733,12 +733,12 @@ module Google
       
         # Global information for a user.
         # Corresponds to the JSON property `profile`
-        # @return [Google::Apis::ClassroomV1::UserProfile]
+        # @return [GoogleAPI::Apis::ClassroomV1::UserProfile]
         attr_accessor :profile
       
         # Representation of a Google Drive folder.
         # Corresponds to the JSON property `studentWorkFolder`
-        # @return [Google::Apis::ClassroomV1::DriveFolder]
+        # @return [GoogleAPI::Apis::ClassroomV1::DriveFolder]
         attr_accessor :student_work_folder
       
         def initialize(**args)
@@ -756,11 +756,11 @@ module Google
       
       # Response when listing students.
       class ListStudentsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Students who match the list request.
         # Corresponds to the JSON property `students`
-        # @return [Array<Google::Apis::ClassroomV1::Student>]
+        # @return [Array<GoogleAPI::Apis::ClassroomV1::Student>]
         attr_accessor :students
       
         # Token identifying the next page of results to return. If empty, no further
@@ -782,7 +782,7 @@ module Google
       
       # Course work created by a teacher for students of the course.
       class CourseWork
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifier of the course. Read-only.
         # Corresponds to the JSON property `courseId`
@@ -809,7 +809,7 @@ module Google
       
         # Additional materials.
         # Corresponds to the JSON property `materials`
-        # @return [Array<Google::Apis::ClassroomV1::Material>]
+        # @return [Array<GoogleAPI::Apis::ClassroomV1::Material>]
         attr_accessor :materials
       
         # Status of this course work.. If unspecified, the default state is `DRAFT`.
@@ -841,14 +841,14 @@ module Google
         # anniversary date. Related types are google.type.TimeOfDay and `google.protobuf.
         # Timestamp`.
         # Corresponds to the JSON property `dueDate`
-        # @return [Google::Apis::ClassroomV1::Date]
+        # @return [GoogleAPI::Apis::ClassroomV1::Date]
         attr_accessor :due_date
       
         # Represents a time of day. The date and time zone are either not significant or
         # are specified elsewhere. An API may chose to allow leap seconds. Related types
         # are google.type.Date and `google.protobuf.Timestamp`.
         # Corresponds to the JSON property `dueTime`
-        # @return [Google::Apis::ClassroomV1::TimeOfDay]
+        # @return [GoogleAPI::Apis::ClassroomV1::TimeOfDay]
         attr_accessor :due_time
       
         # Maximum grade for this course work. If zero or unspecified, this assignment is
@@ -879,12 +879,12 @@ module Google
       
         # Additional details for assignments.
         # Corresponds to the JSON property `assignment`
-        # @return [Google::Apis::ClassroomV1::Assignment]
+        # @return [GoogleAPI::Apis::ClassroomV1::Assignment]
         attr_accessor :assignment
       
         # Additional details for multiple-choice questions.
         # Corresponds to the JSON property `multipleChoiceQuestion`
-        # @return [Google::Apis::ClassroomV1::MultipleChoiceQuestion]
+        # @return [GoogleAPI::Apis::ClassroomV1::MultipleChoiceQuestion]
         attr_accessor :multiple_choice_question
       
         def initialize(**args)
@@ -916,26 +916,26 @@ module Google
       # Material attached to course work. When creating attachments, only the Link
       # field may be specified.
       class Material
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Drive file that is used as material for course work.
         # Corresponds to the JSON property `driveFile`
-        # @return [Google::Apis::ClassroomV1::SharedDriveFile]
+        # @return [GoogleAPI::Apis::ClassroomV1::SharedDriveFile]
         attr_accessor :drive_file
       
         # YouTube video item.
         # Corresponds to the JSON property `youtubeVideo`
-        # @return [Google::Apis::ClassroomV1::YouTubeVideo]
+        # @return [GoogleAPI::Apis::ClassroomV1::YouTubeVideo]
         attr_accessor :youtube_video
       
         # URL item.
         # Corresponds to the JSON property `link`
-        # @return [Google::Apis::ClassroomV1::Link]
+        # @return [GoogleAPI::Apis::ClassroomV1::Link]
         attr_accessor :link
       
         # Google Forms item.
         # Corresponds to the JSON property `form`
-        # @return [Google::Apis::ClassroomV1::Form]
+        # @return [GoogleAPI::Apis::ClassroomV1::Form]
         attr_accessor :form
       
         def initialize(**args)
@@ -953,11 +953,11 @@ module Google
       
       # Drive file that is used as material for course work.
       class SharedDriveFile
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Representation of a Google Drive file.
         # Corresponds to the JSON property `driveFile`
-        # @return [Google::Apis::ClassroomV1::DriveFile]
+        # @return [GoogleAPI::Apis::ClassroomV1::DriveFile]
         attr_accessor :drive_file
       
         # Mechanism by which students access the Drive item.
@@ -984,7 +984,7 @@ module Google
       # anniversary date. Related types are google.type.TimeOfDay and `google.protobuf.
       # Timestamp`.
       class Date
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
         # Corresponds to the JSON property `year`
@@ -1018,7 +1018,7 @@ module Google
       # are specified elsewhere. An API may chose to allow leap seconds. Related types
       # are google.type.Date and `google.protobuf.Timestamp`.
       class TimeOfDay
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to
         # allow the value "24:00:00" for scenarios like business closing time.
@@ -1057,11 +1057,11 @@ module Google
       
       # Additional details for assignments.
       class Assignment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Representation of a Google Drive folder.
         # Corresponds to the JSON property `studentWorkFolder`
-        # @return [Google::Apis::ClassroomV1::DriveFolder]
+        # @return [GoogleAPI::Apis::ClassroomV1::DriveFolder]
         attr_accessor :student_work_folder
       
         def initialize(**args)
@@ -1076,7 +1076,7 @@ module Google
       
       # Additional details for multiple-choice questions.
       class MultipleChoiceQuestion
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Possible choices.
         # Corresponds to the JSON property `choices`
@@ -1095,11 +1095,11 @@ module Google
       
       # Response when listing course work.
       class ListCourseWorkResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Course work items that match the request.
         # Corresponds to the JSON property `courseWork`
-        # @return [Array<Google::Apis::ClassroomV1::CourseWork>]
+        # @return [Array<GoogleAPI::Apis::ClassroomV1::CourseWork>]
         attr_accessor :course_work
       
         # Token identifying the next page of results to return. If empty, no further
@@ -1123,7 +1123,7 @@ module Google
       # a CourseWork item is created. StudentSubmissions that have never been accessed
       # (i.e. with `state` = NEW) may not have a creation time or update time.
       class StudentSubmission
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifier of the course. Read-only.
         # Corresponds to the JSON property `courseId`
@@ -1201,17 +1201,17 @@ module Google
       
         # Student work for an assignment.
         # Corresponds to the JSON property `assignmentSubmission`
-        # @return [Google::Apis::ClassroomV1::AssignmentSubmission]
+        # @return [GoogleAPI::Apis::ClassroomV1::AssignmentSubmission]
         attr_accessor :assignment_submission
       
         # Student work for a short answer question.
         # Corresponds to the JSON property `shortAnswerSubmission`
-        # @return [Google::Apis::ClassroomV1::ShortAnswerSubmission]
+        # @return [GoogleAPI::Apis::ClassroomV1::ShortAnswerSubmission]
         attr_accessor :short_answer_submission
       
         # Student work for a multiple-choice question.
         # Corresponds to the JSON property `multipleChoiceSubmission`
-        # @return [Google::Apis::ClassroomV1::MultipleChoiceSubmission]
+        # @return [GoogleAPI::Apis::ClassroomV1::MultipleChoiceSubmission]
         attr_accessor :multiple_choice_submission
       
         def initialize(**args)
@@ -1241,7 +1241,7 @@ module Google
       
       # Student work for an assignment.
       class AssignmentSubmission
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Attachments added by the student. Drive files that correspond to materials
         # with a share mode of SUBMISSION_COPY may not exist yet if the student has not
@@ -1249,7 +1249,7 @@ module Google
         # populated if the requesting user has permission to access it. Identifier and
         # alternate_link fields are available, but others (e.g. title) may not be.
         # Corresponds to the JSON property `attachments`
-        # @return [Array<Google::Apis::ClassroomV1::Attachment>]
+        # @return [Array<GoogleAPI::Apis::ClassroomV1::Attachment>]
         attr_accessor :attachments
       
         def initialize(**args)
@@ -1265,26 +1265,26 @@ module Google
       # Attachment added to student assignment work. When creating attachments, only
       # the Link field may be specified.
       class Attachment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Representation of a Google Drive file.
         # Corresponds to the JSON property `driveFile`
-        # @return [Google::Apis::ClassroomV1::DriveFile]
+        # @return [GoogleAPI::Apis::ClassroomV1::DriveFile]
         attr_accessor :drive_file
       
         # YouTube video item.
         # Corresponds to the JSON property `youTubeVideo`
-        # @return [Google::Apis::ClassroomV1::YouTubeVideo]
+        # @return [GoogleAPI::Apis::ClassroomV1::YouTubeVideo]
         attr_accessor :you_tube_video
       
         # URL item.
         # Corresponds to the JSON property `link`
-        # @return [Google::Apis::ClassroomV1::Link]
+        # @return [GoogleAPI::Apis::ClassroomV1::Link]
         attr_accessor :link
       
         # Google Forms item.
         # Corresponds to the JSON property `form`
-        # @return [Google::Apis::ClassroomV1::Form]
+        # @return [GoogleAPI::Apis::ClassroomV1::Form]
         attr_accessor :form
       
         def initialize(**args)
@@ -1302,7 +1302,7 @@ module Google
       
       # Student work for a short answer question.
       class ShortAnswerSubmission
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Student response to a short-answer question.
         # Corresponds to the JSON property `answer`
@@ -1321,7 +1321,7 @@ module Google
       
       # Student work for a multiple-choice question.
       class MultipleChoiceSubmission
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Student's select choice.
         # Corresponds to the JSON property `answer`
@@ -1340,11 +1340,11 @@ module Google
       
       # Response when listing student submissions.
       class ListStudentSubmissionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Student work that matches the request.
         # Corresponds to the JSON property `studentSubmissions`
-        # @return [Array<Google::Apis::ClassroomV1::StudentSubmission>]
+        # @return [Array<GoogleAPI::Apis::ClassroomV1::StudentSubmission>]
         attr_accessor :student_submissions
       
         # Token identifying the next page of results to return. If empty, no further
@@ -1366,7 +1366,7 @@ module Google
       
       # Request to turn in a student submission.
       class TurnInStudentSubmissionRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -1379,7 +1379,7 @@ module Google
       
       # Request to reclaim a student submission.
       class ReclaimStudentSubmissionRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -1392,7 +1392,7 @@ module Google
       
       # Request to return a student submission.
       class ReturnStudentSubmissionRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -1405,11 +1405,11 @@ module Google
       
       # Request to modify the attachments of a student submission.
       class ModifyAttachmentsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Attachments to add. This may only contain link attachments.
         # Corresponds to the JSON property `addAttachments`
-        # @return [Array<Google::Apis::ClassroomV1::Attachment>]
+        # @return [Array<GoogleAPI::Apis::ClassroomV1::Attachment>]
         attr_accessor :add_attachments
       
         def initialize(**args)

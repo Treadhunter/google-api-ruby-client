@@ -16,7 +16,7 @@ require 'google/apis/manager_v1beta2/service.rb'
 require 'google/apis/manager_v1beta2/classes.rb'
 require 'google/apis/manager_v1beta2/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Deployment Manager API
     #

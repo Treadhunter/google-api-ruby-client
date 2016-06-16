@@ -18,22 +18,22 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module DnsV1
       
       # An atomic update to a collection of ResourceRecordSets.
       class Change
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Which ResourceRecordSets to add?
         # Corresponds to the JSON property `additions`
-        # @return [Array<Google::Apis::DnsV1::ResourceRecordSet>]
+        # @return [Array<GoogleAPI::Apis::DnsV1::ResourceRecordSet>]
         attr_accessor :additions
       
         # Which ResourceRecordSets to remove? Must match existing data exactly.
         # Corresponds to the JSON property `deletions`
-        # @return [Array<Google::Apis::DnsV1::ResourceRecordSet>]
+        # @return [Array<GoogleAPI::Apis::DnsV1::ResourceRecordSet>]
         attr_accessor :deletions
       
         # Unique identifier for the resource; defined by the server (output only).
@@ -75,11 +75,11 @@ module Google
       # The response to a request to enumerate Changes to a ResourceRecordSets
       # collection.
       class ListChangesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The requested changes.
         # Corresponds to the JSON property `changes`
-        # @return [Array<Google::Apis::DnsV1::Change>]
+        # @return [Array<GoogleAPI::Apis::DnsV1::Change>]
         attr_accessor :changes
       
         # Type of resource.
@@ -115,7 +115,7 @@ module Google
       # responsibility. A ManagedZone is a resource that represents a DNS zone hosted
       # by the Cloud DNS service.
       class ManagedZone
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The time that this resource was created on the server. This is in RFC3339 text
         # format. Output only.
@@ -184,7 +184,7 @@ module Google
       
       # 
       class ListManagedZonesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Type of resource.
         # Corresponds to the JSON property `kind`
@@ -193,7 +193,7 @@ module Google
       
         # The managed zone resources.
         # Corresponds to the JSON property `managedZones`
-        # @return [Array<Google::Apis::DnsV1::ManagedZone>]
+        # @return [Array<GoogleAPI::Apis::DnsV1::ManagedZone>]
         attr_accessor :managed_zones
       
         # The presence of this field indicates that there exist more results following
@@ -225,7 +225,7 @@ module Google
       # including Cloud DNS ManagedZones. Projects can be created only in the APIs
       # console.
       class Project
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # User assigned unique identifier for the resource (output only).
         # Corresponds to the JSON property `id`
@@ -246,7 +246,7 @@ module Google
       
         # Limits associated with a Project.
         # Corresponds to the JSON property `quota`
-        # @return [Google::Apis::DnsV1::Quota]
+        # @return [GoogleAPI::Apis::DnsV1::Quota]
         attr_accessor :quota
       
         def initialize(**args)
@@ -264,7 +264,7 @@ module Google
       
       # Limits associated with a Project.
       class Quota
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "dns#quota".
         # Corresponds to the JSON property `kind`
@@ -320,7 +320,7 @@ module Google
       
       # A unit of data that will be returned by the DNS servers.
       class ResourceRecordSet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "dns#
         # resourceRecordSet".
@@ -365,7 +365,7 @@ module Google
       
       # 
       class ListResourceRecordSetsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Type of resource.
         # Corresponds to the JSON property `kind`
@@ -387,7 +387,7 @@ module Google
       
         # The resource record set resources.
         # Corresponds to the JSON property `rrsets`
-        # @return [Array<Google::Apis::DnsV1::ResourceRecordSet>]
+        # @return [Array<GoogleAPI::Apis::DnsV1::ResourceRecordSet>]
         attr_accessor :rrsets
       
         def initialize(**args)

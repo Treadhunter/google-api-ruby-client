@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module YoutubeAnalyticsV1
       
       # Contains single batchReport resource.
       class BatchReport
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID that YouTube assigns and uses to uniquely identify the report.
         # Corresponds to the JSON property `id`
@@ -39,7 +39,7 @@ module Google
       
         # Report outputs.
         # Corresponds to the JSON property `outputs`
-        # @return [Array<Google::Apis::YoutubeAnalyticsV1::BatchReport::Output>]
+        # @return [Array<GoogleAPI::Apis::YoutubeAnalyticsV1::BatchReport::Output>]
         attr_accessor :outputs
       
         # The ID of the the report definition.
@@ -50,7 +50,7 @@ module Google
         # Period included in the report. For reports containing all entities endTime is
         # not set. Both startTime and endTime are inclusive.
         # Corresponds to the JSON property `timeSpan`
-        # @return [Google::Apis::YoutubeAnalyticsV1::BatchReport::TimeSpan]
+        # @return [GoogleAPI::Apis::YoutubeAnalyticsV1::BatchReport::TimeSpan]
         attr_accessor :time_span
       
         # The time when the report was updated.
@@ -74,7 +74,7 @@ module Google
         
         # 
         class Output
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Cloud storage URL to download this report. This URL is valid for 30 minutes.
           # Corresponds to the JSON property `downloadUrl`
@@ -106,7 +106,7 @@ module Google
         # Period included in the report. For reports containing all entities endTime is
         # not set. Both startTime and endTime are inclusive.
         class TimeSpan
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # End of the period included in the report. Inclusive. For reports containing
           # all entities endTime is not set.
@@ -133,7 +133,7 @@ module Google
       
       # Contains single batchReportDefinition resource.
       class BatchReportDefinition
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID that YouTube assigns and uses to uniquely identify the report
         # definition.
@@ -179,11 +179,11 @@ module Google
       # A paginated list of batchReportDefinition resources returned in response to a
       # youtubeAnalytics.batchReportDefinitions.list request.
       class BatchReportDefinitionList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of batchReportDefinition resources that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeAnalyticsV1::BatchReportDefinition>]
+        # @return [Array<GoogleAPI::Apis::YoutubeAnalyticsV1::BatchReportDefinition>]
         attr_accessor :items
       
         # This value specifies the type of data included in the API response. For the
@@ -207,11 +207,11 @@ module Google
       # A paginated list of batchReport resources returned in response to a
       # youtubeAnalytics.batchReport.list request.
       class BatchReportList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of batchReport resources that match the request criteria.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeAnalyticsV1::BatchReport>]
+        # @return [Array<GoogleAPI::Apis::YoutubeAnalyticsV1::BatchReport>]
         attr_accessor :items
       
         # This value specifies the type of data included in the API response. For the
@@ -233,11 +233,11 @@ module Google
       
       # 
       class Group
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `contentDetails`
-        # @return [Google::Apis::YoutubeAnalyticsV1::Group::ContentDetails]
+        # @return [GoogleAPI::Apis::YoutubeAnalyticsV1::Group::ContentDetails]
         attr_accessor :content_details
       
         # 
@@ -257,7 +257,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `snippet`
-        # @return [Google::Apis::YoutubeAnalyticsV1::Group::Snippet]
+        # @return [GoogleAPI::Apis::YoutubeAnalyticsV1::Group::Snippet]
         attr_accessor :snippet
       
         def initialize(**args)
@@ -275,7 +275,7 @@ module Google
         
         # 
         class ContentDetails
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `itemCount`
@@ -300,7 +300,7 @@ module Google
         
         # 
         class Snippet
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `publishedAt`
@@ -326,7 +326,7 @@ module Google
       
       # 
       class GroupItem
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `etag`
@@ -350,7 +350,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `resource`
-        # @return [Google::Apis::YoutubeAnalyticsV1::GroupItem::Resource]
+        # @return [GoogleAPI::Apis::YoutubeAnalyticsV1::GroupItem::Resource]
         attr_accessor :resource
       
         def initialize(**args)
@@ -368,7 +368,7 @@ module Google
         
         # 
         class Resource
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # 
           # Corresponds to the JSON property `id`
@@ -395,7 +395,7 @@ module Google
       # A paginated list of grouList resources returned in response to a
       # youtubeAnalytics.groupApi.list request.
       class ListGroupItemResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `etag`
@@ -404,7 +404,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeAnalyticsV1::GroupItem>]
+        # @return [Array<GoogleAPI::Apis::YoutubeAnalyticsV1::GroupItem>]
         attr_accessor :items
       
         # 
@@ -427,7 +427,7 @@ module Google
       # A paginated list of grouList resources returned in response to a
       # youtubeAnalytics.groupApi.list request.
       class ListGroupsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `etag`
@@ -436,7 +436,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::YoutubeAnalyticsV1::Group>]
+        # @return [Array<GoogleAPI::Apis::YoutubeAnalyticsV1::Group>]
         attr_accessor :items
       
         # 
@@ -467,7 +467,7 @@ module Google
       # dimension, the cell can contain a string (video ID, country code) or a number (
       # number of views or number of likes).
       class ResultTable
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This value specifies information about the data returned in the rows fields.
         # Each item in the columnHeaders list identifies a field returned in the rows
@@ -479,7 +479,7 @@ module Google
         # viewerPercentage, the API response will return columns in this order: ageGroup,
         # gender,viewerPercentage.
         # Corresponds to the JSON property `columnHeaders`
-        # @return [Array<Google::Apis::YoutubeAnalyticsV1::ResultTable::ColumnHeader>]
+        # @return [Array<GoogleAPI::Apis::YoutubeAnalyticsV1::ResultTable::ColumnHeader>]
         attr_accessor :column_headers
       
         # This value specifies the type of data included in the API response. For the
@@ -512,7 +512,7 @@ module Google
         
         # 
         class ColumnHeader
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The type of the column (DIMENSION or METRIC).
           # Corresponds to the JSON property `columnType`

@@ -18,13 +18,13 @@ require 'google/api_client/client_secrets'
 
 FIXTURES_PATH = File.expand_path('../../../fixtures', __FILE__)
 
-RSpec.describe Google::APIClient::ClientSecrets do
+RSpec.describe GoogleAPI::APIClient::ClientSecrets do
   describe '::new' do
     let(:filename) { File.join(FIXTURES_PATH, 'files', 'client_secrets.json') }
     let(:data) { File.open(filename, 'r') { |file| JSON.load(file.read) } }
 
     context 'without options' do
-      subject { Google::APIClient::ClientSecrets.new(data) }
+      subject { GoogleAPI::APIClient::ClientSecrets.new(data) }
 
       describe 'existence of instance variables' do
         it '@access_token' do
@@ -129,7 +129,7 @@ RSpec.describe Google::APIClient::ClientSecrets do
               'token_credential_uri' => 'sample_token_credential_uri',
               'token_uri'            => 'sample_token_uri' } }
         end
-        subject { Google::APIClient::ClientSecrets.new(string_options) }
+        subject { GoogleAPI::APIClient::ClientSecrets.new(string_options) }
 
         describe 'existence of instance variables' do
           it '@access_token' do
@@ -233,7 +233,7 @@ RSpec.describe Google::APIClient::ClientSecrets do
               token_credential_uri: 'sample_token_credential_uri',
               token_uri:            'sample_token_uri' } }
         end
-        subject { Google::APIClient::ClientSecrets.new(symbol_options) }
+        subject { GoogleAPI::APIClient::ClientSecrets.new(symbol_options) }
 
         describe 'existence of instance variables' do
           it '@access_token' do
@@ -321,7 +321,7 @@ RSpec.describe Google::APIClient::ClientSecrets do
 
   context 'with JSON file' do
     let(:file) { File.join(FIXTURES_PATH, 'files', 'client_secrets.json') }
-    subject(:secrets) { Google::APIClient::ClientSecrets.load(file)}
+    subject(:secrets) { GoogleAPI::APIClient::ClientSecrets.load(file)}
   
     it 'should load the correct client ID' do
       expect(secrets.client_id).to be == '898243283568.apps.googleusercontent.com'
@@ -358,21 +358,21 @@ RSpec.describe Google::APIClient::ClientSecrets do
   context 'with no existing JSON file' do
     it 'should raise exception' do
       file = File.join(FIXTURES_PATH, 'files', 'no_file.json')
-      expect { Google::APIClient::ClientSecrets.load(file) }.to raise_exception(Errno::ENOENT)
+      expect { GoogleAPI::APIClient::ClientSecrets.load(file) }.to raise_exception(Errno::ENOENT)
     end
   end
 
   context 'with invalid JSON file' do
     it 'should raise exception' do
       file = File.join(FIXTURES_PATH, 'files', 'invalid.json')
-      expect { Google::APIClient::ClientSecrets.load(file) }.to raise_exception(JSON::ParserError)
+      expect { GoogleAPI::APIClient::ClientSecrets.load(file) }.to raise_exception(JSON::ParserError)
     end
   end
 
   context 'with folder name, which have json file in parents' do
     it 'should load the correct client id' do
       folder = File.join(FIXTURES_PATH, 'files', 'child')
-      secrets = Google::APIClient::ClientSecrets.load(folder)
+      secrets = GoogleAPI::APIClient::ClientSecrets.load(folder)
       expect(secrets.client_id).to be == '898243283568.apps.googleusercontent.com'
     end
   end
@@ -380,7 +380,7 @@ RSpec.describe Google::APIClient::ClientSecrets do
   context 'with folder wihout client_secrets.json' do
     it "should raise exception", fakefs: true do
       FileUtils.mkdir("/tmp")
-      expect { Google::APIClient::ClientSecrets.load('/tmp') }.to raise_exception(ArgumentError)
+      expect { GoogleAPI::APIClient::ClientSecrets.load('/tmp') }.to raise_exception(ArgumentError)
     end
   end
 

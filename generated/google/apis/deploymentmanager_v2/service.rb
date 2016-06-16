@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module DeploymentmanagerV2
       # Google Cloud Deployment Manager API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/deploymentmanager_v2'
       #
-      #    Deploymentmanager = Google::Apis::DeploymentmanagerV2 # Alias the module
+      #    Deploymentmanager = GoogleAPI::Apis::DeploymentmanagerV2 # Alias the module
       #    service = Deploymentmanager::DeploymentManagerService.new
       #
       # @see https://cloud.google.com/deployment-manager/
-      class DeploymentManagerService < Google::Apis::Core::BaseService
+      class DeploymentManagerService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -57,7 +57,7 @@ module Google
         #   The project ID for this request.
         # @param [String] deployment
         #   The name of the deployment for this request.
-        # @param [Google::Apis::DeploymentmanagerV2::DeploymentsCancelPreviewRequest] deployments_cancel_preview_request_object
+        # @param [GoogleAPI::Apis::DeploymentmanagerV2::DeploymentsCancelPreviewRequest] deployments_cancel_preview_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -67,24 +67,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DeploymentmanagerV2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DeploymentmanagerV2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DeploymentmanagerV2::Operation]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def cancel_deployment_preview(project, deployment, deployments_cancel_preview_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/deployments/{deployment}/cancelPreview', options)
-          command.request_representation = Google::Apis::DeploymentmanagerV2::DeploymentsCancelPreviewRequest::Representation
+          command.request_representation = GoogleAPI::Apis::DeploymentmanagerV2::DeploymentsCancelPreviewRequest::Representation
           command.request_object = deployments_cancel_preview_request_object
-          command.response_representation = Google::Apis::DeploymentmanagerV2::Operation::Representation
-          command.response_class = Google::Apis::DeploymentmanagerV2::Operation
+          command.response_representation = GoogleAPI::Apis::DeploymentmanagerV2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::DeploymentmanagerV2::Operation
           command.params['project'] = project unless project.nil?
           command.params['deployment'] = deployment unless deployment.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -107,22 +107,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DeploymentmanagerV2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DeploymentmanagerV2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DeploymentmanagerV2::Operation]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def delete_deployment(project, deployment, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:delete, '{project}/global/deployments/{deployment}', options)
-          command.response_representation = Google::Apis::DeploymentmanagerV2::Operation::Representation
-          command.response_class = Google::Apis::DeploymentmanagerV2::Operation
+          command.response_representation = GoogleAPI::Apis::DeploymentmanagerV2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::DeploymentmanagerV2::Operation
           command.params['project'] = project unless project.nil?
           command.params['deployment'] = deployment unless deployment.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -145,22 +145,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DeploymentmanagerV2::Deployment] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DeploymentmanagerV2::Deployment] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DeploymentmanagerV2::Deployment]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2::Deployment]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_deployment(project, deployment, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/deployments/{deployment}', options)
-          command.response_representation = Google::Apis::DeploymentmanagerV2::Deployment::Representation
-          command.response_class = Google::Apis::DeploymentmanagerV2::Deployment
+          command.response_representation = GoogleAPI::Apis::DeploymentmanagerV2::Deployment::Representation
+          command.response_class = GoogleAPI::Apis::DeploymentmanagerV2::Deployment
           command.params['project'] = project unless project.nil?
           command.params['deployment'] = deployment unless deployment.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -173,7 +173,7 @@ module Google
         # manifest.
         # @param [String] project
         #   The project ID for this request.
-        # @param [Google::Apis::DeploymentmanagerV2::Deployment] deployment_object
+        # @param [GoogleAPI::Apis::DeploymentmanagerV2::Deployment] deployment_object
         # @param [Boolean] preview
         #   If set to true, creates a deployment and creates "shell" resources but does
         #   not actually instantiate these resources. This allows you to preview what your
@@ -191,24 +191,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DeploymentmanagerV2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DeploymentmanagerV2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DeploymentmanagerV2::Operation]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def insert_deployment(project, deployment_object = nil, preview: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/deployments', options)
-          command.request_representation = Google::Apis::DeploymentmanagerV2::Deployment::Representation
+          command.request_representation = GoogleAPI::Apis::DeploymentmanagerV2::Deployment::Representation
           command.request_object = deployment_object
-          command.response_representation = Google::Apis::DeploymentmanagerV2::Operation::Representation
-          command.response_class = Google::Apis::DeploymentmanagerV2::Operation
+          command.response_representation = GoogleAPI::Apis::DeploymentmanagerV2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::DeploymentmanagerV2::Operation
           command.params['project'] = project unless project.nil?
           command.query['preview'] = preview unless preview.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -260,22 +260,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DeploymentmanagerV2::ListDeploymentsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DeploymentmanagerV2::ListDeploymentsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DeploymentmanagerV2::ListDeploymentsResponse]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2::ListDeploymentsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_deployments(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/deployments', options)
-          command.response_representation = Google::Apis::DeploymentmanagerV2::ListDeploymentsResponse::Representation
-          command.response_class = Google::Apis::DeploymentmanagerV2::ListDeploymentsResponse
+          command.response_representation = GoogleAPI::Apis::DeploymentmanagerV2::ListDeploymentsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DeploymentmanagerV2::ListDeploymentsResponse
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -292,7 +292,7 @@ module Google
         #   The project ID for this request.
         # @param [String] deployment
         #   The name of the deployment for this request.
-        # @param [Google::Apis::DeploymentmanagerV2::Deployment] deployment_object
+        # @param [GoogleAPI::Apis::DeploymentmanagerV2::Deployment] deployment_object
         # @param [String] create_policy
         #   Sets the policy to use for creating new resources.
         # @param [String] delete_policy
@@ -316,24 +316,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DeploymentmanagerV2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DeploymentmanagerV2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DeploymentmanagerV2::Operation]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def patch_deployment(project, deployment, deployment_object = nil, create_policy: nil, delete_policy: nil, preview: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:patch, '{project}/global/deployments/{deployment}', options)
-          command.request_representation = Google::Apis::DeploymentmanagerV2::Deployment::Representation
+          command.request_representation = GoogleAPI::Apis::DeploymentmanagerV2::Deployment::Representation
           command.request_object = deployment_object
-          command.response_representation = Google::Apis::DeploymentmanagerV2::Operation::Representation
-          command.response_class = Google::Apis::DeploymentmanagerV2::Operation
+          command.response_representation = GoogleAPI::Apis::DeploymentmanagerV2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::DeploymentmanagerV2::Operation
           command.params['project'] = project unless project.nil?
           command.params['deployment'] = deployment unless deployment.nil?
           command.query['createPolicy'] = create_policy unless create_policy.nil?
@@ -351,7 +351,7 @@ module Google
         #   The project ID for this request.
         # @param [String] deployment
         #   The name of the deployment for this request.
-        # @param [Google::Apis::DeploymentmanagerV2::DeploymentsStopRequest] deployments_stop_request_object
+        # @param [GoogleAPI::Apis::DeploymentmanagerV2::DeploymentsStopRequest] deployments_stop_request_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -361,24 +361,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DeploymentmanagerV2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DeploymentmanagerV2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DeploymentmanagerV2::Operation]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def stop_deployment(project, deployment, deployments_stop_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{project}/global/deployments/{deployment}/stop', options)
-          command.request_representation = Google::Apis::DeploymentmanagerV2::DeploymentsStopRequest::Representation
+          command.request_representation = GoogleAPI::Apis::DeploymentmanagerV2::DeploymentsStopRequest::Representation
           command.request_object = deployments_stop_request_object
-          command.response_representation = Google::Apis::DeploymentmanagerV2::Operation::Representation
-          command.response_class = Google::Apis::DeploymentmanagerV2::Operation
+          command.response_representation = GoogleAPI::Apis::DeploymentmanagerV2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::DeploymentmanagerV2::Operation
           command.params['project'] = project unless project.nil?
           command.params['deployment'] = deployment unless deployment.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -393,7 +393,7 @@ module Google
         #   The project ID for this request.
         # @param [String] deployment
         #   The name of the deployment for this request.
-        # @param [Google::Apis::DeploymentmanagerV2::Deployment] deployment_object
+        # @param [GoogleAPI::Apis::DeploymentmanagerV2::Deployment] deployment_object
         # @param [String] create_policy
         #   Sets the policy to use for creating new resources.
         # @param [String] delete_policy
@@ -417,24 +417,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DeploymentmanagerV2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DeploymentmanagerV2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DeploymentmanagerV2::Operation]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_deployment(project, deployment, deployment_object = nil, create_policy: nil, delete_policy: nil, preview: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:put, '{project}/global/deployments/{deployment}', options)
-          command.request_representation = Google::Apis::DeploymentmanagerV2::Deployment::Representation
+          command.request_representation = GoogleAPI::Apis::DeploymentmanagerV2::Deployment::Representation
           command.request_object = deployment_object
-          command.response_representation = Google::Apis::DeploymentmanagerV2::Operation::Representation
-          command.response_class = Google::Apis::DeploymentmanagerV2::Operation
+          command.response_representation = GoogleAPI::Apis::DeploymentmanagerV2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::DeploymentmanagerV2::Operation
           command.params['project'] = project unless project.nil?
           command.params['deployment'] = deployment unless deployment.nil?
           command.query['createPolicy'] = create_policy unless create_policy.nil?
@@ -462,22 +462,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DeploymentmanagerV2::Manifest] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DeploymentmanagerV2::Manifest] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DeploymentmanagerV2::Manifest]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2::Manifest]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_manifest(project, deployment, manifest, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/deployments/{deployment}/manifests/{manifest}', options)
-          command.response_representation = Google::Apis::DeploymentmanagerV2::Manifest::Representation
-          command.response_class = Google::Apis::DeploymentmanagerV2::Manifest
+          command.response_representation = GoogleAPI::Apis::DeploymentmanagerV2::Manifest::Representation
+          command.response_class = GoogleAPI::Apis::DeploymentmanagerV2::Manifest
           command.params['project'] = project unless project.nil?
           command.params['deployment'] = deployment unless deployment.nil?
           command.params['manifest'] = manifest unless manifest.nil?
@@ -532,22 +532,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DeploymentmanagerV2::ListManifestsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DeploymentmanagerV2::ListManifestsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DeploymentmanagerV2::ListManifestsResponse]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2::ListManifestsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_manifests(project, deployment, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/deployments/{deployment}/manifests', options)
-          command.response_representation = Google::Apis::DeploymentmanagerV2::ListManifestsResponse::Representation
-          command.response_class = Google::Apis::DeploymentmanagerV2::ListManifestsResponse
+          command.response_representation = GoogleAPI::Apis::DeploymentmanagerV2::ListManifestsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DeploymentmanagerV2::ListManifestsResponse
           command.params['project'] = project unless project.nil?
           command.params['deployment'] = deployment unless deployment.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -573,22 +573,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DeploymentmanagerV2::Operation] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DeploymentmanagerV2::Operation] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DeploymentmanagerV2::Operation]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2::Operation]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_operation(project, operation, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/operations/{operation}', options)
-          command.response_representation = Google::Apis::DeploymentmanagerV2::Operation::Representation
-          command.response_class = Google::Apis::DeploymentmanagerV2::Operation
+          command.response_representation = GoogleAPI::Apis::DeploymentmanagerV2::Operation::Representation
+          command.response_class = GoogleAPI::Apis::DeploymentmanagerV2::Operation
           command.params['project'] = project unless project.nil?
           command.params['operation'] = operation unless operation.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -640,22 +640,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DeploymentmanagerV2::ListOperationsResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DeploymentmanagerV2::ListOperationsResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DeploymentmanagerV2::ListOperationsResponse]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2::ListOperationsResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_operations(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/operations', options)
-          command.response_representation = Google::Apis::DeploymentmanagerV2::ListOperationsResponse::Representation
-          command.response_class = Google::Apis::DeploymentmanagerV2::ListOperationsResponse
+          command.response_representation = GoogleAPI::Apis::DeploymentmanagerV2::ListOperationsResponse::Representation
+          command.response_class = GoogleAPI::Apis::DeploymentmanagerV2::ListOperationsResponse
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?
@@ -682,22 +682,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DeploymentmanagerV2::Resource] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DeploymentmanagerV2::Resource] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DeploymentmanagerV2::Resource]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2::Resource]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_resource(project, deployment, resource, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/deployments/{deployment}/resources/{resource}', options)
-          command.response_representation = Google::Apis::DeploymentmanagerV2::Resource::Representation
-          command.response_class = Google::Apis::DeploymentmanagerV2::Resource
+          command.response_representation = GoogleAPI::Apis::DeploymentmanagerV2::Resource::Representation
+          command.response_class = GoogleAPI::Apis::DeploymentmanagerV2::Resource
           command.params['project'] = project unless project.nil?
           command.params['deployment'] = deployment unless deployment.nil?
           command.params['resource'] = resource unless resource.nil?
@@ -752,22 +752,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DeploymentmanagerV2::ListResourcesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DeploymentmanagerV2::ListResourcesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DeploymentmanagerV2::ListResourcesResponse]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2::ListResourcesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_resources(project, deployment, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/deployments/{deployment}/resources', options)
-          command.response_representation = Google::Apis::DeploymentmanagerV2::ListResourcesResponse::Representation
-          command.response_class = Google::Apis::DeploymentmanagerV2::ListResourcesResponse
+          command.response_representation = GoogleAPI::Apis::DeploymentmanagerV2::ListResourcesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DeploymentmanagerV2::ListResourcesResponse
           command.params['project'] = project unless project.nil?
           command.params['deployment'] = deployment unless deployment.nil?
           command.query['filter'] = filter unless filter.nil?
@@ -822,22 +822,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DeploymentmanagerV2::ListTypesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DeploymentmanagerV2::ListTypesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DeploymentmanagerV2::ListTypesResponse]
+        # @return [GoogleAPI::Apis::DeploymentmanagerV2::ListTypesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_types(project, filter: nil, max_results: nil, page_token: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, '{project}/global/types', options)
-          command.response_representation = Google::Apis::DeploymentmanagerV2::ListTypesResponse::Representation
-          command.response_class = Google::Apis::DeploymentmanagerV2::ListTypesResponse
+          command.response_representation = GoogleAPI::Apis::DeploymentmanagerV2::ListTypesResponse::Representation
+          command.response_class = GoogleAPI::Apis::DeploymentmanagerV2::ListTypesResponse
           command.params['project'] = project unless project.nil?
           command.query['filter'] = filter unless filter.nil?
           command.query['maxResults'] = max_results unless max_results.nil?

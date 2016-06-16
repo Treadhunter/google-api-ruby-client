@@ -18,14 +18,14 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AndroidenterpriseV1
       
       # Represents the list of app restrictions available to be pre-configured for the
       # product.
       class AppRestrictionsSchema
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # androidenterprise#appRestrictionsSchema".
@@ -35,7 +35,7 @@ module Google
       
         # The set of restrictions that make up this schema.
         # Corresponds to the JSON property `restrictions`
-        # @return [Array<Google::Apis::AndroidenterpriseV1::AppRestrictionsSchemaRestriction>]
+        # @return [Array<GoogleAPI::Apis::AndroidenterpriseV1::AppRestrictionsSchemaRestriction>]
         attr_accessor :restrictions
       
         def initialize(**args)
@@ -52,11 +52,11 @@ module Google
       # A restriction in the App Restriction Schema represents a piece of
       # configuration that may be pre-applied.
       class AppRestrictionsSchemaRestriction
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A typed value for the restriction.
         # Corresponds to the JSON property `defaultValue`
-        # @return [Google::Apis::AndroidenterpriseV1::AppRestrictionsSchemaRestrictionRestrictionValue]
+        # @return [GoogleAPI::Apis::AndroidenterpriseV1::AppRestrictionsSchemaRestrictionRestrictionValue]
         attr_accessor :default_value
       
         # A longer description of the restriction, giving more detail of what it affects.
@@ -110,7 +110,7 @@ module Google
       
       # A typed value for the restriction.
       class AppRestrictionsSchemaRestrictionRestrictionValue
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of the value being provided.
         # Corresponds to the JSON property `type`
@@ -154,7 +154,7 @@ module Google
       
       # This represents a single version of the app.
       class AppVersion
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Unique increasing identifier for the app version.
         # Corresponds to the JSON property `versionCode`
@@ -181,7 +181,7 @@ module Google
       
       # Information on an approval URL.
       class ApprovalUrlInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A URL that displays a product's permissions and that can also be used to
         # approve the product with the Products.approve call.
@@ -218,7 +218,7 @@ module Google
       # is appropriate will depend on the enterprise's policies and the purpose of the
       # apps concerned.
       class Collection
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Arbitrary unique ID, allocated by the API on creation.
         # Corresponds to the JSON property `collectionId`
@@ -269,7 +269,7 @@ module Google
       
       # The user resources for the collection.
       class ListCollectionViewersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # androidenterprise#collectionViewersListResponse".
@@ -279,7 +279,7 @@ module Google
       
         # A user of an enterprise.
         # Corresponds to the JSON property `user`
-        # @return [Array<Google::Apis::AndroidenterpriseV1::User>]
+        # @return [Array<GoogleAPI::Apis::AndroidenterpriseV1::User>]
         attr_accessor :user
       
         def initialize(**args)
@@ -295,12 +295,12 @@ module Google
       
       # The collection resources for the enterprise.
       class ListCollectionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An ordered collection of products which can be made visible on the Google Play
         # Store to a selected group of users.
         # Corresponds to the JSON property `collection`
-        # @return [Array<Google::Apis::AndroidenterpriseV1::Collection>]
+        # @return [Array<GoogleAPI::Apis::AndroidenterpriseV1::Collection>]
         attr_accessor :collection
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -325,7 +325,7 @@ module Google
       # This collection cannot be modified via the API; it is automatically populated
       # as devices are set up to be managed.
       class Device
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The Google Play Services Android ID for the device encoded as a lowercase hex
         # string, e.g. "123456789abcdef0".
@@ -364,7 +364,7 @@ module Google
       # The state of a user's device, as accessed by the getState and setState methods
       # on device resources.
       class DeviceState
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The state of the Google account on the device. "enabled" indicates that the
         # Google account on the device can be used to access Google services (including
@@ -393,11 +393,11 @@ module Google
       
       # The device resources for the user.
       class ListDevicesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A managed device.
         # Corresponds to the JSON property `device`
-        # @return [Array<Google::Apis::AndroidenterpriseV1::Device>]
+        # @return [Array<GoogleAPI::Apis::AndroidenterpriseV1::Device>]
         attr_accessor :device
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -442,7 +442,7 @@ module Google
       # enroll and can also be retrieved if the enterprise's primary domain is known
       # using the list method.
       class Enterprise
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The unique ID for the enterprise.
         # Corresponds to the JSON property `id`
@@ -481,7 +481,7 @@ module Google
       # A service account that can be used to authenticate as the enterprise to API
       # calls that require such authentication.
       class EnterpriseAccount
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The email address of the service account.
         # Corresponds to the JSON property `accountEmail`
@@ -507,11 +507,11 @@ module Google
       
       # The matching enterprise resources.
       class ListEnterprisesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An enterprise.
         # Corresponds to the JSON property `enterprise`
-        # @return [Array<Google::Apis::AndroidenterpriseV1::Enterprise>]
+        # @return [Array<GoogleAPI::Apis::AndroidenterpriseV1::Enterprise>]
         attr_accessor :enterprise
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -533,7 +533,7 @@ module Google
       
       # 
       class SendTestPushNotificationResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The message ID of the test push notification that was sent.
         # Corresponds to the JSON property `messageId`
@@ -582,7 +582,7 @@ module Google
       # managed profile will have "userPurchase" as entitlement reason; those
       # entitlements cannot be removed via the API.
       class Entitlement
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # androidenterprise#entitlement".
@@ -616,13 +616,13 @@ module Google
       
       # The entitlement resources for the user.
       class ListEntitlementsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An entitlement of a user to a product (e.g. an app). For example, a free app
         # that they have installed, or a paid app that they have been allocated a
         # license to.
         # Corresponds to the JSON property `entitlement`
-        # @return [Array<Google::Apis::AndroidenterpriseV1::Entitlement>]
+        # @return [Array<GoogleAPI::Apis::AndroidenterpriseV1::Entitlement>]
         attr_accessor :entitlement
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -659,7 +659,7 @@ module Google
       # admin may indicate they are no longer interested in the group license by
       # marking it as unapproved in Google Play.
       class GroupLicense
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # How this group license was acquired. "bulkPurchase" means that this group
         # license object was created because the enterprise purchased licenses for this
@@ -720,7 +720,7 @@ module Google
       
       # The user resources for the group license.
       class ListGroupLicenseUsersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # androidenterprise#groupLicenseUsersListResponse".
@@ -730,7 +730,7 @@ module Google
       
         # A user of an enterprise.
         # Corresponds to the JSON property `user`
-        # @return [Array<Google::Apis::AndroidenterpriseV1::User>]
+        # @return [Array<GoogleAPI::Apis::AndroidenterpriseV1::User>]
         attr_accessor :user
       
         def initialize(**args)
@@ -746,11 +746,11 @@ module Google
       
       # The grouplicense resources for the enterprise.
       class ListGroupLicensesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A group license for a product approved for use in the enterprise.
         # Corresponds to the JSON property `groupLicense`
-        # @return [Array<Google::Apis::AndroidenterpriseV1::GroupLicense>]
+        # @return [Array<GoogleAPI::Apis::AndroidenterpriseV1::GroupLicense>]
         attr_accessor :group_license
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -791,7 +791,7 @@ module Google
       # remaining installs. The install resource will also be deleted if the user
       # uninstalls the app themselves.
       class Install
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Install state. The state "installPending" means that an install request has
         # recently been made and download to the device is in progress. The state "
@@ -833,12 +833,12 @@ module Google
       
       # The install resources for the device.
       class ListInstallsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An installation of an app for a user on a specific device. The existence of an
         # install implies that the user must have an entitlement to the app.
         # Corresponds to the JSON property `install`
-        # @return [Array<Google::Apis::AndroidenterpriseV1::Install>]
+        # @return [Array<GoogleAPI::Apis::AndroidenterpriseV1::Install>]
         attr_accessor :install
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -860,7 +860,7 @@ module Google
       
       # A localized string with its locale.
       class LocalizedText
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The BCP47 tag for a locale. (e.g. "en-US", "de").
         # Corresponds to the JSON property `locale`
@@ -885,7 +885,7 @@ module Google
       
       # 
       class PageInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `resultPerPage`
@@ -922,7 +922,7 @@ module Google
       # permission (localized name and description) is intended to be used in the EMM
       # user interface when obtaining consent from the enterprise.
       class Permission
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A longer description of the permissions giving more details of what it affects.
         # Corresponds to the JSON property `description`
@@ -966,12 +966,12 @@ module Google
       # full Google Play details page) is intended to allow a basic representation of
       # the product within an EMM user interface.
       class Product
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # App versions currently available for this product. The returned list contains
         # only public versions. Alpha and beta versions are not included.
         # Corresponds to the JSON property `appVersion`
-        # @return [Array<Google::Apis::AndroidenterpriseV1::AppVersion>]
+        # @return [Array<GoogleAPI::Apis::AndroidenterpriseV1::AppVersion>]
         attr_accessor :app_version
       
         # The name of the author of the product (e.g. the app developer).
@@ -1067,7 +1067,7 @@ module Google
       # The API can be used to read the set of permissions, and also to update the set
       # to indicate that permissions have been accepted.
       class ProductPermission
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An opaque string uniquely identifying the permission.
         # Corresponds to the JSON property `permissionId`
@@ -1093,7 +1093,7 @@ module Google
       # Information about the permissions required by a specific app and whether they
       # have been accepted by the enterprise.
       class ProductPermissions
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # androidenterprise#productPermissions".
@@ -1103,7 +1103,7 @@ module Google
       
         # The permissions required by the app.
         # Corresponds to the JSON property `permission`
-        # @return [Array<Google::Apis::AndroidenterpriseV1::ProductPermission>]
+        # @return [Array<GoogleAPI::Apis::AndroidenterpriseV1::ProductPermission>]
         attr_accessor :permission
       
         # The ID of the app that the permissions relate to, e.g. "app:com.google.android.
@@ -1126,7 +1126,7 @@ module Google
       
       # A set of products.
       class ProductSet
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # androidenterprise#productSet".
@@ -1152,11 +1152,11 @@ module Google
       
       # 
       class ApproveProductRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Information on an approval URL.
         # Corresponds to the JSON property `approvalUrlInfo`
-        # @return [Google::Apis::AndroidenterpriseV1::ApprovalUrlInfo]
+        # @return [GoogleAPI::Apis::AndroidenterpriseV1::ApprovalUrlInfo]
         attr_accessor :approval_url_info
       
         def initialize(**args)
@@ -1171,7 +1171,7 @@ module Google
       
       # 
       class GenerateProductApprovalUrlResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A URL that can be rendered in an iframe to display the permissions (if any) of
         # a product. This URL can be used to approve the product only once and only
@@ -1197,7 +1197,7 @@ module Google
       
       # The matching products.
       class ProductsListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # androidenterprise#productsListResponse".
@@ -1207,18 +1207,18 @@ module Google
       
         # General pagination information.
         # Corresponds to the JSON property `pageInfo`
-        # @return [Google::Apis::AndroidenterpriseV1::PageInfo]
+        # @return [GoogleAPI::Apis::AndroidenterpriseV1::PageInfo]
         attr_accessor :page_info
       
         # Information about a product (e.g. an app) in the Google Play Store, for
         # display to an enterprise admin.
         # Corresponds to the JSON property `product`
-        # @return [Array<Google::Apis::AndroidenterpriseV1::Product>]
+        # @return [Array<GoogleAPI::Apis::AndroidenterpriseV1::Product>]
         attr_accessor :product
       
         # Pagination information for token pagination.
         # Corresponds to the JSON property `tokenPagination`
-        # @return [Google::Apis::AndroidenterpriseV1::TokenPagination]
+        # @return [GoogleAPI::Apis::AndroidenterpriseV1::TokenPagination]
         attr_accessor :token_pagination
       
         def initialize(**args)
@@ -1237,7 +1237,7 @@ module Google
       # Definition of a Google Play for Work store cluster, a list of products
       # displayed as part of a store page.
       class StoreCluster
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Unique ID of this cluster. Assigned by the server. Immutable once assigned.
         # Corresponds to the JSON property `id`
@@ -1254,7 +1254,7 @@ module Google
         # displayed is the one that best matches the user locale, or the first entry if
         # there is no good match. There needs to be at least one entry.
         # Corresponds to the JSON property `name`
-        # @return [Array<Google::Apis::AndroidenterpriseV1::LocalizedText>]
+        # @return [Array<GoogleAPI::Apis::AndroidenterpriseV1::LocalizedText>]
         attr_accessor :name
       
         # String (US-ASCII only) used to determine order of this cluster within the
@@ -1290,7 +1290,7 @@ module Google
       # General setting for the Google Play for Work store layout, currently only
       # specifying the page to display the first time the store is opened.
       class StoreLayout
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the store page to be used as the homepage. The homepage will be used
         # as the first page shown in the Google Play for Work store.
@@ -1321,11 +1321,11 @@ module Google
       
       # The store page resources for the enterprise.
       class StoreLayoutClustersListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A store cluster of an enterprise.
         # Corresponds to the JSON property `cluster`
-        # @return [Array<Google::Apis::AndroidenterpriseV1::StoreCluster>]
+        # @return [Array<GoogleAPI::Apis::AndroidenterpriseV1::StoreCluster>]
         attr_accessor :cluster
       
         # Identifies what kind of resource this is. Value: the fixed string "
@@ -1347,7 +1347,7 @@ module Google
       
       # The store page resources for the enterprise.
       class StoreLayoutPagesListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # androidenterprise#storeLayoutPagesListResponse".
@@ -1357,7 +1357,7 @@ module Google
       
         # A store page of an enterprise.
         # Corresponds to the JSON property `page`
-        # @return [Array<Google::Apis::AndroidenterpriseV1::StorePage>]
+        # @return [Array<GoogleAPI::Apis::AndroidenterpriseV1::StorePage>]
         attr_accessor :page
       
         def initialize(**args)
@@ -1374,7 +1374,7 @@ module Google
       # Definition of a Google Play for Work store page, made of a localized name and
       # links to other pages. A page also contains clusters defined as a subcollection.
       class StorePage
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Unique ID of this page. Assigned by the server. Immutable once assigned.
         # Corresponds to the JSON property `id`
@@ -1400,7 +1400,7 @@ module Google
         # displayed is the one that best matches the user locale, or the first entry if
         # there is no good match. There needs to be at least one entry.
         # Corresponds to the JSON property `name`
-        # @return [Array<Google::Apis::AndroidenterpriseV1::LocalizedText>]
+        # @return [Array<GoogleAPI::Apis::AndroidenterpriseV1::LocalizedText>]
         attr_accessor :name
       
         def initialize(**args)
@@ -1418,7 +1418,7 @@ module Google
       
       # 
       class TokenPagination
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `nextPageToken`
@@ -1450,7 +1450,7 @@ module Google
       # The ID for a user is an opaque string. It can be retrieved using the list
       # method queried by the user's primary email address.
       class User
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The unique ID for the user.
         # Corresponds to the JSON property `id`
@@ -1485,7 +1485,7 @@ module Google
       # token (activation code) the appropriate EMM app can be automatically
       # downloaded.
       class UserToken
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # androidenterprise#userToken".
@@ -1518,7 +1518,7 @@ module Google
       
       # The matching user resources.
       class ListUsersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies what kind of resource this is. Value: the fixed string "
         # androidenterprise#usersListResponse".
@@ -1528,7 +1528,7 @@ module Google
       
         # A user of an enterprise.
         # Corresponds to the JSON property `user`
-        # @return [Array<Google::Apis::AndroidenterpriseV1::User>]
+        # @return [Array<GoogleAPI::Apis::AndroidenterpriseV1::User>]
         attr_accessor :user
       
         def initialize(**args)

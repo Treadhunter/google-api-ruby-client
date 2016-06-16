@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AdminReportsV1
       # Admin Reports API
@@ -28,11 +28,11 @@ module Google
       # @example
       #    require 'google/apis/admin_reports_v1'
       #
-      #    Admin = Google::Apis::AdminReportsV1 # Alias the module
+      #    Admin = GoogleAPI::Apis::AdminReportsV1 # Alias the module
       #    service = Admin::ReportsService.new
       #
       # @see https://developers.google.com/admin-sdk/reports/
-      class ReportsService < Google::Apis::Core::BaseService
+      class ReportsService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -87,22 +87,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdminReportsV1::Activities] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdminReportsV1::Activities] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdminReportsV1::Activities]
+        # @return [GoogleAPI::Apis::AdminReportsV1::Activities]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_activities(user_key, application_name, actor_ip_address: nil, customer_id: nil, end_time: nil, event_name: nil, filters: nil, max_results: nil, page_token: nil, start_time: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'activity/users/{userKey}/applications/{applicationName}', options)
-          command.response_representation = Google::Apis::AdminReportsV1::Activities::Representation
-          command.response_class = Google::Apis::AdminReportsV1::Activities
+          command.response_representation = GoogleAPI::Apis::AdminReportsV1::Activities::Representation
+          command.response_class = GoogleAPI::Apis::AdminReportsV1::Activities
           command.params['userKey'] = user_key unless user_key.nil?
           command.params['applicationName'] = application_name unless application_name.nil?
           command.query['actorIpAddress'] = actor_ip_address unless actor_ip_address.nil?
@@ -126,7 +126,7 @@ module Google
         #   all users.
         # @param [String] application_name
         #   Application name for which the events are to be retrieved.
-        # @param [Google::Apis::AdminReportsV1::Channel] channel_object
+        # @param [GoogleAPI::Apis::AdminReportsV1::Channel] channel_object
         # @param [String] actor_ip_address
         #   IP Address of host where the event was performed. Supports both IPv4 and IPv6
         #   addresses.
@@ -154,24 +154,24 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdminReportsV1::Channel] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdminReportsV1::Channel] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdminReportsV1::Channel]
+        # @return [GoogleAPI::Apis::AdminReportsV1::Channel]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def watch_activity(user_key, application_name, channel_object = nil, actor_ip_address: nil, customer_id: nil, end_time: nil, event_name: nil, filters: nil, max_results: nil, page_token: nil, start_time: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'activity/users/{userKey}/applications/{applicationName}/watch', options)
-          command.request_representation = Google::Apis::AdminReportsV1::Channel::Representation
+          command.request_representation = GoogleAPI::Apis::AdminReportsV1::Channel::Representation
           command.request_object = channel_object
-          command.response_representation = Google::Apis::AdminReportsV1::Channel::Representation
-          command.response_class = Google::Apis::AdminReportsV1::Channel
+          command.response_representation = GoogleAPI::Apis::AdminReportsV1::Channel::Representation
+          command.response_class = GoogleAPI::Apis::AdminReportsV1::Channel
           command.params['userKey'] = user_key unless user_key.nil?
           command.params['applicationName'] = application_name unless application_name.nil?
           command.query['actorIpAddress'] = actor_ip_address unless actor_ip_address.nil?
@@ -189,7 +189,7 @@ module Google
         end
         
         # Stop watching resources through this channel
-        # @param [Google::Apis::AdminReportsV1::Channel] channel_object
+        # @param [GoogleAPI::Apis::AdminReportsV1::Channel] channel_object
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
         # @param [String] quota_user
@@ -199,7 +199,7 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
@@ -208,12 +208,12 @@ module Google
         #
         # @return [void]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def stop_channel(channel_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '/admin/reports_v1/channels/stop', options)
-          command.request_representation = Google::Apis::AdminReportsV1::Channel::Representation
+          command.request_representation = GoogleAPI::Apis::AdminReportsV1::Channel::Representation
           command.request_object = channel_object
           command.query['fields'] = fields unless fields.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
@@ -241,22 +241,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdminReportsV1::UsageReports] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdminReportsV1::UsageReports] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdminReportsV1::UsageReports]
+        # @return [GoogleAPI::Apis::AdminReportsV1::UsageReports]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_customer_usage_report(date, customer_id: nil, page_token: nil, parameters: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'usage/dates/{date}', options)
-          command.response_representation = Google::Apis::AdminReportsV1::UsageReports::Representation
-          command.response_class = Google::Apis::AdminReportsV1::UsageReports
+          command.response_representation = GoogleAPI::Apis::AdminReportsV1::UsageReports::Representation
+          command.response_class = GoogleAPI::Apis::AdminReportsV1::UsageReports
           command.params['date'] = date unless date.nil?
           command.query['customerId'] = customer_id unless customer_id.nil?
           command.query['pageToken'] = page_token unless page_token.nil?
@@ -294,22 +294,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::AdminReportsV1::UsageReports] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::AdminReportsV1::UsageReports] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::AdminReportsV1::UsageReports]
+        # @return [GoogleAPI::Apis::AdminReportsV1::UsageReports]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_user_usage_report(user_key, date, customer_id: nil, filters: nil, max_results: nil, page_token: nil, parameters: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'usage/users/{userKey}/dates/{date}', options)
-          command.response_representation = Google::Apis::AdminReportsV1::UsageReports::Representation
-          command.response_class = Google::Apis::AdminReportsV1::UsageReports
+          command.response_representation = GoogleAPI::Apis::AdminReportsV1::UsageReports::Representation
+          command.response_class = GoogleAPI::Apis::AdminReportsV1::UsageReports
           command.params['userKey'] = user_key unless user_key.nil?
           command.params['date'] = date unless date.nil?
           command.query['customerId'] = customer_id unless customer_id.nil?

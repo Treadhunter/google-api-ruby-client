@@ -16,7 +16,7 @@ require 'google/apis/deploymentmanager_v2beta2/service.rb'
 require 'google/apis/deploymentmanager_v2beta2/classes.rb'
 require 'google/apis/deploymentmanager_v2beta2/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Google Cloud Deployment Manager API
     #

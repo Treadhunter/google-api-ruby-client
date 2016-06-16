@@ -21,9 +21,9 @@ require 'hurley/test'
 # TODO: Upload from IO
 # TODO: Upload from file
 
-RSpec.describe Google::Apis::Core::UploadIO do
+RSpec.describe GoogleAPI::Apis::Core::UploadIO do
   context 'from_file' do
-    let(:upload_io) { Google::Apis::Core::UploadIO.from_file(file) }
+    let(:upload_io) { GoogleAPI::Apis::Core::UploadIO.from_file(file) }
 
     context 'with text file' do
       let(:file) { File.join(FIXTURES_DIR, 'files', 'test.txt') }
@@ -32,7 +32,7 @@ RSpec.describe Google::Apis::Core::UploadIO do
       end
 
       it 'should allow overriding the mime type' do
-        io = Google::Apis::Core::UploadIO.from_file(file, content_type: 'application/json')
+        io = GoogleAPI::Apis::Core::UploadIO.from_file(file, content_type: 'application/json')
         expect(io.content_type).to eql('application/json')
       end
     end
@@ -44,12 +44,12 @@ RSpec.describe Google::Apis::Core::UploadIO do
       end
 
       it 'should allow overriding the mime type' do
-        io = Google::Apis::Core::UploadIO.from_file(file, content_type: 'application/json')
+        io = GoogleAPI::Apis::Core::UploadIO.from_file(file, content_type: 'application/json')
         expect(io.content_type).to eql('application/json')
       end
 
       it 'should setup length of the stream' do
-        upload_io = Google::Apis::Core::UploadIO.from_file(file)
+        upload_io = GoogleAPI::Apis::Core::UploadIO.from_file(file)
         expect(upload_io.length).to eq File.size(file)
       end
 
@@ -62,17 +62,17 @@ RSpec.describe Google::Apis::Core::UploadIO do
       let(:io) { StringIO.new 'Hello google' }
 
       it 'should setup default content-type' do
-        upload_io = Google::Apis::Core::UploadIO.from_io(io)
-        expect(upload_io.content_type).to eql Google::Apis::Core::UploadIO::OCTET_STREAM_CONTENT_TYPE
+        upload_io = GoogleAPI::Apis::Core::UploadIO.from_io(io)
+        expect(upload_io.content_type).to eql GoogleAPI::Apis::Core::UploadIO::OCTET_STREAM_CONTENT_TYPE
       end
 
       it 'should allow overring the mime type' do
-        upload_io = Google::Apis::Core::UploadIO.from_io(io, content_type: 'application/x-gzip')
+        upload_io = GoogleAPI::Apis::Core::UploadIO.from_io(io, content_type: 'application/x-gzip')
         expect(upload_io.content_type).to eq('application/x-gzip')
       end
 
       it 'should setup length of the stream' do
-        upload_io = Google::Apis::Core::UploadIO.from_io(io)
+        upload_io = GoogleAPI::Apis::Core::UploadIO.from_io(io)
         expect(upload_io.length).to eq 'Hello google'.length
       end
     end
@@ -80,12 +80,12 @@ RSpec.describe Google::Apis::Core::UploadIO do
   end
 end
 
-RSpec.describe Google::Apis::Core::RawUploadCommand do
+RSpec.describe GoogleAPI::Apis::Core::RawUploadCommand do
   include TestHelpers
   include_context 'HTTP client'
 
   let(:command) do
-    command = Google::Apis::Core::RawUploadCommand.new(:post, 'https://www.googleapis.com/zoo/animals')
+    command = GoogleAPI::Apis::Core::RawUploadCommand.new(:post, 'https://www.googleapis.com/zoo/animals')
     command.upload_source = file
     command.upload_content_type = 'text/plain'
     command
@@ -151,17 +151,17 @@ RSpec.describe Google::Apis::Core::RawUploadCommand do
   context('with invalid input') do
     let(:file) { -> {} }
     it 'should raise client error' do
-      expect { command.execute(client) }.to raise_error(Google::Apis::ClientError)
+      expect { command.execute(client) }.to raise_error(GoogleAPI::Apis::ClientError)
     end
   end
 end
 
-RSpec.describe Google::Apis::Core::MultipartUploadCommand do
+RSpec.describe GoogleAPI::Apis::Core::MultipartUploadCommand do
   include TestHelpers
   include_context 'HTTP client'
 
   let(:command) do
-    command = Google::Apis::Core::MultipartUploadCommand.new(:post, 'https://www.googleapis.com/zoo/animals')
+    command = GoogleAPI::Apis::Core::MultipartUploadCommand.new(:post, 'https://www.googleapis.com/zoo/animals')
     command.upload_source = StringIO.new('Hello world')
     command.upload_content_type = 'text/plain'
     command.body = 'metadata'
@@ -199,12 +199,12 @@ EOF
   end
 end
 
-RSpec.describe Google::Apis::Core::ResumableUploadCommand do
+RSpec.describe GoogleAPI::Apis::Core::ResumableUploadCommand do
   include TestHelpers
   include_context 'HTTP client'
 
   let(:command) do
-    command = Google::Apis::Core::ResumableUploadCommand.new(:post, 'https://www.googleapis.com/zoo/animals')
+    command = GoogleAPI::Apis::Core::ResumableUploadCommand.new(:post, 'https://www.googleapis.com/zoo/animals')
     command.upload_source = StringIO.new('Hello world')
     command.upload_content_type = 'text/plain'
     command
@@ -265,7 +265,7 @@ RSpec.describe Google::Apis::Core::ResumableUploadCommand do
     end
 
     it 'should propagate the original error' do
-      expect { command.execute(client) }.to raise_error Google::Apis::AuthorizationError
+      expect { command.execute(client) }.to raise_error GoogleAPI::Apis::AuthorizationError
     end
   end
 
@@ -294,7 +294,7 @@ RSpec.describe Google::Apis::Core::ResumableUploadCommand do
     end
 
     it 'should raise error' do
-      expect { command.execute(client) }.to raise_error Google::Apis::ClientError
+      expect { command.execute(client) }.to raise_error GoogleAPI::Apis::ClientError
     end
   end
 end

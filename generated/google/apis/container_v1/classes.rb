@@ -18,17 +18,17 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ContainerV1
       
       # ListClustersResponse is the result of ListClustersRequest.
       class ListClustersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of clusters in the project in the specified zone, or across all ones.
         # Corresponds to the JSON property `clusters`
-        # @return [Array<Google::Apis::ContainerV1::Cluster>]
+        # @return [Array<GoogleAPI::Apis::ContainerV1::Cluster>]
         attr_accessor :clusters
       
         # If any zones are listed here, the list of clusters returned may be missing
@@ -50,7 +50,7 @@ module Google
       
       # A Google Container Engine cluster.
       class Cluster
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of this cluster. The name must be unique within this project and zone,
         # and can be up to 40 characters with the following restrictions: * Lowercase
@@ -77,13 +77,13 @@ module Google
       
         # Parameters that describe the nodes in a cluster.
         # Corresponds to the JSON property `nodeConfig`
-        # @return [Google::Apis::ContainerV1::NodeConfig]
+        # @return [GoogleAPI::Apis::ContainerV1::NodeConfig]
         attr_accessor :node_config
       
         # The authentication information for accessing the master endpoint.
         # Authentication can be done using HTTP basic auth or using client certificates.
         # Corresponds to the JSON property `masterAuth`
-        # @return [Google::Apis::ContainerV1::MasterAuth]
+        # @return [GoogleAPI::Apis::ContainerV1::MasterAuth]
         attr_accessor :master_auth
       
         # The logging service the cluster should use to write logs. Currently available
@@ -120,7 +120,7 @@ module Google
         # Configuration for the addons that can be automatically spun up in the cluster,
         # enabling additional functionality.
         # Corresponds to the JSON property `addonsConfig`
-        # @return [Google::Apis::ContainerV1::AddonsConfig]
+        # @return [GoogleAPI::Apis::ContainerV1::AddonsConfig]
         attr_accessor :addons_config
       
         # The name of the Google Compute Engine [subnetwork](/compute/docs/subnetworks)
@@ -133,7 +133,7 @@ module Google
         # a single node pool should be specified. This field should not be set if "
         # node_config" or "initial_node_count" are specified.
         # Corresponds to the JSON property `nodePools`
-        # @return [Array<Google::Apis::ContainerV1::NodePool>]
+        # @return [Array<GoogleAPI::Apis::ContainerV1::NodePool>]
         attr_accessor :node_pools
       
         # The list of Google Compute Engine [locations](/compute/docs/zones#available)
@@ -258,7 +258,7 @@ module Google
       
       # Parameters that describe the nodes in a cluster.
       class NodeConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of a Google Compute Engine [machine type](/compute/docs/machine-types)
         # (e.g. `n1-standard-1`). If unspecified, the default machine type is `n1-
@@ -314,7 +314,7 @@ module Google
       # The authentication information for accessing the master endpoint.
       # Authentication can be done using HTTP basic auth or using client certificates.
       class MasterAuth
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The username to use for HTTP basic authentication to the master endpoint.
         # Corresponds to the JSON property `username`
@@ -363,19 +363,19 @@ module Google
       # Configuration for the addons that can be automatically spun up in the cluster,
       # enabling additional functionality.
       class AddonsConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Configuration options for the HTTP (L7) load balancing controller addon, which
         # makes it easy to set up HTTP load balancers for services in a cluster.
         # Corresponds to the JSON property `httpLoadBalancing`
-        # @return [Google::Apis::ContainerV1::HttpLoadBalancing]
+        # @return [GoogleAPI::Apis::ContainerV1::HttpLoadBalancing]
         attr_accessor :http_load_balancing
       
         # Configuration options for the horizontal pod autoscaling feature, which
         # increases or decreases the number of replica pods a replication controller has
         # based on the resource usage of the existing pods.
         # Corresponds to the JSON property `horizontalPodAutoscaling`
-        # @return [Google::Apis::ContainerV1::HorizontalPodAutoscaling]
+        # @return [GoogleAPI::Apis::ContainerV1::HorizontalPodAutoscaling]
         attr_accessor :horizontal_pod_autoscaling
       
         def initialize(**args)
@@ -392,7 +392,7 @@ module Google
       # Configuration options for the HTTP (L7) load balancing controller addon, which
       # makes it easy to set up HTTP load balancers for services in a cluster.
       class HttpLoadBalancing
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether the HTTP Load Balancing controller is enabled in the cluster. When
         # enabled, it runs a small pod in the cluster that manages the load balancers.
@@ -415,7 +415,7 @@ module Google
       # increases or decreases the number of replica pods a replication controller has
       # based on the resource usage of the existing pods.
       class HorizontalPodAutoscaling
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether the Horizontal Pod Autoscaling feature is enabled in the cluster. When
         # enabled, it ensures that a Heapster pod is running in the cluster, which is
@@ -442,7 +442,7 @@ module Google
       # pod scheduling. They may also be resized up or down, to accommodate the
       # workload.
       class NodePool
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the node pool.
         # Corresponds to the JSON property `name`
@@ -451,7 +451,7 @@ module Google
       
         # Parameters that describe the nodes in a cluster.
         # Corresponds to the JSON property `config`
-        # @return [Google::Apis::ContainerV1::NodeConfig]
+        # @return [GoogleAPI::Apis::ContainerV1::NodeConfig]
         attr_accessor :config
       
         # The initial node count for the pool. You must ensure that your Compute Engine
@@ -507,11 +507,11 @@ module Google
       
       # CreateClusterRequest creates a cluster.
       class CreateClusterRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A Google Container Engine cluster.
         # Corresponds to the JSON property `cluster`
-        # @return [Google::Apis::ContainerV1::Cluster]
+        # @return [GoogleAPI::Apis::ContainerV1::Cluster]
         attr_accessor :cluster
       
         def initialize(**args)
@@ -527,7 +527,7 @@ module Google
       # This operation resource represents operations that may have happened or are
       # happening on the cluster. All fields are output only.
       class Operation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The server-assigned ID for the operation.
         # Corresponds to the JSON property `name`
@@ -589,12 +589,12 @@ module Google
       
       # UpdateClusterRequest updates the settings of a cluster.
       class UpdateClusterRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # ClusterUpdate describes an update to the cluster. Exactly one update can be
         # applied to a cluster with each request, so at most one field can be provided.
         # Corresponds to the JSON property `update`
-        # @return [Google::Apis::ContainerV1::ClusterUpdate]
+        # @return [GoogleAPI::Apis::ContainerV1::ClusterUpdate]
         attr_accessor :update
       
         def initialize(**args)
@@ -610,7 +610,7 @@ module Google
       # ClusterUpdate describes an update to the cluster. Exactly one update can be
       # applied to a cluster with each request, so at most one field can be provided.
       class ClusterUpdate
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The Kubernetes version to change the nodes to (typically an upgrade). Use `-`
         # to upgrade to the latest version supported by the server.
@@ -628,7 +628,7 @@ module Google
         # Configuration for the addons that can be automatically spun up in the cluster,
         # enabling additional functionality.
         # Corresponds to the JSON property `desiredAddonsConfig`
-        # @return [Google::Apis::ContainerV1::AddonsConfig]
+        # @return [GoogleAPI::Apis::ContainerV1::AddonsConfig]
         attr_accessor :desired_addons_config
       
         # The node pool to be upgraded. This field is mandatory if the "
@@ -661,11 +661,11 @@ module Google
       
       # ListOperationsResponse is the result of ListOperationsRequest.
       class ListOperationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of operations in the project in the specified zone.
         # Corresponds to the JSON property `operations`
-        # @return [Array<Google::Apis::ContainerV1::Operation>]
+        # @return [Array<GoogleAPI::Apis::ContainerV1::Operation>]
         attr_accessor :operations
       
         # If any zones are listed here, the list of operations returned may be missing
@@ -687,7 +687,7 @@ module Google
       
       # Container Engine service configuration.
       class ServerConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Version of Kubernetes the service deploys by default.
         # Corresponds to the JSON property `defaultClusterVersion`
@@ -724,11 +724,11 @@ module Google
       
       # ListNodePoolsResponse is the result of ListNodePoolsRequest.
       class ListNodePoolsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of node pools for a cluster.
         # Corresponds to the JSON property `nodePools`
-        # @return [Array<Google::Apis::ContainerV1::NodePool>]
+        # @return [Array<GoogleAPI::Apis::ContainerV1::NodePool>]
         attr_accessor :node_pools
       
         def initialize(**args)
@@ -743,7 +743,7 @@ module Google
       
       # CreateNodePoolRequest creates a node pool for a cluster.
       class CreateNodePoolRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # NodePool contains the name and configuration for a cluster's node pool. Node
         # pools are a set of nodes (i.e. VM's), with a common configuration and
@@ -752,7 +752,7 @@ module Google
         # pod scheduling. They may also be resized up or down, to accommodate the
         # workload.
         # Corresponds to the JSON property `nodePool`
-        # @return [Google::Apis::ContainerV1::NodePool]
+        # @return [GoogleAPI::Apis::ContainerV1::NodePool]
         attr_accessor :node_pool
       
         def initialize(**args)

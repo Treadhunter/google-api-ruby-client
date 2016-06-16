@@ -25,7 +25,7 @@ module Samples
   #      Hello
   #
   class Translate < BaseCli
-    Translate = Google::Apis::TranslateV2
+    Translate = GoogleAPI::Apis::TranslateV2
 
     desc 'translate PHRASE', 'Translate a phrase'
     method_option :source, type: :string

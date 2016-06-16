@@ -18,109 +18,109 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module WebmastersV3
       
       class ApiDataRow
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ApiDimensionFilter
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ApiDimensionFilterGroup
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SearchAnalyticsQueryRequest
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class SearchAnalyticsQueryResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListSitemapsResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListSitesResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UrlCrawlErrorCount
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UrlCrawlErrorCountsPerType
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class QueryUrlCrawlErrorsCountsResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UrlCrawlErrorsSample
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ListUrlCrawlErrorsSamplesResponse
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class UrlSampleDetails
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class WmxSite
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class WmxSitemap
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class WmxSitemapContent
-        class Representation < Google::Apis::Core::JsonRepresentation; end
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation; end
       
-        include Google::Apis::Core::JsonObjectSupport
+        include GoogleAPI::Apis::Core::JsonObjectSupport
       end
       
       class ApiDataRow
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :clicks, as: 'clicks'
           property :ctr, as: 'ctr'
           property :impressions, as: 'impressions'
@@ -131,7 +131,7 @@ module Google
       
       class ApiDimensionFilter
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :dimension, as: 'dimension'
           property :expression, as: 'expression'
           property :operator, as: 'operator'
@@ -140,8 +140,8 @@ module Google
       
       class ApiDimensionFilterGroup
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :filters, as: 'filters', class: Google::Apis::WebmastersV3::ApiDimensionFilter, decorator: Google::Apis::WebmastersV3::ApiDimensionFilter::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :filters, as: 'filters', class: GoogleAPI::Apis::WebmastersV3::ApiDimensionFilter, decorator: GoogleAPI::Apis::WebmastersV3::ApiDimensionFilter::Representation
       
           property :group_type, as: 'groupType'
         end
@@ -149,9 +149,9 @@ module Google
       
       class SearchAnalyticsQueryRequest
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :aggregation_type, as: 'aggregationType'
-          collection :dimension_filter_groups, as: 'dimensionFilterGroups', class: Google::Apis::WebmastersV3::ApiDimensionFilterGroup, decorator: Google::Apis::WebmastersV3::ApiDimensionFilterGroup::Representation
+          collection :dimension_filter_groups, as: 'dimensionFilterGroups', class: GoogleAPI::Apis::WebmastersV3::ApiDimensionFilterGroup, decorator: GoogleAPI::Apis::WebmastersV3::ApiDimensionFilterGroup::Representation
       
           collection :dimensions, as: 'dimensions'
           property :end_date, as: 'endDate'
@@ -164,32 +164,32 @@ module Google
       
       class SearchAnalyticsQueryResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :response_aggregation_type, as: 'responseAggregationType'
-          collection :rows, as: 'rows', class: Google::Apis::WebmastersV3::ApiDataRow, decorator: Google::Apis::WebmastersV3::ApiDataRow::Representation
+          collection :rows, as: 'rows', class: GoogleAPI::Apis::WebmastersV3::ApiDataRow, decorator: GoogleAPI::Apis::WebmastersV3::ApiDataRow::Representation
       
         end
       end
       
       class ListSitemapsResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :sitemap, as: 'sitemap', class: Google::Apis::WebmastersV3::WmxSitemap, decorator: Google::Apis::WebmastersV3::WmxSitemap::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :sitemap, as: 'sitemap', class: GoogleAPI::Apis::WebmastersV3::WmxSitemap, decorator: GoogleAPI::Apis::WebmastersV3::WmxSitemap::Representation
       
         end
       end
       
       class ListSitesResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :site_entry, as: 'siteEntry', class: Google::Apis::WebmastersV3::WmxSite, decorator: Google::Apis::WebmastersV3::WmxSite::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :site_entry, as: 'siteEntry', class: GoogleAPI::Apis::WebmastersV3::WmxSite, decorator: GoogleAPI::Apis::WebmastersV3::WmxSite::Representation
       
         end
       end
       
       class UrlCrawlErrorCount
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :count, as: 'count'
           property :timestamp, as: 'timestamp', type: DateTime
       
@@ -198,9 +198,9 @@ module Google
       
       class UrlCrawlErrorCountsPerType
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :category, as: 'category'
-          collection :entries, as: 'entries', class: Google::Apis::WebmastersV3::UrlCrawlErrorCount, decorator: Google::Apis::WebmastersV3::UrlCrawlErrorCount::Representation
+          collection :entries, as: 'entries', class: GoogleAPI::Apis::WebmastersV3::UrlCrawlErrorCount, decorator: GoogleAPI::Apis::WebmastersV3::UrlCrawlErrorCount::Representation
       
           property :platform, as: 'platform'
         end
@@ -208,37 +208,37 @@ module Google
       
       class QueryUrlCrawlErrorsCountsResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :count_per_types, as: 'countPerTypes', class: Google::Apis::WebmastersV3::UrlCrawlErrorCountsPerType, decorator: Google::Apis::WebmastersV3::UrlCrawlErrorCountsPerType::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :count_per_types, as: 'countPerTypes', class: GoogleAPI::Apis::WebmastersV3::UrlCrawlErrorCountsPerType, decorator: GoogleAPI::Apis::WebmastersV3::UrlCrawlErrorCountsPerType::Representation
       
         end
       end
       
       class UrlCrawlErrorsSample
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :first_detected, as: 'first_detected', type: DateTime
       
           property :last_crawled, as: 'last_crawled', type: DateTime
       
           property :page_url, as: 'pageUrl'
           property :response_code, as: 'responseCode'
-          property :url_details, as: 'urlDetails', class: Google::Apis::WebmastersV3::UrlSampleDetails, decorator: Google::Apis::WebmastersV3::UrlSampleDetails::Representation
+          property :url_details, as: 'urlDetails', class: GoogleAPI::Apis::WebmastersV3::UrlSampleDetails, decorator: GoogleAPI::Apis::WebmastersV3::UrlSampleDetails::Representation
       
         end
       end
       
       class ListUrlCrawlErrorsSamplesResponse
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :url_crawl_error_sample, as: 'urlCrawlErrorSample', class: Google::Apis::WebmastersV3::UrlCrawlErrorsSample, decorator: Google::Apis::WebmastersV3::UrlCrawlErrorsSample::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :url_crawl_error_sample, as: 'urlCrawlErrorSample', class: GoogleAPI::Apis::WebmastersV3::UrlCrawlErrorsSample, decorator: GoogleAPI::Apis::WebmastersV3::UrlCrawlErrorsSample::Representation
       
         end
       end
       
       class UrlSampleDetails
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           collection :containing_sitemaps, as: 'containingSitemaps'
           collection :linked_from_urls, as: 'linkedFromUrls'
         end
@@ -246,7 +246,7 @@ module Google
       
       class WmxSite
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :permission_level, as: 'permissionLevel'
           property :site_url, as: 'siteUrl'
         end
@@ -254,8 +254,8 @@ module Google
       
       class WmxSitemap
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          collection :contents, as: 'contents', class: Google::Apis::WebmastersV3::WmxSitemapContent, decorator: Google::Apis::WebmastersV3::WmxSitemapContent::Representation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
+          collection :contents, as: 'contents', class: GoogleAPI::Apis::WebmastersV3::WmxSitemapContent, decorator: GoogleAPI::Apis::WebmastersV3::WmxSitemapContent::Representation
       
           property :errors, as: 'errors'
           property :is_pending, as: 'isPending'
@@ -272,7 +272,7 @@ module Google
       
       class WmxSitemapContent
         # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
+        class Representation < GoogleAPI::Apis::Core::JsonRepresentation
           property :indexed, as: 'indexed'
           property :submitted, as: 'submitted'
           property :type, as: 'type'

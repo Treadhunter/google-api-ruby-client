@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module SheetsV4
       # Google Sheets API
@@ -27,11 +27,11 @@ module Google
       # @example
       #    require 'google/apis/sheets_v4'
       #
-      #    Sheets = Google::Apis::SheetsV4 # Alias the module
+      #    Sheets = GoogleAPI::Apis::SheetsV4 # Alias the module
       #    service = Sheets::SheetsService.new
       #
       # @see https://developers.google.com/sheets/
-      class SheetsService < Google::Apis::Core::BaseService
+      class SheetsService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -47,30 +47,30 @@ module Google
         end
         
         # Creates a spreadsheet, returning the newly created spreadsheet.
-        # @param [Google::Apis::SheetsV4::Spreadsheet] spreadsheet_object
+        # @param [GoogleAPI::Apis::SheetsV4::Spreadsheet] spreadsheet_object
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SheetsV4::Spreadsheet] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SheetsV4::Spreadsheet] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SheetsV4::Spreadsheet]
+        # @return [GoogleAPI::Apis::SheetsV4::Spreadsheet]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def create_spreadsheet(spreadsheet_object = nil, quota_user: nil, fields: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v4/spreadsheets', options)
-          command.request_representation = Google::Apis::SheetsV4::Spreadsheet::Representation
+          command.request_representation = GoogleAPI::Apis::SheetsV4::Spreadsheet::Representation
           command.request_object = spreadsheet_object
-          command.response_representation = Google::Apis::SheetsV4::Spreadsheet::Representation
-          command.response_class = Google::Apis::SheetsV4::Spreadsheet
+          command.response_representation = GoogleAPI::Apis::SheetsV4::Spreadsheet::Representation
+          command.response_class = GoogleAPI::Apis::SheetsV4::Spreadsheet
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['fields'] = fields unless fields.nil?
           execute_or_queue_command(command, &block)
@@ -104,22 +104,22 @@ module Google
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SheetsV4::Spreadsheet] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SheetsV4::Spreadsheet] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SheetsV4::Spreadsheet]
+        # @return [GoogleAPI::Apis::SheetsV4::Spreadsheet]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_spreadsheet(spreadsheet_id, ranges: nil, include_grid_data: nil, quota_user: nil, fields: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v4/spreadsheets/{spreadsheetId}', options)
-          command.response_representation = Google::Apis::SheetsV4::Spreadsheet::Representation
-          command.response_class = Google::Apis::SheetsV4::Spreadsheet
+          command.response_representation = GoogleAPI::Apis::SheetsV4::Spreadsheet::Representation
+          command.response_class = GoogleAPI::Apis::SheetsV4::Spreadsheet
           command.params['spreadsheetId'] = spreadsheet_id unless spreadsheet_id.nil?
           command.query['ranges'] = ranges unless ranges.nil?
           command.query['includeGridData'] = include_grid_data unless include_grid_data.nil?
@@ -146,30 +146,30 @@ module Google
         # should reflect your changes.
         # @param [String] spreadsheet_id
         #   The spreadsheet to apply the updates to.
-        # @param [Google::Apis::SheetsV4::BatchUpdateSpreadsheetRequest] batch_update_spreadsheet_request_object
+        # @param [GoogleAPI::Apis::SheetsV4::BatchUpdateSpreadsheetRequest] batch_update_spreadsheet_request_object
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SheetsV4::BatchUpdateSpreadsheetResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SheetsV4::BatchUpdateSpreadsheetResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SheetsV4::BatchUpdateSpreadsheetResponse]
+        # @return [GoogleAPI::Apis::SheetsV4::BatchUpdateSpreadsheetResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def batch_update_spreadsheet(spreadsheet_id, batch_update_spreadsheet_request_object = nil, quota_user: nil, fields: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v4/spreadsheets/{spreadsheetId}:batchUpdate', options)
-          command.request_representation = Google::Apis::SheetsV4::BatchUpdateSpreadsheetRequest::Representation
+          command.request_representation = GoogleAPI::Apis::SheetsV4::BatchUpdateSpreadsheetRequest::Representation
           command.request_object = batch_update_spreadsheet_request_object
-          command.response_representation = Google::Apis::SheetsV4::BatchUpdateSpreadsheetResponse::Representation
-          command.response_class = Google::Apis::SheetsV4::BatchUpdateSpreadsheetResponse
+          command.response_representation = GoogleAPI::Apis::SheetsV4::BatchUpdateSpreadsheetResponse::Representation
+          command.response_class = GoogleAPI::Apis::SheetsV4::BatchUpdateSpreadsheetResponse
           command.params['spreadsheetId'] = spreadsheet_id unless spreadsheet_id.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -183,7 +183,7 @@ module Google
         #   The ID of the spreadsheet to update.
         # @param [String] range
         #   The A1 notation of the values to update.
-        # @param [Google::Apis::SheetsV4::ValueRange] value_range_object
+        # @param [GoogleAPI::Apis::SheetsV4::ValueRange] value_range_object
         # @param [String] value_input_option
         #   How the input data should be interpreted.
         # @param [String] quota_user
@@ -191,24 +191,24 @@ module Google
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SheetsV4::UpdateValuesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SheetsV4::UpdateValuesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SheetsV4::UpdateValuesResponse]
+        # @return [GoogleAPI::Apis::SheetsV4::UpdateValuesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def update_spreadsheet_value(spreadsheet_id, range, value_range_object = nil, value_input_option: nil, quota_user: nil, fields: nil, options: nil, &block)
           command =  make_simple_command(:put, 'v4/spreadsheets/{spreadsheetId}/values/{range}', options)
-          command.request_representation = Google::Apis::SheetsV4::ValueRange::Representation
+          command.request_representation = GoogleAPI::Apis::SheetsV4::ValueRange::Representation
           command.request_object = value_range_object
-          command.response_representation = Google::Apis::SheetsV4::UpdateValuesResponse::Representation
-          command.response_class = Google::Apis::SheetsV4::UpdateValuesResponse
+          command.response_representation = GoogleAPI::Apis::SheetsV4::UpdateValuesResponse::Representation
+          command.response_class = GoogleAPI::Apis::SheetsV4::UpdateValuesResponse
           command.params['spreadsheetId'] = spreadsheet_id unless spreadsheet_id.nil?
           command.params['range'] = range unless range.nil?
           command.query['valueInputOption'] = value_input_option unless value_input_option.nil?
@@ -241,22 +241,22 @@ module Google
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SheetsV4::ValueRange] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SheetsV4::ValueRange] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SheetsV4::ValueRange]
+        # @return [GoogleAPI::Apis::SheetsV4::ValueRange]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_spreadsheet_values(spreadsheet_id, range, value_render_option: nil, date_time_render_option: nil, major_dimension: nil, quota_user: nil, fields: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v4/spreadsheets/{spreadsheetId}/values/{range}', options)
-          command.response_representation = Google::Apis::SheetsV4::ValueRange::Representation
-          command.response_class = Google::Apis::SheetsV4::ValueRange
+          command.response_representation = GoogleAPI::Apis::SheetsV4::ValueRange::Representation
+          command.response_class = GoogleAPI::Apis::SheetsV4::ValueRange
           command.params['spreadsheetId'] = spreadsheet_id unless spreadsheet_id.nil?
           command.params['range'] = range unless range.nil?
           command.query['valueRenderOption'] = value_render_option unless value_render_option.nil?
@@ -291,22 +291,22 @@ module Google
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SheetsV4::BatchGetValuesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SheetsV4::BatchGetValuesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SheetsV4::BatchGetValuesResponse]
+        # @return [GoogleAPI::Apis::SheetsV4::BatchGetValuesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def batch_get_spreadsheet_values(spreadsheet_id, ranges: nil, value_render_option: nil, date_time_render_option: nil, major_dimension: nil, quota_user: nil, fields: nil, options: nil, &block)
           command =  make_simple_command(:get, 'v4/spreadsheets/{spreadsheetId}/values:batchGet', options)
-          command.response_representation = Google::Apis::SheetsV4::BatchGetValuesResponse::Representation
-          command.response_class = Google::Apis::SheetsV4::BatchGetValuesResponse
+          command.response_representation = GoogleAPI::Apis::SheetsV4::BatchGetValuesResponse::Representation
+          command.response_class = GoogleAPI::Apis::SheetsV4::BatchGetValuesResponse
           command.params['spreadsheetId'] = spreadsheet_id unless spreadsheet_id.nil?
           command.query['ranges'] = ranges unless ranges.nil?
           command.query['valueRenderOption'] = value_render_option unless value_render_option.nil?
@@ -323,30 +323,30 @@ module Google
         # ValueRanges.
         # @param [String] spreadsheet_id
         #   The ID of the spreadsheet to update.
-        # @param [Google::Apis::SheetsV4::BatchUpdateValuesRequest] batch_update_values_request_object
+        # @param [GoogleAPI::Apis::SheetsV4::BatchUpdateValuesRequest] batch_update_values_request_object
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SheetsV4::BatchUpdateValuesResponse] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SheetsV4::BatchUpdateValuesResponse] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SheetsV4::BatchUpdateValuesResponse]
+        # @return [GoogleAPI::Apis::SheetsV4::BatchUpdateValuesResponse]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def batch_update_values(spreadsheet_id, batch_update_values_request_object = nil, quota_user: nil, fields: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v4/spreadsheets/{spreadsheetId}/values:batchUpdate', options)
-          command.request_representation = Google::Apis::SheetsV4::BatchUpdateValuesRequest::Representation
+          command.request_representation = GoogleAPI::Apis::SheetsV4::BatchUpdateValuesRequest::Representation
           command.request_object = batch_update_values_request_object
-          command.response_representation = Google::Apis::SheetsV4::BatchUpdateValuesResponse::Representation
-          command.response_class = Google::Apis::SheetsV4::BatchUpdateValuesResponse
+          command.response_representation = GoogleAPI::Apis::SheetsV4::BatchUpdateValuesResponse::Representation
+          command.response_class = GoogleAPI::Apis::SheetsV4::BatchUpdateValuesResponse
           command.params['spreadsheetId'] = spreadsheet_id unless spreadsheet_id.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -359,30 +359,30 @@ module Google
         #   The ID of the spreadsheet containing the sheet to copy.
         # @param [Fixnum] sheet_id
         #   The ID of the sheet to copy.
-        # @param [Google::Apis::SheetsV4::CopySheetToAnotherSpreadsheetRequest] copy_sheet_to_another_spreadsheet_request_object
+        # @param [GoogleAPI::Apis::SheetsV4::CopySheetToAnotherSpreadsheetRequest] copy_sheet_to_another_spreadsheet_request_object
         # @param [String] quota_user
         #   Available to use for quota purposes for server-side applications. Can be any
         #   arbitrary string assigned to a user, but should not exceed 40 characters.
         # @param [String] fields
         #   Selector specifying which fields to include in a partial response.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::SheetsV4::SheetProperties] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::SheetsV4::SheetProperties] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::SheetsV4::SheetProperties]
+        # @return [GoogleAPI::Apis::SheetsV4::SheetProperties]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def copy_spreadsheet(spreadsheet_id, sheet_id, copy_sheet_to_another_spreadsheet_request_object = nil, quota_user: nil, fields: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v4/spreadsheets/{spreadsheetId}/sheets/{sheetId}:copyTo', options)
-          command.request_representation = Google::Apis::SheetsV4::CopySheetToAnotherSpreadsheetRequest::Representation
+          command.request_representation = GoogleAPI::Apis::SheetsV4::CopySheetToAnotherSpreadsheetRequest::Representation
           command.request_object = copy_sheet_to_another_spreadsheet_request_object
-          command.response_representation = Google::Apis::SheetsV4::SheetProperties::Representation
-          command.response_class = Google::Apis::SheetsV4::SheetProperties
+          command.response_representation = GoogleAPI::Apis::SheetsV4::SheetProperties::Representation
+          command.response_class = GoogleAPI::Apis::SheetsV4::SheetProperties
           command.params['spreadsheetId'] = spreadsheet_id unless spreadsheet_id.nil?
           command.params['sheetId'] = sheet_id unless sheet_id.nil?
           command.query['quotaUser'] = quota_user unless quota_user.nil?

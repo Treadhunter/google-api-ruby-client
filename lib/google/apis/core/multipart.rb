@@ -14,7 +14,7 @@
 
 require 'hurley'
 
-module Google
+module GoogleAPI
   module Apis
     module Core
       # Part of a multipart request for holding JSON data
@@ -68,7 +68,7 @@ module Google
 
         # @param [String] boundary
         #   Multipart boundary
-        # @param [Google::Apis::Core::UploadIO] io
+        # @param [GoogleAPI::Apis::Core::UploadIO] io
         #   IO stream
         # @param [Hash] header
         #   Additional headers
@@ -148,20 +148,20 @@ Content-Transfer-Encoding: %s\r
         # @return [self]
         def add_json(body, content_id: nil)
           header = { :content_id => content_id }
-          @parts << Google::Apis::Core::JsonPart.new(@boundary, body, header)
+          @parts << GoogleAPI::Apis::Core::JsonPart.new(@boundary, body, header)
           self
         end
 
         # Append arbitrary data as a part
         #
-        # @param [Google::Apis::Core::UploadIO] upload_io
+        # @param [GoogleAPI::Apis::Core::UploadIO] upload_io
         #   IO stream
         # @param [String] content_id
         #   Optional unique ID of this part
         # @return [self]
         def add_upload(upload_io, content_id: nil)
           header = { :content_id => content_id }
-          @parts << Google::Apis::Core::FilePart.new(@boundary,
+          @parts << GoogleAPI::Apis::Core::FilePart.new(@boundary,
                                                      upload_io,
                                                      header)
           self

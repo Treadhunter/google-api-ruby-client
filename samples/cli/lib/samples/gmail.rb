@@ -26,7 +26,7 @@ module Samples
   #       --subject='Hello'
   #
   class Gmail < BaseCli
-    Gmail = Google::Apis::GmailV1
+    Gmail = GoogleAPI::Apis::GmailV1
 
     desc 'send TEXT', 'Send a message with the gmail API'
     method_option :to, type: :string, required: true

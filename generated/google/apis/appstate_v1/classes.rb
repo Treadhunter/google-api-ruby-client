@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AppstateV1
       
       # This is a JSON template for an app state resource.
       class GetResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The current app state version.
         # Corresponds to the JSON property `currentStateVersion`
@@ -62,11 +62,11 @@ module Google
       
       # This is a JSON template to convert a list-response for app state.
       class ListResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The app state data.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::AppstateV1::GetResponse>]
+        # @return [Array<GoogleAPI::Apis::AppstateV1::GetResponse>]
         attr_accessor :items
       
         # Uniquely identifies the type of this resource. Value is always the fixed
@@ -94,7 +94,7 @@ module Google
       
       # This is a JSON template for a requests which update app state
       class UpdateRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The new app state data that your application is trying to update with.
         # Corresponds to the JSON property `data`
@@ -120,7 +120,7 @@ module Google
       
       # This is a JSON template for an app state write result.
       class WriteResult
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The version of the data for this key on the server.
         # Corresponds to the JSON property `currentStateVersion`

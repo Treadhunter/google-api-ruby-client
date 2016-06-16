@@ -17,7 +17,7 @@ require 'google/apis/discovery_v1'
 
 # Extend the discovery API classes with additional data needed to make
 # code generation produce better results
-module Google
+module GoogleAPI
   module Apis
     module DiscoveryV1
       TYPE_MAP = {
@@ -115,7 +115,7 @@ module Google
         end
 
         def qualified_name
-          sprintf('Google::Apis::%s', module_name)
+          sprintf('GoogleAPI::Apis::%s', module_name)
         end
 
         def service_name

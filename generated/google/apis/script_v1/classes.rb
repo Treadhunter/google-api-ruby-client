@@ -18,7 +18,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ScriptV1
       
@@ -26,7 +26,7 @@ module Google
       # specified `script_id`. Executing a function on a script will return results
       # based on the implementation of the script.
       class ExecutionRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the function to execute in the given script. The name does not
         # include parentheses or parameters.
@@ -84,7 +84,7 @@ module Google
       # 4XX range with a different format for the response body. Client libraries will
       # automatically convert a 4XX response into an exception class.
       class Operation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This field is not used.
         # Corresponds to the JSON property `name`
@@ -106,7 +106,7 @@ module Google
         # throws an exception, the response body's `error` field will contain this `
         # Status` object.
         # Corresponds to the JSON property `error`
-        # @return [Google::Apis::ScriptV1::Status]
+        # @return [GoogleAPI::Apis::ScriptV1::Status]
         attr_accessor :error
       
         # If the script function returns successfully, this field will contain an `
@@ -134,7 +134,7 @@ module Google
       # throws an exception, the response body's `error` field will contain this `
       # Status` object.
       class Status
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The status code, which should be an enum value of google.rpc.Code.
         # Corresponds to the JSON property `code`
@@ -172,12 +172,12 @@ module Google
       # will contain a `Status` object. The `Status` object's `details` field will
       # contain an array with a single one of these `ExecutionError` objects.
       class ExecutionError
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An array of objects that provide a stack trace through the script to show
         # where the execution failed, with the deepest call first.
         # Corresponds to the JSON property `scriptStackTraceElements`
-        # @return [Array<Google::Apis::ScriptV1::ScriptStackTraceElement>]
+        # @return [Array<GoogleAPI::Apis::ScriptV1::ScriptStackTraceElement>]
         attr_accessor :script_stack_trace_elements
       
         # The error message thrown by Apps Script, usually localized into the user's
@@ -206,7 +206,7 @@ module Google
       
       # A stack trace through the script that shows where the execution failed.
       class ScriptStackTraceElement
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the function that failed.
         # Corresponds to the JSON property `function`
@@ -234,7 +234,7 @@ module Google
       # returns successfully, the response body's `response` field will contain this `
       # ExecutionResponse` object.
       class ExecutionResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The return value of the script function. The type will match the type returned
         # in Apps Script. Functions called through the Execution API cannot return Apps

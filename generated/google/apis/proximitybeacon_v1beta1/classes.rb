@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ProximitybeaconV1beta1
       
       # Details of a beacon device.
       class Beacon
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Resource name of this beacon. A beacon name has the format "beacons/N!beaconId"
         # where the beaconId is the base16 ID broadcast by the beacon and N is a code
@@ -37,7 +37,7 @@ module Google
       
         # Defines a unique identifier of a beacon as broadcast by the device.
         # Corresponds to the JSON property `advertisedId`
-        # @return [Google::Apis::ProximitybeaconV1beta1::AdvertisedId]
+        # @return [GoogleAPI::Apis::ProximitybeaconV1beta1::AdvertisedId]
         attr_accessor :advertised_id
       
         # Current status of the beacon. Required.
@@ -72,13 +72,13 @@ module Google
         # NormalizeLatLng(180.0, 10.0) assert (-90.0, 10.0) == NormalizeLatLng(270.0, 10.
         # 0) assert (90.0, 10.0) == NormalizeLatLng(-270.0, 10.0)
         # Corresponds to the JSON property `latLng`
-        # @return [Google::Apis::ProximitybeaconV1beta1::LatLng]
+        # @return [GoogleAPI::Apis::ProximitybeaconV1beta1::LatLng]
         attr_accessor :lat_lng
       
         # Indoor level, a human-readable string as returned by Google Maps APIs, useful
         # to indicate which floor of a building a beacon is located on.
         # Corresponds to the JSON property `indoorLevel`
-        # @return [Google::Apis::ProximitybeaconV1beta1::IndoorLevel]
+        # @return [GoogleAPI::Apis::ProximitybeaconV1beta1::IndoorLevel]
         attr_accessor :indoor_level
       
         # Expected location stability. This is set when the beacon is registered or
@@ -117,7 +117,7 @@ module Google
         # generated. See [the Eddystone specification](https://github.com/google/
         # eddystone/tree/master/eddystone-eid) at GitHub.
         # Corresponds to the JSON property `ephemeralIdRegistration`
-        # @return [Google::Apis::ProximitybeaconV1beta1::EphemeralIdRegistration]
+        # @return [GoogleAPI::Apis::ProximitybeaconV1beta1::EphemeralIdRegistration]
         attr_accessor :ephemeral_id_registration
       
         # Some beacons may require a user to provide an authorization key before
@@ -154,7 +154,7 @@ module Google
       
       # Defines a unique identifier of a beacon as broadcast by the device.
       class AdvertisedId
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Specifies the identifier type. Required.
         # Corresponds to the JSON property `type`
@@ -201,7 +201,7 @@ module Google
       # NormalizeLatLng(180.0, 10.0) assert (-90.0, 10.0) == NormalizeLatLng(270.0, 10.
       # 0) assert (90.0, 10.0) == NormalizeLatLng(-270.0, 10.0)
       class LatLng
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The latitude in degrees. It must be in the range [-90.0, +90.0].
         # Corresponds to the JSON property `latitude`
@@ -227,7 +227,7 @@ module Google
       # Indoor level, a human-readable string as returned by Google Maps APIs, useful
       # to indicate which floor of a building a beacon is located on.
       class IndoorLevel
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of this level.
         # Corresponds to the JSON property `name`
@@ -262,7 +262,7 @@ module Google
       # generated. See [the Eddystone specification](https://github.com/google/
       # eddystone/tree/master/eddystone-eid) at GitHub.
       class EphemeralIdRegistration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The beacon's public key used for the Elliptic curve Diffie-Hellman key
         # exchange. When this field is populated, `service_ecdh_public_key` must also be
@@ -333,7 +333,7 @@ module Google
       # protobuf.Empty) returns (google.protobuf.Empty); ` The JSON representation for
       # `Empty` is empty JSON object ````.
       class Empty
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         def initialize(**args)
            update!(**args)
@@ -346,11 +346,11 @@ module Google
       
       # Response that contains list beacon results and pagination help.
       class ListBeaconsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The beacons that matched the search criteria.
         # Corresponds to the JSON property `beacons`
-        # @return [Array<Google::Apis::ProximitybeaconV1beta1::Beacon>]
+        # @return [Array<GoogleAPI::Apis::ProximitybeaconV1beta1::Beacon>]
         attr_accessor :beacons
       
         # An opaque pagination token that the client may provide in their next request
@@ -379,7 +379,7 @@ module Google
       
       # Project-specific data associated with a beacon.
       class BeaconAttachment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Resource name of this attachment. Attachment names have the format: beacons/
         # beacon_id/attachments/attachment_id. Leave this empty on creation.
@@ -416,11 +416,11 @@ module Google
       
       # Response to ListBeaconAttachments that contains the requested attachments.
       class ListBeaconAttachmentsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The attachments that corresponded to the request params.
         # Corresponds to the JSON property `attachments`
-        # @return [Array<Google::Apis::ProximitybeaconV1beta1::BeaconAttachment>]
+        # @return [Array<GoogleAPI::Apis::ProximitybeaconV1beta1::BeaconAttachment>]
         attr_accessor :attachments
       
         def initialize(**args)
@@ -435,7 +435,7 @@ module Google
       
       # Response for a request to delete attachments.
       class DeleteAttachmentsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of attachments that were deleted.
         # Corresponds to the JSON property `numDeleted`
@@ -454,11 +454,11 @@ module Google
       
       # Response to ListNamespacesRequest that contains all the project's namespaces.
       class ListNamespacesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The attachments that corresponded to the request params.
         # Corresponds to the JSON property `namespaces`
-        # @return [Array<Google::Apis::ProximitybeaconV1beta1::Namespace>]
+        # @return [Array<GoogleAPI::Apis::ProximitybeaconV1beta1::Namespace>]
         attr_accessor :namespaces
       
         def initialize(**args)
@@ -475,7 +475,7 @@ module Google
       # created under it. Each namespace is globally unique, and owned by one project
       # which is the only project that can create attachments under it.
       class Namespace
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Resource name of this namespace. Namespaces names have the format: namespaces/
         # namespace.
@@ -505,7 +505,7 @@ module Google
       # exchange. See [the Eddystone specification](https://github.com/google/
       # eddystone/tree/master/eddystone-eid) at GitHub.
       class EphemeralIdRegistrationParams
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The beacon service's public key for use by a beacon to derive its Identity Key
         # using Elliptic Curve Diffie-Hellman key exchange.
@@ -539,11 +539,11 @@ module Google
       
       # Response that contains the requested diagnostics.
       class ListDiagnosticsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The diagnostics matching the given request.
         # Corresponds to the JSON property `diagnostics`
-        # @return [Array<Google::Apis::ProximitybeaconV1beta1::Diagnostics>]
+        # @return [Array<GoogleAPI::Apis::ProximitybeaconV1beta1::Diagnostics>]
         attr_accessor :diagnostics
       
         # Token that can be used for pagination. Returned only if the request matches
@@ -565,7 +565,7 @@ module Google
       
       # Diagnostics for a single beacon.
       class Diagnostics
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Resource name of the beacon. For Eddystone-EID beacons, this may be the beacon'
         # s current EID, or the beacon's "stable" Eddystone-UID.
@@ -581,7 +581,7 @@ module Google
         # anniversary date. Related types are google.type.TimeOfDay and `google.protobuf.
         # Timestamp`.
         # Corresponds to the JSON property `estimatedLowBatteryDate`
-        # @return [Google::Apis::ProximitybeaconV1beta1::Date]
+        # @return [GoogleAPI::Apis::ProximitybeaconV1beta1::Date]
         attr_accessor :estimated_low_battery_date
       
         # An unordered list of Alerts that the beacon has.
@@ -609,7 +609,7 @@ module Google
       # anniversary date. Related types are google.type.TimeOfDay and `google.protobuf.
       # Timestamp`.
       class Date
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
         # Corresponds to the JSON property `year`
@@ -642,11 +642,11 @@ module Google
       # Request for beacon and attachment information about beacons that a mobile
       # client has encountered "in the wild".
       class GetInfoForObservedBeaconsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The beacons that the client has encountered. At least one must be given.
         # Corresponds to the JSON property `observations`
-        # @return [Array<Google::Apis::ProximitybeaconV1beta1::Observation>]
+        # @return [Array<GoogleAPI::Apis::ProximitybeaconV1beta1::Observation>]
         attr_accessor :observations
       
         # Specifies what kind of attachments to include in the response. When given, the
@@ -670,11 +670,11 @@ module Google
       
       # Represents one beacon observed once.
       class Observation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Defines a unique identifier of a beacon as broadcast by the device.
         # Corresponds to the JSON property `advertisedId`
-        # @return [Google::Apis::ProximitybeaconV1beta1::AdvertisedId]
+        # @return [GoogleAPI::Apis::ProximitybeaconV1beta1::AdvertisedId]
         attr_accessor :advertised_id
       
         # The array of telemetry bytes received from the beacon. The server is
@@ -703,12 +703,12 @@ module Google
       
       # Information about the requested beacons, optionally including attachment data.
       class GetInfoForObservedBeaconsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Public information about beacons. May be empty if the request matched no
         # beacons.
         # Corresponds to the JSON property `beacons`
-        # @return [Array<Google::Apis::ProximitybeaconV1beta1::BeaconInfo>]
+        # @return [Array<GoogleAPI::Apis::ProximitybeaconV1beta1::BeaconInfo>]
         attr_accessor :beacons
       
         def initialize(**args)
@@ -724,11 +724,11 @@ module Google
       # A subset of beacon information served via the `beaconinfo.getforobserved`
       # method, which you call when users of your app encounter your beacons.
       class BeaconInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Defines a unique identifier of a beacon as broadcast by the device.
         # Corresponds to the JSON property `advertisedId`
-        # @return [Google::Apis::ProximitybeaconV1beta1::AdvertisedId]
+        # @return [GoogleAPI::Apis::ProximitybeaconV1beta1::AdvertisedId]
         attr_accessor :advertised_id
       
         # The name under which the beacon is registered.
@@ -739,7 +739,7 @@ module Google
         # Attachments matching the type(s) requested. May be empty if no attachment
         # types were requested, or if none matched.
         # Corresponds to the JSON property `attachments`
-        # @return [Array<Google::Apis::ProximitybeaconV1beta1::AttachmentInfo>]
+        # @return [Array<GoogleAPI::Apis::ProximitybeaconV1beta1::AttachmentInfo>]
         attr_accessor :attachments
       
         def initialize(**args)
@@ -757,7 +757,7 @@ module Google
       # A subset of attachment information served via the `beaconinfo.getforobserved`
       # method, used when your users encounter your beacons.
       class AttachmentInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Specifies what kind of attachment this is. Tells a client how to interpret the
         # `data` field. Format is namespace/type, for example scrupulous-wombat-12345/

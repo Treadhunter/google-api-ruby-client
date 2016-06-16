@@ -17,7 +17,7 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module DiscoveryV1
       # APIs Discovery Service
@@ -28,11 +28,11 @@ module Google
       # @example
       #    require 'google/apis/discovery_v1'
       #
-      #    Discovery = Google::Apis::DiscoveryV1 # Alias the module
+      #    Discovery = GoogleAPI::Apis::DiscoveryV1 # Alias the module
       #    service = Discovery::DiscoveryService.new
       #
       # @see https://developers.google.com/discovery/
-      class DiscoveryService < Google::Apis::Core::BaseService
+      class DiscoveryService < GoogleAPI::Apis::Core::BaseService
         # @return [String]
         #  API key. Your API key identifies your project and provides you with API access,
         #  quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -67,22 +67,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DiscoveryV1::RestDescription] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DiscoveryV1::RestDescription] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DiscoveryV1::RestDescription]
+        # @return [GoogleAPI::Apis::DiscoveryV1::RestDescription]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def get_rest_api(api, version, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'apis/{api}/{version}/rest', options)
-          command.response_representation = Google::Apis::DiscoveryV1::RestDescription::Representation
-          command.response_class = Google::Apis::DiscoveryV1::RestDescription
+          command.response_representation = GoogleAPI::Apis::DiscoveryV1::RestDescription::Representation
+          command.response_class = GoogleAPI::Apis::DiscoveryV1::RestDescription
           command.params['api'] = api unless api.nil?
           command.params['version'] = version unless version.nil?
           command.query['fields'] = fields unless fields.nil?
@@ -105,22 +105,22 @@ module Google
         # @param [String] user_ip
         #   IP address of the site where the request originates. Use this if you want to
         #   enforce per-user limits.
-        # @param [Google::Apis::RequestOptions] options
+        # @param [GoogleAPI::Apis::RequestOptions] options
         #   Request-specific options
         #
         # @yield [result, err] Result & error if block supplied
-        # @yieldparam result [Google::Apis::DiscoveryV1::DirectoryList] parsed result object
+        # @yieldparam result [GoogleAPI::Apis::DiscoveryV1::DirectoryList] parsed result object
         # @yieldparam err [StandardError] error object if request failed
         #
-        # @return [Google::Apis::DiscoveryV1::DirectoryList]
+        # @return [GoogleAPI::Apis::DiscoveryV1::DirectoryList]
         #
-        # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
-        # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
-        # @raise [Google::Apis::AuthorizationError] Authorization is required
+        # @raise [GoogleAPI::Apis::ServerError] An error occurred on the server and the request can be retried
+        # @raise [GoogleAPI::Apis::ClientError] The request is invalid and should not be retried without modification
+        # @raise [GoogleAPI::Apis::AuthorizationError] Authorization is required
         def list_apis(name: nil, preferred: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:get, 'apis', options)
-          command.response_representation = Google::Apis::DiscoveryV1::DirectoryList::Representation
-          command.response_class = Google::Apis::DiscoveryV1::DirectoryList
+          command.response_representation = GoogleAPI::Apis::DiscoveryV1::DirectoryList::Representation
+          command.response_class = GoogleAPI::Apis::DiscoveryV1::DirectoryList
           command.query['name'] = name unless name.nil?
           command.query['preferred'] = preferred unless preferred.nil?
           command.query['fields'] = fields unless fields.nil?

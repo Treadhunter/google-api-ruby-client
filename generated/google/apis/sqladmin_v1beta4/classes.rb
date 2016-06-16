@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module SqladminV1beta4
       
       # An entry for an Access Control list.
       class AclEntry
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The time when this access control entry expires in RFC 3339 format, for
         # example 2012-11-15T16:19:00.094Z.
@@ -62,7 +62,7 @@ module Google
       
       # Database instance backup configuration.
       class BackupConfiguration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether binary log is enabled. If backup configuration is disabled, binary log
         # must be disabled as well.
@@ -103,7 +103,7 @@ module Google
       
       # A database instance backup run resource.
       class BackupRun
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The time the backup operation completed in UTC timezone in RFC 3339 format,
         # for example 2012-11-15T16:19:00.094Z.
@@ -119,7 +119,7 @@ module Google
       
         # Database instance operation error.
         # Corresponds to the JSON property `error`
-        # @return [Google::Apis::SqladminV1beta4::OperationError]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::OperationError]
         attr_accessor :error
       
         # A unique identifier for this backup run. Note that this is unique only within
@@ -181,11 +181,11 @@ module Google
       
       # Backup run list results.
       class ListBackupRunsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of backup runs in reverse chronological order of the enqueued time.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::SqladminV1beta4::BackupRun>]
+        # @return [Array<GoogleAPI::Apis::SqladminV1beta4::BackupRun>]
         attr_accessor :items
       
         # This is always sql#backupRunsList.
@@ -213,7 +213,7 @@ module Google
       
       # Binary log coordinates.
       class BinLogCoordinates
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Name of the binary log file for a Cloud SQL instance.
         # Corresponds to the JSON property `binLogFileName`
@@ -244,11 +244,11 @@ module Google
       
       # Database instance clone context.
       class CloneContext
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Binary log coordinates.
         # Corresponds to the JSON property `binLogCoordinates`
-        # @return [Google::Apis::SqladminV1beta4::BinLogCoordinates]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::BinLogCoordinates]
         attr_accessor :bin_log_coordinates
       
         # Name of the Cloud SQL instance to be created as a clone.
@@ -275,7 +275,7 @@ module Google
       
       # A database resource inside a Cloud SQL instance.
       class Database
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The MySQL charset value.
         # Corresponds to the JSON property `charset`
@@ -338,7 +338,7 @@ module Google
       
       # MySQL flags for Cloud SQL instances.
       class DatabaseFlags
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the flag. These flags are passed at instance startup, so include
         # both MySQL server options and MySQL system variables. Flags should be
@@ -368,7 +368,7 @@ module Google
       
       # A Cloud SQL instance resource.
       class DatabaseInstance
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # FIRST_GEN: Basic Cloud SQL instance that runs in a Google-managed container.
         # SECOND_GEN: A newer Cloud SQL backend that runs in a Compute Engine VM.
@@ -401,7 +401,7 @@ module Google
         # The name and status of the failover replica. This property is applicable only
         # to Second Generation instances.
         # Corresponds to the JSON property `failoverReplica`
-        # @return [Google::Apis::SqladminV1beta4::DatabaseInstance::FailoverReplica]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::DatabaseInstance::FailoverReplica]
         attr_accessor :failover_replica
       
         # The instance type. This can be one of the following.
@@ -414,7 +414,7 @@ module Google
       
         # The assigned IP addresses for the instance.
         # Corresponds to the JSON property `ipAddresses`
-        # @return [Array<Google::Apis::SqladminV1beta4::IpMapping>]
+        # @return [Array<GoogleAPI::Apis::SqladminV1beta4::IpMapping>]
         attr_accessor :ip_addresses
       
         # The IPv6 address assigned to the instance. This property is applicable only to
@@ -445,7 +445,7 @@ module Google
       
         # On-premises instance configuration.
         # Corresponds to the JSON property `onPremisesConfiguration`
-        # @return [Google::Apis::SqladminV1beta4::OnPremisesConfiguration]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::OnPremisesConfiguration]
         attr_accessor :on_premises_configuration
       
         # The project ID of the project containing the Cloud SQL instance. The Google
@@ -464,7 +464,7 @@ module Google
       
         # Read-replica configuration for connecting to the master.
         # Corresponds to the JSON property `replicaConfiguration`
-        # @return [Google::Apis::SqladminV1beta4::ReplicaConfiguration]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::ReplicaConfiguration]
         attr_accessor :replica_configuration
       
         # The replicas of the instance.
@@ -479,7 +479,7 @@ module Google
       
         # SslCerts Resource
         # Corresponds to the JSON property `serverCaCert`
-        # @return [Google::Apis::SqladminV1beta4::SslCert]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::SslCert]
         attr_accessor :server_ca_cert
       
         # The service account email address assigned to the instance. This property is
@@ -490,7 +490,7 @@ module Google
       
         # Database instance settings.
         # Corresponds to the JSON property `settings`
-        # @return [Google::Apis::SqladminV1beta4::Settings]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Settings]
         attr_accessor :settings
       
         # The current serving state of the Cloud SQL instance. This can be one of the
@@ -545,7 +545,7 @@ module Google
         # The name and status of the failover replica. This property is applicable only
         # to Second Generation instances.
         class FailoverReplica
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The availability status of the failover replica. A false status indicates that
           # the failover replica is out of sync. The master can only failover to the
@@ -574,11 +574,11 @@ module Google
       
       # Database list response.
       class ListDatabasesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of database resources in the instance.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::SqladminV1beta4::Database>]
+        # @return [Array<GoogleAPI::Apis::SqladminV1beta4::Database>]
         attr_accessor :items
       
         # This is always sql#databasesList.
@@ -599,11 +599,11 @@ module Google
       
       # Database instance export context.
       class ExportContext
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Options for exporting data as CSV.
         # Corresponds to the JSON property `csvExportOptions`
-        # @return [Google::Apis::SqladminV1beta4::ExportContext::CsvExportOptions]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::ExportContext::CsvExportOptions]
         attr_accessor :csv_export_options
       
         # Databases (for example, guestbook) from which the export is made. If fileType
@@ -629,7 +629,7 @@ module Google
       
         # Options for exporting data as SQL statements.
         # Corresponds to the JSON property `sqlExportOptions`
-        # @return [Google::Apis::SqladminV1beta4::ExportContext::SqlExportOptions]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::ExportContext::SqlExportOptions]
         attr_accessor :sql_export_options
       
         # The path to the file in Google Cloud Storage where the export will be stored.
@@ -656,7 +656,7 @@ module Google
         
         # Options for exporting data as CSV.
         class CsvExportOptions
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The select query used to extract the data.
           # Corresponds to the JSON property `selectQuery`
@@ -675,7 +675,7 @@ module Google
         
         # Options for exporting data as SQL statements.
         class SqlExportOptions
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Export only schemas.
           # Corresponds to the JSON property `schemaOnly`
@@ -703,7 +703,7 @@ module Google
       
       # Database instance failover context.
       class FailoverContext
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This is always sql#failoverContext.
         # Corresponds to the JSON property `kind`
@@ -729,7 +729,7 @@ module Google
       
       # A Google Cloud SQL service flag resource.
       class Flag
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # For STRING flags, a list of strings that the value can be set to.
         # Corresponds to the JSON property `allowedStringValues`
@@ -796,11 +796,11 @@ module Google
       
       # Flags list response.
       class ListFlagsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of flags.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::SqladminV1beta4::Flag>]
+        # @return [Array<GoogleAPI::Apis::SqladminV1beta4::Flag>]
         attr_accessor :items
       
         # This is always sql#flagsList.
@@ -821,11 +821,11 @@ module Google
       
       # Database instance import context.
       class ImportContext
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Options for importing data as CSV.
         # Corresponds to the JSON property `csvImportOptions`
-        # @return [Google::Apis::SqladminV1beta4::ImportContext::CsvImportOptions]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::ImportContext::CsvImportOptions]
         attr_accessor :csv_import_options
       
         # The database (for example, guestbook) to which the import is made. If fileType
@@ -869,7 +869,7 @@ module Google
         
         # Options for importing data as CSV.
         class CsvImportOptions
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The columns to which CSV data is imported. If not specified, all columns of
           # the database table are loaded with CSV data.
@@ -896,11 +896,11 @@ module Google
       
       # Database instance clone request.
       class CloneInstancesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Database instance clone context.
         # Corresponds to the JSON property `cloneContext`
-        # @return [Google::Apis::SqladminV1beta4::CloneContext]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::CloneContext]
         attr_accessor :clone_context
       
         def initialize(**args)
@@ -915,11 +915,11 @@ module Google
       
       # Database instance export request.
       class ExportInstancesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Database instance export context.
         # Corresponds to the JSON property `exportContext`
-        # @return [Google::Apis::SqladminV1beta4::ExportContext]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::ExportContext]
         attr_accessor :export_context
       
         def initialize(**args)
@@ -934,11 +934,11 @@ module Google
       
       # Instance failover request.
       class InstancesFailoverRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Database instance failover context.
         # Corresponds to the JSON property `failoverContext`
-        # @return [Google::Apis::SqladminV1beta4::FailoverContext]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::FailoverContext]
         attr_accessor :failover_context
       
         def initialize(**args)
@@ -953,11 +953,11 @@ module Google
       
       # Database instance import request.
       class ImportInstancesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Database instance import context.
         # Corresponds to the JSON property `importContext`
-        # @return [Google::Apis::SqladminV1beta4::ImportContext]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::ImportContext]
         attr_accessor :import_context
       
         def initialize(**args)
@@ -972,11 +972,11 @@ module Google
       
       # Database instances list response.
       class ListInstancesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of database instance resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::SqladminV1beta4::DatabaseInstance>]
+        # @return [Array<GoogleAPI::Apis::SqladminV1beta4::DatabaseInstance>]
         attr_accessor :items
       
         # This is always sql#instancesList.
@@ -1004,11 +1004,11 @@ module Google
       
       # Database instance restore backup request.
       class RestoreInstancesBackupRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Database instance restore from backup context.
         # Corresponds to the JSON property `restoreBackupContext`
-        # @return [Google::Apis::SqladminV1beta4::RestoreBackupContext]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::RestoreBackupContext]
         attr_accessor :restore_backup_context
       
         def initialize(**args)
@@ -1023,13 +1023,13 @@ module Google
       
       # IP Management configuration.
       class IpConfiguration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of external networks that are allowed to connect to the instance
         # using the IP. In CIDR notation, also known as 'slash' notation (e.g. 192.168.
         # 100.0/24).
         # Corresponds to the JSON property `authorizedNetworks`
-        # @return [Array<Google::Apis::SqladminV1beta4::AclEntry>]
+        # @return [Array<GoogleAPI::Apis::SqladminV1beta4::AclEntry>]
         attr_accessor :authorized_networks
       
         # Whether the instance should be assigned an IP address or not.
@@ -1059,7 +1059,7 @@ module Google
       
       # Database instance IP Mapping.
       class IpMapping
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The IP address assigned.
         # Corresponds to the JSON property `ipAddress`
@@ -1090,7 +1090,7 @@ module Google
       # available, the instance will be located as close as possible within the region.
       # Only one location may be specified.
       class LocationPreference
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The AppEngine application to follow, it must be in the same region as the
         # Cloud SQL instance.
@@ -1123,7 +1123,7 @@ module Google
       # Maintenance window. This specifies when a v2 Cloud SQL instance should
       # preferably be restarted for system maintenance puruposes.
       class MaintenanceWindow
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # day of week (1-7), starting on Monday.
         # Corresponds to the JSON property `day`
@@ -1160,7 +1160,7 @@ module Google
       
       # Read-replica configuration specific to MySQL databases.
       class MySqlReplicaConfiguration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # PEM representation of the trusted CA's x509 certificate.
         # Corresponds to the JSON property `caCertificate`
@@ -1246,7 +1246,7 @@ module Google
       
       # On-premises instance configuration.
       class OnPremisesConfiguration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The host and port of the on-premises instance in host:port format
         # Corresponds to the JSON property `hostPort`
@@ -1273,7 +1273,7 @@ module Google
       # such as create, delete, and restart. Operations resources are created in
       # response to operations that were initiated; you never create them directly.
       class Operation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The time this operation finished in UTC timezone in RFC 3339 format, for
         # example 2012-11-15T16:19:00.094Z.
@@ -1283,17 +1283,17 @@ module Google
       
         # Database instance operation errors list wrapper.
         # Corresponds to the JSON property `error`
-        # @return [Google::Apis::SqladminV1beta4::OperationErrors]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::OperationErrors]
         attr_accessor :error
       
         # Database instance export context.
         # Corresponds to the JSON property `exportContext`
-        # @return [Google::Apis::SqladminV1beta4::ExportContext]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::ExportContext]
         attr_accessor :export_context
       
         # Database instance import context.
         # Corresponds to the JSON property `importContext`
-        # @return [Google::Apis::SqladminV1beta4::ImportContext]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::ImportContext]
         attr_accessor :import_context
       
         # The time this operation was enqueued in UTC timezone in RFC 3339 format, for
@@ -1383,7 +1383,7 @@ module Google
       
       # Database instance operation error.
       class OperationError
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Identifies the specific error that occurred.
         # Corresponds to the JSON property `code`
@@ -1414,11 +1414,11 @@ module Google
       
       # Database instance operation errors list wrapper.
       class OperationErrors
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of errors encountered while processing this operation.
         # Corresponds to the JSON property `errors`
-        # @return [Array<Google::Apis::SqladminV1beta4::OperationError>]
+        # @return [Array<GoogleAPI::Apis::SqladminV1beta4::OperationError>]
         attr_accessor :errors
       
         # This is always sql#operationErrors.
@@ -1439,11 +1439,11 @@ module Google
       
       # Database instance list operations response.
       class ListOperationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of operation resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::SqladminV1beta4::Operation>]
+        # @return [Array<GoogleAPI::Apis::SqladminV1beta4::Operation>]
         attr_accessor :items
       
         # This is always sql#operationsList.
@@ -1471,7 +1471,7 @@ module Google
       
       # Read-replica configuration for connecting to the master.
       class ReplicaConfiguration
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Specifies if the replica is the failover target. If the field is set to true
         # the replica will be designated as a failover replica. In case the master
@@ -1491,7 +1491,7 @@ module Google
       
         # Read-replica configuration specific to MySQL databases.
         # Corresponds to the JSON property `mysqlReplicaConfiguration`
-        # @return [Google::Apis::SqladminV1beta4::MySqlReplicaConfiguration]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::MySqlReplicaConfiguration]
         attr_accessor :mysql_replica_configuration
       
         def initialize(**args)
@@ -1508,7 +1508,7 @@ module Google
       
       # Database instance restore from backup context.
       class RestoreBackupContext
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The ID of the backup run to restore from.
         # Corresponds to the JSON property `backupRunId`
@@ -1539,7 +1539,7 @@ module Google
       
       # Database instance settings.
       class Settings
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The activation policy for this instance. This specifies when the instance
         # should be activated and is applicable only when the instance state is RUNNABLE.
@@ -1560,7 +1560,7 @@ module Google
       
         # Database instance backup configuration.
         # Corresponds to the JSON property `backupConfiguration`
-        # @return [Google::Apis::SqladminV1beta4::BackupConfiguration]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::BackupConfiguration]
         attr_accessor :backup_configuration
       
         # Configuration specific to read replica instances. Indicates whether database
@@ -1585,7 +1585,7 @@ module Google
       
         # The database flags passed to the instance at startup.
         # Corresponds to the JSON property `databaseFlags`
-        # @return [Array<Google::Apis::SqladminV1beta4::DatabaseFlags>]
+        # @return [Array<GoogleAPI::Apis::SqladminV1beta4::DatabaseFlags>]
         attr_accessor :database_flags
       
         # Configuration specific to read replica instances. Indicates whether
@@ -1597,7 +1597,7 @@ module Google
       
         # IP Management configuration.
         # Corresponds to the JSON property `ipConfiguration`
-        # @return [Google::Apis::SqladminV1beta4::IpConfiguration]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::IpConfiguration]
         attr_accessor :ip_configuration
       
         # This is always sql#settings.
@@ -1611,13 +1611,13 @@ module Google
         # available, the instance will be located as close as possible within the region.
         # Only one location may be specified.
         # Corresponds to the JSON property `locationPreference`
-        # @return [Google::Apis::SqladminV1beta4::LocationPreference]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::LocationPreference]
         attr_accessor :location_preference
       
         # Maintenance window. This specifies when a v2 Cloud SQL instance should
         # preferably be restarted for system maintenance puruposes.
         # Corresponds to the JSON property `maintenanceWindow`
-        # @return [Google::Apis::SqladminV1beta4::MaintenanceWindow]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::MaintenanceWindow]
         attr_accessor :maintenance_window
       
         # The pricing plan for this instance. This can be either PER_USE or PACKAGE.
@@ -1681,7 +1681,7 @@ module Google
       
       # SslCerts Resource
       class SslCert
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # PEM representation.
         # Corresponds to the JSON property `cert`
@@ -1750,11 +1750,11 @@ module Google
       
       # SslCertDetail.
       class SslCertDetail
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # SslCerts Resource
         # Corresponds to the JSON property `certInfo`
-        # @return [Google::Apis::SqladminV1beta4::SslCert]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::SslCert]
         attr_accessor :cert_info
       
         # The private key for the client cert, in pem format. Keep private in order to
@@ -1776,7 +1776,7 @@ module Google
       
       # SslCerts create ephemeral certificate request.
       class SslCertsCreateEphemeralRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # PEM encoded public key to include in the signed certificate.
         # Corresponds to the JSON property `public_key`
@@ -1795,7 +1795,7 @@ module Google
       
       # SslCerts insert request.
       class InsertSslCertsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # User supplied name. Must be a distinct name from the other certificates for
         # this instance. New certificates will not be usable until the instance is
@@ -1816,11 +1816,11 @@ module Google
       
       # SslCert insert response.
       class InsertSslCertsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # SslCertDetail.
         # Corresponds to the JSON property `clientCert`
-        # @return [Google::Apis::SqladminV1beta4::SslCertDetail]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::SslCertDetail]
         attr_accessor :client_cert
       
         # This is always sql#sslCertsInsert.
@@ -1832,12 +1832,12 @@ module Google
         # such as create, delete, and restart. Operations resources are created in
         # response to operations that were initiated; you never create them directly.
         # Corresponds to the JSON property `operation`
-        # @return [Google::Apis::SqladminV1beta4::Operation]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::Operation]
         attr_accessor :operation
       
         # SslCerts Resource
         # Corresponds to the JSON property `serverCaCert`
-        # @return [Google::Apis::SqladminV1beta4::SslCert]
+        # @return [GoogleAPI::Apis::SqladminV1beta4::SslCert]
         attr_accessor :server_ca_cert
       
         def initialize(**args)
@@ -1855,11 +1855,11 @@ module Google
       
       # SslCerts list response.
       class ListSslCertsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of client certificates for the instance.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::SqladminV1beta4::SslCert>]
+        # @return [Array<GoogleAPI::Apis::SqladminV1beta4::SslCert>]
         attr_accessor :items
       
         # This is always sql#sslCertsList.
@@ -1880,7 +1880,7 @@ module Google
       
       # A Google Cloud SQL service tier resource.
       class Tier
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The maximum disk size of this tier in bytes.
         # Corresponds to the JSON property `DiskQuota`
@@ -1925,11 +1925,11 @@ module Google
       
       # Tiers list response.
       class ListTiersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of tiers.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::SqladminV1beta4::Tier>]
+        # @return [Array<GoogleAPI::Apis::SqladminV1beta4::Tier>]
         attr_accessor :items
       
         # This is always sql#tiersList.
@@ -1950,7 +1950,7 @@ module Google
       
       # A Cloud SQL user resource.
       class User
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # HTTP 1.1 Entity tag for the resource.
         # Corresponds to the JSON property `etag`
@@ -2011,11 +2011,11 @@ module Google
       
       # User list response.
       class ListUsersResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of user resources in the instance.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::SqladminV1beta4::User>]
+        # @return [Array<GoogleAPI::Apis::SqladminV1beta4::User>]
         attr_accessor :items
       
         # This is always sql#usersList.

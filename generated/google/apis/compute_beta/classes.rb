@@ -18,13 +18,13 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module ComputeBeta
       
       # An access configuration attached to an instance's network interface.
       class AccessConfig
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Type of the resource. Always compute#accessConfig for access
         # configs.
@@ -66,7 +66,7 @@ module Google
       
       # A reserved address resource.
       class Address
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The static external IP address represented by this resource.
         # Corresponds to the JSON property `address`
@@ -150,7 +150,7 @@ module Google
       
       # 
       class AddressAggregatedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Unique identifier for the resource; defined by the server.
         # Corresponds to the JSON property `id`
@@ -159,7 +159,7 @@ module Google
       
         # [Output Only] A map of scoped address lists.
         # Corresponds to the JSON property `items`
-        # @return [Hash<String,Google::Apis::ComputeBeta::AddressesScopedList>]
+        # @return [Hash<String,GoogleAPI::Apis::ComputeBeta::AddressesScopedList>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#addressAggregatedList for
@@ -198,7 +198,7 @@ module Google
       
       # Contains a list of addresses.
       class AddressList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -208,7 +208,7 @@ module Google
       
         # [Output Only] A list of addresses.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::Address>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Address>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#addressList for lists of
@@ -247,17 +247,17 @@ module Google
       
       # 
       class AddressesScopedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] List of addresses contained in this scope.
         # Corresponds to the JSON property `addresses`
-        # @return [Array<Google::Apis::ComputeBeta::Address>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Address>]
         attr_accessor :addresses
       
         # [Output Only] Informational warning which replaces the list of addresses when
         # the list is empty.
         # Corresponds to the JSON property `warning`
-        # @return [Google::Apis::ComputeBeta::AddressesScopedList::Warning]
+        # @return [GoogleAPI::Apis::ComputeBeta::AddressesScopedList::Warning]
         attr_accessor :warning
       
         def initialize(**args)
@@ -273,7 +273,7 @@ module Google
         # [Output Only] Informational warning which replaces the list of addresses when
         # the list is empty.
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -284,7 +284,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ComputeBeta::AddressesScopedList::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::AddressesScopedList::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -305,7 +305,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -338,7 +338,7 @@ module Google
       
       # An instance-attached disk resource.
       class AttachedDisk
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Specifies whether the disk will be auto-deleted when the instance is deleted (
         # but not when the disk is detached from the instance).
@@ -367,7 +367,7 @@ module Google
       
         # Represents a customer-supplied encryption key
         # Corresponds to the JSON property `diskEncryptionKey`
-        # @return [Google::Apis::ComputeBeta::CustomerEncryptionKey]
+        # @return [GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey]
         attr_accessor :disk_encryption_key
       
         # Assigns a zero-based index to this disk, where 0 is reserved for the boot disk.
@@ -384,7 +384,7 @@ module Google
         # This property is mutually exclusive with the source property; you can only
         # define one or the other, but not both.
         # Corresponds to the JSON property `initializeParams`
-        # @return [Google::Apis::ComputeBeta::AttachedDiskInitializeParams]
+        # @return [GoogleAPI::Apis::ComputeBeta::AttachedDiskInitializeParams]
         attr_accessor :initialize_params
       
         # Specifies the disk interface to use for attaching this disk, which is either
@@ -452,7 +452,7 @@ module Google
       # This property is mutually exclusive with the source property; you can only
       # define one or the other, but not both.
       class AttachedDiskInitializeParams
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Specifies the disk name. If not specified, the default is to use the name of
         # the instance.
@@ -506,7 +506,7 @@ module Google
       
         # Represents a customer-supplied encryption key
         # Corresponds to the JSON property `sourceImageEncryptionKey`
-        # @return [Google::Apis::ComputeBeta::CustomerEncryptionKey]
+        # @return [GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey]
         attr_accessor :source_image_encryption_key
       
         def initialize(**args)
@@ -529,11 +529,11 @@ module Google
       # autoscaling policy that you define. For more information, read Autoscaling
       # Groups of Instances.
       class Autoscaler
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Cloud Autoscaler policy.
         # Corresponds to the JSON property `autoscalingPolicy`
-        # @return [Google::Apis::ComputeBeta::AutoscalingPolicy]
+        # @return [GoogleAPI::Apis::ComputeBeta::AutoscalingPolicy]
         attr_accessor :autoscaling_policy
       
         # [Output Only] Creation timestamp in RFC3339 text format.
@@ -603,7 +603,7 @@ module Google
       
       # 
       class AutoscalerAggregatedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -613,7 +613,7 @@ module Google
       
         # A map of scoped autoscaler lists.
         # Corresponds to the JSON property `items`
-        # @return [Hash<String,Google::Apis::ComputeBeta::AutoscalersScopedList>]
+        # @return [Hash<String,GoogleAPI::Apis::ComputeBeta::AutoscalersScopedList>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#autoscalerAggregatedList for
@@ -652,7 +652,7 @@ module Google
       
       # Contains a list of Autoscaler resources.
       class AutoscalerList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -662,7 +662,7 @@ module Google
       
         # A list of Autoscaler resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::Autoscaler>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Autoscaler>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#autoscalerList for lists of
@@ -701,17 +701,17 @@ module Google
       
       # 
       class AutoscalersScopedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] List of autoscalers contained in this scope.
         # Corresponds to the JSON property `autoscalers`
-        # @return [Array<Google::Apis::ComputeBeta::Autoscaler>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Autoscaler>]
         attr_accessor :autoscalers
       
         # [Output Only] Informational warning which replaces the list of autoscalers
         # when the list is empty.
         # Corresponds to the JSON property `warning`
-        # @return [Google::Apis::ComputeBeta::AutoscalersScopedList::Warning]
+        # @return [GoogleAPI::Apis::ComputeBeta::AutoscalersScopedList::Warning]
         attr_accessor :warning
       
         def initialize(**args)
@@ -727,7 +727,7 @@ module Google
         # [Output Only] Informational warning which replaces the list of autoscalers
         # when the list is empty.
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -738,7 +738,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ComputeBeta::AutoscalersScopedList::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::AutoscalersScopedList::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -759,7 +759,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -792,7 +792,7 @@ module Google
       
       # Cloud Autoscaler policy.
       class AutoscalingPolicy
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of seconds that the autoscaler should wait before it starts
         # collecting information from a new instance. This prevents the autoscaler from
@@ -808,17 +808,17 @@ module Google
       
         # CPU utilization policy.
         # Corresponds to the JSON property `cpuUtilization`
-        # @return [Google::Apis::ComputeBeta::AutoscalingPolicyCpuUtilization]
+        # @return [GoogleAPI::Apis::ComputeBeta::AutoscalingPolicyCpuUtilization]
         attr_accessor :cpu_utilization
       
         # Configuration parameters of autoscaling based on a custom metric.
         # Corresponds to the JSON property `customMetricUtilizations`
-        # @return [Array<Google::Apis::ComputeBeta::AutoscalingPolicyCustomMetricUtilization>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::AutoscalingPolicyCustomMetricUtilization>]
         attr_accessor :custom_metric_utilizations
       
         # Configuration parameters of autoscaling based on load balancing.
         # Corresponds to the JSON property `loadBalancingUtilization`
-        # @return [Google::Apis::ComputeBeta::AutoscalingPolicyLoadBalancingUtilization]
+        # @return [GoogleAPI::Apis::ComputeBeta::AutoscalingPolicyLoadBalancingUtilization]
         attr_accessor :load_balancing_utilization
       
         # The maximum number of instances that the autoscaler can scale up to. This is
@@ -852,7 +852,7 @@ module Google
       
       # CPU utilization policy.
       class AutoscalingPolicyCpuUtilization
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The target CPU utilization that the autoscaler should maintain. Must be a
         # float value in the range (0, 1]. If not specified, the default is 0.8.
@@ -879,7 +879,7 @@ module Google
       
       # Custom utilization metric policy.
       class AutoscalingPolicyCustomMetricUtilization
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The identifier of the Cloud Monitoring metric. The metric cannot have negative
         # values and should be a utilization metric, which means that the number of
@@ -923,7 +923,7 @@ module Google
       
       # Configuration parameters of autoscaling based on load balancing.
       class AutoscalingPolicyLoadBalancingUtilization
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Fraction of backend capacity utilization (set in HTTP(s) load balancing
         # configuration) that autoscaler should maintain. Must be a positive float value.
@@ -944,7 +944,7 @@ module Google
       
       # Message containing information of one individual backend.
       class Backend
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Specifies the balancing mode for this backend. For global HTTP(S) load
         # balancing, the default is UTILIZATION. Valid values are UTILIZATION and RATE.
@@ -1018,7 +1018,7 @@ module Google
       # A BackendService resource. This resource defines a group of backend virtual
       # machines and their serving capacity.
       class BackendService
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Lifetime of cookies in seconds if session_affinity is GENERATED_COOKIE. If set
         # to 0, the cookie is non-persistent and lasts only until the end of the browser
@@ -1029,7 +1029,7 @@ module Google
       
         # The list of backends that serve this BackendService.
         # Corresponds to the JSON property `backends`
-        # @return [Array<Google::Apis::ComputeBeta::Backend>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Backend>]
         attr_accessor :backends
       
         # [Output Only] Creation timestamp in RFC3339 text format.
@@ -1154,11 +1154,11 @@ module Google
       
       # 
       class BackendServiceGroupHealth
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `healthStatus`
-        # @return [Array<Google::Apis::ComputeBeta::HealthStatus>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::HealthStatus>]
         attr_accessor :health_status
       
         # [Output Only] Type of resource. Always compute#backendServiceGroupHealth for
@@ -1180,7 +1180,7 @@ module Google
       
       # Contains a list of BackendService resources.
       class BackendServiceList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -1190,7 +1190,7 @@ module Google
       
         # A list of BackendService resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::BackendService>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::BackendService>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#backendServiceList for lists of
@@ -1229,7 +1229,7 @@ module Google
       
       # 
       class CacheInvalidationRule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `path`
@@ -1248,7 +1248,7 @@ module Google
       
       # Represents a customer-supplied encryption key
       class CustomerEncryptionKey
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Specifies a 256-bit customer-supplied encryption key, encoded in base64 to
         # either encrypt or decrypt this resource.
@@ -1288,11 +1288,11 @@ module Google
       
       # 
       class CustomerEncryptionKeyProtectedDisk
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Represents a customer-supplied encryption key
         # Corresponds to the JSON property `diskEncryptionKey`
-        # @return [Google::Apis::ComputeBeta::CustomerEncryptionKey]
+        # @return [GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey]
         attr_accessor :disk_encryption_key
       
         # Specifies a valid partial or full URL to an existing Persistent Disk resource.
@@ -1314,7 +1314,7 @@ module Google
       
       # Deprecation status for a public resource.
       class DeprecationStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An optional RFC3339 timestamp on or after which the deprecation state of this
         # resource will be changed to DELETED.
@@ -1366,7 +1366,7 @@ module Google
       
       # A Disk resource.
       class Disk
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Creation timestamp in RFC3339 text format.
         # Corresponds to the JSON property `creationTimestamp`
@@ -1381,7 +1381,7 @@ module Google
       
         # Represents a customer-supplied encryption key
         # Corresponds to the JSON property `diskEncryptionKey`
-        # @return [Google::Apis::ComputeBeta::CustomerEncryptionKey]
+        # @return [GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey]
         attr_accessor :disk_encryption_key
       
         # [Output Only] The unique identifier for the resource. This identifier is
@@ -1478,7 +1478,7 @@ module Google
       
         # Represents a customer-supplied encryption key
         # Corresponds to the JSON property `sourceImageEncryptionKey`
-        # @return [Google::Apis::ComputeBeta::CustomerEncryptionKey]
+        # @return [GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey]
         attr_accessor :source_image_encryption_key
       
         # [Output Only] The ID value of the image used to create this disk. This value
@@ -1503,7 +1503,7 @@ module Google
       
         # Represents a customer-supplied encryption key
         # Corresponds to the JSON property `sourceSnapshotEncryptionKey`
-        # @return [Google::Apis::ComputeBeta::CustomerEncryptionKey]
+        # @return [GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey]
         attr_accessor :source_snapshot_encryption_key
       
         # [Output Only] The unique ID of the snapshot used to create this disk. This
@@ -1579,7 +1579,7 @@ module Google
       
       # 
       class DiskAggregatedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -1589,7 +1589,7 @@ module Google
       
         # [Output Only] A map of scoped disk lists.
         # Corresponds to the JSON property `items`
-        # @return [Hash<String,Google::Apis::ComputeBeta::DisksScopedList>]
+        # @return [Hash<String,GoogleAPI::Apis::ComputeBeta::DisksScopedList>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#diskAggregatedList for
@@ -1628,7 +1628,7 @@ module Google
       
       # A list of Disk resources.
       class DiskList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -1638,7 +1638,7 @@ module Google
       
         # [Output Only] A list of persistent disks.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::Disk>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Disk>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#diskList for lists of disks.
@@ -1676,7 +1676,7 @@ module Google
       
       # 
       class DiskMoveRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The URL of the destination zone to move the disk. This can be a full or
         # partial URL. For example, the following are all valid URLs to a zone:
@@ -1709,7 +1709,7 @@ module Google
       
       # A DiskType resource.
       class DiskType
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Creation timestamp in RFC3339 text format.
         # Corresponds to the JSON property `creationTimestamp`
@@ -1723,7 +1723,7 @@ module Google
       
         # Deprecation status for a public resource.
         # Corresponds to the JSON property `deprecated`
-        # @return [Google::Apis::ComputeBeta::DeprecationStatus]
+        # @return [GoogleAPI::Apis::ComputeBeta::DeprecationStatus]
         attr_accessor :deprecated
       
         # [Output Only] An optional description of this resource.
@@ -1784,7 +1784,7 @@ module Google
       
       # 
       class DiskTypeAggregatedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -1794,7 +1794,7 @@ module Google
       
         # [Output Only] A map of scoped disk type lists.
         # Corresponds to the JSON property `items`
-        # @return [Hash<String,Google::Apis::ComputeBeta::DiskTypesScopedList>]
+        # @return [Hash<String,GoogleAPI::Apis::ComputeBeta::DiskTypesScopedList>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#diskTypeAggregatedList.
@@ -1832,7 +1832,7 @@ module Google
       
       # Contains a list of disk types.
       class DiskTypeList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -1842,7 +1842,7 @@ module Google
       
         # [Output Only] A list of Disk Type resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::DiskType>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::DiskType>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#diskTypeList for disk types.
@@ -1880,17 +1880,17 @@ module Google
       
       # 
       class DiskTypesScopedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] List of disk types contained in this scope.
         # Corresponds to the JSON property `diskTypes`
-        # @return [Array<Google::Apis::ComputeBeta::DiskType>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::DiskType>]
         attr_accessor :disk_types
       
         # [Output Only] Informational warning which replaces the list of disk types when
         # the list is empty.
         # Corresponds to the JSON property `warning`
-        # @return [Google::Apis::ComputeBeta::DiskTypesScopedList::Warning]
+        # @return [GoogleAPI::Apis::ComputeBeta::DiskTypesScopedList::Warning]
         attr_accessor :warning
       
         def initialize(**args)
@@ -1906,7 +1906,7 @@ module Google
         # [Output Only] Informational warning which replaces the list of disk types when
         # the list is empty.
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -1917,7 +1917,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ComputeBeta::DiskTypesScopedList::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::DiskTypesScopedList::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -1938,7 +1938,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -1971,7 +1971,7 @@ module Google
       
       # 
       class DisksResizeRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The new size of the persistent disk, which is specified in GB.
         # Corresponds to the JSON property `sizeGb`
@@ -1990,17 +1990,17 @@ module Google
       
       # 
       class DisksScopedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] List of disks contained in this scope.
         # Corresponds to the JSON property `disks`
-        # @return [Array<Google::Apis::ComputeBeta::Disk>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Disk>]
         attr_accessor :disks
       
         # [Output Only] Informational warning which replaces the list of disks when the
         # list is empty.
         # Corresponds to the JSON property `warning`
-        # @return [Google::Apis::ComputeBeta::DisksScopedList::Warning]
+        # @return [GoogleAPI::Apis::ComputeBeta::DisksScopedList::Warning]
         attr_accessor :warning
       
         def initialize(**args)
@@ -2016,7 +2016,7 @@ module Google
         # [Output Only] Informational warning which replaces the list of disks when the
         # list is empty.
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -2027,7 +2027,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ComputeBeta::DisksScopedList::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::DisksScopedList::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -2048,7 +2048,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -2081,12 +2081,12 @@ module Google
       
       # Represents a Firewall resource.
       class Firewall
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of rules specified by this firewall. Each rule specifies a protocol
         # and port-range tuple that describes a permitted connection.
         # Corresponds to the JSON property `allowed`
-        # @return [Array<Google::Apis::ComputeBeta::Firewall::Allowed>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Firewall::Allowed>]
         attr_accessor :allowed
       
         # [Output Only] Creation timestamp in RFC3339 text format.
@@ -2190,7 +2190,7 @@ module Google
         
         # 
         class Allowed
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The IP protocol that is allowed for this rule. The protocol type is required
           # when creating a firewall rule. This value can either be one of the following
@@ -2222,7 +2222,7 @@ module Google
       
       # Contains a list of firewalls.
       class FirewallList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -2232,7 +2232,7 @@ module Google
       
         # [Output Only] A list of Firewall resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::Firewall>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Firewall>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#firewallList for lists of
@@ -2273,7 +2273,7 @@ module Google
       # target virtual machines to forward a packet to if it matches the given [
       # IPAddress, IPProtocol, portRange] tuple.
       class ForwardingRule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Value of the reserved IP address that this forwarding rule is serving on
         # behalf of. For global forwarding rules, the address must be a global IP; for
@@ -2373,7 +2373,7 @@ module Google
       
       # 
       class ForwardingRuleAggregatedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -2383,7 +2383,7 @@ module Google
       
         # A map of scoped forwarding rule lists.
         # Corresponds to the JSON property `items`
-        # @return [Hash<String,Google::Apis::ComputeBeta::ForwardingRulesScopedList>]
+        # @return [Hash<String,GoogleAPI::Apis::ComputeBeta::ForwardingRulesScopedList>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#forwardingRuleAggregatedList
@@ -2422,7 +2422,7 @@ module Google
       
       # Contains a list of ForwardingRule resources.
       class ForwardingRuleList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Unique identifier for the resource. Set by the server.
         # Corresponds to the JSON property `id`
@@ -2431,7 +2431,7 @@ module Google
       
         # A list of ForwardingRule resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::ForwardingRule>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::ForwardingRule>]
         attr_accessor :items
       
         # Type of resource.
@@ -2469,17 +2469,17 @@ module Google
       
       # 
       class ForwardingRulesScopedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of forwarding rules contained in this scope.
         # Corresponds to the JSON property `forwardingRules`
-        # @return [Array<Google::Apis::ComputeBeta::ForwardingRule>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::ForwardingRule>]
         attr_accessor :forwarding_rules
       
         # Informational warning which replaces the list of forwarding rules when the
         # list is empty.
         # Corresponds to the JSON property `warning`
-        # @return [Google::Apis::ComputeBeta::ForwardingRulesScopedList::Warning]
+        # @return [GoogleAPI::Apis::ComputeBeta::ForwardingRulesScopedList::Warning]
         attr_accessor :warning
       
         def initialize(**args)
@@ -2495,7 +2495,7 @@ module Google
         # Informational warning which replaces the list of forwarding rules when the
         # list is empty.
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -2506,7 +2506,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ComputeBeta::ForwardingRulesScopedList::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::ForwardingRulesScopedList::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -2527,7 +2527,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -2560,7 +2560,7 @@ module Google
       
       # 
       class GlobalSetLabelsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The fingerprint of the previous set of labels for this resource, used to
         # detect conflicts. The fingerprint is initially generated by Compute Engine and
@@ -2600,7 +2600,7 @@ module Google
       # - projects/project-id/global/httpHealthChecks/health-check
       # - global/httpHealthChecks/health-check
       class HealthCheckReference
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `healthCheck`
@@ -2619,7 +2619,7 @@ module Google
       
       # 
       class HealthStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Health state of the instance.
         # Corresponds to the JSON property `healthState`
@@ -2657,7 +2657,7 @@ module Google
       # UrlMaps A host-matching rule for a URL. If matched, will use the named
       # PathMatcher to select the BackendService.
       class HostRule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An optional description of this resource. Provide this property when you
         # create the resource.
@@ -2693,7 +2693,7 @@ module Google
       # An HttpHealthCheck resource. This resource defines a template for how
       # individual instances should be checked for health, via HTTP.
       class HttpHealthCheck
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # How often (in seconds) to send a health check. The default value is 5 seconds.
         # Corresponds to the JSON property `checkIntervalSec`
@@ -2798,7 +2798,7 @@ module Google
       
       # Contains a list of HttpHealthCheck resources.
       class HttpHealthCheckList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Unique identifier for the resource. Defined by the server.
         # Corresponds to the JSON property `id`
@@ -2807,7 +2807,7 @@ module Google
       
         # A list of HttpHealthCheck resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::HttpHealthCheck>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::HttpHealthCheck>]
         attr_accessor :items
       
         # Type of resource.
@@ -2846,7 +2846,7 @@ module Google
       # An HttpsHealthCheck resource. This resource defines a template for how
       # individual instances should be checked for health, via HTTPS.
       class HttpsHealthCheck
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # How often (in seconds) to send a health check. The default value is 5 seconds.
         # Corresponds to the JSON property `checkIntervalSec`
@@ -2951,7 +2951,7 @@ module Google
       
       # Contains a list of HttpsHealthCheck resources.
       class HttpsHealthCheckList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Unique identifier for the resource; defined by the server.
         # Corresponds to the JSON property `id`
@@ -2960,7 +2960,7 @@ module Google
       
         # A list of HttpsHealthCheck resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::HttpsHealthCheck>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::HttpsHealthCheck>]
         attr_accessor :items
       
         # Type of resource.
@@ -2998,7 +2998,7 @@ module Google
       
       # An Image resource.
       class Image
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
         # Corresponds to the JSON property `archiveSizeBytes`
@@ -3012,7 +3012,7 @@ module Google
       
         # Deprecation status for a public resource.
         # Corresponds to the JSON property `deprecated`
-        # @return [Google::Apis::ComputeBeta::DeprecationStatus]
+        # @return [GoogleAPI::Apis::ComputeBeta::DeprecationStatus]
         attr_accessor :deprecated
       
         # An optional description of this resource. Provide this property when you
@@ -3041,7 +3041,7 @@ module Google
       
         # Represents a customer-supplied encryption key
         # Corresponds to the JSON property `imageEncryptionKey`
-        # @return [Google::Apis::ComputeBeta::CustomerEncryptionKey]
+        # @return [GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey]
         attr_accessor :image_encryption_key
       
         # [Output Only] Type of the resource. Always compute#image for images.
@@ -3083,7 +3083,7 @@ module Google
       
         # The parameters of the raw disk image.
         # Corresponds to the JSON property `rawDisk`
-        # @return [Google::Apis::ComputeBeta::Image::RawDisk]
+        # @return [GoogleAPI::Apis::ComputeBeta::Image::RawDisk]
         attr_accessor :raw_disk
       
         # [Output Only] Server-defined URL for the resource.
@@ -3104,7 +3104,7 @@ module Google
       
         # Represents a customer-supplied encryption key
         # Corresponds to the JSON property `sourceDiskEncryptionKey`
-        # @return [Google::Apis::ComputeBeta::CustomerEncryptionKey]
+        # @return [GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey]
         attr_accessor :source_disk_encryption_key
       
         # The ID value of the disk used to create this image. This value may be used to
@@ -3158,7 +3158,7 @@ module Google
         
         # The parameters of the raw disk image.
         class RawDisk
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # The format used to encode and transmit the block device, which should be TAR.
           # This is just a container and transmission format and not a runtime format.
@@ -3194,7 +3194,7 @@ module Google
       
       # Contains a list of images.
       class ImageList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -3204,7 +3204,7 @@ module Google
       
         # [Output Only] A list of Image resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::Image>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Image>]
         attr_accessor :items
       
         # Type of resource.
@@ -3242,7 +3242,7 @@ module Google
       
       # An Instance resource.
       class Instance
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Allows this instance to send and receive packets with non-matching destination
         # or source IPs. This is required if you plan to use this instance to forward
@@ -3271,7 +3271,7 @@ module Google
         # Array of disks associated with this instance. Persistent disks must be created
         # before you can assign them.
         # Corresponds to the JSON property `disks`
-        # @return [Array<Google::Apis::ComputeBeta::AttachedDisk>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::AttachedDisk>]
         attr_accessor :disks
       
         # [Output Only] The unique identifier for the resource. This identifier is
@@ -3321,7 +3321,7 @@ module Google
       
         # A metadata key/value entry.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::ComputeBeta::Metadata]
+        # @return [GoogleAPI::Apis::ComputeBeta::Metadata]
         attr_accessor :metadata
       
         # The name of the resource, provided by the client when initially creating the
@@ -3338,12 +3338,12 @@ module Google
         # interface is configured to interact with other network services, such as
         # connecting to the internet.
         # Corresponds to the JSON property `networkInterfaces`
-        # @return [Array<Google::Apis::ComputeBeta::NetworkInterface>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::NetworkInterface>]
         attr_accessor :network_interfaces
       
         # Sets the scheduling options for an Instance.
         # Corresponds to the JSON property `scheduling`
-        # @return [Google::Apis::ComputeBeta::Scheduling]
+        # @return [GoogleAPI::Apis::ComputeBeta::Scheduling]
         attr_accessor :scheduling
       
         # [Output Only] Server-defined URL for this resource.
@@ -3356,7 +3356,7 @@ module Google
         # the metadata server and used to authenticate applications on the instance. See
         # Service Accounts for more information.
         # Corresponds to the JSON property `serviceAccounts`
-        # @return [Array<Google::Apis::ComputeBeta::ServiceAccount>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::ServiceAccount>]
         attr_accessor :service_accounts
       
         # [Output Only] The status of the instance. One of the following values:
@@ -3373,7 +3373,7 @@ module Google
       
         # A set of instance tags.
         # Corresponds to the JSON property `tags`
-        # @return [Google::Apis::ComputeBeta::Tags]
+        # @return [GoogleAPI::Apis::ComputeBeta::Tags]
         attr_accessor :tags
       
         # [Output Only] URL of the zone where the instance resides.
@@ -3412,7 +3412,7 @@ module Google
       
       # 
       class InstanceAggregatedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -3422,7 +3422,7 @@ module Google
       
         # [Output Only] A map of scoped instance lists.
         # Corresponds to the JSON property `items`
-        # @return [Hash<String,Google::Apis::ComputeBeta::InstancesScopedList>]
+        # @return [Hash<String,GoogleAPI::Apis::ComputeBeta::InstancesScopedList>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#instanceAggregatedList for
@@ -3461,7 +3461,7 @@ module Google
       
       # 
       class InstanceGroup
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The creation timestamp for this instance group in RFC3339 text
         # format.
@@ -3506,7 +3506,7 @@ module Google
         # "http", port: 80`,`name: "http", port: 8080`]
         # Named ports apply to all instances in this instance group.
         # Corresponds to the JSON property `namedPorts`
-        # @return [Array<Google::Apis::ComputeBeta::NamedPort>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::NamedPort>]
         attr_accessor :named_ports
       
         # The URL of the network to which all instances in the instance group belong.
@@ -3557,7 +3557,7 @@ module Google
       
       # 
       class InstanceGroupAggregatedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] A unique identifier for this aggregated list of instance groups.
         # The server generates this identifier.
@@ -3567,7 +3567,7 @@ module Google
       
         # A map of scoped instance group lists.
         # Corresponds to the JSON property `items`
-        # @return [Hash<String,Google::Apis::ComputeBeta::InstanceGroupsScopedList>]
+        # @return [Hash<String,GoogleAPI::Apis::ComputeBeta::InstanceGroupsScopedList>]
         attr_accessor :items
       
         # [Output Only] The resource type, which is always compute#
@@ -3606,7 +3606,7 @@ module Google
       
       # A list of InstanceGroup resources.
       class InstanceGroupList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] A unique identifier for this list of instance groups. The server
         # generates this identifier.
@@ -3616,7 +3616,7 @@ module Google
       
         # A list of instance groups.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::InstanceGroup>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::InstanceGroup>]
         attr_accessor :items
       
         # [Output Only] The resource type, which is always compute#instanceGroupList for
@@ -3655,12 +3655,12 @@ module Google
       
       # 
       class InstanceGroupManager
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The autohealing policy for this managed instance group. You can specify only
         # one value.
         # Corresponds to the JSON property `autoHealingPolicies`
-        # @return [Array<Google::Apis::ComputeBeta::InstanceGroupManagerAutoHealingPolicy>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::InstanceGroupManagerAutoHealingPolicy>]
         attr_accessor :auto_healing_policies
       
         # The base instance name to use for instances in this group. The value must be 1-
@@ -3680,7 +3680,7 @@ module Google
         # [Output Only] The list of instance actions and the number of instances in this
         # managed instance group that are scheduled for each of those actions.
         # Corresponds to the JSON property `currentActions`
-        # @return [Google::Apis::ComputeBeta::InstanceGroupManagerActionsSummary]
+        # @return [GoogleAPI::Apis::ComputeBeta::InstanceGroupManagerActionsSummary]
         attr_accessor :current_actions
       
         # An optional description of this resource. Provide this property when you
@@ -3728,7 +3728,7 @@ module Google
         # Named ports configured for the Instance Groups complementary to this Instance
         # Group Manager.
         # Corresponds to the JSON property `namedPorts`
-        # @return [Array<Google::Apis::ComputeBeta::NamedPort>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::NamedPort>]
         attr_accessor :named_ports
       
         # [Output Only] The URL for this managed instance group. The server defines this
@@ -3783,7 +3783,7 @@ module Google
       
       # 
       class InstanceGroupManagerActionsSummary
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The total number of instances in the managed instance group that
         # are scheduled to be abandoned. Abandoning an instance removes it from the
@@ -3860,7 +3860,7 @@ module Google
       
       # 
       class InstanceGroupManagerAggregatedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] A unique identifier for this aggregated list of managed instance
         # groups. The server generates this identifier.
@@ -3870,7 +3870,7 @@ module Google
       
         # [Output Only] A map of filtered managed instance group lists.
         # Corresponds to the JSON property `items`
-        # @return [Hash<String,Google::Apis::ComputeBeta::InstanceGroupManagersScopedList>]
+        # @return [Hash<String,GoogleAPI::Apis::ComputeBeta::InstanceGroupManagersScopedList>]
         attr_accessor :items
       
         # [Output Only] The resource type, which is always compute#
@@ -3910,7 +3910,7 @@ module Google
       
       # 
       class InstanceGroupManagerAutoHealingPolicy
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The URL for the HealthCheck that signals autohealing.
         # Corresponds to the JSON property `healthCheck`
@@ -3939,7 +3939,7 @@ module Google
       
       # [Output Only] A list of managed instance groups.
       class InstanceGroupManagerList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] A unique identifier for this resource type. The server generates
         # this identifier.
@@ -3949,7 +3949,7 @@ module Google
       
         # [Output Only] A list of managed instance groups.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::InstanceGroupManager>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::InstanceGroupManager>]
         attr_accessor :items
       
         # [Output Only] The resource type, which is always compute#
@@ -3988,7 +3988,7 @@ module Google
       
       # 
       class InstanceGroupManagersAbandonInstancesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The URL for one or more instances to abandon from the managed instance group.
         # Corresponds to the JSON property `instances`
@@ -4007,7 +4007,7 @@ module Google
       
       # 
       class InstanceGroupManagersDeleteInstancesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of instances to delete from this managed instance group. Specify one
         # or more instance URLs.
@@ -4027,11 +4027,11 @@ module Google
       
       # 
       class InstanceGroupManagersListManagedInstancesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The list of instances in the managed instance group.
         # Corresponds to the JSON property `managedInstances`
-        # @return [Array<Google::Apis::ComputeBeta::ManagedInstance>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::ManagedInstance>]
         attr_accessor :managed_instances
       
         def initialize(**args)
@@ -4046,7 +4046,7 @@ module Google
       
       # 
       class InstanceGroupManagersRecreateInstancesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The URL for one or more instances to recreate.
         # Corresponds to the JSON property `instances`
@@ -4065,7 +4065,7 @@ module Google
       
       # 
       class InstanceGroupManagersResizeAdvancedRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # If this flag is true, we will attempt to create all instances resized up with
         # this request only once. In case of an error during creation, we will not
@@ -4105,18 +4105,18 @@ module Google
       
       # 
       class InstanceGroupManagersScopedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The list of managed instance groups that are contained in the
         # specified project and zone.
         # Corresponds to the JSON property `instanceGroupManagers`
-        # @return [Array<Google::Apis::ComputeBeta::InstanceGroupManager>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::InstanceGroupManager>]
         attr_accessor :instance_group_managers
       
         # [Output Only] The warning that replaces the list of managed instance groups
         # when the list is empty.
         # Corresponds to the JSON property `warning`
-        # @return [Google::Apis::ComputeBeta::InstanceGroupManagersScopedList::Warning]
+        # @return [GoogleAPI::Apis::ComputeBeta::InstanceGroupManagersScopedList::Warning]
         attr_accessor :warning
       
         def initialize(**args)
@@ -4132,7 +4132,7 @@ module Google
         # [Output Only] The warning that replaces the list of managed instance groups
         # when the list is empty.
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -4143,7 +4143,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ComputeBeta::InstanceGroupManagersScopedList::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::InstanceGroupManagersScopedList::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -4164,7 +4164,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -4197,11 +4197,11 @@ module Google
       
       # 
       class InstanceGroupManagersSetAutoHealingRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `autoHealingPolicies`
-        # @return [Array<Google::Apis::ComputeBeta::InstanceGroupManagerAutoHealingPolicy>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::InstanceGroupManagerAutoHealingPolicy>]
         attr_accessor :auto_healing_policies
       
         def initialize(**args)
@@ -4216,7 +4216,7 @@ module Google
       
       # 
       class InstanceGroupManagersSetInstanceTemplateRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The URL of the instance template that is specified for this managed instance
         # group. The group uses this template to create all new instances in the managed
@@ -4237,7 +4237,7 @@ module Google
       
       # 
       class InstanceGroupManagersSetTargetPoolsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The fingerprint of the target pools information. Use this optional property to
         # prevent conflicts when multiple users change the target pools settings
@@ -4269,11 +4269,11 @@ module Google
       
       # 
       class InstanceGroupsAddInstancesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of instances to add to the instance group.
         # Corresponds to the JSON property `instances`
-        # @return [Array<Google::Apis::ComputeBeta::InstanceReference>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::InstanceReference>]
         attr_accessor :instances
       
         def initialize(**args)
@@ -4288,7 +4288,7 @@ module Google
       
       # 
       class InstanceGroupsListInstances
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] A unique identifier for this list of instance groups. The server
         # generates this identifier.
@@ -4299,7 +4299,7 @@ module Google
         # [Output Only] A list of instances and any named ports that are assigned to
         # those instances.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::InstanceWithNamedPorts>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::InstanceWithNamedPorts>]
         attr_accessor :items
       
         # [Output Only] The resource type, which is always compute#
@@ -4339,7 +4339,7 @@ module Google
       
       # 
       class InstanceGroupsListInstancesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A filter for the state of the instances in the instance group. Valid options
         # are ALL or RUNNING. If you do not specify this parameter the list includes all
@@ -4360,11 +4360,11 @@ module Google
       
       # 
       class InstanceGroupsRemoveInstancesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of instances to remove from the instance group.
         # Corresponds to the JSON property `instances`
-        # @return [Array<Google::Apis::ComputeBeta::InstanceReference>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::InstanceReference>]
         attr_accessor :instances
       
         def initialize(**args)
@@ -4379,17 +4379,17 @@ module Google
       
       # 
       class InstanceGroupsScopedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The list of instance groups that are contained in this scope.
         # Corresponds to the JSON property `instanceGroups`
-        # @return [Array<Google::Apis::ComputeBeta::InstanceGroup>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::InstanceGroup>]
         attr_accessor :instance_groups
       
         # [Output Only] An informational warning that replaces the list of instance
         # groups when the list is empty.
         # Corresponds to the JSON property `warning`
-        # @return [Google::Apis::ComputeBeta::InstanceGroupsScopedList::Warning]
+        # @return [GoogleAPI::Apis::ComputeBeta::InstanceGroupsScopedList::Warning]
         attr_accessor :warning
       
         def initialize(**args)
@@ -4405,7 +4405,7 @@ module Google
         # [Output Only] An informational warning that replaces the list of instance
         # groups when the list is empty.
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -4416,7 +4416,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ComputeBeta::InstanceGroupsScopedList::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::InstanceGroupsScopedList::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -4437,7 +4437,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -4470,7 +4470,7 @@ module Google
       
       # 
       class InstanceGroupsSetNamedPortsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The fingerprint of the named ports information for this instance group. Use
         # this optional property to prevent conflicts when multiple users change the
@@ -4484,7 +4484,7 @@ module Google
       
         # The list of named ports to set for this instance group.
         # Corresponds to the JSON property `namedPorts`
-        # @return [Array<Google::Apis::ComputeBeta::NamedPort>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::NamedPort>]
         attr_accessor :named_ports
       
         def initialize(**args)
@@ -4500,7 +4500,7 @@ module Google
       
       # Contains a list of instances.
       class InstanceList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -4510,7 +4510,7 @@ module Google
       
         # [Output Only] A list of instances.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::Instance>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Instance>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#instanceList for lists of
@@ -4549,7 +4549,7 @@ module Google
       
       # 
       class MoveInstanceRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The URL of the destination zone to move the instance. This can be a full or
         # partial URL. For example, the following are all valid URLs to a zone:
@@ -4583,7 +4583,7 @@ module Google
       
       # 
       class InstanceProperties
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Enables instances created based on this template to send packets with source
         # IP addresses other than their own and receive packets with destination IP
@@ -4605,7 +4605,7 @@ module Google
         # An array of disks that are associated with the instances that are created from
         # this template.
         # Corresponds to the JSON property `disks`
-        # @return [Array<Google::Apis::ComputeBeta::AttachedDisk>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::AttachedDisk>]
         attr_accessor :disks
       
         # The machine type to use for instances that are created from this template.
@@ -4615,29 +4615,29 @@ module Google
       
         # A metadata key/value entry.
         # Corresponds to the JSON property `metadata`
-        # @return [Google::Apis::ComputeBeta::Metadata]
+        # @return [GoogleAPI::Apis::ComputeBeta::Metadata]
         attr_accessor :metadata
       
         # An array of network access configurations for this interface.
         # Corresponds to the JSON property `networkInterfaces`
-        # @return [Array<Google::Apis::ComputeBeta::NetworkInterface>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::NetworkInterface>]
         attr_accessor :network_interfaces
       
         # Sets the scheduling options for an Instance.
         # Corresponds to the JSON property `scheduling`
-        # @return [Google::Apis::ComputeBeta::Scheduling]
+        # @return [GoogleAPI::Apis::ComputeBeta::Scheduling]
         attr_accessor :scheduling
       
         # A list of service accounts with specified scopes. Access tokens for these
         # service accounts are available to the instances that are created from this
         # template. Use metadata queries to obtain the access tokens for these instances.
         # Corresponds to the JSON property `serviceAccounts`
-        # @return [Array<Google::Apis::ComputeBeta::ServiceAccount>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::ServiceAccount>]
         attr_accessor :service_accounts
       
         # A set of instance tags.
         # Corresponds to the JSON property `tags`
-        # @return [Google::Apis::ComputeBeta::Tags]
+        # @return [GoogleAPI::Apis::ComputeBeta::Tags]
         attr_accessor :tags
       
         def initialize(**args)
@@ -4660,7 +4660,7 @@ module Google
       
       # 
       class InstanceReference
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The URL for a specific instance.
         # Corresponds to the JSON property `instance`
@@ -4679,7 +4679,7 @@ module Google
       
       # An Instance Template resource.
       class InstanceTemplate
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The creation timestamp for this instance template in RFC3339
         # text format.
@@ -4717,7 +4717,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `properties`
-        # @return [Google::Apis::ComputeBeta::InstanceProperties]
+        # @return [GoogleAPI::Apis::ComputeBeta::InstanceProperties]
         attr_accessor :properties
       
         # [Output Only] The URL for this instance template. The server defines this URL.
@@ -4743,7 +4743,7 @@ module Google
       
       # A list of instance templates.
       class InstanceTemplateList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] A unique identifier for this instance template. The server
         # defines this identifier.
@@ -4753,7 +4753,7 @@ module Google
       
         # [Output Only] list of InstanceTemplate resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::InstanceTemplate>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::InstanceTemplate>]
         attr_accessor :items
       
         # [Output Only] The resource type, which is always compute#
@@ -4793,7 +4793,7 @@ module Google
       
       # 
       class InstanceWithNamedPorts
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The URL of the instance.
         # Corresponds to the JSON property `instance`
@@ -4802,7 +4802,7 @@ module Google
       
         # [Output Only] The named ports that belong to this instance group.
         # Corresponds to the JSON property `namedPorts`
-        # @return [Array<Google::Apis::ComputeBeta::NamedPort>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::NamedPort>]
         attr_accessor :named_ports
       
         # [Output Only] The status of the instance.
@@ -4824,17 +4824,17 @@ module Google
       
       # 
       class InstancesScopedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] List of instances contained in this scope.
         # Corresponds to the JSON property `instances`
-        # @return [Array<Google::Apis::ComputeBeta::Instance>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Instance>]
         attr_accessor :instances
       
         # [Output Only] Informational warning which replaces the list of instances when
         # the list is empty.
         # Corresponds to the JSON property `warning`
-        # @return [Google::Apis::ComputeBeta::InstancesScopedList::Warning]
+        # @return [GoogleAPI::Apis::ComputeBeta::InstancesScopedList::Warning]
         attr_accessor :warning
       
         def initialize(**args)
@@ -4850,7 +4850,7 @@ module Google
         # [Output Only] Informational warning which replaces the list of instances when
         # the list is empty.
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -4861,7 +4861,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ComputeBeta::InstancesScopedList::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::InstancesScopedList::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -4882,7 +4882,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -4915,7 +4915,7 @@ module Google
       
       # 
       class InstancesSetLabelsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Fingerprint of the previous set of labels for this resource, used to prevent
         # conflicts. Provide the latest fingerprint value when making a request to add
@@ -4949,7 +4949,7 @@ module Google
       
       # 
       class InstancesSetMachineTypeRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Full or partial URL of the machine type resource. See Machine Types for a full
         # list of machine types. For example: zones/us-central1-f/machineTypes/n1-
@@ -4970,7 +4970,7 @@ module Google
       
       # 
       class InstancesStartWithEncryptionKeyRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Array of disks associated with this instance that are protected with a
         # customer-supplied encryption key.
@@ -4979,7 +4979,7 @@ module Google
         # If the disk is not protected with a customer-supplied encryption key it should
         # not be specified.
         # Corresponds to the JSON property `disks`
-        # @return [Array<Google::Apis::ComputeBeta::CustomerEncryptionKeyProtectedDisk>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKeyProtectedDisk>]
         attr_accessor :disks
       
         def initialize(**args)
@@ -4994,7 +4994,7 @@ module Google
       
       # A license resource.
       class License
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] If true, the customer will be charged license fee for running
         # software that contains this license on an instance.
@@ -5034,7 +5034,7 @@ module Google
       
       # A Machine Type resource.
       class MachineType
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Creation timestamp in RFC3339 text format.
         # Corresponds to the JSON property `creationTimestamp`
@@ -5043,7 +5043,7 @@ module Google
       
         # Deprecation status for a public resource.
         # Corresponds to the JSON property `deprecated`
-        # @return [Google::Apis::ComputeBeta::DeprecationStatus]
+        # @return [GoogleAPI::Apis::ComputeBeta::DeprecationStatus]
         attr_accessor :deprecated
       
         # [Output Only] An optional textual description of the resource.
@@ -5131,7 +5131,7 @@ module Google
       
       # 
       class MachineTypeAggregatedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -5141,7 +5141,7 @@ module Google
       
         # [Output Only] A map of scoped machine type lists.
         # Corresponds to the JSON property `items`
-        # @return [Hash<String,Google::Apis::ComputeBeta::MachineTypesScopedList>]
+        # @return [Hash<String,GoogleAPI::Apis::ComputeBeta::MachineTypesScopedList>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#machineTypeAggregatedList for
@@ -5180,7 +5180,7 @@ module Google
       
       # Contains a list of machine types.
       class MachineTypeList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -5190,7 +5190,7 @@ module Google
       
         # [Output Only] A list of Machine Type resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::MachineType>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::MachineType>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#machineTypeList for lists of
@@ -5229,17 +5229,17 @@ module Google
       
       # 
       class MachineTypesScopedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] List of machine types contained in this scope.
         # Corresponds to the JSON property `machineTypes`
-        # @return [Array<Google::Apis::ComputeBeta::MachineType>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::MachineType>]
         attr_accessor :machine_types
       
         # [Output Only] An informational warning that appears when the machine types
         # list is empty.
         # Corresponds to the JSON property `warning`
-        # @return [Google::Apis::ComputeBeta::MachineTypesScopedList::Warning]
+        # @return [GoogleAPI::Apis::ComputeBeta::MachineTypesScopedList::Warning]
         attr_accessor :warning
       
         def initialize(**args)
@@ -5255,7 +5255,7 @@ module Google
         # [Output Only] An informational warning that appears when the machine types
         # list is empty.
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -5266,7 +5266,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ComputeBeta::MachineTypesScopedList::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::MachineTypesScopedList::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -5287,7 +5287,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -5320,7 +5320,7 @@ module Google
       
       # 
       class ManagedInstance
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The current action that the managed instance group has scheduled
         # for the instance. Possible values:
@@ -5365,7 +5365,7 @@ module Google
         # [Output Only] Information about the last attempt to create or delete the
         # instance.
         # Corresponds to the JSON property `lastAttempt`
-        # @return [Google::Apis::ComputeBeta::ManagedInstanceLastAttempt]
+        # @return [GoogleAPI::Apis::ComputeBeta::ManagedInstanceLastAttempt]
         attr_accessor :last_attempt
       
         def initialize(**args)
@@ -5384,12 +5384,12 @@ module Google
       
       # 
       class ManagedInstanceLastAttempt
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Encountered errors during the last attempt to create or delete
         # the instance.
         # Corresponds to the JSON property `errors`
-        # @return [Google::Apis::ComputeBeta::ManagedInstanceLastAttempt::Errors]
+        # @return [GoogleAPI::Apis::ComputeBeta::ManagedInstanceLastAttempt::Errors]
         attr_accessor :errors
       
         def initialize(**args)
@@ -5404,11 +5404,11 @@ module Google
         # [Output Only] Encountered errors during the last attempt to create or delete
         # the instance.
         class Errors
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] The array of errors encountered while processing this operation.
           # Corresponds to the JSON property `errors`
-          # @return [Array<Google::Apis::ComputeBeta::ManagedInstanceLastAttempt::Errors::Error>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::ManagedInstanceLastAttempt::Errors::Error>]
           attr_accessor :errors
         
           def initialize(**args)
@@ -5422,7 +5422,7 @@ module Google
           
           # 
           class Error
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] The error type identifier for this error.
             # Corresponds to the JSON property `code`
@@ -5456,7 +5456,7 @@ module Google
       
       # A metadata key/value entry.
       class Metadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Specifies a fingerprint for this request, which is essentially a hash of the
         # metadata's contents and used for optimistic locking. The fingerprint is
@@ -5470,7 +5470,7 @@ module Google
         # Array of key/value pairs. The total size of all keys and values must be less
         # than 512 KB.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::Metadata::Item>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Metadata::Item>]
         attr_accessor :items
       
         # [Output Only] Type of the resource. Always compute#metadata for metadata.
@@ -5491,7 +5491,7 @@ module Google
         
         # 
         class Item
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # Key for the metadata entry. Keys must conform to the following regexp: [a-zA-
           # Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a
@@ -5523,7 +5523,7 @@ module Google
       
       # The named port. For example: .
       class NamedPort
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name for this named port. The name must be 1-63 characters long, and
         # comply with RFC1035.
@@ -5550,7 +5550,7 @@ module Google
       # Represents a Network resource. Read Networks and Firewalls for more
       # information.
       class Network
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The range of internal addresses that are legal on this network. This range is
         # a CIDR specification, for example: 192.168.0.0/16. Provided by the client when
@@ -5639,13 +5639,13 @@ module Google
       
       # A network interface resource attached to an instance.
       class NetworkInterface
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # An array of configurations for this interface. Currently, ONE_TO_ONE_NAT is
         # the only access config supported. If there are no accessConfigs specified,
         # then this instance will have no external internet access.
         # Corresponds to the JSON property `accessConfigs`
-        # @return [Array<Google::Apis::ComputeBeta::AccessConfig>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::AccessConfig>]
         attr_accessor :access_configs
       
         # [Output Only] The name of the network interface, generated by the server. For
@@ -5704,7 +5704,7 @@ module Google
       
       # Contains a list of networks.
       class NetworkList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -5714,7 +5714,7 @@ module Google
       
         # [Output Only] A list of Network resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::Network>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Network>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#networkList for lists of
@@ -5753,7 +5753,7 @@ module Google
       
       # An Operation resource, used to manage asynchronous API requests.
       class Operation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Reserved for future use.
         # Corresponds to the JSON property `clientOperationId`
@@ -5780,7 +5780,7 @@ module Google
         # [Output Only] If errors are generated during processing of the operation, this
         # field will be populated.
         # Corresponds to the JSON property `error`
-        # @return [Google::Apis::ComputeBeta::Operation::Error]
+        # @return [GoogleAPI::Apis::ComputeBeta::Operation::Error]
         attr_accessor :error
       
         # [Output Only] If the operation fails, this field contains the HTTP error
@@ -5881,7 +5881,7 @@ module Google
         # [Output Only] If warning messages are generated during processing of the
         # operation, this field will be populated.
         # Corresponds to the JSON property `warnings`
-        # @return [Array<Google::Apis::ComputeBeta::Operation::Warning>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Operation::Warning>]
         attr_accessor :warnings
       
         # [Output Only] The URL of the zone where the operation resides. Only available
@@ -5924,11 +5924,11 @@ module Google
         # [Output Only] If errors are generated during processing of the operation, this
         # field will be populated.
         class Error
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] The array of errors encountered while processing this operation.
           # Corresponds to the JSON property `errors`
-          # @return [Array<Google::Apis::ComputeBeta::Operation::Error::Error>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::Operation::Error::Error>]
           attr_accessor :errors
         
           def initialize(**args)
@@ -5942,7 +5942,7 @@ module Google
           
           # 
           class Error
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] The error type identifier for this error.
             # Corresponds to the JSON property `code`
@@ -5975,7 +5975,7 @@ module Google
         
         # 
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -5986,7 +5986,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ComputeBeta::Operation::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::Operation::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -6007,7 +6007,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -6040,7 +6040,7 @@ module Google
       
       # 
       class OperationAggregatedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -6050,7 +6050,7 @@ module Google
       
         # [Output Only] A map of scoped operation lists.
         # Corresponds to the JSON property `items`
-        # @return [Hash<String,Google::Apis::ComputeBeta::OperationsScopedList>]
+        # @return [Hash<String,GoogleAPI::Apis::ComputeBeta::OperationsScopedList>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#operationAggregatedList for
@@ -6089,7 +6089,7 @@ module Google
       
       # Contains a list of Operation resources.
       class OperationList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -6099,7 +6099,7 @@ module Google
       
         # [Output Only] A list of Operation resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::Operation>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Operation>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#operations for Operations
@@ -6138,17 +6138,17 @@ module Google
       
       # 
       class OperationsScopedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] List of operations contained in this scope.
         # Corresponds to the JSON property `operations`
-        # @return [Array<Google::Apis::ComputeBeta::Operation>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Operation>]
         attr_accessor :operations
       
         # [Output Only] Informational warning which replaces the list of operations when
         # the list is empty.
         # Corresponds to the JSON property `warning`
-        # @return [Google::Apis::ComputeBeta::OperationsScopedList::Warning]
+        # @return [GoogleAPI::Apis::ComputeBeta::OperationsScopedList::Warning]
         attr_accessor :warning
       
         def initialize(**args)
@@ -6164,7 +6164,7 @@ module Google
         # [Output Only] Informational warning which replaces the list of operations when
         # the list is empty.
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -6175,7 +6175,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ComputeBeta::OperationsScopedList::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::OperationsScopedList::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -6196,7 +6196,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -6231,7 +6231,7 @@ module Google
       # matched rule will serve the URL. If no rule was matched, the default service
       # will be used.
       class PathMatcher
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The full or partial URL to the BackendService resource. This will be used if
         # none of the pathRules defined by this PathMatcher is matched by the URL's path
@@ -6258,7 +6258,7 @@ module Google
       
         # The list of path rules.
         # Corresponds to the JSON property `pathRules`
-        # @return [Array<Google::Apis::ComputeBeta::PathRule>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::PathRule>]
         attr_accessor :path_rules
       
         def initialize(**args)
@@ -6277,7 +6277,7 @@ module Google
       # A path-matching rule for a URL. If matched, will use the specified
       # BackendService to handle the traffic arriving at this URL.
       class PathRule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The list of path patterns to match. Each must start with / and the only place
         # a * is allowed is at the end following a /. The string fed to the path matcher
@@ -6306,11 +6306,11 @@ module Google
       # A Project resource. Projects can only be created in the Google Cloud Platform
       # Console. Unless marked otherwise, values can only be modified in the console.
       class Project
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A metadata key/value entry.
         # Corresponds to the JSON property `commonInstanceMetadata`
-        # @return [Google::Apis::ComputeBeta::Metadata]
+        # @return [GoogleAPI::Apis::ComputeBeta::Metadata]
         attr_accessor :common_instance_metadata
       
         # [Output Only] Creation timestamp in RFC3339 text format.
@@ -6353,7 +6353,7 @@ module Google
       
         # [Output Only] Quotas assigned to this project.
         # Corresponds to the JSON property `quotas`
-        # @return [Array<Google::Apis::ComputeBeta::Quota>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Quota>]
         attr_accessor :quotas
       
         # [Output Only] Server-defined URL for the resource.
@@ -6364,7 +6364,7 @@ module Google
         # The location in Cloud Storage and naming method of the daily usage report.
         # Contains bucket_name and report_name prefix.
         # Corresponds to the JSON property `usageExportLocation`
-        # @return [Google::Apis::ComputeBeta::UsageExportLocation]
+        # @return [GoogleAPI::Apis::ComputeBeta::UsageExportLocation]
         attr_accessor :usage_export_location
       
         def initialize(**args)
@@ -6389,7 +6389,7 @@ module Google
       
       # A quotas entry.
       class Quota
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Quota limit for this metric.
         # Corresponds to the JSON property `limit`
@@ -6420,7 +6420,7 @@ module Google
       
       # Region resource.
       class Region
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Creation timestamp in RFC3339 text format.
         # Corresponds to the JSON property `creationTimestamp`
@@ -6429,7 +6429,7 @@ module Google
       
         # Deprecation status for a public resource.
         # Corresponds to the JSON property `deprecated`
-        # @return [Google::Apis::ComputeBeta::DeprecationStatus]
+        # @return [GoogleAPI::Apis::ComputeBeta::DeprecationStatus]
         attr_accessor :deprecated
       
         # [Output Only] Textual description of the resource.
@@ -6455,7 +6455,7 @@ module Google
       
         # [Output Only] Quotas assigned to this region.
         # Corresponds to the JSON property `quotas`
-        # @return [Array<Google::Apis::ComputeBeta::Quota>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Quota>]
         attr_accessor :quotas
       
         # [Output Only] Server-defined URL for the resource.
@@ -6495,7 +6495,7 @@ module Google
       
       # Contains a list of region resources.
       class RegionList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -6505,7 +6505,7 @@ module Google
       
         # [Output Only] A list of Region resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::Region>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Region>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#regionList for lists of regions.
@@ -6543,7 +6543,7 @@ module Google
       
       # 
       class ResourceGroupReference
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A URI referencing one of the resource views listed in the backend service.
         # Corresponds to the JSON property `group`
@@ -6575,7 +6575,7 @@ module Google
       # Packets that do not match any route in the sending instance's routing table
       # are dropped.
       class Route
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Creation timestamp in RFC3339 text format.
         # Corresponds to the JSON property `creationTimestamp`
@@ -6669,7 +6669,7 @@ module Google
         # [Output Only] If potential misconfigurations are detected for this route, this
         # field will be populated with warning messages.
         # Corresponds to the JSON property `warnings`
-        # @return [Array<Google::Apis::ComputeBeta::Route::Warning>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Route::Warning>]
         attr_accessor :warnings
       
         def initialize(**args)
@@ -6698,7 +6698,7 @@ module Google
         
         # 
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -6709,7 +6709,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ComputeBeta::Route::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::Route::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -6730,7 +6730,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -6763,7 +6763,7 @@ module Google
       
       # Contains a list of Route resources.
       class RouteList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Unique identifier for the resource. Defined by the server.
         # Corresponds to the JSON property `id`
@@ -6772,7 +6772,7 @@ module Google
       
         # [Output Only] A list of Route resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::Route>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Route>]
         attr_accessor :items
       
         # Type of resource.
@@ -6810,16 +6810,16 @@ module Google
       
       # Router resource.
       class Router
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `bgp`
-        # @return [Google::Apis::ComputeBeta::RouterBgp]
+        # @return [GoogleAPI::Apis::ComputeBeta::RouterBgp]
         attr_accessor :bgp
       
         # 
         # Corresponds to the JSON property `bgpPeers`
-        # @return [Array<Google::Apis::ComputeBeta::RouterBgpPeer>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::RouterBgpPeer>]
         attr_accessor :bgp_peers
       
         # [Output Only] Creation timestamp in RFC3339 text format.
@@ -6841,7 +6841,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `interfaces`
-        # @return [Array<Google::Apis::ComputeBeta::RouterInterface>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::RouterInterface>]
         attr_accessor :interfaces
       
         # [Output Only] Type of resource. Always compute#router for routers.
@@ -6896,7 +6896,7 @@ module Google
       
       # Contains a list of routers.
       class RouterAggregatedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -6906,7 +6906,7 @@ module Google
       
         # A map of scoped router lists.
         # Corresponds to the JSON property `items`
-        # @return [Hash<String,Google::Apis::ComputeBeta::RoutersScopedList>]
+        # @return [Hash<String,GoogleAPI::Apis::ComputeBeta::RoutersScopedList>]
         attr_accessor :items
       
         # Type of resource.
@@ -6944,7 +6944,7 @@ module Google
       
       # 
       class RouterBgp
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Local BGP Autonomous System Number (ASN). Must be an RFC6996 private ASN,
         # either 16-bit or 32-bit. The value will be fixed for this router resource. All
@@ -6967,7 +6967,7 @@ module Google
       # establish the BGP peering. It must specify peer ASN and either interface name,
       # IP, or peer IP. Reference: https://tools.ietf.org/html/rfc4273
       class RouterBgpPeer
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The priority of routes advertised to this BGP peer. In the case where there is
         # more than one matching route of maximum length, the routes with lowest
@@ -7021,7 +7021,7 @@ module Google
       # Router interfaces. Each interface requires either one linked resource (e.g.
       # linked_vpn_tunnel) or IP address + range (specified in ip_range).
       class RouterInterface
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # IP address and range of the interface. The IP range must be in the RFC3927
         # link-local IP space. The value must be a CIDR-formatted string, for example:
@@ -7057,7 +7057,7 @@ module Google
       
       # Contains a list of Router resources.
       class RouterList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -7067,7 +7067,7 @@ module Google
       
         # A list of Router resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::Router>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Router>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#router for routers.
@@ -7105,16 +7105,16 @@ module Google
       
       # 
       class RouterStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Best routes for this router's network.
         # Corresponds to the JSON property `bestRoutes`
-        # @return [Array<Google::Apis::ComputeBeta::Route>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Route>]
         attr_accessor :best_routes
       
         # 
         # Corresponds to the JSON property `bgpPeerStatus`
-        # @return [Array<Google::Apis::ComputeBeta::RouterStatusBgpPeerStatus>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::RouterStatusBgpPeerStatus>]
         attr_accessor :bgp_peer_status
       
         # URI of the network to which this router belongs.
@@ -7136,11 +7136,11 @@ module Google
       
       # 
       class RouterStatusBgpPeerStatus
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Routes that were advertised to the remote BGP peer
         # Corresponds to the JSON property `advertisedRoutes`
-        # @return [Array<Google::Apis::ComputeBeta::Route>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Route>]
         attr_accessor :advertised_routes
       
         # IP address of the local BGP interface.
@@ -7210,7 +7210,7 @@ module Google
       
       # 
       class RouterStatusResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Type of resource.
         # Corresponds to the JSON property `kind`
@@ -7219,7 +7219,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `result`
-        # @return [Google::Apis::ComputeBeta::RouterStatus]
+        # @return [GoogleAPI::Apis::ComputeBeta::RouterStatus]
         attr_accessor :result
       
         def initialize(**args)
@@ -7235,17 +7235,17 @@ module Google
       
       # 
       class RoutersScopedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of routers contained in this scope.
         # Corresponds to the JSON property `routers`
-        # @return [Array<Google::Apis::ComputeBeta::Router>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Router>]
         attr_accessor :routers
       
         # Informational warning which replaces the list of routers when the list is
         # empty.
         # Corresponds to the JSON property `warning`
-        # @return [Google::Apis::ComputeBeta::RoutersScopedList::Warning]
+        # @return [GoogleAPI::Apis::ComputeBeta::RoutersScopedList::Warning]
         attr_accessor :warning
       
         def initialize(**args)
@@ -7261,7 +7261,7 @@ module Google
         # Informational warning which replaces the list of routers when the list is
         # empty.
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -7272,7 +7272,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ComputeBeta::RoutersScopedList::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::RoutersScopedList::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -7293,7 +7293,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -7326,7 +7326,7 @@ module Google
       
       # Sets the scheduling options for an Instance.
       class Scheduling
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Specifies whether the instance should be automatically restarted if it is
         # terminated by Compute Engine (not terminated by a user). You can only set the
@@ -7365,7 +7365,7 @@ module Google
       
       # An instance's serial console output.
       class SerialPortOutput
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The contents of the console output.
         # Corresponds to the JSON property `contents`
@@ -7413,7 +7413,7 @@ module Google
       
       # A service account.
       class ServiceAccount
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Email address of the service account.
         # Corresponds to the JSON property `email`
@@ -7438,7 +7438,7 @@ module Google
       
       # A persistent disk snapshot resource.
       class Snapshot
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Creation timestamp in RFC3339 text format.
         # Corresponds to the JSON property `creationTimestamp`
@@ -7509,7 +7509,7 @@ module Google
       
         # Represents a customer-supplied encryption key
         # Corresponds to the JSON property `snapshotEncryptionKey`
-        # @return [Google::Apis::ComputeBeta::CustomerEncryptionKey]
+        # @return [GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey]
         attr_accessor :snapshot_encryption_key
       
         # [Output Only] The source disk used to create this snapshot.
@@ -7519,7 +7519,7 @@ module Google
       
         # Represents a customer-supplied encryption key
         # Corresponds to the JSON property `sourceDiskEncryptionKey`
-        # @return [Google::Apis::ComputeBeta::CustomerEncryptionKey]
+        # @return [GoogleAPI::Apis::ComputeBeta::CustomerEncryptionKey]
         attr_accessor :source_disk_encryption_key
       
         # [Output Only] The ID value of the disk used to create this snapshot. This
@@ -7578,7 +7578,7 @@ module Google
       
       # Contains a list of Snapshot resources.
       class SnapshotList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -7588,7 +7588,7 @@ module Google
       
         # [Output Only] A list of Snapshot resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::Snapshot>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Snapshot>]
         attr_accessor :items
       
         # Type of resource.
@@ -7628,7 +7628,7 @@ module Google
       # SSL key and certificate to the load balancer to serve secure connections from
       # the user.
       class SslCertificate
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A local certificate file. The certificate must be in PEM format. The
         # certificate chain must be no greater than 5 certs long. The chain must include
@@ -7700,7 +7700,7 @@ module Google
       
       # Contains a list of SslCertificate resources.
       class SslCertificateList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Unique identifier for the resource. Defined by the server.
         # Corresponds to the JSON property `id`
@@ -7709,7 +7709,7 @@ module Google
       
         # A list of SslCertificate resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::SslCertificate>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::SslCertificate>]
         attr_accessor :items
       
         # Type of resource.
@@ -7747,7 +7747,7 @@ module Google
       
       # A Subnetwork resource.
       class Subnetwork
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Creation timestamp in RFC3339 text format.
         # Corresponds to the JSON property `creationTimestamp`
@@ -7833,7 +7833,7 @@ module Google
       
       # 
       class SubnetworkAggregatedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -7843,7 +7843,7 @@ module Google
       
         # [Output] A map of scoped Subnetwork lists.
         # Corresponds to the JSON property `items`
-        # @return [Hash<String,Google::Apis::ComputeBeta::SubnetworksScopedList>]
+        # @return [Hash<String,GoogleAPI::Apis::ComputeBeta::SubnetworksScopedList>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#subnetworkAggregatedList for
@@ -7882,7 +7882,7 @@ module Google
       
       # Contains a list of Subnetwork resources.
       class SubnetworkList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -7892,7 +7892,7 @@ module Google
       
         # The Subnetwork resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::Subnetwork>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Subnetwork>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#subnetworkList for lists of
@@ -7931,16 +7931,16 @@ module Google
       
       # 
       class SubnetworksScopedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of subnetworks contained in this scope.
         # Corresponds to the JSON property `subnetworks`
-        # @return [Array<Google::Apis::ComputeBeta::Subnetwork>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Subnetwork>]
         attr_accessor :subnetworks
       
         # An informational warning that appears when the list of addresses is empty.
         # Corresponds to the JSON property `warning`
-        # @return [Google::Apis::ComputeBeta::SubnetworksScopedList::Warning]
+        # @return [GoogleAPI::Apis::ComputeBeta::SubnetworksScopedList::Warning]
         attr_accessor :warning
       
         def initialize(**args)
@@ -7955,7 +7955,7 @@ module Google
         
         # An informational warning that appears when the list of addresses is empty.
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -7966,7 +7966,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ComputeBeta::SubnetworksScopedList::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::SubnetworksScopedList::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -7987,7 +7987,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -8020,7 +8020,7 @@ module Google
       
       # A set of instance tags.
       class Tags
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Specifies a fingerprint for this request, which is essentially a hash of the
         # metadata's contents and used for optimistic locking. The fingerprint is
@@ -8051,7 +8051,7 @@ module Google
       
       # A TargetHttpProxy resource. This resource defines an HTTP proxy.
       class TargetHttpProxy
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Creation timestamp in RFC3339 text format.
         # Corresponds to the JSON property `creationTimestamp`
@@ -8115,7 +8115,7 @@ module Google
       
       # A list of TargetHttpProxy resources.
       class TargetHttpProxyList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -8125,7 +8125,7 @@ module Google
       
         # A list of TargetHttpProxy resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::TargetHttpProxy>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::TargetHttpProxy>]
         attr_accessor :items
       
         # Type of resource. Always compute#targetHttpProxyList for lists of target HTTP
@@ -8164,7 +8164,7 @@ module Google
       
       # 
       class TargetHttpsProxiesSetSslCertificatesRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # New set of SslCertificate resources to associate with this TargetHttpsProxy
         # resource. Currently exactly one SslCertificate resource must be specified.
@@ -8184,7 +8184,7 @@ module Google
       
       # A TargetHttpsProxy resource. This resource defines an HTTPS proxy.
       class TargetHttpsProxy
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Creation timestamp in RFC3339 text format.
         # Corresponds to the JSON property `creationTimestamp`
@@ -8260,7 +8260,7 @@ module Google
       
       # Contains a list of TargetHttpsProxy resources.
       class TargetHttpsProxyList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -8270,7 +8270,7 @@ module Google
       
         # A list of TargetHttpsProxy resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::TargetHttpsProxy>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::TargetHttpsProxy>]
         attr_accessor :items
       
         # Type of resource. Always compute#targetHttpsProxyList for lists of target
@@ -8310,7 +8310,7 @@ module Google
       # A TargetInstance resource. This resource defines an endpoint instance that
       # terminates traffic of certain protocols.
       class TargetInstance
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Creation timestamp in RFC3339 text format.
         # Corresponds to the JSON property `creationTimestamp`
@@ -8393,7 +8393,7 @@ module Google
       
       # 
       class TargetInstanceAggregatedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Unique identifier for the resource; defined by the server.
         # Corresponds to the JSON property `id`
@@ -8402,7 +8402,7 @@ module Google
       
         # A map of scoped target instance lists.
         # Corresponds to the JSON property `items`
-        # @return [Hash<String,Google::Apis::ComputeBeta::TargetInstancesScopedList>]
+        # @return [Hash<String,GoogleAPI::Apis::ComputeBeta::TargetInstancesScopedList>]
         attr_accessor :items
       
         # Type of resource.
@@ -8440,7 +8440,7 @@ module Google
       
       # Contains a list of TargetInstance resources.
       class TargetInstanceList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -8450,7 +8450,7 @@ module Google
       
         # A list of TargetInstance resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::TargetInstance>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::TargetInstance>]
         attr_accessor :items
       
         # Type of resource.
@@ -8488,17 +8488,17 @@ module Google
       
       # 
       class TargetInstancesScopedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of target instances contained in this scope.
         # Corresponds to the JSON property `targetInstances`
-        # @return [Array<Google::Apis::ComputeBeta::TargetInstance>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::TargetInstance>]
         attr_accessor :target_instances
       
         # Informational warning which replaces the list of addresses when the list is
         # empty.
         # Corresponds to the JSON property `warning`
-        # @return [Google::Apis::ComputeBeta::TargetInstancesScopedList::Warning]
+        # @return [GoogleAPI::Apis::ComputeBeta::TargetInstancesScopedList::Warning]
         attr_accessor :warning
       
         def initialize(**args)
@@ -8514,7 +8514,7 @@ module Google
         # Informational warning which replaces the list of addresses when the list is
         # empty.
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -8525,7 +8525,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ComputeBeta::TargetInstancesScopedList::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::TargetInstancesScopedList::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -8546,7 +8546,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -8580,7 +8580,7 @@ module Google
       # A TargetPool resource. This resource defines a pool of instances, associated
       # HttpHealthCheck resources, and the fallback target pool.
       class TargetPool
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # This field is applicable only when the containing target pool is serving a
         # forwarding rule as the primary pool, and its failoverRatio field is properly
@@ -8701,7 +8701,7 @@ module Google
       
       # 
       class TargetPoolAggregatedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Unique identifier for the resource. Defined by the server.
         # Corresponds to the JSON property `id`
@@ -8710,7 +8710,7 @@ module Google
       
         # [Output Only] A map of scoped target pool lists.
         # Corresponds to the JSON property `items`
-        # @return [Hash<String,Google::Apis::ComputeBeta::TargetPoolsScopedList>]
+        # @return [Hash<String,GoogleAPI::Apis::ComputeBeta::TargetPoolsScopedList>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#targetPoolAggregatedList for
@@ -8749,11 +8749,11 @@ module Google
       
       # 
       class TargetPoolInstanceHealth
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `healthStatus`
-        # @return [Array<Google::Apis::ComputeBeta::HealthStatus>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::HealthStatus>]
         attr_accessor :health_status
       
         # [Output Only] Type of resource. Always compute#targetPoolInstanceHealth when
@@ -8775,7 +8775,7 @@ module Google
       
       # Contains a list of TargetPool resources.
       class TargetPoolList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Unique identifier for the resource. Defined by the server.
         # Corresponds to the JSON property `id`
@@ -8784,7 +8784,7 @@ module Google
       
         # A list of TargetPool resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::TargetPool>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::TargetPool>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#targetPoolList for lists of
@@ -8823,11 +8823,11 @@ module Google
       
       # 
       class AddTargetPoolsHealthCheckRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of HttpHealthCheck resources to add to the target pool.
         # Corresponds to the JSON property `healthChecks`
-        # @return [Array<Google::Apis::ComputeBeta::HealthCheckReference>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::HealthCheckReference>]
         attr_accessor :health_checks
       
         def initialize(**args)
@@ -8842,7 +8842,7 @@ module Google
       
       # 
       class AddTargetPoolsInstanceRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A full or partial URL to an instance to add to this target pool. This can be a
         # full or partial URL. For example, the following are valid URLs:
@@ -8851,7 +8851,7 @@ module Google
         # - projects/project-id/zones/zone/instances/instance-name
         # - zones/zone/instances/instance-name
         # Corresponds to the JSON property `instances`
-        # @return [Array<Google::Apis::ComputeBeta::InstanceReference>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::InstanceReference>]
         attr_accessor :instances
       
         def initialize(**args)
@@ -8866,7 +8866,7 @@ module Google
       
       # 
       class RemoveTargetPoolsHealthCheckRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Health check URL to be removed. This can be a full or valid partial URL. For
         # example, the following are valid URLs:
@@ -8875,7 +8875,7 @@ module Google
         # - projects/project/global/httpHealthChecks/health-check
         # - global/httpHealthChecks/health-check
         # Corresponds to the JSON property `healthChecks`
-        # @return [Array<Google::Apis::ComputeBeta::HealthCheckReference>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::HealthCheckReference>]
         attr_accessor :health_checks
       
         def initialize(**args)
@@ -8890,11 +8890,11 @@ module Google
       
       # 
       class RemoveTargetPoolsInstanceRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # URLs of the instances to be removed from target pool.
         # Corresponds to the JSON property `instances`
-        # @return [Array<Google::Apis::ComputeBeta::InstanceReference>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::InstanceReference>]
         attr_accessor :instances
       
         def initialize(**args)
@@ -8909,17 +8909,17 @@ module Google
       
       # 
       class TargetPoolsScopedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of target pools contained in this scope.
         # Corresponds to the JSON property `targetPools`
-        # @return [Array<Google::Apis::ComputeBeta::TargetPool>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::TargetPool>]
         attr_accessor :target_pools
       
         # Informational warning which replaces the list of addresses when the list is
         # empty.
         # Corresponds to the JSON property `warning`
-        # @return [Google::Apis::ComputeBeta::TargetPoolsScopedList::Warning]
+        # @return [GoogleAPI::Apis::ComputeBeta::TargetPoolsScopedList::Warning]
         attr_accessor :warning
       
         def initialize(**args)
@@ -8935,7 +8935,7 @@ module Google
         # Informational warning which replaces the list of addresses when the list is
         # empty.
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -8946,7 +8946,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ComputeBeta::TargetPoolsScopedList::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::TargetPoolsScopedList::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -8967,7 +8967,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -9000,7 +9000,7 @@ module Google
       
       # 
       class TargetReference
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `target`
@@ -9019,7 +9019,7 @@ module Google
       
       # Represents a Target VPN gateway resource.
       class TargetVpnGateway
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Creation timestamp in RFC3339 text format.
         # Corresponds to the JSON property `creationTimestamp`
@@ -9110,7 +9110,7 @@ module Google
       
       # 
       class TargetVpnGatewayAggregatedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -9120,7 +9120,7 @@ module Google
       
         # A map of scoped target vpn gateway lists.
         # Corresponds to the JSON property `items`
-        # @return [Hash<String,Google::Apis::ComputeBeta::TargetVpnGatewaysScopedList>]
+        # @return [Hash<String,GoogleAPI::Apis::ComputeBeta::TargetVpnGatewaysScopedList>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#targetVpnGateway for target VPN
@@ -9159,7 +9159,7 @@ module Google
       
       # Contains a list of TargetVpnGateway resources.
       class TargetVpnGatewayList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -9169,7 +9169,7 @@ module Google
       
         # [Output Only] A list of TargetVpnGateway resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::TargetVpnGateway>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::TargetVpnGateway>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#targetVpnGateway for target VPN
@@ -9208,17 +9208,17 @@ module Google
       
       # 
       class TargetVpnGatewaysScopedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] List of target vpn gateways contained in this scope.
         # Corresponds to the JSON property `targetVpnGateways`
-        # @return [Array<Google::Apis::ComputeBeta::TargetVpnGateway>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::TargetVpnGateway>]
         attr_accessor :target_vpn_gateways
       
         # [Output Only] Informational warning which replaces the list of addresses when
         # the list is empty.
         # Corresponds to the JSON property `warning`
-        # @return [Google::Apis::ComputeBeta::TargetVpnGatewaysScopedList::Warning]
+        # @return [GoogleAPI::Apis::ComputeBeta::TargetVpnGatewaysScopedList::Warning]
         attr_accessor :warning
       
         def initialize(**args)
@@ -9234,7 +9234,7 @@ module Google
         # [Output Only] Informational warning which replaces the list of addresses when
         # the list is empty.
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -9245,7 +9245,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ComputeBeta::TargetVpnGatewaysScopedList::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::TargetVpnGatewaysScopedList::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -9266,7 +9266,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -9299,7 +9299,7 @@ module Google
       
       # 
       class TestFailure
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `actualService`
@@ -9336,7 +9336,7 @@ module Google
       
       # 
       class TestPermissionsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The set of permissions to check for the 'resource'. Permissions with wildcards
         # (such as '*' or 'storage.*') are not allowed.
@@ -9356,7 +9356,7 @@ module Google
       
       # 
       class TestPermissionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A subset of `TestPermissionsRequest.permissions` that the caller is allowed.
         # Corresponds to the JSON property `permissions`
@@ -9377,7 +9377,7 @@ module Google
       # BackendService resource, based on the "longest-match" of the URL's host and
       # path.
       class UrlMap
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Creation timestamp in RFC3339 text format.
         # Corresponds to the JSON property `creationTimestamp`
@@ -9405,7 +9405,7 @@ module Google
       
         # The list of HostRules to use against the URL.
         # Corresponds to the JSON property `hostRules`
-        # @return [Array<Google::Apis::ComputeBeta::HostRule>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::HostRule>]
         attr_accessor :host_rules
       
         # [Output Only] The unique identifier for the resource. This identifier is
@@ -9431,7 +9431,7 @@ module Google
       
         # The list of named PathMatchers to use against the URL.
         # Corresponds to the JSON property `pathMatchers`
-        # @return [Array<Google::Apis::ComputeBeta::PathMatcher>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::PathMatcher>]
         attr_accessor :path_matchers
       
         # [Output Only] Server-defined URL for the resource.
@@ -9442,7 +9442,7 @@ module Google
         # The list of expected URL mappings. Request to update this UrlMap will succeed
         # only if all of the test cases pass.
         # Corresponds to the JSON property `tests`
-        # @return [Array<Google::Apis::ComputeBeta::UrlMapTest>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::UrlMapTest>]
         attr_accessor :tests
       
         def initialize(**args)
@@ -9467,7 +9467,7 @@ module Google
       
       # Contains a list of UrlMap resources.
       class UrlMapList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Unique identifier for the resource. Set by the server.
         # Corresponds to the JSON property `id`
@@ -9476,7 +9476,7 @@ module Google
       
         # A list of UrlMap resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::UrlMap>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::UrlMap>]
         attr_accessor :items
       
         # Type of resource.
@@ -9514,7 +9514,7 @@ module Google
       
       # 
       class UrlMapReference
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `urlMap`
@@ -9533,7 +9533,7 @@ module Google
       
       # Message for the expected URL mappings.
       class UrlMapTest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Description of this test case.
         # Corresponds to the JSON property `description`
@@ -9570,7 +9570,7 @@ module Google
       
       # Message representing the validation result for a UrlMap.
       class UrlMapValidationResult
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # 
         # Corresponds to the JSON property `loadErrors`
@@ -9586,7 +9586,7 @@ module Google
       
         # 
         # Corresponds to the JSON property `testFailures`
-        # @return [Array<Google::Apis::ComputeBeta::TestFailure>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::TestFailure>]
         attr_accessor :test_failures
       
         # If successfully loaded, this field indicates whether the test passed. If false,
@@ -9611,13 +9611,13 @@ module Google
       
       # 
       class ValidateUrlMapsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A UrlMap resource. This resource defines the mapping from URL to the
         # BackendService resource, based on the "longest-match" of the URL's host and
         # path.
         # Corresponds to the JSON property `resource`
-        # @return [Google::Apis::ComputeBeta::UrlMap]
+        # @return [GoogleAPI::Apis::ComputeBeta::UrlMap]
         attr_accessor :resource
       
         def initialize(**args)
@@ -9632,11 +9632,11 @@ module Google
       
       # 
       class ValidateUrlMapsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Message representing the validation result for a UrlMap.
         # Corresponds to the JSON property `result`
-        # @return [Google::Apis::ComputeBeta::UrlMapValidationResult]
+        # @return [GoogleAPI::Apis::ComputeBeta::UrlMapValidationResult]
         attr_accessor :result
       
         def initialize(**args)
@@ -9652,7 +9652,7 @@ module Google
       # The location in Cloud Storage and naming method of the daily usage report.
       # Contains bucket_name and report_name prefix.
       class UsageExportLocation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of an existing bucket in Cloud Storage where the usage report object
         # is stored. The Google Service Account is granted write access to this bucket.
@@ -9685,7 +9685,7 @@ module Google
       
       # 
       class VpnTunnel
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Creation timestamp in RFC3339 text format.
         # Corresponds to the JSON property `creationTimestamp`
@@ -9814,7 +9814,7 @@ module Google
       
       # 
       class VpnTunnelAggregatedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -9824,7 +9824,7 @@ module Google
       
         # [Output Only] A map of scoped vpn tunnel lists.
         # Corresponds to the JSON property `items`
-        # @return [Hash<String,Google::Apis::ComputeBeta::VpnTunnelsScopedList>]
+        # @return [Hash<String,GoogleAPI::Apis::ComputeBeta::VpnTunnelsScopedList>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#vpnTunnel for VPN tunnels.
@@ -9862,7 +9862,7 @@ module Google
       
       # Contains a list of VpnTunnel resources.
       class VpnTunnelList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] The unique identifier for the resource. This identifier is
         # defined by the server.
@@ -9872,7 +9872,7 @@ module Google
       
         # [Output Only] A list of VpnTunnel resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::VpnTunnel>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::VpnTunnel>]
         attr_accessor :items
       
         # [Output Only] Type of resource. Always compute#vpnTunnel for VPN tunnels.
@@ -9910,17 +9910,17 @@ module Google
       
       # 
       class VpnTunnelsScopedList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # List of vpn tunnels contained in this scope.
         # Corresponds to the JSON property `vpnTunnels`
-        # @return [Array<Google::Apis::ComputeBeta::VpnTunnel>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::VpnTunnel>]
         attr_accessor :vpn_tunnels
       
         # Informational warning which replaces the list of addresses when the list is
         # empty.
         # Corresponds to the JSON property `warning`
-        # @return [Google::Apis::ComputeBeta::VpnTunnelsScopedList::Warning]
+        # @return [GoogleAPI::Apis::ComputeBeta::VpnTunnelsScopedList::Warning]
         attr_accessor :warning
       
         def initialize(**args)
@@ -9936,7 +9936,7 @@ module Google
         # Informational warning which replaces the list of addresses when the list is
         # empty.
         class Warning
-          include Google::Apis::Core::Hashable
+          include GoogleAPI::Apis::Core::Hashable
         
           # [Output Only] A warning code, if applicable. For example, Compute Engine
           # returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -9947,7 +9947,7 @@ module Google
           # [Output Only] Metadata about this warning in key: value format. For example:
           # "data": [ ` "key": "scope", "value": "zones/us-east1-d" `
           # Corresponds to the JSON property `data`
-          # @return [Array<Google::Apis::ComputeBeta::VpnTunnelsScopedList::Warning::Datum>]
+          # @return [Array<GoogleAPI::Apis::ComputeBeta::VpnTunnelsScopedList::Warning::Datum>]
           attr_accessor :data
         
           # [Output Only] A human-readable description of the warning code.
@@ -9968,7 +9968,7 @@ module Google
           
           # 
           class Datum
-            include Google::Apis::Core::Hashable
+            include GoogleAPI::Apis::Core::Hashable
           
             # [Output Only] A key that provides more detail on the warning being returned.
             # For example, for warnings where there are no results in a list request for a
@@ -10001,7 +10001,7 @@ module Google
       
       # A Zone resource.
       class Zone
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Creation timestamp in RFC3339 text format.
         # Corresponds to the JSON property `creationTimestamp`
@@ -10010,7 +10010,7 @@ module Google
       
         # Deprecation status for a public resource.
         # Corresponds to the JSON property `deprecated`
-        # @return [Google::Apis::ComputeBeta::DeprecationStatus]
+        # @return [GoogleAPI::Apis::ComputeBeta::DeprecationStatus]
         attr_accessor :deprecated
       
         # [Output Only] Textual description of the resource.
@@ -10069,7 +10069,7 @@ module Google
       
       # Contains a list of zone resources.
       class ZoneList
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # [Output Only] Unique identifier for the resource; defined by the server.
         # Corresponds to the JSON property `id`
@@ -10078,7 +10078,7 @@ module Google
       
         # [Output Only] A list of Zone resources.
         # Corresponds to the JSON property `items`
-        # @return [Array<Google::Apis::ComputeBeta::Zone>]
+        # @return [Array<GoogleAPI::Apis::ComputeBeta::Zone>]
         attr_accessor :items
       
         # Type of resource.
@@ -10116,7 +10116,7 @@ module Google
       
       # 
       class ZoneSetLabelsRequest
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The fingerprint of the previous set of labels for this resource, used to
         # detect conflicts. The fingerprint is initially generated by Compute Engine and

@@ -18,14 +18,14 @@ require 'google/apis/core/json_representation'
 require 'google/apis/core/hashable'
 require 'google/apis/errors'
 
-module Google
+module GoogleAPI
   module Apis
     module AppengineV1beta4
       
       # An Application contains the top-level configuration of an App Engine
       # application.
       class Application
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The full path to the application in the API. Example: "apps/myapp". @
         # OutputOnly
@@ -41,7 +41,7 @@ module Google
         # HTTP path dispatch rules for requests to the app that do not explicitly target
         # a module or version. The rules are order-dependent.
         # Corresponds to the JSON property `dispatchRules`
-        # @return [Array<Google::Apis::AppengineV1beta4::UrlDispatchRule>]
+        # @return [Array<GoogleAPI::Apis::AppengineV1beta4::UrlDispatchRule>]
         attr_accessor :dispatch_rules
       
         # The location from which the application will be run. Choices are "us-central"
@@ -83,7 +83,7 @@ module Google
       
       # Rules to match an HTTP request and dispatch that request to a module.
       class UrlDispatchRule
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The domain name to match on. Supports '*' (glob) wildcarding on the left-hand
         # side of a '.'. If empty, all domains will be matched (the same as '*').
@@ -119,7 +119,7 @@ module Google
       # A Version is a specific set of source code and configuration files deployed to
       # a module.
       class Version
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The full path to the Version resource in the API. Example: "apps/myapp/modules/
         # default/versions/v1". @OutputOnly
@@ -139,7 +139,7 @@ module Google
         # inception. It is based on request rate, response latencies, and other
         # application metrics.
         # Corresponds to the JSON property `automaticScaling`
-        # @return [Google::Apis::AppengineV1beta4::AutomaticScaling]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::AutomaticScaling]
         attr_accessor :automatic_scaling
       
         # A module with basic scaling will create an instance when the application
@@ -147,13 +147,13 @@ module Google
         # Basic scaling is ideal for work that is intermittent or driven by user
         # activity.
         # Corresponds to the JSON property `basicScaling`
-        # @return [Google::Apis::AppengineV1beta4::BasicScaling]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::BasicScaling]
         attr_accessor :basic_scaling
       
         # A module with manual scaling runs continuously, allowing you to perform
         # complex initialization and rely on the state of its memory over time.
         # Corresponds to the JSON property `manualScaling`
-        # @return [Google::Apis::AppengineV1beta4::ManualScaling]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::ManualScaling]
         attr_accessor :manual_scaling
       
         # Before an application can receive email or XMPP messages, the application must
@@ -170,12 +170,12 @@ module Google
       
         # Used to specify extra network settings (for VM runtimes only).
         # Corresponds to the JSON property `network`
-        # @return [Google::Apis::AppengineV1beta4::Network]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::Network]
         attr_accessor :network
       
         # Used to specify how many machine resources an app version needs.
         # Corresponds to the JSON property `resources`
-        # @return [Google::Apis::AppengineV1beta4::Resources]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::Resources]
         attr_accessor :resources
       
         # The desired runtime. Values can include python27, java7, go, etc.
@@ -229,26 +229,26 @@ module Google
         # are not attempted. Only returned in `GET` requests if `view=FULL` is set. May
         # only be set on create requests; once created, is immutable.
         # Corresponds to the JSON property `handlers`
-        # @return [Array<Google::Apis::AppengineV1beta4::UrlMap>]
+        # @return [Array<GoogleAPI::Apis::AppengineV1beta4::UrlMap>]
         attr_accessor :handlers
       
         # Custom static error pages instead of these generic error pages, (limit 10 KB/
         # page) Only returned in `GET` requests if `view=FULL` is set. May only be set
         # on create requests; once created, is immutable.
         # Corresponds to the JSON property `errorHandlers`
-        # @return [Array<Google::Apis::AppengineV1beta4::ErrorHandler>]
+        # @return [Array<GoogleAPI::Apis::AppengineV1beta4::ErrorHandler>]
         attr_accessor :error_handlers
       
         # Configuration for Python runtime third-party libraries required by the
         # application. Only returned in `GET` requests if `view=FULL` is set. May only
         # be set on create requests; once created, is immutable.
         # Corresponds to the JSON property `libraries`
-        # @return [Array<Google::Apis::AppengineV1beta4::Library>]
+        # @return [Array<GoogleAPI::Apis::AppengineV1beta4::Library>]
         attr_accessor :libraries
       
         # API Serving configuration for Cloud Endpoints.
         # Corresponds to the JSON property `apiConfig`
-        # @return [Google::Apis::AppengineV1beta4::ApiConfigHandler]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::ApiConfigHandler]
         attr_accessor :api_config
       
         # Environment variables made available to the application. Only returned in `GET`
@@ -269,7 +269,7 @@ module Google
         # Configure health checking for the VM instances. Unhealthy VM instances will be
         # killed and replaced with new instances.
         # Corresponds to the JSON property `healthCheck`
-        # @return [Google::Apis::AppengineV1beta4::HealthCheck]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::HealthCheck]
         attr_accessor :health_check
       
         # Go only. Files that match this pattern will not be built into the app. May
@@ -280,7 +280,7 @@ module Google
       
         # Code and application artifacts used to deploy a version to App Engine.
         # Corresponds to the JSON property `deployment`
-        # @return [Google::Apis::AppengineV1beta4::Deployment]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::Deployment]
         attr_accessor :deployment
       
         def initialize(**args)
@@ -322,7 +322,7 @@ module Google
       # inception. It is based on request rate, response latencies, and other
       # application metrics.
       class AutomaticScaling
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The amount of time that the [Autoscaler](https://cloud.google.com/compute/docs/
         # autoscaler/) should wait between changes to the number of virtual machines.
@@ -333,7 +333,7 @@ module Google
       
         # Target scaling by CPU usage.
         # Corresponds to the JSON property `cpuUtilization`
-        # @return [Google::Apis::AppengineV1beta4::CpuUtilization]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::CpuUtilization]
         attr_accessor :cpu_utilization
       
         # The number of concurrent requests an automatic scaling instance can accept
@@ -380,17 +380,17 @@ module Google
       
         # Target scaling by request utilization (for VM runtimes only).
         # Corresponds to the JSON property `requestUtilization`
-        # @return [Google::Apis::AppengineV1beta4::RequestUtilization]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::RequestUtilization]
         attr_accessor :request_utilization
       
         # Target scaling by disk usage (for VM runtimes only).
         # Corresponds to the JSON property `diskUtilization`
-        # @return [Google::Apis::AppengineV1beta4::DiskUtilization]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::DiskUtilization]
         attr_accessor :disk_utilization
       
         # Target scaling by network usage (for VM runtimes only).
         # Corresponds to the JSON property `networkUtilization`
-        # @return [Google::Apis::AppengineV1beta4::NetworkUtilization]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::NetworkUtilization]
         attr_accessor :network_utilization
       
         def initialize(**args)
@@ -416,7 +416,7 @@ module Google
       
       # Target scaling by CPU usage.
       class CpuUtilization
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The period of time over which CPU utilization is calculated.
         # Corresponds to the JSON property `aggregationWindowLength`
@@ -441,7 +441,7 @@ module Google
       
       # Target scaling by request utilization (for VM runtimes only).
       class RequestUtilization
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Target requests per second.
         # Corresponds to the JSON property `targetRequestCountPerSec`
@@ -466,7 +466,7 @@ module Google
       
       # Target scaling by disk usage (for VM runtimes only).
       class DiskUtilization
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Target bytes per second written.
         # Corresponds to the JSON property `targetWriteBytesPerSec`
@@ -503,7 +503,7 @@ module Google
       
       # Target scaling by network usage (for VM runtimes only).
       class NetworkUtilization
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Target bytes per second sent.
         # Corresponds to the JSON property `targetSentBytesPerSec`
@@ -543,7 +543,7 @@ module Google
       # Basic scaling is ideal for work that is intermittent or driven by user
       # activity.
       class BasicScaling
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The instance will be shut down this amount of time after receiving its last
         # request.
@@ -570,7 +570,7 @@ module Google
       # A module with manual scaling runs continuously, allowing you to perform
       # complex initialization and rely on the state of its memory over time.
       class ManualScaling
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The number of instances to assign to the module at the start. This number can
         # later be altered by using the [Modules API](https://cloud.google.com/appengine/
@@ -591,7 +591,7 @@ module Google
       
       # Used to specify extra network settings (for VM runtimes only).
       class Network
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of ports (or port pairs) to forward from the VM into the app container.
         # Corresponds to the JSON property `forwardedPorts`
@@ -624,7 +624,7 @@ module Google
       
       # Used to specify how many machine resources an app version needs.
       class Resources
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # How many CPU cores an app version needs.
         # Corresponds to the JSON property `cpu`
@@ -657,7 +657,7 @@ module Google
       # handle URLs by executing application code, or by serving static files uploaded
       # with the code, such as images, CSS or JavaScript.
       class UrlMap
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A URL prefix. This value uses regular expression syntax (and so regexp special
         # characters must be escaped), but it should not contain groupings. All URLs
@@ -671,24 +671,24 @@ module Google
         # stylesheets, or JavaScript source files. Static file handlers describe which
         # files in the application directory are static files, and which URLs serve them.
         # Corresponds to the JSON property `staticFiles`
-        # @return [Google::Apis::AppengineV1beta4::StaticFilesHandler]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::StaticFilesHandler]
         attr_accessor :static_files
       
         # Files served directly to the user for a given URL, such as images, CSS
         # stylesheets, or JavaScript source files. Static directory handlers make it
         # easy to serve the entire contents of a directory as static files.
         # Corresponds to the JSON property `staticDirectory`
-        # @return [Google::Apis::AppengineV1beta4::StaticDirectoryHandler]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::StaticDirectoryHandler]
         attr_accessor :static_directory
       
         # Executes a script to handle the request that matches the URL pattern.
         # Corresponds to the JSON property `script`
-        # @return [Google::Apis::AppengineV1beta4::ScriptHandler]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::ScriptHandler]
         attr_accessor :script
       
         # Use Google Cloud Endpoints to handle requests.
         # Corresponds to the JSON property `apiEndpoint`
-        # @return [Google::Apis::AppengineV1beta4::ApiEndpointHandler]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::ApiEndpointHandler]
         attr_accessor :api_endpoint
       
         # Configures whether security (HTTPS) should be enforced for this URL.
@@ -735,7 +735,7 @@ module Google
       # stylesheets, or JavaScript source files. Static file handlers describe which
       # files in the application directory are static files, and which URLs serve them.
       class StaticFilesHandler
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The path to the static files matched by the URL pattern, from the application
         # root directory. The path can refer to text matched in groupings in the URL
@@ -806,7 +806,7 @@ module Google
       # stylesheets, or JavaScript source files. Static directory handlers make it
       # easy to serve the entire contents of a directory as static files.
       class StaticDirectoryHandler
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The path to the directory containing the static files, from the application
         # root directory. Everything after the end of the matched url pattern is
@@ -868,7 +868,7 @@ module Google
       
       # Executes a script to handle the request that matches the URL pattern.
       class ScriptHandler
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Specifies the path to the script from the application root directory.
         # Corresponds to the JSON property `scriptPath`
@@ -887,7 +887,7 @@ module Google
       
       # Use Google Cloud Endpoints to handle requests.
       class ApiEndpointHandler
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Specifies the path to the script from the application root directory.
         # Corresponds to the JSON property `scriptPath`
@@ -906,7 +906,7 @@ module Google
       
       # A custom static error page to be served when an error occurs.
       class ErrorHandler
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The error condition this handler applies to.
         # Corresponds to the JSON property `errorCode`
@@ -937,7 +937,7 @@ module Google
       
       # A Python runtime third-party library required by the application.
       class Library
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The name of the library, e.g. "PIL" or "django".
         # Corresponds to the JSON property `name`
@@ -962,7 +962,7 @@ module Google
       
       # API Serving configuration for Cloud Endpoints.
       class ApiConfigHandler
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # For users not logged in, how to handle access to resources with required login.
         # Defaults to "redirect".
@@ -1007,7 +1007,7 @@ module Google
       # Configure health checking for the VM instances. Unhealthy VM instances will be
       # killed and replaced with new instances.
       class HealthCheck
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Whether to explicitly disable health checks for this instance.
         # Corresponds to the JSON property `disableHealthCheck`
@@ -1064,25 +1064,25 @@ module Google
       
       # Code and application artifacts used to deploy a version to App Engine.
       class Deployment
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A manifest of files stored in Google Cloud Storage which should be included as
         # part of this application. All files must be readable using the credentials
         # supplied with this call.
         # Corresponds to the JSON property `files`
-        # @return [Hash<String,Google::Apis::AppengineV1beta4::FileInfo>]
+        # @return [Hash<String,GoogleAPI::Apis::AppengineV1beta4::FileInfo>]
         attr_accessor :files
       
         # A Docker (container) image which should be used to start the application.
         # Corresponds to the JSON property `container`
-        # @return [Google::Apis::AppengineV1beta4::ContainerInfo]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::ContainerInfo]
         attr_accessor :container
       
         # The origin of the source code for this deployment. There can be more than one
         # source reference per Version if source code is distributed among multiple
         # repositories.
         # Corresponds to the JSON property `sourceReferences`
-        # @return [Array<Google::Apis::AppengineV1beta4::SourceReference>]
+        # @return [Array<GoogleAPI::Apis::AppengineV1beta4::SourceReference>]
         attr_accessor :source_references
       
         def initialize(**args)
@@ -1099,7 +1099,7 @@ module Google
       
       # A single source file which is part of the application to be deployed.
       class FileInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The URL source to use to fetch this file. Must be a URL to a resource in
         # Google Cloud Storage in the form 'http(s)://storage.googleapis.com/\/\'.
@@ -1132,7 +1132,7 @@ module Google
       
       # A Docker (container) image which should be used to start the application.
       class ContainerInfo
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Reference to a hosted container image. Must be a URI to a resource in a Docker
         # repository. Must be fully qualified, including tag or digest. e.g. gcr.io/my-
@@ -1154,7 +1154,7 @@ module Google
       # A reference to a particular snapshot of the source tree used to build and
       # deploy the application.
       class SourceReference
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Optional. A URI string identifying the repository. Example: "https://source.
         # developers.google.com/p/app-123/r/default"
@@ -1183,7 +1183,7 @@ module Google
       # This resource represents a long-running operation that is the result of a
       # network API call.
       class Operation
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The server-assigned name, which is only unique within the same service that
         # originally returns it. If you use the default HTTP mapping above, the `name`
@@ -1240,7 +1240,7 @@ module Google
         # the message `Status` could be used directly after any stripping needed for
         # security/privacy reasons.
         # Corresponds to the JSON property `error`
-        # @return [Google::Apis::AppengineV1beta4::Status]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::Status]
         attr_accessor :error
       
         # The normal response of the operation in case of success. If the original
@@ -1301,7 +1301,7 @@ module Google
       # the message `Status` could be used directly after any stripping needed for
       # security/privacy reasons.
       class Status
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The status code, which should be an enum value of google.rpc.Code.
         # Corresponds to the JSON property `code`
@@ -1335,11 +1335,11 @@ module Google
       
       # Response message for `Versions.ListVersions`.
       class ListVersionsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The versions belonging to the requested application module.
         # Corresponds to the JSON property `versions`
-        # @return [Array<Google::Apis::AppengineV1beta4::Version>]
+        # @return [Array<GoogleAPI::Apis::AppengineV1beta4::Version>]
         attr_accessor :versions
       
         # Continuation token for fetching the next page of results.
@@ -1362,7 +1362,7 @@ module Google
       # configuration. A module has a collection of versions that define a specific
       # set of code used to implement the functionality of that module.
       class Module
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The full path to the Module resource in the API. Example: "apps/myapp/modules/
         # default" @OutputOnly
@@ -1381,7 +1381,7 @@ module Google
         # of several versions in a fractional way, enabling experiments and canarying
         # new builds, for example.
         # Corresponds to the JSON property `split`
-        # @return [Google::Apis::AppengineV1beta4::TrafficSplit]
+        # @return [GoogleAPI::Apis::AppengineV1beta4::TrafficSplit]
         attr_accessor :split
       
         def initialize(**args)
@@ -1401,7 +1401,7 @@ module Google
       # of several versions in a fractional way, enabling experiments and canarying
       # new builds, for example.
       class TrafficSplit
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # Which mechanism should be used as a selector when choosing a version to send a
         # request to. The traffic selection algorithm will be stable for either type
@@ -1434,11 +1434,11 @@ module Google
       
       # Response message for `Modules.ListModules`.
       class ListModulesResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The modules belonging to the requested application.
         # Corresponds to the JSON property `modules`
-        # @return [Array<Google::Apis::AppengineV1beta4::Module>]
+        # @return [Array<GoogleAPI::Apis::AppengineV1beta4::Module>]
         attr_accessor :modules
       
         # Continuation token for fetching the next page of results.
@@ -1459,11 +1459,11 @@ module Google
       
       # The response message for Operations.ListOperations.
       class ListOperationsResponse
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # A list of operations that matches the specified filter in the request.
         # Corresponds to the JSON property `operations`
-        # @return [Array<Google::Apis::AppengineV1beta4::Operation>]
+        # @return [Array<GoogleAPI::Apis::AppengineV1beta4::Operation>]
         attr_accessor :operations
       
         # The standard List next-page token.
@@ -1484,7 +1484,7 @@ module Google
       
       # Metadata for the given google.longrunning.Operation.
       class OperationMetadata
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # The type of the operation (deprecated, use method field instead). Example: "
         # create_version". @OutputOnly
@@ -1537,7 +1537,7 @@ module Google
       
       # Metadata for the given google.longrunning.Operation.
       class OperationMetadataV1Beta5
-        include Google::Apis::Core::Hashable
+        include GoogleAPI::Apis::Core::Hashable
       
         # API method name that initiated the operation. Example: "google.appengine.
         # v1beta5.Version.CreateVersion". @OutputOnly

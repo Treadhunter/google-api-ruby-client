@@ -16,7 +16,7 @@ require 'google/apis/adexchangebuyer_v1_3/service.rb'
 require 'google/apis/adexchangebuyer_v1_3/classes.rb'
 require 'google/apis/adexchangebuyer_v1_3/representations.rb'
 
-module Google
+module GoogleAPI
   module Apis
     # Ad Exchange Buyer API
     #
